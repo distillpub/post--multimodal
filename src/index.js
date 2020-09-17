@@ -2,12 +2,20 @@
 import * as _unused from "raw-loader!./index.ejs";
 // TODO: disable before publishing
 
-import Example from "./diagrams/svelte-example.svelte";
+import Figure from "./diagrams/Neuron.svelte";
+import "regenerator-runtime/runtime";
 
 // lazily initialize any diagram below the fold. E.G:
-const exampleTag = document.getElementById("svelte-example-dfigure");
-let example;
+const exampleTag = document.getElementById("fig1");
 exampleTag.addEventListener("ready", () => {
-	const target = exampleTag.querySelector("#svelte-example-target");
-	example = new Example({ target });
+
+	const target = exampleTag.querySelector("#fig_inner");
+	let example = new Figure({ target, props: 
+								{
+									neuron: 1,
+									layername: "4/4/Add_6",
+									model: "RN_4x"
+								}
+							});
+
 });

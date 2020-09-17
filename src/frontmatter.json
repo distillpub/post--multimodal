@@ -4,11 +4,24 @@
 	"password": "svgs",
 	"authors": [
 		{
-			"author": "Ludwig Schubert",
-			"authorURL": "https://schubert.io/",
+			"author": "Author 1",
+			"authorURL": "",
+			"affiliation": "OpenAI",
+			"affiliationURL": "https://openai.com"
+		},
+		{
+			"author": "Author 2",
+			"authorURL": "",
+			"affiliation": "OpenAI",
+			"affiliationURL": "https://openai.com"
+		},
+		{
+			"author": "Author 3",
+			"authorURL": "gabgoh.github.io",
 			"affiliation": "OpenAI",
 			"affiliationURL": "https://openai.com"
 		}
+
 	],
 	"katex": {
 		"delimiters": [
