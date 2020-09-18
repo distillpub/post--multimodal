@@ -5,7 +5,7 @@
   import DatasetExamples from "./DatasetExamples.svelte";
   import TextFeatureVis from "./TextFeatureVis.svelte";
 
-  var alignments = require('./corr_7.json');
+  // var alignments = require('./corr_7.json');
   var alignment = alignments[4]
   var width = 200
 
