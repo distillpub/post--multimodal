@@ -1,7 +1,7 @@
 <script>
 
   var d3 = require("d3")
-  var alignments = require('./corr.json');
+  // var alignments = require('./corr.json');
   import {onMount} from 'svelte';
   import DotPages from "./DotPages.svelte";
 

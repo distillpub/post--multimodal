@@ -1,7 +1,7 @@
 <script>
 
   var d3 = require("d3")
-  var alignments = require('./corr.json');
+  // var alignments = require('./corr.json');
   import DotPages from "./DotPages.svelte";
 
   export let neuron;
