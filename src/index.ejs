@@ -203,7 +203,30 @@
 
     <subsection>Using Abstractions</subsection>
     
-    <section>The Mechanics of Abstraction</section>
+    <h2>The Mechanics of Abstraction</h2>
+
+    <p>
+      One of the greatest mysteries of neural networks is how they can accomplish things which no human being knows how to directly write a computer program to do. This mystery is present in all non-trivial neural networks, but it burns especially brightly in light of a neural network which seems to have features previously thought to be signatures of the human mind. Concretely, the abstract features we saw in the previous section are produced only after dozens of layers of visual processing -- what happened in those layers?
+    </p>
+    <p>
+      Recent work analyzing circuits [] has shed some light on the mechanism and algorithms running inside the layers of vision models. Building on a tradition of researchers studying meaningful neurons inside neural networks [], the circuits approach tries to systematically and rigorously characterize neurons inside neural networks, and then understand how the graph of weights between them implements their behavior.
+    </p>
+    <p>
+      As we examined the features and circuits in the hidden layers of the multimodal models, we found many that appeared to be analogues of features we'd discovered in ImageNet [] models like InceptionV1 []. But it wasn't just ImageNet models. We also saw features -- such as palm tree detectors -- we'd seen in an unpublished visualization [] of the geolocalization model PlaNet []. Others seemed familiar from looking at InceptionV1 trained on Places365 []. And while we'd never seen visualizations of a strong OCR model, we discovered many lexicographic features that would intuitively form in such a model.
+    </p>
+
+
+    <style>
+      .fullscreen-diagram{
+      grid-column: screen; 
+      background: #FAFAFC; 
+      padding:40px; 
+      border-top: 1px solid #F3F3F3; 
+      border-bottom: 1px solid #F3F3F3;
+      }
+  </style>
+
+    <figure id="universality-diagram" class="fullscreen-diagram"></figure>
 
     <section>Universiality</section>
 
