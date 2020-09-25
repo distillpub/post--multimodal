@@ -218,12 +218,12 @@
 
     <style>
       .fullscreen-diagram{
-        grid-column: screen; 
-        background: #F8F8FB; 
+        grid-column: screen;
+        background: #F8F8FB;
         padding: 10px;
-        padding-top:40px; 
-        padding-bottom:40px; 
-        border-top: 1px solid #F0F0F0; 
+        padding-top:40px;
+        padding-bottom:40px;
+        border-top: 1px solid #F0F0F0;
         border-bottom: 1px solid #F0F0F0;
       }
   </style>
@@ -246,50 +246,9 @@
       Surprisingly, they understand text well enough that by adding text to an image, we can get the image to be classified as something it's not! This can be seen as a kind of adversarial attack – what we'll call a <i>typographical attack</i>.
     </p>
 
+    <figure id="in-the-wild-1" class="fullscreen-diagram"></figure>
+
     <% let attacks = require('../static/typographic/in_the_wild_1.json') %>
-
-    <figure style="grid-column: screen">
-      <div style="max-width: 1200px; margin: auto;">
-
-        <div style="display: grid; grid-template-rows: repeat(<%= Object.entries(attacks).length %>); grid-template-columns: repeat(<%= Object.entries(attacks.mug).length %>); overflow-x: scroll; grid-gap: 10px;">
-          <% for (const [col_index, [label, results]] of Object.entries(attacks.mug).entries()) {%>
-            <h4 style="grid-column: <%= col_index + 1 %>; margin-bottom: 0px"><%= label === "blank" ? "Blank" : "Labeled &ldquo;" + label + "&rdquo;"  %></h4>
-          <% } %>
-          <% for (const [row_index, [item, labels]] of Object.entries(attacks).entries()) {%>
-            <% for (const [col_index, [label, results]] of Object.entries(labels).entries()) {%>
-            <div style="display: flex; flex-direction: row; border-radius: 6px; overflow: hidden; width: fit-content; height: 121px; border: 1px solid #EEE; grid-column: <%= col_index + 1 %>">
-              <div style="border-right: 1px solid #EEE">
-                <img style="width: 121px;" src="<%= results.image_url %>?cache=1006" />
-              </div>
-              <div>
-                <% for (const probability of results.zero_shot_statistics) {%>
-                  <div style="border-bottom: 1px solid #EEE; background-color: rgba(0, 0, 0, <%= probability[0] %>); color: #<%= probability[0] < 0.5 ? "000000" : "FFFFFF" %>; padding: 0px 10px; line-height: 16px; width: 145px; font-size: 80%">
-                    <small><%= probability[1] %>
-                      <span style="float: right;"><%= Math.round(probability[0] * 10000) / 100 %>%</span>
-                    </small>
-                  </div>
-                <% } %>
-              </div>
-            </div>
-            <% } %>
-          <% } %>
-        </div>
-        <div class="figcaption" style="max-width: 600px; margin-top: 16px;">
-          <p>
-            <b>Physical typographic attacks.</b> These twelve images were constructed as a black-box attack: they were photographed <i>without</i> consulting the multimodal model for vulnerable neurons first.
-          </p>
-
-          <p>
-            Not all of the attacks are effective, but the plant pot labeled "laptop", the glass labeled "laptop", and the mug labeled "cup" all achieve surprising efficacy.
-          </p>
-
-          <p>
-            Probabilities here calculated using the <b>zero-shot</b> methodology: we convert the multimodal model to an ImageNet classifier by calculating probabilities on the completion “a photo of a ___” for each ImageNet class.
-          </p>
-        </div>
-      </div>
-    </figure>
-
 
     <p>
       Our interest in investigating these typographic attacks is mainly so that we can learn what they have to teach us about the multimodal model. To do so, let's try to understand how these attacks measure up within the context of the broader tradition of adversarial attack research.
