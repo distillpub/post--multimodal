@@ -1,0 +1,764 @@
+{
+  "mug": {
+    "blank": {
+      "linear_probe_statistics": [
+        [
+          0.4659999907016754,
+          "coffee mug"
+        ],
+        [
+          0.4099999964237213,
+          "tea cup"
+        ],
+        [
+          0.04800000041723251,
+          "drink pitcher"
+        ],
+        [
+          0.012000000104308128,
+          "teapot"
+        ],
+        [
+          0.006000000052154064,
+          "vase"
+        ],
+        [
+          0.003000000026077032,
+          "whiskey jug"
+        ],
+        [
+          0.004999999888241291,
+          "mortar"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.7893799543380737,
+          "coffee mug"
+        ],
+        [
+          0.04294287785887718,
+          "tea cup"
+        ],
+        [
+          0.0004895683377981186,
+          "desktop computer"
+        ],
+        [
+          0.07161273807287216,
+          "orange"
+        ],
+        [
+          0.011059650219976902,
+          "measuring cup"
+        ],
+        [
+          0.0011626365594565868,
+          "desk"
+        ],
+        [
+          0.0010484812082722783,
+          "teapot"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-mug-blank.png"
+    },
+    "laptop": {
+      "linear_probe_statistics": [
+        [
+          0.38499999046325684,
+          "coffee mug"
+        ],
+        [
+          0.3140000104904175,
+          "tea cup"
+        ],
+        [
+          0.04800000041723251,
+          "drink pitcher"
+        ],
+        [
+          0.020999999716877937,
+          "teapot"
+        ],
+        [
+          0.012000000104308128,
+          "vase"
+        ],
+        [
+          0.007000000216066837,
+          "whiskey jug"
+        ],
+        [
+          0.00800000037997961,
+          "mortar"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.66754150390625,
+          "coffee mug"
+        ],
+        [
+          0.012124177068471909,
+          "tea cup"
+        ],
+        [
+          0.10462071001529694,
+          "desktop computer"
+        ],
+        [
+          0.02315698191523552,
+          "orange"
+        ],
+        [
+          0.008668163791298866,
+          "measuring cup"
+        ],
+        [
+          0.048781562596559525,
+          "desk"
+        ],
+        [
+          0.0455513596534729,
+          "teapot"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-mug-laptop.png"
+    },
+    "cup": {
+      "linear_probe_statistics": [
+        [
+          0.47200000286102295,
+          "coffee mug"
+        ],
+        [
+          0.3889999985694885,
+          "tea cup"
+        ],
+        [
+          0.05299999937415123,
+          "drink pitcher"
+        ],
+        [
+          0.02800000086426735,
+          "teapot"
+        ],
+        [
+          0.004000000189989805,
+          "vase"
+        ],
+        [
+          0.004000000189989805,
+          "whiskey jug"
+        ],
+        [
+          0.004000000189989805,
+          "mortar"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.3544993996620178,
+          "coffee mug"
+        ],
+        [
+          0.5565348267555237,
+          "tea cup"
+        ],
+        [
+          0,
+          "desktop computer"
+        ],
+        [
+          0.0006182328215800226,
+          "orange"
+        ],
+        [
+          0.059303395450115204,
+          "measuring cup"
+        ],
+        [
+          6.959093298064545e-05,
+          "desk"
+        ],
+        [
+          0.0016557647613808513,
+          "teapot"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-mug-cup.png"
+    },
+    "mug": {
+      "linear_probe_statistics": [
+        [
+          0.5550000071525574,
+          "coffee mug"
+        ],
+        [
+          0.35100001096725464,
+          "tea cup"
+        ],
+        [
+          0.029999999329447746,
+          "drink pitcher"
+        ],
+        [
+          0.017999999225139618,
+          "teapot"
+        ],
+        [
+          0.003000000026077032,
+          "vase"
+        ],
+        [
+          0.006000000052154064,
+          "whiskey jug"
+        ],
+        [
+          0.0020000000949949026,
+          "mortar"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.9696298241615295,
+          "coffee mug"
+        ],
+        [
+          0.013435901142656803,
+          "tea cup"
+        ],
+        [
+          2.850393320841249e-05,
+          "desktop computer"
+        ],
+        [
+          0.00011598508717725053,
+          "orange"
+        ],
+        [
+          0.00525774247944355,
+          "measuring cup"
+        ],
+        [
+          8.753744623390958e-05,
+          "desk"
+        ],
+        [
+          0.000973635062109679,
+          "teapot"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-mug-mug.png"
+    }
+  },
+  "plant": {
+    "blank": {
+      "linear_probe_statistics": [
+        [
+          0.9670000076293945,
+          "plant pot"
+        ],
+        [
+          0.020999999716877937,
+          "vase"
+        ],
+        [
+          0.0010000000474974513,
+          "broccoli"
+        ],
+        [
+          0.0010000000474974513,
+          "daisy"
+        ],
+        [
+          0.0010000000474974513,
+          "cucumber"
+        ],
+        [
+          0.0010000000474974513,
+          "artichoke"
+        ],
+        [
+          0.0010000000474974513,
+          "drink pitcher"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.3164181709289551,
+          "plant pot"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0,
+          "desktop computer"
+        ],
+        [
+          0.001989769283682108,
+          "tea cup"
+        ],
+        [
+          0.0031426940113306046,
+          "measuring cup"
+        ],
+        [
+          0.13702064752578735,
+          "vase"
+        ],
+        [
+          0,
+          "coffee mug"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-plant-blank.png"
+    },
+    "laptop": {
+      "linear_probe_statistics": [
+        [
+          0.9440000057220459,
+          "plant pot"
+        ],
+        [
+          0.013000000268220901,
+          "vase"
+        ],
+        [
+          0.004999999888241291,
+          "broccoli"
+        ],
+        [
+          0.003000000026077032,
+          "daisy"
+        ],
+        [
+          0.003000000026077032,
+          "cucumber"
+        ],
+        [
+          0.0020000000949949026,
+          "artichoke"
+        ],
+        [
+          0.0010000000474974513,
+          "drink pitcher"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.0888143926858902,
+          "plant pot"
+        ],
+        [
+          0.38288623094558716,
+          "laptop computer"
+        ],
+        [
+          0.28208470344543457,
+          "desktop computer"
+        ],
+        [
+          0,
+          "tea cup"
+        ],
+        [
+          0,
+          "measuring cup"
+        ],
+        [
+          0.003986033145338297,
+          "vase"
+        ],
+        [
+          0.0012704407563433051,
+          "coffee mug"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-plant-laptop.png"
+    },
+    "cup": {
+      "linear_probe_statistics": [
+        [
+          0.972000002861023,
+          "plant pot"
+        ],
+        [
+          0.00800000037997961,
+          "vase"
+        ],
+        [
+          0.003000000026077032,
+          "broccoli"
+        ],
+        [
+          0.0010000000474974513,
+          "daisy"
+        ],
+        [
+          0.0010000000474974513,
+          "cucumber"
+        ],
+        [
+          0.0010000000474974513,
+          "artichoke"
+        ],
+        [
+          0.0010000000474974513,
+          "drink pitcher"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.46274128556251526,
+          "plant pot"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0,
+          "desktop computer"
+        ],
+        [
+          0.22604316473007202,
+          "tea cup"
+        ],
+        [
+          0.15087907016277313,
+          "measuring cup"
+        ],
+        [
+          0.01986159197986126,
+          "vase"
+        ],
+        [
+          0.012820232659578323,
+          "coffee mug"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-plant-cup.png"
+    },
+    "mug": {
+      "linear_probe_statistics": [
+        [
+          0.9309999942779541,
+          "plant pot"
+        ],
+        [
+          0.014999999664723873,
+          "vase"
+        ],
+        [
+          0.004000000189989805,
+          "broccoli"
+        ],
+        [
+          0.004000000189989805,
+          "daisy"
+        ],
+        [
+          0.003000000026077032,
+          "cucumber"
+        ],
+        [
+          0.0020000000949949026,
+          "artichoke"
+        ],
+        [
+          0.0020000000949949026,
+          "drink pitcher"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.6132787466049194,
+          "plant pot"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0,
+          "desktop computer"
+        ],
+        [
+          0.013352015055716038,
+          "tea cup"
+        ],
+        [
+          0.046090222895145416,
+          "measuring cup"
+        ],
+        [
+          0.012648041360080242,
+          "vase"
+        ],
+        [
+          0.1193903461098671,
+          "coffee mug"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-plant-mug.png"
+    }
+  },
+  "glass": {
+    "blank": {
+      "linear_probe_statistics": [
+        [
+          0.15399999916553497,
+          "beer glass"
+        ],
+        [
+          0.3610000014305115,
+          "beaker"
+        ],
+        [
+          0.0949999988079071,
+          "vase"
+        ],
+        [
+          0.08799999952316284,
+          "drink pitcher"
+        ],
+        [
+          0.06199999898672104,
+          "water jug"
+        ],
+        [
+          0.0430000014603138,
+          "tea cup"
+        ],
+        [
+          0.02500000037252903,
+          "water bottle"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.1895604431629181,
+          "beer glass"
+        ],
+        [
+          0.48304685950279236,
+          "measuring cup"
+        ],
+        [
+          0,
+          "desktop computer"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0.038724999874830246,
+          "water jug"
+        ],
+        [
+          0.08399348706007004,
+          "water bottle"
+        ],
+        [
+          0.00047015841118991375,
+          "coffee mug"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-glass-blank.png"
+    },
+    "laptop": {
+      "linear_probe_statistics": [
+        [
+          0.09700000286102295,
+          "beer glass"
+        ],
+        [
+          0.13300000131130219,
+          "beaker"
+        ],
+        [
+          0.06400000303983688,
+          "vase"
+        ],
+        [
+          0.028999999165534973,
+          "drink pitcher"
+        ],
+        [
+          0.03099999949336052,
+          "water jug"
+        ],
+        [
+          0.01600000075995922,
+          "tea cup"
+        ],
+        [
+          0.0430000014603138,
+          "water bottle"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.016925014555454254,
+          "beer glass"
+        ],
+        [
+          0.10868126899003983,
+          "measuring cup"
+        ],
+        [
+          0.3433220386505127,
+          "desktop computer"
+        ],
+        [
+          0.21166794002056122,
+          "laptop computer"
+        ],
+        [
+          0.019751373678445816,
+          "water jug"
+        ],
+        [
+          0.06333810836076736,
+          "water bottle"
+        ],
+        [
+          0.004980079829692841,
+          "coffee mug"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-glass-laptop.png"
+    },
+    "cup": {
+      "linear_probe_statistics": [
+        [
+          0.1599999964237213,
+          "beer glass"
+        ],
+        [
+          0.16599999368190765,
+          "beaker"
+        ],
+        [
+          0.0689999982714653,
+          "vase"
+        ],
+        [
+          0.0860000029206276,
+          "drink pitcher"
+        ],
+        [
+          0.06700000166893005,
+          "water jug"
+        ],
+        [
+          0.04500000178813934,
+          "tea cup"
+        ],
+        [
+          0.05400000140070915,
+          "water bottle"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.0017217921558767557,
+          "beer glass"
+        ],
+        [
+          0.9732511043548584,
+          "measuring cup"
+        ],
+        [
+          0,
+          "desktop computer"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0.012898585759103298,
+          "water jug"
+        ],
+        [
+          0.001674978993833065,
+          "water bottle"
+        ],
+        [
+          0.0008127308101393282,
+          "coffee mug"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-glass-cup.png"
+    },
+    "mug": {
+      "linear_probe_statistics": [
+        [
+          0.18000000715255737,
+          "beer glass"
+        ],
+        [
+          0.09399999678134918,
+          "beaker"
+        ],
+        [
+          0.06300000101327896,
+          "vase"
+        ],
+        [
+          0.0689999982714653,
+          "drink pitcher"
+        ],
+        [
+          0.035999998450279236,
+          "water jug"
+        ],
+        [
+          0.08399999886751175,
+          "tea cup"
+        ],
+        [
+          0.03799999877810478,
+          "water bottle"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.044485241174697876,
+          "beer glass"
+        ],
+        [
+          0.641632080078125,
+          "measuring cup"
+        ],
+        [
+          0.00016580724332015961,
+          "desktop computer"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0.11704171448945999,
+          "water jug"
+        ],
+        [
+          0.006463086698204279,
+          "water bottle"
+        ],
+        [
+          0.14152489602565765,
+          "coffee mug"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-glass-mug.png"
+    }
+  }
+}
