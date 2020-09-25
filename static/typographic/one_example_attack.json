@@ -1,0 +1,103 @@
+{
+  "results": {
+    "pizza": {
+      "pizza": {
+        "fraction_changed_to": 1.0,
+        "fraction_already_equal": 0.0,
+        "fraction_changed_away": 0.0,
+        "fraction_both_results_not_target": 0.0,
+        "n": 1,
+        "avg_img_l0_norm_diff": 0.08002989969135803,
+        "full_results": [
+          [
+            [
+              0.8370000123977661,
+              "pizza"
+            ],
+            [
+              0.019999999552965164,
+              "pretzel"
+            ],
+            [
+              0.014999999664723873,
+              "Chihuahua"
+            ],
+            [
+              0.012000000104308128,
+              "broccoli"
+            ],
+            [
+              0.006000000052154064,
+              "hot dog"
+            ],
+            [
+              0.006000000052154064,
+              "Boston Terrier"
+            ],
+            [
+              0.004999999888241291,
+              "French Bulldog"
+            ],
+            [
+              0.004000000189989805,
+              "spatula"
+            ],
+            [
+              0.003000000026077032,
+              "Italian Greyhound"
+            ],
+            [
+              0.0020000000949949026,
+              "weasel"
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  "control": [
+    [
+      [
+        0.17499999701976776,
+        "Chihuahua"
+      ],
+      [
+        0.14300000667572021,
+        "Miniature Pinscher"
+      ],
+      [
+        0.0729999989271164,
+        "French Bulldog"
+      ],
+      [
+        0.05700000002980232,
+        "Griffon Bruxellois"
+      ],
+      [
+        0.03999999910593033,
+        "Italian Greyhound"
+      ],
+      [
+        0.020999999716877937,
+        "West Highland White Terrier"
+      ],
+      [
+        0.019999999552965164,
+        "Schipperke"
+      ],
+      [
+        0.019999999552965164,
+        "Maltese"
+      ],
+      [
+        0.01899999938905239,
+        "Australian Terrier"
+      ],
+      [
+        0.017000000923871994,
+        "fiddler crab"
+      ]
+    ]
+  ],
+  "timestamp": "2020-09-22 20:25:03.950099"
+}

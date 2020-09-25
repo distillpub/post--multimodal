@@ -24,7 +24,7 @@
   <d-article>
 
     <p>
-      Learning representations that match those in the human brain is a holy grail of machine learning. Two parallel shifts in the field give us hope that our models are moving closer to this goal. 
+      Learning representations that match those in the human brain is a holy grail of machine learning. Two parallel shifts in the field give us hope that our models are moving closer to this goal.
     </p>
     <p>
       First, hand-crafted datasets are giving way to data scraped and sampled from epicenters of human activity like Reddit and Twitter. This data is chaotic, unstructured, resembling the world people interact with during their development, a far cry from the highly structured hand-labeled datasets of old.
@@ -33,7 +33,7 @@
       Secondly, the human brain needs to work with several modalities such as vision and scent to perceive the world around them. Several modern neuroscience theories propose that different brain regions, such as the auditory cortex and visual cortex each process low level inputs into a shared abstract representation that can be fed to a global workspace for further processing. Recent work in multimodal neural networks, and in particular those trained with contrastive loss share a similar architecture, with parallel streams converting different modalities like text and images into a shared representation.
     </p>
     <p>
-      To see whether our hope was warranted we looked inside the multimodel model presented in Radford et al to study its representations. We find a landscape of neurons for cultural figures like Donald Trump and Justin Bieber, with neurons corresponding to geographical regions and cultures across the world, and families of neurons with a rich understanding of human emotions. Interestingly, every one of these neurons are what we're calling multimodal neurons, closely mimicking the famed "Halle Berre neuron" found in the human visual cortex that responds to both pictures of the address as well as pictures of her name.
+      To see whether our hope was warranted we looked inside the multimodal model presented in Radford et al to study its representations. We find a landscape of neurons for cultural figures like Donald Trump and Justin Bieber, with neurons corresponding to geographical regions and cultures across the world, and families of neurons with a rich understanding of human emotions. Interestingly, every one of these neurons are what we're calling multimodal neurons, closely mimicking the famed "Halle Berre neuron" found in the human visual cortex that responds to both pictures of the address as well as pictures of her name.
     </p>
 
     <p>
@@ -47,14 +47,14 @@
     <p>
       Amongst the highlights of our discoveries, we discover neurons that bear an uncanny resemblance to those representations found in the brain -- multimodal neurons. Much like the famed “Halle Berry” or “Catwomen” biological neurons, we too find neurons that exhibit invariance and selectivity to famous identities, such as:
     </p>
-  
-    <p>    
+
+    <p>
       [Images of Spiderman] + [Sketches of Spiderman] + [the word “spiderman”]
       [Photos of Obama/Trump] + [Political sketches of Obama/Trump] + [the words “president”, obama, trump]
     </p>
 
     <p>
-      It is tempting to declare that we have found examples of grandmother neurons in our representations, but our investigations reveal much more than meets the eye. For instance, we discover the Obama neuron also responds to an image with the text “President”, and Spiderman neuron activates both to Spiderman, his nemesis Venom, and his secret identity, Peter Parker. 
+      It is tempting to declare that we have found examples of grandmother neurons in our representations, but our investigations reveal much more than meets the eye. For instance, we discover the Obama neuron also responds to an image with the text “President”, and Spiderman neuron activates both to Spiderman, his nemesis Venom, and his secret identity, Peter Parker.
     </p>
 
     <p>
@@ -64,23 +64,23 @@
     <p>
       [Parenthood] [Christmas] [etc]
 
-      Features of this kind cannot be pinned down to an artifact of a specific hyperparameter configuration. Our investigation spans a range of multimodal prototypes -- these models contain not only architectural variations with changes in hyperparameters, but are trained according to different objectives, including an autoregressive objective, as well as a contrastive objective. In fact, these models are even trained on different <i>data</i> - with some models trained on only Twitter data, and others a combination of Twitter and Reddit, and some on the full dataset mix - a mix of flickr, reddit, twitter data. 
+      Features of this kind cannot be pinned down to an artifact of a specific hyperparameter configuration. Our investigation spans a range of multimodal prototypes -- these models contain not only architectural variations with changes in hyperparameters, but are trained according to different objectives, including an autoregressive objective, as well as a contrastive objective. In fact, these models are even trained on different <i>data</i> - with some models trained on only Twitter data, and others a combination of Twitter and Reddit, and some on the full dataset mix - a mix of flickr, reddit, twitter data.
     </p>
 
     <p>
       Yet despite the differences in modeling decisions, most of these models converge on very similar representations and all adhere to similar modes of organization. We are convinced therefore, that these qualitative properties we investigate are not artifacts of training, but are critical properties of a high quality representation [footnote].
     </p>
-  
+
     <section>Into the Multimodal Mind</section>
 
     <h2>Identity Recognition</h2>
 
     <p>
-      Our discussion begins with perhaps the kind of neuron that has fueled the most speculation in the brain, “grandmother” neurons. 
+      Our discussion begins with perhaps the kind of neuron that has fueled the most speculation in the brain, “grandmother” neurons.
     </p>
-    
+
     <p>
-      A Donald Trump neuron. A Barack Obama neuron. A Queen Elizabeth neuron. Justin Bieber. Margaret Thatcher. Pope Francis. Spiderman. Jesus Christ. Adolf Hitler. Elvis Presley. 
+      A Donald Trump neuron. A Barack Obama neuron. A Queen Elizabeth neuron. Justin Bieber. Margaret Thatcher. Pope Francis. Spiderman. Jesus Christ. Adolf Hitler. Elvis Presley.
     </p>
 
     <p>
@@ -94,7 +94,7 @@
     <p>
       [Feature visualizations, cherry picked for both face and name]
     </p>
-    
+
     <p>
       We find a significant number of these person-detecting neurons. Every model we've studied has a Donald Trump neuron. We also found Barack Obama, Queen Elizabeth, and Justin Bieber neurons in 4 of 6 models. In contrast, Elvis Presley was only found in one model.  It seems likely this reflects the volume of discourse about these figures on Twitter at the time the data was collected in [2019? 2020].
     </p>
@@ -114,12 +114,12 @@
     <p>
       This is similar to how [neuroscience analogy]
     </p>
-    
+
     <p>
       Since these units also respond to other people, thinking of them as people detectors may not actually be the best conceptualization. Rather, it might be more helpful to think of them as topic detectors, with the person as the foremost symbol of that topic. Or to think of them as associative people detectors, firing based on how associated content is to their subject. [Work the Bill Gates/Mike Zukerburg stuff into here.]
     Geolocalization
     </p>
-    
+
     <p>
       We also find "regional neurons" which respond to a fusion of features roughly associated with a geographic region: country and city names, distinctive architecture, prominent public figures, faces of the most common ethnicity, distinctive clothing, wildlife, and local script (if not roman alphabet). If shown a world map, even without labels, these neurons fire selectively for the relevant region on the map.
     </p>
@@ -128,7 +128,7 @@
       Most often, these correspond to a continent (e.g. Africa, Australia, Europe), clusters of countries (e.g. Islamic Countries, India/Pakistan, East Asia, Latin America), or individual countries (e.g. USA, UK, China, Japan). We also observe neurons for larger geographical features, such as a northern hemisphere neuron (which responds to bears, moose, coniferous forest, and the entire northern hemisphere on a map), and a "tropical" neuron for regions along the equator.
     </p>
 
-    <p>     
+    <p>
       [Figure: similar to NMF diagram in building blocks, associate neurons with colors, then highlight region on world map with color, and also show faceted feature visualization for each neuron. Possibly show dataset examples as well]
     </p>
 
@@ -143,7 +143,7 @@
     <subsection>Mechanics of Abstraction</subsection>
 
     <p>
-      These abstractions appear to span the extremely low level - the nearly raw representation of color, characters, to the extremely abstract - neurons that represent all mammals, entire countries and ecosystems. Why do the representations form in this way? 
+      These abstractions appear to span the extremely low level - the nearly raw representation of color, characters, to the extremely abstract - neurons that represent all mammals, entire countries and ecosystems. Why do the representations form in this way?
     </p>
 
     <p>
@@ -151,7 +151,7 @@
     </p>
 
     <p>
-      The IILSRV challenge, for example, uses a subset of the wordnet hierarchy, is an explicit attempt to systematize human knowledge. The task involves making fine-grained decisions about the subject of a picture. 
+      The IILSRV challenge, for example, uses a subset of the wordnet hierarchy, is an explicit attempt to systematize human knowledge. The task involves making fine-grained decisions about the subject of a picture.
     </p>
 
     <p>
@@ -159,7 +159,7 @@
     </p>
 
     <p>
-      As the above article might predict, like [], it should come as no surprise to the reader that much of the information in the model is consolidated in single neurons. To our surprise, however, we find much more interesting additional structure in this information. The neurons, for example, arrange themselves into a taxonomy of classes that appear to respect the wordnet hierarchy. 
+      As the above article might predict, like [], it should come as no surprise to the reader that much of the information in the model is consolidated in single neurons. To our surprise, however, we find much more interesting additional structure in this information. The neurons, for example, arrange themselves into a taxonomy of classes that appear to respect the wordnet hierarchy.
     </p>
 
     <p>
@@ -167,9 +167,9 @@
     </p>
 
     <p>
-      The animal kingdom itself is split into the domesticated pets and wildlife. 
+      The animal kingdom itself is split into the domesticated pets and wildlife.
     </p>
-    
+
     <p>
       More conventionally, the animal kingdom is also split into more conventional categories, such as insects, birds and reptiles.
     </p>
@@ -178,12 +178,12 @@
       We see other classes too which do not correspond neatly to such classes organized by experts, but nevertheless make sense. We see, for example, three neurons that respond to creatures found in different aspects of the ocean/water.
     </p>
 
-    <p>      
+    <p>
       These classifications are not limited, in fact, to animals. Vehicles, too, have their own implicit hierarchy, here with ...
     </p>
 
     <p>
-      We find this remarkable given the fact that such organization is not, in any explicit form, given as a training signal to the neural network. The neural network has decided that the most efficient way to organize information is in this way, one which reflects human intuition. Perhaps this form of convergent evolution is a suggestion that these structures do exist in some implicit form in human language, and though there may be dispute as to where the lines are drawn explicitly, 
+      We find this remarkable given the fact that such organization is not, in any explicit form, given as a training signal to the neural network. The neural network has decided that the most efficient way to organize information is in this way, one which reflects human intuition. Perhaps this form of convergent evolution is a suggestion that these structures do exist in some implicit form in human language, and though there may be dispute as to where the lines are drawn explicitly,
     </p>
 
     <p>
@@ -198,11 +198,11 @@
     </p>
 
     <p>
-      The contrastive loss of the transformer takes sentences into embeddings. Thus, the language model has done much of the difficult work for us, and we only need to understand, if given a set of sentences, the continuous space in which the sentences are embedded. 
+      The contrastive loss of the transformer takes sentences into embeddings. Thus, the language model has done much of the difficult work for us, and we only need to understand, if given a set of sentences, the continuous space in which the sentences are embedded.
     </p>
 
     <subsection>Using Abstractions</subsection>
-    
+
     <h2>The Mechanics of Abstraction</h2>
 
     <p>
@@ -234,7 +234,399 @@
 
     <section>Multimodal Circuits</section>
 
-    <section>Typographic Attacks</section>
+    <h2>Typographic Attacks</h2>
+
+    <p>
+      As we've discussed, it's not just the language model side of the multimodal model that knows how to read: some features in the vision model appear to understand individual letters, typographical cues, and even some full words.
+    </p>
+
+    <p>But <i>just how much</i> do these features understand text?</p>
+
+    <p>
+      Surprisingly, they understand text well enough that by adding text to an image, we can get the image to be classified as something it's not! This can be seen as a kind of adversarial attack – what we'll call a <i>typographical attack</i>.
+    </p>
+
+    <% let attacks = require('../static/typographic/in_the_wild_1.json') %>
+
+    <figure style="grid-column: screen">
+      <div style="max-width: 1200px; margin: auto;">
+
+        <div style="display: grid; grid-template-rows: repeat(<%= Object.entries(attacks).length %>); grid-template-columns: repeat(<%= Object.entries(attacks.mug).length %>); overflow-x: scroll; grid-gap: 10px;">
+          <% for (const [col_index, [label, results]] of Object.entries(attacks.mug).entries()) {%>
+            <h4 style="grid-column: <%= col_index + 1 %>; margin-bottom: 0px"><%= label === "blank" ? "Blank" : "Labeled &ldquo;" + label + "&rdquo;"  %></h4>
+          <% } %>
+          <% for (const [row_index, [item, labels]] of Object.entries(attacks).entries()) {%>
+            <% for (const [col_index, [label, results]] of Object.entries(labels).entries()) {%>
+            <div style="display: flex; flex-direction: row; border-radius: 6px; overflow: hidden; width: fit-content; height: 121px; border: 1px solid #EEE; grid-column: <%= col_index + 1 %>">
+              <div style="border-right: 1px solid #EEE">
+                <img style="width: 121px;" src="<%= results.image_url %>?cache=1006" />
+              </div>
+              <div>
+                <% for (const probability of results.zero_shot_statistics) {%>
+                  <div style="border-bottom: 1px solid #EEE; background-color: rgba(0, 0, 0, <%= probability[0] %>); color: #<%= probability[0] < 0.5 ? "000000" : "FFFFFF" %>; padding: 0px 10px; line-height: 16px; width: 145px; font-size: 80%">
+                    <small><%= probability[1] %>
+                      <span style="float: right;"><%= Math.round(probability[0] * 10000) / 100 %>%</span>
+                    </small>
+                  </div>
+                <% } %>
+              </div>
+            </div>
+            <% } %>
+          <% } %>
+        </div>
+        <div class="figcaption" style="max-width: 600px; margin-top: 16px;">
+          <p>
+            <b>Physical typographic attacks.</b> These twelve images were constructed as a black-box attack: they were photographed <i>without</i> consulting the multimodal model for vulnerable neurons first.
+          </p>
+
+          <p>
+            Not all of the attacks are effective, but the plant pot labeled "laptop", the glass labeled "laptop", and the mug labeled "cup" all achieve surprising efficacy.
+          </p>
+
+          <p>
+            Probabilities here calculated using the <b>zero-shot</b> methodology: we convert the multimodal model to an ImageNet classifier by calculating probabilities on the completion “a photo of a ___” for each ImageNet class.
+          </p>
+        </div>
+      </div>
+    </figure>
+
+
+    <p>
+      Our interest in investigating these typographic attacks is mainly so that we can learn what they have to teach us about the multimodal model. To do so, let's try to understand how these attacks measure up within the context of the broader tradition of adversarial attack research.
+    </p>
+
+    <p>
+      While many adversarial attacks focus on making imperceptible changes to images, some attacks instead involve more exotic constraints. Typographical attacks are more similar to this second line of work. One example is the <i>adversarial patch</i><d-cite
+      key="brown2017adversarialpatch"></d-cite>: a sticker that can be placed on a real-life object in order to cause neural nets to misclassify that object as something else (for example, a toaster). To give a second example, <i>physical adversarial examples</i><d-cite
+      key="athalye2017adversarialturtle"></d-cite> are complete 3D objects that are reliabily misclassified: a 3D-printed turtle that is reliably misclassified as a rifle, a baseball that is misclassified as an espresso.
+    </p>
+
+    <p>
+      Above, we've seen a small handful of one-off examples demonstrating that typographic attacks can work in a physical setting. To investigate them more rigorously, let's look at them in an automated setting.
+    </p>
+
+    <h3>Automating typographic attacks</h3>
+
+    <p>
+      Are there any attacks which can reliably switch ImageNet validation set images of all classes to the target attack class? Here, we demonstrate several.
+    </p>
+
+    <p>
+      We set up a simple automated attack. Each attack consists of an <i>attack text</i> that attempts to convert images to a <i>target class</i>. We place the text around the image at eight fixed coordinates<d-footnote>These coordinates aren't particularly special; we choose them just because they space the text out around the image.</d-footnote> and using a fixed font style.
+    </p>
+
+    <figure style="grid-column: page; margin-bottom: 0px">
+      <div  style="display: grid; grid-template-columns: repeat(3); overflow-x: scroll; grid-gap: 10px;">
+        <div style="display: flex; flex-direction: row; border-radius: 6px; overflow: hidden; width: fit-content; height: 191px; border: 1px solid #EEE; grid-column: ">
+          <div style="border-right: 1px solid #EEE">
+            <img style="width: 191px;" src="/typographic/small_attacks/example_before.png" />
+          </div>
+          <div>
+            <% for (const pair of require('../static/typographic/one_example_attack.json').control[0].slice(0,7)) {%>
+              <div style="border-bottom: 1px solid #EEE; background-color: rgba(0, 0, 0, <%= pair[0] %>); color: #<%= pair[0] < 0.5 ? "000000" : "FFFFFF" %>; padding: 0px 10px; line-height: 25px; width: 190px; font-size: 80%">
+                <small><%= pair[1] %>
+                  <span style="float: right;"><%= Math.round(pair[0] * 10000) / 100 %>%</span>
+                </small>
+              </div>
+            <% } %>
+          </div>
+        </div>
+        <div style="grid-column: 2;">
+          <div style="margin-left: -65px; padding-top: 40px">
+            <p style="margin: auto; text-align: center;"><span style="font-size: 250%">&rightarrow;</span></p>
+            <p style="margin: auto; text-align: center;"><small>Target class: <code>pizza</code></small></p>
+            <p style="margin: auto; text-align: center;"><small>Attack text: <i>pizza</i></small></p>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: row; border-radius: 6px; overflow: hidden; width: fit-content; height: 191px; border: 1px solid #EEE; grid-column: 3">
+          <div style="border-right: 1px solid #EEE">
+            <img style="width: 191px;" src="/typographic/small_attacks/example_after.png" />
+          </div>
+          <div>
+            <% for (const pair of require('../static/typographic/one_example_attack.json').results.pizza.pizza.full_results[0].slice(0,7)) {%>
+              <div style="border-bottom: 1px solid #EEE; background-color: rgba(0, 0, 0, <%= pair[0] %>); color: #<%= pair[0] < 0.5 ? "000000" : "FFFFFF" %>; padding: 0px 10px; line-height: 25px; width: 190px; font-size: 80%">
+                <small><%= pair[1] %>
+                  <span style="float: right;"><%= Math.round(pair[0] * 10000) / 100 %>%</span>
+                </small>
+              </div>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </figure>
+      <figcaption style="margin-bottom: 42px;">
+        <br/>
+        <p>An example of the simple automated attack setup for the target class <code>pizza</code> with the attack text <i>pizza</i>. Because the top class was changed to <i>pizza</i>, this example qualifies as changed to the target class.</p>
+      </figcaption>
+
+    <% let small_attacks = require('../static/typographic/small_attacks.json') %>
+
+    <p>
+      Under this regime, we found the following attacks to be reasonably effective. Among the strongest of these simple attacks we see that this simple procedure can get us up to a 97% attack success rate with only around 7% of the image's pixels changed.
+    </p>
+
+    <% let attack_ordering = [
+      ["waste container", "trash"],
+      ["iPod", "iPod"],
+      ["rifle", "rifle"],
+      ["pizza", "pizza"],
+      ["radio", "radio"],
+      ["great white shark", "shark"],
+      ["library", "library"],
+      ["Siamese cat", "meow"],
+      ["piggy bank", "$$$"]
+    ] %>
+    <d-figure class="l-body-outset">
+    <figure>
+    <table id="best-small-attacks" style="width: 100%">
+      <thead>
+        <tr>
+          <th scope="col">Target class</th>
+          <th scope="col">Attack text</th>
+          <th scope="col">Pixel cover</th>
+          <th scope="col">Success <div class="figcaption">Linear probes</div></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <b>Baseline ImageNet classification accuracy</b>
+          </td>
+          <td></td>
+          <td></td>
+          <td>
+            <b><%= Math.round(small_attacks.linear_probes.baseline_accuracy * 10000)/100 %>%</b>
+          </td>
+        </tr>
+        <% for (const [target_class, attack_text] of attack_ordering) {%>
+          <tr>
+            <td><code><%= target_class %></code></td>
+            <td><i><%= attack_text === "$$$" ? "$\\\$\\\$\\\$$" : attack_text %></i></td>
+            <td><%= Math.round(small_attacks.linear_probes.results[target_class][attack_text].avg_img_l0_norm_diff * 10000)/100 %>%</td>
+            <td><%= Math.round(small_attacks.linear_probes.results[target_class][attack_text].fraction_changed_to * 10000)/100 %>%</td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+
+    <figcaption>
+      <p>
+        n=<%= Math.round(small_attacks.n) %>. Probabilities collected from <a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x?models.technique=deep_dream">RN50-4x</a>.</p>
+      </p>
+
+      <p><b>Baseline ImageNet classification accuracy</b> measures the percent of images that were classified correctly before the addition of any attacks.
+      </p>
+
+      <p><b>Pixel cover</b> measures the attack's impact on the original image: the average percentage of pixels that were changed by any amount (L0-norm) in order to add the attack.</p>
+
+      <p>
+        In the <b>linear probes</b> methodology, we use the ImageNet training set to optimize a matrix of weights to apply to activations taken from the vision model in order to convert those activations into ImageNet predictions.
+        <d-footnote>We did not test these adversarial attacks against a fine-tuned model, because we did not find that a fine-tuned model performed substantially better at baseline on ImageNet classification than the linear probes methodology did. Furthermore, fine-tuning performance on this task could depend on how long the model is trained or other factors.
+        </d-footnote>
+      </p>
+      <!-- <p>In the <b>zero-shot</b> methodology, we convert the multimodal model to an ImageNet classifier by calculating probabilities on the completion “a photo of a ___” for each ImageNet class.</p> -->
+    </figcaption>
+    </figure>
+    </d-figure>
+
+    <p>
+      To contextualize how effective these results are as an adversarial attack, we can compare the linear probes results for the strongest two attacks above to the performance of the attacks described in <i>Adversarial Patch</i>. For reference, those attacks achieve up to 80% attack success at 8% pixel cover – many of the attacks above are as or more effective.
+    </p>
+
+    <h4>How we found these attacks</h4>
+
+    <p>
+      We found these attacks in multiple ways:
+    </p>
+      <ol>
+      <li>
+        Manually looking through the multimodal model's neurons for those that appear sensitive to particular kinds of text. This is how we found the <i>piggy bank</i> and <i>Siamese cat</i> attacks.
+      </li>
+
+      <li>A genetic algorithm that modifies text in order to hill-climb towards text that is a more effective adversarial attack. This is how we found the <i>great white shark</i> and <i>waste container</i> attacks.</li>
+
+      <li>
+        Just brute-force searching through all of the ImageNet class names looking for class names which are, in and of themselves, effective attacks. This is how we found <i>rifle</i>, <i>pizza</i>, <i>radio</i>, <i>iPod</i>, and <i>library</i>.
+      </li>
+    </ol>
+
+    <p>
+      We can improve upon the results from back in Figure [[N]] by construct a new dataset of physical typographic attacks using some of these more effective attacks we've now discovered. In a shoutout to <i>Adversarial Patch</i> we include the label <i>toaster</i>, and find that it does surprisingly well as a typographic attack!
+    </p>
+
+    [[TODO(csvoss): This diagram is Way Too Big; needs some javascript to make it dynamic and smaller]]
+
+    <figure style="grid-column: screen">
+      <div style="max-width: 1440px; margin: auto;">
+        <% let attacks_2 = require('../static/typographic/in_the_wild_2.json') %>
+        <div style="display: grid; grid-template-rows: repeat(<%= Object.entries(attacks_2).length %>); grid-template-columns: repeat(<%= Object.entries(attacks_2.mug).length %>); overflow-x: scroll; grid-gap: 5px;">
+          <% for (const [row_index, [item, labels]] of Object.entries(attacks_2).entries()) {%>
+            <% for (const [col_index, [label, results]] of Object.entries(labels).entries()) {%>
+            <div style="display: flex; flex-direction: row; border-radius: 6px; overflow: hidden; width: fit-content; height: 174px; border: 1px solid #EEE; grid-column: <%= col_index == 0 ? 1 : (((col_index - 1) % 3) + 2) %>">
+              <div style="border-right: 1px solid #EEE">
+                <img style="width: 174px;" src="<%= results.image_url %>?cache=26" />
+              </div>
+              <div>
+                <% for (const probability of results.zero_shot_statistics) {%>
+                  <div style="border-bottom: 1px solid #EEE; background-color: rgba(0, 0, 0, <%= probability[0] %>); color: #<%= probability[0] < 0.5 ? "000000" : "FFFFFF" %>; padding: 0px 10px; line-height: 16px; width: 150px; font-size: 80%">
+                    <small><%= probability[1] %>
+                      <span style="float: right;"><%= Math.round(probability[0] * 10000) / 100 %>%</span>
+                    </small>
+                  </div>
+                <% } %>
+              </div>
+            </div>
+            <% } %>
+            <br/>
+          <% } %>
+        </div>
+      </div>
+    </figure>
+
+    <!-- <h4>As a black-box attack</h4>
+    <p>
+      As a sidenote, one interesting aspect of these typographical attacks is that they may in some cases be effective as <b>few-shot, black-box adversarial attacks</b> – they could plausibly work even in settings where the attacker only has query access to the model.<d-cite
+      key="ilyas2018blackbox"></d-cite>
+
+      [[(Second reason, perhaps, but not sure if they are going to be THAT that effective)]] [[(Better to be explicitly humble so that the adversarial attack community knows that's what we're doing here)]]
+    </p>
+
+    <p>
+      For models vulnerable to this category of attack, an adversary doesn't need to see the inside of the model in order to guess how to attack it: some common words that are likely enough to be related to the ImageNet class may suffice. What's more, the attack can be carried out with only a handful of queries to the model
+    </p> -->
+
+    <h3>Why do these attacks work?</h3>
+
+    <p>
+      We already know that the multimodal model develops high-level representations for concepts, and sometimes those concepts include both images and text. Naturally, some of these representations might be upstream of the model's representations of the various ImageNet classes.
+    </p>
+
+    <d-figure>
+      <style>
+        figure.reading-container {
+          display: flex;
+          flex-direction: row;
+        }
+        img.reading-neuron-feature-viz {
+          border-radius: 1em;
+        }
+        img.reading-neuron-dataset-example {
+          max-width: 48%;
+          margin: 0px;
+        }
+        div.reading-neuron {
+          width: 30%;
+          margin: 20px;
+        }
+      </style>
+      <figure class="eq-grid reading-container">
+        <div class="reading-neuron">
+          <h4><a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x/image_block_4_5_Add_6_0/1330">RN50-4x Channel 1330</a></h4>
+          <img class="reading-neuron-feature-viz" src="/typographic/RN50-4x-channel-1330.png" />
+          <img class="reading-neuron-dataset-example" src="/typographic/RN50-4x-1330-dataset-1.png" />
+          <img class="reading-neuron-dataset-example" src="/typographic/RN50-4x-1330-dataset-2.png" />
+          <img class="reading-neuron-dataset-example" src="/typographic/RN50-4x-1330-dataset-3.png" />
+          <img class="reading-neuron-dataset-example" src="/typographic/RN50-4x-1330-dataset-4.png" />
+          <p><small>"price", "cheap", "$"</small></p>
+        </div>
+        <div class="reading-neuron">
+          <h4><a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x/image_block_4_5_Add_6_0/1450">RN50-4x Channel 1450</a></h4>
+          <img class="reading-neuron-feature-viz" src="/typographic/RN50-4x-channel-1450.png" />
+          <img class="reading-neuron-dataset-example" src="/typographic/RN50-4x-1450-dataset-1.png" />
+          <img class="reading-neuron-dataset-example" src="/typographic/RN50-4x-1450-dataset-2.png" />
+          <img class="reading-neuron-dataset-example" src="/typographic/RN50-4x-1450-dataset-3.png" />
+          <img class="reading-neuron-dataset-example" src="/typographic/RN50-4x-1450-dataset-4.png" />
+          <p><small>"iPod", "iOS", "iPhone"</small></p>
+        </div>
+      </figure>
+      <figcaption>
+        <p>Neuron <a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x/image_block_4_5_Add_6_0/1330">1330</a> responds to (via the feature visualization) images of piggybanks, as well as (via dataset examples) the dollar signs on prices and words like "cheap," "cost," or "price."</p>
+        <p>Neuron <a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x/image_block_4_5_Add_6_0/1450">1450</a> responds to (via dataset examples) the Apple logo and names of Apple products.</p>
+      </figcaption>
+    </d-figure>
+
+    <p>
+      Above, we see two examples of high-level representations correlated with ImageNet classes: a neuron responding to images of piggybanks, money, and prices, and a neuron responding to the Apple logo and images and names of Apple products.
+    </p>
+
+    <p>
+      Because these high-level representations are interpretable, we can inspect the neurons that the model is using and their weights, and develop typographic attacks from there.
+    </p>
+
+    <p>
+      Inasmuch as the model forms these high level representations, it's forming them because those representations <i>efficiently compress</i> the training set. And naturally, inputs like the ones in these typographic attacks – images spuriously labeled with irrelevant text – are <i>not</i> very common in that training set! As a result, a piece of text that might normally be a very strong cue may in an attack setting be strongly-weighted enough to get in the way of the model's perception of other objects elsewhere in the image, simply by outweighing them.
+    </p>
+
+    <p>
+      The multimodal model's architecture is powerful enough to contain representations that learn both images and words, and one effect is what we see here: a unique weakness to typographic attacks.
+    </p>
+
+    <!-- In fact, we hypothesize that a fine-tuned model might actually <i>erase</i> this effect – by causing the model to no longer "need" to know how to read. The susceptibility to typographic attacks may well be an interesting consequence of the multimodal model being required to effectively perform at <i>diverse</i> tasks, not just at ImageNet as in these experiments but also at its native image captioning task. -->
+
+    <!-- <p>[[TODO(Experiment+Analysis): Attempt to generate more nuanced analyses by subtracting activations.]]</p> -->
+
+    <!-- <h3>Can we generate attacks for all target classes?</h3>
+
+    <p>
+    [[TODO(Analysis+Writing): Summarize what you can from big_attacks_no_limit_large_n.json.]] [[Move this section up to "we found these by".]]
+    </p> -->
+
+    <!-- <p>TODO(Writing): Gabe's point about the connection to fairness – overgeneralization. [[In the high-level representations. Connects to the model theory point.</p> -->
+    <!-- <p>TODO(Writing): Connection to the Stroop effect?</p> -->
+
+
+    <p>[[TODO(csvoss): Move the below diagram to the Miscellaneous Neurons section once we have one.]]</p>
+    <d-figure>
+      <style>
+        figure.reading-container {
+          display: flex;
+          flex-direction: row;
+        }
+        img.reading-neuron-feature-viz {
+          border-radius: 1em;
+        }
+        img.reading-neuron-dataset-example {
+          max-width: 48%;
+          margin: 0px;
+        }
+        div.reading-neuron {
+          width: 30%;
+          margin: 20px;
+        }
+      </style>
+      <figure class="eq-grid reading-container">
+        <div class="reading-neuron">
+          <h4><a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_v2/image_block_4_2_Add_6_0/1535">RN101 Channel 1535</a></h4>
+          <img class="reading-neuron-feature-viz" src="/typographic/RN101-channel-1535.png" />
+          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1535-dataset-1.png" />
+          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1535-dataset-2.png" />
+          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1535-dataset-3.png" />
+          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1535-dataset-4.png" />
+          <p><small>"kiss", "love you"</small></p>
+        </div>
+        <div class="reading-neuron">
+          <h4><a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_v2/image_block_4_2_Add_6_0/1882">RN101 Channel 1882</a></h4>
+          <img class="reading-neuron-feature-viz" src="/typographic/RN101-channel-1882.png" />
+          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1882-dataset-1.png" />
+          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1882-dataset-2.png" />
+          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1882-dataset-3.png" />
+          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1882-dataset-4.png" />
+          <p><small>"thank you", "gracias"</small></p>
+        </div>
+        <div class="reading-neuron">
+          <h4><a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_v2/image_block_4_2_Add_6_0/1738">RN101 Channel 1738</a></h4>
+          <img class="reading-neuron-feature-viz" src="/typographic/RN101-channel-1738.png" />
+          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1738-dataset-1.png" />
+          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1738-dataset-2.png" />
+          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1738-dataset-3.png" />
+          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1738-dataset-4.png" />
+          <p><small>"year", "2015", "2016", ...</small></p>
+        </div>
+      </figure>
+      <figcaption>
+        Three examples of neurons from Resnet-101 whose feature visualizations (top) and selected dataset examples (bottom) show sensitivity to specific words and text.
+      </figcaption>
+    </d-figure>
 
   </d-article>
 
