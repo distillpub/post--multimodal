@@ -7,6 +7,22 @@
     <%=require("../static/styles.css") %>
   </style>
   <script src="https://distill.pub/template.v2.js"></script>
+
+  <style>
+    .fullscreen-diagram{
+      grid-column: screen; 
+      padding:0px; 
+    }
+
+    .fullscreen-table{
+      margin-top:0px;
+      margin-bottom:0px; 
+      grid-column: screen; 
+      background: #FFFFF; 
+    }
+
+  </style>
+
 </head>
 
 <body>
@@ -73,7 +89,7 @@
   
     <section>Into the Multimodal Mind</section>
 
-    <h2>Identity Recognition</h2>
+    <h3>Identity Recognition</h3>
 
     <p>
       Our discussion begins with perhaps the kind of neuron that has fueled the most speculation in the brain, “grandmother” neurons. 
@@ -117,8 +133,9 @@
     
     <p>
       Since these units also respond to other people, thinking of them as people detectors may not actually be the best conceptualization. Rather, it might be more helpful to think of them as topic detectors, with the person as the foremost symbol of that topic. Or to think of them as associative people detectors, firing based on how associated content is to their subject. [Work the Bill Gates/Mike Zukerburg stuff into here.]
-    Geolocalization
     </p>
+
+    <h3>Geolocation</h3>
     
     <p>
       We also find "regional neurons" which respond to a fusion of features roughly associated with a geographic region: country and city names, distinctive architecture, prominent public figures, faces of the most common ethnicity, distinctive clothing, wildlife, and local script (if not roman alphabet). If shown a world map, even without labels, these neurons fire selectively for the relevant region on the map.
@@ -140,7 +157,19 @@
       In addition to these regional neurons, we find that many other neurons appear to have geographic information baked in, firing weakly for regions on a world map related to them. For example, we noticed that a coffee neuron fires for Brazil, where a significant amount of coffee is made, and a lion/tiger neuron fires for the parts of Africa and Asia where lions and tigers are found, a common human mistake! We're hesitant to read too much into this -- there's plenty of neurons which activate a bit for a world map without any obvious relationship to the topic -- but it is an interesting phenomenon.
     </p>
 
-    <subsection>Mechanics of Abstraction</subsection>
+    <h3>Table of Interesting Neurons</h3>
+
+    <p>
+      These abstractions appear to span the extremely low level - the nearly raw representation of color, characters, to the extremely abstract - neurons that represent all mammals, entire countries and ecosystems. Why do the representations form in this way? 
+    </p>
+
+    <figure id="interesting-neurons" class="fullscreen-table"></figure>
+
+    <p>
+      These abstractions appear to span the extremely low level - the nearly raw representation of color, characters, to the extremely abstract - neurons that represent all mammals, entire countries and ecosystems. Why do the representations form in this way? 
+    </p>
+
+    <h2>Mechanics of Abstraction</h2>
 
     <p>
       These abstractions appear to span the extremely low level - the nearly raw representation of color, characters, to the extremely abstract - neurons that represent all mammals, entire countries and ecosystems. Why do the representations form in this way? 
@@ -182,6 +211,8 @@
       These classifications are not limited, in fact, to animals. Vehicles, too, have their own implicit hierarchy, here with ...
     </p>
 
+    <figure id="hypergraph-device" class="fullscreen-diagram"></figure>
+
     <p>
       We find this remarkable given the fact that such organization is not, in any explicit form, given as a training signal to the neural network. The neural network has decided that the most efficient way to organize information is in this way, one which reflects human intuition. Perhaps this form of convergent evolution is a suggestion that these structures do exist in some implicit form in human language, and though there may be dispute as to where the lines are drawn explicitly, 
     </p>
@@ -214,17 +245,6 @@
     <p>
       As we examined the features and circuits in the hidden layers of the multimodal models, we found many that appeared to be analogues of features we'd discovered in ImageNet [] models like InceptionV1 []. But it wasn't just ImageNet models. We also saw features -- such as palm tree detectors -- we'd seen in an unpublished visualization [] of the geolocalization model PlaNet []. Others seemed familiar from looking at InceptionV1 trained on Places365 []. And while we'd never seen visualizations of a strong OCR model, we discovered many lexicographic features that would intuitively form in such a model.
     </p>
-
-
-    <style>
-      .fullscreen-diagram{
-      grid-column: screen; 
-      background: #FAFAFC; 
-      padding:40px; 
-      border-top: 1px solid #F3F3F3; 
-      border-bottom: 1px solid #F3F3F3;
-      }
-  </style>
 
     <figure id="universality-diagram" class="fullscreen-diagram"></figure>
 

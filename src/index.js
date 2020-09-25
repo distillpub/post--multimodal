@@ -3,7 +3,10 @@ import * as _unused from "raw-loader!./index.ejs";
 // TODO: disable before publishing
 
 import Figure from "./diagrams/Neuron.svelte";
+import HyperSet from "./diagrams/HyperSet.svelte";
 import UniversalityTable from "./diagrams/UniversalityTable.svelte";
+import NeuronTable from "./diagrams/NeuronTable.svelte";
+
 import "regenerator-runtime/runtime";
 
 // lazily initialize any diagram below the fold. E.G:
@@ -18,15 +21,8 @@ import "regenerator-runtime/runtime";
 // 									model: "RN_4x"
 // 								}
 // 							});
-
-
-
 // });
 
-
-const target = document.getElementById("universality-diagram");
-let example = new UniversalityTable({ target, props: 
-							{
-							}
-						});
-
+let example     = new UniversalityTable({ target: document.getElementById("universality-diagram"), props: {}});
+let hypergraph  = new HyperSet({ target: document.getElementById("hypergraph-device"), props: {}});
+let interesting = new NeuronTable({ target: document.getElementById("interesting-neurons"), props: {}});
