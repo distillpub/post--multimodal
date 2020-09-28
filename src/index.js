@@ -3,7 +3,7 @@ import * as _unused from "raw-loader!./index.ejs";
 // TODO: disable before publishing
 
 import Figure from "./diagrams/Neuron.svelte";
-//import InTheWild1 from "./diagrams/InTheWild1.svelte";
+import InTheWild1 from "./diagrams/InTheWild1.svelte";
 import UniversalityTable from "./diagrams/UniversalityTable.svelte";
 import UniversalCircuitTable from "./diagrams/UniversalCircuitTable.svelte";
 import "regenerator-runtime/runtime";
@@ -29,7 +29,7 @@ import "regenerator-runtime/runtime";
 const diagrams = [
 	["universality-diagram", UniversalityTable, {}],
 	["univeresal-circuit-diagram", UniversalCircuitTable, {}],
-	//["in-the-wild-1", InTheWild1, {}]
+	["in-the-wild-1", InTheWild1, {}]
 ];
 
 for(let [elementId, DiagramClass, props] of diagrams) {
