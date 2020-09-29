@@ -6,6 +6,19 @@
 
 <script>
 const attacks_2 = require('../../static/typographic/in_the_wild_2.json');
+
+let trueLabels = {
+        "mug": ["coffee mug"],
+        "glass": ["beer glass"],
+        "plant": ["plant pot"],
+        "laptop": ["laptop computer"],
+        "phone": ["rotary dial telephone"],
+        "trash": ["waste container"],
+        "wine": ["red wine"],
+        "apple": ["apple"],
+        "toaster": ["toaster"],
+    }
+
 </script>
 
 <div style="max-width: 1440px; margin: auto;">
@@ -18,7 +31,7 @@ const attacks_2 = require('../../static/typographic/in_the_wild_2.json');
           </div>
           <div>
             {#each results.zero_shot_statistics as probability}
-              <div style="border-bottom: 1px solid #EEE; background-color: rgba(0, 0, 0, {probability[0] }); color: #{probability[0] < 0.5 ? "000000" : "FFFFFF" }; padding: 0px 10px; line-height: 16px; width: 150px; font-size: 80%">
+              <div style="border-bottom: 1px solid #EEE; background-color: hsla(40, { trueLabels[item].includes(probability[1]) ? "0%" : "70%" } , 50%, { probability[0]}); color: #{probability[0] < 0.5 ? "000000" : "FFFFFF" }; padding: 0px 10px; line-height: 16px; width: 150px; font-size: 80%">
                 <small>{probability[1] }
                   <span style="float: right;">{Math.round(probability[0] * 10000) / 100 }%</span>
                 </small>
