@@ -140,7 +140,34 @@
       In addition to these regional neurons, we find that many other neurons appear to have geographic information baked in, firing weakly for regions on a world map related to them. For example, we noticed that a coffee neuron fires for Brazil, where a significant amount of coffee is made, and a lion/tiger neuron fires for the parts of Africa and Asia where lions and tigers are found, a common human mistake! We're hesitant to read too much into this -- there's plenty of neurons which activate a bit for a world map without any obvious relationship to the topic -- but it is an interesting phenomenon.
     </p>
 
+    <h2>The Emotion Family</h2>
+
+    <p>
+      The task of captioning Internet images requires emotional intelligence, as small changes in a person's expression can radically change the meaning of a photo. We've found dozens of emotion detecting neurons in the multimodal model, each responding to the concept of a single emotion across a wide range of modalities, from body language and facial expressions, to text, to different species and cartoons, and even landscapes and the insides of buildings that evoke a feeling. There are neurons that respond to common feelings like anger and happiness, and as well as more nuanced emotions like feeling destroyed, aroused, honored, or silly. 
+    </p>
+    <figure id="emotions-intro" class="fullscreen-diagram"></figure>
+    <p>
+      These emotions neurons are versatile and highly multimodal, spanning facial expressions across age, cartoon characters, relevant text, and even species. The surprise neuron activates even when the majority of the face is obscured. It responds to slang like "OMG!" and "WTF", and text feature visualization produces similar words of shock and surprise.
+    </p>
+    <figure id="emotions-surprise" class="fullscreen-diagram"></figure>
+    <p>Other neurons learn to detect emotions as part of a broader concept. At first glance neuron xyz responds to the concept of sexuality, activating in response to visual pornographic content, sexual slang, and the names of adult websites. However, using a facial facet with feature visualization, we see it also corresponds to the emotion of arousal, rendering a balding male with an exaggerated aroused expression. Similarly, we find a question mark neuron hides … In each of these cases, the neuron indeed detects an emotion, but since it is only part of a more abstract concept, we need facets to see it.</p>
+    <figure id="emotions-minor" class="fullscreen-diagram"></figure>
+    <p>On the other extreme, some neurons respond simply to specific body and facial expressions, like the silly expression neuron. It activates most to the internet-born duckface expression, and peace signs, and both words show up in its text feature visualization.</p>
+    <figure id="emotions-duckface" class="fullscreen-diagram"></figure>
+    <p>We're excited at the promise of emotion neurons to benefit social studies that need algorithmic access to emotion detectors. These neurons could help people understand the emotional content of a long video, either by coloring the video's scrubber based on the emotions at each time, or by showing an Activation Atlas of the scenes of a movie based on emotion to study cinematography in a new way. These emotions could also be useful for studying how expression changes over time. With a dataset of selfies over the last decade with their location tagged, perhaps one could better understand birth and spread of expressions like the duckface across different cultures and geography.</p>
+    <h4>Mental Health Neuron</h4>
+    <p>One neuron that doesn't represent a single emotion but rather a high level category of emotions is the mental illness neuron, which is separate from a different physical illness neuron. It responds to both body language, facial expressions, and text corresponding to a variety of emotions like anxiety, depression, and loneliness. It also responds to images and text of illegal drugs and medicine, and psychological words like "mental" and "psychology".</p>
+
+    <p>To better understand the behavior of this neuron we collected more than 300 dataset examples at a variety of activations and labelled them by hand into categories the neuron seemed to respond to. During the labeling process we did not have access to the activation. We can use this hand-labelled data to estimate the conditional probability of a category at a given activation.</p>
+      
+    <p>We see that the neuron activates most strongly to mental health disorders, but also to the broader concept of psychology. We can also look at the pre-ReLU activations to see what the neuron negatively responds to. It has a weak negative response to concepts we may expect to be negatively correlated with mental health disorders, like pets, sports, and travel. Many of its strongest negative activations are to exercise, sporting events, and music related ideas like albums and concerts.</p>
+
+    <figure id="emotions-mentalhealth" class="fullscreen-diagram"></figure>
+    <p>Later when we look at how neurons are used we'll see that an important part of the mental health neuron is how it is composed with other emotions to ascribe the concept of disease to them. For instance, we'll see in a later section that anxiety is represented by a combination of the mental health neuron and a shocked neuron, but both neurons can fire independently.</p>
+    <p>This means studying neurons individually only gives us a small glimpse of the full space of emotions the model is aware of. Most emotions are a combination of simpler emotions, or what the American Psychology Association calls a complex emotion. In fact, the promising theory of constructed emotion suggests there are no universal discrete emotions, that all emotions are the combination of separate brain regions working in tandem each moment to craft an overall mood or affect that varies widely across people and cultures. In true, the natural way to study emotions in a neural network may not be to look at neurons one by one, but to look at how they work together in concert, as we'll do in the X section.</p>
+
     <subsection>Mechanics of Abstraction</subsection>
+
 
     <p>
       These abstractions appear to span the extremely low level - the nearly raw representation of color, characters, to the extremely abstract - neurons that represent all mammals, entire countries and ecosystems. Why do the representations form in this way?
@@ -202,6 +229,21 @@
     </p>
 
     <subsection>Using Abstractions</subsection>
+
+    <h2>Emotional Intelligence</h2>
+
+    <p>Earlier we looked at a family of neurons that each detect an emotion via several facets like text as well as facial and body expressions. These neurons only scratch the surface of the range of emotions the model understands, since most emotions are the result of several neurons working in concert, often alongside non-emotion neurons that are specific to each picture. In this section well study this broader landscape of emotions.</p>
+    <p>One simple way to get the set of neurons that corresponds to an emotion is to take attribution from the last layer of the image model to the text "I feel {emotion}". This gives us a combination of vectors that we can study. We can extract a list of emotions from a feeling wheel, a type of hand-crafted user interface for seeing emotions, often hierarchically.</p>
+    <p>Beside the color wheel we can render an Activation Atlas of the attribution vectors representing each emotion. To make the atlas more legible, we can use non-negative matrix factorization (NMF) on the vectors and color each tile based on its factors.</p>
+
+    <figure id="emotions-atlas" class="fullscreen-diagram"></figure>
+
+    <p>Okay now we're going to look at some semantic dictionaries.</p>
+    <p>theres some interesting clever combos</p>
+    <figure id="emotions-semantic-clever" class="fullscreen-diagram"></figure>
+    <p>and some related to bias</p>
+    <figure id="emotions-semantic-bias" class="fullscreen-diagram"></figure>
+    <p>Add a conclusion here for the emotion work.</p>
 
     <h2>The Mechanics of Abstraction</h2>
 
