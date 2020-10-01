@@ -53,7 +53,7 @@ export default class HumanLabels extends React.Component {
       return null
     }
 
-    const width = 1400
+    const width = 1300
     const { activeGroups } = this.state
     const isGroupActive = (group) => includes(activeGroups, group)
     const hasActiveGroup = activeGroups.length > 0
@@ -64,10 +64,11 @@ export default class HumanLabels extends React.Component {
       stackProps.domain = { y: [0, 0.0000022] }
     }
 
-    const colorSize = 20
+    const colorSize = 15
     const Label = ({ index, children, count }) => (
       <Surface
         cursor="pointer"
+        marginRight={10}
         onClick={() => {
           this.onToggleGroup(index)
         }}
@@ -76,43 +77,32 @@ export default class HumanLabels extends React.Component {
           const showActive = hovering || isGroupActive(index)
 
           return (
-            <Surface
-              flexFlow="row"
-              alignItems="center"
-              borderRadius={8}
-              transition="100ms ease-out all"
-              background={showActive && 'rgba(0,0,0,0.02)'}
-              border={`1px solid rgba(0, 0, 0, ${showActive ? 0.2 : 0})`}
-              width={150}
-              padding={5}
-            >
+            <Surface padding={6} background={showActive && 'rgba(0,0,0,0.06)'}>
               <Surface
-                marginRight={12}
-                width={colorSize}
-                height={colorSize}
-                borderRadius={2}
-                background={colors[index]}
-                opacity={hasActiveGroup ? (isGroupActive(index) ? 1 : 0.4) : 1}
-                transition="300ms ease-out all"
-                border="1px solid rgba(0, 0, 0, 0.6)"
-              />
-              <Surface>
-                <Text
-                  fontFamily="Arial"
-                  fontWeight={600}
-                  fontSize={12}
-                  lineHeight={1.2}
-                >
-                  {children}
-                </Text>
-                <Text
-                  fontFamily="Arial"
-                  fontSize={12}
-                  fontWeight={400}
-                  lineHeight={1.2}
-                >
-                  {labelCounts[index]} images
-                </Text>
+                flexFlow="row"
+                alignItems="center"
+                transition="100ms ease-out all"
+                paddingBottom={2}
+                borderBottom={`6px solid ${colors[index]}`}
+              >
+                <Surface>
+                  <Text
+                    fontFamily="Arial"
+                    fontWeight={600}
+                    fontSize={12}
+                    lineHeight={1.2}
+                  >
+                    {children}
+                  </Text>
+                  <Text
+                    fontFamily="Arial"
+                    fontSize={12}
+                    fontWeight={400}
+                    lineHeight={1.2}
+                  >
+                    {labelCounts[index]} images
+                  </Text>
+                </Surface>
               </Surface>
             </Surface>
           )
@@ -120,31 +110,42 @@ export default class HumanLabels extends React.Component {
       </Surface>
     )
 
-    return (
-      <React.Fragment>
-        <Surface width={width} alignSelf="center">
-          <Surface
-            flexFlow="row"
-            justifyContent="space-between"
-            alignItems="center"
+    const Valence = ({ name, children }) => {
+      return (
+        <Surface marginRight={20}>
+          <Text
+            fontSize={12}
+            opacity={0.8}
+            fontWeight={500}
+            textDecoration="uppercase"
           >
-            <Text size={600} marginLeft={60}>
-              {title}
-            </Text>
-            <Surface
-              flexFlow="row-reverse"
-              marginRight={50}
-              justifyContent="space-between"
-              alignSelf="flex-end"
-              zIndex={100}
-            >
-              {labelNames.map((name, index) => (
-                <Label index={index} count={0}>
-                  {name}
-                </Label>
-              ))}
-            </Surface>
+            {name} Valence
+          </Text>
+          <Surface flexFlow="row" transform="translateX(-6px)">
+            {children}
           </Surface>
+        </Surface>
+      )
+    }
+
+    return (
+      <Surface width={width} margin="auto">
+        <Surface flexFlow="row" marginLeft={60}>
+          <Valence name="High">
+            <Label index={8}>Music &amp; Sports</Label>
+            <Label index={7}>Travel, Food, Pet</Label>
+          </Valence>
+          <Valence name="Neutral">
+            <Label index={6}>Unrelated</Label>
+            <Label index={4}>Medication &amp; Drugs</Label>
+            <Label index={5}>Word like "mental health"</Label>
+          </Valence>
+          <Valence name="Low">
+            <Label index={3}>Depressing Joke</Label>
+            <Label index={2}>Bad Feeling</Label>
+            <Label index={1}>Anxiety</Label>
+            <Label index={0}>Depression</Label>
+          </Valence>
         </Surface>
         <Surface width={width} alignSelf="center" transform="translateY(-20px)">
           <VictoryChart width={width} height={400} {...stackProps}>
@@ -213,9 +214,16 @@ export default class HumanLabels extends React.Component {
             alignSelf: 'center',
           }}
         >
-          {children}
+          By measuring the conditional probability of categories with different
+          levels of valence we see that most of the strongest activations
+          correspond to mental illnesses like anxiety and depression. However,
+          categories we may consider valence neutral, like the text "mental
+          health" or medication, tend to cause positive activations. This may
+          reflect a bias on the Internet where mental health is more often used
+          in the context of mental disease than discussed in the abstract in a
+          valence neutral way.
         </figcaption>
-      </React.Fragment>
+      </Surface>
     )
   }
 }
