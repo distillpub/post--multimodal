@@ -36,6 +36,21 @@ import EmotionsSemantic from './diagrams/emotions/semantic'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+ReactDOM.render(
+  <EmotionsSemantic
+    emotionNames={[
+      'ashamed',
+      'let down',
+      'resentful',
+      'aggressive',
+      'skeptical',
+      'disappointed',
+      'grief',
+    ]}
+  />,
+  document.getElementById('emotions-semantic-clever')
+)
+
 ReactDOM.render(<EmotionsIntro />, document.getElementById('emotions-intro'))
 ReactDOM.render(<EmotionsMinor />, document.getElementById('emotions-minor'))
 ReactDOM.render(
@@ -51,20 +66,6 @@ ReactDOM.render(
   document.getElementById('emotions-mentalhealth')
 )
 ReactDOM.render(<EmotionsAtlas />, document.getElementById('emotions-atlas'))
-ReactDOM.render(
-  <EmotionsSemantic
-    emotionNames={[
-      'ashamed',
-      'let down',
-      'resentful',
-      'aggressive',
-      'skeptical',
-      'disappointed',
-      'grief',
-    ]}
-  />,
-  document.getElementById('emotions-semantic-clever')
-)
 
 ReactDOM.render(
   <EmotionsSemantic
