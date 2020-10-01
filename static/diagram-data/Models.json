@@ -1,0 +1,10 @@
+{
+    "InceptionV1": {"header": "ImageNet", "sub": "InceptionV1"},
+    "InceptionV1_caffe_Places365": {"header": "Places365", "sub": "InceptionV1"},
+    "MultimodalLM": {"header": "Multimodal", "sub": "Language Model"},
+    "contrastive_v1": {"header": "Multimodal", "sub": "RN50 1x (A)"},
+    "contrastive_rn50": {"header": "Multimodal", "sub": "RN50 1x (B)"},
+    "contrastive_v2": {"header": "Multimodal", "sub": "RN50 2x"},
+    "contrastive_4x": {"header": "Multimodal", "sub": "RN50 4x"}
+}
+

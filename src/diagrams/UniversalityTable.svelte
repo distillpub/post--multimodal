@@ -1,4 +1,8 @@
 
+
+<!-- DEPRECATED. See FeaturesTable.svelte instead. -->
+
+
 <style>
     @media only screen and (min-width: 1400px) {
         .table {
@@ -89,7 +93,7 @@
         <div class='figcaption'>Features which are shared across ImageNet, Places365, im2gps and Multimodal models.</div>
     </div>
     <div style='grid-column: category; grid-row-start: main 3; grid-row-end: main 5; padding-right: 16px; margin-right: 16px; border-right: 1px solid #CCC;'>
-        <div style='line-height: 120%; margin-bottom: 8px;'>Multimodal + One Other Model</div>
+        <div style='line-height: 120%; margin-bottom: 8px;'></div>
         <div class='figcaption'>Features which are shared across ImageNet, Places365, im2gps and Multimodal models.</div>
     </div>
     <div style='grid-column: category; grid-row-start: main 5; grid-row-end: main 6; padding-right: 16px; margin-right: 16px; border-right: 1px solid #CCC;'>

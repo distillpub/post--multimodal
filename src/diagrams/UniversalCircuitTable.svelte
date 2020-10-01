@@ -71,41 +71,33 @@
     .input-neuron, .input-arrow, .weight   { --B: main calc( 1 + var(--input ) ); }
     .weight, .output-arrow, .output-neuron { --A: main calc( 1 + var(--output) ); }
 
+    #outer-grid {
+        --C-template: [header] auto repeat(2, [circuit] auto);
+        --D-template: [header] auto repeat(6, [model] auto);
+    }
+    .circuit {
+        --A-template: [input] 40px [arrow] 16px repeat(4, [main] 40px);
+        --B-template: repeat(2, [main] 40px) [arrow] 16px [output] 40px;
+    }
     
     @media only screen and (max-width: 1250px) {
-        #outer-grid {
-            grid-template-columns: [header] 100px repeat(2, [circuit] auto);
-            grid-template-rows: [header] auto repeat(6, [model] auto);
-        }
-        #outer-grid > div {grid-column: var(--C); grid-row: var(--D)}
-
+        #outer-grid       { grid-template-columns: var(--C-template);  grid-template-rows: var(--D-template); }
+        #outer-grid > div { grid-column:           var(--C)         ;  grid-row:           var(--D)         ; }
+        .circuit          { grid-template-columns: var(--A-template);  grid-template-rows: var(--B-template); }
+        .circuit div      { grid-column:           var(--A)         ;  grid-row:           var(--B)         ; }
         .input-arrow::before  { content: "→"; }
         .output-arrow::before { content: "↓"; }
-
-        .circuit {
-            grid-template-rows: repeat(2, [main] 40px) [arrow] 16px [output] 40px;
-            grid-template-columns: [input] 40px [arrow] 16px repeat(4, [main] 40px) ;
-        }
-        .circuit div {grid-column: var(--A); grid-row: var(--B)}
-
         .circuit-title {max-width: 270px;}
     }
 
     @media only screen and (min-width: 1250px) {
-        #outer-grid {
-            grid-template-rows: [header] auto repeat(2, [circuit] auto);
-            grid-template-columns: [header] 100px repeat(6, [model] auto);
-        }
-        #outer-grid > div {grid-column: var(--D); grid-row: var(--C)}
-
+        #outer-grid       { grid-template-columns: var(--D-template);  grid-template-rows: var(--C-template); }
+        #outer-grid > div { grid-column:           var(--D)         ;  grid-row:           var(--C)         ; }
+        .circuit          { grid-template-columns: var(--B-template);  grid-template-rows: var(--A-template); }
+        .circuit div      { grid-column:           var(--B)         ;  grid-row:           var(--A)         ; }
         .input-arrow::before  { content: "↓"; }
         .output-arrow::before { content: "→"; }
-
-        .circuit {
-            grid-template-columns: repeat(2, [main] 40px) [arrow] 16px [output] 40px;
-            grid-template-rows: [input] 40px [arrow] 16px repeat(4, [main] 40px) ;
-        }
-        .circuit div {grid-column: var(--B); grid-row: var(--A)}
+        .circuit-title {max-width: 180px;}
     }
 
 
