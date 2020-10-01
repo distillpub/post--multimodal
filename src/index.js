@@ -5,6 +5,10 @@ import * as _unused from 'raw-loader!./index.ejs'
 import Figure from "./diagrams/Neuron.svelte";
 import EnrichmentCircuit from "./diagrams/EnrichmentCircuit.svelte";
 import FeaturesTable from "./diagrams/FeaturesTable.svelte";
+import LiterateNeurons from "./diagrams/LiterateNeurons.svelte";
+import AttackSetup from "./diagrams/AttackSetup.svelte";
+import AutomatedAttacks from "./diagrams/AutomatedAttacks.svelte";
+import AttackableNeurons from "./diagrams/AttackableNeurons.svelte";
 import UniversalCircuitTable from "./diagrams/UniversalCircuitTable.svelte";
 import InTheWild1 from './diagrams/InTheWild1.svelte'
 import InTheWild2 from './diagrams/InTheWild2.svelte'
@@ -75,6 +79,10 @@ const diagrams = [
 	["task-specific", FeaturesTable, task_specific_data],
 	["universal-circuit-diagram", UniversalCircuitTable, {}],
 	["enrichment-diagram-2", EnrichmentCircuit, {}],
+	["literate-neurons", LiterateNeurons, {}],
+	["attack-setup", AttackSetup, {}],
+	["automated-attacks", AutomatedAttacks, {}],
+	["attackable-neurons", AttackableNeurons, {}],
 	["in-the-wild-1", InTheWild1, {}],
 	['in-the-wild-2', InTheWild2, {}]
 ];
@@ -128,4 +136,3 @@ ReactDOM.render(
   />,
   document.getElementById('emotions-semantic-bias')
 )
-
