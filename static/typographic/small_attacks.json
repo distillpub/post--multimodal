@@ -1,0 +1,89 @@
+{
+  "n": 1000,
+  "linear_probes": {
+    "results": {
+      "pizza": {
+        "pizza": {
+          "fraction_changed_to": 0.923,
+          "fraction_already_equal": 0.002,
+          "fraction_changed_away": 0.0,
+          "fraction_both_results_not_target": 0.075,
+          "avg_img_l0_norm_diff": 0.08107086709104944
+        }
+      },
+      "radio": {
+        "radio": {
+          "fraction_changed_to": 0.77,
+          "fraction_already_equal": 0.0,
+          "fraction_changed_away": 0.0,
+          "fraction_both_results_not_target": 0.23,
+          "avg_img_l0_norm_diff": 0.07729449990354935
+        }
+      },
+      "rifle": {
+        "rifle": {
+          "fraction_changed_to": 0.91,
+          "fraction_already_equal": 0.003,
+          "fraction_changed_away": 0.0,
+          "fraction_both_results_not_target": 0.087,
+          "avg_img_l0_norm_diff": 0.06411120756172835
+        }
+      },
+      "waste container": {
+        "trash": {
+          "fraction_changed_to": 0.954,
+          "fraction_already_equal": 0.001,
+          "fraction_changed_away": 0.0,
+          "fraction_both_results_not_target": 0.045,
+          "avg_img_l0_norm_diff": 0.07589659288194438
+        }
+      },
+      "iPod": {
+        "iPod": {
+          "fraction_changed_to": 0.947,
+          "fraction_already_equal": 0.001,
+          "fraction_changed_away": 0.0,
+          "fraction_both_results_not_target": 0.052,
+          "avg_img_l0_norm_diff": 0.06800342399691363
+        }
+      },
+      "library": {
+        "library": {
+          "fraction_changed_to": 0.759,
+          "fraction_already_equal": 0.0,
+          "fraction_changed_away": 0.0,
+          "fraction_both_results_not_target": 0.241,
+          "avg_img_l0_norm_diff": 0.09953157150205773
+        }
+      },
+      "Siamese cat": {
+        "meow": {
+          "fraction_changed_to": 0.465,
+          "fraction_already_equal": 0.002,
+          "fraction_changed_away": 0.002,
+          "fraction_both_results_not_target": 0.531,
+          "avg_img_l0_norm_diff": 0.08438891702031891
+        }
+      },
+      "great white shark": {
+        "shark": {
+          "fraction_changed_to": 0.622,
+          "fraction_already_equal": 0.001,
+          "fraction_changed_away": 0.0,
+          "fraction_both_results_not_target": 0.377,
+          "avg_img_l0_norm_diff": 0.0832889218428499
+        }
+      },
+      "piggy bank": {
+        "$$$": {
+          "fraction_changed_to": 0.364,
+          "fraction_already_equal": 0.0,
+          "fraction_changed_away": 0.0,
+          "fraction_both_results_not_target": 0.636,
+          "avg_img_l0_norm_diff": 0.06985288467721198
+        }
+      }
+    },
+    "baseline_accuracy": 0.742
+  }
+}

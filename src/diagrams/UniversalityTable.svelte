@@ -1,9 +1,26 @@
 
+
+<!-- DEPRECATED. See FeaturesTable.svelte instead. -->
+
+
 <style>
+    @media only screen and (min-width: 1400px) {
+        .table {
+            grid-gap: 12px;
+            grid-template-columns: [category] 160px [label] 160px repeat(7, [main] 122px);
+        }
+    }
+    @media only screen and (max-width: 1399px){
+        .table {
+            display: grid;
+            grid-column-gap: 12px;
+            grid-template-columns: [category] 120px [label] 100px repeat(7, [main] 80px);
+        }
+    }
     .table {
-    display: grid;
-    grid-gap: 16px;
-    grid-template-columns: 160px repeat(6, 164px);
+        display: grid;
+        grid-row-gap: 16px;
+        grid-template-rows: [category] auto [label] auto repeat(6, [main] auto) [caption] auto;
     }
     .feature-box {
         display: flex; flex-wrap: wrap; grid-gap: 2px; align-content: start;
@@ -13,7 +30,7 @@
         display: block;
     }
     .feature-box img {
-        width: 80px; height: 80px; background: #AAA; border-radius: 4px; object-fit: none;
+        width: 60px; height: 60px; background: #AAA; border-radius: 4px; object-fit: none;
         display: block;
     }
 
@@ -23,92 +40,72 @@
 </style>
 
 <script>
-    let columnTitles = [
-        {header: "ImageNet", sub: "InceptionV1"},
-        {header: "Places365", sub: "InceptionV1"},
-        // {header: "im2gps", sub: "RN50?"},
-        {header: "Multimodal", sub: "RN50 1x (A)"},
-        {header: "Multimodal", sub: "RN50 1x (B)"},
-        {header: "Multimodal", sub: "RN50 2x"},
-        {header: "Multimodal", sub: "RN50 4x"},
-    ];
-    let rowTitles = [
-        {header: "Feature 1", sub: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"},
-        {header: "Feature 2", sub: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"},
-        {header: "Feature 3", sub: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"},
-        {header: "Feature 4", sub: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"},
-    ]
-    let rows = [
-        {
-            "name": "B/W vs Color Detectors",
-            "description": "Units detecting transitions from the generic absence of color to th presence of color.",
-            "model_features": [
-                [{"model": "InceptionV1", "layer": "mixed3a", "unit": 197, "img_url": "https://storage.googleapis.com/openai-clarity/model-visualizer%2F1556758232%2FInceptionV1%2Ffeature_visualization%2Falpha%3DFalse%26layer_name%3Dmixed3a%26negative%3DFalse%26objective_name%3Dneuron%2Fchannel_index=197.png", "a_url": "https://microscope.openai.com/models/inceptionv1/mixed3a_0/197"}, {"model": "InceptionV1", "layer": "mixed3a", "unit": 210, "img_url": "https://storage.googleapis.com/openai-clarity/model-visualizer%2F1556758232%2FInceptionV1%2Ffeature_visualization%2Falpha%3DFalse%26layer_name%3Dmixed3a%26negative%3DFalse%26objective_name%3Dneuron%2Fchannel_index=210.png", "a_url": "https://microscope.openai.com/models/inceptionv1/mixed3a_0/210"}, {"model": "InceptionV1", "layer": "mixed3a", "unit": 214, "img_url": "https://storage.googleapis.com/openai-clarity/model-visualizer%2F1556758232%2FInceptionV1%2Ffeature_visualization%2Falpha%3DFalse%26layer_name%3Dmixed3a%26negative%3DFalse%26objective_name%3Dneuron%2Fchannel_index=214.png", "a_url": "https://microscope.openai.com/models/inceptionv1/mixed3a_0/214"}, {"model": "InceptionV1", "layer": "mixed3a", "unit": 208, "img_url": "https://storage.googleapis.com/openai-clarity/model-visualizer%2F1556758232%2FInceptionV1%2Ffeature_visualization%2Falpha%3DFalse%26layer_name%3Dmixed3a%26negative%3DFalse%26objective_name%3Dneuron%2Fchannel_index=208.png", "a_url": "https://microscope.openai.com/models/inceptionv1/mixed3a_0/208"}],
-                [{"model": "InceptionV1_caffe_Places365", "layer": "inception_3b_output", "unit": 385, "img_url": "https://storage.googleapis.com/openai-clarity/colah%2Fmicroscope-mirror%2Finceptionv1_caffe_places365%2Flucid.feature_vis%2Ffeature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dinception_3b_output%253A0%26steps%3D1024%2Fchannel-385.png", "a_url": "https://microscope.openai.com/models/inceptionv1_caffe_places365/inception_3b_output_0/385"}, {"model": "InceptionV1_caffe_Places365", "layer": "inception_3b_output", "unit": 354, "img_url": "https://storage.googleapis.com/openai-clarity/colah%2Fmicroscope-mirror%2Finceptionv1_caffe_places365%2Flucid.feature_vis%2Ffeature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dinception_3b_output%253A0%26steps%3D1024%2Fchannel-354.png", "a_url": "https://microscope.openai.com/models/inceptionv1_caffe_places365/inception_3b_output_0/354"}, {"model": "InceptionV1_caffe_Places365", "layer": "inception_3b_output", "unit": 375, "img_url": "https://storage.googleapis.com/openai-clarity/colah%2Fmicroscope-mirror%2Finceptionv1_caffe_places365%2Flucid.feature_vis%2Ffeature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dinception_3b_output%253A0%26steps%3D1024%2Fchannel-375.png", "a_url": "https://microscope.openai.com/models/inceptionv1_caffe_places365/inception_3b_output_0/375"}, {"model": "InceptionV1_caffe_Places365", "layer": "inception_3b_output", "unit": 383, "img_url": "https://storage.googleapis.com/openai-clarity/colah%2Fmicroscope-mirror%2Finceptionv1_caffe_places365%2Flucid.feature_vis%2Ffeature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dinception_3b_output%253A0%26steps%3D1024%2Fchannel-383.png", "a_url": "https://microscope.openai.com/models/inceptionv1_caffe_places365/inception_3b_output_0/383"}],
-                [{"model": "contrastive_v1", "layer": "image_block_2/1/Relu_1", "unit": 43, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_v1%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D32%26steps%3D4096%26stop%3D64%2Fchannel-43.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_v1/image_block_2_1_add_3_0/43"}, {"model": "contrastive_v1", "layer": "image_block_2/1/add_3", "unit": 43, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_v1%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D32%26steps%3D4096%26stop%3D64%2Fchannel-43.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_v1/image_block_2_1_add_3_0/43"}, {"model": "contrastive_v1", "layer": "image_block_3/1/Relu_2", "unit": 953, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_v1%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_3%252F1%252FAdd_6%253A0%26repeat%3D0%26start%3D928%26steps%3D4096%26stop%3D960%2Fchannel-953.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_v1/image_block_3_1_Add_6_0/953"}, {"model": "contrastive_v1", "layer": "image_block_3/1/Add_6", "unit": 953, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_v1%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_3%252F1%252FAdd_6%253A0%26repeat%3D0%26start%3D928%26steps%3D4096%26stop%3D960%2Fchannel-953.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_v1/image_block_3_1_Add_6_0/953"}],
-                [{"model": "contrastive_rn50", "layer": "image_block_3/1/add_3", "unit": 105, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_rn50%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_3%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D96%26steps%3D4096%26stop%3D128%2Fchannel-105.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_rn50/image_block_3_1_add_3_0/105"}, {"model": "contrastive_rn50", "layer": "image_block_3/1/add_3", "unit": 144, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_rn50%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_3%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D128%26steps%3D4096%26stop%3D160%2Fchannel-144.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_rn50/image_block_3_1_add_3_0/144"}, {"model": "contrastive_rn50", "layer": "image_block_2/1/add_3", "unit": 100, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_rn50%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D96%26steps%3D4096%26stop%3D128%2Fchannel-100.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_rn50/image_block_2_1_add_3_0/100"}, {"model": "contrastive_rn50", "layer": "image_block_2/1/add_3", "unit": 26, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_rn50%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D0%26steps%3D4096%26stop%3D32%2Fchannel-26.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_rn50/image_block_2_1_add_3_0/26"}],
-                [{"model": "contrastive_v2", "layer": "image_block_3/1/add_3", "unit": 157, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_v2%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_3%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D128%26steps%3D4096%26stop%3D160%2Fchannel-157.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_v2/image_block_3_1_add_3_0/157"}, {"model": "contrastive_v2", "layer": "image_block_3/1/add_3", "unit": 44, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_v2%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_3%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D32%26steps%3D4096%26stop%3D64%2Fchannel-44.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_v2/image_block_3_1_add_3_0/44"}, {"model": "contrastive_v2", "layer": "image_block_2/1/add_3", "unit": 54, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_v2%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D32%26steps%3D4096%26stop%3D64%2Fchannel-54.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_v2/image_block_2_1_add_3_0/54"}, {"model": "contrastive_v2", "layer": "image_block_2/1/add_3", "unit": 50, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_v2%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D32%26steps%3D4096%26stop%3D64%2Fchannel-50.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_v2/image_block_2_1_add_3_0/50"}],
-                [{"model": "contrastive_4x", "layer": "image_block_2/3/add_3", "unit": 38, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_4x%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F3%252Fadd_3%253A0%26repeat%3D0%26start%3D32%26steps%3D4096%26stop%3D64%2Fchannel-38.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x/image_block_2_3_add_3_0/38"}, {"model": "contrastive_4x", "layer": "image_block_3/1/add_3", "unit": 31, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_4x%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_3%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D0%26steps%3D4096%26stop%3D32%2Fchannel-31.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x/image_block_3_1_add_3_0/31"}, {"model": "contrastive_4x", "layer": "image_block_2/3/add_3", "unit": 93, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_4x%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F3%252Fadd_3%253A0%26repeat%3D0%26start%3D64%26steps%3D4096%26stop%3D96%2Fchannel-93.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x/image_block_2_3_add_3_0/93"}, {"model": "contrastive_4x", "layer": "image_block_3/1/add_3", "unit": 5, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_4x%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_3%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D0%26steps%3D4096%26stop%3D32%2Fchannel-5.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x/image_block_3_1_add_3_0/5"}],
-            ]
-        },
-        {
-            "name": "High-Low Frequency Detectors",
-            "description": "Units detecting transitions from high to low frequency.",
-            "model_features": [
-                [{"model": "InceptionV1", "layer": "mixed3a", "unit": 136, "img_url": "https://storage.googleapis.com/openai-clarity/model-visualizer%2F1556758232%2FInceptionV1%2Ffeature_visualization%2Falpha%3DFalse%26layer_name%3Dmixed3a%26negative%3DFalse%26objective_name%3Dneuron%2Fchannel_index=136.png", "a_url": "https://microscope.openai.com/models/inceptionv1/mixed3a_0/136"}, {"model": "InceptionV1", "layer": "mixed3a", "unit": 112, "img_url": "https://storage.googleapis.com/openai-clarity/model-visualizer%2F1556758232%2FInceptionV1%2Ffeature_visualization%2Falpha%3DFalse%26layer_name%3Dmixed3a%26negative%3DFalse%26objective_name%3Dneuron%2Fchannel_index=112.png", "a_url": "https://microscope.openai.com/models/inceptionv1/mixed3a_0/112"}, {"model": "InceptionV1", "layer": "mixed3a", "unit": 117, "img_url": "https://storage.googleapis.com/openai-clarity/model-visualizer%2F1556758232%2FInceptionV1%2Ffeature_visualization%2Falpha%3DFalse%26layer_name%3Dmixed3a%26negative%3DFalse%26objective_name%3Dneuron%2Fchannel_index=117.png", "a_url": "https://microscope.openai.com/models/inceptionv1/mixed3a_0/117"}, {"model": "InceptionV1", "layer": "mixed3a", "unit": 88, "img_url": "https://storage.googleapis.com/openai-clarity/model-visualizer%2F1556758232%2FInceptionV1%2Ffeature_visualization%2Falpha%3DFalse%26layer_name%3Dmixed3a%26negative%3DFalse%26objective_name%3Dneuron%2Fchannel_index=88.png", "a_url": "https://microscope.openai.com/models/inceptionv1/mixed3a_0/88"}],
-[{"model": "InceptionV1_caffe_Places365", "layer": "inception_3a_output", "unit": 165, "img_url": "https://storage.googleapis.com/openai-clarity/colah%2Fmicroscope-mirror%2Finceptionv1_caffe_places365%2Flucid.feature_vis%2Ffeature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dinception_3a_output%253A0%26steps%3D1024%2Fchannel-165.png", "a_url": "https://microscope.openai.com/models/inceptionv1_caffe_places365/inception_3a_output_0/165"}, {"model": "InceptionV1_caffe_Places365", "layer": "inception_3a_output", "unit": 183, "img_url": "https://storage.googleapis.com/openai-clarity/colah%2Fmicroscope-mirror%2Finceptionv1_caffe_places365%2Flucid.feature_vis%2Ffeature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dinception_3a_output%253A0%26steps%3D1024%2Fchannel-183.png", "a_url": "https://microscope.openai.com/models/inceptionv1_caffe_places365/inception_3a_output_0/183"}, {"model": "InceptionV1_caffe_Places365", "layer": "inception_3b_output", "unit": 282, "img_url": "https://storage.googleapis.com/openai-clarity/colah%2Fmicroscope-mirror%2Finceptionv1_caffe_places365%2Flucid.feature_vis%2Ffeature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dinception_3b_output%253A0%26steps%3D1024%2Fchannel-282.png", "a_url": "https://microscope.openai.com/models/inceptionv1_caffe_places365/inception_3b_output_0/282"}, {"model": "InceptionV1_caffe_Places365", "layer": "inception_3b_output", "unit": 229, "img_url": "https://storage.googleapis.com/openai-clarity/colah%2Fmicroscope-mirror%2Finceptionv1_caffe_places365%2Flucid.feature_vis%2Ffeature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dinception_3b_output%253A0%26steps%3D1024%2Fchannel-229.png", "a_url": "https://microscope.openai.com/models/inceptionv1_caffe_places365/inception_3b_output_0/229"}],
-[{"model": "contrastive_v1", "layer": "image_block_2/1/add_3", "unit": 101, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_v1%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D96%26steps%3D4096%26stop%3D128%2Fchannel-101.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_v1/image_block_2_1_add_3_0/101"}, {"model": "contrastive_v1", "layer": "image_block_2/1/add_3", "unit": 52, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_v1%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D32%26steps%3D4096%26stop%3D64%2Fchannel-52.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_v1/image_block_2_1_add_3_0/52"}, {"model": "contrastive_v1", "layer": "image_block_2/1/add_3", "unit": 38, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_v1%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D32%26steps%3D4096%26stop%3D64%2Fchannel-38.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_v1/image_block_2_1_add_3_0/38"}],
-[{"model": "contrastive_rn50", "layer": "image_block_2/1/add_3", "unit": 105, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_rn50%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D96%26steps%3D4096%26stop%3D128%2Fchannel-105.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_rn50/image_block_2_1_add_3_0/105"}, {"model": "contrastive_rn50", "layer": "image_block_2/1/add_3", "unit": 83, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_rn50%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D64%26steps%3D4096%26stop%3D96%2Fchannel-83.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_rn50/image_block_2_1_add_3_0/83"}, {"model": "contrastive_rn50", "layer": "image_block_2/1/add_3", "unit": 28, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_rn50%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D0%26steps%3D4096%26stop%3D32%2Fchannel-28.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_rn50/image_block_2_1_add_3_0/28"}, {"model": "contrastive_rn50", "layer": "image_block_2/1/add_3", "unit": 4, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_rn50%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D0%26steps%3D4096%26stop%3D32%2Fchannel-4.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_rn50/image_block_2_1_add_3_0/4"}],
-[{"model": "contrastive_v2", "layer": "image_block_2/1/add_3", "unit": 52, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_v2%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D32%26steps%3D4096%26stop%3D64%2Fchannel-52.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_v2/image_block_2_1_add_3_0/52"}, {"model": "contrastive_v2", "layer": "image_block_2/1/add_3", "unit": 90, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_v2%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D64%26steps%3D4096%26stop%3D96%2Fchannel-90.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_v2/image_block_2_1_add_3_0/90"}, {"model": "contrastive_v2", "layer": "image_block_2/1/add_3", "unit": 89, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_v2%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D64%26steps%3D4096%26stop%3D96%2Fchannel-89.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_v2/image_block_2_1_add_3_0/89"}, {"model": "contrastive_v2", "layer": "image_block_2/1/add_3", "unit": 18, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_v2%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D0%26steps%3D4096%26stop%3D32%2Fchannel-18.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_v2/image_block_2_1_add_3_0/18"}],
-[{"model": "contrastive_4x", "layer": "image_block_2/1/add_3", "unit": 121, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_4x%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D96%26steps%3D4096%26stop%3D128%2Fchannel-121.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x/image_block_2_1_add_3_0/121"}, {"model": "contrastive_4x", "layer": "image_block_2/1/add_3", "unit": 156, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_4x%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D128%26steps%3D4096%26stop%3D160%2Fchannel-156.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x/image_block_2_1_add_3_0/156"}, {"model": "contrastive_4x", "layer": "image_block_2/1/add_3", "unit": 142, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_4x%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D128%26steps%3D4096%26stop%3D160%2Fchannel-142.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x/image_block_2_1_add_3_0/142"}, {"model": "contrastive_4x", "layer": "image_block_2/1/add_3", "unit": 89, "img_url": "https://storage.googleapis.com/openai-clarity/encyclopedia%2Fmodelzoo%2F2020-07-25%2Fcontrastive_4x%2Flucid.feature_vis%2F_feature_vis%2Falpha%3DFalse%26negative%3DFalse%26objective%3Dneuron%26op%3Dimage_block_2%252F1%252Fadd_3%253A0%26repeat%3D0%26start%3D64%26steps%3D4096%26stop%3D96%2Fchannel-89.png", "a_url": "https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x/image_block_2_1_add_3_0/89"}],
-            ]
-        }
-    ]
+    let {columnTitles, rowTitles, rows} = require("../../static/diagram-data/Universality.json")
 </script>
 
     
-<div style='margin: auto; width: 1400px;'>
+<div style='margin: auto; width: fit-content;'>
 <div class='table'>
+
+    <!--
+    <div style='grid-column-start:3; grid-column-end: 5; grid-row:1; padding-bottom: 8px; border-bottom: 1px solid #CCC;'>
+    Specific Task Models
+    <div class='figcaption'>These models share some features, but have many high-level features they don't share.</div>
+    </div>
+    <div style='grid-column-start:5; grid-column-end: 9; grid-row:1; padding-bottom: 8px; border-bottom: 1px solid #CCC;'>
+    Multimodal Models
+    <div class='figcaption' style='max-width: 340px;'>These models seem to union over narrower models, containing many of their features.</div>
+    </div>-->
+
     {#each columnTitles as column, i}
-    <div style='grid-column:{2+i}; grid-row:1;'>{column.header}<div class='figcaption'>{column.sub}</div></div>
+    <div style='grid-column: main {i+1}; grid-row: label; padding-bottom: 8px; /*border-bottom: 1px solid #CCC;*/'>
+        {column.header}
+        <div class='figcaption'>{column.sub}</div>
+    </div>
     {/each}
-    <!-- {#each rowTitles as row, j}
-    <div style='grid-row:{3+j}; grid-column:1;'>{row.header}<div class='figcaption'>{row.sub}</div></div>
-    {/each} -->
+
 
     {#each rows as row, j}
-    <div style='grid-row:{2+j}; grid-column:1; padding-right: 10px;'>
-        <div style='line-height: 120%; margin-bottom: 12px;'>{row.name}</div>
+    <div style='grid-column: label; grid-row: main {j+1}; padding-right: 10px;'>
+        <div style='line-height: 120%; margin-bottom: 8px;'>{row.name}</div>
         <div class='figcaption'>{row.description}</div>
     </div>
     {#each row.model_features as features, i}
-    <div style='grid-column:{2+i}; grid-row:{2+j};' class="feature-box">
+    {#if features.length == 0}
+    <div style='grid-column: main {i+1}; grid-row: main {j+1}; background: #EEE; border-radius: 2px; ' class="feature-box">
+        <div class="figcaption" style='margin:auto; margin: 4px; margin-top: 24px; max-width: 120px; opacity: 0.7;'>No correlated features.</div>
+    </div>
+    {:else}
+    <div style='grid-column: main {i+1}; grid-row: main {j+1};' class="feature-box">
         {#each features as feature}
         <a href="{feature.a_url}" >
-        <img src='{feature.img_url}'>
+        <img src='{feature.img_url}' alt='{feature.model} {feature.layer}:{feature.unit}'>
         </a>
         {/each}
     </div>
+    {/if}
     {/each}
     {/each}
 
-
-
-    <!-- {#each columnTitles as column, i}
-    {#each rowTitles as row, j}
-    <div style='grid-column:{2+i}; grid-row:{3+j}; width: 124px; display: flex; flex-wrap: wrap;'>
-        <div style='width: 60px; height: 60px; background: #AAA; border-radius: 4px; margin-right: 2px; margin-bottom: 2px; '></div>
-        <div style='width: 60px; height: 60px; background: #AAA; border-radius: 4px; margin-right: 2px; margin-bottom: 2px;  '></div>
-        <div style='width: 60px; height: 60px; background: #AAA; border-radius: 4px;  margin-right: 2px; margin-bottom: 2px; '></div>
-        <div style='width: 60px; height: 60px; background: #AAA; border-radius: 4px; margin-right: 2px; margin-bottom: 2px;  '></div>
+    <div style='grid-column: category; grid-row-start: main 1; grid-row-end: main 3; padding-right: 16px; margin-right: 16px; border-right: 1px solid #CCC;'>
+        <div style='line-height: 120%; margin-bottom: 8px;'>Universal Features</div>
+        <div class='figcaption'>Features which are shared across ImageNet, Places365, im2gps and Multimodal models.</div>
     </div>
-    {/each}
-    {/each} -->
+    <div style='grid-column: category; grid-row-start: main 3; grid-row-end: main 5; padding-right: 16px; margin-right: 16px; border-right: 1px solid #CCC;'>
+        <div style='line-height: 120%; margin-bottom: 8px;'></div>
+        <div class='figcaption'>Features which are shared across ImageNet, Places365, im2gps and Multimodal models.</div>
+    </div>
+    <div style='grid-column: category; grid-row-start: main 5; grid-row-end: main 6; padding-right: 16px; margin-right: 16px; border-right: 1px solid #CCC;'>
+        <div style='line-height: 120%; margin-bottom: 8px;'>Multimodal Only</div>
+        <div class='figcaption'>Features which found in Multimodal models, but not ImageNet, Places365, or im2gps.</div>
+    </div>
+
+    <div style='margin-top:16px; max-width: 784px; grid-row: caption; grid-column: main 1 / main 5;' class="figcaption">
+        <a class="figure-anchor" href="#universality-diagram">Figure N:</a>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
 
 </div>
-<div style='margin-top:32px; max-width: 784px;' class="figcaption">
-    <a class="figure-anchor" href="#universality-diagram">Figure N:</a>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</div>
+
 </div>
 
