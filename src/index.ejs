@@ -1,28 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style id="distill-article-specific-styles">
     <%=require("../static/styles.css") %>
   </style>
   <script src="https://distill.pub/template.v2.js"></script>
 
   <style>
-    .fullscreen-diagram{
+    .fullscreen-diagram {
       grid-column: screen;
-      background: #F8F8FB;
+      background: #f8f8fb;
       padding: 10px;
-      padding-top:40px;
-      padding-bottom:40px;
-      border-top: 1px solid #F0F0F0;
-      border-bottom: 1px solid #F0F0F0;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      border-top: 1px solid #f0f0f0;
+      border-bottom: 1px solid #f0f0f0;
     }
     .placeholder {
       padding: 40px;
       font-size: 80%;
-      background: #F8F8FB;
-      border: 1px solid #F0F0F0;
+      background: #f8f8fb;
+      border: 1px solid #f0f0f0;
       border-radius: 4px;
       grid-column: text;
       margin-top: 20px;
@@ -41,11 +41,9 @@
       height: fit-content;
     }
   </style>
-
 </head>
 
 <body>
-
   <d-front-matter>
     <script type="text/json">
       <%= JSON.stringify(require("./frontmatter.json"), null, 4) %>
@@ -57,220 +55,443 @@
   </d-title>
 
   <d-article>
+    <p>
+      Learning representations that match those in the human brain is a holy
+      grail of machine learning. Two parallel shifts in the field give us hope
+      that our models are moving closer to this goal.
+    </p>
+    <p>
+      First, hand-crafted datasets are giving way to data scraped and sampled
+      from epicenters of human activity like Reddit and Twitter. This data is
+      chaotic, unstructured, resembling the world people interact with during
+      their development, a far cry from the highly structured hand-labeled
+      datasets of old.
+    </p>
+    <p>
+      Secondly, the human brain needs to work with several modalities such as
+      vision and scent to perceive the world around them. Several modern
+      neuroscience theories propose that different brain regions, such as the
+      auditory cortex and visual cortex each process low level inputs into a
+      shared abstract representation that can be fed to a global workspace for
+      further processing. Recent work in multimodal neural networks, and in
+      particular those trained with contrastive loss share a similar
+      architecture, with parallel streams converting different modalities like
+      text and images into a shared representation.
+    </p>
+    <p>
+      To see whether our hope was warranted we looked inside the multimodal
+      model presented in Radford et al to study its representations. We find a
+      landscape of neurons for cultural figures like Donald Trump and Justin
+      Bieber, with neurons corresponding to geographical regions and cultures
+      across the world, and families of neurons with a rich understanding of
+      human emotions. Interestingly, every one of these neurons are what we're
+      calling multimodal neurons, closely mimicking the famed "Halle Berre
+      neuron" found in the human visual cortex that responds to both pictures of
+      the address as well as pictures of her name.
+    </p>
 
     <p>
-      Learning representations that match those in the human brain is a holy grail of machine learning. Two parallel shifts in the field give us hope that our models are moving closer to this goal.
-    </p>
-    <p>
-      First, hand-crafted datasets are giving way to data scraped and sampled from epicenters of human activity like Reddit and Twitter. This data is chaotic, unstructured, resembling the world people interact with during their development, a far cry from the highly structured hand-labeled datasets of old.
-    </p>
-    <p>
-      Secondly, the human brain needs to work with several modalities such as vision and scent to perceive the world around them. Several modern neuroscience theories propose that different brain regions, such as the auditory cortex and visual cortex each process low level inputs into a shared abstract representation that can be fed to a global workspace for further processing. Recent work in multimodal neural networks, and in particular those trained with contrastive loss share a similar architecture, with parallel streams converting different modalities like text and images into a shared representation.
-    </p>
-    <p>
-      To see whether our hope was warranted we looked inside the multimodal model presented in Radford et al to study its representations. We find a landscape of neurons for cultural figures like Donald Trump and Justin Bieber, with neurons corresponding to geographical regions and cultures across the world, and families of neurons with a rich understanding of human emotions. Interestingly, every one of these neurons are what we're calling multimodal neurons, closely mimicking the famed "Halle Berre neuron" found in the human visual cortex that responds to both pictures of the address as well as pictures of her name.
+      To see whether our hope was warranted we looked inside the multimodels
+      presented in Radford et al to understand its representations. We found
+      vast landscapes of neurons for cultural figures like Donald Trump and
+      Justin Bieber, neurons corresponding to geographical regions and cultures
+      across the world, and families of neurons with a rich understanding of
+      human emotions. Excitingly, every one of these neurons are multimodal,
+      sometimes unifying up to six modalities, closely resembling the famous
+      "grandmother neuron" result from neuroscience.
     </p>
 
     <p>
-      To see whether our hope was warranted we looked inside the multimodels presented in Radford et al to understand its representations. We found vast landscapes of neurons for cultural figures like Donald Trump and Justin Bieber, neurons corresponding to geographical regions and cultures across the world, and families of neurons with a rich understanding of human emotions. Excitingly, every one of these neurons are multimodal, sometimes unifying up to six modalities, closely resembling the famous "grandmother neuron" result from neuroscience.
+      Here we investigate the model presented in Radford [] ... where a battery
+      of quantitative evaluations revealed that a simple dot product, with the
+      right query, can produce meaningful answers to questions that span the
+      pantheon of human meaningful tasks - optical character recognition,
+      geolocation, facial recognition, imagenet object identification, and even
+      basic visual question answering. How does a simple vector achieve such
+      feats?
     </p>
 
     <p>
-      Here we investigate the model presented in Radford [] ... where a battery of quantitative evaluations revealed that a simple dot product, with the right query, can produce meaningful answers to questions that span the pantheon of human meaningful tasks - optical character recognition, geolocation, facial recognition, imagenet object identification, and even basic visual question answering. How does a simple vector achieve such feats?
-    </p>
-
-    <p>
-      Amongst the highlights of our discoveries, we discover neurons that bear an uncanny resemblance to those representations found in the brain -- multimodal neurons. Much like the famed “Halle Berry” or “Catwomen” biological neurons, we too find neurons that exhibit invariance and selectivity to famous identities, such as:
+      Amongst the highlights of our discoveries, we discover neurons that bear
+      an uncanny resemblance to those representations found in the brain --
+      multimodal neurons. Much like the famed “Halle Berry” or “Catwomen”
+      biological neurons, we too find neurons that exhibit invariance and
+      selectivity to famous identities, such as:
     </p>
 
     <p>
       [Images of Spiderman] + [Sketches of Spiderman] + [the word “spiderman”]
-      [Photos of Obama/Trump] + [Political sketches of Obama/Trump] + [the words “president”, obama, trump]
+      [Photos of Obama/Trump] + [Political sketches of Obama/Trump] + [the words
+      “president”, obama, trump]
     </p>
 
     <p>
-      It is tempting to declare that we have found examples of grandmother neurons in our representations, but our investigations reveal much more than meets the eye. For instance, we discover the Obama neuron also responds to an image with the text “President”, and Spiderman neuron activates both to Spiderman, his nemesis Venom, and his secret identity, Peter Parker.
+      It is tempting to declare that we have found examples of grandmother
+      neurons in our representations, but our investigations reveal much more
+      than meets the eye. For instance, we discover the Obama neuron also
+      responds to an image with the text “President”, and Spiderman neuron
+      activates both to Spiderman, his nemesis Venom, and his secret identity,
+      Peter Parker.
     </p>
 
     <p>
-      Indeed, in the examples above, we find that the neurons respond to a web of associations centered around an abstract concept. In fact, a majority of these neurons appear to follow such a pattern, such as
+      Indeed, in the examples above, we find that the neurons respond to a web
+      of associations centered around an abstract concept. In fact, a majority
+      of these neurons appear to follow such a pattern, such as
     </p>
 
     <p>
-      [Parenthood] [Christmas] [etc]
-
-      Features of this kind cannot be pinned down to an artifact of a specific hyperparameter configuration. Our investigation spans a range of multimodal prototypes -- these models contain not only architectural variations with changes in hyperparameters, but are trained according to different objectives, including an autoregressive objective, as well as a contrastive objective. In fact, these models are even trained on different <i>data</i> - with some models trained on only Twitter data, and others a combination of Twitter and Reddit, and some on the full dataset mix - a mix of flickr, reddit, twitter data.
+      [Parenthood] [Christmas] [etc] Features of this kind cannot be pinned down
+      to an artifact of a specific hyperparameter configuration. Our
+      investigation spans a range of multimodal prototypes -- these models
+      contain not only architectural variations with changes in hyperparameters,
+      but are trained according to different objectives, including an
+      autoregressive objective, as well as a contrastive objective. In fact,
+      these models are even trained on different <i>data</i> - with some models
+      trained on only Twitter data, and others a combination of Twitter and
+      Reddit, and some on the full dataset mix - a mix of flickr, reddit,
+      twitter data.
     </p>
 
     <p>
-      Yet despite the differences in modeling decisions, most of these models converge on very similar representations and all adhere to similar modes of organization. We are convinced therefore, that these qualitative properties we investigate are not artifacts of training, but are critical properties of a high quality representation [footnote].
+      Yet despite the differences in modeling decisions, most of these models
+      converge on very similar representations and all adhere to similar modes
+      of organization. We are convinced therefore, that these qualitative
+      properties we investigate are not artifacts of training, but are critical
+      properties of a high quality representation [footnote].
     </p>
 
     <section>Into the Multimodal Mind</section>
 
-    <h2>Identity Recognition</h2>
+    <h3>Identity Recognition</h3>
 
     <p>
-      Our discussion begins with perhaps the kind of neuron that has fueled the most speculation in the brain, “grandmother” neurons.
+      Our discussion begins with perhaps the kind of neuron that has fueled the
+      most speculation in the brain, “grandmother” neurons.
     </p>
 
     <p>
-      A Donald Trump neuron. A Barack Obama neuron. A Queen Elizabeth neuron. Justin Bieber. Margaret Thatcher. Pope Francis. Spiderman. Jesus Christ. Adolf Hitler. Elvis Presley.
+      A Donald Trump neuron. A Barack Obama neuron. A Queen Elizabeth neuron.
+      Justin Bieber. Margaret Thatcher. Pope Francis. Spiderman. Jesus Christ.
+      Adolf Hitler. Elvis Presley.
     </p>
 
     <p>
-      As discussed in the introduction, these person-detecting neurons are perhaps the most striking aspect of the models we studied.
+      As discussed in the introduction, these person-detecting neurons are
+      perhaps the most striking aspect of the models we studied.
     </p>
 
     <p>
-      Like similar units found in neuroscience, these person detectors are multimodal. Not only do they respond to images of their subject, but they respond to images of their name, and also to drawings, cartoons, caricatures, and effigies. In fact, features visualizations of these neurons -- the result of starting with an image full of random noise and optimizing it to cause the neuron to fire -- often produce both the subject's face and name:
+      Like similar units found in neuroscience, these person detectors are
+      multimodal. Not only do they respond to images of their subject, but they
+      respond to images of their name, and also to drawings, cartoons,
+      caricatures, and effigies. In fact, features visualizations of these
+      neurons -- the result of starting with an image full of random noise and
+      optimizing it to cause the neuron to fire -- often produce both the
+      subject's face and name:
+    </p>
+
+    <p>[Feature visualizations, cherry picked for both face and name]</p>
+
+    <p>
+      We find a significant number of these person-detecting neurons. Every
+      model we've studied has a Donald Trump neuron. We also found Barack Obama,
+      Queen Elizabeth, and Justin Bieber neurons in 4 of 6 models. In contrast,
+      Elvis Presley was only found in one model. It seems likely this reflects
+      the volume of discourse about these figures on Twitter at the time the
+      data was collected in [2019? 2020].
     </p>
 
     <p>
-      [Feature visualizations, cherry picked for both face and name]
+      [Table of people-detecting neurons across models, based on Gabe's
+      spreadsheet. Perhaps subject as row, model as col, and face-facet feature
+      vis as entry in table when found. Perhaps include count and sort by number
+      of occurrences of figure?]
     </p>
 
     <p>
-      We find a significant number of these person-detecting neurons. Every model we've studied has a Donald Trump neuron. We also found Barack Obama, Queen Elizabeth, and Justin Bieber neurons in 4 of 6 models. In contrast, Elvis Presley was only found in one model.  It seems likely this reflects the volume of discourse about these figures on Twitter at the time the data was collected in [2019? 2020].
+      Person detecting neurons tend to be very selective for their subject when
+      they activate at peak magnitude. But on closer investigation, that isn't
+      the complete story. They tend to also fire, albeit more weakly, for other
+      people and content related to their subject. For example, Donald Trump
+      neurons generally also fire for Mike Pence, while Barack Obama neurons
+      also respond to Michelle Obama (and Joe Biden?), and Spiderman neurons
+      also respond to related characters like Venom and Black Panther.
     </p>
 
     <p>
-      [Table of people-detecting neurons across models, based on Gabe's spreadsheet. Perhaps subject as row, model as col, and face-facet feature vis as entry in table when found. Perhaps include count and sort by number of occurrences of figure?]
+      [Figure: Conditional probabilities of different stimuli types conditioned
+      on activation strength of neuron]
+    </p>
+
+    <p>This is similar to how [neuroscience analogy]</p>
+
+    <p>
+      Since these units also respond to other people, thinking of them as people
+      detectors may not actually be the best conceptualization. Rather, it might
+      be more helpful to think of them as topic detectors, with the person as
+      the foremost symbol of that topic. Or to think of them as associative
+      people detectors, firing based on how associated content is to their
+      subject. [Work the Bill Gates/Mike Zukerburg stuff into here.]
     </p>
 
     <p>
-      Person detecting neurons tend to be very selective for their subject when they activate at peak magnitude. But on closer investigation, that isn't the complete story. They tend to also fire, albeit more weakly, for other people and content related to their subject. For example, Donald Trump neurons generally also fire for Mike Pence, while Barack Obama neurons also respond to Michelle Obama (and Joe Biden?), and Spiderman neurons also respond to related characters like Venom and Black Panther.
+      We also find "regional neurons" which respond to a fusion of features
+      roughly associated with a geographic region: country and city names,
+      distinctive architecture, prominent public figures, faces of the most
+      common ethnicity, distinctive clothing, wildlife, and local script (if not
+      roman alphabet). If shown a world map, even without labels, these neurons
+      fire selectively for the relevant region on the map.
     </p>
 
     <p>
-      [Figure: Conditional probabilities of different stimuli types conditioned on activation strength of neuron]
+      Most often, these correspond to a continent (e.g. Africa, Australia,
+      Europe), clusters of countries (e.g. Islamic Countries, India/Pakistan,
+      East Asia, Latin America), or individual countries (e.g. USA, UK, China,
+      Japan). We also observe neurons for larger geographical features, such as
+      a northern hemisphere neuron (which responds to bears, moose, coniferous
+      forest, and the entire northern hemisphere on a map), and a "tropical"
+      neuron for regions along the equator.
     </p>
 
     <p>
-      This is similar to how [neuroscience analogy]
+      [Figure: similar to NMF diagram in building blocks, associate neurons with
+      colors, then highlight region on world map with color, and also show
+      faceted feature visualization for each neuron. Possibly show dataset
+      examples as well]
     </p>
 
     <p>
-      Since these units also respond to other people, thinking of them as people detectors may not actually be the best conceptualization. Rather, it might be more helpful to think of them as topic detectors, with the person as the foremost symbol of that topic. Or to think of them as associative people detectors, firing based on how associated content is to their subject. [Work the Bill Gates/Mike Zukerburg stuff into here.]
-    Geolocalization
+      Again, many neurons of the same neurons exist across models. In
+      particular, Africa, Australia, United States, and China neurons seem to
+      form very consistently. [Table of region-detecting neurons across models.
+      Perhaps subject as row, model as col, and face-facet feature vis as entry
+      in table when found. Perhaps include count and sort by number of
+      occurrences of figure?]
     </p>
 
     <p>
-      We also find "regional neurons" which respond to a fusion of features roughly associated with a geographic region: country and city names, distinctive architecture, prominent public figures, faces of the most common ethnicity, distinctive clothing, wildlife, and local script (if not roman alphabet). If shown a world map, even without labels, these neurons fire selectively for the relevant region on the map.
+      In addition to these regional neurons, we find that many other neurons
+      appear to have geographic information baked in, firing weakly for regions
+      on a world map related to them. For example, we noticed that a coffee
+      neuron fires for Brazil, where a significant amount of coffee is made, and
+      a lion/tiger neuron fires for the parts of Africa and Asia where lions and
+      tigers are found, a common human mistake! We're hesitant to read too much
+      into this -- there's plenty of neurons which activate a bit for a world
+      map without any obvious relationship to the topic -- but it is an
+      interesting phenomenon.
     </p>
 
     <p>
-      Most often, these correspond to a continent (e.g. Africa, Australia, Europe), clusters of countries (e.g. Islamic Countries, India/Pakistan, East Asia, Latin America), or individual countries (e.g. USA, UK, China, Japan). We also observe neurons for larger geographical features, such as a northern hemisphere neuron (which responds to bears, moose, coniferous forest, and the entire northern hemisphere on a map), and a "tropical" neuron for regions along the equator.
-    </p>
-
-    <p>
-      [Figure: similar to NMF diagram in building blocks, associate neurons with colors, then highlight region on world map with color, and also show faceted feature visualization for each neuron. Possibly show dataset examples as well]
-    </p>
-
-    <p>
-      Again, many neurons of the same neurons exist across models. In particular, Africa, Australia, United States, and China neurons seem to form very consistently. [Table of region-detecting neurons across models. Perhaps subject as row, model as col, and face-facet feature vis as entry in table when found. Perhaps include count and sort by number of occurrences of figure?]
-    </p>
-
-    <p>
-      In addition to these regional neurons, we find that many other neurons appear to have geographic information baked in, firing weakly for regions on a world map related to them. For example, we noticed that a coffee neuron fires for Brazil, where a significant amount of coffee is made, and a lion/tiger neuron fires for the parts of Africa and Asia where lions and tigers are found, a common human mistake! We're hesitant to read too much into this -- there's plenty of neurons which activate a bit for a world map without any obvious relationship to the topic -- but it is an interesting phenomenon.
-    </p>
-
-    <h2>The Emotion Family</h2>
-
-    <p>
-      The task of captioning Internet images requires emotional intelligence, as small changes in a person's expression can radically change the meaning of a photo. We've found dozens of emotion detecting neurons in the multimodal model, each responding to the concept of a single emotion across a wide range of modalities, from body language and facial expressions, to text, to different species and cartoons, and even landscapes and the insides of buildings that evoke a feeling. There are neurons that respond to common feelings like anger and happiness, and as well as more nuanced emotions like feeling destroyed, aroused, honored, or silly. 
+      The task of captioning Internet images requires emotional intelligence, as
+      small changes in a person's expression can radically change the meaning of
+      a photo. We've found dozens of emotion detecting neurons in the multimodal
+      model, each responding to the concept of a single emotion across a wide
+      range of modalities, from body language and facial expressions, to text,
+      to different species and cartoons, and even landscapes and the insides of
+      buildings that evoke a feeling. There are neurons that respond to common
+      feelings like anger and happiness, and as well as more nuanced emotions
+      like feeling destroyed, aroused, honored, or silly.
     </p>
     <figure id="emotions-intro" class="fullscreen-diagram"></figure>
     <p>
-      These emotions neurons are versatile and highly multimodal, spanning facial expressions across age, cartoon characters, relevant text, and even species. The surprise neuron activates even when the majority of the face is obscured. It responds to slang like "OMG!" and "WTF", and text feature visualization produces similar words of shock and surprise.
+      These emotions neurons are versatile and highly multimodal, spanning
+      facial expressions across age, cartoon characters, relevant text, and even
+      species. The surprise neuron activates even when the majority of the face
+      is obscured. It responds to slang like "OMG!" and "WTF", and text feature
+      visualization produces similar words of shock and surprise.
     </p>
     <figure id="emotions-surprise" class="fullscreen-diagram"></figure>
-    <p>Other neurons learn to detect emotions as part of a broader concept. At first glance neuron xyz responds to the concept of sexuality, activating in response to visual pornographic content, sexual slang, and the names of adult websites. However, using a facial facet with feature visualization, we see it also corresponds to the emotion of arousal, rendering a balding male with an exaggerated aroused expression. Similarly, we find a question mark neuron hides … In each of these cases, the neuron indeed detects an emotion, but since it is only part of a more abstract concept, we need facets to see it.</p>
+    <p>
+      Other neurons learn to detect emotions as part of a broader concept. At
+      first glance neuron xyz responds to the concept of sexuality, activating
+      in response to visual pornographic content, sexual slang, and the names of
+      adult websites. However, using a facial facet with feature visualization,
+      we see it also corresponds to the emotion of arousal, rendering a balding
+      male with an exaggerated aroused expression. Similarly, we find a question
+      mark neuron hides … In each of these cases, the neuron indeed detects an
+      emotion, but since it is only part of a more abstract concept, we need
+      facets to see it.
+    </p>
     <figure id="emotions-minor" class="fullscreen-diagram"></figure>
-    <p>On the other extreme, some neurons respond simply to specific body and facial expressions, like the silly expression neuron. It activates most to the internet-born duckface expression, and peace signs, and both words show up in its text feature visualization.</p>
+    <p>
+      On the other extreme, some neurons respond simply to specific body and
+      facial expressions, like the silly expression neuron. It activates most to
+      the internet-born duckface expression, and peace signs, and both words
+      show up in its text feature visualization.
+    </p>
     <figure id="emotions-duckface" class="fullscreen-diagram"></figure>
-    <p>We're excited at the promise of emotion neurons to benefit social studies that need algorithmic access to emotion detectors. These neurons could help people understand the emotional content of a long video, either by coloring the video's scrubber based on the emotions at each time, or by showing an Activation Atlas of the scenes of a movie based on emotion to study cinematography in a new way. These emotions could also be useful for studying how expression changes over time. With a dataset of selfies over the last decade with their location tagged, perhaps one could better understand birth and spread of expressions like the duckface across different cultures and geography.</p>
+    <p>
+      We're excited at the promise of emotion neurons to benefit social studies
+      that need algorithmic access to emotion detectors. These neurons could
+      help people understand the emotional content of a long video, either by
+      coloring the video's scrubber based on the emotions at each time, or by
+      showing an Activation Atlas of the scenes of a movie based on emotion to
+      study cinematography in a new way. These emotions could also be useful for
+      studying how expression changes over time. With a dataset of selfies over
+      the last decade with their location tagged, perhaps one could better
+      understand birth and spread of expressions like the duckface across
+      different cultures and geography.
+    </p>
     <h4>Mental Health Neuron</h4>
-    <p>One neuron that doesn't represent a single emotion but rather a high level category of emotions is the mental illness neuron, which is separate from a different physical illness neuron. It responds to both body language, facial expressions, and text corresponding to a variety of emotions like anxiety, depression, and loneliness. It also responds to images and text of illegal drugs and medicine, and psychological words like "mental" and "psychology".</p>
+    <p>
+      One neuron that doesn't represent a single emotion but rather a high level
+      category of emotions is the mental illness neuron, which is separate from
+      a different physical illness neuron. It responds to both body language,
+      facial expressions, and text corresponding to a variety of emotions like
+      anxiety, depression, and loneliness. It also responds to images and text
+      of illegal drugs and medicine, and psychological words like "mental" and
+      "psychology".
+    </p>
 
-    <p>To better understand the behavior of this neuron we collected more than 300 dataset examples at a variety of activations and labelled them by hand into categories the neuron seemed to respond to. During the labeling process we did not have access to the activation. We can use this hand-labelled data to estimate the conditional probability of a category at a given activation.</p>
-      
-    <p>We see that the neuron activates most strongly to mental health disorders, but also to the broader concept of psychology. We can also look at the pre-ReLU activations to see what the neuron negatively responds to. It has a weak negative response to concepts we may expect to be negatively correlated with mental health disorders, like pets, sports, and travel. Many of its strongest negative activations are to exercise, sporting events, and music related ideas like albums and concerts.</p>
+    <p>
+      To better understand the behavior of this neuron we collected more than
+      300 dataset examples at a variety of activations and labelled them by hand
+      into categories the neuron seemed to respond to. During the labeling
+      process we did not have access to the activation. We can use this
+      hand-labelled data to estimate the conditional probability of a category
+      at a given activation.
+    </p>
 
+    <p>
+      We see that the neuron activates most strongly to mental health disorders,
+      but also to the broader concept of psychology. We can also look at the
+      pre-ReLU activations to see what the neuron negatively responds to. It has
+      a weak negative response to concepts we may expect to be negatively
+      correlated with mental health disorders, like pets, sports, and travel.
+      Many of its strongest negative activations are to exercise, sporting
+      events, and music related ideas like albums and concerts.
+    </p>
     <figure id="emotions-mentalhealth" class="fullscreen-diagram"></figure>
-    <p>Later when we look at how neurons are used we'll see that an important part of the mental health neuron is how it is composed with other emotions to ascribe the concept of disease to them. For instance, we'll see in a later section that anxiety is represented by a combination of the mental health neuron and a shocked neuron, but both neurons can fire independently.</p>
-    <p>This means studying neurons individually only gives us a small glimpse of the full space of emotions the model is aware of. Most emotions are a combination of simpler emotions, or what the American Psychology Association calls a complex emotion. In fact, the promising theory of constructed emotion suggests there are no universal discrete emotions, that all emotions are the combination of separate brain regions working in tandem each moment to craft an overall mood or affect that varies widely across people and cultures. In true, the natural way to study emotions in a neural network may not be to look at neurons one by one, but to look at how they work together in concert, as we'll do in the X section.</p>
-
-    <subsection>Mechanics of Abstraction</subsection>
-
-
-    <p>
-      These abstractions appear to span the extremely low level - the nearly raw representation of color, characters, to the extremely abstract - neurons that represent all mammals, entire countries and ecosystems. Why do the representations form in this way?
-    </p>
-
-    <p>
-      One clue, observed by Radford [], is that these representations of this form are useful. We observe, in fact, that even extremely sparse combinations of these neurons can combine to solve an uncanny number of tasks considered human-meaningful.
-    </p>
-
-    <p>
-      The IILSRV challenge, for example, uses a subset of the wordnet hierarchy, is an explicit attempt to systematize human knowledge. The task involves making fine-grained decisions about the subject of a picture.
-    </p>
-
-    <p>
-      To understand how the neurons compose themselves to a meaningful task, we follow the methodology of Radford [] et all, and train a linear probe logistic regression classifier on imagenet to tease out which features are most relevant to the problem of classification. with only 3, on average, nonzeros per class, to understand how neurons themselves can assist in this task.
-    </p>
-
-    <p>
-      As the above article might predict, like [], it should come as no surprise to the reader that much of the information in the model is consolidated in single neurons. To our surprise, however, we find much more interesting additional structure in this information. The neurons, for example, arrange themselves into a taxonomy of classes that appear to respect the wordnet hierarchy.
-    </p>
-
-    <p>
-      At the highest leve we find a single neuron that represents the split between the living - animal, and the nonliving, that fires for nearly all the animals in the 1000 classes chosen.
-    </p>
-
-    <p>
-      The animal kingdom itself is split into the domesticated pets and wildlife.
-    </p>
-
-    <p>
-      More conventionally, the animal kingdom is also split into more conventional categories, such as insects, birds and reptiles.
-    </p>
-
-    <p>
-      We see other classes too which do not correspond neatly to such classes organized by experts, but nevertheless make sense. We see, for example, three neurons that respond to creatures found in different aspects of the ocean/water.
-    </p>
-
-    <p>
-      These classifications are not limited, in fact, to animals. Vehicles, too, have their own implicit hierarchy, here with ...
-    </p>
-
-    <p>
-      We find this remarkable given the fact that such organization is not, in any explicit form, given as a training signal to the neural network. The neural network has decided that the most efficient way to organize information is in this way, one which reflects human intuition. Perhaps this form of convergent evolution is a suggestion that these structures do exist in some implicit form in human language, and though there may be dispute as to where the lines are drawn explicitly,
-    </p>
-
-    <p>
-      We make a final note of a few classes in imagenet that do not fall nearly into one of the above large hierarchies. The “piggy bank” class in imagenet, for example, appears to be a singularity, but a reasonable accuracy on the class can still be obtained by combining neurons that respond to abstract concepts, e.g.
-    </p>
-
-
-    <h2> Understanding language </h2>
-
-    <p>
-      The linear probes are the most straightforward way to understand the neuron’s uses, but they merely index into a small number of classes. To understand the model’s capacity for understanding language, we need tools that allow us to understand an exponential number of classes - one for every possible combination of tokens in the language model.
-    </p>
-
-    <p>
-      The contrastive loss of the transformer takes sentences into embeddings. Thus, the language model has done much of the difficult work for us, and we only need to understand, if given a set of sentences, the continuous space in which the sentences are embedded.
-    </p>
 
     <subsection>Using Abstractions</subsection>
 
-    <h2>Underlying Features and Circuits</h2>
+    <p>
+      These abstractions appear to span the extremely low level - the nearly raw
+      representation of color, characters, to the extremely abstract - neurons
+      that represent all mammals, entire countries and ecosystems. Why do the
+      representations form in this way?
+    </p>
+
+    <p>
+      One clue, observed by Radford [], is that these representations of this
+      form are useful. We observe, in fact, that even extremely sparse
+      combinations of these neurons can combine to solve an uncanny number of
+      tasks considered human-meaningful.
+    </p>
+
+    <p>
+      The IILSRV challenge, for example, uses a subset of the wordnet hierarchy,
+      is an explicit attempt to systematize human knowledge. The task involves
+      making fine-grained decisions about the subject of a picture.
+    </p>
+
+    <p>
+      To understand how the neurons compose themselves to a meaningful task, we
+      follow the methodology of Radford [] et all, and train a linear probe
+      logistic regression classifier on imagenet to tease out which features are
+      most relevant to the problem of classification. with only 3, on average,
+      nonzeros per class, to understand how neurons themselves can assist in
+      this task.
+    </p>
+
+    <p>
+      As the above article might predict, like [], it should come as no surprise
+      to the reader that much of the information in the model is consolidated in
+      single neurons. To our surprise, however, we find much more interesting
+      additional structure in this information. The neurons, for example,
+      arrange themselves into a taxonomy of classes that appear to respect the
+      wordnet hierarchy.
+    </p>
+
+    <p>
+      At the highest leve we find a single neuron that represents the split
+      between the living - animal, and the nonliving, that fires for nearly all
+      the animals in the 1000 classes chosen.
+    </p>
+
+    <p>
+      The animal kingdom itself is split into the domesticated pets and
+      wildlife.
+    </p>
+
+    <p>
+      More conventionally, the animal kingdom is also split into more
+      conventional categories, such as insects, birds and reptiles.
+    </p>
+
+    <p>
+      We see other classes too which do not correspond neatly to such classes
+      organized by experts, but nevertheless make sense. We see, for example,
+      three neurons that respond to creatures found in different aspects of the
+      ocean/water.
+    </p>
+
+    <p>
+      These classifications are not limited, in fact, to animals. Vehicles, too,
+      have their own implicit hierarchy, here with ...
+    </p>
+
+    <figure id="hypergraph-device" class="fullscreen-diagram"></figure>
+
+    <p>
+      We find this remarkable given the fact that such organization is not, in
+      any explicit form, given as a training signal to the neural network. The
+      neural network has decided that the most efficient way to organize
+      information is in this way, one which reflects human intuition. Perhaps
+      this form of convergent evolution is a suggestion that these structures do
+      exist in some implicit form in human language, and though there may be
+      dispute as to where the lines are drawn explicitly,
+    </p>
+
+    <p>
+      We make a final note of a few classes in imagenet that do not fall nearly
+      into one of the above large hierarchies. The “piggy bank” class in
+      imagenet, for example, appears to be a singularity, but a reasonable
+      accuracy on the class can still be obtained by combining neurons that
+      respond to abstract concepts, e.g.
+    </p>
+
+    <h2>Understanding language</h2>
+
+    <p>
+      The linear probes are the most straightforward way to understand the
+      neuron’s uses, but they merely index into a small number of classes. To
+      understand the model’s capacity for understanding language, we need tools
+      that allow us to understand an exponential number of classes - one for
+      every possible combination of tokens in the language model.
+    </p>
+
+    <p>
+      The contrastive loss of the transformer takes sentences into embeddings.
+      Thus, the language model has done much of the difficult work for us, and
+      we only need to understand, if given a set of sentences, the continuous
+      space in which the sentences are embedded.
+    </p>
+
     <h2>Emotional Intelligence</h2>
 
-    <p>Earlier we looked at a family of neurons that each detect an emotion via several facets like text as well as facial and body expressions. These neurons only scratch the surface of the range of emotions the model understands, since most emotions are the result of several neurons working in concert, often alongside non-emotion neurons that are specific to each picture. In this section well study this broader landscape of emotions.</p>
-    <p>One simple way to get the set of neurons that corresponds to an emotion is to take attribution from the last layer of the image model to the text "I feel {emotion}". This gives us a combination of vectors that we can study. We can extract a list of emotions from a feeling wheel, a type of hand-crafted user interface for seeing emotions, often hierarchically.</p>
-    <p>Beside the color wheel we can render an Activation Atlas of the attribution vectors representing each emotion. To make the atlas more legible, we can use non-negative matrix factorization (NMF) on the vectors and color each tile based on its factors.</p>
+    <p>
+      Earlier we looked at a family of neurons that each detect an emotion via
+      several facets like text as well as facial and body expressions. These
+      neurons only scratch the surface of the range of emotions the model
+      understands, since most emotions are the result of several neurons working
+      in concert, often alongside non-emotion neurons that are specific to each
+      picture. In this section well study this broader landscape of emotions.
+    </p>
+    <p>
+      One simple way to get the set of neurons that corresponds to an emotion is
+      to take attribution from the last layer of the image model to the text "I
+      feel {emotion}". This gives us a combination of vectors that we can study.
+      We can extract a list of emotions from a feeling wheel, a type of
+      hand-crafted user interface for seeing emotions, often hierarchically.
+    </p>
+    <p>
+      Beside the color wheel we can render an Activation Atlas of the
+      attribution vectors representing each emotion. To make the atlas more
+      legible, we can use non-negative matrix factorization (NMF) on the vectors
+      and color each tile based on its factors.
+    </p>
 
     <figure id="emotions-atlas" class="fullscreen-diagram"></figure>
 
@@ -281,145 +502,234 @@
     <figure id="emotions-semantic-bias" class="fullscreen-diagram"></figure>
     <p>Add a conclusion here for the emotion work.</p>
 
-
-    <br>
-    <hr>
-    <br>
-    
+    <br />
+    <hr />
+    <br />
 
     <h2>The Mechanics of Abstraction</h2>
 
     <p>
-      One of the greatest mysteries of neural networks is how they can accomplish things which no human being knows how to directly write a computer program to do. This mystery is present in all non-trivial neural networks, but it burns especially brightly in light of a neural network which seems to have features previously thought to be signatures of the human mind.
+      One of the greatest mysteries of neural networks is how they can
+      accomplish things which no human being knows how to directly write a
+      computer program to do. This mystery is present in all non-trivial neural
+      networks, but it burns especially brightly in light of a neural network
+      which seems to have features previously thought to be signatures of the
+      human mind.
     </p>
     <p>
-      Recent work analyzing circuits [] has shed some light on the mechanism and algorithms running inside the layers of vision models. Building on a tradition of researchers studying meaningful neurons inside neural networks [], the circuits approach tries to systematically and rigorously characterize neurons inside neural networks, and then understand how the graph of weights between them implements their behavior.
-      In this section, we aim to offer a very preliminary circuit analysis of mulltimodal models.
+      Recent work analyzing circuits [] has shed some light on the mechanism and
+      algorithms running inside the layers of vision models. Building on a
+      tradition of researchers studying meaningful neurons inside neural
+      networks [], the circuits approach tries to systematically and rigorously
+      characterize neurons inside neural networks, and then understand how the
+      graph of weights between them implements their behavior. In this section,
+      we aim to offer a very preliminary circuit analysis of mulltimodal models.
     </p>
-    <div class='todo'><b>TODO(@colah)</b>: work in language about being preliminary </div>
+    <div class="todo">
+      <b>TODO(@colah)</b>: work in language about being preliminary
+    </div>
     <p>
-      The abstract features we saw in the previous section only form in the final layers of multimodal models.
-      At a high-level, they seem to form by unioning over many cases, with every residual layer adding on new cases.
+      The abstract features we saw in the previous section only form in the
+      final layers of multimodal models. At a high-level, they seem to form by
+      unioning over many cases, with every residual layer adding on new cases.
       For example, ...
     </p>
 
-
     <figure id="enrichment-diagram" class="fullscreen-diagram"></figure>
     <!--<div class='todo'><b>TODO(colah):</b></div>
-    
+
     The abstract features we saw in the previous section are produced only after dozens of layers of visual processing -- what happened in those layers?
     -->
 
     <p>
-      We call these circuits union over massive numbers of facets "enrichment circuits," and will return to them at the end of this section.
-      But enrichment circuits and the abstract features they produce are only possible because all the layers up to that point built up a foundation of sophisticated features from which the abstract features can be assembled. And so if we truly want to understand abstract features, we need to start with these.
+      We call these circuits union over massive numbers of facets "enrichment
+      circuits," and will return to them at the end of this section. But
+      enrichment circuits and the abstract features they produce are only
+      possible because all the layers up to that point built up a foundation of
+      sophisticated features from which the abstract features can be assembled.
+      And so if we truly want to understand abstract features, we need to start
+      with these.
     </p>
-  
+
     <h3>Universal Features and Circuits</h3>
 
     <p>
-      As we examined the features and circuits in the early and mid layers of the multimodal models, we found many that appeared to be analogues of features found in other models.
-      In particular, many of the features we found in early vision are strikingly similar to <a href='https://distill.pub/2020/circuits/early-vision/'>early visual features</a> of both ImageNet and Places365 models:
+      As we examined the features and circuits in the early and mid layers of
+      the multimodal models, we found many that appeared to be analogues of
+      features found in other models. In particular, many of the features we
+      found in early vision are strikingly similar to
+      <a href="https://distill.pub/2020/circuits/early-vision/"
+        >early visual features</a
+      >
+      of both ImageNet and Places365 models:
     </p>
-
 
     <figure id="early-vision" class="fullscreen-diagram"></figure>
 
     <p>
-      Many of these features actually develop multiple times throughout the multimodal models we examined, at different scales. For example, we consistently see small black and white vs color detectors at the beginning of block 2, and then larger ones many layers later at the beginning of block 3.
-
-      We also see interesting differences between the analogues. 
+      Many of these features actually develop multiple times throughout the
+      multimodal models we examined, at different scales. For example, we
+      consistently see small black and white vs color detectors at the beginning
+      of block 2, and then larger ones many layers later at the beginning of
+      block 3. We also see interesting differences between the analogues.
     </p>
 
     <p>
-      The idea that analogous features form across models is sometimes called the "<a>universality hypothesis</a>."
-      A significant amount of work has measured the overall similarity of neural network representations, often finding significantly similarity between representations of different models [].
-      A smaller amount of work has explored individual analogous features forming across models [].
-      Previous demonstrations of universality have tended to show that different models trained on the same dataset develop similar features, leaving some uncertainty as to whether it would be true for models trained on very different datasets.
-      The multimodal model provides an example of analogous features forming across models which are different in dataset, training objective, and architecture.
+      The idea that analogous features form across models is sometimes called
+      the "<a>universality hypothesis</a>." A significant amount of work has
+      measured the overall similarity of neural network representations, often
+      finding significantly similarity between representations of different
+      models []. A smaller amount of work has explored individual analogous
+      features forming across models []. Previous demonstrations of universality
+      have tended to show that different models trained on the same dataset
+      develop similar features, leaving some uncertainty as to whether it would
+      be true for models trained on very different datasets. The multimodal
+      model provides an example of analogous features forming across models
+      which are different in dataset, training objective, and architecture.
     </p>
 
     <p>
-      Not only do multimodal models develop many features which have analogues InceptionV1, but we found a number of cases where those features seem to be implemented by analogous circuits:
+      Not only do multimodal models develop many features which have analogues
+      InceptionV1, but we found a number of cases where those features seem to
+      be implemented by analogous circuits:
     </p>
 
     <figure id="universal-circuit-diagram" class="fullscreen-diagram"></figure>
-    <div class='placeholder'><b>TODO(@colah):</b> Figcaption explaining technical details</div>
+    <div class="placeholder">
+      <b>TODO(@colah):</b> Figcaption explaining technical details
+    </div>
 
     <p>
-      Finding analogous circuits is a stronger result than finding analogous features.
-      You could imagine finding highly-correlated and behaviorally similar features across two models, and then realizing they're implemented in different ways.
-      (We see different implementations of the same function with different algorithms all the time in computer science: QuickSort and HeapSort implement the same sort function in different ways!)
-      The fact that analogous features are implemented in the same way suggests that understanding the mechanisms underlying one model may also help us understand other models.
+      Finding analogous circuits is a stronger result than finding analogous
+      features. You could imagine finding highly-correlated and behaviorally
+      similar features across two models, and then realizing they're implemented
+      in different ways. (We see different implementations of the same function
+      with different algorithms all the time in computer science: QuickSort and
+      HeapSort implement the same sort function in different ways!) The fact
+      that analogous features are implemented in the same way suggests that
+      understanding the mechanisms underlying one model may also help us
+      understand other models.
     </p>
 
     <p>
-      We also see features which are analogues in more abstract ways.
-      For example, InceptionV1 (ImageNet) has left-oriented and right-oriented head detectors which most strongly react to dog heads, which are then merged into orientation-invariant head detectors.
-      Multimodal models also have left-oriented and right-oriented head detectors, but they most strongly react to human heads.<d-footnote>InceptionV1 (ImageNet) also has human-specific head detectors, but they don't seem to be oriented. Likewise, the multimodal models have dog-specific head detectors, but they don't appear to be oriented.</d-footnote>
-      In both cases, the invariant head detectors are created by combining pose-specific head detectors.
+      We also see features which are analogues in more abstract ways. For
+      example, InceptionV1 (ImageNet) has left-oriented and right-oriented head
+      detectors which most strongly react to dog heads, which are then merged
+      into orientation-invariant head detectors. Multimodal models also have
+      left-oriented and right-oriented head detectors, but they most strongly
+      react to human heads.<d-footnote
+        >InceptionV1 (ImageNet) also has human-specific head detectors, but they
+        don't seem to be oriented. Likewise, the multimodal models have
+        dog-specific head detectors, but they don't appear to be
+        oriented.</d-footnote
+      >
+      In both cases, the invariant head detectors are created by combining
+      pose-specific head detectors.
     </p>
 
-    <figure style='grid-column-start: text; grid-column-end: page;'>
-      <img src="images/head-circuit.png">
+    <figure style="grid-column-start: text; grid-column-end: page">
+      <img src="images/head-circuit.png" />
     </figure>
-  
+
     <h3>Task-specific Features</h3>
 
     <p>
-      In addition to "universal" features which the multimodal models seem to share with both ImageNet and Places365 models, we observed features which they seemed to share with only one:
+      In addition to "universal" features which the multimodal models seem to
+      share with both ImageNet and Places365 models, we observed features which
+      they seemed to share with only one:
     </p>
 
     <figure id="task-specific" class="fullscreen-diagram"></figure>
 
     <p>
-      There are also features which don't have highly-correlated analogues in the ImageNet or Places365 model we studied, but still formed consistently across multimodal models.
-      Many of these features seem like something that would form in another classification task!
-      In fact, the palm tree detectors are very similar to those found in an unpublished visualization [] of the geolocalization model PlaNet[].
-      <d-footnote>We know that the multimodal models can be used for geolocalization, and that regional neurons form in the late layers, so it makes sense to expect features useful for geolocalization to also exist in lower layers.</d-footnote>
-      Similarly, one imagines that features like the "f"-detector could be found in OCR models.
-    </p>   
-    <div class='todo'><b>TODO(@colah)</b>: add facial feature example?</div>
+      There are also features which don't have highly-correlated analogues in
+      the ImageNet or Places365 model we studied, but still formed consistently
+      across multimodal models. Many of these features seem like something that
+      would form in another classification task! In fact, the palm tree
+      detectors are very similar to those found in an unpublished visualization
+      [] of the geolocalization model PlaNet[].
+      <d-footnote
+        >We know that the multimodal models can be used for geolocalization, and
+        that regional neurons form in the late layers, so it makes sense to
+        expect features useful for geolocalization to also exist in lower
+        layers.</d-footnote
+      >
+      Similarly, one imagines that features like the "f"-detector could be found
+      in OCR models.
+    </p>
+    <div class="todo"><b>TODO(@colah)</b>: add facial feature example?</div>
 
     <p>
-      Perhaps the right way to understand mid-level vision in the multimodal is as a <em>union</em> over features from a very wide variety of tasks.
+      Perhaps the right way to understand mid-level vision in the multimodal is
+      as a <em>union</em> over features from a very wide variety of tasks.
     </p>
 
-    <div class='placeholder'><b>TODO(@colah, @ggoh)</b>: short section on typograpic features?</div>
-    <div class='placeholder'><b>TODO(@colah, @ggoh)</b>: short section on facial features?</div>
-    <div class='placeholder'><b>TODO(@colah)</b>: weird giant brightness detectors?</div>
+    <div class="placeholder">
+      <b>TODO(@colah, @ggoh)</b>: short section on typograpic features?
+    </div>
+    <div class="placeholder">
+      <b>TODO(@colah, @ggoh)</b>: short section on facial features?
+    </div>
+    <div class="placeholder">
+      <b>TODO(@colah)</b>: weird giant brightness detectors?
+    </div>
 
     <h3>The mechanics of Abstraction</h3>
 
     <p>
-      The middle layers of our models provide a variety of features: detectors for various kind of objects, for short words, and much more.
-      But the final layers are where the most striking property of multimodal models occurs: the formation of abstract, multimodal features.
+      The middle layers of our models provide a variety of features: detectors
+      for various kind of objects, for short words, and much more. But the final
+      layers are where the most striking property of multimodal models occurs:
+      the formation of abstract, multimodal features.
     </p>
 
     <p>
       We found circuits in these final layers particularly difficult to analyze.
-      The layers have widths of several thousand neurons, depending on the model, and there appears to be quite a bit of polysemanticity. 
-      However, the residual architecture does give us one type of circuit for free:
-      what we've called "encrichment circuits," where each residual block adds new facets to the abstract neurons.
+      The layers have widths of several thousand neurons, depending on the
+      model, and there appears to be quite a bit of polysemanticity. However,
+      the residual architecture does give us one type of circuit for free: what
+      we've called "encrichment circuits," where each residual block adds new
+      facets to the abstract neurons.
     </p>
 
     <figure id="enrichment-diagram-2" class="fullscreen-diagram"></figure>
-    
 
-<br>
-<hr>
-<br>
+    <br />
+    <hr />
+    <br />
 
     <h2>Typographic Attacks</h2>
 
     <p>
-      As we've discussed, it's not just the language model side of the multimodal model that knows how to read: some features in the vision model appear to understand individual letters, typographical cues, and even some full words.
+      As we've shown, it's not just the language side of the multimodal model
+      that knows how to read: some features in the vision side appear to
+      understand individual letters, numbers, and even full words.
     </p>
 
-    <p>But <i>just how much</i> do these features understand text?</p>
+    <p>
+      These vision features
+      <!--are clearly useful if the model needs to do-->
+      serve the purpose of allowing the model to perform OCR. Beyond that,
+      however, note how the text that is recognized is often closely tied to the
+      other concepts that a neuron recognizes. We can see in feature
+      visualizations that show both text and imagery: both aspects will gesture
+      at the same cluster of concepts. This should be no surprise by now: these
+      are multimodal neurons, after all!
+    </p>
+
+    <figure id="literate-neurons"></figure>
 
     <p>
-      Surprisingly, they understand text well enough that by adding text to an image, we can get the image to be classified as something it's not! This can be seen as a kind of adversarial attack – what we'll call a <i>typographical attack</i>.
+      We've seen that text often makes its way into the model's high-level
+      representations, but can the presence or absence of a piece of text
+      influence the model's classifications?
+    </p>
+
+    <p>
+      Surprisingly, we find that it can! simply adding text to an image can
+      cause the image to be classified as something it's not. This can be seen
+      as a kind of adversarial attack – what we'll call a
+      <i>typographic attack</i>.
     </p>
 
     <figure id="in-the-wild-1" class="fullscreen-diagram"></figure>
@@ -427,166 +737,104 @@
     <% let attacks = require('../static/typographic/in_the_wild_1.json') %>
 
     <p>
-      Our interest in investigating these typographic attacks is mainly so that we can learn what they have to teach us about the multimodal model. To do so, let's try to understand how these attacks measure up within the context of the broader tradition of adversarial attack research.
+      Although we call these a kind of adversarial attack, we are mainly
+      interested in what typographic attacks can tell us about the multimodal
+      models, rather than seeing them as a competitive adversarial attack. After
+      all, they're limited to models with multimodal neurons! Despite this, it
+      is helpful to understand how these attacks fit within the broader
+      tradition of adversarial attack research.
     </p>
 
     <p>
-      While many adversarial attacks focus on making imperceptible changes to images, some attacks instead involve more exotic constraints. Typographical attacks are more similar to this second line of work. One example is the <i>adversarial patch</i><d-cite
-      key="brown2017adversarialpatch"></d-cite>: a sticker that can be placed on a real-life object in order to cause neural nets to misclassify that object as something else (for example, a toaster). To give a second example, <i>physical adversarial examples</i><d-cite
-      key="athalye2017adversarialturtle"></d-cite> are complete 3D objects that are reliabily misclassified: a 3D-printed turtle that is reliably misclassified as a rifle, a baseball that is misclassified as an espresso.
+      While many adversarial attacks focus on making imperceptible changes to
+      images, some attacks instead involve more exotic constraints. Typographic
+      attacks are more similar to work in this second line of research,
+      including <i>adversarial patches</i
+      ><d-cite key="brown2017adversarialpatch"></d-cite> and
+      <i>physical adversarial examples</i
+      ><d-cite key="athalye2017adversarialturtle"></d-cite>. Adversarial patches
+      are stickers that can be placed on a real-life object in order to cause
+      neural nets to misclassify that object as something else – for example, a
+      toaster. Physical adversarial examples are complete 3D objects that are
+      reliabily misclassified: previous work gives a 3D-printed turtle that is
+      reliably misclassified as a rifle and a baseball that is misclassified as
+      an espresso.
     </p>
 
     <p>
-      Above, we've seen a small handful of one-off examples demonstrating that typographic attacks can work in a physical setting. To investigate them more rigorously, let's look at them in an automated setting.
+      How robust are typographic attacks, and can they reliably cause a wide
+      variety of images to become misclassified? Answering this using
+      <a href="#in-the-wild-1">Figure [[N]]</a>'s physical setting unfortunately
+      isn't scalable. To investigate typographic attacks more systematically,
+      let's look at them in an automated setting.
     </p>
 
     <h3>Automating typographic attacks</h3>
 
     <p>
-      Are there any attacks which can reliably switch ImageNet validation set images of all classes to the target attack class? Here, we demonstrate several.
+      We set up a simple automated attack. Each attack consists of an
+      <i>attack text</i> that attempts to convert images to a
+      <i>target class</i>. We place the text around the image at eight fixed
+      coordinates<d-footnote
+        >These coordinates aren't particularly special; we choose them just
+        because they space the text out around the image.</d-footnote
+      >
+      and using a fixed font style.
     </p>
+
+    <figure id="attack-setup" class="fullscreen-diagram"></figure>
 
     <p>
-      We set up a simple automated attack. Each attack consists of an <i>attack text</i> that attempts to convert images to a <i>target class</i>. We place the text around the image at eight fixed coordinates<d-footnote>These coordinates aren't particularly special; we choose them just because they space the text out around the image.</d-footnote> and using a fixed font style.
+      We apply this attack to images from the ImageNet validation set, and test
+      whether the attack is able to reliably switch a large percentage of
+      ImageNet validation set images to the target attack class.
     </p>
 
-    <figure style="grid-column: page; margin-bottom: 0px">
-      <div  style="display: grid; grid-template-columns: repeat(3); overflow-x: scroll; grid-gap: 10px;">
-        <div style="display: flex; flex-direction: row; border-radius: 6px; overflow: hidden; width: fit-content; height: 191px; border: 1px solid #EEE; grid-column: ">
-          <div style="border-right: 1px solid #EEE">
-            <img style="width: 191px;" src="/typographic/small_attacks/example_before.png" />
-          </div>
-          <div>
-            <% for (const pair of require('../static/typographic/one_example_attack.json').control[0].slice(0,7)) {%>
-              <div style="border-bottom: 1px solid #EEE; background-color: rgba(0, 0, 0, <%= pair[0] %>); color: #<%= pair[0] < 0.5 ? "000000" : "FFFFFF" %>; padding: 0px 10px; line-height: 25px; width: 190px; font-size: 80%">
-                <small><%= pair[1] %>
-                  <span style="float: right;"><%= Math.round(pair[0] * 10000) / 100 %>%</span>
-                </small>
-              </div>
-            <% } %>
-          </div>
-        </div>
-        <div style="grid-column: 2;">
-          <div style="margin-left: -65px; padding-top: 40px">
-            <p style="margin: auto; text-align: center;"><span style="font-size: 250%">&rightarrow;</span></p>
-            <p style="margin: auto; text-align: center;"><small>Target class: <code>pizza</code></small></p>
-            <p style="margin: auto; text-align: center;"><small>Attack text: <i>pizza</i></small></p>
-          </div>
-        </div>
-        <div style="display: flex; flex-direction: row; border-radius: 6px; overflow: hidden; width: fit-content; height: 191px; border: 1px solid #EEE; grid-column: 3">
-          <div style="border-right: 1px solid #EEE">
-            <img style="width: 191px;" src="/typographic/small_attacks/example_after.png" />
-          </div>
-          <div>
-            <% for (const pair of require('../static/typographic/one_example_attack.json').results.pizza.pizza.full_results[0].slice(0,7)) {%>
-              <div style="border-bottom: 1px solid #EEE; background-color: rgba(0, 0, 0, <%= pair[0] %>); color: #<%= pair[0] < 0.5 ? "000000" : "FFFFFF" %>; padding: 0px 10px; line-height: 25px; width: 190px; font-size: 80%">
-                <small><%= pair[1] %>
-                  <span style="float: right;"><%= Math.round(pair[0] * 10000) / 100 %>%</span>
-                </small>
-              </div>
-            <% } %>
-          </div>
-        </div>
-      </div>
-    </figure>
-      <figcaption style="margin-bottom: 42px;">
-        <br/>
-        <p>An example of the simple automated attack setup for the target class <code>pizza</code> with the attack text <i>pizza</i>. Because the top class was changed to <i>pizza</i>, this example qualifies as changed to the target class.</p>
-      </figcaption>
-
-    <% let small_attacks = require('../static/typographic/small_attacks.json') %>
-
-    <p>
-      Under this regime, we found the following attacks to be reasonably effective. Among the strongest of these simple attacks we see that this simple procedure can get us up to a 97% attack success rate with only around 7% of the image's pixels changed.
-    </p>
-
-    <% let attack_ordering = [
-      ["waste container", "trash"],
-      ["iPod", "iPod"],
-      ["rifle", "rifle"],
-      ["pizza", "pizza"],
-      ["radio", "radio"],
-      ["great white shark", "shark"],
-      ["library", "library"],
-      ["Siamese cat", "meow"],
-      ["piggy bank", "$$$"]
-    ] %>
-    <d-figure class="l-body-outset">
-    <figure>
-    <table id="best-small-attacks" style="width: 100%">
-      <thead>
-        <tr>
-          <th scope="col">Target class</th>
-          <th scope="col">Attack text</th>
-          <th scope="col">Pixel cover</th>
-          <th scope="col">Success <div class="figcaption">Linear probes</div></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <b>Baseline ImageNet classification accuracy</b>
-          </td>
-          <td></td>
-          <td></td>
-          <td>
-            <b><%= Math.round(small_attacks.linear_probes.baseline_accuracy * 10000)/100 %>%</b>
-          </td>
-        </tr>
-        <% for (const [target_class, attack_text] of attack_ordering) {%>
-          <tr>
-            <td><code><%= target_class %></code></td>
-            <td><i><%= attack_text === "$$$" ? "$\\\$\\\$\\\$$" : attack_text %></i></td>
-            <td><%= Math.round(small_attacks.linear_probes.results[target_class][attack_text].avg_img_l0_norm_diff * 10000)/100 %>%</td>
-            <td><%= Math.round(small_attacks.linear_probes.results[target_class][attack_text].fraction_changed_to * 10000)/100 %>%</td>
-          </tr>
-        <% } %>
-      </tbody>
-    </table>
-
-    <figcaption>
-      <p>
-        n=<%= Math.round(small_attacks.n) %>. Probabilities collected from <a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x?models.technique=deep_dream">RN50-4x</a>.</p>
-      </p>
-
-      <p><b>Baseline ImageNet classification accuracy</b> measures the percent of images that were classified correctly before the addition of any attacks.
-      </p>
-
-      <p><b>Pixel cover</b> measures the attack's impact on the original image: the average percentage of pixels that were changed by any amount (L0-norm) in order to add the attack.</p>
-
-      <p>
-        In the <b>linear probes</b> methodology, we use the ImageNet training set to optimize a matrix of weights to apply to activations taken from the vision model in order to convert those activations into ImageNet predictions.
-        <d-footnote>We did not test these adversarial attacks against a fine-tuned model, because we did not find that a fine-tuned model performed substantially better at baseline on ImageNet classification than the linear probes methodology did. Furthermore, fine-tuning performance on this task could depend on how long the model is trained or other factors.
-        </d-footnote>
-      </p>
-      <!-- <p>In the <b>zero-shot</b> methodology, we convert the multimodal model to an ImageNet classifier by calculating probabilities on the completion “a photo of a ___” for each ImageNet class.</p> -->
-    </figcaption>
-    </figure>
-    </d-figure>
-
-    <p>
-      To contextualize how effective these results are as an adversarial attack, we can compare the linear probes results for the strongest two attacks above to the performance of the attacks described in <i>Adversarial Patch</i>. For reference, those attacks achieve up to 80% attack success at 8% pixel cover – many of the attacks above are as or more effective.
-    </p>
-
-    <h4>How we found these attacks</h4>
-
-    <p>
-      We found these attacks in multiple ways:
-    </p>
-      <ol>
+    <p>We found text snippets for our attacks using a handful of techniques:</p>
+    <ol>
       <li>
-        Manually looking through the multimodal model's neurons for those that appear sensitive to particular kinds of text. This is how we found the <i>piggy bank</i> and <i>Siamese cat</i> attacks.
+        Manually looking through the multimodal model's neurons for those that
+        appear sensitive to particular kinds of text. This is how we found the
+        <i>piggy bank</i> and <i>Siamese cat</i> attacks.
       </li>
 
-      <li>A genetic algorithm that modifies text in order to hill-climb towards text that is a more effective adversarial attack. This is how we found the <i>great white shark</i> and <i>waste container</i> attacks.</li>
+      <li>
+        Writing a genetic algorithm that modifies text in order to hill-climb
+        towards text that is a more effective adversarial attack. This is how we
+        found the <i>great white shark</i> and <i>waste container</i> attacks.
+      </li>
 
       <li>
-        Just brute-force searching through all of the ImageNet class names looking for class names which are, in and of themselves, effective attacks. This is how we found <i>rifle</i>, <i>pizza</i>, <i>radio</i>, <i>iPod</i>, and <i>library</i>.
+        Just brute-force searching through all of the ImageNet class names
+        looking for class names which are, in and of themselves, effective
+        attacks. This is how we found <i>rifle</i>, <i>pizza</i>, <i>radio</i>,
+        <i>iPod</i>, and <i>library</i>.
       </li>
     </ol>
 
     <p>
-      We can improve upon the results from back in Figure [[N]] by construct a new dataset of physical typographic attacks using some of these more effective attacks we've now discovered. In a shoutout to <i>Adversarial Patch</i> we include the label <i>toaster</i>, and find that it does surprisingly well as a typographic attack!
+      Under this attack setup, we found several attacks to be reasonably
+      effective. Among the strongest of these attacks we see that this simple
+      procedure can get us up to a 97% attack success rate with only around 7%
+      of the image's pixels changed.
+    </p>
+
+    <figure id="automated-attacks" class="l-body-outset"></figure>
+
+    <p>
+      To contextualize how effective these results are as an adversarial attack,
+      we can compare the linear probes results for the strongest two attacks
+      above to the performance of the attacks described in
+      <i>Adversarial Patch</i>. For reference, those attacks achieve up to 80%
+      attack success at 8% pixel cover – many of the attacks above are as or
+      more effective.
+    </p>
+
+    <p>
+      We can improve upon the results from back in
+      <a href="in-the-wild-1">Figure [[N]]</a> by constructing a new dataset of
+      physical typographic attacks using some of these more effective attacks
+      we've now discovered.
     </p>
 
     <figure id="in-the-wild-2" class="fullscreen-diagram"></figure>
@@ -606,157 +854,77 @@
     <h3>Why do these attacks work?</h3>
 
     <p>
-      We already know that the multimodal model develops high-level representations for concepts, and sometimes those concepts include both images and text. Naturally, some of these representations might be upstream of the model's representations of the various ImageNet classes.
+      We already know that the multimodal model develops high-level
+      representations for concepts, and sometimes those concepts include both
+      images and text. Naturally, some of these representations might be
+      upstream of the model's representations of the various ImageNet classes.
     </p>
 
-    <d-figure>
-      <style>
-        figure.reading-container {
-          display: flex;
-          flex-direction: row;
-        }
-        img.reading-neuron-feature-viz {
-          border-radius: 1em;
-        }
-        img.reading-neuron-dataset-example {
-          max-width: 48%;
-          margin: 0px;
-        }
-        div.reading-neuron {
-          width: 30%;
-          margin: 20px;
-        }
-      </style>
-      <figure class="eq-grid reading-container">
-        <div class="reading-neuron">
-          <h4><a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x/image_block_4_5_Add_6_0/1330">RN50-4x Channel 1330</a></h4>
-          <img class="reading-neuron-feature-viz" src="/typographic/RN50-4x-channel-1330.png" />
-          <img class="reading-neuron-dataset-example" src="/typographic/RN50-4x-1330-dataset-1.png" />
-          <img class="reading-neuron-dataset-example" src="/typographic/RN50-4x-1330-dataset-2.png" />
-          <img class="reading-neuron-dataset-example" src="/typographic/RN50-4x-1330-dataset-3.png" />
-          <img class="reading-neuron-dataset-example" src="/typographic/RN50-4x-1330-dataset-4.png" />
-          <p><small>"price", "cheap", "$"</small></p>
-        </div>
-        <div class="reading-neuron">
-          <h4><a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x/image_block_4_5_Add_6_0/1450">RN50-4x Channel 1450</a></h4>
-          <img class="reading-neuron-feature-viz" src="/typographic/RN50-4x-channel-1450.png" />
-          <img class="reading-neuron-dataset-example" src="/typographic/RN50-4x-1450-dataset-1.png" />
-          <img class="reading-neuron-dataset-example" src="/typographic/RN50-4x-1450-dataset-2.png" />
-          <img class="reading-neuron-dataset-example" src="/typographic/RN50-4x-1450-dataset-3.png" />
-          <img class="reading-neuron-dataset-example" src="/typographic/RN50-4x-1450-dataset-4.png" />
-          <p><small>"iPod", "iOS", "iPhone"</small></p>
-        </div>
-      </figure>
-      <figcaption>
-        <p>Neuron <a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x/image_block_4_5_Add_6_0/1330">1330</a> responds to (via the feature visualization) images of piggybanks, as well as (via dataset examples) the dollar signs on prices and words like "cheap," "cost," or "price."</p>
-        <p>Neuron <a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x/image_block_4_5_Add_6_0/1450">1450</a> responds to (via dataset examples) the Apple logo and names of Apple products.</p>
-      </figcaption>
-    </d-figure>
+    <figure id="attackable-neurons"></figure>
 
     <p>
-      Above, we see two examples of high-level representations correlated with ImageNet classes: a neuron responding to images of piggybanks, money, and prices, and a neuron responding to the Apple logo and images and names of Apple products.
+      Above, we see two examples of high-level representations correlated with
+      ImageNet classes: a neuron responding to images of piggybanks, money, and
+      prices, and a neuron responding to the Apple logo and images and names of
+      Apple products.
     </p>
 
     <p>
-      Because these high-level representations are interpretable, we can inspect the neurons that the model is using and their weights, and develop typographic attacks from there.
+      Because these high-level representations are interpretable, we can inspect
+      the neurons that the model is using and their weights, and develop
+      typographic attacks from there.
     </p>
 
     <p>
-      Inasmuch as the model forms these high level representations, it's forming them because those representations <i>efficiently compress</i> the training set. And naturally, inputs like the ones in these typographic attacks – images spuriously labeled with irrelevant text – are <i>not</i> very common in that training set! As a result, a piece of text that might normally be a very strong cue may in an attack setting be strongly-weighted enough to get in the way of the model's perception of other objects elsewhere in the image, simply by outweighing them.
+      Inasmuch as the model forms these high level representations, it's forming
+      them because those representations <i>efficiently compress</i> the
+      training set. And naturally, inputs like the ones in these typographic
+      attacks – images spuriously labeled with irrelevant text – are
+      <i>not</i> very common in that training set! As a result, a piece of text
+      that might normally be a very strong cue may in an attack setting be
+      strongly-weighted enough to get in the way of the model's perception of
+      other objects elsewhere in the image, simply by outweighing them.
     </p>
 
     <p>
-      The multimodal model's architecture is powerful enough to contain representations that learn both images and words, and one effect is what we see here: a unique weakness to typographic attacks.
+      The multimodal model's architecture is powerful enough to contain
+      representations that learn both images and words, and one effect is what
+      we see here: a unique weakness to typographic attacks.
     </p>
+
+    <h3>What this teaches us about the model</h3>
+
+    <!-- <p>How else might we investigate just exactly how much text is integrated into the model's higher-level concepts [[edit: duplicative]]? One way we could lower-bound it is if we could show a downstream effect of [[that integration]]. -->
 
     <!-- In fact, we hypothesize that a fine-tuned model might actually <i>erase</i> this effect – by causing the model to no longer "need" to know how to read. The susceptibility to typographic attacks may well be an interesting consequence of the multimodal model being required to effectively perform at <i>diverse</i> tasks, not just at ImageNet as in these experiments but also at its native image captioning task. -->
 
     <!-- <p>[[TODO(Experiment+Analysis): Attempt to generate more nuanced analyses by subtracting activations.]]</p> -->
 
-    <!-- <h3>Can we generate attacks for all target classes?</h3>
-
-    <p>
-    [[TODO(Analysis+Writing): Summarize what you can from big_attacks_no_limit_large_n.json.]] [[Move this section up to "we found these by".]]
-    </p> -->
-
     <!-- <p>TODO(Writing): Gabe's point about the connection to fairness – overgeneralization. [[In the high-level representations. Connects to the model theory point.</p> -->
+
     <!-- <p>TODO(Writing): Connection to the Stroop effect?</p> -->
 
-
-    <p>[[TODO(csvoss): Move the below diagram to the Miscellaneous Neurons section once we have one.]]</p>
-    <d-figure>
-      <style>
-        figure.reading-container {
-          display: flex;
-          flex-direction: row;
-        }
-        img.reading-neuron-feature-viz {
-          border-radius: 1em;
-        }
-        img.reading-neuron-dataset-example {
-          max-width: 48%;
-          margin: 0px;
-        }
-        div.reading-neuron {
-          width: 30%;
-          margin: 20px;
-        }
-      </style>
-      <figure class="eq-grid reading-container">
-        <div class="reading-neuron">
-          <h4><a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_v2/image_block_4_2_Add_6_0/1535">RN101 Channel 1535</a></h4>
-          <img class="reading-neuron-feature-viz" src="/typographic/RN101-channel-1535.png" />
-          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1535-dataset-1.png" />
-          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1535-dataset-2.png" />
-          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1535-dataset-3.png" />
-          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1535-dataset-4.png" />
-          <p><small>"kiss", "love you"</small></p>
-        </div>
-        <div class="reading-neuron">
-          <h4><a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_v2/image_block_4_2_Add_6_0/1882">RN101 Channel 1882</a></h4>
-          <img class="reading-neuron-feature-viz" src="/typographic/RN101-channel-1882.png" />
-          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1882-dataset-1.png" />
-          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1882-dataset-2.png" />
-          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1882-dataset-3.png" />
-          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1882-dataset-4.png" />
-          <p><small>"thank you", "gracias"</small></p>
-        </div>
-        <div class="reading-neuron">
-          <h4><a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_v2/image_block_4_2_Add_6_0/1738">RN101 Channel 1738</a></h4>
-          <img class="reading-neuron-feature-viz" src="/typographic/RN101-channel-1738.png" />
-          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1738-dataset-1.png" />
-          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1738-dataset-2.png" />
-          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1738-dataset-3.png" />
-          <img class="reading-neuron-dataset-example" src="/typographic/RN101-1738-dataset-4.png" />
-          <p><small>"year", "2015", "2016", ...</small></p>
-        </div>
-      </figure>
-      <figcaption>
-        Three examples of neurons from Resnet-101 whose feature visualizations (top) and selected dataset examples (bottom) show sensitivity to specific words and text.
-      </figcaption>
-    </d-figure>
-
+    <!--
+      Still to-do once I have wifi:
+      [] In the Wild 3 – sftp my images to athena.dialup.mit.edu, then run them
+      [] Linear probes for In the Wild?? (Did I not have this working before? Huh? What was it that I'm missing here? Maybe I misremember the task?)
+      [] Extract out a Svelte component for the image card
+      [] Research the Stroop effect and get a couple of citations
+      [] (Optional stretch) Extract out a Svelte component for In the Wild
+      [] Rewrite the conclusion once I have more brain
+    -->
   </d-article>
 
   <d-appendix>
     <h3>Acknowledgments</h3>
-    <p>
-      We are deeply grateful to... Imaginary Creatures
-    </p>
+    <p>We are deeply grateful to... Imaginary Creatures</p>
 
-    <p>
-      Many of our diagrams are based on...
-    </p>
+    <p>Many of our diagrams are based on...</p>
 
     <h3>Author Contributions</h3>
-    <p>
-      <b>Research:</b> Alex developed ...
-    </p>
+    <p><b>Research:</b> Alex developed ...</p>
 
-    <p>
-      <b>Writing & Diagrams:</b> The text was initially drafted by...
-    </p>
-
+    <p><b>Writing & Diagrams:</b> The text was initially drafted by...</p>
 
     <d-footnote-list></d-footnote-list>
     <d-citation-list></d-citation-list>
@@ -764,5 +932,4 @@
 
   <!-- bibliography will be inlined during Distill pipeline's pre-rendering -->
   <d-bibliography src="bibliography.bib"></d-bibliography>
-
 </body>

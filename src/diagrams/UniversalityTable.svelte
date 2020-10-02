@@ -34,7 +34,6 @@
         display: block;
     }
 
-
     .figure-anchor {
         font-weight: bold;
     }
