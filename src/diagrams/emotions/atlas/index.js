@@ -1,8 +1,7 @@
 import { Surface, HoverZoom, ZoomedImg, Text } from '../ui'
 import { range, sortBy, includes } from 'lodash'
-import { max } from 'numjs'
 import data from './data'
-import { sum } from 'lodash'
+import { sum, max } from 'lodash'
 import * as d3 from 'd3'
 import React, { useState } from 'react'
 export const getFace = (emotion) =>

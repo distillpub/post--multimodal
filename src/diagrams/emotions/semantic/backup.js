@@ -1,7 +1,6 @@
 import React from 'react'
 import { Surface, ZoomedImg, Text } from '../ui'
-import { range, sortBy, includes } from 'lodash'
-import { max } from 'numjs'
+import { range, max, sortBy, includes } from 'lodash'
 import data from './data'
 export const getFace = (emotion) =>
   `https://storage.googleapis.com/fls/nickc/multimodal/emotions_alpha3/${emotion.toLowerCase()}.png`
