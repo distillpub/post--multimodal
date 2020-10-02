@@ -61,6 +61,7 @@ function hues(label) {
 import ClassificationCard from '../components/ClassificationCard.svelte';
 </script>
 
+<div style="overflow-x: scroll;">
 <div style="width: fit-content; margin: auto;">
   <div style="display: grid; grid-template-rows: repeat({ Object.entries(data).length}); grid-template-columns: repeat({ Object.entries(data.mug).length}); overflow-x: scroll; grid-gap: 10px;">
     {#each Object.entries(data.mug) as [label, results], col_index}
@@ -89,4 +90,5 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
       Probabilities here calculated using the <b>zero-shot</b> methodology: we convert the multimodal model to an ImageNet classifier by calculating probabilities on the completion “a photo of a ___” for each ImageNet class.
     </p>
   </div>
+</div>
 </div>
