@@ -15,7 +15,7 @@ function backgroundColor(probability, imagenetClass, customHues) {
 }
 
 function calculateImageSize(probabilities) {
-  return "" + Math.round(probabilities.length * 17.5 - 1.5);
+  return Math.round(probabilities.length * 17.5 - 1.5);
 }
 
 </script>
@@ -29,7 +29,7 @@ function calculateImageSize(probabilities) {
       <div style="
         border-bottom: 1px solid #EEE;
         background-color: {backgroundColor(probability, imagenetClass, customHues)};
-        color: #{ probability < 0.7 ? "000000" : "FFFFFF"}; padding: 0px 10px; line-height: 16px; width: 155px; font-size: 80%">
+        color: #{ probability < 0.7 ? "000000" : "FFFFFF"}; padding: 0px 10px; line-height: 16px; width: 190px; font-size: 80%">
         <small>{imagenetClass}
           <span style="float: right;">{Math.round(probability * 10000) / 100 }%</span>
         </small>
