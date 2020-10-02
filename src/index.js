@@ -10,6 +10,10 @@ import NeuronTable from "./diagrams/NeuronTable.svelte";
 import "regenerator-runtime/runtime";
 import EnrichmentCircuit from "./diagrams/EnrichmentCircuit.svelte";
 import FeaturesTable from "./diagrams/FeaturesTable.svelte";
+import LiterateNeurons from "./diagrams/LiterateNeurons.svelte";
+import AttackSetup from "./diagrams/AttackSetup.svelte";
+import AutomatedAttacks from "./diagrams/AutomatedAttacks.svelte";
+import AttackableNeurons from "./diagrams/AttackableNeurons.svelte";
 import UniversalCircuitTable from "./diagrams/UniversalCircuitTable.svelte";
 import InTheWild1 from './diagrams/InTheWild1.svelte'
 import InTheWild2 from './diagrams/InTheWild2.svelte'
@@ -71,6 +75,10 @@ const diagrams = [
 	["task-specific", FeaturesTable, task_specific_data],
 	["universal-circuit-diagram", UniversalCircuitTable, {}],
 	["enrichment-diagram-2", EnrichmentCircuit, {}],
+	["literate-neurons", LiterateNeurons, {}],
+	["attack-setup", AttackSetup, {}],
+	["automated-attacks", AutomatedAttacks, {}],
+	["attackable-neurons", AttackableNeurons, {}],
 	["in-the-wild-1", InTheWild1, {}],
 	['in-the-wild-2', InTheWild2, {}]
 ];
@@ -96,6 +104,7 @@ ReactDOM.render(
   <EmotionsMentalHealth />,
   document.getElementById('emotions-mentalhealth')
 )
+<<<<<<< HEAD
 // ReactDOM.render(<EmotionsAtlas />, document.getElementById('emotions-atlas'))
 // ReactDOM.render(
 //   <EmotionsSemantic
@@ -124,3 +133,33 @@ ReactDOM.render(
 //   />,
 //   document.getElementById('emotions-semantic-bias')
 // )
+=======
+ReactDOM.render(<EmotionsAtlas />, document.getElementById('emotions-atlas'))
+ReactDOM.render(
+  <EmotionsSemantic
+    emotionNames={[
+      'ashamed',
+      'let down',
+      'resentful',
+      'aggressive',
+      'skeptical',
+      'disappointed',
+      'grief',
+    ]}
+  />,
+  document.getElementById('emotions-semantic-clever')
+)
+
+ReactDOM.render(
+  <EmotionsSemantic
+    emotionNames={[
+      'pressured',
+      'confident',
+      'disrespected',
+      'weak',
+      'worthless',
+    ]}
+  />,
+  document.getElementById('emotions-semantic-bias')
+)
+>>>>>>> 7ba0e4fb7ba6d2abd2fd624fccb1e74c5556597f
