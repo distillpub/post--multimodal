@@ -6,30 +6,47 @@
 
 <script>
 
-let data = require("../../static/typographic/in_the_wild_1.json");
+let data = require("../../static/typographic/in_the_wild_3.json");
 
 let trueLabels = {
-    "glass": ["measuring cup", "beer glass"],
+    "pizza": ["pizza"],
+    "laptop": ["laptop computer"],
     "plant": ["plant pot"],
-    "mug": ["coffee mug"],
+    "trash": ["waste container"],
+    "cup": ["measuring cup"],
+    "pitcher": ["water jug"],
+    "water": ["water jug"],
+    "mug": ["coffee mug"]
 }
 
 let adversarialLabels = {
-    "laptop": {
-      "hue": 240,
-      "labels": ["laptop computer", "desktop computer"],
-    },
-    "cup":  {
-      "hue": 260,
-      "labels": ["measuring cup", "tea cup"],
-    },
-    "mug":  {
-      "hue": 280,
-      "labels": ["coffee mug"],
-    },
     "blank":  {
       "hue": null,
       "labels": [],
+    },
+    "cup": {
+      "hue": 160,
+      "labels": ["measuring cup"]
+    },
+    "laptop": {
+      "hue": 180,
+      "labels": ["laptop computer", "desktop computer"]
+    },
+    "mug": {
+      "hue": 200,
+      "labels": ["coffee mug"]
+    },
+    "pizza": {
+      "hue": 220,
+      "labels": ["pizza"]
+    },
+    "plant": {
+      "hue": 240,
+      "labels": ["plant pot"]
+    },
+    "water": {
+      "hue": 260,
+      "labels": ["water jug"]
     },
     "defaultHue": 0,
 }
@@ -41,8 +58,8 @@ let adversarialLabels = {
       {#each Object.entries(data.mug) as [label, results], col_index}
         <h4 style="grid-column: { col_index + 1}; margin-bottom: 0px">{@html label === "blank" ? "Blank" : "Labeled &ldquo;" + label + "&rdquo;" }</h4>
       {/each}
-      {#each Object.entries(data) as [item, labels], row_index}
-        {#each Object.entries(labels) as [label, results], col_index}
+      {#each Object.keys(data).sort() as item, row_index}
+        {#each Object.entries(data[item]) as [label, results], col_index}
         <div style="display: flex; flex-direction: row; border-radius: 6px; overflow: hidden; width: fit-content; height: 121px; border: 1px solid #EEE; grid-column: { col_index + 1}">
           <div style="border-right: 1px solid #EEE">
             <img style="width: 121px;" src="{ results.image_url}?cache=1006" alt="{item} labeled {label}"/>
@@ -63,11 +80,7 @@ let adversarialLabels = {
     <div class="figcaption" style="max-width: 600px; margin-top: 16px;">
       <p>
         <a class="figure-anchor" href="#in-the-wild-1">Figure N:</a>
-        <b>Physical typographic attacks.</b> These twelve images were constructed as a black-box attack: they were photographed <i>without</i> consulting the multimodal model for vulnerable neurons first.
-      </p>
-
-      <p>
-        Not all of the attacks are effective, but the plant pot labeled "laptop", the glass labeled "laptop", and the mug labeled "cup" all achieve surprising efficacy.
+        Physical typographic attacks.
       </p>
 
       <p>

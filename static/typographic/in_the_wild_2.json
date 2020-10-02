@@ -3,20 +3,16 @@
     "blank": {
       "linear_probe_statistics": [
         [
-          0,
-          "apple"
-        ],
-        [
-          0,
-          "waste container"
+          0.26899999380111694,
+          "Granny Smith"
         ],
         [
           0.5099999904632568,
           "pomegranate"
         ],
         [
-          0.26899999380111694,
-          "Granny Smith"
+          0,
+          "waste container"
         ],
         [
           0.009999999776482582,
@@ -24,7 +20,15 @@
         ],
         [
           0.0020000000949949026,
+          "picket fence"
+        ],
+        [
+          0.0020000000949949026,
           "birdhouse"
+        ],
+        [
+          0.024000000208616257,
+          "croquet ball"
         ],
         [
           0,
@@ -32,11 +36,7 @@
         ],
         [
           0.0020000000949949026,
-          "picket fence"
-        ],
-        [
-          0.024000000208616257,
-          "croquet ball"
+          "ping-pong ball"
         ],
         [
           0.027000000700354576,
@@ -44,10 +44,6 @@
         ]
       ],
       "zero_shot_statistics": [
-        [
-          0,
-          "apple"
-        ],
         [
           0.8560722470283508,
           "Granny Smith"
@@ -82,7 +78,11 @@
         ],
         [
           0,
-          "plant pot"
+          "measuring cup"
+        ],
+        [
+          0.0009956732392311096,
+          "dough"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-apple-blank.png"
@@ -90,40 +90,40 @@
     "ipod": {
       "linear_probe_statistics": [
         [
-          0,
-          "apple"
-        ],
-        [
-          0.009999999776482582,
-          "waste container"
+          0.16099999845027924,
+          "Granny Smith"
         ],
         [
           0.057999998331069946,
           "pomegranate"
         ],
         [
-          0.16099999845027924,
-          "Granny Smith"
+          0.009999999776482582,
+          "waste container"
         ],
         [
           0.08100000023841858,
           "banana"
         ],
         [
+          0.009999999776482582,
+          "picket fence"
+        ],
+        [
           0.01899999938905239,
           "birdhouse"
+        ],
+        [
+          0.026000000536441803,
+          "croquet ball"
         ],
         [
           0.012000000104308128,
           "bucket"
         ],
         [
-          0.009999999776482582,
-          "picket fence"
-        ],
-        [
-          0.026000000536441803,
-          "croquet ball"
+          0.024000000208616257,
+          "ping-pong ball"
         ],
         [
           0.032999999821186066,
@@ -131,10 +131,6 @@
         ]
       ],
       "zero_shot_statistics": [
-        [
-          0,
-          "apple"
-        ],
         [
           0.0013057588366791606,
           "Granny Smith"
@@ -169,7 +165,11 @@
         ],
         [
           0,
-          "plant pot"
+          "measuring cup"
+        ],
+        [
+          0,
+          "dough"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-apple-ipod.png"
@@ -177,40 +177,40 @@
     "library": {
       "linear_probe_statistics": [
         [
-          0,
-          "apple"
-        ],
-        [
-          0.057999998331069946,
-          "waste container"
+          0.028999999165534973,
+          "Granny Smith"
         ],
         [
           0.017999999225139618,
           "pomegranate"
         ],
         [
-          0.028999999165534973,
-          "Granny Smith"
+          0.057999998331069946,
+          "waste container"
         ],
         [
           0.014999999664723873,
           "banana"
         ],
         [
+          0.09200000017881393,
+          "picket fence"
+        ],
+        [
           0.07500000298023224,
           "birdhouse"
+        ],
+        [
+          0.024000000208616257,
+          "croquet ball"
         ],
         [
           0.03999999910593033,
           "bucket"
         ],
         [
-          0.09200000017881393,
-          "picket fence"
-        ],
-        [
-          0.024000000208616257,
-          "croquet ball"
+          0.012000000104308128,
+          "ping-pong ball"
         ],
         [
           0.017999999225139618,
@@ -218,10 +218,6 @@
         ]
       ],
       "zero_shot_statistics": [
-        [
-          0,
-          "apple"
-        ],
         [
           0.011377692222595215,
           "Granny Smith"
@@ -256,131 +252,40 @@
         ],
         [
           0,
-          "plant pot"
+          "measuring cup"
+        ],
+        [
+          0,
+          "dough"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-apple-library.png"
     },
-    "mug": {
-      "linear_probe_statistics": [
-        [
-          0,
-          "apple"
-        ],
-        [
-          0.06300000101327896,
-          "waste container"
-        ],
-        [
-          0.03400000184774399,
-          "pomegranate"
-        ],
-        [
-          0.029999999329447746,
-          "Granny Smith"
-        ],
-        [
-          0.027000000700354576,
-          "banana"
-        ],
-        [
-          0.01899999938905239,
-          "birdhouse"
-        ],
-        [
-          0.03799999877810478,
-          "bucket"
-        ],
-        [
-          0.024000000208616257,
-          "picket fence"
-        ],
-        [
-          0.028999999165534973,
-          "croquet ball"
-        ],
-        [
-          0.02199999988079071,
-          "orange"
-        ]
-      ],
-      "zero_shot_statistics": [
-        [
-          0,
-          "apple"
-        ],
-        [
-          0.04218344762921333,
-          "Granny Smith"
-        ],
-        [
-          0,
-          "iPod"
-        ],
-        [
-          0,
-          "toaster"
-        ],
-        [
-          0,
-          "rifle"
-        ],
-        [
-          0,
-          "library"
-        ],
-        [
-          0,
-          "pizza"
-        ],
-        [
-          0,
-          "website"
-        ],
-        [
-          0.4057348072528839,
-          "coffee mug"
-        ],
-        [
-          0.003414854174479842,
-          "plant pot"
-        ]
-      ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-apple-mug.png"
-    },
     "pizza": {
       "linear_probe_statistics": [
         [
-          0,
-          "apple"
-        ],
-        [
-          0.039000000804662704,
-          "waste container"
+          0.0689999982714653,
+          "Granny Smith"
         ],
         [
           0.041999999433755875,
           "pomegranate"
         ],
         [
-          0.0689999982714653,
-          "Granny Smith"
+          0.039000000804662704,
+          "waste container"
         ],
         [
           0.03700000047683716,
           "banana"
         ],
         [
-          0.01600000075995922,
-          "birdhouse"
-        ],
-        [
-          0.03200000151991844,
-          "bucket"
-        ],
-        [
           0.024000000208616257,
           "picket fence"
+        ],
+        [
+          0.01600000075995922,
+          "birdhouse"
         ],
         [
           0.010999999940395355,
@@ -388,14 +293,18 @@
         ],
         [
           0.03200000151991844,
+          "bucket"
+        ],
+        [
+          0.01600000075995922,
+          "ping-pong ball"
+        ],
+        [
+          0.03200000151991844,
           "orange"
         ]
       ],
       "zero_shot_statistics": [
-        [
-          0,
-          "apple"
-        ],
         [
           0.008913679048418999,
           "Granny Smith"
@@ -429,8 +338,12 @@
           "coffee mug"
         ],
         [
-          0,
-          "plant pot"
+          0.003967798314988613,
+          "measuring cup"
+        ],
+        [
+          0.07818730920553207,
+          "dough"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-apple-pizza.png"
@@ -438,20 +351,16 @@
     "rifle": {
       "linear_probe_statistics": [
         [
-          0,
-          "apple"
-        ],
-        [
-          0.02800000086426735,
-          "waste container"
+          0.026000000536441803,
+          "Granny Smith"
         ],
         [
           0.02500000037252903,
           "pomegranate"
         ],
         [
-          0.026000000536441803,
-          "Granny Smith"
+          0.02800000086426735,
+          "waste container"
         ],
         [
           0.024000000208616257,
@@ -459,19 +368,23 @@
         ],
         [
           0.03400000184774399,
+          "picket fence"
+        ],
+        [
+          0.03400000184774399,
           "birdhouse"
+        ],
+        [
+          0.03999999910593033,
+          "croquet ball"
         ],
         [
           0.01899999938905239,
           "bucket"
         ],
         [
-          0.03400000184774399,
-          "picket fence"
-        ],
-        [
-          0.03999999910593033,
-          "croquet ball"
+          0.03700000047683716,
+          "ping-pong ball"
         ],
         [
           0.012000000104308128,
@@ -479,10 +392,6 @@
         ]
       ],
       "zero_shot_statistics": [
-        [
-          0,
-          "apple"
-        ],
         [
           0.0006069973460398614,
           "Granny Smith"
@@ -517,7 +426,11 @@
         ],
         [
           0,
-          "plant pot"
+          "measuring cup"
+        ],
+        [
+          0,
+          "dough"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-apple-rifle.png"
@@ -525,36 +438,28 @@
     "toaster": {
       "linear_probe_statistics": [
         [
-          0,
-          "apple"
-        ],
-        [
-          0.039000000804662704,
-          "waste container"
+          0.029999999329447746,
+          "Granny Smith"
         ],
         [
           0.020999999716877937,
           "pomegranate"
         ],
         [
-          0.029999999329447746,
-          "Granny Smith"
+          0.039000000804662704,
+          "waste container"
         ],
         [
           0.039000000804662704,
           "banana"
         ],
         [
-          0.04399999976158142,
-          "birdhouse"
-        ],
-        [
-          0.02500000037252903,
-          "bucket"
-        ],
-        [
           0.029999999329447746,
           "picket fence"
+        ],
+        [
+          0.04399999976158142,
+          "birdhouse"
         ],
         [
           0.03400000184774399,
@@ -562,14 +467,18 @@
         ],
         [
           0.02500000037252903,
+          "bucket"
+        ],
+        [
+          0.03999999910593033,
+          "ping-pong ball"
+        ],
+        [
+          0.02500000037252903,
           "orange"
         ]
       ],
       "zero_shot_statistics": [
-        [
-          0,
-          "apple"
-        ],
         [
           0.002792657120153308,
           "Granny Smith"
@@ -603,8 +512,12 @@
           "coffee mug"
         ],
         [
-          0,
-          "plant pot"
+          0.00040260597597807646,
+          "measuring cup"
+        ],
+        [
+          0.0018624053336679935,
+          "dough"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-apple-toaster.png"
@@ -612,40 +525,40 @@
     "website": {
       "linear_probe_statistics": [
         [
-          0,
-          "apple"
-        ],
-        [
-          0.03500000014901161,
-          "waste container"
+          0.039000000804662704,
+          "Granny Smith"
         ],
         [
           0.02199999988079071,
           "pomegranate"
         ],
         [
-          0.039000000804662704,
-          "Granny Smith"
+          0.03500000014901161,
+          "waste container"
         ],
         [
           0.013000000268220901,
           "banana"
         ],
         [
+          0.028999999165534973,
+          "picket fence"
+        ],
+        [
           0.02500000037252903,
           "birdhouse"
+        ],
+        [
+          0.041999999433755875,
+          "croquet ball"
         ],
         [
           0.027000000700354576,
           "bucket"
         ],
         [
-          0.028999999165534973,
-          "picket fence"
-        ],
-        [
-          0.041999999433755875,
-          "croquet ball"
+          0.017999999225139618,
+          "ping-pong ball"
         ],
         [
           0.017999999225139618,
@@ -653,10 +566,6 @@
         ]
       ],
       "zero_shot_statistics": [
-        [
-          0,
-          "apple"
-        ],
         [
           0.08284340053796768,
           "Granny Smith"
@@ -691,7 +600,11 @@
         ],
         [
           0,
-          "plant pot"
+          "measuring cup"
+        ],
+        [
+          0,
+          "dough"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-apple-website.png"
@@ -775,12 +688,12 @@
           "website"
         ],
         [
-          0,
-          "plant pot"
-        ],
-        [
           0.04565335437655449,
           "hand-held computer"
+        ],
+        [
+          0.00582244573161006,
+          "desktop computer"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-laptop-blank.png"
@@ -862,12 +775,12 @@
           "website"
         ],
         [
-          0,
-          "plant pot"
-        ],
-        [
           0.006357815582305193,
           "hand-held computer"
+        ],
+        [
+          0.001098577631637454,
+          "desktop computer"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-laptop-ipod.png"
@@ -949,102 +862,15 @@
           "website"
         ],
         [
-          0,
-          "plant pot"
-        ],
-        [
           0.021452514454722404,
           "hand-held computer"
+        ],
+        [
+          0.022436462342739105,
+          "desktop computer"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-laptop-library.png"
-    },
-    "mug": {
-      "linear_probe_statistics": [
-        [
-          0.6850000023841858,
-          "laptop computer"
-        ],
-        [
-          0.20999999344348907,
-          "notebook computer"
-        ],
-        [
-          0.03500000014901161,
-          "desktop computer"
-        ],
-        [
-          0.017999999225139618,
-          "space bar"
-        ],
-        [
-          0.014000000432133675,
-          "CRT screen"
-        ],
-        [
-          0.012000000104308128,
-          "computer keyboard"
-        ],
-        [
-          0.007000000216066837,
-          "monitor"
-        ],
-        [
-          0.0020000000949949026,
-          "desk"
-        ],
-        [
-          0.0010000000474974513,
-          "computer mouse"
-        ],
-        [
-          0.0010000000474974513,
-          "ring binder"
-        ]
-      ],
-      "zero_shot_statistics": [
-        [
-          0.2144450545310974,
-          "laptop computer"
-        ],
-        [
-          0.3107233941555023,
-          "notebook computer"
-        ],
-        [
-          0,
-          "rifle"
-        ],
-        [
-          0,
-          "toaster"
-        ],
-        [
-          0,
-          "iPod"
-        ],
-        [
-          0,
-          "pizza"
-        ],
-        [
-          0.3386717438697815,
-          "coffee mug"
-        ],
-        [
-          0,
-          "website"
-        ],
-        [
-          0.0019259483087807894,
-          "plant pot"
-        ],
-        [
-          0.007867950946092606,
-          "hand-held computer"
-        ]
-      ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-laptop-mug.png"
     },
     "pizza": {
       "linear_probe_statistics": [
@@ -1123,12 +949,12 @@
           "website"
         ],
         [
-          0,
-          "plant pot"
-        ],
-        [
           0.00544666638597846,
           "hand-held computer"
+        ],
+        [
+          0.006031532771885395,
+          "desktop computer"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-laptop-pizza.png"
@@ -1210,12 +1036,12 @@
           "website"
         ],
         [
-          0,
-          "plant pot"
-        ],
-        [
           0.0010894866427406669,
           "hand-held computer"
+        ],
+        [
+          0.001071585575118661,
+          "desktop computer"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-laptop-rifle.png"
@@ -1297,12 +1123,12 @@
           "website"
         ],
         [
-          0,
-          "plant pot"
-        ],
-        [
           0.0006225141114555299,
           "hand-held computer"
+        ],
+        [
+          0.005217359401285648,
+          "desktop computer"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-laptop-toaster.png"
@@ -1384,12 +1210,12 @@
           "website"
         ],
         [
-          0,
-          "plant pot"
-        ],
-        [
           0.019991185516119003,
           "hand-held computer"
+        ],
+        [
+          0.017662765458226204,
+          "desktop computer"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-laptop-website.png"
@@ -1428,15 +1254,15 @@
         ],
         [
           0,
-          "plant pot"
-        ],
-        [
-          0,
           "salt shaker"
         ],
         [
-          0.0020000000949949026,
-          "water jug"
+          0,
+          "crossword"
+        ],
+        [
+          0,
+          "plant pot"
         ]
       ],
       "zero_shot_statistics": [
@@ -1461,10 +1287,6 @@
           "library"
         ],
         [
-          0.000953789334744215,
-          "plant pot"
-        ],
-        [
           0,
           "website"
         ],
@@ -1479,6 +1301,10 @@
         [
           0.014307706616818905,
           "measuring cup"
+        ],
+        [
+          0.047739092260599136,
+          "espresso"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-mug-blank.png"
@@ -1514,16 +1340,16 @@
           "measuring cup"
         ],
         [
-          0.0020000000949949026,
-          "plant pot"
-        ],
-        [
           0.0010000000474974513,
           "salt shaker"
         ],
         [
+          0.0010000000474974513,
+          "crossword"
+        ],
+        [
           0.0020000000949949026,
-          "water jug"
+          "plant pot"
         ]
       ],
       "zero_shot_statistics": [
@@ -1548,10 +1374,6 @@
           "library"
         ],
         [
-          0.002180013107135892,
-          "plant pot"
-        ],
-        [
           0,
           "website"
         ],
@@ -1566,6 +1388,10 @@
         [
           0.00038264639442786574,
           "measuring cup"
+        ],
+        [
+          0.00011516288941493258,
+          "espresso"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-mug-ipod.png"
@@ -1601,16 +1427,16 @@
           "measuring cup"
         ],
         [
-          0.008999999612569809,
-          "plant pot"
-        ],
-        [
           0.014000000432133675,
           "salt shaker"
         ],
         [
-          0,
-          "water jug"
+          0.012000000104308128,
+          "crossword"
+        ],
+        [
+          0.008999999612569809,
+          "plant pot"
         ]
       ],
       "zero_shot_statistics": [
@@ -1635,10 +1461,6 @@
           "library"
         ],
         [
-          0.015913231298327446,
-          "plant pot"
-        ],
-        [
           0,
           "website"
         ],
@@ -1653,96 +1475,13 @@
         [
           0.013055708259344101,
           "measuring cup"
+        ],
+        [
+          0.0006292382604442537,
+          "espresso"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-mug-library.png"
-    },
-    "mug": {
-      "linear_probe_statistics": [
-        [
-          0.8410000205039978,
-          "coffee mug"
-        ],
-        [
-          0.10899999737739563,
-          "tea cup"
-        ],
-        [
-          0.00800000037997961,
-          "bucket"
-        ],
-        [
-          0.012000000104308128,
-          "drink pitcher"
-        ],
-        [
-          0.0010000000474974513,
-          "waste container"
-        ],
-        [
-          0.004999999888241291,
-          "teapot"
-        ],
-        [
-          0.003000000026077032,
-          "measuring cup"
-        ],
-        [
-          0.0010000000474974513,
-          "plant pot"
-        ],
-        [
-          0,
-          "salt shaker"
-        ],
-        [
-          0.0020000000949949026,
-          "water jug"
-        ]
-      ],
-      "zero_shot_statistics": [
-        [
-          0.9623816013336182,
-          "coffee mug"
-        ],
-        [
-          0,
-          "iPod"
-        ],
-        [
-          0,
-          "rifle"
-        ],
-        [
-          0,
-          "toaster"
-        ],
-        [
-          0,
-          "library"
-        ],
-        [
-          0.0007690521306358278,
-          "plant pot"
-        ],
-        [
-          0,
-          "website"
-        ],
-        [
-          0.020745495334267616,
-          "tea cup"
-        ],
-        [
-          0,
-          "pizza"
-        ],
-        [
-          0.005458956118673086,
-          "measuring cup"
-        ]
-      ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-mug-mug.png"
     },
     "pizza": {
       "linear_probe_statistics": [
@@ -1775,16 +1514,16 @@
           "measuring cup"
         ],
         [
-          0.0010000000474974513,
-          "plant pot"
-        ],
-        [
           0,
           "salt shaker"
         ],
         [
+          0,
+          "crossword"
+        ],
+        [
           0.0010000000474974513,
-          "water jug"
+          "plant pot"
         ]
       ],
       "zero_shot_statistics": [
@@ -1809,10 +1548,6 @@
           "library"
         ],
         [
-          0.0015590786933898926,
-          "plant pot"
-        ],
-        [
           0,
           "website"
         ],
@@ -1827,6 +1562,10 @@
         [
           0.035672713071107864,
           "measuring cup"
+        ],
+        [
+          0.0024339938536286354,
+          "espresso"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-mug-pizza.png"
@@ -1863,15 +1602,15 @@
         ],
         [
           0.0010000000474974513,
-          "plant pot"
-        ],
-        [
-          0.0010000000474974513,
           "salt shaker"
         ],
         [
-          0.0020000000949949026,
-          "water jug"
+          0.0010000000474974513,
+          "crossword"
+        ],
+        [
+          0.0010000000474974513,
+          "plant pot"
         ]
       ],
       "zero_shot_statistics": [
@@ -1896,10 +1635,6 @@
           "library"
         ],
         [
-          4.063707456225529e-05,
-          "plant pot"
-        ],
-        [
           0,
           "website"
         ],
@@ -1914,6 +1649,10 @@
         [
           0.0007966440171003342,
           "measuring cup"
+        ],
+        [
+          9.068537474377081e-05,
+          "espresso"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-mug-rifle.png"
@@ -1949,16 +1688,16 @@
           "measuring cup"
         ],
         [
-          0.0010000000474974513,
-          "plant pot"
-        ],
-        [
           0.0020000000949949026,
           "salt shaker"
         ],
         [
-          0.0020000000949949026,
-          "water jug"
+          0.0010000000474974513,
+          "crossword"
+        ],
+        [
+          0.0010000000474974513,
+          "plant pot"
         ]
       ],
       "zero_shot_statistics": [
@@ -1983,10 +1722,6 @@
           "library"
         ],
         [
-          0.00010906458919635043,
-          "plant pot"
-        ],
-        [
           0,
           "website"
         ],
@@ -2001,6 +1736,10 @@
         [
           0.004538055043667555,
           "measuring cup"
+        ],
+        [
+          0.00020257449068594724,
+          "espresso"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-mug-toaster.png"
@@ -2036,16 +1775,16 @@
           "measuring cup"
         ],
         [
-          0.0010000000474974513,
-          "plant pot"
-        ],
-        [
           0.0020000000949949026,
           "salt shaker"
         ],
         [
           0.0010000000474974513,
-          "water jug"
+          "crossword"
+        ],
+        [
+          0.0010000000474974513,
+          "plant pot"
         ]
       ],
       "zero_shot_statistics": [
@@ -2070,10 +1809,6 @@
           "library"
         ],
         [
-          0,
-          "plant pot"
-        ],
-        [
           0.4267258048057556,
           "website"
         ],
@@ -2088,6 +1823,10 @@
         [
           0.003782871412113309,
           "measuring cup"
+        ],
+        [
+          0.007480897940695286,
+          "espresso"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-mug-website.png"
@@ -2156,10 +1895,6 @@
         ],
         [
           0,
-          "plant pot"
-        ],
-        [
-          0,
           "coffee mug"
         ],
         [
@@ -2167,16 +1902,20 @@
           "iPod"
         ],
         [
-          0.0007596607320010662,
-          "modem"
-        ],
-        [
           0,
           "library"
         ],
         [
+          0.0007596607320010662,
+          "modem"
+        ],
+        [
           0.0016119361389428377,
           "mobile phone"
+        ],
+        [
+          0.00038430679705925286,
+          "desk"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-phone-blank.png"
@@ -2243,10 +1982,6 @@
         ],
         [
           0,
-          "plant pot"
-        ],
-        [
-          0,
           "coffee mug"
         ],
         [
@@ -2254,16 +1989,20 @@
           "iPod"
         ],
         [
-          0.02945687063038349,
-          "modem"
-        ],
-        [
           0,
           "library"
         ],
         [
+          0.02945687063038349,
+          "modem"
+        ],
+        [
           0.043957967311143875,
           "mobile phone"
+        ],
+        [
+          0.0045433491468429565,
+          "desk"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-phone-ipod.png"
@@ -2330,117 +2069,30 @@
         ],
         [
           0,
-          "plant pot"
-        ],
-        [
-          0,
           "coffee mug"
         ],
         [
           0,
           "iPod"
-        ],
-        [
-          0.010460237972438335,
-          "modem"
         ],
         [
           0.09677207469940186,
           "library"
         ],
         [
-          0.002295978134498,
-          "mobile phone"
-        ]
-      ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-phone-library.png"
-    },
-    "mug": {
-      "linear_probe_statistics": [
-        [
-          0.9729999899864197,
-          "rotary dial telephone"
-        ],
-        [
-          0.014000000432133675,
-          "payphone"
-        ],
-        [
-          0.0010000000474974513,
-          "mobile phone"
-        ],
-        [
-          0.0,
-          "zucchini"
-        ],
-        [
-          0.0,
-          "zebra"
-        ],
-        [
-          0.0,
-          "yurt"
-        ],
-        [
-          0.0,
-          "yellow lady's slipper"
-        ],
-        [
-          0.0,
-          "yellow garden spider"
-        ],
-        [
-          0.0,
-          "worm snake"
-        ],
-        [
-          0.0,
-          "wool"
-        ]
-      ],
-      "zero_shot_statistics": [
-        [
-          0.288442462682724,
-          "rotary dial telephone"
-        ],
-        [
-          0.0019469679100438952,
-          "toaster"
-        ],
-        [
-          0,
-          "rifle"
-        ],
-        [
-          0.10565280169248581,
-          "payphone"
-        ],
-        [
-          0.0035494016483426094,
-          "plant pot"
-        ],
-        [
-          0.31257620453834534,
-          "coffee mug"
-        ],
-        [
-          0,
-          "iPod"
-        ],
-        [
-          0.020593056455254555,
+          0.010460237972438335,
           "modem"
         ],
         [
-          0,
-          "library"
+          0.002295978134498,
+          "mobile phone"
         ],
         [
-          0.017147891223430634,
-          "mobile phone"
+          0.010149980895221233,
+          "desk"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-phone-mug.png"
+      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-phone-library.png"
     },
     "pizza": {
       "linear_probe_statistics": [
@@ -2504,10 +2156,6 @@
         ],
         [
           0,
-          "plant pot"
-        ],
-        [
-          0,
           "coffee mug"
         ],
         [
@@ -2515,16 +2163,20 @@
           "iPod"
         ],
         [
-          0.004251693841069937,
-          "modem"
-        ],
-        [
           0,
           "library"
         ],
         [
+          0.004251693841069937,
+          "modem"
+        ],
+        [
           0.0015439315466210246,
           "mobile phone"
+        ],
+        [
+          0.0005366139812394977,
+          "desk"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-phone-pizza.png"
@@ -2591,10 +2243,6 @@
         ],
         [
           0,
-          "plant pot"
-        ],
-        [
-          0,
           "coffee mug"
         ],
         [
@@ -2602,16 +2250,20 @@
           "iPod"
         ],
         [
-          0.0003720867389347404,
-          "modem"
-        ],
-        [
           0,
           "library"
         ],
         [
+          0.0003720867389347404,
+          "modem"
+        ],
+        [
           0.0008941300329752266,
           "mobile phone"
+        ],
+        [
+          0.0002631202805787325,
+          "desk"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-phone-rifle.png"
@@ -2678,10 +2330,6 @@
         ],
         [
           0,
-          "plant pot"
-        ],
-        [
-          0,
           "coffee mug"
         ],
         [
@@ -2689,16 +2337,20 @@
           "iPod"
         ],
         [
-          0.0007575692143291235,
-          "modem"
-        ],
-        [
           0,
           "library"
         ],
         [
+          0.0007575692143291235,
+          "modem"
+        ],
+        [
           2.17990545934299e-05,
           "mobile phone"
+        ],
+        [
+          9.770366887096316e-05,
+          "desk"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-phone-toaster.png"
@@ -2765,10 +2417,6 @@
         ],
         [
           0,
-          "plant pot"
-        ],
-        [
-          0,
           "coffee mug"
         ],
         [
@@ -2776,16 +2424,20 @@
           "iPod"
         ],
         [
-          0.030005458742380142,
-          "modem"
-        ],
-        [
           0,
           "library"
         ],
         [
+          0.030005458742380142,
+          "modem"
+        ],
+        [
           0.00891729537397623,
           "mobile phone"
+        ],
+        [
+          0.028699534013867378,
+          "desk"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-phone-website.png"
@@ -2815,16 +2467,8 @@
           "daisy"
         ],
         [
-          0.0,
-          "waste container"
-        ],
-        [
           0,
           "ear of corn"
-        ],
-        [
-          0,
-          "broccoli"
         ],
         [
           0,
@@ -2832,7 +2476,15 @@
         ],
         [
           0,
+          "broccoli"
+        ],
+        [
+          0,
           "mortar"
+        ],
+        [
+          0,
+          "cucumber"
         ]
       ],
       "zero_shot_statistics": [
@@ -2865,12 +2517,12 @@
           "patio"
         ],
         [
-          0.031912002712488174,
-          "vase"
-        ],
-        [
           0.07057847827672958,
           "common sorrel"
+        ],
+        [
+          0.031912002712488174,
+          "vase"
         ],
         [
           0.02913067676126957,
@@ -2902,16 +2554,8 @@
           "daisy"
         ],
         [
-          0.0,
-          "waste container"
-        ],
-        [
           0.0010000000474974513,
           "ear of corn"
-        ],
-        [
-          0,
-          "broccoli"
         ],
         [
           0,
@@ -2919,7 +2563,15 @@
         ],
         [
           0,
+          "broccoli"
+        ],
+        [
+          0,
           "mortar"
+        ],
+        [
+          0,
+          "cucumber"
         ]
       ],
       "zero_shot_statistics": [
@@ -2952,12 +2604,12 @@
           "patio"
         ],
         [
-          0.0003687584539875388,
-          "vase"
-        ],
-        [
           0.0020235541742295027,
           "common sorrel"
+        ],
+        [
+          0.0003687584539875388,
+          "vase"
         ],
         [
           0.00021440185082610697,
@@ -2989,24 +2641,24 @@
           "daisy"
         ],
         [
-          0.0,
-          "waste container"
-        ],
-        [
           0,
           "ear of corn"
-        ],
-        [
-          0.0010000000474974513,
-          "broccoli"
         ],
         [
           0.0010000000474974513,
           "doormat"
         ],
         [
+          0.0010000000474974513,
+          "broccoli"
+        ],
+        [
           0,
           "mortar"
+        ],
+        [
+          0,
+          "cucumber"
         ]
       ],
       "zero_shot_statistics": [
@@ -3039,12 +2691,12 @@
           "patio"
         ],
         [
-          0.0053684767335653305,
-          "vase"
-        ],
-        [
           0.010824080556631088,
           "common sorrel"
+        ],
+        [
+          0.0053684767335653305,
+          "vase"
         ],
         [
           0.011907579377293587,
@@ -3052,93 +2704,6 @@
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-plant-library.png"
-    },
-    "mug": {
-      "linear_probe_statistics": [
-        [
-          0.9800000190734863,
-          "plant pot"
-        ],
-        [
-          0.003000000026077032,
-          "vase"
-        ],
-        [
-          0.0010000000474974513,
-          "bucket"
-        ],
-        [
-          0.0010000000474974513,
-          "wheelbarrow"
-        ],
-        [
-          0.0010000000474974513,
-          "daisy"
-        ],
-        [
-          0.0,
-          "waste container"
-        ],
-        [
-          0.0010000000474974513,
-          "ear of corn"
-        ],
-        [
-          0,
-          "broccoli"
-        ],
-        [
-          0,
-          "doormat"
-        ],
-        [
-          0.0010000000474974513,
-          "mortar"
-        ]
-      ],
-      "zero_shot_statistics": [
-        [
-          0.8423543572425842,
-          "plant pot"
-        ],
-        [
-          0,
-          "rifle"
-        ],
-        [
-          0,
-          "iPod"
-        ],
-        [
-          0,
-          "toaster"
-        ],
-        [
-          0,
-          "pizza"
-        ],
-        [
-          0,
-          "library"
-        ],
-        [
-          0.0025389285292476416,
-          "patio"
-        ],
-        [
-          0.002134284470230341,
-          "vase"
-        ],
-        [
-          0.0020518952514976263,
-          "common sorrel"
-        ],
-        [
-          0.0015475582331418991,
-          "sandal"
-        ]
-      ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-plant-mug.png"
     },
     "pizza": {
       "linear_probe_statistics": [
@@ -3163,12 +2728,12 @@
           "daisy"
         ],
         [
-          0.0010000000474974513,
-          "waste container"
-        ],
-        [
           0.0020000000949949026,
           "ear of corn"
+        ],
+        [
+          0.0010000000474974513,
+          "doormat"
         ],
         [
           0.0020000000949949026,
@@ -3176,11 +2741,11 @@
         ],
         [
           0.0010000000474974513,
-          "doormat"
+          "mortar"
         ],
         [
-          0.0010000000474974513,
-          "mortar"
+          0.0020000000949949026,
+          "cucumber"
         ]
       ],
       "zero_shot_statistics": [
@@ -3213,12 +2778,12 @@
           "patio"
         ],
         [
-          0.0030637113377451897,
-          "vase"
-        ],
-        [
           0.0012079685693606734,
           "common sorrel"
+        ],
+        [
+          0.0030637113377451897,
+          "vase"
         ],
         [
           0.02145574241876602,
@@ -3251,15 +2816,7 @@
         ],
         [
           0.0010000000474974513,
-          "waste container"
-        ],
-        [
-          0.0010000000474974513,
           "ear of corn"
-        ],
-        [
-          0.0010000000474974513,
-          "broccoli"
         ],
         [
           0.0010000000474974513,
@@ -3267,7 +2824,15 @@
         ],
         [
           0.0010000000474974513,
+          "broccoli"
+        ],
+        [
+          0.0010000000474974513,
           "mortar"
+        ],
+        [
+          0.0010000000474974513,
+          "cucumber"
         ]
       ],
       "zero_shot_statistics": [
@@ -3300,12 +2865,12 @@
           "patio"
         ],
         [
-          0.0002334807359147817,
-          "vase"
-        ],
-        [
           0.00019061085185967386,
           "common sorrel"
+        ],
+        [
+          0.0002334807359147817,
+          "vase"
         ],
         [
           0.0006227209232747555,
@@ -3338,15 +2903,7 @@
         ],
         [
           0.0010000000474974513,
-          "waste container"
-        ],
-        [
-          0.0010000000474974513,
           "ear of corn"
-        ],
-        [
-          0.0010000000474974513,
-          "broccoli"
         ],
         [
           0.0010000000474974513,
@@ -3354,7 +2911,15 @@
         ],
         [
           0.0010000000474974513,
+          "broccoli"
+        ],
+        [
+          0.0010000000474974513,
           "mortar"
+        ],
+        [
+          0.0010000000474974513,
+          "cucumber"
         ]
       ],
       "zero_shot_statistics": [
@@ -3387,12 +2952,12 @@
           "patio"
         ],
         [
-          0.0021088432986289263,
-          "vase"
-        ],
-        [
           0.00040329742478206754,
           "common sorrel"
+        ],
+        [
+          0.0021088432986289263,
+          "vase"
         ],
         [
           0.00285337888635695,
@@ -3424,16 +2989,8 @@
           "daisy"
         ],
         [
-          0.0,
-          "waste container"
-        ],
-        [
           0,
           "ear of corn"
-        ],
-        [
-          0,
-          "broccoli"
         ],
         [
           0.0010000000474974513,
@@ -3441,7 +2998,15 @@
         ],
         [
           0,
+          "broccoli"
+        ],
+        [
+          0,
           "mortar"
+        ],
+        [
+          0,
+          "cucumber"
         ]
       ],
       "zero_shot_statistics": [
@@ -3474,12 +3039,12 @@
           "patio"
         ],
         [
-          0.03377821668982506,
-          "vase"
-        ],
-        [
           0.015115488320589066,
           "common sorrel"
+        ],
+        [
+          0.03377821668982506,
+          "vase"
         ],
         [
           0.006393930874764919,
@@ -3497,10 +3062,6 @@
           "toaster"
         ],
         [
-          0.0010000000474974513,
-          "waste container"
-        ],
-        [
           0.004999999888241291,
           "Crock Pot"
         ],
@@ -3513,6 +3074,10 @@
           "space heater"
         ],
         [
+          0.0010000000474974513,
+          "waste container"
+        ],
+        [
           0.004000000189989805,
           "stove"
         ],
@@ -3521,12 +3086,12 @@
           "printer"
         ],
         [
-          0.0010000000474974513,
-          "CRT screen"
-        ],
-        [
           0.0020000000949949026,
           "rotisserie"
+        ],
+        [
+          0.0010000000474974513,
+          "CRT screen"
         ],
         [
           0.0020000000949949026,
@@ -3537,10 +3102,6 @@
         [
           0.4666540026664734,
           "toaster"
-        ],
-        [
-          0,
-          "plant pot"
         ],
         [
           0,
@@ -3555,24 +3116,28 @@
           "desktop computer"
         ],
         [
-          0.010752450674772263,
-          "Crock Pot"
-        ],
-        [
           0.20089688897132874,
           "space heater"
+        ],
+        [
+          0.010752450674772263,
+          "Crock Pot"
         ],
         [
           0.021448014304041862,
           "microwave oven"
         ],
         [
-          0.003978107124567032,
-          "switch"
-        ],
-        [
           0.005385695956647396,
           "dough"
+        ],
+        [
+          0.048878785222768784,
+          "waffle iron"
+        ],
+        [
+          0.008314525708556175,
+          "printer"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-toaster-blank.png"
@@ -3582,10 +3147,6 @@
         [
           0.8539999723434448,
           "toaster"
-        ],
-        [
-          0.0020000000949949026,
-          "waste container"
         ],
         [
           0.02199999988079071,
@@ -3600,6 +3161,10 @@
           "space heater"
         ],
         [
+          0.0020000000949949026,
+          "waste container"
+        ],
+        [
           0.007000000216066837,
           "stove"
         ],
@@ -3608,12 +3173,12 @@
           "printer"
         ],
         [
-          0.006000000052154064,
-          "CRT screen"
-        ],
-        [
           0.004999999888241291,
           "rotisserie"
+        ],
+        [
+          0.006000000052154064,
+          "CRT screen"
         ],
         [
           0.0020000000949949026,
@@ -3624,10 +3189,6 @@
         [
           0.03340525180101395,
           "toaster"
-        ],
-        [
-          0.0005662014591507614,
-          "plant pot"
         ],
         [
           0.8126547336578369,
@@ -3642,24 +3203,28 @@
           "desktop computer"
         ],
         [
-          0.008281922899186611,
-          "Crock Pot"
-        ],
-        [
           0.02179807983338833,
           "space heater"
+        ],
+        [
+          0.008281922899186611,
+          "Crock Pot"
         ],
         [
           0.002284661866724491,
           "microwave oven"
         ],
         [
-          0.003990677651017904,
-          "switch"
-        ],
-        [
           0.001271858112886548,
           "dough"
+        ],
+        [
+          0.0012012163642793894,
+          "waffle iron"
+        ],
+        [
+          0.014954235404729843,
+          "printer"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-toaster-ipod.png"
@@ -3669,10 +3234,6 @@
         [
           0.7710000276565552,
           "toaster"
-        ],
-        [
-          0.01600000075995922,
-          "waste container"
         ],
         [
           0.026000000536441803,
@@ -3687,6 +3248,10 @@
           "space heater"
         ],
         [
+          0.01600000075995922,
+          "waste container"
+        ],
+        [
           0.009999999776482582,
           "stove"
         ],
@@ -3696,11 +3261,11 @@
         ],
         [
           0.007000000216066837,
-          "CRT screen"
+          "rotisserie"
         ],
         [
           0.007000000216066837,
-          "rotisserie"
+          "CRT screen"
         ],
         [
           0.004000000189989805,
@@ -3711,10 +3276,6 @@
         [
           0.16141405701637268,
           "toaster"
-        ],
-        [
-          0.0015658981865271926,
-          "plant pot"
         ],
         [
           0,
@@ -3729,124 +3290,37 @@
           "desktop computer"
         ],
         [
-          0.034224435687065125,
-          "Crock Pot"
-        ],
-        [
           0.04594714194536209,
           "space heater"
+        ],
+        [
+          0.034224435687065125,
+          "Crock Pot"
         ],
         [
           0.010389517061412334,
           "microwave oven"
         ],
         [
-          0.03786984831094742,
-          "switch"
-        ],
-        [
           0.003948172554373741,
           "dough"
-        ]
-      ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-toaster-library.png"
-    },
-    "mug": {
-      "linear_probe_statistics": [
-        [
-          0.8519999980926514,
-          "toaster"
         ],
         [
-          0.01600000075995922,
-          "waste container"
-        ],
-        [
-          0.023000000044703484,
-          "Crock Pot"
-        ],
-        [
-          0.014999999664723873,
+          0.011038340628147125,
           "waffle iron"
         ],
         [
-          0.014000000432133675,
-          "space heater"
-        ],
-        [
-          0.00800000037997961,
-          "stove"
-        ],
-        [
-          0.004000000189989805,
+          0.07473279535770416,
           "printer"
-        ],
-        [
-          0.003000000026077032,
-          "CRT screen"
-        ],
-        [
-          0.006000000052154064,
-          "rotisserie"
-        ],
-        [
-          0.003000000026077032,
-          "gas pump"
         ]
       ],
-      "zero_shot_statistics": [
-        [
-          0.06716908514499664,
-          "toaster"
-        ],
-        [
-          0.021054252982139587,
-          "plant pot"
-        ],
-        [
-          0,
-          "iPod"
-        ],
-        [
-          0,
-          "rifle"
-        ],
-        [
-          0.03510181978344917,
-          "desktop computer"
-        ],
-        [
-          0.20987468957901,
-          "Crock Pot"
-        ],
-        [
-          0.02895791083574295,
-          "space heater"
-        ],
-        [
-          0.12623785436153412,
-          "microwave oven"
-        ],
-        [
-          0.00356127112172544,
-          "switch"
-        ],
-        [
-          0.0019203483825549483,
-          "dough"
-        ]
-      ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-toaster-mug.png"
+      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-toaster-library.png"
     },
     "pizza": {
       "linear_probe_statistics": [
         [
           0.871999979019165,
           "toaster"
-        ],
-        [
-          0.017999999225139618,
-          "waste container"
         ],
         [
           0.017000000923871994,
@@ -3861,6 +3335,10 @@
           "space heater"
         ],
         [
+          0.017999999225139618,
+          "waste container"
+        ],
+        [
           0.006000000052154064,
           "stove"
         ],
@@ -3869,12 +3347,12 @@
           "printer"
         ],
         [
-          0.0010000000474974513,
-          "CRT screen"
-        ],
-        [
           0.006000000052154064,
           "rotisserie"
+        ],
+        [
+          0.0010000000474974513,
+          "CRT screen"
         ],
         [
           0.0020000000949949026,
@@ -3885,10 +3363,6 @@
         [
           0.10922683030366898,
           "toaster"
-        ],
-        [
-          0,
-          "plant pot"
         ],
         [
           0,
@@ -3903,24 +3377,28 @@
           "desktop computer"
         ],
         [
-          0.03830494359135628,
-          "Crock Pot"
-        ],
-        [
           0.05638861283659935,
           "space heater"
+        ],
+        [
+          0.03830494359135628,
+          "Crock Pot"
         ],
         [
           0.097955122590065,
           "microwave oven"
         ],
         [
-          0.004821662325412035,
-          "switch"
-        ],
-        [
           0.1840754896402359,
           "dough"
+        ],
+        [
+          0.07350142300128937,
+          "waffle iron"
+        ],
+        [
+          0.007100177463144064,
+          "printer"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-toaster-pizza.png"
@@ -3930,10 +3408,6 @@
         [
           0.7950000166893005,
           "toaster"
-        ],
-        [
-          0.008999999612569809,
-          "waste container"
         ],
         [
           0.01899999938905239,
@@ -3948,6 +3422,10 @@
           "space heater"
         ],
         [
+          0.008999999612569809,
+          "waste container"
+        ],
+        [
           0.010999999940395355,
           "stove"
         ],
@@ -3956,12 +3434,12 @@
           "printer"
         ],
         [
-          0.004999999888241291,
-          "CRT screen"
-        ],
-        [
           0.00800000037997961,
           "rotisserie"
+        ],
+        [
+          0.004999999888241291,
+          "CRT screen"
         ],
         [
           0.00800000037997961,
@@ -3972,10 +3450,6 @@
         [
           0.007990576326847076,
           "toaster"
-        ],
-        [
-          0,
-          "plant pot"
         ],
         [
           0,
@@ -3990,24 +3464,28 @@
           "desktop computer"
         ],
         [
-          0.005555238574743271,
-          "Crock Pot"
-        ],
-        [
           0.0018509667133912444,
           "space heater"
+        ],
+        [
+          0.005555238574743271,
+          "Crock Pot"
         ],
         [
           0.0039522890001535416,
           "microwave oven"
         ],
         [
-          0.0006689885631203651,
-          "switch"
-        ],
-        [
           0,
           "dough"
+        ],
+        [
+          0.0068335034884512424,
+          "waffle iron"
+        ],
+        [
+          0.02745264582335949,
+          "printer"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-toaster-rifle.png"
@@ -4017,10 +3495,6 @@
         [
           0.9459999799728394,
           "toaster"
-        ],
-        [
-          0.004000000189989805,
-          "waste container"
         ],
         [
           0.008999999612569809,
@@ -4035,6 +3509,10 @@
           "space heater"
         ],
         [
+          0.004000000189989805,
+          "waste container"
+        ],
+        [
           0.003000000026077032,
           "stove"
         ],
@@ -4043,12 +3521,12 @@
           "printer"
         ],
         [
-          0.0010000000474974513,
-          "CRT screen"
-        ],
-        [
           0.003000000026077032,
           "rotisserie"
+        ],
+        [
+          0.0010000000474974513,
+          "CRT screen"
         ],
         [
           0.0010000000474974513,
@@ -4059,10 +3537,6 @@
         [
           0.9943785071372986,
           "toaster"
-        ],
-        [
-          0,
-          "plant pot"
         ],
         [
           0,
@@ -4077,24 +3551,28 @@
           "desktop computer"
         ],
         [
-          0.00029195594834163785,
-          "Crock Pot"
-        ],
-        [
           0.0005108938785269856,
           "space heater"
+        ],
+        [
+          0.00029195594834163785,
+          "Crock Pot"
         ],
         [
           0.00045626561040990055,
           "microwave oven"
         ],
         [
-          6.0942431446164846e-05,
-          "switch"
-        ],
-        [
           8.009662269614637e-05,
           "dough"
+        ],
+        [
+          0.00046768112224526703,
+          "waffle iron"
+        ],
+        [
+          0.0002569170610513538,
+          "printer"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-toaster-toaster.png"
@@ -4104,10 +3582,6 @@
         [
           0.7429999709129333,
           "toaster"
-        ],
-        [
-          0.019999999552965164,
-          "waste container"
         ],
         [
           0.01600000075995922,
@@ -4122,6 +3596,10 @@
           "space heater"
         ],
         [
+          0.019999999552965164,
+          "waste container"
+        ],
+        [
           0.020999999716877937,
           "stove"
         ],
@@ -4130,12 +3608,12 @@
           "printer"
         ],
         [
-          0.017000000923871994,
-          "CRT screen"
-        ],
-        [
           0.004999999888241291,
           "rotisserie"
+        ],
+        [
+          0.017000000923871994,
+          "CRT screen"
         ],
         [
           0.009999999776482582,
@@ -4146,10 +3624,6 @@
         [
           0.021455883979797363,
           "toaster"
-        ],
-        [
-          0,
-          "plant pot"
         ],
         [
           0,
@@ -4164,725 +3638,31 @@
           "desktop computer"
         ],
         [
-          0.029127594083547592,
-          "Crock Pot"
-        ],
-        [
           0.015166868455708027,
           "space heater"
+        ],
+        [
+          0.029127594083547592,
+          "Crock Pot"
         ],
         [
           0.01886899210512638,
           "microwave oven"
         ],
         [
-          0.005974516738206148,
-          "switch"
-        ],
-        [
           0.0028421597089618444,
           "dough"
+        ],
+        [
+          0.02810077928006649,
+          "waffle iron"
+        ],
+        [
+          0.016085905954241753,
+          "printer"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-toaster-website.png"
-    }
-  },
-  "trash": {
-    "blank": {
-      "linear_probe_statistics": [
-        [
-          0.2070000022649765,
-          "waste container"
-        ],
-        [
-          0.3310000002384186,
-          "bucket"
-        ],
-        [
-          0.006000000052154064,
-          "carton"
-        ],
-        [
-          0.14100000262260437,
-          "paper towel"
-        ],
-        [
-          0.027000000700354576,
-          "hamper"
-        ],
-        [
-          0,
-          "packet"
-        ],
-        [
-          0.012000000104308128,
-          "toilet paper"
-        ],
-        [
-          0.0020000000949949026,
-          "mousetrap"
-        ],
-        [
-          0,
-          "ring binder"
-        ],
-        [
-          0.0020000000949949026,
-          "doormat"
-        ]
-      ],
-      "zero_shot_statistics": [
-        [
-          0.07130841910839081,
-          "waste container"
-        ],
-        [
-          0.24953541159629822,
-          "plant pot"
-        ],
-        [
-          0,
-          "toaster"
-        ],
-        [
-          0,
-          "rifle"
-        ],
-        [
-          0,
-          "iPod"
-        ],
-        [
-          0,
-          "pizza"
-        ],
-        [
-          0,
-          "library"
-        ],
-        [
-          0.33713680505752563,
-          "bucket"
-        ],
-        [
-          0.0008463909616693854,
-          "coffee mug"
-        ],
-        [
-          0,
-          "website"
-        ]
-      ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-trash-blank.png"
-    },
-    "ipod": {
-      "linear_probe_statistics": [
-        [
-          0.17599999904632568,
-          "waste container"
-        ],
-        [
-          0.10400000214576721,
-          "bucket"
-        ],
-        [
-          0.061000000685453415,
-          "carton"
-        ],
-        [
-          0.05900000035762787,
-          "paper towel"
-        ],
-        [
-          0.04100000113248825,
-          "hamper"
-        ],
-        [
-          0.014999999664723873,
-          "packet"
-        ],
-        [
-          0.029999999329447746,
-          "toilet paper"
-        ],
-        [
-          0.01600000075995922,
-          "mousetrap"
-        ],
-        [
-          0.007000000216066837,
-          "ring binder"
-        ],
-        [
-          0.008999999612569809,
-          "doormat"
-        ]
-      ],
-      "zero_shot_statistics": [
-        [
-          0.0004686968168243766,
-          "waste container"
-        ],
-        [
-          0.008431600406765938,
-          "plant pot"
-        ],
-        [
-          0.0002490331535227597,
-          "toaster"
-        ],
-        [
-          0,
-          "rifle"
-        ],
-        [
-          0.9510374665260315,
-          "iPod"
-        ],
-        [
-          0,
-          "pizza"
-        ],
-        [
-          0,
-          "library"
-        ],
-        [
-          0.01179815549403429,
-          "bucket"
-        ],
-        [
-          0.00029892133898101747,
-          "coffee mug"
-        ],
-        [
-          0,
-          "website"
-        ]
-      ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-trash-ipod.png"
-    },
-    "library": {
-      "linear_probe_statistics": [
-        [
-          0.26899999380111694,
-          "waste container"
-        ],
-        [
-          0.061000000685453415,
-          "bucket"
-        ],
-        [
-          0.04500000178813934,
-          "carton"
-        ],
-        [
-          0.032999999821186066,
-          "paper towel"
-        ],
-        [
-          0.019999999552965164,
-          "hamper"
-        ],
-        [
-          0.014000000432133675,
-          "packet"
-        ],
-        [
-          0.013000000268220901,
-          "toilet paper"
-        ],
-        [
-          0.009999999776482582,
-          "mousetrap"
-        ],
-        [
-          0.029999999329447746,
-          "ring binder"
-        ],
-        [
-          0.012000000104308128,
-          "doormat"
-        ]
-      ],
-      "zero_shot_statistics": [
-        [
-          0.013368470594286919,
-          "waste container"
-        ],
-        [
-          0.017333973199129105,
-          "plant pot"
-        ],
-        [
-          0,
-          "toaster"
-        ],
-        [
-          0,
-          "rifle"
-        ],
-        [
-          0,
-          "iPod"
-        ],
-        [
-          0,
-          "pizza"
-        ],
-        [
-          0.759597897529602,
-          "library"
-        ],
-        [
-          0.050931449979543686,
-          "bucket"
-        ],
-        [
-          0.001510920817963779,
-          "coffee mug"
-        ],
-        [
-          0,
-          "website"
-        ]
-      ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-trash-library.png"
-    },
-    "mug": {
-      "linear_probe_statistics": [
-        [
-          0.3190000057220459,
-          "waste container"
-        ],
-        [
-          0.09799999743700027,
-          "bucket"
-        ],
-        [
-          0.052000001072883606,
-          "carton"
-        ],
-        [
-          0.061000000685453415,
-          "paper towel"
-        ],
-        [
-          0.028999999165534973,
-          "hamper"
-        ],
-        [
-          0.012000000104308128,
-          "packet"
-        ],
-        [
-          0.023000000044703484,
-          "toilet paper"
-        ],
-        [
-          0.010999999940395355,
-          "mousetrap"
-        ],
-        [
-          0.004999999888241291,
-          "ring binder"
-        ],
-        [
-          0.013000000268220901,
-          "doormat"
-        ]
-      ],
-      "zero_shot_statistics": [
-        [
-          0.004794917069375515,
-          "waste container"
-        ],
-        [
-          0.09107283502817154,
-          "plant pot"
-        ],
-        [
-          0.00016225682338699698,
-          "toaster"
-        ],
-        [
-          0,
-          "rifle"
-        ],
-        [
-          0,
-          "iPod"
-        ],
-        [
-          0,
-          "pizza"
-        ],
-        [
-          0,
-          "library"
-        ],
-        [
-          0.20542067289352417,
-          "bucket"
-        ],
-        [
-          0.5207301378250122,
-          "coffee mug"
-        ],
-        [
-          0,
-          "website"
-        ]
-      ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-trash-mug.png"
-    },
-    "pizza": {
-      "linear_probe_statistics": [
-        [
-          0.19300000369548798,
-          "waste container"
-        ],
-        [
-          0.06300000101327896,
-          "bucket"
-        ],
-        [
-          0.15600000321865082,
-          "carton"
-        ],
-        [
-          0.06700000166893005,
-          "paper towel"
-        ],
-        [
-          0.035999998450279236,
-          "hamper"
-        ],
-        [
-          0.02800000086426735,
-          "packet"
-        ],
-        [
-          0.01600000075995922,
-          "toilet paper"
-        ],
-        [
-          0.012000000104308128,
-          "mousetrap"
-        ],
-        [
-          0.00800000037997961,
-          "ring binder"
-        ],
-        [
-          0.014999999664723873,
-          "doormat"
-        ]
-      ],
-      "zero_shot_statistics": [
-        [
-          0.0034600524231791496,
-          "waste container"
-        ],
-        [
-          0.0017023886321112514,
-          "plant pot"
-        ],
-        [
-          0.0007618172094225883,
-          "toaster"
-        ],
-        [
-          0,
-          "rifle"
-        ],
-        [
-          0,
-          "iPod"
-        ],
-        [
-          0.7900593280792236,
-          "pizza"
-        ],
-        [
-          0,
-          "library"
-        ],
-        [
-          0.003496594028547406,
-          "bucket"
-        ],
-        [
-          0,
-          "coffee mug"
-        ],
-        [
-          0,
-          "website"
-        ]
-      ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-trash-pizza.png"
-    },
-    "rifle": {
-      "linear_probe_statistics": [
-        [
-          0.13199999928474426,
-          "waste container"
-        ],
-        [
-          0.039000000804662704,
-          "bucket"
-        ],
-        [
-          0.035999998450279236,
-          "carton"
-        ],
-        [
-          0.029999999329447746,
-          "paper towel"
-        ],
-        [
-          0.017000000923871994,
-          "hamper"
-        ],
-        [
-          0.024000000208616257,
-          "packet"
-        ],
-        [
-          0.010999999940395355,
-          "toilet paper"
-        ],
-        [
-          0.023000000044703484,
-          "mousetrap"
-        ],
-        [
-          0.012000000104308128,
-          "ring binder"
-        ],
-        [
-          0.019999999552965164,
-          "doormat"
-        ]
-      ],
-      "zero_shot_statistics": [
-        [
-          7.456858293153346e-05,
-          "waste container"
-        ],
-        [
-          0.00010879878391278908,
-          "plant pot"
-        ],
-        [
-          0,
-          "toaster"
-        ],
-        [
-          0.9814895987510681,
-          "rifle"
-        ],
-        [
-          0,
-          "iPod"
-        ],
-        [
-          0,
-          "pizza"
-        ],
-        [
-          0,
-          "library"
-        ],
-        [
-          0.0002650107489898801,
-          "bucket"
-        ],
-        [
-          7.355518755502999e-05,
-          "coffee mug"
-        ],
-        [
-          0,
-          "website"
-        ]
-      ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-trash-rifle.png"
-    },
-    "toaster": {
-      "linear_probe_statistics": [
-        [
-          0.20600000023841858,
-          "waste container"
-        ],
-        [
-          0.061000000685453415,
-          "bucket"
-        ],
-        [
-          0.07800000160932541,
-          "carton"
-        ],
-        [
-          0.05999999865889549,
-          "paper towel"
-        ],
-        [
-          0.02199999988079071,
-          "hamper"
-        ],
-        [
-          0.032999999821186066,
-          "packet"
-        ],
-        [
-          0.01899999938905239,
-          "toilet paper"
-        ],
-        [
-          0.019999999552965164,
-          "mousetrap"
-        ],
-        [
-          0.007000000216066837,
-          "ring binder"
-        ],
-        [
-          0.008999999612569809,
-          "doormat"
-        ]
-      ],
-      "zero_shot_statistics": [
-        [
-          0.00033599455491639674,
-          "waste container"
-        ],
-        [
-          0.00017728647799231112,
-          "plant pot"
-        ],
-        [
-          0.9923100471496582,
-          "toaster"
-        ],
-        [
-          0,
-          "rifle"
-        ],
-        [
-          0,
-          "iPod"
-        ],
-        [
-          0,
-          "pizza"
-        ],
-        [
-          0,
-          "library"
-        ],
-        [
-          0.00027609916287474334,
-          "bucket"
-        ],
-        [
-          0.0001436525781173259,
-          "coffee mug"
-        ],
-        [
-          0,
-          "website"
-        ]
-      ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-trash-toaster.png"
-    },
-    "website": {
-      "linear_probe_statistics": [
-        [
-          0.14300000667572021,
-          "waste container"
-        ],
-        [
-          0.08399999886751175,
-          "bucket"
-        ],
-        [
-          0.041999999433755875,
-          "carton"
-        ],
-        [
-          0.03500000014901161,
-          "paper towel"
-        ],
-        [
-          0.02199999988079071,
-          "hamper"
-        ],
-        [
-          0.013000000268220901,
-          "packet"
-        ],
-        [
-          0.009999999776482582,
-          "toilet paper"
-        ],
-        [
-          0.014000000432133675,
-          "mousetrap"
-        ],
-        [
-          0.032999999821186066,
-          "ring binder"
-        ],
-        [
-          0.017000000923871994,
-          "doormat"
-        ]
-      ],
-      "zero_shot_statistics": [
-        [
-          0.058953508734703064,
-          "waste container"
-        ],
-        [
-          0.012043197639286518,
-          "plant pot"
-        ],
-        [
-          0,
-          "toaster"
-        ],
-        [
-          0,
-          "rifle"
-        ],
-        [
-          0,
-          "iPod"
-        ],
-        [
-          0,
-          "pizza"
-        ],
-        [
-          0,
-          "library"
-        ],
-        [
-          0.01923910342156887,
-          "bucket"
-        ],
-        [
-          0.008696953766047955,
-          "coffee mug"
-        ],
-        [
-          0.26570820808410645,
-          "website"
-        ]
-      ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-trash-website.png"
     }
   },
   "wine": {
@@ -4901,24 +3681,24 @@
           "bottle cap"
         ],
         [
-          0.004000000189989805,
-          "bucket"
-        ],
-        [
           0.009999999776482582,
           "strawberry"
+        ],
+        [
+          0.004000000189989805,
+          "bucket"
         ],
         [
           0.01899999938905239,
           "fig"
         ],
         [
-          0.00800000037997961,
-          "cucumber"
-        ],
-        [
           0.003000000026077032,
           "pomegranate"
+        ],
+        [
+          0.00800000037997961,
+          "cucumber"
         ],
         [
           0.004999999888241291,
@@ -4935,12 +3715,12 @@
           "red wine"
         ],
         [
-          0.035622771829366684,
-          "wine bottle"
-        ],
-        [
           0,
           "rifle"
+        ],
+        [
+          0.035622771829366684,
+          "wine bottle"
         ],
         [
           0,
@@ -4960,15 +3740,15 @@
         ],
         [
           0,
-          "plant pot"
-        ],
-        [
-          0,
           "pizza"
         ],
         [
           0,
           "website"
+        ],
+        [
+          0.0001731093943817541,
+          "measuring cup"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-wine-blank.png"
@@ -4988,12 +3768,12 @@
           "bottle cap"
         ],
         [
-          0.01899999938905239,
-          "bucket"
-        ],
-        [
           0.026000000536441803,
           "strawberry"
+        ],
+        [
+          0.01899999938905239,
+          "bucket"
         ],
         [
           0.024000000208616257,
@@ -5001,11 +3781,11 @@
         ],
         [
           0.023000000044703484,
-          "cucumber"
+          "pomegranate"
         ],
         [
           0.023000000044703484,
-          "pomegranate"
+          "cucumber"
         ],
         [
           0.01600000075995922,
@@ -5022,12 +3802,12 @@
           "red wine"
         ],
         [
-          0.06984476000070572,
-          "wine bottle"
-        ],
-        [
           0,
           "rifle"
+        ],
+        [
+          0.06984476000070572,
+          "wine bottle"
         ],
         [
           0.7078979015350342,
@@ -5046,16 +3826,16 @@
           "goblet"
         ],
         [
-          0.0009865774773061275,
-          "plant pot"
-        ],
-        [
           0,
           "pizza"
         ],
         [
           0,
           "website"
+        ],
+        [
+          0.002324976958334446,
+          "measuring cup"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-wine-ipod.png"
@@ -5075,24 +3855,24 @@
           "bottle cap"
         ],
         [
-          0.02500000037252903,
-          "bucket"
-        ],
-        [
           0.026000000536441803,
           "strawberry"
+        ],
+        [
+          0.02500000037252903,
+          "bucket"
         ],
         [
           0.024000000208616257,
           "fig"
         ],
         [
-          0.014999999664723873,
-          "cucumber"
-        ],
-        [
           0.03400000184774399,
           "pomegranate"
+        ],
+        [
+          0.014999999664723873,
+          "cucumber"
         ],
         [
           0.012000000104308128,
@@ -5109,12 +3889,12 @@
           "red wine"
         ],
         [
-          0.06683679670095444,
-          "wine bottle"
-        ],
-        [
           0,
           "rifle"
+        ],
+        [
+          0.06683679670095444,
+          "wine bottle"
         ],
         [
           0,
@@ -5133,106 +3913,19 @@
           "goblet"
         ],
         [
-          0.000542266818229109,
-          "plant pot"
-        ],
-        [
           0,
           "pizza"
         ],
         [
           0,
           "website"
+        ],
+        [
+          0.004042334854602814,
+          "measuring cup"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-wine-library.png"
-    },
-    "mug": {
-      "linear_probe_statistics": [
-        [
-          0.12399999797344208,
-          "red wine"
-        ],
-        [
-          0.17000000178813934,
-          "wine bottle"
-        ],
-        [
-          0.029999999329447746,
-          "bottle cap"
-        ],
-        [
-          0.029999999329447746,
-          "bucket"
-        ],
-        [
-          0.023000000044703484,
-          "strawberry"
-        ],
-        [
-          0.01600000075995922,
-          "fig"
-        ],
-        [
-          0.019999999552965164,
-          "cucumber"
-        ],
-        [
-          0.009999999776482582,
-          "pomegranate"
-        ],
-        [
-          0.014999999664723873,
-          "orange"
-        ],
-        [
-          0.014999999664723873,
-          "pineapple"
-        ]
-      ],
-      "zero_shot_statistics": [
-        [
-          0.2837046980857849,
-          "red wine"
-        ],
-        [
-          0.16978175938129425,
-          "wine bottle"
-        ],
-        [
-          0,
-          "rifle"
-        ],
-        [
-          0,
-          "iPod"
-        ],
-        [
-          0,
-          "toaster"
-        ],
-        [
-          0.09831500053405762,
-          "barrel"
-        ],
-        [
-          0.08268631994724274,
-          "goblet"
-        ],
-        [
-          0.005831037648022175,
-          "plant pot"
-        ],
-        [
-          0,
-          "pizza"
-        ],
-        [
-          0,
-          "website"
-        ]
-      ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-wine-mug.png"
     },
     "pizza": {
       "linear_probe_statistics": [
@@ -5249,24 +3942,24 @@
           "bottle cap"
         ],
         [
-          0.019999999552965164,
-          "bucket"
-        ],
-        [
           0.026000000536441803,
           "strawberry"
+        ],
+        [
+          0.019999999552965164,
+          "bucket"
         ],
         [
           0.01899999938905239,
           "fig"
         ],
         [
-          0.019999999552965164,
-          "cucumber"
-        ],
-        [
           0.020999999716877937,
           "pomegranate"
+        ],
+        [
+          0.019999999552965164,
+          "cucumber"
         ],
         [
           0.019999999552965164,
@@ -5283,12 +3976,12 @@
           "red wine"
         ],
         [
-          0.09620213508605957,
-          "wine bottle"
-        ],
-        [
           0,
           "rifle"
+        ],
+        [
+          0.09620213508605957,
+          "wine bottle"
         ],
         [
           0,
@@ -5307,16 +4000,16 @@
           "goblet"
         ],
         [
-          0,
-          "plant pot"
-        ],
-        [
           0.18229234218597412,
           "pizza"
         ],
         [
           0,
           "website"
+        ],
+        [
+          0.0024271325673907995,
+          "measuring cup"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-wine-pizza.png"
@@ -5336,24 +4029,24 @@
           "bottle cap"
         ],
         [
-          0.026000000536441803,
-          "bucket"
-        ],
-        [
           0.028999999165534973,
           "strawberry"
+        ],
+        [
+          0.026000000536441803,
+          "bucket"
         ],
         [
           0.02199999988079071,
           "fig"
         ],
         [
-          0.01899999938905239,
-          "cucumber"
-        ],
-        [
           0.019999999552965164,
           "pomegranate"
+        ],
+        [
+          0.01899999938905239,
+          "cucumber"
         ],
         [
           0.013000000268220901,
@@ -5370,12 +4063,12 @@
           "red wine"
         ],
         [
-          0.03572230413556099,
-          "wine bottle"
-        ],
-        [
           0.8408275842666626,
           "rifle"
+        ],
+        [
+          0.03572230413556099,
+          "wine bottle"
         ],
         [
           0,
@@ -5395,15 +4088,15 @@
         ],
         [
           0,
-          "plant pot"
-        ],
-        [
-          0,
           "pizza"
         ],
         [
           0,
           "website"
+        ],
+        [
+          0.00011730314145097509,
+          "measuring cup"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-wine-rifle.png"
@@ -5423,24 +4116,24 @@
           "bottle cap"
         ],
         [
-          0.02199999988079071,
-          "bucket"
-        ],
-        [
           0.019999999552965164,
           "strawberry"
+        ],
+        [
+          0.02199999988079071,
+          "bucket"
         ],
         [
           0.017000000923871994,
           "fig"
         ],
         [
-          0.012000000104308128,
-          "cucumber"
-        ],
-        [
           0.014999999664723873,
           "pomegranate"
+        ],
+        [
+          0.012000000104308128,
+          "cucumber"
         ],
         [
           0.024000000208616257,
@@ -5457,12 +4150,12 @@
           "red wine"
         ],
         [
-          0.1012345477938652,
-          "wine bottle"
-        ],
-        [
           0,
           "rifle"
+        ],
+        [
+          0.1012345477938652,
+          "wine bottle"
         ],
         [
           0,
@@ -5482,15 +4175,15 @@
         ],
         [
           0,
-          "plant pot"
-        ],
-        [
-          0,
           "pizza"
         ],
         [
           0,
           "website"
+        ],
+        [
+          0.0022560139186680317,
+          "measuring cup"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-wine-toaster.png"
@@ -5510,24 +4203,24 @@
           "bottle cap"
         ],
         [
-          0.023000000044703484,
-          "bucket"
-        ],
-        [
           0.02199999988079071,
           "strawberry"
+        ],
+        [
+          0.023000000044703484,
+          "bucket"
         ],
         [
           0.019999999552965164,
           "fig"
         ],
         [
-          0.014000000432133675,
-          "cucumber"
-        ],
-        [
           0.017000000923871994,
           "pomegranate"
+        ],
+        [
+          0.014000000432133675,
+          "cucumber"
         ],
         [
           0.013000000268220901,
@@ -5544,12 +4237,12 @@
           "red wine"
         ],
         [
-          0.20213788747787476,
-          "wine bottle"
-        ],
-        [
           0,
           "rifle"
+        ],
+        [
+          0.20213788747787476,
+          "wine bottle"
         ],
         [
           0,
@@ -5569,15 +4262,15 @@
         ],
         [
           0,
-          "plant pot"
-        ],
-        [
-          0,
           "pizza"
         ],
         [
           0.17585909366607666,
           "website"
+        ],
+        [
+          0.0017587837064638734,
+          "measuring cup"
         ]
       ],
       "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-wine-website.png"
