@@ -79,7 +79,7 @@ function hues(label) {
 import ClassificationCard from '../components/ClassificationCard.svelte';
 </script>
 
-<div style="max-width: 1440px; margin: auto;">
+<div style="width: fit-content; margin: auto;">
   <div style="display: grid; grid-template-rows: repeat({Object.entries(attacks_2).length }); grid-template-columns: repeat({Object.entries(attacks_2.mug).length }); overflow-x: scroll; grid-gap: 5px;">
     {#each Object.entries(attacks_2.mug) as [label, results], col_index}
       <h4 style="grid-column: { col_index + 1}; margin-bottom: 0px">{@html label === "blank" ? "Blank" : "Labeled &ldquo;" + label + "&rdquo;" }</h4>
