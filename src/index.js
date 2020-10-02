@@ -104,36 +104,7 @@ ReactDOM.render(
   <EmotionsMentalHealth />,
   document.getElementById('emotions-mentalhealth')
 )
-<<<<<<< HEAD
-// ReactDOM.render(<EmotionsAtlas />, document.getElementById('emotions-atlas'))
-// ReactDOM.render(
-//   <EmotionsSemantic
-//     emotionNames={[
-//       'ashamed',
-//       'let down',
-//       'resentful',
-//       'aggressive',
-//       'skeptical',
-//       'disappointed',
-//       'grief',
-//     ]}
-//   />,
-//   document.getElementById('emotions-semantic-clever')
-// )
 
-// ReactDOM.render(
-//   <EmotionsSemantic
-//     emotionNames={[
-//       'pressured',
-//       'confident',
-//       'disrespected',
-//       'weak',
-//       'worthless',
-//     ]}
-//   />,
-//   document.getElementById('emotions-semantic-bias')
-// )
-=======
 ReactDOM.render(<EmotionsAtlas />, document.getElementById('emotions-atlas'))
 ReactDOM.render(
   <EmotionsSemantic
@@ -162,4 +133,3 @@ ReactDOM.render(
   />,
   document.getElementById('emotions-semantic-bias')
 )
->>>>>>> 7ba0e4fb7ba6d2abd2fd624fccb1e74c5556597f
