@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { capitalize } from 'lodash'
 import { Surface, Text } from '../ui'
 import dse from './dse.png'
 
@@ -49,16 +48,39 @@ export default () => {
       <Surface
         display="grid"
         transform="translateX(-55px)"
-        gridTemplateColumns={`140px 120px 450px 250px`}
-        gridTemplateRows="auto auto auto auto"
-        width={1000}
+        gridTemplateColumns={`[desc] auto [face] 120px [dse] 450px [textFv] 250px`}
+        gridTemplateRows="labels repeat(3, [row] auto)"
         gridGap={10}
+        width="fit-content"
         margin="auto"
       >
-        <Text>Emotion</Text>
-        <Text>Face Facet</Text>
-        <Text>Dataset Examples</Text>
-        <Text>Text Feature Visualization</Text>
+        <div
+          style={{
+            borderBottom: '1px solid #aaa',
+            gridColumn: 'labels 1',
+            gridRow: 'face',
+          }}
+        >
+          Face Facet
+        </div>
+        <div
+          style={{
+            borderBottom: '1px solid #aaa',
+            gridColumn: 'labels 2',
+            gridRow: 'dse',
+          }}
+        >
+          Dataset Examples
+        </div>
+        <div
+          style={{
+            borderBottom: '1px solid #aaa',
+            gridColumn: 'labels 3',
+            gridRow: 'textFv',
+          }}
+        >
+          Text Feature Visualization
+        </div>
 
         <Row
           name="Silly / Duckface"

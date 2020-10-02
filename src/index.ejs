@@ -7,6 +7,41 @@
     <%=require("../static/styles.css") %>
   </style>
   <script src="https://distill.pub/template.v2.js"></script>
+
+  <style>
+    .fullscreen-diagram{
+      grid-column: screen;
+      background: #F8F8FB;
+      padding: 10px;
+      padding-top:40px;
+      padding-bottom:40px;
+      border-top: 1px solid #F0F0F0;
+      border-bottom: 1px solid #F0F0F0;
+    }
+    .placeholder {
+      padding: 40px;
+      font-size: 80%;
+      background: #F8F8FB;
+      border: 1px solid #F0F0F0;
+      border-radius: 4px;
+      grid-column: text;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .todo {
+      padding: 5px;
+      font-size: 80%;
+      background: rgb(250, 249, 242);
+      border: 1px solid rgb(233, 230, 214);
+      border-radius: 4px;
+      max-width: 250px;
+      margin-right: 4px;
+      grid-column-start: gutter-start;
+      grid-column-end: screen-end;
+      height: fit-content;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -230,6 +265,7 @@
 
     <subsection>Using Abstractions</subsection>
 
+    <h2>Underlying Features and Circuits</h2>
     <h2>Emotional Intelligence</h2>
 
     <p>Earlier we looked at a family of neurons that each detect an emotion via several facets like text as well as facial and body expressions. These neurons only scratch the surface of the range of emotions the model understands, since most emotions are the result of several neurons working in concert, often alongside non-emotion neurons that are specific to each picture. In this section well study this broader landscape of emotions.</p>
@@ -245,40 +281,134 @@
     <figure id="emotions-semantic-bias" class="fullscreen-diagram"></figure>
     <p>Add a conclusion here for the emotion work.</p>
 
+
+    <br>
+    <hr>
+    <br>
+    
+
     <h2>The Mechanics of Abstraction</h2>
 
     <p>
-      One of the greatest mysteries of neural networks is how they can accomplish things which no human being knows how to directly write a computer program to do. This mystery is present in all non-trivial neural networks, but it burns especially brightly in light of a neural network which seems to have features previously thought to be signatures of the human mind. Concretely, the abstract features we saw in the previous section are produced only after dozens of layers of visual processing -- what happened in those layers?
+      One of the greatest mysteries of neural networks is how they can accomplish things which no human being knows how to directly write a computer program to do. This mystery is present in all non-trivial neural networks, but it burns especially brightly in light of a neural network which seems to have features previously thought to be signatures of the human mind.
     </p>
     <p>
       Recent work analyzing circuits [] has shed some light on the mechanism and algorithms running inside the layers of vision models. Building on a tradition of researchers studying meaningful neurons inside neural networks [], the circuits approach tries to systematically and rigorously characterize neurons inside neural networks, and then understand how the graph of weights between them implements their behavior.
+      In this section, we aim to offer a very preliminary circuit analysis of mulltimodal models.
     </p>
+    <div class='todo'><b>TODO(@colah)</b>: work in language about being preliminary </div>
     <p>
-      As we examined the features and circuits in the hidden layers of the multimodal models, we found many that appeared to be analogues of features we'd discovered in ImageNet [] models like InceptionV1 []. But it wasn't just ImageNet models. We also saw features -- such as palm tree detectors -- we'd seen in an unpublished visualization [] of the geolocalization model PlaNet []. Others seemed familiar from looking at InceptionV1 trained on Places365 []. And while we'd never seen visualizations of a strong OCR model, we discovered many lexicographic features that would intuitively form in such a model.
+      The abstract features we saw in the previous section only form in the final layers of multimodal models.
+      At a high-level, they seem to form by unioning over many cases, with every residual layer adding on new cases.
+      For example, ...
     </p>
 
 
-    <style>
-      .fullscreen-diagram{
-        grid-column: screen;
-        background: #F8F8FB;
-        padding: 10px;
-        padding-top:40px;
-        padding-bottom:40px;
-        border-top: 1px solid #F0F0F0;
-        border-bottom: 1px solid #F0F0F0;
-      }
-  </style>
+    <figure id="enrichment-diagram" class="fullscreen-diagram"></figure>
+    <!--<div class='todo'><b>TODO(colah):</b></div>
+    
+    The abstract features we saw in the previous section are produced only after dozens of layers of visual processing -- what happened in those layers?
+    -->
 
-    <figure id="universality-diagram" class="fullscreen-diagram"></figure>
+    <p>
+      We call these circuits union over massive numbers of facets "enrichment circuits," and will return to them at the end of this section.
+      But enrichment circuits and the abstract features they produce are only possible because all the layers up to that point built up a foundation of sophisticated features from which the abstract features can be assembled. And so if we truly want to understand abstract features, we need to start with these.
+    </p>
+  
+    <h3>Universal Features and Circuits</h3>
 
-    <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+    <p>
+      As we examined the features and circuits in the early and mid layers of the multimodal models, we found many that appeared to be analogues of features found in other models.
+      In particular, many of the features we found in early vision are strikingly similar to <a href='https://distill.pub/2020/circuits/early-vision/'>early visual features</a> of both ImageNet and Places365 models:
+    </p>
 
-    <figure id="univeresal-circuit-diagram" class="fullscreen-diagram"></figure>
 
-    <section>Universiality</section>
+    <figure id="early-vision" class="fullscreen-diagram"></figure>
 
-    <section>Multimodal Circuits</section>
+    <p>
+      Many of these features actually develop multiple times throughout the multimodal models we examined, at different scales. For example, we consistently see small black and white vs color detectors at the beginning of block 2, and then larger ones many layers later at the beginning of block 3.
+
+      We also see interesting differences between the analogues. 
+    </p>
+
+    <p>
+      The idea that analogous features form across models is sometimes called the "<a>universality hypothesis</a>."
+      A significant amount of work has measured the overall similarity of neural network representations, often finding significantly similarity between representations of different models [].
+      A smaller amount of work has explored individual analogous features forming across models [].
+      Previous demonstrations of universality have tended to show that different models trained on the same dataset develop similar features, leaving some uncertainty as to whether it would be true for models trained on very different datasets.
+      The multimodal model provides an example of analogous features forming across models which are different in dataset, training objective, and architecture.
+    </p>
+
+    <p>
+      Not only do multimodal models develop many features which have analogues InceptionV1, but we found a number of cases where those features seem to be implemented by analogous circuits:
+    </p>
+
+    <figure id="universal-circuit-diagram" class="fullscreen-diagram"></figure>
+    <div class='placeholder'><b>TODO(@colah):</b> Figcaption explaining technical details</div>
+
+    <p>
+      Finding analogous circuits is a stronger result than finding analogous features.
+      You could imagine finding highly-correlated and behaviorally similar features across two models, and then realizing they're implemented in different ways.
+      (We see different implementations of the same function with different algorithms all the time in computer science: QuickSort and HeapSort implement the same sort function in different ways!)
+      The fact that analogous features are implemented in the same way suggests that understanding the mechanisms underlying one model may also help us understand other models.
+    </p>
+
+    <p>
+      We also see features which are analogues in more abstract ways.
+      For example, InceptionV1 (ImageNet) has left-oriented and right-oriented head detectors which most strongly react to dog heads, which are then merged into orientation-invariant head detectors.
+      Multimodal models also have left-oriented and right-oriented head detectors, but they most strongly react to human heads.<d-footnote>InceptionV1 (ImageNet) also has human-specific head detectors, but they don't seem to be oriented. Likewise, the multimodal models have dog-specific head detectors, but they don't appear to be oriented.</d-footnote>
+      In both cases, the invariant head detectors are created by combining pose-specific head detectors.
+    </p>
+
+    <figure style='grid-column-start: text; grid-column-end: page;'>
+      <img src="images/head-circuit.png">
+    </figure>
+  
+    <h3>Task-specific Features</h3>
+
+    <p>
+      In addition to "universal" features which the multimodal models seem to share with both ImageNet and Places365 models, we observed features which they seemed to share with only one:
+    </p>
+
+    <figure id="task-specific" class="fullscreen-diagram"></figure>
+
+    <p>
+      There are also features which don't have highly-correlated analogues in the ImageNet or Places365 model we studied, but still formed consistently across multimodal models.
+      Many of these features seem like something that would form in another classification task!
+      In fact, the palm tree detectors are very similar to those found in an unpublished visualization [] of the geolocalization model PlaNet[].
+      <d-footnote>We know that the multimodal models can be used for geolocalization, and that regional neurons form in the late layers, so it makes sense to expect features useful for geolocalization to also exist in lower layers.</d-footnote>
+      Similarly, one imagines that features like the "f"-detector could be found in OCR models.
+    </p>   
+    <div class='todo'><b>TODO(@colah)</b>: add facial feature example?</div>
+
+    <p>
+      Perhaps the right way to understand mid-level vision in the multimodal is as a <em>union</em> over features from a very wide variety of tasks.
+    </p>
+
+    <div class='placeholder'><b>TODO(@colah, @ggoh)</b>: short section on typograpic features?</div>
+    <div class='placeholder'><b>TODO(@colah, @ggoh)</b>: short section on facial features?</div>
+    <div class='placeholder'><b>TODO(@colah)</b>: weird giant brightness detectors?</div>
+
+    <h3>The mechanics of Abstraction</h3>
+
+    <p>
+      The middle layers of our models provide a variety of features: detectors for various kind of objects, for short words, and much more.
+      But the final layers are where the most striking property of multimodal models occurs: the formation of abstract, multimodal features.
+    </p>
+
+    <p>
+      We found circuits in these final layers particularly difficult to analyze.
+      The layers have widths of several thousand neurons, depending on the model, and there appears to be quite a bit of polysemanticity. 
+      However, the residual architecture does give us one type of circuit for free:
+      what we've called "encrichment circuits," where each residual block adds new facets to the abstract neurons.
+    </p>
+
+    <figure id="enrichment-diagram-2" class="fullscreen-diagram"></figure>
+    
+
+<br>
+<hr>
+<br>
 
     <h2>Typographic Attacks</h2>
 

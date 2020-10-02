@@ -1,4 +1,5 @@
 import React from 'react'
+import { HoverZoom, Surface, Text } from '../ui'
 import textNeurons from './textNeurons'
 import neuronNames from './neuronNames'
 import { range, max, sortBy, includes } from 'lodash'
@@ -16,12 +17,15 @@ export default ({ emotionNames }) => {
     const maxActivation = max(neurons.map(([val, index]) => val))
     return sortBy(
       neurons.map(([val, index]) => [val / maxActivation, index]),
-      (_) => -_[0]
+      (_) => (_[0] > 0 ? -1000 + -_[0] : _[0])
     )
   }
 
   const rowCount = emotionNames.length
-  const colCount = 5
+  const maxCols = 4
+  const red = '#e63946'
+  const green = '#80b918'
+  const imgSize = 140
 
   return (
     <div
@@ -29,7 +33,9 @@ export default ({ emotionNames }) => {
         margin: 'auto',
         width: 'fit-content',
         display: 'grid',
-        gridTemplateColumns: `[label] auto [source] 80px [equals] auto repeat(${colCount}, [sparse] 80px [add] auto)`,
+        gridTemplateColumns: `[label] auto [source] ${imgSize}px [equals] 40px repeat(${maxCols}, [sparse] ${
+          imgSize + 40
+        }px [add] 40px)`,
         gridTemplateRows: `[label] auto repeat(${rowCount}, [equation] auto)`,
         gridGap: 16,
       }}
@@ -48,7 +54,7 @@ export default ({ emotionNames }) => {
       <div
         style={{
           gridRow: 'label',
-          gridColumn: `sparse 1 / add ${colCount}`,
+          gridColumn: `sparse 1 / add ${maxCols}`,
           paddingBottom: 4,
           borderBottom: '1px solid #ccc',
         }}
@@ -58,6 +64,10 @@ export default ({ emotionNames }) => {
 
       {emotionNames.map((name, row) => {
         const gridRow = `equation ${row + 1}`
+        const emotionRow = scaleEmotion(
+          emotions[name].filter(([_, neuron]) => !includes(textNeurons, neuron))
+        ).slice(0, maxCols)
+
         return (
           <React.Fragment>
             <div
@@ -66,49 +76,90 @@ export default ({ emotionNames }) => {
                 gridColumn: `source`,
               }}
             >
-              <img
-                style={{ display: 'block', borderRadius: 5 }}
-                src={getFace(name)}
-              />
+              <HoverZoom width={imgSize} height={imgSize}>
+                <img
+                  style={{ display: 'block', borderRadius: 5 }}
+                  src={getFace(name)}
+                />
+              </HoverZoom>
               <div className="figcaption">{name}</div>
             </div>
 
-            <div
-              style={{
-                gridRow,
-                gridColumn: `equals`,
-                margin: `30px 10px 0px 10px`,
-              }}
+            <Surface
+              gridRow={gridRow}
+              gridColumn="equals"
+              marginTop={imgSize / 2 - 10}
+              fontSize={14}
+              textAlign="center"
             >
               =
-            </div>
+            </Surface>
 
-            {scaleEmotion(
-              emotions[name].filter(
-                ([_, neuron]) => !includes(textNeurons, neuron)
-              )
-            ).map(([activation, neuron], col) => {
+            {emotionRow.map(([activation, neuron], col) => {
               return (
                 <React.Fragment>
-                  <div
-                    style={{
-                      gridRow,
-                      gridColumn: `sparse ${col + 1}`,
-                    }}
+                  <Surface
+                    gridRow={gridRow}
+                    gridColumn={`sparse ${col + 1}`}
+                    display="grid"
+                    gridTemplateColumns={`[img] ${imgSize}px 10px [bar] 35px`}
+                    gridTemplateRows={`[main] ${imgSize}px [caption] auto`}
                   >
-                    <img
-                      style={{ display: 'block', borderRadius: 5 }}
-                      src={getNeuronFace(neuronNames[neuron])}
-                    />
-                    <div className="figcaption">{neuronNames[neuron]}</div>
-                  </div>
+                    <HoverZoom>
+                      <img
+                        gridRow="main"
+                        gridColumn="img"
+                        width={imgSize}
+                        height={imgSize}
+                        style={{
+                          width: imgSize,
+                          height: imgSize,
+                          borderRadius: 5,
+                        }}
+                        src={getNeuronFace(neuronNames[neuron])}
+                      />
+                    </HoverZoom>
+                    <Surface
+                      gridRow="main"
+                      gridColumn="bar"
+                      height={imgSize}
+                      justifyContent="flex-end"
+                      alignItems="center"
+                    >
+                      <Surface
+                        width={'100%'}
+                        borderRadius={5}
+                        background={activation > 0 ? green : red}
+                        boorder="1px solid rgba(0, 0, 0, 1)"
+                        opacity={0.3}
+                        height={imgSize * Math.min(1, Math.abs(activation))}
+                      />
+                    </Surface>
+                    <div
+                      style={{ gridRow: 'caption', gridColumn: 'img' }}
+                      className="figcaption"
+                    >
+                      {neuronNames[neuron]}
+                    </div>
+                    <div
+                      style={{
+                        gridRow: 'caption',
+                        gridColumn: 'bar',
+                      }}
+                      className="figcaption"
+                    >
+                      {Math.abs(activation).toFixed(2)}
+                    </div>
+                  </Surface>
 
-                  {col < colCount - 1 && (
+                  {col < emotionRow.length - 1 && (
                     <div
                       style={{
                         gridRow,
                         gridColumn: `add ${col + 1}`,
-                        marginTop: 30,
+                        marginTop: imgSize / 2 - 10,
+                        fontSize: 14,
+                        textAlign: 'center',
                       }}
                     >
                       +

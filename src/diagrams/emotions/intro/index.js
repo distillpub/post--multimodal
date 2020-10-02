@@ -1,9 +1,8 @@
-import React from 'react'
-import { capitalize } from 'lodash'
+import React, { useState } from 'react'
+import { capitalize, isNumber } from 'lodash'
+import { getEmotion } from '../helpers'
+import { SegmentedControl } from 'evergreen-ui'
 import { Surface, Text } from '../ui'
-
-const getEmotion = (name) =>
-  `https://storage.googleapis.com/fls/nickc/multimodal/emotions_neurons_2point3_${name}.png`
 
 const friendlyName = {
   'Accept / Appoint': 'Accepting an Offer',
@@ -12,67 +11,111 @@ const friendlyName = {
   Punishment: 'Punished',
 }
 
-const common = ['Shocked', 'Crying', 'Happy', 'Sleepy'].map((name) => ({
-  name,
-}))
-const common2 = ['Evil', 'Punishment', 'Serious', 'Soft smile'].map((name) => ({
-  name,
-}))
+const imgSize = 166
 
-const nuanced = [
-  'Destroyed',
-  'Erotic',
-  'Blocked',
-  'Accept / Appoint',
-].map((name) => ({ name }))
+const neurons = [
+  ['Shocked', 'Crying', 'Happy', 'Sleepy'],
+  ['Evil', 'Punishment', 'Serious', 'Soft smile'],
+  ['Incarcerated', 'Erotic', 'Blocked', 'Accept / Appoint'],
+]
 
-const imgSize = 180
-const Emotion = ({ name, detail }) => (
-  <Surface margin={3}>
-    <Text marginLeft={5} fontSize={14} fontWeight={500}>
-      {friendlyName[name] || name}
-    </Text>
-    <Text>{detail || ''}</Text>
-    <img
-      style={{ borderRadius: 5 }}
-      width={imgSize}
-      height={imgSize}
-      src={getEmotion(name)}
-    />
-  </Surface>
-)
+export default () => {
+  const [strength, setStrength] = useState(8)
+  const [facet, setFacet] = useState('face')
 
-const Row = ({ name, emotions }) => {
   return (
     <React.Fragment>
-      <Text opacity={0.8} fontSize={12} fontWeight={500} marginTop={10}>
-        {name}
-      </Text>
-      {emotions.map((emotion) => (
-        <Emotion {...emotion} />
-      ))}
+      <Surface
+        display="grid"
+        gridTemplateRows={`[settings] auto repeat(3, [row] auto)`}
+        gridGap={16}
+        width="fit-content"
+        gridTemplateColumns={`[desc] 240px repeat(4, [col] ${imgSize}px)`}
+        transform="translateX(-125px)"
+        margin="auto"
+        marginBottom={10}
+      >
+        <Surface
+          gridRow="settings"
+          gridColumn={'col 1 / -1'}
+          flexFlow="row"
+          justifyContent="space-between"
+        >
+          <SegmentedControl
+            width={400}
+            options={[
+              'face',
+              'pose',
+              // 'nature',
+              'text',
+              'indoor',
+              // 'logo',
+              // 'arch',
+            ].map((label) => ({ label, value: label }))}
+            value={facet}
+            onChange={(value) => setFacet(value)}
+          />
+          <Surface flexFlow="row" alignItems="center">
+            <div style={{ marginRight: 3 }}>Pose Weight</div>
+            <input
+              type="range"
+              max={8}
+              min={0}
+              value={strength}
+              onChange={(e) => setStrength(+e.target.value)}
+            />
+          </Surface>
+        </Surface>
+        <Surface
+          gridRow="row 1 / row 3"
+          borderRight="1px solid rgb(204, 204, 204)"
+          gridColumn="desc"
+          paddingX={10}
+        >
+          Common Emotions
+          <div className="figcaption">
+            Emotions and expressions frequently mentioned in emotion research
+            and feeling wheels.
+          </div>
+        </Surface>
+        <Surface
+          gridRow="row 3 / -1"
+          borderRight="1px solid rgb(204, 204, 204)"
+          gridColumn="desc"
+          paddingX={10}
+        >
+          Nuanced Emotions
+          <div className="figcaption">
+            Emotions and expressions we were surprised to find represented in
+            individual neurons.
+          </div>
+        </Surface>
+
+        {neurons.map((row, rowIndex) =>
+          row.map((neuron, colIndex) => (
+            <Surface
+              gridColumn={`col ${colIndex + 1}`}
+              gridRow={`row ${rowIndex + 1}`}
+            >
+              <Surface>{friendlyName[neuron] || neuron}</Surface>
+              <img
+                src={getEmotion(neuron, facet, strength)}
+                style={{ borderRadius: 5 }}
+              />
+            </Surface>
+          ))
+        )}
+      </Surface>
+      <figcaption style={{ margin: 'auto', width: 704 }}>
+        There are many emotions that correspond to emotion. We can render clear
+        facial expressions of each emotion using a facial facet. While many
+        neurons correspond to common emotions such as happiness, crying, or
+        sleepy, there are also more surprising neurons that render the
+        expression of accepting an offer, or of rejecting someone. As we'll see
+        later, we can verify that a neuron is looking for a given expression
+        with several tools such as dataset examples, feature visualization of
+        different facets, and text feature visualization.
+      </figcaption>
     </React.Fragment>
   )
 }
-
-export default () => (
-  <React.Fragment>
-    <Surface
-      display="grid"
-      transform="translateX(-55px)"
-      gridTemplateColumns={`140px repeat(4, ${imgSize}px)`}
-      gridTemplateRows="auto auto auto"
-      gridGap={2}
-      margin="auto"
-      width={900}
-    >
-      <Row name="Common Emotions" emotions={common} />
-      <Row name="" emotions={common2} />
-      <Row name="Nuanced Emotions" emotions={nuanced} />
-    </Surface>
-    <figcaption style={{ margin: 'auto', width: 704 }}>
-      Using facial facets we can render clear images of facial expressions using
-      emotion neurons.
-    </figcaption>
-  </React.Fragment>
-)
