@@ -47,7 +47,7 @@ let attack_ordering = [
 
 <figcaption>
   <p>
-    n={ Math.round(small_attacks.n) }. Probabilities collected from <a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x?models.technique=deep_dream">RN50-4x</a>.
+    <a class="figure-anchor" href="#automated-attacks">Figure N:</a> n={ Math.round(small_attacks.n) }. Probabilities collected from <a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x?models.technique=deep_dream">RN50-4x</a>.
   </p>
 
   <p><b>Baseline ImageNet classification accuracy</b> measures the percent of images that were classified correctly before the addition of any attacks.
