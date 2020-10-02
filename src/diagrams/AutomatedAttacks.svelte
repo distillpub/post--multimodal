@@ -45,7 +45,7 @@ let attack_ordering = [
   </tbody>
 </table>
 
-<figcaption>
+<div class="figcaption">
   <p>
     <a class="figure-anchor" href="#automated-attacks">Figure N:</a> n={ Math.round(small_attacks.n) }. Probabilities collected from <a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x?models.technique=deep_dream">RN50-4x</a>.
   </p>
@@ -61,4 +61,4 @@ let attack_ordering = [
     </d-footnote>
   </p>
   <!-- <p>In the <b>zero-shot</b> methodology, we convert the multimodal model to an ImageNet classifier by calculating probabilities on the completion “a photo of a ___” for each ImageNet class.</p> -->
-</figcaption>
+</div>

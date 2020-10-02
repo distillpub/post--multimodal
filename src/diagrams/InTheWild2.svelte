@@ -98,8 +98,8 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
       <br/>
     {/each}
   </div>
+  <div class="figcaption">
+    <p><a class="figure-anchor" href="#in-the-wild-2">Figure N:</a> Additional in-the-wild attacks.</p>
+    <p>In a shoutout to <i>Adversarial Patch</i> we include the label <i>toaster</i> on a whim, and find that it does surprisingly well as a typographic attack!</p>
+  </div>
 </div>
-<figcaption>
-<p><a class="figure-anchor" href="#in-the-wild-2">Figure N:</a> Additional in-the-wild attacks.</p>
-<p>In a shoutout to <i>Adversarial Patch</i> we include the label <i>toaster</i> on a whim, and find that it does surprisingly well as a typographic attack!</p>
-</figcaption>

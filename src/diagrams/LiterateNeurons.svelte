@@ -1,21 +1,22 @@
 <style>
-  figure.reading-container {
+  .reading-container {
     display: flex;
     flex-direction: row;
+    width: 100%;
   }
-  img.reading-neuron-feature-viz {
+  .reading-neuron-feature-viz {
     border-radius: 1em;
   }
-  img.reading-neuron-dataset-example {
+  .reading-neuron-dataset-example {
     max-width: 48%;
     margin: 0px;
   }
-  div.reading-neuron {
+  .reading-neuron {
     width: 30%;
     margin: 20px;
   }
 </style>
-<figure class="eq-grid reading-container">
+<div class="reading-container">
   <div class="reading-neuron">
     <h4><a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_v2/image_block_4_2_Add_6_0/1535">RN101 Channel 1535</a></h4>
     <img class="reading-neuron-feature-viz" src="/typographic/RN101-channel-1535.png" alt="feature visualization with kissing faces and 'love you' text"/>
@@ -43,9 +44,9 @@
     <img class="reading-neuron-dataset-example" src="/typographic/RN101-1738-dataset-4.png" alt="2013" />
     <p><small>"year", "2015", "2016", ...</small></p>
   </div>
-  <figcaption>
-   <p>
-    <a class="figure-anchor" href="#literate-neurons">Figure N:</a> Three examples of neurons from Resnet-101 whose feature visualizations (top) and selected dataset examples (bottom) show sensitivity to specific words and text.
-    </p>
-  </figcaption>
-</figure>
+</div>
+<div class="figcaption">
+ <p>
+  <a class="figure-anchor" href="#literate-neurons">Figure N:</a> Three examples of neurons from Resnet-101 whose feature visualizations (top) and selected dataset examples (bottom) show sensitivity to specific words and text.
+  </p>
+</div>
