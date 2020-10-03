@@ -14,8 +14,8 @@ function backgroundColor(probability, imagenetClass, customHues) {
   )`;
 }
 
-function calculateImageSize(probabilities) {
-  return Math.round(probabilities.length * 17.5 - 1.5);
+function calculateImageSize() {
+  return Math.round(probabilities.length * 18 - 1);
 }
 
 </script>
