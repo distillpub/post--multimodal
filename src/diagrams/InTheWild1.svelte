@@ -62,33 +62,33 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
 </script>
 
 <div style="overflow-x: scroll;">
-<div style="width: fit-content; margin: auto;">
-  <div style="display: grid; grid-template-rows: repeat({ Object.entries(data).length}); grid-template-columns: repeat({ Object.entries(data.mug).length}); overflow-x: scroll; grid-gap: 10px;">
-    {#each Object.entries(data.mug) as [label, results], col_index}
-      <h4 style="grid-column: { col_index + 1}; margin-bottom: 0px">{@html label === "blank" ? "Blank" : "Labeled &ldquo;" + label + "&rdquo;" }</h4>
-    {/each}
-    {#each Object.keys(data).sort() as item, row_index}
-      {#each Object.entries(data[item]) as [label, results], col_index}
-        <div style="grid-column: {col_index + 1 }">
-          <ClassificationCard
-            imageUrl={results.image_url}
-            imageAltText={`${item} labeled ${label}`}
-            probabilities={results.zero_shot_statistics}
-            customHues={hues(label)}
-          />
-        </div>
+  <div style="width: fit-content; margin: auto; overflow-x: scroll;">
+    <div style="display: grid; grid-template-rows: repeat({ Object.entries(data).length}); grid-template-columns: repeat({ Object.entries(data.mug).length}); overflow: auto; grid-gap: 10px;">
+      {#each Object.entries(data.mug) as [label, results], col_index}
+        <h4 style="grid-column: { col_index + 1}; margin-bottom: 0px">{@html label === "blank" ? "No label" : "Labeled &ldquo;" + label + "&rdquo;" }</h4>
       {/each}
-    {/each}
-  </div>
-  <div class="figcaption" style="max-width: 600px; margin-top: 16px;">
-    <p>
-      <a class="figure-anchor" href="#in-the-wild-1">Figure N:</a>
-      Physical typographic attacks.
-    </p>
+      {#each Object.keys(data).sort() as item, row_index}
+        {#each Object.entries(data[item]) as [label, results], col_index}
+          <div style="grid-column: {col_index + 1 }">
+            <ClassificationCard
+              imageUrl={results.image_url}
+              imageAltText={`${item} labeled ${label}`}
+              probabilities={results.zero_shot_statistics}
+              customHues={hues(label)}
+            />
+          </div>
+        {/each}
+      {/each}
+    </div>
+    <div class="figcaption" style="max-width: 600px; margin-top: 16px;">
+      <p>
+        <a class="figure-anchor" href="#in-the-wild-1">Figure N:</a>
+        Physical typographic attacks.
+      </p>
 
-    <p>
-      Probabilities here calculated using the <b>zero-shot</b> methodology: we convert the multimodal model to an ImageNet classifier by calculating probabilities on the completion “a photo of a ___” for each ImageNet class.
-    </p>
+      <p>
+        Probabilities here calculated using the <b>zero-shot</b> methodology: we convert the multimodal model to an ImageNet classifier by calculating probabilities on the completion “a photo of a ___” for each ImageNet class.
+      </p>
+    </div>
   </div>
-</div>
 </div>

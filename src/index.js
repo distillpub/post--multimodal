@@ -6,6 +6,7 @@ import Figure from './diagrams/Neuron.svelte'
 import HyperSet from './diagrams/HyperSet.svelte'
 import UniversalityTable from './diagrams/UniversalityTable.svelte'
 import NeuronTable from './diagrams/NeuronTable.svelte'
+import RegionalNeurons from './diagrams/RegionalNeurons.svelte'
 
 import 'regenerator-runtime/runtime'
 import EnrichmentCircuit from './diagrams/EnrichmentCircuit.svelte'
@@ -98,6 +99,7 @@ let task_specific_data = {
 }
 
 const diagrams = [
+  ['regional-neurons', RegionalNeurons, {}],
   ['enrichment-diagram', EnrichmentCircuit, {}],
   ['early-vision', FeaturesTable, early_vision_data],
   ['task-specific', FeaturesTable, task_specific_data],
@@ -105,6 +107,10 @@ const diagrams = [
   ['enrichment-diagram-2', EnrichmentCircuit, {}],
   ['in-the-wild-1', InTheWild1, {}],
   ['in-the-wild-2', InTheWild2, {}],
+  ['literate-neurons', LiterateNeurons, {}],
+  ['attackable-neurons', AttackableNeurons, {}],
+  ['automated-attacks', AutomatedAttacks, {}],
+  ['attack-setup', AttackSetup, {}],
 ]
 
 for (let [elementId, DiagramClass, props] of diagrams) {
