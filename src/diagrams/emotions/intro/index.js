@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { capitalize, isNumber } from 'lodash'
+import { capitalize, range, isNumber } from 'lodash'
 import { getEmotion } from '../helpers'
 import { SegmentedControl } from 'evergreen-ui'
 import { Surface, Text } from '../ui'
@@ -14,7 +14,8 @@ const friendlyName = {
 const imgSize = 166
 
 const neurons = [
-  ['Shocked', 'Crying', 'Happy', 'Sleepy'],
+  ['Trump', 'Spiderman', 'Happy', 'Sleepy'],
+  // ['Shocked', 'Crying', 'Happy', 'Sleepy'],
   ['Evil', 'Punishment', 'Serious', 'Soft smile'],
   ['Incarcerated', 'Erotic', 'Blocked', 'Accept / Appoint'],
 ]

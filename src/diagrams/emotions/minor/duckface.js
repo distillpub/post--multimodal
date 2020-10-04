@@ -1,25 +1,11 @@
 import React, { useState } from 'react'
-import { capitalize } from 'lodash'
 import { Surface, Text } from '../ui'
-import eroticDse from './erotic-dse.png'
-import acceptDse from './accept-dse.png'
-import priceDse from './price-dse.png'
+import duckfaceDse from './duckface-dse.png'
 import Row from './row'
 
 const neurons = { erotic: 1543, accept: 599, price: 1825 }
 
-const textFeatureVis = {
-  erotic: ['erotic pleasure virgin types ⤵ on', '# 3 sexlife 1 stroke # htc'],
-  price: [
-    ' looking up to fontana treasure discovering heaven 6 6 8',
-    '@ aeronautics staff looking up into the heavens',
-  ],
-  accept: ['appointed advice - hall', 'allowed ! sans chiffons'],
-}
-
 export default () => {
-  const [showNsfw, setShowNsfw] = useState(false)
-
   return (
     <React.Fragment>
       <Surface
@@ -59,28 +45,16 @@ export default () => {
           Text Feature Visualization
         </div>
         <Row
-          name="Erotic"
-          neuron={neurons.erotic}
-          dse={eroticDse}
-          isNsfw
-          onShowNsfw={() => setShowNsfw(true)}
+          name="Duckface"
+          neuron={1692}
+          dse={duckfaceDse}
           row={0}
-          showNsfw={showNsfw}
-          textFeatureVis={textFeatureVis.erotic}
-        />
-        <Row
-          name="Price tag"
-          neuron={neurons.price}
-          dse={priceDse}
-          row={1}
-          textFeatureVis={textFeatureVis.price}
-        />
-        <Row
-          name="Accept / Appoint"
-          neuron={neurons.accept}
-          dse={acceptDse}
-          row={2}
-          textFeatureVis={textFeatureVis.accept}
+          textFeatureVis={[
+            'silly playful pout',
+            'goofy faces sticker day',
+            'ksis pout ! coffee bisfw kennethree',
+            'silly pout craze xd',
+          ]}
         />
       </Surface>
     </React.Fragment>

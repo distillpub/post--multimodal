@@ -39,7 +39,7 @@ let interesting = new NeuronTable({
 import EmotionsIntro from './diagrams/emotions/intro'
 import EmotionsSurprise from './diagrams/emotions/surprise'
 import EmotionsMinor from './diagrams/emotions/minor'
-import EmotionsDuckface from './diagrams/emotions/duckface'
+import EmotionsDuckface from './diagrams/emotions/minor/duckface'
 import EmotionsMentalHealth from './diagrams/emotions/mentalHealth'
 import EmotionsAtlas from './diagrams/emotions/atlas'
 import EmotionsSemantic from './diagrams/emotions/semantic'

@@ -15,6 +15,8 @@ const nameToNeuron = {
   Blocked: 2041,
   Coffee: 730,
   'Accept / Appoint': 599,
+  Trump: 89,
+  Spiderman: 349,
 }
 export const getEmotion = (name, facet, strength) => {
   const path = `${
