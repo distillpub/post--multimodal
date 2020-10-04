@@ -9,20 +9,32 @@ function backgroundColor(probability, imagenetClass, customHues) {
     ${
       imagenetClass in customHues ? "70%" : "0%"
     },
-    50%,
+    ${
+      imagenetClass in customHues ? "50%" : "60%"
+    },
     ${probability}
   )`;
 }
 
-function calculateImageSize(probabilities) {
-  return Math.round(probabilities.length * 17.5 - 1.5);
+function calculateImageSize() {
+  return Math.round(probabilities.length * 18 - 1);
+}
+
+function calculateBorderColor() {
+  let bestLabel = probabilities.reduce((output, pair) => (pair[0] > output[0]) ? pair : output, [0.0, null]);
+
+  if (Object.keys(customHues).includes(bestLabel[1])) {
+    return `hsla(${customHues[bestLabel[1]]}, 70%, 50%, 1)`;
+  } else {
+    return "#EEE";
+  }
 }
 
 </script>
 
-<div style="display: flex; flex-direction: row; border-radius: 6px; overflow: hidden; width: fit-content; height: {calculateImageSize(probabilities)}px; border: 1px solid #EEE;">
+<div style="display: flex; flex-direction: row; border-radius: 6px; overflow: hidden; width: fit-content; height: {calculateImageSize()}px; border: 1px solid {calculateBorderColor()};">
   <div style="border-right: 1px solid #EEE">
-    <img style="width: {calculateImageSize(probabilities)}px;" src="{imageUrl}?cache=26" alt="{imageAltText}"/>
+    <img style="width: {calculateImageSize()}px;" src="{imageUrl}?cache=26" alt="{imageAltText}"/>
   </div>
   <div>
     {#each probabilities as [probability, imagenetClass]}

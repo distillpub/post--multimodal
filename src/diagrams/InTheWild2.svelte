@@ -75,33 +75,32 @@ function hues(label) {
   }, {});
 }
 
-
 import ClassificationCard from '../components/ClassificationCard.svelte';
 </script>
 
 <div style="overflow-x: scroll;">
-<div style="width: fit-content; margin: auto;">
-  <div style="display: grid; grid-template-rows: repeat({Object.entries(attacks_2).length }); grid-template-columns: repeat({Object.entries(attacks_2.mug).length }); overflow-x: scroll; grid-gap: 5px;">
-    {#each Object.entries(attacks_2.mug) as [label, results], col_index}
-      <h4 style="grid-column: { col_index + 1}; margin-bottom: 0px">{@html label === "blank" ? "Blank" : "Labeled &ldquo;" + label + "&rdquo;" }</h4>
-    {/each}
-    {#each Object.entries(attacks_2) as [item, labels], row_index}
-      {#each Object.entries(labels) as [label, results], col_index}
-        <div style="grid-column: {col_index + 1 }">
-          <ClassificationCard
-            imageUrl={results.image_url}
-            imageAltText={`${item} labeled ${label}`}
-            probabilities={results.zero_shot_statistics.slice(0, 9)}
-            customHues={hues(label)}
-          />
-        </div>
+  <div style="width: fit-content; margin: auto;">
+    <div style="display: grid; grid-template-rows: repeat({Object.entries(attacks_2).length }); grid-template-columns: repeat({Object.entries(attacks_2.mug).length }); overflow: auto; grid-gap: 5px;">
+      {#each Object.entries(attacks_2.mug) as [label, results], col_index}
+        <h4 style="grid-column: { col_index + 1}; margin-bottom: 0px">{@html label === "blank" ? "No label" : "Labeled &ldquo;" + label + "&rdquo;" }</h4>
       {/each}
-      <br/>
-    {/each}
+      {#each Object.entries(attacks_2) as [item, labels], row_index}
+        {#each Object.entries(labels) as [label, results], col_index}
+          <div style="grid-column: {col_index + 1 }">
+            <ClassificationCard
+              imageUrl={results.image_url}
+              imageAltText={`${item} labeled ${label}`}
+              probabilities={results.zero_shot_statistics.slice(0, 9)}
+              customHues={hues(label)}
+            />
+          </div>
+        {/each}
+        <br/>
+      {/each}
+    </div>
+    <div class="figcaption">
+      <p><a class="figure-anchor" href="#in-the-wild-2">Figure N:</a> Additional in-the-wild attacks.</p>
+      <p>In a shoutout to <i>Adversarial Patch</i> we include the label <i>toaster</i> on a whim, and find that it does surprisingly well as a typographic attack!</p>
+    </div>
   </div>
-  <div class="figcaption">
-    <p><a class="figure-anchor" href="#in-the-wild-2">Figure N:</a> Additional in-the-wild attacks.</p>
-    <p>In a shoutout to <i>Adversarial Patch</i> we include the label <i>toaster</i> on a whim, and find that it does surprisingly well as a typographic attack!</p>
-  </div>
-</div>
 </div>

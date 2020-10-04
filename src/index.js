@@ -107,6 +107,10 @@ const diagrams = [
   ['enrichment-diagram-2', EnrichmentCircuit, {}],
   ['in-the-wild-1', InTheWild1, {}],
   ['in-the-wild-2', InTheWild2, {}],
+  ['literate-neurons', LiterateNeurons, {}],
+  ['attackable-neurons', AttackableNeurons, {}],
+  ['automated-attacks', AutomatedAttacks, {}],
+  ['attack-setup', AttackSetup, {}],
 ]
 
 for (let [elementId, DiagramClass, props] of diagrams) {
