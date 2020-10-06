@@ -75,8 +75,18 @@ d-figure > figure {
   height: fit-content;
 }
 d-footnote {
-  margin-left: -3px;
-  margin-right: 2px;
+  margin-left: -1px;
+  margin-right: 4px;
+}
+.footnote-sep {width: 0px;}
+.footnote-sep::before {
+  line-height: 1em; 
+  top: -.5em; 
+  font-size: 0.75em;
+  color: #999; 
+  margin-left: -6px; 
+  margin-right: 1px;
+  content: ",";
 }
 d-article h2 {
   border-bottom: none;
