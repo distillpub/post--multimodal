@@ -9,6 +9,7 @@ import NeuronTable from './diagrams/NeuronTable.svelte'
 import RegionalNeurons from './diagrams/RegionalNeurons.svelte'
 
 import 'regenerator-runtime/runtime'
+import AttackDemo from './diagrams/AttackDemo.svelte'
 import EnrichmentCircuit from './diagrams/EnrichmentCircuit.svelte'
 import FeaturesTable from './diagrams/FeaturesTable.svelte'
 import LiterateNeurons from './diagrams/LiterateNeurons.svelte'
@@ -99,6 +100,7 @@ let task_specific_data = {
 }
 
 const diagrams = [
+  ['intro-attack-demo', AttackDemo, {}],
   ['regional-neurons', RegionalNeurons, {}],
   ['enrichment-diagram', EnrichmentCircuit, {}],
   ['early-vision', FeaturesTable, early_vision_data],

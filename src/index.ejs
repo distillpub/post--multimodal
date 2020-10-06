@@ -29,8 +29,10 @@
       margin-bottom: 20px;
     }
     .todo {
-      padding: 5px;
+      margin-top: 8px;
+      padding: 10px;
       font-size: 80%;
+      line-height: 140%;
       background: rgb(250, 249, 242);
       border: 1px solid rgb(233, 230, 214);
       border-radius: 4px;
@@ -39,6 +41,10 @@
       grid-column-start: gutter-start;
       grid-column-end: screen-end;
       height: fit-content;
+    }
+    d-footnote {
+      margin-left: -3px;
+      margin-right: 2px;
     }
   </style>
 </head>
@@ -55,111 +61,61 @@
   </d-title>
 
   <d-article>
-    <p>
-      Learning representations that match those in the human brain is a holy
-      grail of machine learning. Two parallel shifts in the field give us hope
-      that our models are moving closer to this goal.
-    </p>
-    <p>
-      First, hand-crafted datasets are giving way to data scraped and sampled
-      from epicenters of human activity like Reddit and Twitter. This data is
-      chaotic, unstructured, resembling the world people interact with during
-      their development, a far cry from the highly structured hand-labeled
-      datasets of old.
-    </p>
-    <p>
-      Secondly, the human brain needs to work with several modalities such as
-      vision and scent to perceive the world around them. Several modern
-      neuroscience theories propose that different brain regions, such as the
-      auditory cortex and visual cortex each process low level inputs into a
-      shared abstract representation that can be fed to a global workspace for
-      further processing. Recent work in multimodal neural networks, and in
-      particular those trained with contrastive loss share a similar
-      architecture, with parallel streams converting different modalities like
-      text and images into a shared representation.
-    </p>
-    <p>
-      To see whether our hope was warranted we looked inside the multimodal
-      model presented in Radford et al to study its representations. We find a
-      landscape of neurons for cultural figures like Donald Trump and Justin
-      Bieber, with neurons corresponding to geographical regions and cultures
-      across the world, and families of neurons with a rich understanding of
-      human emotions. Interestingly, every one of these neurons are what we're
-      calling multimodal neurons, closely mimicking the famed "Halle Berre
-      neuron" found in the human visual cortex that responds to both pictures of
-      the address as well as pictures of her name.
-    </p>
+    
+  <p>In 2005, a letter published in Nature described human neurons responding primarily to specific people, such as Jennifer Anniston or Halle Berry, as well as landmarks []. The exciting thing wasn’t just that they selected for particular people,<d-footnote>previous results had reported units that respond to particular faces []</d-footnote> but that they did so regardless of whether they were shown images, drawings, or even images of the person’s name. The neurons were <i>multimodal</i>. As the lead author would put it: “You are looking at the far end of the transformation from metric, visual shapes to conceptual… information.” []</p>
 
-    <p>
-      To see whether our hope was warranted we looked inside the multimodels
-      presented in Radford et al to understand its representations. We found
-      vast landscapes of neurons for cultural figures like Donald Trump and
-      Justin Bieber, neurons corresponding to geographical regions and cultures
-      across the world, and families of neurons with a rich understanding of
-      human emotions. Excitingly, every one of these neurons are multimodal,
-      sometimes unifying up to six modalities, closely resembling the famous
-      "grandmother neuron" result from neuroscience.
-    </p>
+  <p>We report the existence of similar multimodal neurons in artificial neural networks. This includes neurons selecting for prominent public figures or fictional characters, 
+    <d-footnote>It’s important to note that the vast majority of people these models recognize don’t have a specific neuron, but instead are represented by a combination of neurons. Often, the contributing neurons are conceptually related. For example, the Trump neuron fires (albeit more weakly) for Mike Pence, contributing to representing him.</d-footnote>
+  such as Donald Trump, 
+    <d-footnote>Some of the figures we found neurons for are divisive. It should go without saying that having a dedicated neuron simply reflects the prominence of these figures in the training data, collected in [2019?]. Being divisive increases this prominence, because divisive figures are more likely to be extensively discussed on the Internet. In the case of the Donald Trump neuron, it seems likely there would have also been a Hillary Clinton neuron if data had been collected in 2016 instead. (There are other neurons which respond to Hillary Clinton in addition to other topics.) </d-footnote>
+  Lady Gaga, and Spiderman.
+  Like the biological multimodal neurons, these neurons respond to the same subject in photographs, drawings, and images of text:
+    <d-footnote>Not only do our neurons match Quiroga et al in firing for the same feature in photo, drawing, and text form, but some of the specific neurons are strikingly similar to those they describe. The Donald Trump neuron we found might be seen as similar to Quiroga et al’s Bill Clinton neuron. A Star Wars neuron we find seems analogous to a biological Star Wars neuron described Quiroga et al’s follow up paper []. And although we don’t find an exact Jennifer Anniston neuron, we do find a neuron for the TV show “Friends” which fires for her.</d-footnote>
+</p>
 
-    <p>
-      Here we investigate the model presented in Radford [] ... where a battery
-      of quantitative evaluations revealed that a simple dot product, with the
-      right query, can produce meaningful answers to questions that span the
-      pantheon of human meaningful tasks - optical character recognition,
-      geolocation, facial recognition, imagenet object identification, and even
-      basic visual question answering. How does a simple vector achieve such
-      feats?
-    </p>
+<figure style="display: grid; grid-column-gap: 64px; grid-row-gap: 16px; grid-template-columns: repeat(2, auto); max-width: 600px;">
+  <div class='figcaption'>Just as the biological Halle Berry neuron responds to photos, drawings, and text...</div>
+  <div class='figcaption'>... multimodal neurons in artificial neural networks activate for photos, cartoons, and text as well.</div>
+  <img src="images/IntroHalleBerry.png" />
+  <img src="images/IntroTrump.png" />
+</figure>
 
-    <p>
-      Amongst the highlights of our discoveries, we discover neurons that bear
-      an uncanny resemblance to those representations found in the brain --
-      multimodal neurons. Much like the famed “Halle Berry” or “Catwomen”
-      biological neurons, we too find neurons that exhibit invariance and
-      selectivity to famous identities, such as:
-    </p>
+<div class='todo'><b>TODO:</b> Trump neuron should be replaced or supplemented here once we have more dataset examples and find drawing/cartoon examples for other neurons.</div>
 
-    <p>
-      [Images of Spiderman] + [Sketches of Spiderman] + [the word “spiderman”]
-      [Photos of Obama/Trump] + [Political sketches of Obama/Trump] + [the words
-      “president”, obama, trump]
-    </p>
+<p>
+  But these people-detecting neurons only scratch the surface of highly abstract neurons we found. We also find features coding for emotions (eg. happy, sad, surprised), for regions of the world (eg. Northern Hemisphere, China, Philadelphia), for general physical features (eg. age, gender, mustache), for abstract topics (eg. family, Christmas, science), for fictional settings (eg. Star Wars, Avengers, Harry Potter), for styles (eg. child’s drawing, painting), and much more. 
+ These neurons generalize in highly abstract ways beyond Quiroga et al’s photo/drawing/text trifecta. For example, the regional neurons respond to the relevant regions on a world map, to distinct local wildlife, unusual products, apparel, architecture, politicians, dominant ethnicities, local script, landmarks, the names of countries and cities, and much more.
+</p>
 
-    <p>
-      It is tempting to declare that we have found examples of grandmother
-      neurons in our representations, but our investigations reveal much more
-      than meets the eye. For instance, we discover the Obama neuron also
-      responds to an image with the text “President”, and Spiderman neuron
-      activates both to Spiderman, his nemesis Venom, and his secret identity,
-      Peter Parker.
-    </p>
+<!--
+<figure style="">
+  <img src="images/head-circuit.png" />
+</figure>
+-->
 
-    <p>
-      Indeed, in the examples above, we find that the neurons respond to a web
-      of associations centered around an abstract concept. In fact, a majority
-      of these neurons appear to follow such a pattern, such as
-    </p>
+<p>
+We find these neurons in multimodal models [final name] from Radford et al [], although it’s possible similar features exist in earlier multimodal models. These models are trained to align pairs of images and text from the internet with their corresponding match, using a contrastive loss. 
+<d-footnote>The authors also kindly shared an alternative version from earlier experiments, where the training objective was an autoregressive language modelling cost, instead of a contrastive objective. The features seem pretty similar.</d-footnote>
+The visual side is a residual network [] of varying sizes. We refer readers to their paper for a detailed description.
+</p>
 
-    <p>
-      [Parenthood] [Christmas] [etc] Features of this kind cannot be pinned down
-      to an artifact of a specific hyperparameter configuration. Our
-      investigation spans a range of multimodal prototypes -- these models
-      contain not only architectural variations with changes in hyperparameters,
-      but are trained according to different objectives, including an
-      autoregressive objective, as well as a contrastive objective. In fact,
-      these models are even trained on different <i>data</i> - with some models
-      trained on only Twitter data, and others a combination of Twitter and
-      Reddit, and some on the full dataset mix - a mix of flickr, reddit,
-      twitter data.
-    </p>
+<p>
+In some ways, it seems natural for multimodal models to form these abstract visual features. We expect word embeddings and language models to learn abstract, topical features []. Arguably, what we’re seeing is the vision model learning to align with the native abstraction of language models.
+<d-footnote>Many researchers are interested in “grounding” language models by training them on tasks involving another domain, in the hope of them learning a more real world understanding of language. The abstract features we find in vision models can be seen as a kind of “inverse grounding”: vision taking on more abstract features by connection to language.</d-footnote>
+<!--Should add some kind of discussion to section 1  if we want to include the following:
+<d-footnote>This includes some of the classic kinds of bias we see in word embeddings: for example, a feature that responds to rastered images of the following words: housewives, kathy, britney, jennifer, elizabeth, amanda, madonna, daughters, pregnancy, pharmaceutical, pharmaceuticals, amy, tiffany, barbara, daughter, healthcare.</d-footnote>-->
+</p>
 
-    <p>
-      Yet despite the differences in modeling decisions, most of these models
-      converge on very similar representations and all adhere to similar modes
-      of organization. We are convinced therefore, that these qualitative
-      properties we investigate are not artifacts of training, but are critical
-      properties of a high quality representation [footnote].
-    </p>
+<p>
+We begin this article with a <a>preliminary analysis</a> of some of the features that exist in these multimodal models. From there, we’ll explore <a>how those features are used</a> to accomplish the models goal of aligning images and text. This leads us to discover that these models are vulnerable to a kind of <a>“typographical attack”</a> where adding the right text to images can cause them to be systemically misclassified. 
+</p>
+
+<figure id='intro-attack-demo'>
+</figure>
+
+<p>Finally, we’ll explore some of the intermediary features and circuits that build up abstract features. These explorations will require a few novel methods which we discuss in detail in an appendix 1.</p>
+
+
 
     <h3>Miscellaneous Neurons</h3>
 
