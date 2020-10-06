@@ -39,3 +39,150 @@ d-figure > figure {
   top: 26px;
   left: -48px;
 }
+
+
+.fullscreen-diagram {
+  grid-column: screen;
+  background: #f8f8fb;
+  padding: 10px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.placeholder {
+  padding: 40px;
+  font-size: 80%;
+  background: #f8f8fb;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  grid-column: text;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.todo {
+  margin-top: 8px;
+  padding: 10px;
+  font-size: 80%;
+  line-height: 140%;
+  background: rgb(250, 249, 242);
+  border: 1px solid rgb(233, 230, 214);
+  border-radius: 4px;
+  max-width: 250px;
+  margin-right: 4px;
+  grid-column-start: gutter-start;
+  grid-column-end: screen-end;
+  height: fit-content;
+}
+d-footnote {
+  margin-left: -3px;
+  margin-right: 2px;
+}
+d-article h2 {
+  border-bottom: none;
+}
+
+
+
+
+/* ****************************************
+ * TOC
+ ******************************************/
+@media(max-width: 1199px){
+  d-contents {
+    display: none;
+  }
+}
+
+/* d-article d-contents {
+  align-self: start;
+  grid-column: 1 / 4;
+  grid-row: auto / span 3;
+  width: calc(100% + 32px);
+  margin-right: -16px;
+  margin-top:  0em;
+  display: grid;
+  grid-template-columns: 
+    minmax(8px, 2fr) [toc] auto 
+    minmax(8px, 1fr) [toc-line] 1px
+    minmax(32px, 1fr );
+}
+
+d-article d-contents nav {
+  grid-column: toc;
+}
+
+d-article d-contents .toc-line {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  grid-column: toc-line;
+} */
+
+d-article d-contents {
+  align-self: start;
+  grid-column: 1 / 4;
+  grid-row: auto / span 3;
+  justify-self: end;
+  margin-top:  0em;
+  padding-right: 3em;
+  padding-left: 2em;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+d-contents a:hover {
+  border-bottom: none;
+}
+
+d-contents nav h3 {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+d-contents nav div {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+}
+
+d-contents nav a {
+  color: rgba(0, 0, 0, 0.8);
+  border-bottom: none;
+  text-decoration: none;
+}
+
+d-contents li {
+  list-style-type: none;
+}
+
+d-contents ul {
+  padding-left: 1em;
+}
+
+d-contents nav ul li {
+  margin-bottom: .25em;
+}
+
+d-contents nav a:hover {
+  text-decoration: underline solid rgba(0, 0, 0, 0.6);
+}
+
+d-contents nav ul {
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+
+d-contents nav>div {
+  display: block;
+  outline: none;
+  margin-bottom: 0.5em;
+}
+
+d-contents nav>div>a {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+d-contents nav>div>a:hover,
+d-contents nav>ul>li>a:hover {
+    text-decoration: none;
+}

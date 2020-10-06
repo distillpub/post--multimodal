@@ -7,49 +7,6 @@
     <%=require("../static/styles.css") %>
   </style>
   <script src="https://distill.pub/template.v2.js"></script>
-
-  <style>
-    .fullscreen-diagram {
-      grid-column: screen;
-      background: #f8f8fb;
-      padding: 10px;
-      padding-top: 40px;
-      padding-bottom: 40px;
-      border-top: 1px solid #f0f0f0;
-      border-bottom: 1px solid #f0f0f0;
-    }
-    .placeholder {
-      padding: 40px;
-      font-size: 80%;
-      background: #f8f8fb;
-      border: 1px solid #f0f0f0;
-      border-radius: 4px;
-      grid-column: text;
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-    .todo {
-      margin-top: 8px;
-      padding: 10px;
-      font-size: 80%;
-      line-height: 140%;
-      background: rgb(250, 249, 242);
-      border: 1px solid rgb(233, 230, 214);
-      border-radius: 4px;
-      max-width: 250px;
-      margin-right: 4px;
-      grid-column-start: gutter-start;
-      grid-column-end: screen-end;
-      height: fit-content;
-    }
-    d-footnote {
-      margin-left: -3px;
-      margin-right: 2px;
-    }
-    d-article h2 {
-      border-bottom: none;
-    }
-  </style>
 </head>
 
 <body>
@@ -64,7 +21,39 @@
   </d-title>
 
   <d-article>
-    
+   
+
+    <d-contents>
+      <nav class="toc figcaption">
+        <h4>Contents</h4>
+        <!--<div><a href="#introduction">Introduction</a></div>-->
+        <div><a href="#">Introduction</a></div>
+        <div><a href="#">Into the Multimodal Mind</a></div>
+        <ul>
+          <li><a href="#">Identity Recognition</a></li>
+          <li><a href="#">Regional Neurons</a></li>
+          <li><a href="#">Emotion Neurons</a></li>
+          <li><a href="#">Miscellaneous Neurons</a></li>
+        </ul>
+        <div><a href="#">Using Abstractions</a></div>
+        <ul>
+          <li><a href="#">Understanding language</a></li>
+          <li><a href="#">Emotional Intelligence</a></li>
+          <li><a href="#">Miscellaneous Neurons</a></li>
+        </ul>
+        <div><a href="#">Typographic Attacks</a></div>
+        <div><a href="#">The Mechanics of Abstraction</a></div>
+        <ul>
+          <li><a href="#">Universal Features and Circuits</a></li>
+          <li><a href="#">Task-specific Features</a></li>
+          <li><a href="#">The mechanics of Abstraction</a></li>
+        </ul>
+        <div><a href="#">Conclusion</a></div>
+        <div><a href="#">Appendix: Methodological Details</a></div>
+      </nav>
+      <div class='toc-line'></div>
+    </d-contents>
+
   <p>In 2005, a letter published in Nature described human neurons responding primarily to specific people, such as Jennifer Anniston or Halle Berry, as well as landmarks []. The exciting thing wasn’t just that they selected for particular people,<d-footnote>previous results had reported units that respond to particular faces []</d-footnote> but that they did so regardless of whether they were shown images, drawings, or even images of the person’s name. The neurons were <i>multimodal</i>. As the lead author would put it: “You are looking at the far end of the transformation from metric, visual shapes to conceptual… information.” []</p>
 
   <p>We report the existence of similar multimodal neurons in artificial neural networks. This includes neurons selecting for prominent public figures or fictional characters, 
