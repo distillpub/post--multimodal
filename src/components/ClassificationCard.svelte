@@ -36,14 +36,17 @@ function calculateBorderColor() {
   <div style="border-right: 1px solid #EEE">
     <img style="width: {calculateImageSize()}px;" src="{imageUrl}?cache=26" alt="{imageAltText}"/>
   </div>
-  <div>
+  <div style='display: flex; flex-direction: column;'>
     {#each probabilities as [probability, imagenetClass]}
       <div style="
+        flex-grow: 1;
         border-bottom: 1px solid #EEE;
+        margin-bottom: -1px;
+        padding-top: 1px;
         background-color: {backgroundColor(probability, imagenetClass, customHues)};
         color: #{ probability < 0.7 ? "000000" : "FFFFFF"}; padding: 0px 10px; line-height: 16px; width: 190px; font-size: 80%">
-        <small>{imagenetClass}
-          <span style="float: right;">{Math.round(probability * 10000) / 100 }%</span>
+        <small style='vertical-align: middle;'>{imagenetClass}
+          <span style="float: right; padding-top: 1px;">{Math.round(probability * 10000) / 100 }%</span>
         </small>
       </div>
     {/each}
