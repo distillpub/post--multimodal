@@ -88,7 +88,7 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
         {#each Object.entries(labels) as [label, results], col_index}
           <div style="grid-column: {col_index + 1 }">
             <ClassificationCard
-              imageUrl={results.image_url}
+              imageUrl={`/typographic/in-the-wild-2/${item}-${label}.jpg`}
               imageAltText={`${item} labeled ${label}`}
               probabilities={results.zero_shot_statistics.slice(0, 9)}
               customHues={hues(label)}

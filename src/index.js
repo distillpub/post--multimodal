@@ -9,6 +9,8 @@ import NeuronTable from './diagrams/NeuronTable.svelte'
 // import RegionalNeurons from './diagrams/RegionalNeurons.svelte'
 
 import 'regenerator-runtime/runtime'
+import AttackDemo from './diagrams/AttackDemo.svelte'
+import FeatureOverview from './diagrams/FeatureOverview.svelte'
 import EnrichmentCircuit from './diagrams/EnrichmentCircuit.svelte'
 import FeaturesTable from './diagrams/FeaturesTable.svelte'
 import LiterateNeurons from './diagrams/LiterateNeurons.svelte'
