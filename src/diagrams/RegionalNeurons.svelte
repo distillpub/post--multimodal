@@ -24,6 +24,7 @@
             name: "Latitude Neurons",
             neurons: [
                 {"model": "4x", "unit": 245, name: "Northern Hemisphere?", top_words: "saskatchewan, norwegian, newfoundland, wisconsin, vancouver"},
+                {"model": "rn50", "unit": 542, name: "Equator?", top_words: ""},
                 //{"model": "v1", "unit": 1220, name: "Tropical?", top_words: ""},
             ]
         },

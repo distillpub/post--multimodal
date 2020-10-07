@@ -98,7 +98,7 @@ d-article h2 {
 /* ****************************************
  * TOC
  ******************************************/
-@media(max-width: 1199px){
+@media(max-width: 1300px){
   d-contents {
     display: none;
   }
@@ -113,9 +113,9 @@ d-article h2 {
   margin-top:  0em;
   display: grid;
   grid-template-columns: 
-    minmax(8px, 2fr) [toc] auto 
+    minmax(8px, 1fr) [toc] auto 
     minmax(8px, 1fr) [toc-line] 1px
-    minmax(32px, 1fr );
+    minmax(32px, 2fr );
 }
 
 d-article d-contents nav {
