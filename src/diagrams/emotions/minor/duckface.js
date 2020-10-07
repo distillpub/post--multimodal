@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Surface, Text } from '../ui'
+import { Surface, Text } from '../../reactComponents/ui'
 import duckfaceDse from './duckface-dse.png'
 import Row from './row'
 

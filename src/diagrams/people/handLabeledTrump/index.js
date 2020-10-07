@@ -110,7 +110,7 @@ export default class HumanLabels extends React.Component {
       </Surface>
     )
 
-    const Valence = ({ name, children }) => {
+    const Group = ({ name, children }) => {
       return (
         <Surface marginRight={20}>
           <Text
@@ -119,7 +119,7 @@ export default class HumanLabels extends React.Component {
             fontWeight={500}
             textDecoration="uppercase"
           >
-            {name} Valence
+            {name}
           </Text>
           <Surface flexFlow="row" transform="translateX(-6px)">
             {children}
@@ -127,25 +127,32 @@ export default class HumanLabels extends React.Component {
         </Surface>
       )
     }
+    /*
+    'Video Games + Music',
+    'Black + Gay Rights',
+    'non-political',
+    'Political generic',
+    'Political trump aligned',
+    'Trump Minor',
+    'Trump Text',
+    'Trump Art',
+    'Trump Profile',
+    */
 
     return (
       <Surface width={width} margin="auto">
         <Surface flexFlow="row" marginLeft={60}>
-          <Valence name="High">
-            <Label index={8}>Music &amp; Sports</Label>
-            <Label index={7}>Travel, Food, Pet</Label>
-          </Valence>
-          <Valence name="Neutral">
-            <Label index={6}>Unrelated</Label>
-            <Label index={4}>Medication &amp; Drugs</Label>
-            <Label index={5}>Word like "mental health"</Label>
-          </Valence>
-          <Valence name="Low">
-            <Label index={3}>Depressing Joke</Label>
-            <Label index={2}>Bad Feeling</Label>
-            <Label index={1}>Anxiety</Label>
-            <Label index={0}>Depression</Label>
-          </Valence>
+          <Group name="Neutral">
+            <Label index={6}>Video Games and Music</Label>
+            <Label index={5}>Black and LGBT Rights</Label>
+            <Label index={4}>Political Generic</Label>
+          </Group>
+          <Group name="Trumpian">
+            <Label index={3}>Trump Aligned Politics</Label>
+            <Label index={2}>Partially Photo of Trump</Label>
+            <Label index={1}>Trump Related Art</Label>
+            <Label index={0}>Photo of Trump</Label>
+          </Group>
         </Surface>
         <Surface width={width} alignSelf="center" transform="translateY(-20px)">
           <VictoryChart width={width} height={400} {...stackProps}>
@@ -214,14 +221,7 @@ export default class HumanLabels extends React.Component {
             alignSelf: 'center',
           }}
         >
-          By measuring the conditional probability of categories with different
-          levels of valence we see that most of the strongest activations
-          correspond to mental illnesses like anxiety and depression. However,
-          categories we may consider valence neutral, like the text "mental
-          health" or medication, tend to cause positive activations. This may
-          reflect a bias on the Internet where mental health is more often used
-          in the context of mental disease than discussed in the abstract in a
-          valence neutral way.
+          trump1
         </figcaption>
       </Surface>
     )

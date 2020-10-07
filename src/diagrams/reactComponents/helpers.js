@@ -1,5 +1,6 @@
 import { isNumber } from 'lodash'
 const width = 128
+// const width = 288
 const nameToNeuron = {
   Shocked: 2478,
   Crying: 1193,
@@ -16,6 +17,8 @@ const nameToNeuron = {
   Coffee: 730,
   'Accept / Appoint': 599,
   Trump: 89,
+  Jesus: 1777,
+  Hitler: 309,
   Spiderman: 349,
 }
 export const getEmotion = (name, facet, strength) => {

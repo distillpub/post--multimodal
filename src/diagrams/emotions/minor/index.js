@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { capitalize } from 'lodash'
-import { Surface, Text } from '../ui'
+import { Surface, Text } from '../../reactComponents/ui'
 import eroticDse from './erotic-dse.png'
 import acceptDse from './accept-dse.png'
 import priceDse from './price-dse.png'

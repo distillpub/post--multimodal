@@ -1,9 +1,9 @@
 import React from 'react'
-import { Surface, Text } from '../ui'
+import { Surface, Text } from '../../reactComponents/ui'
 import dseImage from './dse.png'
 import featureVis from './featureVis.png'
 import poseFacet from './pose.png'
-import { getEmotion } from '../helpers'
+import { getEmotion } from '../../reactComponents/helpers'
 
 const neuronIndex = 2478
 

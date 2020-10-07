@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { capitalize, range, isNumber } from 'lodash'
-import { getEmotion } from '../helpers'
+import { getEmotion } from '../../reactComponents/helpers'
 import { SegmentedControl } from 'evergreen-ui'
-import { Surface, Text } from '../ui'
+import { Surface, Text } from '../../reactComponents/ui'
 
 const friendlyName = {
   'Accept / Appoint': 'Accepting an Offer',
@@ -14,8 +14,7 @@ const friendlyName = {
 const imgSize = 166
 
 const neurons = [
-  ['Trump', 'Spiderman', 'Happy', 'Sleepy'],
-  // ['Shocked', 'Crying', 'Happy', 'Sleepy'],
+  ['Shocked', 'Crying', 'Happy', 'Sleepy'],
   ['Evil', 'Punishment', 'Serious', 'Soft smile'],
   ['Incarcerated', 'Erotic', 'Blocked', 'Accept / Appoint'],
 ]

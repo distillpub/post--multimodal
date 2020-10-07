@@ -1,6 +1,6 @@
 import React from 'react'
-import { getEmotion } from '../helpers'
-import { Surface, Text } from '../ui'
+import { getEmotion } from '../../reactComponents/helpers'
+import { Surface, Text } from '../../reactComponents/ui'
 
 const strength = 8
 

@@ -42,12 +42,23 @@ export default class HumanLabels extends React.Component {
       labelNames = [],
       stackProps = {},
       children,
-      colors,
       yAxisProps = {
         label: '',
       },
       probChart = false,
     } = data
+
+    const colors = [
+      // '#7acda3',
+      '#00bcd4',
+      '#b2ebf2',
+      '#fff6d7',
+      '#ffcfaa',
+      '#ffa77d',
+      '#ff7f50',
+      '#ff5722',
+      '#e03400',
+    ]
 
     if (typeof window === 'undefined') {
       return null
@@ -110,7 +121,7 @@ export default class HumanLabels extends React.Component {
       </Surface>
     )
 
-    const Valence = ({ name, children }) => {
+    const Group = ({ name, children }) => {
       return (
         <Surface marginRight={20}>
           <Text
@@ -119,7 +130,7 @@ export default class HumanLabels extends React.Component {
             fontWeight={500}
             textDecoration="uppercase"
           >
-            {name} Valence
+            {name}
           </Text>
           <Surface flexFlow="row" transform="translateX(-6px)">
             {children}
@@ -127,25 +138,34 @@ export default class HumanLabels extends React.Component {
         </Surface>
       )
     }
+    /*
+    'Video Games + Music',
+    'Black + Gay Rights',
+    'non-political',
+    'Political generic',
+    'Political trump aligned',
+    'Trump Minor',
+    'Trump Text',
+    'Trump Art',
+    'Trump Profile',
+    */
 
     return (
       <Surface width={width} margin="auto">
         <Surface flexFlow="row" marginLeft={60}>
-          <Valence name="High">
-            <Label index={8}>Music &amp; Sports</Label>
-            <Label index={7}>Travel, Food, Pet</Label>
-          </Valence>
-          <Valence name="Neutral">
-            <Label index={6}>Unrelated</Label>
-            <Label index={4}>Medication &amp; Drugs</Label>
-            <Label index={5}>Word like "mental health"</Label>
-          </Valence>
-          <Valence name="Low">
-            <Label index={3}>Depressing Joke</Label>
-            <Label index={2}>Bad Feeling</Label>
-            <Label index={1}>Anxiety</Label>
-            <Label index={0}>Depression</Label>
-          </Valence>
+          <Group name="">
+            {[
+              'Nelson Mandela',
+              'Martin Luthar King Jr.',
+              'Steve Jobs',
+              'Barack Obama',
+              'Hillary Clinton',
+              'Ted Cruz',
+              'Donald Trump',
+            ].map((person, index) => (
+              <Label index={index}>{person}</Label>
+            ))}
+          </Group>
         </Surface>
         <Surface width={width} alignSelf="center" transform="translateY(-20px)">
           <VictoryChart width={width} height={400} {...stackProps}>
@@ -214,14 +234,22 @@ export default class HumanLabels extends React.Component {
             alignSelf: 'center',
           }}
         >
-          By measuring the conditional probability of categories with different
-          levels of valence we see that most of the strongest activations
-          correspond to mental illnesses like anxiety and depression. However,
-          categories we may consider valence neutral, like the text "mental
-          health" or medication, tend to cause positive activations. This may
-          reflect a bias on the Internet where mental health is more often used
-          in the context of mental disease than discussed in the abstract in a
-          valence neutral way.
+          To see how the Trump neuron corresponds to different individuals we
+          searched the query "X giving a speech at a microphone" for various
+          individuals, then plotted highest magnitude activation from 74
+          pictures{' '}
+          <d-footnote>
+            The chart here shows the results from our first try doing the search
+            query, this number was based partially on a technical detail of the
+            method we used for pulling the images.
+          </d-footnote>
+          , removing the bottom and top 3 outliers to account for the fact that
+          not all photos contain the individual. By binning them into histograms
+          we can see the conditional probability of choosing an image of each
+          individual at each range of activation from this dataset. For two bins
+          which contained no activations, which were all over activation
+          magnitude 15, we filled them in with Donald Trump, because every
+          activation over 15 is of Donald Trump.
         </figcaption>
       </Surface>
     )

@@ -6,7 +6,7 @@ import Figure from './diagrams/Neuron.svelte'
 import HyperSet from './diagrams/HyperSet.svelte'
 import UniversalityTable from './diagrams/UniversalityTable.svelte'
 import NeuronTable from './diagrams/NeuronTable.svelte'
-import RegionalNeurons from './diagrams/RegionalNeurons.svelte'
+// import RegionalNeurons from './diagrams/RegionalNeurons.svelte'
 
 import 'regenerator-runtime/runtime'
 import EnrichmentCircuit from './diagrams/EnrichmentCircuit.svelte'
@@ -37,6 +37,8 @@ let interesting = new NeuronTable({
 
 // Nick
 
+import PeopleHandLabeled from './diagrams/people/handLabeledTrump'
+import PeopleTrumpPeople from './diagrams/people/trumpPeople'
 import EmotionsIntro from './diagrams/emotions/intro'
 import EmotionsSurprise from './diagrams/emotions/surprise'
 import EmotionsMinor from './diagrams/emotions/minor'
@@ -99,7 +101,7 @@ let task_specific_data = {
 }
 
 const diagrams = [
-  ['regional-neurons', RegionalNeurons, {}],
+  // ['regional-neurons', RegionalNeurons, {}],
   ['enrichment-diagram', EnrichmentCircuit, {}],
   ['early-vision', FeaturesTable, early_vision_data],
   ['task-specific', FeaturesTable, task_specific_data],
@@ -118,20 +120,6 @@ for (let [elementId, DiagramClass, props] of diagrams) {
   let example = new DiagramClass({ target, props })
 }
 
-ReactDOM.render(
-  <EmotionsSemantic
-    emotionNames={[
-      'ashamed',
-      'let down',
-      'resentful',
-      'aggressive',
-      'skeptical',
-      'disappointed',
-      'grief',
-    ]}
-  />,
-  document.getElementById('emotions-semantic-clever')
-)
 ReactDOM.render(<EmotionsIntro />, document.getElementById('emotions-intro'))
 ReactDOM.render(<EmotionsMinor />, document.getElementById('emotions-minor'))
 ReactDOM.render(
@@ -146,18 +134,46 @@ ReactDOM.render(
   <EmotionsMentalHealth />,
   document.getElementById('emotions-mentalhealth')
 )
+ReactDOM.render(
+  <PeopleHandLabeled />,
+  document.getElementById('people-handlabeled')
+)
+ReactDOM.render(
+  <PeopleTrumpPeople />,
+  document.getElementById('people-trumppeople')
+)
 
 ReactDOM.render(<EmotionsAtlas />, document.getElementById('emotions-atlas'))
 
 ReactDOM.render(
   <EmotionsSemantic
-    emotionNames={[
-      'pressured',
-      'confident',
-      'disrespected',
-      'weak',
-      'worthless',
-    ]}
+    emotionNames={['energetic', 'jealous', 'bored', 'intimate', 'surprised']}
+  />,
+  document.getElementById('emotions-semantic-interesting')
+)
+
+ReactDOM.render(
+  <EmotionsSemantic
+    emotionNames={['powerful', 'creative', 'embarrassed', 'content']}
+  />,
+  document.getElementById('emotions-semantic-worldly')
+)
+
+ReactDOM.render(
+  <EmotionsSemantic
+    emotionNames={['powerful', 'creative', 'embarrassed', 'content']}
+  />,
+  document.getElementById('emotions-semantic-worldly')
+)
+
+ReactDOM.render(
+  <EmotionsSemantic emotionNames={['stressed', 'anxious', 'mad']} />,
+  document.getElementById('emotions-semantic-mental')
+)
+
+ReactDOM.render(
+  <EmotionsSemantic
+    emotionNames={['accepted', 'confident', 'pressured', 'humiliated']}
   />,
   document.getElementById('emotions-semantic-bias')
 )
