@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { capitalize, isNumber } from 'lodash'
-import { getEmotion } from '../helpers'
+import { capitalize, range, isNumber } from 'lodash'
+import { getEmotion } from '../../reactComponents/helpers'
 import { SegmentedControl } from 'evergreen-ui'
-import { Surface, Text } from '../ui'
+import { Surface, Text } from '../../reactComponents/ui'
 
 const friendlyName = {
   'Accept / Appoint': 'Accepting an Offer',

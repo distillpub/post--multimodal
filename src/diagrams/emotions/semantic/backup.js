@@ -1,5 +1,5 @@
 import React from 'react'
-import { Surface, ZoomedImg, Text } from '../ui'
+import { Surface, ZoomedImg, Text } from '../../reactComponents/ui'
 import { range, max, sortBy, includes } from 'lodash'
 import data from './data'
 export const getFace = (emotion) =>

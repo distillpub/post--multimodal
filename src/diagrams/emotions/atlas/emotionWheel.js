@@ -1,4 +1,4 @@
-import { Surface, ZoomedImg, Text } from '../ui'
+import { Surface, ZoomedImg, Text } from '../../reactComponents/ui'
 import React from 'react'
 import { range, max, capitalize, sortBy, reverse, includes } from 'lodash'
 import * as d3 from 'd3'
@@ -150,13 +150,12 @@ Bad
 		Indifferent
 `)
 
-const Wheel = ({ tree, color, useParent = true }) => {
+const Wheel = ({ tree, width = 440, color, useParent = true }) => {
   const data = tree
 
   const partition = (data) =>
     d3.partition().size([2 * Math.PI, radius])(d3.hierarchy(data).count())
-  const width = 440
-  const radius = 220
+  const radius = width / 2
   const arc = d3
     .arc()
     .startAngle((d) => d.x0)

@@ -1,18 +1,34 @@
 import React from 'react'
-import { HoverZoom, Surface, Text } from '../ui'
+import { HoverZoom, Surface, Text } from '../../reactComponents/ui'
 import textNeurons from './textNeurons'
 import neuronNames from './neuronNames'
-import { range, max, sortBy, includes } from 'lodash'
-import data from './data'
+import { range, capitalize, max, sortBy, includes } from 'lodash'
+import { getEmotion } from '../../reactComponents/helpers'
+import allSparse from './allSparse'
 
-export const getFace = (emotion) =>
-  `https://storage.googleapis.com/fls/nickc/multimodal/emotions_alpha3/${emotion.toLowerCase()}.png`
+const data = allSparse[40]
 
-export const getNeuronFace = (neuron) =>
-  `https://storage.googleapis.com/fls/nickc/multimodal/emotions_neurons_2point3_${neuron}.png`
+const base = `https://storage.googleapis.com/clarity-public/ggoh/facets_multiscale_emotions_6`
+const alphaLevel = '0.5'
+const facet = 'face'
+const sparsity = 100
+export const getFace = (emotion, strength) =>
+  `${base}/${capitalize(
+    emotion
+  )}_${facet}_True_RN50_4x_${sparsity}_${alphaLevel}_288_${strength}.png`
 
-const { emotions } = data
+const emotions = data
+
+const facetOptions = {
+  // arabic text
+  479: {
+    facet: 'text',
+    strength: 6,
+  },
+}
+
 export default ({ emotionNames }) => {
+  // emotionNames = Object.keys(emotions)
   const scaleEmotion = (neurons) => {
     const maxActivation = max(neurons.map(([val, index]) => val))
     return sortBy(
@@ -79,7 +95,7 @@ export default ({ emotionNames }) => {
               <HoverZoom width={imgSize} height={imgSize}>
                 <img
                   style={{ display: 'block', borderRadius: 5 }}
-                  src={getFace(name)}
+                  src={getFace(name, 5)}
                 />
               </HoverZoom>
               <div className="figcaption">{name}</div>
@@ -96,6 +112,14 @@ export default ({ emotionNames }) => {
             </Surface>
 
             {emotionRow.map(([activation, neuron], col) => {
+              // don't show the smallest values
+              if (Math.abs(activation) < 0.05) return
+
+              const { facet, strength } = facetOptions[neuron] || {
+                facet: 'face',
+                strength: 5,
+              }
+
               return (
                 <React.Fragment>
                   <Surface
@@ -116,7 +140,7 @@ export default ({ emotionNames }) => {
                           height: imgSize,
                           borderRadius: 5,
                         }}
-                        src={getNeuronFace(neuronNames[neuron])}
+                        src={getEmotion(neuron, facet, strength)}
                       />
                     </HoverZoom>
                     <Surface
@@ -162,7 +186,7 @@ export default ({ emotionNames }) => {
                         textAlign: 'center',
                       }}
                     >
-                      +
+                      {emotionRow[col + 1][0] > 0 ? '+' : '-'}
                     </div>
                   )}
                 </React.Fragment>

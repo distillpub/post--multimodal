@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Surface, Text } from '../ui'
+import { Surface, Text } from '../../reactComponents/ui'
 import dse from './dse.png'
 
 const getEmotion = (name) =>
@@ -35,12 +35,7 @@ const Row = ({
   )
 }
 
-const textFeatureVis = [
-  'silly playful pout',
-  'goofy faces sticker day',
-  'ksis pout ! coffee bisfw kennethree',
-  'silly pout craze xd',
-]
+const textFeatureVis = []
 
 export default () => {
   return (
