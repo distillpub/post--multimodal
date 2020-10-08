@@ -22,6 +22,7 @@
 
   <d-article>
    
+    
 
     <d-contents>
       <nav class="toc figcaption">
@@ -54,7 +55,8 @@
       <div class='toc-line'></div>
     </d-contents>
 
-  <p>In 2005, a letter published in Nature described human neurons responding primarily to specific people, such as Jennifer Anniston or Halle Berry, as well as landmarks <d-cite key="quiroga2005invariant"></d-cite>. The exciting thing wasn’t just that they selected for particular people,
+    
+  <p>In 2005, a letter published in Nature described human neurons responding to specific people,  as well as landmarks <d-cite key="quiroga2005invariant"></d-cite>. The exciting thing wasn’t just that they selected for particular people, such as Jennifer Anniston or Halle Berry,
     <d-footnote>previous results had reported units that respond to particular faces []</d-footnote>
   but that they did so regardless of whether they were shown images, drawings, or even images of the person’s name. The neurons were <i>multimodal</i>. As the lead author would put it: "You are looking at the far end of the transformation from metric, visual shapes to conceptual… information."
     <d-footnote>Quiroga's full quote, from <a href='https://www.newscientist.com/article/dn7567-why-your-brain-has-a-jennifer-aniston-cell/'>New Scieintist</a> reads: "I think that’s the excitement to these results. You are looking at the far end of the transformation from metric, visual shapes to conceptual memory-related information. It is that transformation that underlies our ability to understand the world. It’s not enough to see something familiar and match it. It’s the fact that you plug visual information into the rich tapestry of memory that brings it to life." We elided the portion discussing memory since it was less relevant.</d-footnote></p>
@@ -80,8 +82,8 @@
 <div class='todo'><b>TODO:</b> Trump neuron should be replaced or supplemented here once we have more dataset examples and find drawing/cartoon examples for other neurons.</div>
 
 <p>
-  But these people-detecting neurons only scratch the surface of highly abstract neurons we found. We also find features coding for emotions (eg. happy, sad, surprised), for regions of the world (eg. Northern Hemisphere, China, Philadelphia), for general physical features (eg. age, gender, mustache), for abstract topics (eg. family, Christmas, science), for fictional settings (eg. Star Wars, Avengers, Harry Potter), for styles (eg. child’s drawing, painting), and much more. 
- These neurons generalize in highly abstract ways beyond Quiroga et al’s photo/drawing/text trifecta. For example, the regional neurons respond to the relevant regions on a world map, to distinct local wildlife, unusual products, apparel, architecture, politicians, dominant ethnicities, local script, landmarks, the names of countries and cities, and much more.
+  But these people-detecting neurons only scratch the surface of highly abstract neurons we found. We also find features coding for emotions, regions of the world, fictional settings, and much more.
+  These neurons generalize in highly abstract ways beyond photo/drawing/text multimodality. For example, the regional neurons respond to the relevant regions on a world map, dominant ethnicities, local script, the names of countries and cities, and much more.
 </p>
 
 
@@ -90,13 +92,21 @@
 
 
 <p>
-We find these neurons in multimodal models [final name] from Radford et al [], although it’s possible similar features exist in earlier multimodal models. These models are trained to align pairs of images and text from the internet with their corresponding match, using a contrastive loss. 
-<d-footnote>The authors also kindly shared an alternative version from earlier experiments, where the training objective was an autoregressive language modelling cost, instead of a contrastive objective. The features seem pretty similar.</d-footnote>
-The visual side is a residual network [] of varying sizes. We refer readers to their paper for a detailed description.
+We find these multimodal neurons in the recent CLIP models [], although it's possible similar undiscovered multimodal neurons may exist in earlier models.
+A CLIP model consists of both a ResNet vision model and a Transform language model, trained to align pairs of images and text from the internet using a contrastive loss. 
+  <d-footnote>The authors also kindly shared an alternative version from earlier experiments, where the training objective was an autoregressive language modelling cost, instead of a contrastive objective. The features seem pretty similar.</d-footnote>
+There are actually several CLIP models of varying sizes; we find evidence of multimodal neurons in all of them, but focus on studying the mid-sized "4x" model.
+  <d-footnote>We found it challenging to make feature visualization work on thee largest CLIP models. The reasons why remain unclear.</d-footnote>
+We refer readers to their paper for a detailed description.
+
 </p>
 
 <p>
-In some ways, it seems natural for multimodal models to form these abstract visual features. We expect word embeddings and language models to learn abstract, topical features []. Arguably, what we’re seeing is the vision model learning to align with the native abstraction of language models.
+  We focus on vision model, so when we talk about a multimodal neuron responding to text we mean the model "reading" <i>images</i> of text.
+  <d-footnote>
+  The alignment with the text side of the model might be seen as an additional form of multimodality, perhaps analogous to a human neuron responding to hearing a word rather than seeing it.
+  </d-footnote>
+In some ways, it seems natural for contrastive training of vision and language to create these abstract visual features. We expect word embeddings and language models to learn abstract "topic" features []. Arguably, we’re just seeing the vision model align with the native abstraction of language models.
 <d-footnote>Many researchers are interested in “grounding” language models by training them on tasks involving another domain, in the hope of them learning a more real world understanding of language. The abstract features we find in vision models can be seen as a kind of “inverse grounding”: vision taking on more abstract features by connection to language.</d-footnote>
 <!--Should add some kind of discussion to section 1  if we want to include the following:
 <d-footnote>This includes some of the classic kinds of bias we see in word embeddings: for example, a feature that responds to rastered images of the following words: housewives, kathy, britney, jennifer, elizabeth, amanda, madonna, daughters, pregnancy, pharmaceutical, pharmaceuticals, amy, tiffany, barbara, daughter, healthcare.</d-footnote>-->
@@ -111,6 +121,9 @@ We begin this article with a <a>preliminary analysis</a> of some of the features
 
 <p>Finally, we’ll explore some of the intermediary features and circuits that build up abstract features. These explorations will require a few novel methods which we discuss in detail in an appendix 1.</p>
 
+
+<figure id="people-table" class='fullscreen-diagram'>
+</figure>
 
 
     <br />

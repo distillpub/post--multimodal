@@ -1,5 +1,8 @@
 
 <script>
+    import NeuronCard from '../components/NeuronCard.svelte';
+    import NeuronCardInfo from '../components/NeuronCardInfo.svelte';
+    import {microscope_url, map_url, facet_icon_url, dataset_examples_url} from '../urls.js';
     let strength = 4;
 
     let neuron_families = [
@@ -42,12 +45,12 @@
     $: neurons = neuron_families[selected_family].neurons;
 
     let facets = [
+        {"name": 'text', "fancy_name": "Text Facet"},
         {"name": 'face', "fancy_name": "Face Facet"},
         {"name": 'arch', "fancy_name": "Architecture Facet"},
         //{"name": 'indoor'},
         {"name": 'logo', "fancy_name": "Logo Facet"},
         //{"name": 'nature'},
-        {"name": 'text', "fancy_name": "Text Facet"}
         ];
 
     let active = undefined;
@@ -58,32 +61,6 @@
     }
     function leave(){
         active_unsetter = setTimeout(() => {active=undefined;}, 50)
-    }
-
-
-    function microscope_url(neuron){
-        let model_slug = {
-            "4x": "contrastive_4x/image_block_4_5_Add_6_0"
-        }[neuron.model];
-        return `https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/${model_slug}/${neuron.unit}`;
-    }
-    function map_url(neuron){
-        let model_slug = {
-            "v1":   "v1_4_2",
-            "rn50":  "rn50_4_2",
-            "rn101": "v2_4_2",
-            "4x":    "4x_4_5"
-        }[neuron.model];
-        return `http://storage.googleapis.com/openai-clarity/colah/multimodal-vis/maps_data/geographical/${model_slug}_${neuron.unit}.jpeg`;
-    }
-    function facet_icon_url(neuron, facet){
-        let model_slug = {
-            "v1": "v1",
-            "rn50": "RN50",
-            "rn101": "RN101",
-            "4x": "RN50_4x"
-        }[neuron.model];
-        return `https://storage.googleapis.com/clarity-public/ggoh/facets_multiscale/${neuron.unit}_${facet.name}_${model_slug}_${strength}_128.png`;
     }
 </script>
 
@@ -208,22 +185,19 @@
     {/each}
     
     {#each facets as facet, facet_i}{#each neurons as neuron, neuron_i}
-    <a 
-        href="{microscope_url(neuron)}" 
-        class="img-link"
-        style="grid-column: neuron {neuron_i+1}; grid-row: facet {facet_i+1}; {(active != undefined && active != neuron_i)? 'opacity: 0.25;' : ''}"
-        on:mouseover={() => enter(neuron_i)} on:mouseout={leave} >
-    <img class='neuron-facet'
-      src="{facet_icon_url(neuron, facet)}"
-      
-      alt="{neuron.unit}">
-    </a>
+    <div style="grid-column: neuron {neuron_i+1}; grid-row: facet {facet_i+1}; {(active != undefined && active != neuron_i)? 'opacity: 0.25;' : ''}"
+    on:mouseover={() => enter(neuron_i)} on:mouseout={leave}>
+        <NeuronCard neuron={neuron} facets={[facet]} fv={true} ds={false} />
+    </div>
+
     {/each}{/each}
 
     <div style="grid-column: label-major; grid-row: facets;" >
         <div class='figlabel'>Faceted Feature Visualizations</div>
         <div class='figcaption'>Regional neurons respond to many different kinds of images related to their region. Faceted feature visualiziation allow us to see some of this diversity.</div>
         <!-- by creating stimuli that activate a given neuron <em>through a specified set of lower-level neurons</em> associated with a facet.-->
+        <br>
+        <!--<NeuronCardInfo fv={true} ds={false} /> -->
     </div>
 
     <div style="grid-column: label-major-line; grid-row: facets; border-right: 1px solid #DDD;"></div>

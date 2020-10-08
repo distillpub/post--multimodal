@@ -1,0 +1,55 @@
+
+export function as_neuron(neuron) {
+    if (typeof neuron === 'number') { 
+        return {model: '4x', unit: neuron}
+    }
+    return neuron;
+}
+
+export function as_facet(facet) {
+    if (typeof facet === 'string') { 
+        return {name: facet}
+    }
+    return facet;
+}
+
+
+export function microscope_url(neuron){
+    neuron = as_neuron(neuron);
+    let model_slug = {
+        "4x": "contrastive_4x"
+    }[neuron.model];
+    let layer = neuron.layer || "image_block_4_5_Add_6_0";
+    return `https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/${model_slug}/${layer}/${neuron.unit}`;
+}
+
+export function map_url(neuron){
+    neuron = as_neuron(neuron);
+    let model_slug = {
+        "v1":   "v1_4_2",
+        "rn50":  "rn50_4_2",
+        "rn101": "v2_4_2",
+        "4x":    "4x_4_5"
+    }[neuron.model];
+    return `http://storage.googleapis.com/openai-clarity/colah/multimodal-vis/maps_data/geographical/${model_slug}_${neuron.unit}.jpeg`;
+}
+
+export function facet_icon_url(neuron, facet="any"){
+    neuron = as_neuron(neuron);
+    let strength = (facet=="any")? 0 : 5;
+    facet = as_facet((facet=="any")? "text" : facet);
+    let model_slug = {
+        "v1": "v1",
+        "rn50": "RN50",
+        "rn101": "RN101",
+        "4x": "RN50_4x"
+    }[neuron.model];
+    return `https://storage.googleapis.com/clarity-public/ggoh/facets_multiscale/${neuron.unit}_${facet.name}_${model_slug}_${strength}_128.png`;
+    // return `https://storage.googleapis.com/clarity-public/ggoh/facets_hybrid_lessjitter/${neuron.unit}_${facet}_False_${model_slug}_64_${strength}.png`;
+}
+
+export function dataset_examples_url(neuron, facet="any"){
+    facet = as_facet(facet);
+    neuron = as_neuron(neuron);
+    return `https://storage.googleapis.com/openai-clarity/colah/multimodal-vis/facet-ds/4x/${neuron.unit}_${facet.name}.png`;
+}
