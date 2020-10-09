@@ -16,10 +16,13 @@ export function as_facet(facet) {
 
 export function microscope_url(neuron){
     neuron = as_neuron(neuron);
-    let model_slug = {
-        "4x": "contrastive_4x"
+    let [model_slug, last_layer] = {
+        "rn50": ["contrastive_rn50", "image_block_4_2_Add_6_0"],
+        "v1": ["contrastive_v1", "image_block_4_2_Add_6_0"],
+        "rn101": ["contrastive_v2", "image_block_4_2_Add_6_0"],
+        "4x": ["contrastive_4x", "image_block_4_5_Add_6_0"],
     }[neuron.model];
-    let layer = neuron.layer || "image_block_4_5_Add_6_0";
+    let layer = neuron.layer || last_layer;
     return `https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/${model_slug}/${layer}/${neuron.unit}`;
 }
 

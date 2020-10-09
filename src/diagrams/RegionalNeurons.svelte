@@ -7,36 +7,222 @@
 
     let neuron_families = [
         {
-            name: "4x model - medium sized regions",
+            name: "Selected Units form 4x model",
             neurons: [ 
-                {"model": "4x", "unit": 862, name: "USA?", top_words: "americans, american, america, usa, americas"}, // USA
-                //{"model": "4x", "unit": 1317, name: "West Africa?", top_words: "zimbabwe, tanzania, uganda, rwanda, kenya"},
+                {"model": "4x", "unit": 862, name: "USA?", top_words: "americans, american, america, usa, americas"},
                 {"model": "4x", "unit": 1257, name: "West Africa?", top_words: "ghana, uganda, africa, tanzania, african"},
-                //{"model": "4x", "unit": 2558, name: "UK / Australia?", top_words: "britain, london, scottish, yorkshire, canberra"}, 
-                //{"model": "4x", "unit": 2063, name: "France?", top_words: "pierre, notre, rouge, voyeur, mardi"},  // no map
-                //{"model": "4x", "unit": 309, name: "Germany?", top_words: "deutschland, deutsche, volkswagen, deutsch"}, // no map
                 {"model": "4x", "unit": 218, name: "Europe?", top_words: "netherlands, luxembourg, stockholm, amsterdam, switzerland"}, 
                 {"model": "4x", "unit": 1067, name: "India?", top_words: "mumbai, singh, pakistan, afghanistan, bangladesh"},
-                //{"model": "4x", "unit": 26, name: "Japan", top_words: "hentai, korea, tokyo, korean, yen"},
                 {"model": "4x", "unit": 1091, name: "China?", top_words: "shanghai, vietnamese, asian, cambodia, chinese"},
-                //{"model": "4x", "unit": 1601, name: "Japan?", top_words: "xnxx, pn, dx, egypt, uzbekistan"},
                 {"model": "4x", "unit": 513, name: "Australia?", top_words: "australian, australia, adelaide, nsw, queensland"},
             ]
         },
+
         {
             name: "Latitude Neurons",
             neurons: [
                 {"model": "4x", "unit": 245, name: "Northern Hemisphere?", top_words: "saskatchewan, norwegian, newfoundland, wisconsin, vancouver"},
                 {"model": "rn50", "unit": 542, name: "Equator?", top_words: ""},
-                //{"model": "v1", "unit": 1220, name: "Tropical?", top_words: ""},
+                {"model": "v1", "unit": 1220, name: "Tropical?", top_words: "palm, miami, tamil, hawaii, hawaiian"},
             ]
         },
         {
             name: "Secondarily Regional",
             neurons: [
-                {"model": "rn101", "unit": 645, name: "Great Cats?", top_words: ""},
+                {"model": "rn101", "unit": 1268, name: "Angels?", top_words: "angel, angels, wings, heaven, angeles"},
+                {"model": "rn101", "unit": 1651, name: "Startups", top_words: "entrepreneurs, entrepreneur, founder, startup, starter"},
+                {"model": "rn101", "unit": 1543, name: "Male WASP names", top_words: "chris, josh, jake, mike, ryan"},
+                {"model": "rn101", "unit": 395, name: "immigration", top_words: "immigrants, immigration, borders, border, refugees"},
+                {"model": "rn101", "unit": 645, name: "Great Cats?", top_words: "lions, jaguar, tigers, eagles, tiger"},
+                {"model": "rn101", "unit": 1731, name: "Cold?", top_words: "blanket, jackets, jacket, wrap, arctic"},
+                {"model": "rn101", "unit": 1895, name: "Terrorism", top_words: "saudi, terrorists, terrorism, terrorist, allah"},
+                {"model": "v1", "unit": 1402, name: "Islam?", top_words: "muslims, muslim, allah, islamic, islam"},
                 {"model": "4x", "unit": 1275, name: "Black", top_words: ""},
-                //{"model": "4x", "unit": 1428, name: "Lion / Wildlife"}, // no map
+            ]
+        },
+        {
+            name: "Africa - All Modelsl",
+            neurons: [ 
+                {"model": "4x", "unit": 1317, name: "West Africa?", top_words: "zimbabwe, tanzania, uganda, rwanda, kenya"},
+                {"model": "4x", "unit": 1257, name: "West Africa?", top_words: "ghana, uganda, africa, tanzania, african"},
+                {"model": "4x", "unit": 1000, name: "West Africa?", top_words: "zimbabwe, botswana, namibia, mozambique, malawi,"},
+                {"model": "rn50", "unit": 1405, name: "Africa?", top_words: ""},
+                {"model": "rn50", "unit":  919, name: "Africa?", top_words: ""},
+                {"model": "rn50", "unit": 1471, name: "Africa?", top_words: ""},
+                {"model": "v1", "unit": 2006, name: "South-West Africa", top_words: "zimbabwe, cape, malawi, african, mozambique"},
+                {"model": "rn101", "unit": 482, name: "Africa?", top_words: "zimbabwe, nigeria, botswana, kenya, uganda"},
+            ]
+        },
+        {
+            name: "Asia - All Models",
+            neurons: [
+                {"model": "4x", "unit": 1067, name: "India?", top_words: "mumbai, singh, pakistan, afghanistan, bangladesh"},
+                {"model": "4x", "unit": 26, name: "Japan", top_words: "hentai, korea, tokyo, korean, yen"},
+                {"model": "4x", "unit": 1091, name: "China?", top_words: "shanghai, vietnamese, asian, cambodia, chinese"},
+                {"model": "rn50", "unit":  608, name: "China?", top_words: ""},
+                {"model": "rn50", "unit": 1037, name: "East Asia/Jpana?", top_words: ""},
+                {"model": "v1", "unit": 369, name: "China?", top_words: "chinese, china, shanghai, hong, wang"},
+                {"model": "v1", "unit": 1254, name: "East Asia", top_words: "korea, vietnam, korean, vietnamese, asian"},
+                {"model": "rn101", "unit": 438, name: "India?", top_words: "hindu, reliance, india, delhi, singh"},
+                {"model": "rn101", "unit": 858, name: "South Asia?", top_words: "singh, mumbai, pakistan, hindu, shanghai"},
+                {"model": "rn101", "unit": 801, name: "East Asia?", top_words: "shanghai, chinese, beijing, china, vietnam"},
+                {"model": "rn101", "unit": 93, name: "East Asia?", top_words: "indonesia, indonesian, bangkok, malaysia, thailand"},
+                
+            ]
+        },
+        {
+            name: "Middle East - All Models",
+            neurons: [
+                {"model": "v1", "unit": 1121, name: "Arab World?", top_words: "allah, ali, saudi, somalia, al"},
+                {"model": "rn101", "unit": 698, name: "Greater Middle East?", top_words: "pakistan, yemen, baghdad, uzbekistan, bangladesh"},
+            ]
+        },
+        {
+            name: "Australia - All Models",
+            neurons: [ 
+                {"model": "4x", "unit": 513, name: "Australia?", top_words: "australian, australia, adelaide, nsw, queensland"}, 
+                {"model": "rn50", "unit": 1522, name: "Australia?", top_words: ""},
+                {"model": "v1", "unit": 71, name: "Australia?", top_words: "australia, australian, nsw, adelaide, nz"},
+                {"model": "rn101", "unit": 1415, name: "Australia?", top_words: "brisbane, melbourne, australian, canberra, australia"},
+            ]
+        },
+        {
+            name: "Europe - All Models",
+            neurons: [ 
+                {"model": "rn101", "unit": 836, name: "Britain?", top_words: "britain, westminster, british, london, uk"},
+                {"model": "4x", "unit": 2558, name: "UK / Australia?", top_words: "britain, london, scottish, yorkshire, canberra"}, 
+                {"model": "rn50", "unit": 2042, name: "UK?", top_words: ""},
+                {"model": "rn50", "unit":  288, name: "Europe", top_words: ""},
+                {"model": "4x", "unit": 218, name: "Europe?", top_words: "netherlands, luxembourg, stockholm, amsterdam, switzerland"},
+                {"model": "rn101", "unit": 369, name: "Europe?", top_words: "european, europe, brussels, euro, euros"},
+                {"model": "rn50", "unit": 1068, name: "Russia?", top_words: ""},
+            ]
+        },
+        {
+            name: "North America - All Models",
+            neurons: [ 
+                {"model": "4x", "unit": 862, name: "USA?", top_words: "americans, american, america, usa, americas"}, 
+                {"model": "v1", "unit": 924, name: "USA?", top_words: "usa, america, americas, americans, american"},
+                {"model": "v1", "unit": 1538, name: "West Coast? (California)", top_words: "california, angeles, san, usc, hollywood"},
+                {"model": "v1", "unit": 474, name: "West Coast? (Oregon-BC)", top_words: "oregon, seattle, portland, utah, colorado"},
+                {"model": "v1", "unit": 1445, name: "West Coast? (California)", top_words: "angeles, francisco, mls, atlanta, philadelphia"},
+                {"model": "rn101", "unit": 1728, name: "California?", top_words: "hollywood, california, postposted, angeles, lost"},
+                {"model": "rn101", "unit": 943, name: "Canada?", top_words: "canada, canadian, alberta, manitoba, ontario"},
+                {"model": "rn101", "unit": 86, name: "USA?", top_words: "minnesota, wisconsin, nebraska, oklahoma, kentucky"},
+                {"model": "rn101", "unit": 1026, name: "USA?", top_words: "wisconsin, minnesota, nebraska, iowa, missouri"},
+                {"model": "rn101", "unit": 1768, name: "USA?", top_words: "usa, americans, america, american, americas"},
+                {"model": "rn101", "unit": 1791, name: "USA?", top_words: "michigan, oregon, alabama, nebraska, iowa"},
+                {"model": "rn101", "unit": 417, name: "USA?", top_words: "minnesota, washington, metabolism, sacramento, wisconsin"},
+                {"model": "rn101", "unit": 1601, name: "East Coast?", top_words: "sms, massachusetts, connecticut, hampshire, scotia"},
+                {"model": "rn101", "unit": 1480, name: "Canada?", top_words: "vancouver, ontario, toronto, manitoba, ottawa"},          
+            ]
+        },
+        {
+            name: "South/Central America - All Models",
+            neurons: [ 
+                {"model": "v1", "unit": 2032, name: "Latin America?", top_words: "argentina, ecuador, trinidad, una, para"},
+                {"model": "v1", "unit": 376, name: "Latin America?", top_words: "mexican, mexico, spanish, chile, cuba"},
+            ]
+        },
+
+
+                
+
+                
+            
+                
+
+
+    
+
+                
+
+
+        {
+            name: "4x - all",
+            neurons: [ 
+                {"model": "4x", "unit": 862, name: "USA?", top_words: "americans, american, america, usa, americas"},
+                {"model": "4x", "unit": 1317, name: "West Africa?", top_words: "zimbabwe, tanzania, uganda, rwanda, kenya"},
+                {"model": "4x", "unit": 1257, name: "West Africa?", top_words: "ghana, uganda, africa, tanzania, african"},
+                {"model": "4x", "unit": 1000, name: "West Africa?", top_words: "zimbabwe, botswana, namibia, mozambique, malawi,"},
+                {"model": "4x", "unit": 2558, name: "UK / Australia?", top_words: "britain, london, scottish, yorkshire, canberra"}, 
+                {"model": "4x", "unit": 218, name: "Europe?", top_words: "netherlands, luxembourg, stockholm, amsterdam, switzerland"}, 
+                {"model": "4x", "unit": 1067, name: "India?", top_words: "mumbai, singh, pakistan, afghanistan, bangladesh"},
+                {"model": "4x", "unit": 26, name: "Japan", top_words: "hentai, korea, tokyo, korean, yen"},
+                {"model": "4x", "unit": 1091, name: "China?", top_words: "shanghai, vietnamese, asian, cambodia, chinese"},
+                {"model": "4x", "unit": 1601, name: "Japan?", top_words: "xnxx, pn, dx, egypt, uzbekistan"},
+                {"model": "4x", "unit": 513, name: "Australia?", top_words: "australian, australia, adelaide, nsw, queensland"}, 
+            ]
+        },
+        {
+            name: "rn50",
+            neurons: [
+                {"model": "rn50", "unit": 1405, name: "Africa?", top_words: ""},
+                {"model": "rn50", "unit":  919, name: "Africa?", top_words: ""},
+                {"model": "rn50", "unit": 1471, name: "Africa?", top_words: ""},
+                {"model": "rn50", "unit": 1522, name: "Australia?", top_words: ""},
+                {"model": "rn50", "unit":  288, name: "Europe", top_words: ""},
+                {"model": "rn50", "unit": 1068, name: "Russia?", top_words: ""},
+                {"model": "rn50", "unit": 2042, name: "UK?", top_words: ""},
+                {"model": "rn50", "unit":  608, name: "China?", top_words: ""},
+                {"model": "rn50", "unit": 1037, name: "East Asia/Jpana?", top_words: ""},
+                {"model": "rn50", "unit": 1509, name: "Mountain", top_words: ""},
+            ]
+        },
+        {
+            name: "v1",
+            neurons: [
+                {"model": "v1", "unit": 1445, name: "West Coast? (California)", top_words: "angeles, francisco, mls, atlanta, philadelphia"},
+                {"model": "v1", "unit": 1538, name: "West Coast? (California)", top_words: "california, angeles, san, usc, hollywood"},
+                {"model": "v1", "unit": 924, name: "USA?", top_words: "usa, america, americas, americans, american"},
+                {"model": "v1", "unit": 474, name: "West Coast? (Oregon-BC)", top_words: "oregon, seattle, portland, utah, colorado"},
+                {"model": "v1", "unit": 376, name: "Latin America?", top_words: "mexican, mexico, spanish, chile, cuba"},
+                {"model": "v1", "unit": 2032, name: "Latin America?", top_words: "argentina, ecuador, trinidad, una, para"},
+
+
+                {"model": "v1", "unit": 2006, name: "South-West Africa", top_words: "zimbabwe, cape, malawi, african, mozambique"},
+                {"model": "v1", "unit": 1121, name: "Arab World?", top_words: "allah, ali, saudi, somalia, al"},
+                {"model": "v1", "unit": 1402, name: "Islam?", top_words: "muslims, muslim, allah, islamic, islam"},
+                {"model": "v1", "unit": 369, name: "China?", top_words: "chinese, china, shanghai, hong, wang"},
+                {"model": "v1", "unit": 1254, name: "East Asia", top_words: "korea, vietnam, korean, vietnamese, asian"},
+                {"model": "v1", "unit": 71, name: "Australia?", top_words: "australia, australian, nsw, adelaide, nz"},
+            ]
+        },
+        {
+            name: "rn101 - all primary",
+            neurons: [
+                {"model": "rn101", "unit": 1728, name: "California?", top_words: "hollywood, california, postposted, angeles, lost"},
+                {"model": "rn101", "unit": 943, name: "Canada?", top_words: "canada, canadian, alberta, manitoba, ontario"},
+                {"model": "rn101", "unit": 86, name: "USA?", top_words: "minnesota, wisconsin, nebraska, oklahoma, kentucky"},
+                {"model": "rn101", "unit": 1026, name: "USA?", top_words: "wisconsin, minnesota, nebraska, iowa, missouri"},
+                {"model": "rn101", "unit": 1768, name: "USA?", top_words: "usa, americans, america, american, americas"},
+                {"model": "rn101", "unit": 1791, name: "USA?", top_words: "michigan, oregon, alabama, nebraska, iowa"},
+                {"model": "rn101", "unit": 417, name: "USA?", top_words: "minnesota, washington, metabolism, sacramento, wisconsin"},
+                {"model": "rn101", "unit": 1601, name: "East Coast?", top_words: "sms, massachusetts, connecticut, hampshire, scotia"},
+                {"model": "rn101", "unit": 1480, name: "Canada?", top_words: "vancouver, ontario, toronto, manitoba, ottawa"},
+                {"model": "rn101", "unit": 836, name: "Britain?", top_words: "britain, westminster, british, london, uk"},
+                {"model": "rn101", "unit": 369, name: "Europe?", top_words: "european, europe, brussels, euro, euros"},
+
+                {"model": "rn101", "unit": 482, name: "Africa?", top_words: "zimbabwe, nigeria, botswana, kenya, uganda"},
+                {"model": "rn101", "unit": 698, name: "Greater Middle East?", top_words: "pakistan, yemen, baghdad, uzbekistan, bangladesh"},
+                {"model": "rn101", "unit": 438, name: "India?", top_words: "hindu, reliance, india, delhi, singh"},
+                {"model": "rn101", "unit": 858, name: "South Asia?", top_words: "singh, mumbai, pakistan, hindu, shanghai"},
+                {"model": "rn101", "unit": 801, name: "East Asia?", top_words: "shanghai, chinese, beijing, china, vietnam"},
+                {"model": "rn101", "unit": 93, name: "East Asia?", top_words: "indonesia, indonesian, bangkok, malaysia, thailand"},
+
+                {"model": "rn101", "unit": 1415, name: "Australia?", top_words: "brisbane, melbourne, australian, canberra, australia"},
+            ]
+        },
+        {
+            name: "rn101 - all secondary",
+            neurons: [
+                {"model": "rn101", "unit": 1268, name: "Angels?", top_words: "angel, angels, wings, heaven, angeles"},
+                {"model": "rn101", "unit": 1651, name: "Startups", top_words: "entrepreneurs, entrepreneur, founder, startup, starter"},
+                {"model": "rn101", "unit": 1543, name: "Male WASP names", top_words: "chris, josh, jake, mike, ryan"},
+                {"model": "rn101", "unit": 395, name: "immigration", top_words: "immigrants, immigration, borders, border, refugees"},
+                {"model": "rn101", "unit": 645, name: "Great Cats?", top_words: "lions, jaguar, tigers, eagles, tiger"},
+                {"model": "rn101", "unit": 1731, name: "Cold?", top_words: "blanket, jackets, jacket, wrap, arctic"},
+                {"model": "rn101", "unit": 1895, name: "Terrorism", top_words: "saudi, terrorists, terrorism, terrorist, allah"},
             ]
         }
     ]
@@ -74,7 +260,8 @@
             [label-minor] 80px [label-end] 
             minmax(4px,16px)  
             [map-start title-start caption-start] 
-                repeat( var(--num-neurons), [neuron] calc( calc( 6 *  100px) / var(--num-neurons) ) )
+                /* repeat( var(--num-neurons), [neuron] calc( calc( 6 *  100px) / var(--num-neurons) ) ) */
+                repeat( var(--num-neurons), [neuron] 100px )
             [map-end title-end caption-end];
         grid-template-rows: 
             [title] auto [map] auto 4px 
@@ -137,20 +324,20 @@
 
     
     {#if active == undefined}
-        <div style="background: #000; grid-area: map;">
+        <div style="background: #000; grid-area: map; max-width: 1000px;">
             <img style='opacity: 0.15; display: block;'
             src="http://storage.googleapis.com/openai-clarity/colah/multimodal-vis/maps_data/geographical/map.png"
             alt="map">
         </div>
         {#each neurons as neuron, neuron_i}
-            <div style="background: hsl({360*neuron_i/neurons.length}, 80%, 50%); mix-blend-mode: lighten; grid-area: map;">
+            <div style="background: hsl({360*neuron_i/neurons.length}, 80%, 50%); mix-blend-mode: lighten; grid-area: map; max-width: 1000px;">
                 <img class="map-img"
                 src="{map_url(neuron)}"
                 alt="map">
             </div>
         {/each}
     {:else}
-        <img style='grid-area: map;'
+        <img style='grid-area: map; max-width: 1000px;'
         src="{map_url(neurons[active])}"
         alt="map">
     {/if}

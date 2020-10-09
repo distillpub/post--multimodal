@@ -9,7 +9,6 @@
     export let ds = true;
     var display_types;
     $: {
-        console.log("neuron", neuron)
         display_types=[]; 
         if (fv) display_types.push(facet_icon_url); 
         if (ds) display_types.push(dataset_examples_url);
