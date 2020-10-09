@@ -37,7 +37,7 @@
                 {"model": "rn101", "unit": 1731, name: "Cold?", top_words: "blanket, jackets, jacket, wrap, arctic"},
                 {"model": "rn101", "unit": 1895, name: "Terrorism", top_words: "saudi, terrorists, terrorism, terrorist, allah"},
                 {"model": "v1", "unit": 1402, name: "Islam?", top_words: "muslims, muslim, allah, islamic, islam"},
-                {"model": "4x", "unit": 1275, name: "Black", top_words: ""},
+                {"model": "4x", "unit": 1275, name: "Black", top_words: "muslims, somalia, ethiopia, aboriginal, muslim, ethnic, caribbean, racial"},
             ]
         },
         {
@@ -56,17 +56,17 @@
         {
             name: "Asia - All Models",
             neurons: [
+                {"model": "rn101", "unit": 858, name: "South Asia?", top_words: "singh, mumbai, pakistan, hindu, shanghai"},
                 {"model": "4x", "unit": 1067, name: "India?", top_words: "mumbai, singh, pakistan, afghanistan, bangladesh"},
-                {"model": "4x", "unit": 26, name: "Japan", top_words: "hentai, korea, tokyo, korean, yen"},
+                {"model": "rn101", "unit": 438, name: "India?", top_words: "hindu, reliance, india, delhi, singh"},
+                {"model": "v1", "unit": 369, name: "China?", top_words: "chinese, china, shanghai, hong, wang"},
+                {"model": "rn101", "unit": 801, name: "East Asia?", top_words: "shanghai, chinese, beijing, china, vietnam"},
                 {"model": "4x", "unit": 1091, name: "China?", top_words: "shanghai, vietnamese, asian, cambodia, chinese"},
                 {"model": "rn50", "unit":  608, name: "China?", top_words: ""},
                 {"model": "rn50", "unit": 1037, name: "East Asia/Jpana?", top_words: ""},
-                {"model": "v1", "unit": 369, name: "China?", top_words: "chinese, china, shanghai, hong, wang"},
-                {"model": "v1", "unit": 1254, name: "East Asia", top_words: "korea, vietnam, korean, vietnamese, asian"},
-                {"model": "rn101", "unit": 438, name: "India?", top_words: "hindu, reliance, india, delhi, singh"},
-                {"model": "rn101", "unit": 858, name: "South Asia?", top_words: "singh, mumbai, pakistan, hindu, shanghai"},
-                {"model": "rn101", "unit": 801, name: "East Asia?", top_words: "shanghai, chinese, beijing, china, vietnam"},
                 {"model": "rn101", "unit": 93, name: "East Asia?", top_words: "indonesia, indonesian, bangkok, malaysia, thailand"},
+                {"model": "4x", "unit": 26, name: "Japan", top_words: "hentai, korea, tokyo, korean, yen"},
+                {"model": "v1", "unit": 1254, name: "East Asia", top_words: "korea, vietnam, korean, vietnamese, asian"},
                 
             ]
         },
