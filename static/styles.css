@@ -88,6 +88,18 @@ d-footnote {
   margin-right: 1px;
   content: ",";
 }
+
+d-footnote + d-footnote::before {
+  vertical-align: super;
+  line-height: 1em; 
+  top: -.5em; 
+  font-size: 0.75em;
+  color: #999; 
+  margin-left: -6px; 
+  margin-right: 1px;
+  content: ",";
+}
+
 d-article h2 {
   border-bottom: none;
 }

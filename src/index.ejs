@@ -62,9 +62,7 @@
   such as Donald Trump, 
   Lady Gaga, and Spiderman.
     <d-footnote>It’s important to note that the vast majority of people these models recognize don’t have a specific neuron, but instead are represented by a combination of neurons. Often, the contributing neurons are conceptually related. For example, the Trump neuron fires (albeit more weakly) for Mike Pence, contributing to representing him.</d-footnote>
-    <sup class='footnote-sep'></sup>
     <d-footnote>Some of the figures we found neurons for are divisive. It should go without saying that having a dedicated neuron simply reflects the prominence of these figures in the training data, collected in [2019?]. Being divisive increases this prominence, because divisive figures are more likely to be extensively discussed on the Internet. In the case of the Donald Trump neuron, it seems likely there would have also been a Hillary Clinton neuron if data had been collected in 2016 instead. (There are other neurons which respond to Hillary Clinton in addition to other topics.) </d-footnote>
-    <sup class='footnote-sep'></sup>
     <d-footnote>Not only do our neurons match Quiroga et al in firing for the same feature in photo, drawing, and text form, but some of the specific neurons are strikingly similar to those they describe. The Donald Trump neuron we found might be seen as similar to Quiroga et al’s Bill Clinton neuron. A Star Wars neuron we find seems analogous to a biological Star Wars neuron described Quiroga et al’s follow up paper []. And although we don’t find an exact Jennifer Anniston neuron, we do find a neuron for the TV show “Friends” which fires for her.</d-footnote>
   Like the biological multimodal neurons, these neurons respond to the same subject in photographs, drawings, and images of text:
 </p>
@@ -379,6 +377,46 @@ In some ways, it seems natural for contrastive training of vision and language t
     <h3>Miscellaneous Neurons</h3>
 
     <figure id="literate-neurons"></figure>
+
+
+    <h3>Feature properties</h3>
+
+    <p>So far, we’ve looked at particular neurons to give a sense of the kind of features that exist in CLIP models. It's worth noting several properties that either warrant emphasis or might be missed in the discussion of individual features:</p>
+    
+    <p><b>Multimodality / Abstraction:</b>  As we’ve seen in the previous sections, most CLIP neurons are multimodal and abstract, responding to the same concept across forms such as photos, drawings, maps, images of text, and more.</p>
+    
+    <p><b>Image-Based Word Embedding:</b> Despite being a vision model, one can produce “word embeddings” with the visual CLIP model by rastering words into images and then feeding these images into the model. Like normal word embeddings, the nearest neighbors of words tend to be semantically related.
+      <d-footnote>A comparison of CLIPs image-based word embedding to examples in Collobert <d-cite key="collobert2011natural"></d-cite>’s example:
+      <span class='figcaption' style='display: grid; grid-template-columns: auto auto auto; grid-gap: 12px; margin-top: 18px;'>
+      <span style='font-weight: bold; border-bottom: 1px solid #CCC;'>Original <br>Word</span>   
+      <span style='font-weight: bold; border-bottom: 1px solid #CCC;'>Nearest Neighbors <br>Collobert<d-cite key="collobert2011natural"></d-cite> embeddings</span>   
+      <span style='font-weight: bold; border-bottom: 1px solid #CCC;'>Nearest Neighbors <br>CLIP image-based embeddings</span>
+      <span>France</span> 
+      <span>Austria, Belgium, Germany, Italy, Greece, Sweden, Norway, Europe, Hungary, Switzerland</span> 
+      <span>French, Francis, Paris, Les, Des, Sans, Le, Pairs, Notre, Et</span>
+      <span>Jesus</span> 
+      <span>God, Sati, Christ, Satan, Indra, Vishnu, Ananda, Parvati,  Grace</span> 
+      <span>Christ, God, Bible, Gods, Praise, Christians, Lord, Christian, Gospel, Baptist</span>
+      <span>xbox</span> 
+      <span>Amiga, Playstation, Msx, Ipod, Sega, Ps#, Hd, Dreamcast, Geforce, Capcom</span> 
+      <span>Xbox, Gaming, Nintendo, Playstation, Console, Box, Lightbox, Sony, Sega, Games, Microsoft</span>
+      </span></d-footnote>
+    Word arithmetic <d-cite key="mikolov2013linguistic"></d-cite> such as <br><span style='display: inline-block; margin: 12px;'><i>V(Img(</i>“King”<i>)) <span style='margin: 4px'>-</span> V(Img(</i>“Man”<i>)) <span style='margin: 4px'>+ </span>V(Img(</i>“Woman”<i>)) <span style='margin: 4px'>=</span> V(Img(</i>“Queen”<i>))</i></span><br> work in some cases if we mask non-semantic lexicographic neurons (eg. “-ing” detectors).
+    It seems likely that mixed arithmetic of words and images should be possible.
+    </p>
+    
+    <p><b>Limited Multilingual Behavior:</b> Although CLIP’s training data was filtered to be English, many features exhibit limited multilingual responsiveness. For example, a “positivity” neuron (4x:36) responds to images of English “Thank You”, French “Merci”, German “Danke”, and Spanish “Gracias,” and also to English “Congratulations”, German “Gratulieren”, Spanish “Felicidades”, and Indonesian “Selamat”. As the example of Indonesian demonstrates, the model can recognize some words from non Romance/Germanic languages. However, we were unable to find any examples of the model mapping words in non-latin script to semantic meanings. It can recognize many scripts (Arabic, Chinese, Japanese, etc) and will activate the corresponding regional neurons, but doesn’t seem to be able to map words in those scripts to their meanings.  
+      <d-footnote>One interesting question is why the model developed reading abilities in latin alphabet languages, but not others -- was it because more data of that type slipped into the training data, or (the more exciting possibility) because it’s easier to learn a language from limited data if you already know the alphabet?</d-footnote></p>
+      
+    <p><b>Bias:</b> Certain kinds of bias seem to be embedded into these representations, similar to classic biases in word embeddings (eg. <d-cite key="bolukbasi2016man"></d-cite>). The most striking examples are likely racial and religious bias. For example, there seems to be a “terrorism/Islam” neuron (4x:1596) which responds to images of words such as “Terrorism”, “Attack”, “Horror”, “Afraid”, and also “Islam”, “Allah”, “Muslim”. This isn’t just an illusion from looking at a single neuron: the image-based word embedding for “Terrorism” has a cosine similarity of 0.98 with “Muslims”. Similarily, an “illegal immigration neuron” (4x:2213) selects for Latin America countries.
+    (We’ll see further examples of bias in the next section, when we how these features are used in aligning with captions.)   </p>
+    
+    <p><b>Polysemanticity and Conjoined Neurons:</b>  Although we’ve focused on neurons which seem to have a single clearly defined concept they respond to, many CLIP neurons are “polysemantic” <d-cite key="olah2017feature,olah2020zoom"></d-cite>, responding to multiple unrelated features. Unusually, polysemantic neurons in CLIP often have suspicious links between the different concepts they respond to. For example, we observe as <b>Phil</b>adelphia/<b>Phil</b>ipines/<b>Phil</b>ip neuron, as Christm<b>as</b>/<b>As</b>s neuron, and an Ac<b>tor</b>/Velocerap<b>tor</b> neuron. The concepts in these neurons seem “conjoined”, overlapping in a superficial way in one facet, and then generalizing out in multiple directions. We haven’t ruled out the possibility that these are just coincidences, given the large number of facets that could overlap for each concept. But if conjoined features genuinely exist, they hint at new potential explanations of polysemanticity.
+      <d-footnote>In the past, when we've observed seemingly polysemantic neurons, we've considered two possibilities: either it is responding to some shared feature of the stimuli, in which case it isn’t really polysemantic, or it is genuinely responding to two unrelated cases. Usually we distinguish these cases with feature visualization. For example, InceptionV1 4e:55 responds to cars and cat heads. One could imagine it being the case that it’s responding to some shared feature -- perhaps cat eyes and car lights look similar. But feature visualization establishes a facet selecting for a globally coherent cat head, whiskers and all, as well as the metal chrome and corners of a car. We concluded that it was genuinely <i>OR(cat, car)</i>.<br><br>
+      Conjoined features can be seen as a kind of mid-point between detecting a shared low-level feature and detecting independent cases. Detecting Santa Claus and “turn” are clearly true independent cases, but there was a different facet where they share a low-level feature. <br><br>
+      Why would models have conjoined features? Perhaps they’re a vestigial phenomenon from early in training when the model couldn’t distinguish between the two concepts in that facet. Or perhaps there’s a case where they’re still hard to distinguish, such as large font sizes. Or maybe it just makes concept packing more efficient, as in the superposition hypothesis.</d-footnote>
+    </p>
+    
 
     <br />
     <hr />
