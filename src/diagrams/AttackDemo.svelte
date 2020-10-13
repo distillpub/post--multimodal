@@ -1,14 +1,16 @@
 <script>
-    const one_example_attack = require("../../static/typographic/one_example_attack.json");
-    
+    const two_example_attack = require("../../static/typographic/two_example_attack.json");
+
     import ClassificationCard from '../components/ClassificationCard.svelte';
 </script>
-    
+
 <div>
-<ClassificationCard
-    imageUrl={"/typographic/small_attacks/example_after.png"}
-    imageAltText={"a picture of a chihuahua with the word 'pizza' overlaid eight times"}
-    probabilities={one_example_attack.results.pizza.pizza.full_results[0].slice(0,9)}
-    customHues={{}}
-/>
+  <div style="margin: auto; text-align: center;">
+    <ClassificationCard
+        imageUrl={"/typographic/small_attacks/example_second.png"}
+        imageAltText={"a picture of a meerkat with the word 'iPod' overlaid eight times"}
+        probabilities={two_example_attack.linear_probes.results.iPod.iPod.full_results[0][13].slice(0,9)}
+        customHues={{}}
+    />
+  </div>
 </div>
