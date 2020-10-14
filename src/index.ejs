@@ -482,11 +482,21 @@ In some ways, it seems natural for contrastive training of vision and language t
     </p>
 
     <p>
-      It seems plausible that, just as individual neurons may play key roles in linear probes, they may also encourage the firing of key words or even phrases. Formally, we ask, if we were to perturb the neuron in a positive direction, what kinds of words does this encourage? Conversely, given a word (or a set of words), can we break down the meaning of that word in a crisp set of neurons? 
+      It seems plausible that, just as individual neurons may play key roles in linear probes, they may also encourage the firing of key words or even phrases. Formally, we ask, if we were to perturb the neuron in a positive direction, what kinds of words does this encourage? Conversely, given a word (or a set of words), can we break down the meaning of that word in a crisp set of neurons? To do this, we rely on the following approximation:
     </p>
 
     <p>
-      Write some math here.
+      $$
+        \begin{align}
+        \mbox{\textbf{cosine}}(F(x+\delta),y) & \approx\mbox{\textbf{cosine}}(F(x)+\nabla F(x)^{T}\delta,y)\\
+         & =\mbox{\textbf{cosine}}(F(x)+V\delta,y)\\
+         & \approx y^{T}V\delta+\mbox{\textbf{cosine}}(F(x),y)
+        \end{align}
+      $$
+    </p>
+
+    <p>
+      Which states that to understand the perturbation due to an image, we can simply look its dot product with the value matrix M. Armed with this insight, we can make these inqueries in a way that is independent of any image - simply by trying to maximize this dot product, either on the language or the image side. We can now use this tool to understand how the model understands emotions.
     </p>
 
     <h3></h3>
