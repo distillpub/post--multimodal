@@ -767,8 +767,6 @@ In some ways, it seems natural for contrastive training of vision and language t
       provide insight into human emotions themselves.
     </p>
 
-    <figure id="literate-neurons"></figure>
-
     <br />
     <hr />
     <br />
@@ -776,32 +774,30 @@ In some ways, it seems natural for contrastive training of vision and language t
     <h2>Typographic Attacks</h2>
 
     <p>
-      As we've shown, it's not just the language side of the multimodal model
-      that knows how to read: some features in the vision side appear to
+      As we've shown, it's not just the "Language" side of the Contrastive Language/Image Pretrained Model
+      that knows how to read: some features in the "Image" side appear to
       understand individual letters, numbers, and even full words.
     </p>
 
     <p>
-      These vision features
-      <!--are clearly useful if the model needs to do-->
-      serve the purpose of allowing the model to perform OCR. Beyond that,
-      however, note how the text that is recognized is often closely tied to the
-      other concepts that a neuron recognizes. We can see in feature
-      visualizations that show both text and imagery: both aspects will gesture
-      at the same cluster of concepts. This should be no surprise by now: these
-      are multimodal neurons, after all!
+      These features are clearly useful if the model needs perform OCR: characters and words can provide context cues for recognizing what an image is about.
+
+      However, it's also worth noting that of all the ways the model could end up systematizing these typographic cues, it ends up clustering them into concepts. In the neurons of the last layer, text recognition comes bundled with recognition for other representations of a shared concept cluster, all recognized by a single neuron together. We can see this in the feature visualizations: the "kiss" neuron's feature visualization shows both the word "kiss" as well as actual kisses.
     </p>
 
     <figure id="literate-neurons"></figure>
 
     <p>
-      We've seen that text often makes its way into the model's high-level
-      representations, but can the presence or absence of a piece of text
+      This all should be no surprise by now: these are multimodal neurons, after all!
+    </p>
+
+    <p>
+      Given how closely intertwined this text seems to be with the model's high-level representations, can the presence or absence of a piece of text
       influence the model's classifications?
     </p>
 
     <p>
-      Surprisingly, we find that it can! simply adding text to an image can
+      Surprisingly, we find that it can! Simply adding text to an image can
       cause the image to be classified as something it's not. This can be seen
       as a kind of adversarial attack – what we'll call a
       <i>typographic attack</i>.
