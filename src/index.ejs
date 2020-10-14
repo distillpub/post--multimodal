@@ -427,109 +427,76 @@ In some ways, it seems natural for contrastive training of vision and language t
     <h2>Using Abstractions</h2>
 
     <p>
-      These abstractions appear to span the extremely low level - the nearly raw
-      representation of color, characters, to the extremely abstract - neurons
-      that represent all mammals, entire countries and ecosystems. Why do the
-      representations form in this way?
+      It has been hypothesize that the formation of intermediate representions, both in the brain and in neural networks, faciliate "subspace untangling" [] -- a transformation of an input into a vector that has that allows rich queries on relevant task through dot products. 
     </p>
 
     <p>
-      One clue, observed by Radford [], is that these representations of this
-      form are useful. We observe, in fact, that even extremely sparse
-      combinations of these neurons can combine to solve an uncanny number of
-      tasks considered human-meaningful.
+      This is, indeed, explicitly the goal of CLIP, where linear proces achieve impressive accuracies in imagenet classification [Section []], facial expression detection [], geolocalization, and more. Can we understand the meanings of these directions? What information can be encoded in them? We make a stab at making this concrete by taking a deep dive into one particular task: the Imagenet challenge.
+    </p>
+
+
+    <h3>The Imagenet Challenge</h3>
+    <p>
+      The IILSRV challenge [](?) uses a subset of the wordnet hierarchy and is an explicit attempt to systematize human knowledge. The synsets are organized as overlapping trees, but a classifier is trained to clasisify the leaves.
+    </p>
+      Following the methodlogy of Radford [] et all, we train a sparse linear probe on the imagenet labels to understand which neurons are the most informative for the task. We do this with only 3, on average, nonzeros per class, forcing the network to use neurons very sparingly.
     </p>
 
     <p>
-      The IILSRV challenge, for example, uses a subset of the wordnet hierarchy,
-      is an explicit attempt to systematize human knowledge. The task involves
-      making fine-grained decisions about the subject of a picture.
-    </p>
-
-    <p>
-      To understand how the neurons compose themselves to a meaningful task, we
-      follow the methodology of Radford [] et all, and train a linear probe
-      logistic regression classifier on imagenet to tease out which features are
-      most relevant to the problem of classification. with only 3, on average,
-      nonzeros per class, to understand how neurons themselves can assist in
-      this task.
-    </p>
-
-    <p>
-      As the above article might predict, like [], it should come as no surprise
-      to the reader that much of the information in the model is consolidated in
-      single neurons. To our surprise, however, we find much more interesting
-      additional structure in this information. The neurons, for example,
-      arrange themselves into a taxonomy of classes that appear to respect the
-      wordnet hierarchy.
-    </p>
-
-    <p>
-      At the highest leve we find a single neuron that represents the split
-      between the living - animal, and the nonliving, that fires for nearly all
-      the animals in the 1000 classes chosen.
-    </p>
-
-    <p>
-      The animal kingdom itself is split into the domesticated pets and
-      wildlife.
-    </p>
-
-    <p>
-      More conventionally, the animal kingdom is also split into more
-      conventional categories, such as insects, birds and reptiles.
-    </p>
-
-    <p>
-      We see other classes too which do not correspond neatly to such classes
-      organized by experts, but nevertheless make sense. We see, for example,
-      three neurons that respond to creatures found in different aspects of the
-      ocean/water.
-    </p>
-
-    <p>
-      These classifications are not limited, in fact, to animals. Vehicles, too,
-      have their own implicit hierarchy, here with ...
+      This model, by most any modern standard, fares poorly, achieving an accuracy of 35%. Our goal, however is to understand how a model as parsimonious as this can do <i>anything</i> at all. As we inspect the model's weights, a clearer picture emerges. 
     </p>
 
     <figure id="hypergraph-device" class="fullscreen-diagram"></figure>
 
     <p>
-      We find this remarkable given the fact that such organization is not, in
-      any explicit form, given as a training signal to the neural network. The
-      neural network has decided that the most efficient way to organize
-      information is in this way, one which reflects human intuition. Perhaps
-      this form of convergent evolution is a suggestion that these structures do
-      exist in some implicit form in human language, and though there may be
-      dispute as to where the lines are drawn explicitly,
+      At the highest levels we find a single neuron that represents the split between the living - animal, and the nonliving, that fires for nearly all the animals in the 1000 classes chosen.
     </p>
 
     <p>
-      We make a final note of a few classes in imagenet that do not fall nearly
-      into one of the above large hierarchies. The “piggy bank” class in
-      imagenet, for example, appears to be a singularity, but a reasonable
-      accuracy on the class can still be obtained by combining neurons that
-      respond to abstract concepts, e.g.
+      The animal kingdom itself is split into the domesticated pets and
+      wildlife. More conventionally, the animal kingdom is also split into more conventional categories, such as insects, birds and reptiles.
     </p>
+
+    <p>
+      We see other classes too that do not correspond neatly to such classes organized by experts, but nevertheless make sense. We see, for example, three neurons that respond to creatures found in different aspects of the ocean/water. 
+    </p>
+
+    <p>
+      The “piggy bank” class in imagenet, for example, can still be obtained by combining neurons that respond to abstract concepts.
+    </p>
+
+    <p>
+      We arrive at a surprising discovery -- it seems as though the neurons appear to arrange themselves into a taxonomy of classes that appear to mimic, very approximately, the imagenet heirarchy. 
+    </p>
+
+    <p>
+      This gives us a tantalizing insight into the interpretability of neural networks. While there have been attempts to explicitly integrate this information <d-cite key="santurkar2020breeds"></d-cite>, in CLIP this has not been given in any explicit form as a training signal. The fact that it these neurons are scrutible suggests that organizations of high-level concepts of this kind may be a universal feature of learning systems.
+    </p>
+
+    <figure id="hypergraph-device" class="fullscreen-diagram"></figure>
 
     <h3>Understanding language</h3>
 
     <p>
-      The linear probes are the most straightforward way to understand the
-      neuron’s uses, but they merely index into a small number of classes. To
-      understand the model’s capacity for understanding language, we need tools
-      that allow us to understand an exponential number of classes - one for
-      every possible combination of tokens in the language model.
+      The primary consumer of these representations, and what will now be the object of our attention, is the language head of the model. Indeed, augmented with the language head alone, the model is capable of being "programmed" to perform many feats of classification using nothing more than a natural language description of the task.
     </p>
 
     <p>
-      The contrastive loss of the transformer takes sentences into embeddings.
-      Thus, the language model has done much of the difficult work for us, and
-      we only need to understand, if given a set of sentences, the continuous
-      space in which the sentences are embedded.
+      It seems plausible that, just as individual neurons may play key roles in linear probes, they may also encourage the firing of key words or even phrases. Formally, we ask, if we were to perturb the neuron in a positive direction, what kinds of words does this encourage? Conversely, given a word (or a set of words), can we break down the meaning of that word in a crisp set of neurons? 
     </p>
 
+    <p>
+      Write some math here.
+    </p>
+
+    <h3></h3>
+
     <h2>Emotional Intelligence</h2>
+
+    <p>
+
+    </p>
+
     <p>
       Earlier we looked at neurons that detect emotion through a variety of
       modalities such as text, facial expressions, body poses, and sometimes
