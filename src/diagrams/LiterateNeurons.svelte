@@ -47,6 +47,6 @@
 </div>
 <div class="figcaption">
  <p>
-  <a class="figure-anchor" href="#literate-neurons">Figure N:</a> Three examples of neurons from Resnet-101 whose feature visualizations (top) and selected dataset examples (bottom) show sensitivity to specific words and text.
+  <a class="figure-anchor" href="#literate-neurons">Figure N:</a> Three additional examples of neurons from Resnet-101 whose feature visualizations (top) and selected dataset examples (bottom) show sensitivity to specific words and text.
   </p>
 </div>
