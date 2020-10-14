@@ -7,6 +7,7 @@ import HyperSet from './diagrams/HyperSet.svelte'
 import UniversalityTable from './diagrams/UniversalityTable.svelte'
 import NeuronTable from './diagrams/NeuronTable.svelte'
 import RegionalNeurons from './diagrams/RegionalNeurons.svelte'
+import SmallNeuronRow from './diagrams/SmallNeuronRow.svelte'
 
 import 'regenerator-runtime/runtime'
 
@@ -125,6 +126,14 @@ const diagrams = [
 for (let [elementId, DiagramClass, props] of diagrams) {
   let target = document.getElementById(elementId)
   let example = new DiagramClass({ target, props })
+}
+
+for (let target of document.getElementsByClassName("small-neuron-row")){
+  var attrs = target.attributes;
+  var neurons = attrs['data-neurons'].value.split(',').map( (s) => parseInt(s));
+  var facet = attrs["data-facet"].value || "any";
+  var props = {neurons, facet};
+  let example = new SmallNeuronRow({target, props});
 }
 
 ReactDOM.render(<EmotionsIntro />, document.getElementById('emotions-intro'))
