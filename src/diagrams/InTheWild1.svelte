@@ -58,22 +58,25 @@ function hues(label) {
   }, {});
 }
 
+let showHidden = false;
+let selectedStatistics = "zero_shot_statistics";
+
 import ClassificationCard from '../components/ClassificationCard.svelte';
 </script>
 
 <div style="overflow-x: scroll;">
   <div style="width: fit-content; margin: auto; overflow-x: scroll;">
-    <div style="display: grid; grid-template-rows: repeat({ Object.entries(data).length}); grid-template-columns: repeat({ Object.entries(data.mug).length}); overflow: auto; grid-gap: 10px;">
-      {#each Object.entries(data.mug) as [label, results], col_index}
+    <div style="display: grid; grid-template-rows: repeat({ showHidden ?  Object.entries(data).length : 4}); grid-template-columns: repeat({ showHidden ? Object.entries(data.mug).length : 4}); overflow: auto; grid-gap: 10px;">
+      {#each Object.entries(data.mug).slice(0, showHidden ? 6 : 4) as [label, results], col_index}
         <h4 style="grid-column: { col_index + 1}; margin-bottom: 0px">{@html label === "blank" ? "No label" : "Labeled &ldquo;" + label + "&rdquo;" }</h4>
       {/each}
-      {#each Object.keys(data).sort() as item, row_index}
-        {#each Object.entries(data[item]) as [label, results], col_index}
+      {#each Object.keys(data).sort().slice(0, showHidden ? Object.entries(data).length : 4) as item, row_index}
+        {#each Object.entries(data[item]).slice(0, showHidden ? Object.entries(data.mug).length : 4) as [label, results], col_index}
           <div style="grid-column: {col_index + 1 }">
             <ClassificationCard
               imageUrl={`/typographic/in-the-wild-3/${item}-${label}.jpg`}
               imageAltText={`${item} labeled ${label}`}
-              probabilities={results.zero_shot_statistics}
+              probabilities={results[selectedStatistics]}
               customHues={hues(label)}
             />
           </div>
@@ -85,10 +88,23 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
         <a class="figure-anchor" href="#in-the-wild-1">Figure N:</a>
         Physical typographic attacks.
       </p>
-
       <p>
         Probabilities here calculated using the <b>zero-shot</b> methodology: we convert the multimodal model to an ImageNet classifier by calculating probabilities on the completion “a photo of a ___” for each ImageNet class.
       </p>
     </div>
   </div>
+  <input type="checkbox" bind:checked={showHidden} /> Show extra examples
+  <br/>
+  <!-- <button on:click={function() {showHidden = !showHidden}}>
+    {showHidden ? "Hide extra examples" : "Show extra examples"}
+  </button> -->
+  Methodology:
+  <select bind:value={selectedStatistics}>
+    <option value="zero_shot_statistics">
+      Zero-shot
+    </option>
+    <option value="linear_probe_statistics">
+      Linear probes
+    </option>
+  </select>
 </div>

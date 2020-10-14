@@ -7,6 +7,8 @@
 <script>
 const attacks_2 = require('../../static/typographic/in_the_wild_2.json');
 
+let selectedStatistics = "zero_shot_statistics";
+
 let trueLabels = {
     "mug": ["coffee mug"],
     "glass": ["beer glass"],
@@ -90,7 +92,7 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
             <ClassificationCard
               imageUrl={`/typographic/in-the-wild-2/${item}-${label}.jpg`}
               imageAltText={`${item} labeled ${label}`}
-              probabilities={results.zero_shot_statistics.slice(0, 9)}
+              probabilities={results[selectedStatistics].slice(0, 9)}
               customHues={hues(label)}
             />
           </div>
@@ -103,4 +105,13 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
       <p>In a shoutout to <i>Adversarial Patch</i> we include the label <i>toaster</i> on a whim, and find that it does surprisingly well as a typographic attack!</p>
     </div>
   </div>
+  Methodology:
+  <select bind:value={selectedStatistics}>
+    <option value="zero_shot_statistics">
+      Zero-shot
+    </option>
+    <option value="linear_probe_statistics">
+      Linear probes
+    </option>
+  </select>
 </div>
