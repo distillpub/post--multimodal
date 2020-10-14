@@ -1,0 +1,8103 @@
+{
+  "n": 20,
+  "linear_probes": {
+    "results": {
+      "iPod": {
+        "iPod": {
+          "fraction_changed_to": 0.85,
+          "fraction_already_equal": 0.0,
+          "fraction_changed_away": 0.0,
+          "fraction_both_results_not_target": 0.15,
+          "avg_img_l0_norm_diff": 0.06808408886316872,
+          "full_results": [
+            [
+              [
+                [
+                  0.9240000247955322,
+                  "iPod"
+                ],
+                [
+                  0.004000000189989805,
+                  "remote control"
+                ],
+                [
+                  0.003000000026077032,
+                  "mongoose"
+                ],
+                [
+                  0.003000000026077032,
+                  "meerkat"
+                ],
+                [
+                  0.003000000026077032,
+                  "hand-held computer"
+                ],
+                [
+                  0.003000000026077032,
+                  "fox squirrel"
+                ],
+                [
+                  0.0020000000949949026,
+                  "notebook computer"
+                ],
+                [
+                  0.0020000000949949026,
+                  "laptop computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "weasel"
+                ],
+                [
+                  0.0010000000474974513,
+                  "tailed frog"
+                ],
+                [
+                  0.0010000000474974513,
+                  "sidewinder"
+                ],
+                [
+                  0.0010000000474974513,
+                  "patas monkey"
+                ],
+                [
+                  0.0010000000474974513,
+                  "monitor"
+                ],
+                [
+                  0.0010000000474974513,
+                  "mobile phone"
+                ],
+                [
+                  0.0010000000474974513,
+                  "marmoset"
+                ],
+                [
+                  0.0010000000474974513,
+                  "jigsaw puzzle"
+                ],
+                [
+                  0.0010000000474974513,
+                  "honeycomb"
+                ],
+                [
+                  0.0010000000474974513,
+                  "hare"
+                ],
+                [
+                  0.0010000000474974513,
+                  "digital watch"
+                ],
+                [
+                  0.0010000000474974513,
+                  "desktop computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "computer keyboard"
+                ],
+                [
+                  0.0010000000474974513,
+                  "common squirrel monkey"
+                ],
+                [
+                  0.0010000000474974513,
+                  "agama"
+                ],
+                [
+                  0.0010000000474974513,
+                  "Saharan horned viper"
+                ],
+                [
+                  0.0010000000474974513,
+                  "CRT screen"
+                ],
+                [
+                  0.0,
+                  "zucchini"
+                ],
+                [
+                  0.0,
+                  "zebra"
+                ],
+                [
+                  0.0,
+                  "yurt"
+                ],
+                [
+                  0.0,
+                  "yellow lady's slipper"
+                ],
+                [
+                  0.0,
+                  "yellow garden spider"
+                ],
+                [
+                  0.0,
+                  "worm snake"
+                ],
+                [
+                  0.0,
+                  "wool"
+                ],
+                [
+                  0.0,
+                  "wooden spoon"
+                ],
+                [
+                  0.0,
+                  "wombat"
+                ],
+                [
+                  0.0,
+                  "wolf spider"
+                ],
+                [
+                  0.0,
+                  "wok"
+                ],
+                [
+                  0.0,
+                  "wing"
+                ],
+                [
+                  0.0,
+                  "wine bottle"
+                ],
+                [
+                  0.0,
+                  "window shade"
+                ],
+                [
+                  0.0,
+                  "window screen"
+                ],
+                [
+                  0.0,
+                  "wild boar"
+                ],
+                [
+                  0.0,
+                  "wig"
+                ],
+                [
+                  0.0,
+                  "white-headed capuchin"
+                ],
+                [
+                  0.0,
+                  "white stork"
+                ],
+                [
+                  0.0,
+                  "whistle"
+                ],
+                [
+                  0.0,
+                  "whiskey jug"
+                ],
+                [
+                  0.0,
+                  "wheelbarrow"
+                ],
+                [
+                  0.0,
+                  "weighing scale"
+                ],
+                [
+                  0.0,
+                  "weevil"
+                ],
+                [
+                  0.0,
+                  "website"
+                ]
+              ],
+              [
+                [
+                  0.9909999966621399,
+                  "iPod"
+                ],
+                [
+                  0.0020000000949949026,
+                  "hand-held computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "remote control"
+                ],
+                [
+                  0.0010000000474974513,
+                  "ballpoint pen"
+                ],
+                [
+                  0.0,
+                  "zucchini"
+                ],
+                [
+                  0.0,
+                  "zebra"
+                ],
+                [
+                  0.0,
+                  "yurt"
+                ],
+                [
+                  0.0,
+                  "yellow lady's slipper"
+                ],
+                [
+                  0.0,
+                  "yellow garden spider"
+                ],
+                [
+                  0.0,
+                  "worm snake"
+                ],
+                [
+                  0.0,
+                  "wool"
+                ],
+                [
+                  0.0,
+                  "wooden spoon"
+                ],
+                [
+                  0.0,
+                  "wombat"
+                ],
+                [
+                  0.0,
+                  "wolf spider"
+                ],
+                [
+                  0.0,
+                  "wok"
+                ],
+                [
+                  0.0,
+                  "wing"
+                ],
+                [
+                  0.0,
+                  "wine bottle"
+                ],
+                [
+                  0.0,
+                  "window shade"
+                ],
+                [
+                  0.0,
+                  "window screen"
+                ],
+                [
+                  0.0,
+                  "wild boar"
+                ],
+                [
+                  0.0,
+                  "wig"
+                ],
+                [
+                  0.0,
+                  "white-headed capuchin"
+                ],
+                [
+                  0.0,
+                  "white stork"
+                ],
+                [
+                  0.0,
+                  "whistle"
+                ],
+                [
+                  0.0,
+                  "whiskey jug"
+                ],
+                [
+                  0.0,
+                  "wheelbarrow"
+                ],
+                [
+                  0.0,
+                  "weighing scale"
+                ],
+                [
+                  0.0,
+                  "weevil"
+                ],
+                [
+                  0.0,
+                  "website"
+                ],
+                [
+                  0.0,
+                  "weasel"
+                ],
+                [
+                  0.0,
+                  "water tower"
+                ],
+                [
+                  0.0,
+                  "water snake"
+                ],
+                [
+                  0.0,
+                  "water jug"
+                ],
+                [
+                  0.0,
+                  "water buffalo"
+                ],
+                [
+                  0.0,
+                  "water bottle"
+                ],
+                [
+                  0.0,
+                  "waste container"
+                ],
+                [
+                  0.0,
+                  "washing machine"
+                ],
+                [
+                  0.0,
+                  "warthog"
+                ],
+                [
+                  0.0,
+                  "wardrobe"
+                ],
+                [
+                  0.0,
+                  "wallet"
+                ],
+                [
+                  0.0,
+                  "wallaby"
+                ],
+                [
+                  0.0,
+                  "wall clock"
+                ],
+                [
+                  0.0,
+                  "waffle iron"
+                ],
+                [
+                  0.0,
+                  "vulture"
+                ],
+                [
+                  0.0,
+                  "volleyball"
+                ],
+                [
+                  0.0,
+                  "volcano"
+                ],
+                [
+                  0.0,
+                  "violin"
+                ],
+                [
+                  0.0,
+                  "vine snake"
+                ],
+                [
+                  0.0,
+                  "viaduct"
+                ],
+                [
+                  0.0,
+                  "vestment"
+                ]
+              ],
+              [
+                [
+                  0.9760000109672546,
+                  "iPod"
+                ],
+                [
+                  0.004000000189989805,
+                  "remote control"
+                ],
+                [
+                  0.0010000000474974513,
+                  "notebook computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "music speaker"
+                ],
+                [
+                  0.0010000000474974513,
+                  "laptop computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "hand-held computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "CRT screen"
+                ],
+                [
+                  0.0,
+                  "zucchini"
+                ],
+                [
+                  0.0,
+                  "zebra"
+                ],
+                [
+                  0.0,
+                  "yurt"
+                ],
+                [
+                  0.0,
+                  "yellow lady's slipper"
+                ],
+                [
+                  0.0,
+                  "yellow garden spider"
+                ],
+                [
+                  0.0,
+                  "worm snake"
+                ],
+                [
+                  0.0,
+                  "wool"
+                ],
+                [
+                  0.0,
+                  "wooden spoon"
+                ],
+                [
+                  0.0,
+                  "wombat"
+                ],
+                [
+                  0.0,
+                  "wolf spider"
+                ],
+                [
+                  0.0,
+                  "wok"
+                ],
+                [
+                  0.0,
+                  "wing"
+                ],
+                [
+                  0.0,
+                  "wine bottle"
+                ],
+                [
+                  0.0,
+                  "window shade"
+                ],
+                [
+                  0.0,
+                  "window screen"
+                ],
+                [
+                  0.0,
+                  "wild boar"
+                ],
+                [
+                  0.0,
+                  "wig"
+                ],
+                [
+                  0.0,
+                  "white-headed capuchin"
+                ],
+                [
+                  0.0,
+                  "white stork"
+                ],
+                [
+                  0.0,
+                  "whistle"
+                ],
+                [
+                  0.0,
+                  "whiskey jug"
+                ],
+                [
+                  0.0,
+                  "wheelbarrow"
+                ],
+                [
+                  0.0,
+                  "weighing scale"
+                ],
+                [
+                  0.0,
+                  "weevil"
+                ],
+                [
+                  0.0,
+                  "website"
+                ],
+                [
+                  0.0,
+                  "weasel"
+                ],
+                [
+                  0.0,
+                  "water tower"
+                ],
+                [
+                  0.0,
+                  "water snake"
+                ],
+                [
+                  0.0,
+                  "water jug"
+                ],
+                [
+                  0.0,
+                  "water buffalo"
+                ],
+                [
+                  0.0,
+                  "water bottle"
+                ],
+                [
+                  0.0,
+                  "waste container"
+                ],
+                [
+                  0.0,
+                  "washing machine"
+                ],
+                [
+                  0.0,
+                  "warthog"
+                ],
+                [
+                  0.0,
+                  "wardrobe"
+                ],
+                [
+                  0.0,
+                  "wallet"
+                ],
+                [
+                  0.0,
+                  "wallaby"
+                ],
+                [
+                  0.0,
+                  "wall clock"
+                ],
+                [
+                  0.0,
+                  "waffle iron"
+                ],
+                [
+                  0.0,
+                  "vulture"
+                ],
+                [
+                  0.0,
+                  "volleyball"
+                ],
+                [
+                  0.0,
+                  "volcano"
+                ],
+                [
+                  0.0,
+                  "violin"
+                ]
+              ],
+              [
+                [
+                  0.996999979019165,
+                  "iPod"
+                ],
+                [
+                  0.0010000000474974513,
+                  "music speaker"
+                ],
+                [
+                  0.0,
+                  "zucchini"
+                ],
+                [
+                  0.0,
+                  "zebra"
+                ],
+                [
+                  0.0,
+                  "yurt"
+                ],
+                [
+                  0.0,
+                  "yellow lady's slipper"
+                ],
+                [
+                  0.0,
+                  "yellow garden spider"
+                ],
+                [
+                  0.0,
+                  "worm snake"
+                ],
+                [
+                  0.0,
+                  "wool"
+                ],
+                [
+                  0.0,
+                  "wooden spoon"
+                ],
+                [
+                  0.0,
+                  "wombat"
+                ],
+                [
+                  0.0,
+                  "wolf spider"
+                ],
+                [
+                  0.0,
+                  "wok"
+                ],
+                [
+                  0.0,
+                  "wing"
+                ],
+                [
+                  0.0,
+                  "wine bottle"
+                ],
+                [
+                  0.0,
+                  "window shade"
+                ],
+                [
+                  0.0,
+                  "window screen"
+                ],
+                [
+                  0.0,
+                  "wild boar"
+                ],
+                [
+                  0.0,
+                  "wig"
+                ],
+                [
+                  0.0,
+                  "white-headed capuchin"
+                ],
+                [
+                  0.0,
+                  "white stork"
+                ],
+                [
+                  0.0,
+                  "whistle"
+                ],
+                [
+                  0.0,
+                  "whiskey jug"
+                ],
+                [
+                  0.0,
+                  "wheelbarrow"
+                ],
+                [
+                  0.0,
+                  "weighing scale"
+                ],
+                [
+                  0.0,
+                  "weevil"
+                ],
+                [
+                  0.0,
+                  "website"
+                ],
+                [
+                  0.0,
+                  "weasel"
+                ],
+                [
+                  0.0,
+                  "water tower"
+                ],
+                [
+                  0.0,
+                  "water snake"
+                ],
+                [
+                  0.0,
+                  "water jug"
+                ],
+                [
+                  0.0,
+                  "water buffalo"
+                ],
+                [
+                  0.0,
+                  "water bottle"
+                ],
+                [
+                  0.0,
+                  "waste container"
+                ],
+                [
+                  0.0,
+                  "washing machine"
+                ],
+                [
+                  0.0,
+                  "warthog"
+                ],
+                [
+                  0.0,
+                  "wardrobe"
+                ],
+                [
+                  0.0,
+                  "wallet"
+                ],
+                [
+                  0.0,
+                  "wallaby"
+                ],
+                [
+                  0.0,
+                  "wall clock"
+                ],
+                [
+                  0.0,
+                  "waffle iron"
+                ],
+                [
+                  0.0,
+                  "vulture"
+                ],
+                [
+                  0.0,
+                  "volleyball"
+                ],
+                [
+                  0.0,
+                  "volcano"
+                ],
+                [
+                  0.0,
+                  "violin"
+                ],
+                [
+                  0.0,
+                  "vine snake"
+                ],
+                [
+                  0.0,
+                  "viaduct"
+                ],
+                [
+                  0.0,
+                  "vestment"
+                ],
+                [
+                  0.0,
+                  "vending machine"
+                ],
+                [
+                  0.0,
+                  "velvet"
+                ]
+              ],
+              [
+                [
+                  0.9919999837875366,
+                  "iPod"
+                ],
+                [
+                  0.0010000000474974513,
+                  "remote control"
+                ],
+                [
+                  0.0010000000474974513,
+                  "harvestman"
+                ],
+                [
+                  0.0,
+                  "zucchini"
+                ],
+                [
+                  0.0,
+                  "zebra"
+                ],
+                [
+                  0.0,
+                  "yurt"
+                ],
+                [
+                  0.0,
+                  "yellow lady's slipper"
+                ],
+                [
+                  0.0,
+                  "yellow garden spider"
+                ],
+                [
+                  0.0,
+                  "worm snake"
+                ],
+                [
+                  0.0,
+                  "wool"
+                ],
+                [
+                  0.0,
+                  "wooden spoon"
+                ],
+                [
+                  0.0,
+                  "wombat"
+                ],
+                [
+                  0.0,
+                  "wolf spider"
+                ],
+                [
+                  0.0,
+                  "wok"
+                ],
+                [
+                  0.0,
+                  "wing"
+                ],
+                [
+                  0.0,
+                  "wine bottle"
+                ],
+                [
+                  0.0,
+                  "window shade"
+                ],
+                [
+                  0.0,
+                  "window screen"
+                ],
+                [
+                  0.0,
+                  "wild boar"
+                ],
+                [
+                  0.0,
+                  "wig"
+                ],
+                [
+                  0.0,
+                  "white-headed capuchin"
+                ],
+                [
+                  0.0,
+                  "white stork"
+                ],
+                [
+                  0.0,
+                  "whistle"
+                ],
+                [
+                  0.0,
+                  "whiskey jug"
+                ],
+                [
+                  0.0,
+                  "wheelbarrow"
+                ],
+                [
+                  0.0,
+                  "weighing scale"
+                ],
+                [
+                  0.0,
+                  "weevil"
+                ],
+                [
+                  0.0,
+                  "website"
+                ],
+                [
+                  0.0,
+                  "weasel"
+                ],
+                [
+                  0.0,
+                  "water tower"
+                ],
+                [
+                  0.0,
+                  "water snake"
+                ],
+                [
+                  0.0,
+                  "water jug"
+                ],
+                [
+                  0.0,
+                  "water buffalo"
+                ],
+                [
+                  0.0,
+                  "water bottle"
+                ],
+                [
+                  0.0,
+                  "waste container"
+                ],
+                [
+                  0.0,
+                  "washing machine"
+                ],
+                [
+                  0.0,
+                  "warthog"
+                ],
+                [
+                  0.0,
+                  "wardrobe"
+                ],
+                [
+                  0.0,
+                  "wallet"
+                ],
+                [
+                  0.0,
+                  "wallaby"
+                ],
+                [
+                  0.0,
+                  "wall clock"
+                ],
+                [
+                  0.0,
+                  "waffle iron"
+                ],
+                [
+                  0.0,
+                  "vulture"
+                ],
+                [
+                  0.0,
+                  "volleyball"
+                ],
+                [
+                  0.0,
+                  "volcano"
+                ],
+                [
+                  0.0,
+                  "violin"
+                ],
+                [
+                  0.0,
+                  "vine snake"
+                ],
+                [
+                  0.0,
+                  "viaduct"
+                ],
+                [
+                  0.0,
+                  "vestment"
+                ],
+                [
+                  0.0,
+                  "vending machine"
+                ]
+              ],
+              [
+                [
+                  0.9829999804496765,
+                  "iPod"
+                ],
+                [
+                  0.0020000000949949026,
+                  "remote control"
+                ],
+                [
+                  0.0010000000474974513,
+                  "music speaker"
+                ],
+                [
+                  0.0010000000474974513,
+                  "laptop computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "hand-held computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "digital watch"
+                ],
+                [
+                  0.0010000000474974513,
+                  "CRT screen"
+                ],
+                [
+                  0.0,
+                  "zucchini"
+                ],
+                [
+                  0.0,
+                  "zebra"
+                ],
+                [
+                  0.0,
+                  "yurt"
+                ],
+                [
+                  0.0,
+                  "yellow lady's slipper"
+                ],
+                [
+                  0.0,
+                  "yellow garden spider"
+                ],
+                [
+                  0.0,
+                  "worm snake"
+                ],
+                [
+                  0.0,
+                  "wool"
+                ],
+                [
+                  0.0,
+                  "wooden spoon"
+                ],
+                [
+                  0.0,
+                  "wombat"
+                ],
+                [
+                  0.0,
+                  "wolf spider"
+                ],
+                [
+                  0.0,
+                  "wok"
+                ],
+                [
+                  0.0,
+                  "wing"
+                ],
+                [
+                  0.0,
+                  "wine bottle"
+                ],
+                [
+                  0.0,
+                  "window shade"
+                ],
+                [
+                  0.0,
+                  "window screen"
+                ],
+                [
+                  0.0,
+                  "wild boar"
+                ],
+                [
+                  0.0,
+                  "wig"
+                ],
+                [
+                  0.0,
+                  "white-headed capuchin"
+                ],
+                [
+                  0.0,
+                  "white stork"
+                ],
+                [
+                  0.0,
+                  "whistle"
+                ],
+                [
+                  0.0,
+                  "whiskey jug"
+                ],
+                [
+                  0.0,
+                  "wheelbarrow"
+                ],
+                [
+                  0.0,
+                  "weighing scale"
+                ],
+                [
+                  0.0,
+                  "weevil"
+                ],
+                [
+                  0.0,
+                  "website"
+                ],
+                [
+                  0.0,
+                  "weasel"
+                ],
+                [
+                  0.0,
+                  "water tower"
+                ],
+                [
+                  0.0,
+                  "water snake"
+                ],
+                [
+                  0.0,
+                  "water jug"
+                ],
+                [
+                  0.0,
+                  "water buffalo"
+                ],
+                [
+                  0.0,
+                  "water bottle"
+                ],
+                [
+                  0.0,
+                  "waste container"
+                ],
+                [
+                  0.0,
+                  "washing machine"
+                ],
+                [
+                  0.0,
+                  "warthog"
+                ],
+                [
+                  0.0,
+                  "wardrobe"
+                ],
+                [
+                  0.0,
+                  "wallet"
+                ],
+                [
+                  0.0,
+                  "wallaby"
+                ],
+                [
+                  0.0,
+                  "wall clock"
+                ],
+                [
+                  0.0,
+                  "waffle iron"
+                ],
+                [
+                  0.0,
+                  "vulture"
+                ],
+                [
+                  0.0,
+                  "volleyball"
+                ],
+                [
+                  0.0,
+                  "volcano"
+                ],
+                [
+                  0.0,
+                  "violin"
+                ]
+              ],
+              [
+                [
+                  0.9789999723434448,
+                  "iPod"
+                ],
+                [
+                  0.006000000052154064,
+                  "remote control"
+                ],
+                [
+                  0.0020000000949949026,
+                  "laptop computer"
+                ],
+                [
+                  0.0020000000949949026,
+                  "desktop computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "tripod"
+                ],
+                [
+                  0.0010000000474974513,
+                  "music speaker"
+                ],
+                [
+                  0.0010000000474974513,
+                  "CRT screen"
+                ],
+                [
+                  0.0,
+                  "zucchini"
+                ],
+                [
+                  0.0,
+                  "zebra"
+                ],
+                [
+                  0.0,
+                  "yurt"
+                ],
+                [
+                  0.0,
+                  "yellow lady's slipper"
+                ],
+                [
+                  0.0,
+                  "yellow garden spider"
+                ],
+                [
+                  0.0,
+                  "worm snake"
+                ],
+                [
+                  0.0,
+                  "wool"
+                ],
+                [
+                  0.0,
+                  "wooden spoon"
+                ],
+                [
+                  0.0,
+                  "wombat"
+                ],
+                [
+                  0.0,
+                  "wolf spider"
+                ],
+                [
+                  0.0,
+                  "wok"
+                ],
+                [
+                  0.0,
+                  "wing"
+                ],
+                [
+                  0.0,
+                  "wine bottle"
+                ],
+                [
+                  0.0,
+                  "window shade"
+                ],
+                [
+                  0.0,
+                  "window screen"
+                ],
+                [
+                  0.0,
+                  "wild boar"
+                ],
+                [
+                  0.0,
+                  "wig"
+                ],
+                [
+                  0.0,
+                  "white-headed capuchin"
+                ],
+                [
+                  0.0,
+                  "white stork"
+                ],
+                [
+                  0.0,
+                  "whistle"
+                ],
+                [
+                  0.0,
+                  "whiskey jug"
+                ],
+                [
+                  0.0,
+                  "wheelbarrow"
+                ],
+                [
+                  0.0,
+                  "weighing scale"
+                ],
+                [
+                  0.0,
+                  "weevil"
+                ],
+                [
+                  0.0,
+                  "website"
+                ],
+                [
+                  0.0,
+                  "weasel"
+                ],
+                [
+                  0.0,
+                  "water tower"
+                ],
+                [
+                  0.0,
+                  "water snake"
+                ],
+                [
+                  0.0,
+                  "water jug"
+                ],
+                [
+                  0.0,
+                  "water buffalo"
+                ],
+                [
+                  0.0,
+                  "water bottle"
+                ],
+                [
+                  0.0,
+                  "waste container"
+                ],
+                [
+                  0.0,
+                  "washing machine"
+                ],
+                [
+                  0.0,
+                  "warthog"
+                ],
+                [
+                  0.0,
+                  "wardrobe"
+                ],
+                [
+                  0.0,
+                  "wallet"
+                ],
+                [
+                  0.0,
+                  "wallaby"
+                ],
+                [
+                  0.0,
+                  "wall clock"
+                ],
+                [
+                  0.0,
+                  "waffle iron"
+                ],
+                [
+                  0.0,
+                  "vulture"
+                ],
+                [
+                  0.0,
+                  "volleyball"
+                ],
+                [
+                  0.0,
+                  "volcano"
+                ],
+                [
+                  0.0,
+                  "violin"
+                ]
+              ],
+              [
+                [
+                  0.9800000190734863,
+                  "iPod"
+                ],
+                [
+                  0.004000000189989805,
+                  "remote control"
+                ],
+                [
+                  0.0020000000949949026,
+                  "laptop computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "steel drum"
+                ],
+                [
+                  0.0010000000474974513,
+                  "notebook computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "music speaker"
+                ],
+                [
+                  0.0010000000474974513,
+                  "mobile phone"
+                ],
+                [
+                  0.0010000000474974513,
+                  "hand-held computer"
+                ],
+                [
+                  0.0,
+                  "zucchini"
+                ],
+                [
+                  0.0,
+                  "zebra"
+                ],
+                [
+                  0.0,
+                  "yurt"
+                ],
+                [
+                  0.0,
+                  "yellow lady's slipper"
+                ],
+                [
+                  0.0,
+                  "yellow garden spider"
+                ],
+                [
+                  0.0,
+                  "worm snake"
+                ],
+                [
+                  0.0,
+                  "wool"
+                ],
+                [
+                  0.0,
+                  "wooden spoon"
+                ],
+                [
+                  0.0,
+                  "wombat"
+                ],
+                [
+                  0.0,
+                  "wolf spider"
+                ],
+                [
+                  0.0,
+                  "wok"
+                ],
+                [
+                  0.0,
+                  "wing"
+                ],
+                [
+                  0.0,
+                  "wine bottle"
+                ],
+                [
+                  0.0,
+                  "window shade"
+                ],
+                [
+                  0.0,
+                  "window screen"
+                ],
+                [
+                  0.0,
+                  "wild boar"
+                ],
+                [
+                  0.0,
+                  "wig"
+                ],
+                [
+                  0.0,
+                  "white-headed capuchin"
+                ],
+                [
+                  0.0,
+                  "white stork"
+                ],
+                [
+                  0.0,
+                  "whistle"
+                ],
+                [
+                  0.0,
+                  "whiskey jug"
+                ],
+                [
+                  0.0,
+                  "wheelbarrow"
+                ],
+                [
+                  0.0,
+                  "weighing scale"
+                ],
+                [
+                  0.0,
+                  "weevil"
+                ],
+                [
+                  0.0,
+                  "website"
+                ],
+                [
+                  0.0,
+                  "weasel"
+                ],
+                [
+                  0.0,
+                  "water tower"
+                ],
+                [
+                  0.0,
+                  "water snake"
+                ],
+                [
+                  0.0,
+                  "water jug"
+                ],
+                [
+                  0.0,
+                  "water buffalo"
+                ],
+                [
+                  0.0,
+                  "water bottle"
+                ],
+                [
+                  0.0,
+                  "waste container"
+                ],
+                [
+                  0.0,
+                  "washing machine"
+                ],
+                [
+                  0.0,
+                  "warthog"
+                ],
+                [
+                  0.0,
+                  "wardrobe"
+                ],
+                [
+                  0.0,
+                  "wallet"
+                ],
+                [
+                  0.0,
+                  "wallaby"
+                ],
+                [
+                  0.0,
+                  "wall clock"
+                ],
+                [
+                  0.0,
+                  "waffle iron"
+                ],
+                [
+                  0.0,
+                  "vulture"
+                ],
+                [
+                  0.0,
+                  "volleyball"
+                ],
+                [
+                  0.0,
+                  "volcano"
+                ]
+              ],
+              [
+                [
+                  0.9789999723434448,
+                  "iPod"
+                ],
+                [
+                  0.003000000026077032,
+                  "toilet paper"
+                ],
+                [
+                  0.003000000026077032,
+                  "remote control"
+                ],
+                [
+                  0.0020000000949949026,
+                  "plunger"
+                ],
+                [
+                  0.0020000000949949026,
+                  "bathtub"
+                ],
+                [
+                  0.0010000000474974513,
+                  "toilet seat"
+                ],
+                [
+                  0.0010000000474974513,
+                  "shower curtain"
+                ],
+                [
+                  0.0010000000474974513,
+                  "music speaker"
+                ],
+                [
+                  0.0010000000474974513,
+                  "laptop computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "CRT screen"
+                ],
+                [
+                  0.0,
+                  "zucchini"
+                ],
+                [
+                  0.0,
+                  "zebra"
+                ],
+                [
+                  0.0,
+                  "yurt"
+                ],
+                [
+                  0.0,
+                  "yellow lady's slipper"
+                ],
+                [
+                  0.0,
+                  "yellow garden spider"
+                ],
+                [
+                  0.0,
+                  "worm snake"
+                ],
+                [
+                  0.0,
+                  "wool"
+                ],
+                [
+                  0.0,
+                  "wooden spoon"
+                ],
+                [
+                  0.0,
+                  "wombat"
+                ],
+                [
+                  0.0,
+                  "wolf spider"
+                ],
+                [
+                  0.0,
+                  "wok"
+                ],
+                [
+                  0.0,
+                  "wing"
+                ],
+                [
+                  0.0,
+                  "wine bottle"
+                ],
+                [
+                  0.0,
+                  "window shade"
+                ],
+                [
+                  0.0,
+                  "window screen"
+                ],
+                [
+                  0.0,
+                  "wild boar"
+                ],
+                [
+                  0.0,
+                  "wig"
+                ],
+                [
+                  0.0,
+                  "white-headed capuchin"
+                ],
+                [
+                  0.0,
+                  "white stork"
+                ],
+                [
+                  0.0,
+                  "whistle"
+                ],
+                [
+                  0.0,
+                  "whiskey jug"
+                ],
+                [
+                  0.0,
+                  "wheelbarrow"
+                ],
+                [
+                  0.0,
+                  "weighing scale"
+                ],
+                [
+                  0.0,
+                  "weevil"
+                ],
+                [
+                  0.0,
+                  "website"
+                ],
+                [
+                  0.0,
+                  "weasel"
+                ],
+                [
+                  0.0,
+                  "water tower"
+                ],
+                [
+                  0.0,
+                  "water snake"
+                ],
+                [
+                  0.0,
+                  "water jug"
+                ],
+                [
+                  0.0,
+                  "water buffalo"
+                ],
+                [
+                  0.0,
+                  "water bottle"
+                ],
+                [
+                  0.0,
+                  "waste container"
+                ],
+                [
+                  0.0,
+                  "washing machine"
+                ],
+                [
+                  0.0,
+                  "warthog"
+                ],
+                [
+                  0.0,
+                  "wardrobe"
+                ],
+                [
+                  0.0,
+                  "wallet"
+                ],
+                [
+                  0.0,
+                  "wallaby"
+                ],
+                [
+                  0.0,
+                  "wall clock"
+                ],
+                [
+                  0.0,
+                  "waffle iron"
+                ],
+                [
+                  0.0,
+                  "vulture"
+                ]
+              ],
+              [
+                [
+                  0.9909999966621399,
+                  "iPod"
+                ],
+                [
+                  0.004000000189989805,
+                  "remote control"
+                ],
+                [
+                  0.0010000000474974513,
+                  "notebook computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "laptop computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "hand-held computer"
+                ],
+                [
+                  0.0,
+                  "zucchini"
+                ],
+                [
+                  0.0,
+                  "zebra"
+                ],
+                [
+                  0.0,
+                  "yurt"
+                ],
+                [
+                  0.0,
+                  "yellow lady's slipper"
+                ],
+                [
+                  0.0,
+                  "yellow garden spider"
+                ],
+                [
+                  0.0,
+                  "worm snake"
+                ],
+                [
+                  0.0,
+                  "wool"
+                ],
+                [
+                  0.0,
+                  "wooden spoon"
+                ],
+                [
+                  0.0,
+                  "wombat"
+                ],
+                [
+                  0.0,
+                  "wolf spider"
+                ],
+                [
+                  0.0,
+                  "wok"
+                ],
+                [
+                  0.0,
+                  "wing"
+                ],
+                [
+                  0.0,
+                  "wine bottle"
+                ],
+                [
+                  0.0,
+                  "window shade"
+                ],
+                [
+                  0.0,
+                  "window screen"
+                ],
+                [
+                  0.0,
+                  "wild boar"
+                ],
+                [
+                  0.0,
+                  "wig"
+                ],
+                [
+                  0.0,
+                  "white-headed capuchin"
+                ],
+                [
+                  0.0,
+                  "white stork"
+                ],
+                [
+                  0.0,
+                  "whistle"
+                ],
+                [
+                  0.0,
+                  "whiskey jug"
+                ],
+                [
+                  0.0,
+                  "wheelbarrow"
+                ],
+                [
+                  0.0,
+                  "weighing scale"
+                ],
+                [
+                  0.0,
+                  "weevil"
+                ],
+                [
+                  0.0,
+                  "website"
+                ],
+                [
+                  0.0,
+                  "weasel"
+                ],
+                [
+                  0.0,
+                  "water tower"
+                ],
+                [
+                  0.0,
+                  "water snake"
+                ],
+                [
+                  0.0,
+                  "water jug"
+                ],
+                [
+                  0.0,
+                  "water buffalo"
+                ],
+                [
+                  0.0,
+                  "water bottle"
+                ],
+                [
+                  0.0,
+                  "waste container"
+                ],
+                [
+                  0.0,
+                  "washing machine"
+                ],
+                [
+                  0.0,
+                  "warthog"
+                ],
+                [
+                  0.0,
+                  "wardrobe"
+                ],
+                [
+                  0.0,
+                  "wallet"
+                ],
+                [
+                  0.0,
+                  "wallaby"
+                ],
+                [
+                  0.0,
+                  "wall clock"
+                ],
+                [
+                  0.0,
+                  "waffle iron"
+                ],
+                [
+                  0.0,
+                  "vulture"
+                ],
+                [
+                  0.0,
+                  "volleyball"
+                ],
+                [
+                  0.0,
+                  "volcano"
+                ],
+                [
+                  0.0,
+                  "violin"
+                ],
+                [
+                  0.0,
+                  "vine snake"
+                ],
+                [
+                  0.0,
+                  "viaduct"
+                ]
+              ],
+              [
+                [
+                  0.9879999756813049,
+                  "iPod"
+                ],
+                [
+                  0.0010000000474974513,
+                  "remote control"
+                ],
+                [
+                  0.0010000000474974513,
+                  "megalith"
+                ],
+                [
+                  0.0010000000474974513,
+                  "hand-held computer"
+                ],
+                [
+                  0.0,
+                  "zucchini"
+                ],
+                [
+                  0.0,
+                  "zebra"
+                ],
+                [
+                  0.0,
+                  "yurt"
+                ],
+                [
+                  0.0,
+                  "yellow lady's slipper"
+                ],
+                [
+                  0.0,
+                  "yellow garden spider"
+                ],
+                [
+                  0.0,
+                  "worm snake"
+                ],
+                [
+                  0.0,
+                  "wool"
+                ],
+                [
+                  0.0,
+                  "wooden spoon"
+                ],
+                [
+                  0.0,
+                  "wombat"
+                ],
+                [
+                  0.0,
+                  "wolf spider"
+                ],
+                [
+                  0.0,
+                  "wok"
+                ],
+                [
+                  0.0,
+                  "wing"
+                ],
+                [
+                  0.0,
+                  "wine bottle"
+                ],
+                [
+                  0.0,
+                  "window shade"
+                ],
+                [
+                  0.0,
+                  "window screen"
+                ],
+                [
+                  0.0,
+                  "wild boar"
+                ],
+                [
+                  0.0,
+                  "wig"
+                ],
+                [
+                  0.0,
+                  "white-headed capuchin"
+                ],
+                [
+                  0.0,
+                  "white stork"
+                ],
+                [
+                  0.0,
+                  "whistle"
+                ],
+                [
+                  0.0,
+                  "whiskey jug"
+                ],
+                [
+                  0.0,
+                  "wheelbarrow"
+                ],
+                [
+                  0.0,
+                  "weighing scale"
+                ],
+                [
+                  0.0,
+                  "weevil"
+                ],
+                [
+                  0.0,
+                  "website"
+                ],
+                [
+                  0.0,
+                  "weasel"
+                ],
+                [
+                  0.0,
+                  "water tower"
+                ],
+                [
+                  0.0,
+                  "water snake"
+                ],
+                [
+                  0.0,
+                  "water jug"
+                ],
+                [
+                  0.0,
+                  "water buffalo"
+                ],
+                [
+                  0.0,
+                  "water bottle"
+                ],
+                [
+                  0.0,
+                  "waste container"
+                ],
+                [
+                  0.0,
+                  "washing machine"
+                ],
+                [
+                  0.0,
+                  "warthog"
+                ],
+                [
+                  0.0,
+                  "wardrobe"
+                ],
+                [
+                  0.0,
+                  "wallet"
+                ],
+                [
+                  0.0,
+                  "wallaby"
+                ],
+                [
+                  0.0,
+                  "wall clock"
+                ],
+                [
+                  0.0,
+                  "waffle iron"
+                ],
+                [
+                  0.0,
+                  "vulture"
+                ],
+                [
+                  0.0,
+                  "volleyball"
+                ],
+                [
+                  0.0,
+                  "volcano"
+                ],
+                [
+                  0.0,
+                  "violin"
+                ],
+                [
+                  0.0,
+                  "vine snake"
+                ],
+                [
+                  0.0,
+                  "viaduct"
+                ],
+                [
+                  0.0,
+                  "vestment"
+                ]
+              ],
+              [
+                [
+                  0.9789999723434448,
+                  "iPod"
+                ],
+                [
+                  0.003000000026077032,
+                  "remote control"
+                ],
+                [
+                  0.0020000000949949026,
+                  "music speaker"
+                ],
+                [
+                  0.0010000000474974513,
+                  "space shuttle"
+                ],
+                [
+                  0.0010000000474974513,
+                  "solar thermal collector"
+                ],
+                [
+                  0.0010000000474974513,
+                  "radio"
+                ],
+                [
+                  0.0010000000474974513,
+                  "notebook computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "missile"
+                ],
+                [
+                  0.0010000000474974513,
+                  "missile"
+                ],
+                [
+                  0.0010000000474974513,
+                  "laptop computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "hand-held computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "digital watch"
+                ],
+                [
+                  0.0010000000474974513,
+                  "desktop computer"
+                ],
+                [
+                  0.0,
+                  "zucchini"
+                ],
+                [
+                  0.0,
+                  "zebra"
+                ],
+                [
+                  0.0,
+                  "yurt"
+                ],
+                [
+                  0.0,
+                  "yellow lady's slipper"
+                ],
+                [
+                  0.0,
+                  "yellow garden spider"
+                ],
+                [
+                  0.0,
+                  "worm snake"
+                ],
+                [
+                  0.0,
+                  "wool"
+                ],
+                [
+                  0.0,
+                  "wooden spoon"
+                ],
+                [
+                  0.0,
+                  "wombat"
+                ],
+                [
+                  0.0,
+                  "wolf spider"
+                ],
+                [
+                  0.0,
+                  "wok"
+                ],
+                [
+                  0.0,
+                  "wing"
+                ],
+                [
+                  0.0,
+                  "wine bottle"
+                ],
+                [
+                  0.0,
+                  "window shade"
+                ],
+                [
+                  0.0,
+                  "window screen"
+                ],
+                [
+                  0.0,
+                  "wild boar"
+                ],
+                [
+                  0.0,
+                  "wig"
+                ],
+                [
+                  0.0,
+                  "white-headed capuchin"
+                ],
+                [
+                  0.0,
+                  "white stork"
+                ],
+                [
+                  0.0,
+                  "whistle"
+                ],
+                [
+                  0.0,
+                  "whiskey jug"
+                ],
+                [
+                  0.0,
+                  "wheelbarrow"
+                ],
+                [
+                  0.0,
+                  "weighing scale"
+                ],
+                [
+                  0.0,
+                  "weevil"
+                ],
+                [
+                  0.0,
+                  "website"
+                ],
+                [
+                  0.0,
+                  "weasel"
+                ],
+                [
+                  0.0,
+                  "water tower"
+                ],
+                [
+                  0.0,
+                  "water snake"
+                ],
+                [
+                  0.0,
+                  "water jug"
+                ],
+                [
+                  0.0,
+                  "water buffalo"
+                ],
+                [
+                  0.0,
+                  "water bottle"
+                ],
+                [
+                  0.0,
+                  "waste container"
+                ],
+                [
+                  0.0,
+                  "washing machine"
+                ],
+                [
+                  0.0,
+                  "warthog"
+                ],
+                [
+                  0.0,
+                  "wardrobe"
+                ],
+                [
+                  0.0,
+                  "wallet"
+                ],
+                [
+                  0.0,
+                  "wallaby"
+                ]
+              ],
+              [
+                [
+                  0.9990000128746033,
+                  "slot machine"
+                ],
+                [
+                  0.0,
+                  "zucchini"
+                ],
+                [
+                  0.0,
+                  "zebra"
+                ],
+                [
+                  0.0,
+                  "yurt"
+                ],
+                [
+                  0.0,
+                  "yellow lady's slipper"
+                ],
+                [
+                  0.0,
+                  "yellow garden spider"
+                ],
+                [
+                  0.0,
+                  "worm snake"
+                ],
+                [
+                  0.0,
+                  "wool"
+                ],
+                [
+                  0.0,
+                  "wooden spoon"
+                ],
+                [
+                  0.0,
+                  "wombat"
+                ],
+                [
+                  0.0,
+                  "wolf spider"
+                ],
+                [
+                  0.0,
+                  "wok"
+                ],
+                [
+                  0.0,
+                  "wing"
+                ],
+                [
+                  0.0,
+                  "wine bottle"
+                ],
+                [
+                  0.0,
+                  "window shade"
+                ],
+                [
+                  0.0,
+                  "window screen"
+                ],
+                [
+                  0.0,
+                  "wild boar"
+                ],
+                [
+                  0.0,
+                  "wig"
+                ],
+                [
+                  0.0,
+                  "white-headed capuchin"
+                ],
+                [
+                  0.0,
+                  "white stork"
+                ],
+                [
+                  0.0,
+                  "whistle"
+                ],
+                [
+                  0.0,
+                  "whiskey jug"
+                ],
+                [
+                  0.0,
+                  "wheelbarrow"
+                ],
+                [
+                  0.0,
+                  "weighing scale"
+                ],
+                [
+                  0.0,
+                  "weevil"
+                ],
+                [
+                  0.0,
+                  "website"
+                ],
+                [
+                  0.0,
+                  "weasel"
+                ],
+                [
+                  0.0,
+                  "water tower"
+                ],
+                [
+                  0.0,
+                  "water snake"
+                ],
+                [
+                  0.0,
+                  "water jug"
+                ],
+                [
+                  0.0,
+                  "water buffalo"
+                ],
+                [
+                  0.0,
+                  "water bottle"
+                ],
+                [
+                  0.0,
+                  "waste container"
+                ],
+                [
+                  0.0,
+                  "washing machine"
+                ],
+                [
+                  0.0,
+                  "warthog"
+                ],
+                [
+                  0.0,
+                  "wardrobe"
+                ],
+                [
+                  0.0,
+                  "wallet"
+                ],
+                [
+                  0.0,
+                  "wallaby"
+                ],
+                [
+                  0.0,
+                  "wall clock"
+                ],
+                [
+                  0.0,
+                  "waffle iron"
+                ],
+                [
+                  0.0,
+                  "vulture"
+                ],
+                [
+                  0.0,
+                  "volleyball"
+                ],
+                [
+                  0.0,
+                  "volcano"
+                ],
+                [
+                  0.0,
+                  "violin"
+                ],
+                [
+                  0.0,
+                  "vine snake"
+                ],
+                [
+                  0.0,
+                  "viaduct"
+                ],
+                [
+                  0.0,
+                  "vestment"
+                ],
+                [
+                  0.0,
+                  "vending machine"
+                ],
+                [
+                  0.0,
+                  "velvet"
+                ],
+                [
+                  0.0,
+                  "vault"
+                ]
+              ],
+              [
+                [
+                  0.9549999833106995,
+                  "iPod"
+                ],
+                [
+                  0.004999999888241291,
+                  "weasel"
+                ],
+                [
+                  0.004000000189989805,
+                  "remote control"
+                ],
+                [
+                  0.004000000189989805,
+                  "hamster"
+                ],
+                [
+                  0.0020000000949949026,
+                  "meerkat"
+                ],
+                [
+                  0.0010000000474974513,
+                  "mongoose"
+                ],
+                [
+                  0.0010000000474974513,
+                  "marmot"
+                ],
+                [
+                  0.0010000000474974513,
+                  "laptop computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "hare"
+                ],
+                [
+                  0.0010000000474974513,
+                  "hand-held computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "guinea pig"
+                ],
+                [
+                  0.0010000000474974513,
+                  "Siamese cat"
+                ],
+                [
+                  0.0010000000474974513,
+                  "Saharan horned viper"
+                ],
+                [
+                  0.0010000000474974513,
+                  "European polecat"
+                ],
+                [
+                  0.0,
+                  "zucchini"
+                ],
+                [
+                  0.0,
+                  "zebra"
+                ],
+                [
+                  0.0,
+                  "yurt"
+                ],
+                [
+                  0.0,
+                  "yellow lady's slipper"
+                ],
+                [
+                  0.0,
+                  "yellow garden spider"
+                ],
+                [
+                  0.0,
+                  "worm snake"
+                ],
+                [
+                  0.0,
+                  "wool"
+                ],
+                [
+                  0.0,
+                  "wooden spoon"
+                ],
+                [
+                  0.0,
+                  "wombat"
+                ],
+                [
+                  0.0,
+                  "wolf spider"
+                ],
+                [
+                  0.0,
+                  "wok"
+                ],
+                [
+                  0.0,
+                  "wing"
+                ],
+                [
+                  0.0,
+                  "wine bottle"
+                ],
+                [
+                  0.0,
+                  "window shade"
+                ],
+                [
+                  0.0,
+                  "window screen"
+                ],
+                [
+                  0.0,
+                  "wild boar"
+                ],
+                [
+                  0.0,
+                  "wig"
+                ],
+                [
+                  0.0,
+                  "white-headed capuchin"
+                ],
+                [
+                  0.0,
+                  "white stork"
+                ],
+                [
+                  0.0,
+                  "whistle"
+                ],
+                [
+                  0.0,
+                  "whiskey jug"
+                ],
+                [
+                  0.0,
+                  "wheelbarrow"
+                ],
+                [
+                  0.0,
+                  "weighing scale"
+                ],
+                [
+                  0.0,
+                  "weevil"
+                ],
+                [
+                  0.0,
+                  "website"
+                ],
+                [
+                  0.0,
+                  "water tower"
+                ],
+                [
+                  0.0,
+                  "water snake"
+                ],
+                [
+                  0.0,
+                  "water jug"
+                ],
+                [
+                  0.0,
+                  "water buffalo"
+                ],
+                [
+                  0.0,
+                  "water bottle"
+                ],
+                [
+                  0.0,
+                  "waste container"
+                ],
+                [
+                  0.0,
+                  "washing machine"
+                ],
+                [
+                  0.0,
+                  "warthog"
+                ],
+                [
+                  0.0,
+                  "wardrobe"
+                ],
+                [
+                  0.0,
+                  "wallet"
+                ],
+                [
+                  0.0,
+                  "wallaby"
+                ]
+              ],
+              [
+                [
+                  0.8389999866485596,
+                  "iPod"
+                ],
+                [
+                  0.04699999839067459,
+                  "website"
+                ],
+                [
+                  0.035999998450279236,
+                  "remote control"
+                ],
+                [
+                  0.014000000432133675,
+                  "hand-held computer"
+                ],
+                [
+                  0.008999999612569809,
+                  "CRT screen"
+                ],
+                [
+                  0.004999999888241291,
+                  "digital watch"
+                ],
+                [
+                  0.004000000189989805,
+                  "desktop computer"
+                ],
+                [
+                  0.003000000026077032,
+                  "analog clock"
+                ],
+                [
+                  0.003000000026077032,
+                  "Band-Aid"
+                ],
+                [
+                  0.0020000000949949026,
+                  "toilet paper"
+                ],
+                [
+                  0.0020000000949949026,
+                  "notebook computer"
+                ],
+                [
+                  0.0020000000949949026,
+                  "music speaker"
+                ],
+                [
+                  0.0020000000949949026,
+                  "laptop computer"
+                ],
+                [
+                  0.0020000000949949026,
+                  "computer mouse"
+                ],
+                [
+                  0.0010000000474974513,
+                  "space bar"
+                ],
+                [
+                  0.0010000000474974513,
+                  "radio"
+                ],
+                [
+                  0.0010000000474974513,
+                  "printer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "monitor"
+                ],
+                [
+                  0.0010000000474974513,
+                  "mobile phone"
+                ],
+                [
+                  0.0010000000474974513,
+                  "desk"
+                ],
+                [
+                  0.0010000000474974513,
+                  "computer keyboard"
+                ],
+                [
+                  0.0010000000474974513,
+                  "Crock Pot"
+                ],
+                [
+                  0.0,
+                  "zucchini"
+                ],
+                [
+                  0.0,
+                  "zebra"
+                ],
+                [
+                  0.0,
+                  "yurt"
+                ],
+                [
+                  0.0,
+                  "yellow lady's slipper"
+                ],
+                [
+                  0.0,
+                  "yellow garden spider"
+                ],
+                [
+                  0.0,
+                  "worm snake"
+                ],
+                [
+                  0.0,
+                  "wool"
+                ],
+                [
+                  0.0,
+                  "wooden spoon"
+                ],
+                [
+                  0.0,
+                  "wombat"
+                ],
+                [
+                  0.0,
+                  "wolf spider"
+                ],
+                [
+                  0.0,
+                  "wok"
+                ],
+                [
+                  0.0,
+                  "wing"
+                ],
+                [
+                  0.0,
+                  "wine bottle"
+                ],
+                [
+                  0.0,
+                  "window shade"
+                ],
+                [
+                  0.0,
+                  "window screen"
+                ],
+                [
+                  0.0,
+                  "wild boar"
+                ],
+                [
+                  0.0,
+                  "wig"
+                ],
+                [
+                  0.0,
+                  "white-headed capuchin"
+                ],
+                [
+                  0.0,
+                  "white stork"
+                ],
+                [
+                  0.0,
+                  "whistle"
+                ],
+                [
+                  0.0,
+                  "whiskey jug"
+                ],
+                [
+                  0.0,
+                  "wheelbarrow"
+                ],
+                [
+                  0.0,
+                  "weighing scale"
+                ],
+                [
+                  0.0,
+                  "weevil"
+                ],
+                [
+                  0.0,
+                  "weasel"
+                ],
+                [
+                  0.0,
+                  "water tower"
+                ],
+                [
+                  0.0,
+                  "water snake"
+                ],
+                [
+                  0.0,
+                  "water jug"
+                ]
+              ],
+              [
+                [
+                  0.9950000047683716,
+                  "iPod"
+                ],
+                [
+                  0.0010000000474974513,
+                  "remote control"
+                ],
+                [
+                  0.0,
+                  "zucchini"
+                ],
+                [
+                  0.0,
+                  "zebra"
+                ],
+                [
+                  0.0,
+                  "yurt"
+                ],
+                [
+                  0.0,
+                  "yellow lady's slipper"
+                ],
+                [
+                  0.0,
+                  "yellow garden spider"
+                ],
+                [
+                  0.0,
+                  "worm snake"
+                ],
+                [
+                  0.0,
+                  "wool"
+                ],
+                [
+                  0.0,
+                  "wooden spoon"
+                ],
+                [
+                  0.0,
+                  "wombat"
+                ],
+                [
+                  0.0,
+                  "wolf spider"
+                ],
+                [
+                  0.0,
+                  "wok"
+                ],
+                [
+                  0.0,
+                  "wing"
+                ],
+                [
+                  0.0,
+                  "wine bottle"
+                ],
+                [
+                  0.0,
+                  "window shade"
+                ],
+                [
+                  0.0,
+                  "window screen"
+                ],
+                [
+                  0.0,
+                  "wild boar"
+                ],
+                [
+                  0.0,
+                  "wig"
+                ],
+                [
+                  0.0,
+                  "white-headed capuchin"
+                ],
+                [
+                  0.0,
+                  "white stork"
+                ],
+                [
+                  0.0,
+                  "whistle"
+                ],
+                [
+                  0.0,
+                  "whiskey jug"
+                ],
+                [
+                  0.0,
+                  "wheelbarrow"
+                ],
+                [
+                  0.0,
+                  "weighing scale"
+                ],
+                [
+                  0.0,
+                  "weevil"
+                ],
+                [
+                  0.0,
+                  "website"
+                ],
+                [
+                  0.0,
+                  "weasel"
+                ],
+                [
+                  0.0,
+                  "water tower"
+                ],
+                [
+                  0.0,
+                  "water snake"
+                ],
+                [
+                  0.0,
+                  "water jug"
+                ],
+                [
+                  0.0,
+                  "water buffalo"
+                ],
+                [
+                  0.0,
+                  "water bottle"
+                ],
+                [
+                  0.0,
+                  "waste container"
+                ],
+                [
+                  0.0,
+                  "washing machine"
+                ],
+                [
+                  0.0,
+                  "warthog"
+                ],
+                [
+                  0.0,
+                  "wardrobe"
+                ],
+                [
+                  0.0,
+                  "wallet"
+                ],
+                [
+                  0.0,
+                  "wallaby"
+                ],
+                [
+                  0.0,
+                  "wall clock"
+                ],
+                [
+                  0.0,
+                  "waffle iron"
+                ],
+                [
+                  0.0,
+                  "vulture"
+                ],
+                [
+                  0.0,
+                  "volleyball"
+                ],
+                [
+                  0.0,
+                  "volcano"
+                ],
+                [
+                  0.0,
+                  "violin"
+                ],
+                [
+                  0.0,
+                  "vine snake"
+                ],
+                [
+                  0.0,
+                  "viaduct"
+                ],
+                [
+                  0.0,
+                  "vestment"
+                ],
+                [
+                  0.0,
+                  "vending machine"
+                ],
+                [
+                  0.0,
+                  "velvet"
+                ]
+              ],
+              [
+                [
+                  0.6629999876022339,
+                  "African bush elephant"
+                ],
+                [
+                  0.11500000208616257,
+                  "Asian elephant"
+                ],
+                [
+                  0.11299999803304672,
+                  "iPod"
+                ],
+                [
+                  0.08100000023841858,
+                  "tusker"
+                ],
+                [
+                  0.008999999612569809,
+                  "gorilla"
+                ],
+                [
+                  0.004999999888241291,
+                  "zebra"
+                ],
+                [
+                  0.0020000000949949026,
+                  "water buffalo"
+                ],
+                [
+                  0.0010000000474974513,
+                  "tiger"
+                ],
+                [
+                  0.0010000000474974513,
+                  "hippopotamus"
+                ],
+                [
+                  0.0,
+                  "zucchini"
+                ],
+                [
+                  0.0,
+                  "yurt"
+                ],
+                [
+                  0.0,
+                  "yellow lady's slipper"
+                ],
+                [
+                  0.0,
+                  "yellow garden spider"
+                ],
+                [
+                  0.0,
+                  "worm snake"
+                ],
+                [
+                  0.0,
+                  "wool"
+                ],
+                [
+                  0.0,
+                  "wooden spoon"
+                ],
+                [
+                  0.0,
+                  "wombat"
+                ],
+                [
+                  0.0,
+                  "wolf spider"
+                ],
+                [
+                  0.0,
+                  "wok"
+                ],
+                [
+                  0.0,
+                  "wing"
+                ],
+                [
+                  0.0,
+                  "wine bottle"
+                ],
+                [
+                  0.0,
+                  "window shade"
+                ],
+                [
+                  0.0,
+                  "window screen"
+                ],
+                [
+                  0.0,
+                  "wild boar"
+                ],
+                [
+                  0.0,
+                  "wig"
+                ],
+                [
+                  0.0,
+                  "white-headed capuchin"
+                ],
+                [
+                  0.0,
+                  "white stork"
+                ],
+                [
+                  0.0,
+                  "whistle"
+                ],
+                [
+                  0.0,
+                  "whiskey jug"
+                ],
+                [
+                  0.0,
+                  "wheelbarrow"
+                ],
+                [
+                  0.0,
+                  "weighing scale"
+                ],
+                [
+                  0.0,
+                  "weevil"
+                ],
+                [
+                  0.0,
+                  "website"
+                ],
+                [
+                  0.0,
+                  "weasel"
+                ],
+                [
+                  0.0,
+                  "water tower"
+                ],
+                [
+                  0.0,
+                  "water snake"
+                ],
+                [
+                  0.0,
+                  "water jug"
+                ],
+                [
+                  0.0,
+                  "water bottle"
+                ],
+                [
+                  0.0,
+                  "waste container"
+                ],
+                [
+                  0.0,
+                  "washing machine"
+                ],
+                [
+                  0.0,
+                  "warthog"
+                ],
+                [
+                  0.0,
+                  "wardrobe"
+                ],
+                [
+                  0.0,
+                  "wallet"
+                ],
+                [
+                  0.0,
+                  "wallaby"
+                ],
+                [
+                  0.0,
+                  "wall clock"
+                ],
+                [
+                  0.0,
+                  "waffle iron"
+                ],
+                [
+                  0.0,
+                  "vulture"
+                ],
+                [
+                  0.0,
+                  "volleyball"
+                ],
+                [
+                  0.0,
+                  "volcano"
+                ],
+                [
+                  0.0,
+                  "violin"
+                ]
+              ],
+              [
+                [
+                  0.9629999995231628,
+                  "iPod"
+                ],
+                [
+                  0.004000000189989805,
+                  "remote control"
+                ],
+                [
+                  0.0010000000474974513,
+                  "notebook computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "music speaker"
+                ],
+                [
+                  0.0010000000474974513,
+                  "laptop computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "hand-held computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "golf ball"
+                ],
+                [
+                  0.0010000000474974513,
+                  "croquet ball"
+                ],
+                [
+                  0.0010000000474974513,
+                  "Granny Smith"
+                ],
+                [
+                  0.0010000000474974513,
+                  "CRT screen"
+                ],
+                [
+                  0.0,
+                  "zucchini"
+                ],
+                [
+                  0.0,
+                  "zebra"
+                ],
+                [
+                  0.0,
+                  "yurt"
+                ],
+                [
+                  0.0,
+                  "yellow lady's slipper"
+                ],
+                [
+                  0.0,
+                  "yellow garden spider"
+                ],
+                [
+                  0.0,
+                  "worm snake"
+                ],
+                [
+                  0.0,
+                  "wool"
+                ],
+                [
+                  0.0,
+                  "wooden spoon"
+                ],
+                [
+                  0.0,
+                  "wombat"
+                ],
+                [
+                  0.0,
+                  "wolf spider"
+                ],
+                [
+                  0.0,
+                  "wok"
+                ],
+                [
+                  0.0,
+                  "wing"
+                ],
+                [
+                  0.0,
+                  "wine bottle"
+                ],
+                [
+                  0.0,
+                  "window shade"
+                ],
+                [
+                  0.0,
+                  "window screen"
+                ],
+                [
+                  0.0,
+                  "wild boar"
+                ],
+                [
+                  0.0,
+                  "wig"
+                ],
+                [
+                  0.0,
+                  "white-headed capuchin"
+                ],
+                [
+                  0.0,
+                  "white stork"
+                ],
+                [
+                  0.0,
+                  "whistle"
+                ],
+                [
+                  0.0,
+                  "whiskey jug"
+                ],
+                [
+                  0.0,
+                  "wheelbarrow"
+                ],
+                [
+                  0.0,
+                  "weighing scale"
+                ],
+                [
+                  0.0,
+                  "weevil"
+                ],
+                [
+                  0.0,
+                  "website"
+                ],
+                [
+                  0.0,
+                  "weasel"
+                ],
+                [
+                  0.0,
+                  "water tower"
+                ],
+                [
+                  0.0,
+                  "water snake"
+                ],
+                [
+                  0.0,
+                  "water jug"
+                ],
+                [
+                  0.0,
+                  "water buffalo"
+                ],
+                [
+                  0.0,
+                  "water bottle"
+                ],
+                [
+                  0.0,
+                  "waste container"
+                ],
+                [
+                  0.0,
+                  "washing machine"
+                ],
+                [
+                  0.0,
+                  "warthog"
+                ],
+                [
+                  0.0,
+                  "wardrobe"
+                ],
+                [
+                  0.0,
+                  "wallet"
+                ],
+                [
+                  0.0,
+                  "wallaby"
+                ],
+                [
+                  0.0,
+                  "wall clock"
+                ],
+                [
+                  0.0,
+                  "waffle iron"
+                ],
+                [
+                  0.0,
+                  "vulture"
+                ]
+              ],
+              [
+                [
+                  0.3409999907016754,
+                  "frying pan"
+                ],
+                [
+                  0.296999990940094,
+                  "mashed potato"
+                ],
+                [
+                  0.10100000351667404,
+                  "Crock Pot"
+                ],
+                [
+                  0.0989999994635582,
+                  "iPod"
+                ],
+                [
+                  0.05700000002980232,
+                  "hot pot"
+                ],
+                [
+                  0.04100000113248825,
+                  "broccoli"
+                ],
+                [
+                  0.027000000700354576,
+                  "cauliflower"
+                ],
+                [
+                  0.008999999612569809,
+                  "Dutch oven"
+                ],
+                [
+                  0.003000000026077032,
+                  "spaghetti squash"
+                ],
+                [
+                  0.0020000000949949026,
+                  "wok"
+                ],
+                [
+                  0.0020000000949949026,
+                  "spatula"
+                ],
+                [
+                  0.0020000000949949026,
+                  "soup bowl"
+                ],
+                [
+                  0.0010000000474974513,
+                  "wooden spoon"
+                ],
+                [
+                  0.0010000000474974513,
+                  "plate"
+                ],
+                [
+                  0.0010000000474974513,
+                  "mixing bowl"
+                ],
+                [
+                  0.0010000000474974513,
+                  "meatloaf"
+                ],
+                [
+                  0.0010000000474974513,
+                  "hen-of-the-woods"
+                ],
+                [
+                  0.0010000000474974513,
+                  "guacamole"
+                ],
+                [
+                  0.0010000000474974513,
+                  "eggnog"
+                ],
+                [
+                  0.0010000000474974513,
+                  "consomme"
+                ],
+                [
+                  0.0010000000474974513,
+                  "cauldron"
+                ],
+                [
+                  0.0010000000474974513,
+                  "carbonara"
+                ],
+                [
+                  0.0010000000474974513,
+                  "butternut squash"
+                ],
+                [
+                  0.0010000000474974513,
+                  "bagel"
+                ],
+                [
+                  0.0010000000474974513,
+                  "acorn squash"
+                ],
+                [
+                  0.0010000000474974513,
+                  "Granny Smith"
+                ],
+                [
+                  0.0,
+                  "zucchini"
+                ],
+                [
+                  0.0,
+                  "zebra"
+                ],
+                [
+                  0.0,
+                  "yurt"
+                ],
+                [
+                  0.0,
+                  "yellow lady's slipper"
+                ],
+                [
+                  0.0,
+                  "yellow garden spider"
+                ],
+                [
+                  0.0,
+                  "worm snake"
+                ],
+                [
+                  0.0,
+                  "wool"
+                ],
+                [
+                  0.0,
+                  "wombat"
+                ],
+                [
+                  0.0,
+                  "wolf spider"
+                ],
+                [
+                  0.0,
+                  "wing"
+                ],
+                [
+                  0.0,
+                  "wine bottle"
+                ],
+                [
+                  0.0,
+                  "window shade"
+                ],
+                [
+                  0.0,
+                  "window screen"
+                ],
+                [
+                  0.0,
+                  "wild boar"
+                ],
+                [
+                  0.0,
+                  "wig"
+                ],
+                [
+                  0.0,
+                  "white-headed capuchin"
+                ],
+                [
+                  0.0,
+                  "white stork"
+                ],
+                [
+                  0.0,
+                  "whistle"
+                ],
+                [
+                  0.0,
+                  "whiskey jug"
+                ],
+                [
+                  0.0,
+                  "wheelbarrow"
+                ],
+                [
+                  0.0,
+                  "weighing scale"
+                ],
+                [
+                  0.0,
+                  "weevil"
+                ],
+                [
+                  0.0,
+                  "website"
+                ],
+                [
+                  0.0,
+                  "weasel"
+                ]
+              ],
+              [
+                [
+                  0.9760000109672546,
+                  "iPod"
+                ],
+                [
+                  0.004000000189989805,
+                  "remote control"
+                ],
+                [
+                  0.0010000000474974513,
+                  "hand-held computer"
+                ],
+                [
+                  0.0010000000474974513,
+                  "Italian Greyhound"
+                ],
+                [
+                  0.0010000000474974513,
+                  "Boston Terrier"
+                ],
+                [
+                  0.0,
+                  "zucchini"
+                ],
+                [
+                  0.0,
+                  "zebra"
+                ],
+                [
+                  0.0,
+                  "yurt"
+                ],
+                [
+                  0.0,
+                  "yellow lady's slipper"
+                ],
+                [
+                  0.0,
+                  "yellow garden spider"
+                ],
+                [
+                  0.0,
+                  "worm snake"
+                ],
+                [
+                  0.0,
+                  "wool"
+                ],
+                [
+                  0.0,
+                  "wooden spoon"
+                ],
+                [
+                  0.0,
+                  "wombat"
+                ],
+                [
+                  0.0,
+                  "wolf spider"
+                ],
+                [
+                  0.0,
+                  "wok"
+                ],
+                [
+                  0.0,
+                  "wing"
+                ],
+                [
+                  0.0,
+                  "wine bottle"
+                ],
+                [
+                  0.0,
+                  "window shade"
+                ],
+                [
+                  0.0,
+                  "window screen"
+                ],
+                [
+                  0.0,
+                  "wild boar"
+                ],
+                [
+                  0.0,
+                  "wig"
+                ],
+                [
+                  0.0,
+                  "white-headed capuchin"
+                ],
+                [
+                  0.0,
+                  "white stork"
+                ],
+                [
+                  0.0,
+                  "whistle"
+                ],
+                [
+                  0.0,
+                  "whiskey jug"
+                ],
+                [
+                  0.0,
+                  "wheelbarrow"
+                ],
+                [
+                  0.0,
+                  "weighing scale"
+                ],
+                [
+                  0.0,
+                  "weevil"
+                ],
+                [
+                  0.0,
+                  "website"
+                ],
+                [
+                  0.0,
+                  "weasel"
+                ],
+                [
+                  0.0,
+                  "water tower"
+                ],
+                [
+                  0.0,
+                  "water snake"
+                ],
+                [
+                  0.0,
+                  "water jug"
+                ],
+                [
+                  0.0,
+                  "water buffalo"
+                ],
+                [
+                  0.0,
+                  "water bottle"
+                ],
+                [
+                  0.0,
+                  "waste container"
+                ],
+                [
+                  0.0,
+                  "washing machine"
+                ],
+                [
+                  0.0,
+                  "warthog"
+                ],
+                [
+                  0.0,
+                  "wardrobe"
+                ],
+                [
+                  0.0,
+                  "wallet"
+                ],
+                [
+                  0.0,
+                  "wallaby"
+                ],
+                [
+                  0.0,
+                  "wall clock"
+                ],
+                [
+                  0.0,
+                  "waffle iron"
+                ],
+                [
+                  0.0,
+                  "vulture"
+                ],
+                [
+                  0.0,
+                  "volleyball"
+                ],
+                [
+                  0.0,
+                  "volcano"
+                ],
+                [
+                  0.0,
+                  "violin"
+                ],
+                [
+                  0.0,
+                  "vine snake"
+                ],
+                [
+                  0.0,
+                  "viaduct"
+                ]
+              ]
+            ]
+          ]
+        }
+      }
+    },
+    "baseline_accuracy": 0.5,
+    "control": [
+      [
+        [
+          0.38600000739097595,
+          "mongoose"
+        ],
+        [
+          0.36000001430511475,
+          "meerkat"
+        ],
+        [
+          0.08699999749660492,
+          "fox squirrel"
+        ],
+        [
+          0.02199999988079071,
+          "weasel"
+        ],
+        [
+          0.02199999988079071,
+          "patas monkey"
+        ],
+        [
+          0.01899999938905239,
+          "marmot"
+        ],
+        [
+          0.012000000104308128,
+          "marmoset"
+        ],
+        [
+          0.007000000216066837,
+          "three-toed sloth"
+        ],
+        [
+          0.004999999888241291,
+          "titi monkey"
+        ],
+        [
+          0.004999999888241291,
+          "otter"
+        ],
+        [
+          0.004999999888241291,
+          "guenon"
+        ],
+        [
+          0.004999999888241291,
+          "frilled-necked lizard"
+        ],
+        [
+          0.004000000189989805,
+          "wallaby"
+        ],
+        [
+          0.004000000189989805,
+          "porcupine"
+        ],
+        [
+          0.004000000189989805,
+          "beaver"
+        ],
+        [
+          0.003000000026077032,
+          "lynx"
+        ],
+        [
+          0.003000000026077032,
+          "langur"
+        ],
+        [
+          0.003000000026077032,
+          "common squirrel monkey"
+        ],
+        [
+          0.0020000000949949026,
+          "ring-tailed lemur"
+        ],
+        [
+          0.0020000000949949026,
+          "koala"
+        ],
+        [
+          0.0020000000949949026,
+          "hare"
+        ],
+        [
+          0.0020000000949949026,
+          "grey fox"
+        ],
+        [
+          0.0020000000949949026,
+          "agama"
+        ],
+        [
+          0.0020000000949949026,
+          "Alpine ibex"
+        ],
+        [
+          0.0010000000474974513,
+          "wild boar"
+        ],
+        [
+          0.0010000000474974513,
+          "ruffed grouse"
+        ],
+        [
+          0.0010000000474974513,
+          "proboscis monkey"
+        ],
+        [
+          0.0010000000474974513,
+          "mink"
+        ],
+        [
+          0.0010000000474974513,
+          "limpkin"
+        ],
+        [
+          0.0010000000474974513,
+          "gibbon"
+        ],
+        [
+          0.0010000000474974513,
+          "gazelle"
+        ],
+        [
+          0.0010000000474974513,
+          "bighorn sheep"
+        ],
+        [
+          0.0010000000474974513,
+          "banded gecko"
+        ],
+        [
+          0.0010000000474974513,
+          "badger"
+        ],
+        [
+          0.0010000000474974513,
+          "baboon"
+        ],
+        [
+          0.0010000000474974513,
+          "Saharan horned viper"
+        ],
+        [
+          0.0010000000474974513,
+          "European polecat"
+        ],
+        [
+          0.0,
+          "zucchini"
+        ],
+        [
+          0.0,
+          "zebra"
+        ],
+        [
+          0.0,
+          "yurt"
+        ],
+        [
+          0.0,
+          "yellow lady's slipper"
+        ],
+        [
+          0.0,
+          "yellow garden spider"
+        ],
+        [
+          0.0,
+          "worm snake"
+        ],
+        [
+          0.0,
+          "wool"
+        ],
+        [
+          0.0,
+          "wooden spoon"
+        ],
+        [
+          0.0,
+          "wombat"
+        ],
+        [
+          0.0,
+          "wolf spider"
+        ],
+        [
+          0.0,
+          "wok"
+        ],
+        [
+          0.0,
+          "wing"
+        ],
+        [
+          0.0,
+          "wine bottle"
+        ]
+      ],
+      [
+        [
+          0.16699999570846558,
+          "ballpoint pen"
+        ],
+        [
+          0.11999999731779099,
+          "screwdriver"
+        ],
+        [
+          0.06800000369548798,
+          "safety pin"
+        ],
+        [
+          0.05000000074505806,
+          "quill"
+        ],
+        [
+          0.04500000178813934,
+          "hammer"
+        ],
+        [
+          0.03700000047683716,
+          "spatula"
+        ],
+        [
+          0.03099999949336052,
+          "corkscrew"
+        ],
+        [
+          0.02199999988079071,
+          "nail"
+        ],
+        [
+          0.017999999225139618,
+          "worm snake"
+        ],
+        [
+          0.017000000923871994,
+          "paintbrush"
+        ],
+        [
+          0.01600000075995922,
+          "nematode"
+        ],
+        [
+          0.014000000432133675,
+          "paper knife"
+        ],
+        [
+          0.014000000432133675,
+          "hook"
+        ],
+        [
+          0.014000000432133675,
+          "face powder"
+        ],
+        [
+          0.013000000268220901,
+          "stethoscope"
+        ],
+        [
+          0.013000000268220901,
+          "loupe"
+        ],
+        [
+          0.012000000104308128,
+          "shovel"
+        ],
+        [
+          0.012000000104308128,
+          "ring-necked snake"
+        ],
+        [
+          0.009999999776482582,
+          "fountain pen"
+        ],
+        [
+          0.009999999776482582,
+          "barrette"
+        ],
+        [
+          0.00800000037997961,
+          "whistle"
+        ],
+        [
+          0.00800000037997961,
+          "scabbard"
+        ],
+        [
+          0.00800000037997961,
+          "can opener"
+        ],
+        [
+          0.007000000216066837,
+          "croquet ball"
+        ],
+        [
+          0.006000000052154064,
+          "vine snake"
+        ],
+        [
+          0.006000000052154064,
+          "oboe"
+        ],
+        [
+          0.006000000052154064,
+          "ladle"
+        ],
+        [
+          0.006000000052154064,
+          "fishing reel"
+        ],
+        [
+          0.006000000052154064,
+          "drumstick"
+        ],
+        [
+          0.006000000052154064,
+          "combination lock"
+        ],
+        [
+          0.004999999888241291,
+          "tool kit"
+        ],
+        [
+          0.004999999888241291,
+          "plunger"
+        ],
+        [
+          0.004999999888241291,
+          "frying pan"
+        ],
+        [
+          0.004000000189989805,
+          "tripod"
+        ],
+        [
+          0.004000000189989805,
+          "sunglass"
+        ],
+        [
+          0.004000000189989805,
+          "ring binder"
+        ],
+        [
+          0.004000000189989805,
+          "hockey puck"
+        ],
+        [
+          0.004000000189989805,
+          "hand-held computer"
+        ],
+        [
+          0.004000000189989805,
+          "fire match"
+        ],
+        [
+          0.004000000189989805,
+          "eraser"
+        ],
+        [
+          0.004000000189989805,
+          "cleaver"
+        ],
+        [
+          0.003000000026077032,
+          "tick"
+        ],
+        [
+          0.003000000026077032,
+          "syringe"
+        ],
+        [
+          0.003000000026077032,
+          "stopwatch"
+        ],
+        [
+          0.003000000026077032,
+          "ruler measuring stick"
+        ],
+        [
+          0.003000000026077032,
+          "mortar"
+        ],
+        [
+          0.003000000026077032,
+          "flute"
+        ],
+        [
+          0.003000000026077032,
+          "crutch"
+        ],
+        [
+          0.003000000026077032,
+          "computer mouse"
+        ],
+        [
+          0.003000000026077032,
+          "clothes iron"
+        ]
+      ],
+      [
+        [
+          0.25099998712539673,
+          "prison"
+        ],
+        [
+          0.035999998450279236,
+          "safe box"
+        ],
+        [
+          0.032999999821186066,
+          "wheelbarrow"
+        ],
+        [
+          0.032999999821186066,
+          "crate"
+        ],
+        [
+          0.028999999165534973,
+          "padlock"
+        ],
+        [
+          0.023000000044703484,
+          "waste container"
+        ],
+        [
+          0.023000000044703484,
+          "wall clock"
+        ],
+        [
+          0.019999999552965164,
+          "sliding door"
+        ],
+        [
+          0.017999999225139618,
+          "picket fence"
+        ],
+        [
+          0.014000000432133675,
+          "hook"
+        ],
+        [
+          0.012000000104308128,
+          "radiator"
+        ],
+        [
+          0.012000000104308128,
+          "parking meter"
+        ],
+        [
+          0.012000000104308128,
+          "freight car"
+        ],
+        [
+          0.009999999776482582,
+          "weighing scale"
+        ],
+        [
+          0.009999999776482582,
+          "tobacco shop"
+        ],
+        [
+          0.009999999776482582,
+          "mop"
+        ],
+        [
+          0.009999999776482582,
+          "construction crane"
+        ],
+        [
+          0.009999999776482582,
+          "baluster"
+        ],
+        [
+          0.008999999612569809,
+          "window shade"
+        ],
+        [
+          0.008999999612569809,
+          "switch"
+        ],
+        [
+          0.00800000037997961,
+          "window screen"
+        ],
+        [
+          0.007000000216066837,
+          "shovel"
+        ],
+        [
+          0.007000000216066837,
+          "payphone"
+        ],
+        [
+          0.007000000216066837,
+          "movie theater"
+        ],
+        [
+          0.007000000216066837,
+          "mailbox"
+        ],
+        [
+          0.006000000052154064,
+          "split-rail fence"
+        ],
+        [
+          0.006000000052154064,
+          "crutch"
+        ],
+        [
+          0.006000000052154064,
+          "barrel"
+        ],
+        [
+          0.006000000052154064,
+          "barbershop"
+        ],
+        [
+          0.006000000052154064,
+          "apiary"
+        ],
+        [
+          0.004999999888241291,
+          "umbrella"
+        ],
+        [
+          0.004999999888241291,
+          "shopping cart"
+        ],
+        [
+          0.004999999888241291,
+          "folding chair"
+        ],
+        [
+          0.004999999888241291,
+          "filing cabinet"
+        ],
+        [
+          0.004999999888241291,
+          "chain-link fence"
+        ],
+        [
+          0.004999999888241291,
+          "bubble"
+        ],
+        [
+          0.004999999888241291,
+          "bookstore"
+        ],
+        [
+          0.004000000189989805,
+          "traffic sign"
+        ],
+        [
+          0.004000000189989805,
+          "mobile home"
+        ],
+        [
+          0.004000000189989805,
+          "medicine chest"
+        ],
+        [
+          0.004000000189989805,
+          "macaw"
+        ],
+        [
+          0.004000000189989805,
+          "carton"
+        ],
+        [
+          0.004000000189989805,
+          "bucket"
+        ],
+        [
+          0.004000000189989805,
+          "CRT screen"
+        ],
+        [
+          0.003000000026077032,
+          "tile roof"
+        ],
+        [
+          0.003000000026077032,
+          "stove"
+        ],
+        [
+          0.003000000026077032,
+          "school bus"
+        ],
+        [
+          0.003000000026077032,
+          "restaurant"
+        ],
+        [
+          0.003000000026077032,
+          "refrigerator"
+        ],
+        [
+          0.003000000026077032,
+          "orange"
+        ]
+      ],
+      [
+        [
+          0.5070000290870667,
+          "limousine"
+        ],
+        [
+          0.29499998688697815,
+          "passenger car"
+        ],
+        [
+          0.0430000014603138,
+          "minibus"
+        ],
+        [
+          0.023000000044703484,
+          "sliding door"
+        ],
+        [
+          0.010999999940395355,
+          "semi-trailer truck"
+        ],
+        [
+          0.009999999776482582,
+          "station wagon"
+        ],
+        [
+          0.008999999612569809,
+          "school bus"
+        ],
+        [
+          0.006000000052154064,
+          "recreational vehicle"
+        ],
+        [
+          0.006000000052154064,
+          "car wheel"
+        ],
+        [
+          0.006000000052154064,
+          "amphibious vehicle"
+        ],
+        [
+          0.004000000189989805,
+          "baluster"
+        ],
+        [
+          0.004000000189989805,
+          "ambulance"
+        ],
+        [
+          0.0020000000949949026,
+          "trolleybus"
+        ],
+        [
+          0.0020000000949949026,
+          "tram"
+        ],
+        [
+          0.0020000000949949026,
+          "slip-on shoe"
+        ],
+        [
+          0.0020000000949949026,
+          "slide rule"
+        ],
+        [
+          0.0020000000949949026,
+          "minivan"
+        ],
+        [
+          0.0020000000949949026,
+          "high-speed train"
+        ],
+        [
+          0.0020000000949949026,
+          "grille"
+        ],
+        [
+          0.0020000000949949026,
+          "flute"
+        ],
+        [
+          0.0010000000474974513,
+          "upright piano"
+        ],
+        [
+          0.0010000000474974513,
+          "taxicab"
+        ],
+        [
+          0.0010000000474974513,
+          "tandem bicycle"
+        ],
+        [
+          0.0010000000474974513,
+          "submarine"
+        ],
+        [
+          0.0010000000474974513,
+          "stretcher"
+        ],
+        [
+          0.0010000000474974513,
+          "space bar"
+        ],
+        [
+          0.0010000000474974513,
+          "solar thermal collector"
+        ],
+        [
+          0.0010000000474974513,
+          "rotisserie"
+        ],
+        [
+          0.0010000000474974513,
+          "rifle"
+        ],
+        [
+          0.0010000000474974513,
+          "race car"
+        ],
+        [
+          0.0010000000474974513,
+          "police van"
+        ],
+        [
+          0.0010000000474974513,
+          "pole"
+        ],
+        [
+          0.0010000000474974513,
+          "ocean liner"
+        ],
+        [
+          0.0010000000474974513,
+          "music speaker"
+        ],
+        [
+          0.0010000000474974513,
+          "motorboat"
+        ],
+        [
+          0.0010000000474974513,
+          "mobile home"
+        ],
+        [
+          0.0010000000474974513,
+          "harmonica"
+        ],
+        [
+          0.0010000000474974513,
+          "golf cart"
+        ],
+        [
+          0.0010000000474974513,
+          "garfish"
+        ],
+        [
+          0.0010000000474974513,
+          "freight car"
+        ],
+        [
+          0.0010000000474974513,
+          "bathtub"
+        ],
+        [
+          0.0010000000474974513,
+          "analog clock"
+        ],
+        [
+          0.0010000000474974513,
+          "CRT screen"
+        ],
+        [
+          0.0,
+          "zucchini"
+        ],
+        [
+          0.0,
+          "zebra"
+        ],
+        [
+          0.0,
+          "yurt"
+        ],
+        [
+          0.0,
+          "yellow lady's slipper"
+        ],
+        [
+          0.0,
+          "yellow garden spider"
+        ],
+        [
+          0.0,
+          "worm snake"
+        ],
+        [
+          0.0,
+          "wool"
+        ]
+      ],
+      [
+        [
+          0.9459999799728394,
+          "stick insect"
+        ],
+        [
+          0.02199999988079071,
+          "mantis"
+        ],
+        [
+          0.014000000432133675,
+          "harvestman"
+        ],
+        [
+          0.003000000026077032,
+          "ant"
+        ],
+        [
+          0.0020000000949949026,
+          "southern black widow"
+        ],
+        [
+          0.0010000000474974513,
+          "worm snake"
+        ],
+        [
+          0.0010000000474974513,
+          "vine snake"
+        ],
+        [
+          0.0010000000474974513,
+          "longhorn beetle"
+        ],
+        [
+          0.0010000000474974513,
+          "lacewing"
+        ],
+        [
+          0.0010000000474974513,
+          "cricket insect"
+        ],
+        [
+          0.0,
+          "zucchini"
+        ],
+        [
+          0.0,
+          "zebra"
+        ],
+        [
+          0.0,
+          "yurt"
+        ],
+        [
+          0.0,
+          "yellow lady's slipper"
+        ],
+        [
+          0.0,
+          "yellow garden spider"
+        ],
+        [
+          0.0,
+          "wool"
+        ],
+        [
+          0.0,
+          "wooden spoon"
+        ],
+        [
+          0.0,
+          "wombat"
+        ],
+        [
+          0.0,
+          "wolf spider"
+        ],
+        [
+          0.0,
+          "wok"
+        ],
+        [
+          0.0,
+          "wing"
+        ],
+        [
+          0.0,
+          "wine bottle"
+        ],
+        [
+          0.0,
+          "window shade"
+        ],
+        [
+          0.0,
+          "window screen"
+        ],
+        [
+          0.0,
+          "wild boar"
+        ],
+        [
+          0.0,
+          "wig"
+        ],
+        [
+          0.0,
+          "white-headed capuchin"
+        ],
+        [
+          0.0,
+          "white stork"
+        ],
+        [
+          0.0,
+          "whistle"
+        ],
+        [
+          0.0,
+          "whiskey jug"
+        ],
+        [
+          0.0,
+          "wheelbarrow"
+        ],
+        [
+          0.0,
+          "weighing scale"
+        ],
+        [
+          0.0,
+          "weevil"
+        ],
+        [
+          0.0,
+          "website"
+        ],
+        [
+          0.0,
+          "weasel"
+        ],
+        [
+          0.0,
+          "water tower"
+        ],
+        [
+          0.0,
+          "water snake"
+        ],
+        [
+          0.0,
+          "water jug"
+        ],
+        [
+          0.0,
+          "water buffalo"
+        ],
+        [
+          0.0,
+          "water bottle"
+        ],
+        [
+          0.0,
+          "waste container"
+        ],
+        [
+          0.0,
+          "washing machine"
+        ],
+        [
+          0.0,
+          "warthog"
+        ],
+        [
+          0.0,
+          "wardrobe"
+        ],
+        [
+          0.0,
+          "wallet"
+        ],
+        [
+          0.0,
+          "wallaby"
+        ],
+        [
+          0.0,
+          "wall clock"
+        ],
+        [
+          0.0,
+          "waffle iron"
+        ],
+        [
+          0.0,
+          "vulture"
+        ],
+        [
+          0.0,
+          "volleyball"
+        ]
+      ],
+      [
+        [
+          0.27000001072883606,
+          "garfish"
+        ],
+        [
+          0.16599999368190765,
+          "eel"
+        ],
+        [
+          0.0820000022649765,
+          "platypus"
+        ],
+        [
+          0.05700000002980232,
+          "snoek fish"
+        ],
+        [
+          0.052000001072883606,
+          "sturgeon"
+        ],
+        [
+          0.04899999871850014,
+          "stingray"
+        ],
+        [
+          0.029999999329447746,
+          "jellyfish"
+        ],
+        [
+          0.02800000086426735,
+          "sea snake"
+        ],
+        [
+          0.02800000086426735,
+          "dugong"
+        ],
+        [
+          0.026000000536441803,
+          "tiger shark"
+        ],
+        [
+          0.02199999988079071,
+          "scuba diver"
+        ],
+        [
+          0.02199999988079071,
+          "electric ray"
+        ],
+        [
+          0.020999999716877937,
+          "sea cucumber"
+        ],
+        [
+          0.014999999664723873,
+          "water snake"
+        ],
+        [
+          0.014999999664723873,
+          "hammerhead shark"
+        ],
+        [
+          0.008999999612569809,
+          "tench"
+        ],
+        [
+          0.004999999888241291,
+          "grey whale"
+        ],
+        [
+          0.004000000189989805,
+          "submarine"
+        ],
+        [
+          0.004000000189989805,
+          "shipwreck"
+        ],
+        [
+          0.004000000189989805,
+          "sea slug"
+        ],
+        [
+          0.004000000189989805,
+          "axolotl"
+        ],
+        [
+          0.003000000026077032,
+          "smooth newt"
+        ],
+        [
+          0.003000000026077032,
+          "sea anemone"
+        ],
+        [
+          0.003000000026077032,
+          "rock beauty fish"
+        ],
+        [
+          0.003000000026077032,
+          "goldfish"
+        ],
+        [
+          0.0020000000949949026,
+          "terrapin"
+        ],
+        [
+          0.0020000000949949026,
+          "spiny lobster"
+        ],
+        [
+          0.0020000000949949026,
+          "sea lion"
+        ],
+        [
+          0.0020000000949949026,
+          "lionfish"
+        ],
+        [
+          0.0020000000949949026,
+          "great white shark"
+        ],
+        [
+          0.0020000000949949026,
+          "fiddler crab"
+        ],
+        [
+          0.0020000000949949026,
+          "crayfish"
+        ],
+        [
+          0.0020000000949949026,
+          "coral reef"
+        ],
+        [
+          0.0020000000949949026,
+          "chiton"
+        ],
+        [
+          0.0020000000949949026,
+          "brain coral"
+        ],
+        [
+          0.0010000000474974513,
+          "worm snake"
+        ],
+        [
+          0.0010000000474974513,
+          "vine snake"
+        ],
+        [
+          0.0010000000474974513,
+          "tailed frog"
+        ],
+        [
+          0.0010000000474974513,
+          "starfish"
+        ],
+        [
+          0.0010000000474974513,
+          "snorkel"
+        ],
+        [
+          0.0010000000474974513,
+          "snail"
+        ],
+        [
+          0.0010000000474974513,
+          "smooth green snake"
+        ],
+        [
+          0.0010000000474974513,
+          "siamang"
+        ],
+        [
+          0.0010000000474974513,
+          "sea urchin"
+        ],
+        [
+          0.0010000000474974513,
+          "rock crab"
+        ],
+        [
+          0.0010000000474974513,
+          "ring-necked snake"
+        ],
+        [
+          0.0010000000474974513,
+          "red king crab"
+        ],
+        [
+          0.0010000000474974513,
+          "pufferfish"
+        ],
+        [
+          0.0010000000474974513,
+          "polar bear"
+        ],
+        [
+          0.0010000000474974513,
+          "otter"
+        ]
+      ],
+      [
+        [
+          0.7919999957084656,
+          "vacuum cleaner"
+        ],
+        [
+          0.0430000014603138,
+          "mop"
+        ],
+        [
+          0.02800000086426735,
+          "hair dryer"
+        ],
+        [
+          0.02199999988079071,
+          "clothes iron"
+        ],
+        [
+          0.017999999225139618,
+          "plunger"
+        ],
+        [
+          0.009999999776482582,
+          "broom"
+        ],
+        [
+          0.006000000052154064,
+          "power drill"
+        ],
+        [
+          0.004000000189989805,
+          "shovel"
+        ],
+        [
+          0.003000000026077032,
+          "punching bag"
+        ],
+        [
+          0.003000000026077032,
+          "ping-pong ball"
+        ],
+        [
+          0.0020000000949949026,
+          "tripod"
+        ],
+        [
+          0.0020000000949949026,
+          "spatula"
+        ],
+        [
+          0.0020000000949949026,
+          "racket"
+        ],
+        [
+          0.0020000000949949026,
+          "hair spray"
+        ],
+        [
+          0.0020000000949949026,
+          "crutch"
+        ],
+        [
+          0.0020000000949949026,
+          "bookcase"
+        ],
+        [
+          0.0010000000474974513,
+          "wooden spoon"
+        ],
+        [
+          0.0010000000474974513,
+          "waffle iron"
+        ],
+        [
+          0.0010000000474974513,
+          "unicycle"
+        ],
+        [
+          0.0010000000474974513,
+          "space heater"
+        ],
+        [
+          0.0010000000474974513,
+          "shower cap"
+        ],
+        [
+          0.0010000000474974513,
+          "screwdriver"
+        ],
+        [
+          0.0010000000474974513,
+          "rifle"
+        ],
+        [
+          0.0010000000474974513,
+          "remote control"
+        ],
+        [
+          0.0010000000474974513,
+          "paintbrush"
+        ],
+        [
+          0.0010000000474974513,
+          "mortar"
+        ],
+        [
+          0.0010000000474974513,
+          "lotion"
+        ],
+        [
+          0.0010000000474974513,
+          "joystick"
+        ],
+        [
+          0.0010000000474974513,
+          "hammer"
+        ],
+        [
+          0.0010000000474974513,
+          "flute"
+        ],
+        [
+          0.0010000000474974513,
+          "electric fan"
+        ],
+        [
+          0.0010000000474974513,
+          "desktop computer"
+        ],
+        [
+          0.0010000000474974513,
+          "croquet ball"
+        ],
+        [
+          0.0010000000474974513,
+          "CD player"
+        ],
+        [
+          0.0,
+          "zucchini"
+        ],
+        [
+          0.0,
+          "zebra"
+        ],
+        [
+          0.0,
+          "yurt"
+        ],
+        [
+          0.0,
+          "yellow lady's slipper"
+        ],
+        [
+          0.0,
+          "yellow garden spider"
+        ],
+        [
+          0.0,
+          "worm snake"
+        ],
+        [
+          0.0,
+          "wool"
+        ],
+        [
+          0.0,
+          "wombat"
+        ],
+        [
+          0.0,
+          "wolf spider"
+        ],
+        [
+          0.0,
+          "wok"
+        ],
+        [
+          0.0,
+          "wing"
+        ],
+        [
+          0.0,
+          "wine bottle"
+        ],
+        [
+          0.0,
+          "window shade"
+        ],
+        [
+          0.0,
+          "window screen"
+        ],
+        [
+          0.0,
+          "wild boar"
+        ],
+        [
+          0.0,
+          "wig"
+        ]
+      ],
+      [
+        [
+          0.7680000066757202,
+          "steel drum"
+        ],
+        [
+          0.12399999797344208,
+          "marimba"
+        ],
+        [
+          0.028999999165534973,
+          "drum"
+        ],
+        [
+          0.009999999776482582,
+          "flute"
+        ],
+        [
+          0.007000000216066837,
+          "saxophone"
+        ],
+        [
+          0.006000000052154064,
+          "drumstick"
+        ],
+        [
+          0.004999999888241291,
+          "gong"
+        ],
+        [
+          0.004000000189989805,
+          "trombone"
+        ],
+        [
+          0.004000000189989805,
+          "banjo"
+        ],
+        [
+          0.003000000026077032,
+          "cornet"
+        ],
+        [
+          0.0020000000949949026,
+          "upright piano"
+        ],
+        [
+          0.0020000000949949026,
+          "rain barrel"
+        ],
+        [
+          0.0020000000949949026,
+          "pan flute"
+        ],
+        [
+          0.0020000000949949026,
+          "accordion"
+        ],
+        [
+          0.0010000000474974513,
+          "shield"
+        ],
+        [
+          0.0010000000474974513,
+          "oboe"
+        ],
+        [
+          0.0010000000474974513,
+          "mortar"
+        ],
+        [
+          0.0010000000474974513,
+          "military cap"
+        ],
+        [
+          0.0010000000474974513,
+          "maypole"
+        ],
+        [
+          0.0010000000474974513,
+          "maraca"
+        ],
+        [
+          0.0010000000474974513,
+          "croquet ball"
+        ],
+        [
+          0.0010000000474974513,
+          "chain mail"
+        ],
+        [
+          0.0010000000474974513,
+          "French horn"
+        ],
+        [
+          0.0,
+          "zucchini"
+        ],
+        [
+          0.0,
+          "zebra"
+        ],
+        [
+          0.0,
+          "yurt"
+        ],
+        [
+          0.0,
+          "yellow lady's slipper"
+        ],
+        [
+          0.0,
+          "yellow garden spider"
+        ],
+        [
+          0.0,
+          "worm snake"
+        ],
+        [
+          0.0,
+          "wool"
+        ],
+        [
+          0.0,
+          "wooden spoon"
+        ],
+        [
+          0.0,
+          "wombat"
+        ],
+        [
+          0.0,
+          "wolf spider"
+        ],
+        [
+          0.0,
+          "wok"
+        ],
+        [
+          0.0,
+          "wing"
+        ],
+        [
+          0.0,
+          "wine bottle"
+        ],
+        [
+          0.0,
+          "window shade"
+        ],
+        [
+          0.0,
+          "window screen"
+        ],
+        [
+          0.0,
+          "wild boar"
+        ],
+        [
+          0.0,
+          "wig"
+        ],
+        [
+          0.0,
+          "white-headed capuchin"
+        ],
+        [
+          0.0,
+          "white stork"
+        ],
+        [
+          0.0,
+          "whistle"
+        ],
+        [
+          0.0,
+          "whiskey jug"
+        ],
+        [
+          0.0,
+          "wheelbarrow"
+        ],
+        [
+          0.0,
+          "weighing scale"
+        ],
+        [
+          0.0,
+          "weevil"
+        ],
+        [
+          0.0,
+          "website"
+        ],
+        [
+          0.0,
+          "weasel"
+        ],
+        [
+          0.0,
+          "water tower"
+        ]
+      ],
+      [
+        [
+          0.6919999718666077,
+          "toilet seat"
+        ],
+        [
+          0.23600000143051147,
+          "plunger"
+        ],
+        [
+          0.03099999949336052,
+          "sink"
+        ],
+        [
+          0.028999999165534973,
+          "toilet paper"
+        ],
+        [
+          0.004999999888241291,
+          "soap dispenser"
+        ],
+        [
+          0.004000000189989805,
+          "bathtub"
+        ],
+        [
+          0.0010000000474974513,
+          "waste container"
+        ],
+        [
+          0.0010000000474974513,
+          "washing machine"
+        ],
+        [
+          0.0,
+          "zucchini"
+        ],
+        [
+          0.0,
+          "zebra"
+        ],
+        [
+          0.0,
+          "yurt"
+        ],
+        [
+          0.0,
+          "yellow lady's slipper"
+        ],
+        [
+          0.0,
+          "yellow garden spider"
+        ],
+        [
+          0.0,
+          "worm snake"
+        ],
+        [
+          0.0,
+          "wool"
+        ],
+        [
+          0.0,
+          "wooden spoon"
+        ],
+        [
+          0.0,
+          "wombat"
+        ],
+        [
+          0.0,
+          "wolf spider"
+        ],
+        [
+          0.0,
+          "wok"
+        ],
+        [
+          0.0,
+          "wing"
+        ],
+        [
+          0.0,
+          "wine bottle"
+        ],
+        [
+          0.0,
+          "window shade"
+        ],
+        [
+          0.0,
+          "window screen"
+        ],
+        [
+          0.0,
+          "wild boar"
+        ],
+        [
+          0.0,
+          "wig"
+        ],
+        [
+          0.0,
+          "white-headed capuchin"
+        ],
+        [
+          0.0,
+          "white stork"
+        ],
+        [
+          0.0,
+          "whistle"
+        ],
+        [
+          0.0,
+          "whiskey jug"
+        ],
+        [
+          0.0,
+          "wheelbarrow"
+        ],
+        [
+          0.0,
+          "weighing scale"
+        ],
+        [
+          0.0,
+          "weevil"
+        ],
+        [
+          0.0,
+          "website"
+        ],
+        [
+          0.0,
+          "weasel"
+        ],
+        [
+          0.0,
+          "water tower"
+        ],
+        [
+          0.0,
+          "water snake"
+        ],
+        [
+          0.0,
+          "water jug"
+        ],
+        [
+          0.0,
+          "water buffalo"
+        ],
+        [
+          0.0,
+          "water bottle"
+        ],
+        [
+          0.0,
+          "warthog"
+        ],
+        [
+          0.0,
+          "wardrobe"
+        ],
+        [
+          0.0,
+          "wallet"
+        ],
+        [
+          0.0,
+          "wallaby"
+        ],
+        [
+          0.0,
+          "wall clock"
+        ],
+        [
+          0.0,
+          "waffle iron"
+        ],
+        [
+          0.0,
+          "vulture"
+        ],
+        [
+          0.0,
+          "volleyball"
+        ],
+        [
+          0.0,
+          "volcano"
+        ],
+        [
+          0.0,
+          "violin"
+        ],
+        [
+          0.0,
+          "vine snake"
+        ]
+      ],
+      [
+        [
+          0.2849999964237213,
+          "crossword"
+        ],
+        [
+          0.1340000033378601,
+          "menu"
+        ],
+        [
+          0.07599999755620956,
+          "ring binder"
+        ],
+        [
+          0.057999998331069946,
+          "slide rule"
+        ],
+        [
+          0.02800000086426735,
+          "quill"
+        ],
+        [
+          0.024000000208616257,
+          "abacus"
+        ],
+        [
+          0.020999999716877937,
+          "hand-held computer"
+        ],
+        [
+          0.017000000923871994,
+          "envelope"
+        ],
+        [
+          0.01600000075995922,
+          "ocarina"
+        ],
+        [
+          0.014999999664723873,
+          "wallet"
+        ],
+        [
+          0.010999999940395355,
+          "remote control"
+        ],
+        [
+          0.008999999612569809,
+          "ballpoint pen"
+        ],
+        [
+          0.00800000037997961,
+          "computer mouse"
+        ],
+        [
+          0.00800000037997961,
+          "barometer"
+        ],
+        [
+          0.006000000052154064,
+          "stopwatch"
+        ],
+        [
+          0.006000000052154064,
+          "safety pin"
+        ],
+        [
+          0.006000000052154064,
+          "mousetrap"
+        ],
+        [
+          0.006000000052154064,
+          "clothes iron"
+        ],
+        [
+          0.006000000052154064,
+          "Band-Aid"
+        ],
+        [
+          0.004999999888241291,
+          "screw"
+        ],
+        [
+          0.004999999888241291,
+          "jigsaw puzzle"
+        ],
+        [
+          0.004999999888241291,
+          "CRT screen"
+        ],
+        [
+          0.004000000189989805,
+          "whistle"
+        ],
+        [
+          0.004000000189989805,
+          "stethoscope"
+        ],
+        [
+          0.004000000189989805,
+          "rotary dial telephone"
+        ],
+        [
+          0.004000000189989805,
+          "ring-necked snake"
+        ],
+        [
+          0.004000000189989805,
+          "packet"
+        ],
+        [
+          0.004000000189989805,
+          "notebook computer"
+        ],
+        [
+          0.004000000189989805,
+          "mobile phone"
+        ],
+        [
+          0.004000000189989805,
+          "lens cap"
+        ],
+        [
+          0.004000000189989805,
+          "eraser"
+        ],
+        [
+          0.003000000026077032,
+          "worm snake"
+        ],
+        [
+          0.003000000026077032,
+          "laptop computer"
+        ],
+        [
+          0.0020000000949949026,
+          "waffle iron"
+        ],
+        [
+          0.0020000000949949026,
+          "thimble"
+        ],
+        [
+          0.0020000000949949026,
+          "syringe"
+        ],
+        [
+          0.0020000000949949026,
+          "stick insect"
+        ],
+        [
+          0.0020000000949949026,
+          "sewing machine"
+        ],
+        [
+          0.0020000000949949026,
+          "ruler measuring stick"
+        ],
+        [
+          0.0020000000949949026,
+          "prison"
+        ],
+        [
+          0.0020000000949949026,
+          "pretzel"
+        ],
+        [
+          0.0020000000949949026,
+          "plectrum"
+        ],
+        [
+          0.0020000000949949026,
+          "ping-pong ball"
+        ],
+        [
+          0.0020000000949949026,
+          "photocopier"
+        ],
+        [
+          0.0020000000949949026,
+          "mortar"
+        ],
+        [
+          0.0020000000949949026,
+          "loupe"
+        ],
+        [
+          0.0020000000949949026,
+          "lab coat"
+        ],
+        [
+          0.0020000000949949026,
+          "knot"
+        ],
+        [
+          0.0020000000949949026,
+          "hockey puck"
+        ],
+        [
+          0.0020000000949949026,
+          "harmonica"
+        ]
+      ],
+      [
+        [
+          0.9959999918937683,
+          "megalith"
+        ],
+        [
+          0.0010000000474974513,
+          "stone wall"
+        ],
+        [
+          0.0010000000474974513,
+          "castle"
+        ],
+        [
+          0.0,
+          "zucchini"
+        ],
+        [
+          0.0,
+          "zebra"
+        ],
+        [
+          0.0,
+          "yurt"
+        ],
+        [
+          0.0,
+          "yellow lady's slipper"
+        ],
+        [
+          0.0,
+          "yellow garden spider"
+        ],
+        [
+          0.0,
+          "worm snake"
+        ],
+        [
+          0.0,
+          "wool"
+        ],
+        [
+          0.0,
+          "wooden spoon"
+        ],
+        [
+          0.0,
+          "wombat"
+        ],
+        [
+          0.0,
+          "wolf spider"
+        ],
+        [
+          0.0,
+          "wok"
+        ],
+        [
+          0.0,
+          "wing"
+        ],
+        [
+          0.0,
+          "wine bottle"
+        ],
+        [
+          0.0,
+          "window shade"
+        ],
+        [
+          0.0,
+          "window screen"
+        ],
+        [
+          0.0,
+          "wild boar"
+        ],
+        [
+          0.0,
+          "wig"
+        ],
+        [
+          0.0,
+          "white-headed capuchin"
+        ],
+        [
+          0.0,
+          "white stork"
+        ],
+        [
+          0.0,
+          "whistle"
+        ],
+        [
+          0.0,
+          "whiskey jug"
+        ],
+        [
+          0.0,
+          "wheelbarrow"
+        ],
+        [
+          0.0,
+          "weighing scale"
+        ],
+        [
+          0.0,
+          "weevil"
+        ],
+        [
+          0.0,
+          "website"
+        ],
+        [
+          0.0,
+          "weasel"
+        ],
+        [
+          0.0,
+          "water tower"
+        ],
+        [
+          0.0,
+          "water snake"
+        ],
+        [
+          0.0,
+          "water jug"
+        ],
+        [
+          0.0,
+          "water buffalo"
+        ],
+        [
+          0.0,
+          "water bottle"
+        ],
+        [
+          0.0,
+          "waste container"
+        ],
+        [
+          0.0,
+          "washing machine"
+        ],
+        [
+          0.0,
+          "warthog"
+        ],
+        [
+          0.0,
+          "wardrobe"
+        ],
+        [
+          0.0,
+          "wallet"
+        ],
+        [
+          0.0,
+          "wallaby"
+        ],
+        [
+          0.0,
+          "wall clock"
+        ],
+        [
+          0.0,
+          "waffle iron"
+        ],
+        [
+          0.0,
+          "vulture"
+        ],
+        [
+          0.0,
+          "volleyball"
+        ],
+        [
+          0.0,
+          "volcano"
+        ],
+        [
+          0.0,
+          "violin"
+        ],
+        [
+          0.0,
+          "vine snake"
+        ],
+        [
+          0.0,
+          "viaduct"
+        ],
+        [
+          0.0,
+          "vestment"
+        ],
+        [
+          0.0,
+          "vending machine"
+        ]
+      ],
+      [
+        [
+          0.8999999761581421,
+          "space shuttle"
+        ],
+        [
+          0.07800000160932541,
+          "missile"
+        ],
+        [
+          0.02199999988079071,
+          "missile"
+        ],
+        [
+          0.0,
+          "zucchini"
+        ],
+        [
+          0.0,
+          "zebra"
+        ],
+        [
+          0.0,
+          "yurt"
+        ],
+        [
+          0.0,
+          "yellow lady's slipper"
+        ],
+        [
+          0.0,
+          "yellow garden spider"
+        ],
+        [
+          0.0,
+          "worm snake"
+        ],
+        [
+          0.0,
+          "wool"
+        ],
+        [
+          0.0,
+          "wooden spoon"
+        ],
+        [
+          0.0,
+          "wombat"
+        ],
+        [
+          0.0,
+          "wolf spider"
+        ],
+        [
+          0.0,
+          "wok"
+        ],
+        [
+          0.0,
+          "wing"
+        ],
+        [
+          0.0,
+          "wine bottle"
+        ],
+        [
+          0.0,
+          "window shade"
+        ],
+        [
+          0.0,
+          "window screen"
+        ],
+        [
+          0.0,
+          "wild boar"
+        ],
+        [
+          0.0,
+          "wig"
+        ],
+        [
+          0.0,
+          "white-headed capuchin"
+        ],
+        [
+          0.0,
+          "white stork"
+        ],
+        [
+          0.0,
+          "whistle"
+        ],
+        [
+          0.0,
+          "whiskey jug"
+        ],
+        [
+          0.0,
+          "wheelbarrow"
+        ],
+        [
+          0.0,
+          "weighing scale"
+        ],
+        [
+          0.0,
+          "weevil"
+        ],
+        [
+          0.0,
+          "website"
+        ],
+        [
+          0.0,
+          "weasel"
+        ],
+        [
+          0.0,
+          "water tower"
+        ],
+        [
+          0.0,
+          "water snake"
+        ],
+        [
+          0.0,
+          "water jug"
+        ],
+        [
+          0.0,
+          "water buffalo"
+        ],
+        [
+          0.0,
+          "water bottle"
+        ],
+        [
+          0.0,
+          "waste container"
+        ],
+        [
+          0.0,
+          "washing machine"
+        ],
+        [
+          0.0,
+          "warthog"
+        ],
+        [
+          0.0,
+          "wardrobe"
+        ],
+        [
+          0.0,
+          "wallet"
+        ],
+        [
+          0.0,
+          "wallaby"
+        ],
+        [
+          0.0,
+          "wall clock"
+        ],
+        [
+          0.0,
+          "waffle iron"
+        ],
+        [
+          0.0,
+          "vulture"
+        ],
+        [
+          0.0,
+          "volleyball"
+        ],
+        [
+          0.0,
+          "volcano"
+        ],
+        [
+          0.0,
+          "violin"
+        ],
+        [
+          0.0,
+          "vine snake"
+        ],
+        [
+          0.0,
+          "viaduct"
+        ],
+        [
+          0.0,
+          "vestment"
+        ],
+        [
+          0.0,
+          "vending machine"
+        ]
+      ],
+      [
+        [
+          1.0,
+          "slot machine"
+        ],
+        [
+          0.0,
+          "zucchini"
+        ],
+        [
+          0.0,
+          "zebra"
+        ],
+        [
+          0.0,
+          "yurt"
+        ],
+        [
+          0.0,
+          "yellow lady's slipper"
+        ],
+        [
+          0.0,
+          "yellow garden spider"
+        ],
+        [
+          0.0,
+          "worm snake"
+        ],
+        [
+          0.0,
+          "wool"
+        ],
+        [
+          0.0,
+          "wooden spoon"
+        ],
+        [
+          0.0,
+          "wombat"
+        ],
+        [
+          0.0,
+          "wolf spider"
+        ],
+        [
+          0.0,
+          "wok"
+        ],
+        [
+          0.0,
+          "wing"
+        ],
+        [
+          0.0,
+          "wine bottle"
+        ],
+        [
+          0.0,
+          "window shade"
+        ],
+        [
+          0.0,
+          "window screen"
+        ],
+        [
+          0.0,
+          "wild boar"
+        ],
+        [
+          0.0,
+          "wig"
+        ],
+        [
+          0.0,
+          "white-headed capuchin"
+        ],
+        [
+          0.0,
+          "white stork"
+        ],
+        [
+          0.0,
+          "whistle"
+        ],
+        [
+          0.0,
+          "whiskey jug"
+        ],
+        [
+          0.0,
+          "wheelbarrow"
+        ],
+        [
+          0.0,
+          "weighing scale"
+        ],
+        [
+          0.0,
+          "weevil"
+        ],
+        [
+          0.0,
+          "website"
+        ],
+        [
+          0.0,
+          "weasel"
+        ],
+        [
+          0.0,
+          "water tower"
+        ],
+        [
+          0.0,
+          "water snake"
+        ],
+        [
+          0.0,
+          "water jug"
+        ],
+        [
+          0.0,
+          "water buffalo"
+        ],
+        [
+          0.0,
+          "water bottle"
+        ],
+        [
+          0.0,
+          "waste container"
+        ],
+        [
+          0.0,
+          "washing machine"
+        ],
+        [
+          0.0,
+          "warthog"
+        ],
+        [
+          0.0,
+          "wardrobe"
+        ],
+        [
+          0.0,
+          "wallet"
+        ],
+        [
+          0.0,
+          "wallaby"
+        ],
+        [
+          0.0,
+          "wall clock"
+        ],
+        [
+          0.0,
+          "waffle iron"
+        ],
+        [
+          0.0,
+          "vulture"
+        ],
+        [
+          0.0,
+          "volleyball"
+        ],
+        [
+          0.0,
+          "volcano"
+        ],
+        [
+          0.0,
+          "violin"
+        ],
+        [
+          0.0,
+          "vine snake"
+        ],
+        [
+          0.0,
+          "viaduct"
+        ],
+        [
+          0.0,
+          "vestment"
+        ],
+        [
+          0.0,
+          "vending machine"
+        ],
+        [
+          0.0,
+          "velvet"
+        ],
+        [
+          0.0,
+          "vault"
+        ]
+      ],
+      [
+        [
+          0.9210000038146973,
+          "badger"
+        ],
+        [
+          0.017999999225139618,
+          "meerkat"
+        ],
+        [
+          0.01600000075995922,
+          "European polecat"
+        ],
+        [
+          0.009999999776482582,
+          "grey fox"
+        ],
+        [
+          0.009999999776482582,
+          "black-footed ferret"
+        ],
+        [
+          0.004999999888241291,
+          "weasel"
+        ],
+        [
+          0.004000000189989805,
+          "mongoose"
+        ],
+        [
+          0.0020000000949949026,
+          "ring-tailed lemur"
+        ],
+        [
+          0.0010000000474974513,
+          "wombat"
+        ],
+        [
+          0.0010000000474974513,
+          "wallaby"
+        ],
+        [
+          0.0010000000474974513,
+          "skunk"
+        ],
+        [
+          0.0010000000474974513,
+          "red panda"
+        ],
+        [
+          0.0010000000474974513,
+          "otter"
+        ],
+        [
+          0.0010000000474974513,
+          "marmot"
+        ],
+        [
+          0.0010000000474974513,
+          "kit fox"
+        ],
+        [
+          0.0010000000474974513,
+          "common squirrel monkey"
+        ],
+        [
+          0.0,
+          "zucchini"
+        ],
+        [
+          0.0,
+          "zebra"
+        ],
+        [
+          0.0,
+          "yurt"
+        ],
+        [
+          0.0,
+          "yellow lady's slipper"
+        ],
+        [
+          0.0,
+          "yellow garden spider"
+        ],
+        [
+          0.0,
+          "worm snake"
+        ],
+        [
+          0.0,
+          "wool"
+        ],
+        [
+          0.0,
+          "wooden spoon"
+        ],
+        [
+          0.0,
+          "wolf spider"
+        ],
+        [
+          0.0,
+          "wok"
+        ],
+        [
+          0.0,
+          "wing"
+        ],
+        [
+          0.0,
+          "wine bottle"
+        ],
+        [
+          0.0,
+          "window shade"
+        ],
+        [
+          0.0,
+          "window screen"
+        ],
+        [
+          0.0,
+          "wild boar"
+        ],
+        [
+          0.0,
+          "wig"
+        ],
+        [
+          0.0,
+          "white-headed capuchin"
+        ],
+        [
+          0.0,
+          "white stork"
+        ],
+        [
+          0.0,
+          "whistle"
+        ],
+        [
+          0.0,
+          "whiskey jug"
+        ],
+        [
+          0.0,
+          "wheelbarrow"
+        ],
+        [
+          0.0,
+          "weighing scale"
+        ],
+        [
+          0.0,
+          "weevil"
+        ],
+        [
+          0.0,
+          "website"
+        ],
+        [
+          0.0,
+          "water tower"
+        ],
+        [
+          0.0,
+          "water snake"
+        ],
+        [
+          0.0,
+          "water jug"
+        ],
+        [
+          0.0,
+          "water buffalo"
+        ],
+        [
+          0.0,
+          "water bottle"
+        ],
+        [
+          0.0,
+          "waste container"
+        ],
+        [
+          0.0,
+          "washing machine"
+        ],
+        [
+          0.0,
+          "warthog"
+        ],
+        [
+          0.0,
+          "wardrobe"
+        ],
+        [
+          0.0,
+          "wallet"
+        ]
+      ],
+      [
+        [
+          0.7170000076293945,
+          "website"
+        ],
+        [
+          0.0820000022649765,
+          "baby pacifier"
+        ],
+        [
+          0.014999999664723873,
+          "Band-Aid"
+        ],
+        [
+          0.014000000432133675,
+          "analog clock"
+        ],
+        [
+          0.013000000268220901,
+          "syringe"
+        ],
+        [
+          0.013000000268220901,
+          "remote control"
+        ],
+        [
+          0.009999999776482582,
+          "toilet paper"
+        ],
+        [
+          0.008999999612569809,
+          "hair dryer"
+        ],
+        [
+          0.006000000052154064,
+          "safety pin"
+        ],
+        [
+          0.006000000052154064,
+          "digital watch"
+        ],
+        [
+          0.004000000189989805,
+          "ballpoint pen"
+        ],
+        [
+          0.003000000026077032,
+          "stopwatch"
+        ],
+        [
+          0.003000000026077032,
+          "plunger"
+        ],
+        [
+          0.003000000026077032,
+          "ping-pong ball"
+        ],
+        [
+          0.003000000026077032,
+          "lotion"
+        ],
+        [
+          0.003000000026077032,
+          "hand-held computer"
+        ],
+        [
+          0.003000000026077032,
+          "CRT screen"
+        ],
+        [
+          0.0020000000949949026,
+          "weighing scale"
+        ],
+        [
+          0.0020000000949949026,
+          "pill bottle"
+        ],
+        [
+          0.0020000000949949026,
+          "maraca"
+        ],
+        [
+          0.0020000000949949026,
+          "face powder"
+        ],
+        [
+          0.0020000000949949026,
+          "crossword"
+        ],
+        [
+          0.0020000000949949026,
+          "clothes iron"
+        ],
+        [
+          0.0010000000474974513,
+          "vacuum cleaner"
+        ],
+        [
+          0.0010000000474974513,
+          "tripod"
+        ],
+        [
+          0.0010000000474974513,
+          "trilobite"
+        ],
+        [
+          0.0010000000474974513,
+          "toilet seat"
+        ],
+        [
+          0.0010000000474974513,
+          "tick"
+        ],
+        [
+          0.0010000000474974513,
+          "submarine"
+        ],
+        [
+          0.0010000000474974513,
+          "stethoscope"
+        ],
+        [
+          0.0010000000474974513,
+          "spatula"
+        ],
+        [
+          0.0010000000474974513,
+          "screwdriver"
+        ],
+        [
+          0.0010000000474974513,
+          "salt shaker"
+        ],
+        [
+          0.0010000000474974513,
+          "running shoe"
+        ],
+        [
+          0.0010000000474974513,
+          "ruler measuring stick"
+        ],
+        [
+          0.0010000000474974513,
+          "printer"
+        ],
+        [
+          0.0010000000474974513,
+          "pretzel"
+        ],
+        [
+          0.0010000000474974513,
+          "power drill"
+        ],
+        [
+          0.0010000000474974513,
+          "paper towel"
+        ],
+        [
+          0.0010000000474974513,
+          "mortar"
+        ],
+        [
+          0.0010000000474974513,
+          "microphone"
+        ],
+        [
+          0.0010000000474974513,
+          "measuring cup"
+        ],
+        [
+          0.0010000000474974513,
+          "golf ball"
+        ],
+        [
+          0.0010000000474974513,
+          "digital clock"
+        ],
+        [
+          0.0010000000474974513,
+          "diaper"
+        ],
+        [
+          0.0010000000474974513,
+          "desktop computer"
+        ],
+        [
+          0.0010000000474974513,
+          "cucumber"
+        ],
+        [
+          0.0010000000474974513,
+          "cradle"
+        ],
+        [
+          0.0010000000474974513,
+          "computer mouse"
+        ],
+        [
+          0.0010000000474974513,
+          "comic book"
+        ]
+      ],
+      [
+        [
+          0.13199999928474426,
+          "oystercatcher"
+        ],
+        [
+          0.1289999932050705,
+          "common redshank"
+        ],
+        [
+          0.11599999666213989,
+          "hummingbird"
+        ],
+        [
+          0.07599999755620956,
+          "black stork"
+        ],
+        [
+          0.06499999761581421,
+          "limpkin"
+        ],
+        [
+          0.05000000074505806,
+          "albatross"
+        ],
+        [
+          0.039000000804662704,
+          "spoonbill"
+        ],
+        [
+          0.03500000014901161,
+          "magpie"
+        ],
+        [
+          0.03500000014901161,
+          "kite"
+        ],
+        [
+          0.029999999329447746,
+          "American dipper"
+        ],
+        [
+          0.02800000086426735,
+          "dunlin"
+        ],
+        [
+          0.024000000208616257,
+          "quail"
+        ],
+        [
+          0.02199999988079071,
+          "dowitcher"
+        ],
+        [
+          0.017999999225139618,
+          "little blue heron"
+        ],
+        [
+          0.01600000075995922,
+          "crane bird"
+        ],
+        [
+          0.012000000104308128,
+          "red-breasted merganser"
+        ],
+        [
+          0.010999999940395355,
+          "white stork"
+        ],
+        [
+          0.010999999940395355,
+          "prairie grouse"
+        ],
+        [
+          0.009999999776482582,
+          "bulbul"
+        ],
+        [
+          0.009999999776482582,
+          "American coot"
+        ],
+        [
+          0.00800000037997961,
+          "vulture"
+        ],
+        [
+          0.00800000037997961,
+          "black grouse"
+        ],
+        [
+          0.006000000052154064,
+          "bee eater"
+        ],
+        [
+          0.004999999888241291,
+          "ptarmigan"
+        ],
+        [
+          0.004999999888241291,
+          "pelican"
+        ],
+        [
+          0.004999999888241291,
+          "great egret"
+        ],
+        [
+          0.004999999888241291,
+          "coucal"
+        ],
+        [
+          0.004999999888241291,
+          "brambling"
+        ],
+        [
+          0.004999999888241291,
+          "American robin"
+        ],
+        [
+          0.004000000189989805,
+          "sulphur-crested cockatoo"
+        ],
+        [
+          0.004000000189989805,
+          "ruffed grouse"
+        ],
+        [
+          0.004000000189989805,
+          "jay"
+        ],
+        [
+          0.004000000189989805,
+          "house finch"
+        ],
+        [
+          0.003000000026077032,
+          "ruddy turnstone"
+        ],
+        [
+          0.003000000026077032,
+          "partridge"
+        ],
+        [
+          0.003000000026077032,
+          "junco"
+        ],
+        [
+          0.003000000026077032,
+          "goose"
+        ],
+        [
+          0.003000000026077032,
+          "bald eagle"
+        ],
+        [
+          0.0020000000949949026,
+          "peacock"
+        ],
+        [
+          0.0020000000949949026,
+          "grey parrot"
+        ],
+        [
+          0.0020000000949949026,
+          "common gallinule"
+        ],
+        [
+          0.0020000000949949026,
+          "black swan"
+        ],
+        [
+          0.0020000000949949026,
+          "bittern bird"
+        ],
+        [
+          0.0010000000474974513,
+          "toucan"
+        ],
+        [
+          0.0010000000474974513,
+          "small white"
+        ],
+        [
+          0.0010000000474974513,
+          "quill"
+        ],
+        [
+          0.0010000000474974513,
+          "platypus"
+        ],
+        [
+          0.0010000000474974513,
+          "military aircraft"
+        ],
+        [
+          0.0010000000474974513,
+          "macaw"
+        ],
+        [
+          0.0010000000474974513,
+          "lacewing"
+        ]
+      ],
+      [
+        [
+          0.8009999990463257,
+          "African bush elephant"
+        ],
+        [
+          0.18799999356269836,
+          "tusker"
+        ],
+        [
+          0.010999999940395355,
+          "Asian elephant"
+        ],
+        [
+          0.0,
+          "zucchini"
+        ],
+        [
+          0.0,
+          "zebra"
+        ],
+        [
+          0.0,
+          "yurt"
+        ],
+        [
+          0.0,
+          "yellow lady's slipper"
+        ],
+        [
+          0.0,
+          "yellow garden spider"
+        ],
+        [
+          0.0,
+          "worm snake"
+        ],
+        [
+          0.0,
+          "wool"
+        ],
+        [
+          0.0,
+          "wooden spoon"
+        ],
+        [
+          0.0,
+          "wombat"
+        ],
+        [
+          0.0,
+          "wolf spider"
+        ],
+        [
+          0.0,
+          "wok"
+        ],
+        [
+          0.0,
+          "wing"
+        ],
+        [
+          0.0,
+          "wine bottle"
+        ],
+        [
+          0.0,
+          "window shade"
+        ],
+        [
+          0.0,
+          "window screen"
+        ],
+        [
+          0.0,
+          "wild boar"
+        ],
+        [
+          0.0,
+          "wig"
+        ],
+        [
+          0.0,
+          "white-headed capuchin"
+        ],
+        [
+          0.0,
+          "white stork"
+        ],
+        [
+          0.0,
+          "whistle"
+        ],
+        [
+          0.0,
+          "whiskey jug"
+        ],
+        [
+          0.0,
+          "wheelbarrow"
+        ],
+        [
+          0.0,
+          "weighing scale"
+        ],
+        [
+          0.0,
+          "weevil"
+        ],
+        [
+          0.0,
+          "website"
+        ],
+        [
+          0.0,
+          "weasel"
+        ],
+        [
+          0.0,
+          "water tower"
+        ],
+        [
+          0.0,
+          "water snake"
+        ],
+        [
+          0.0,
+          "water jug"
+        ],
+        [
+          0.0,
+          "water buffalo"
+        ],
+        [
+          0.0,
+          "water bottle"
+        ],
+        [
+          0.0,
+          "waste container"
+        ],
+        [
+          0.0,
+          "washing machine"
+        ],
+        [
+          0.0,
+          "warthog"
+        ],
+        [
+          0.0,
+          "wardrobe"
+        ],
+        [
+          0.0,
+          "wallet"
+        ],
+        [
+          0.0,
+          "wallaby"
+        ],
+        [
+          0.0,
+          "wall clock"
+        ],
+        [
+          0.0,
+          "waffle iron"
+        ],
+        [
+          0.0,
+          "vulture"
+        ],
+        [
+          0.0,
+          "volleyball"
+        ],
+        [
+          0.0,
+          "volcano"
+        ],
+        [
+          0.0,
+          "violin"
+        ],
+        [
+          0.0,
+          "vine snake"
+        ],
+        [
+          0.0,
+          "viaduct"
+        ],
+        [
+          0.0,
+          "vestment"
+        ],
+        [
+          0.0,
+          "vending machine"
+        ]
+      ],
+      [
+        [
+          0.4909999966621399,
+          "little blue heron"
+        ],
+        [
+          0.1420000046491623,
+          "limpkin"
+        ],
+        [
+          0.0729999989271164,
+          "common gallinule"
+        ],
+        [
+          0.054999999701976776,
+          "great egret"
+        ],
+        [
+          0.032999999821186066,
+          "spoonbill"
+        ],
+        [
+          0.026000000536441803,
+          "crane bird"
+        ],
+        [
+          0.020999999716877937,
+          "oystercatcher"
+        ],
+        [
+          0.01899999938905239,
+          "black stork"
+        ],
+        [
+          0.014000000432133675,
+          "bittern bird"
+        ],
+        [
+          0.013000000268220901,
+          "dowitcher"
+        ],
+        [
+          0.013000000268220901,
+          "common redshank"
+        ],
+        [
+          0.010999999940395355,
+          "American coot"
+        ],
+        [
+          0.007000000216066837,
+          "white stork"
+        ],
+        [
+          0.004999999888241291,
+          "American dipper"
+        ],
+        [
+          0.003000000026077032,
+          "black swan"
+        ],
+        [
+          0.0020000000949949026,
+          "pelican"
+        ],
+        [
+          0.0020000000949949026,
+          "partridge"
+        ],
+        [
+          0.0020000000949949026,
+          "mantis"
+        ],
+        [
+          0.0020000000949949026,
+          "magpie"
+        ],
+        [
+          0.0020000000949949026,
+          "jay"
+        ],
+        [
+          0.0020000000949949026,
+          "hornbill"
+        ],
+        [
+          0.0020000000949949026,
+          "fiddler crab"
+        ],
+        [
+          0.0020000000949949026,
+          "damselfly"
+        ],
+        [
+          0.0020000000949949026,
+          "bee eater"
+        ],
+        [
+          0.0010000000474974513,
+          "vine snake"
+        ],
+        [
+          0.0010000000474974513,
+          "toucan"
+        ],
+        [
+          0.0010000000474974513,
+          "terrapin"
+        ],
+        [
+          0.0010000000474974513,
+          "sulphur-crested cockatoo"
+        ],
+        [
+          0.0010000000474974513,
+          "smooth newt"
+        ],
+        [
+          0.0010000000474974513,
+          "ruffed grouse"
+        ],
+        [
+          0.0010000000474974513,
+          "ring-necked snake"
+        ],
+        [
+          0.0010000000474974513,
+          "red-breasted merganser"
+        ],
+        [
+          0.0010000000474974513,
+          "quail"
+        ],
+        [
+          0.0010000000474974513,
+          "peacock"
+        ],
+        [
+          0.0010000000474974513,
+          "mud turtle"
+        ],
+        [
+          0.0010000000474974513,
+          "jacamar"
+        ],
+        [
+          0.0010000000474974513,
+          "hummingbird"
+        ],
+        [
+          0.0010000000474974513,
+          "hen"
+        ],
+        [
+          0.0010000000474974513,
+          "grasshopper"
+        ],
+        [
+          0.0010000000474974513,
+          "garfish"
+        ],
+        [
+          0.0010000000474974513,
+          "flamingo"
+        ],
+        [
+          0.0010000000474974513,
+          "dunlin"
+        ],
+        [
+          0.0010000000474974513,
+          "dragonfly"
+        ],
+        [
+          0.0010000000474974513,
+          "cricket insect"
+        ],
+        [
+          0.0010000000474974513,
+          "coucal"
+        ],
+        [
+          0.0010000000474974513,
+          "albatross"
+        ],
+        [
+          0.0010000000474974513,
+          "European green lizard"
+        ],
+        [
+          0.0010000000474974513,
+          "Carolina anole"
+        ],
+        [
+          0.0010000000474974513,
+          "American robin"
+        ],
+        [
+          0.0010000000474974513,
+          "American bullfrog"
+        ]
+      ],
+      [
+        [
+          0.9010000228881836,
+          "frying pan"
+        ],
+        [
+          0.054999999701976776,
+          "mashed potato"
+        ],
+        [
+          0.014999999664723873,
+          "broccoli"
+        ],
+        [
+          0.014000000432133675,
+          "hot pot"
+        ],
+        [
+          0.003000000026077032,
+          "cauliflower"
+        ],
+        [
+          0.003000000026077032,
+          "Dutch oven"
+        ],
+        [
+          0.0020000000949949026,
+          "spaghetti squash"
+        ],
+        [
+          0.0010000000474974513,
+          "wok"
+        ],
+        [
+          0.0010000000474974513,
+          "spatula"
+        ],
+        [
+          0.0010000000474974513,
+          "hen-of-the-woods"
+        ],
+        [
+          0.0010000000474974513,
+          "acorn squash"
+        ],
+        [
+          0.0010000000474974513,
+          "Crock Pot"
+        ],
+        [
+          0.0,
+          "zucchini"
+        ],
+        [
+          0.0,
+          "zebra"
+        ],
+        [
+          0.0,
+          "yurt"
+        ],
+        [
+          0.0,
+          "yellow lady's slipper"
+        ],
+        [
+          0.0,
+          "yellow garden spider"
+        ],
+        [
+          0.0,
+          "worm snake"
+        ],
+        [
+          0.0,
+          "wool"
+        ],
+        [
+          0.0,
+          "wooden spoon"
+        ],
+        [
+          0.0,
+          "wombat"
+        ],
+        [
+          0.0,
+          "wolf spider"
+        ],
+        [
+          0.0,
+          "wing"
+        ],
+        [
+          0.0,
+          "wine bottle"
+        ],
+        [
+          0.0,
+          "window shade"
+        ],
+        [
+          0.0,
+          "window screen"
+        ],
+        [
+          0.0,
+          "wild boar"
+        ],
+        [
+          0.0,
+          "wig"
+        ],
+        [
+          0.0,
+          "white-headed capuchin"
+        ],
+        [
+          0.0,
+          "white stork"
+        ],
+        [
+          0.0,
+          "whistle"
+        ],
+        [
+          0.0,
+          "whiskey jug"
+        ],
+        [
+          0.0,
+          "wheelbarrow"
+        ],
+        [
+          0.0,
+          "weighing scale"
+        ],
+        [
+          0.0,
+          "weevil"
+        ],
+        [
+          0.0,
+          "website"
+        ],
+        [
+          0.0,
+          "weasel"
+        ],
+        [
+          0.0,
+          "water tower"
+        ],
+        [
+          0.0,
+          "water snake"
+        ],
+        [
+          0.0,
+          "water jug"
+        ],
+        [
+          0.0,
+          "water buffalo"
+        ],
+        [
+          0.0,
+          "water bottle"
+        ],
+        [
+          0.0,
+          "waste container"
+        ],
+        [
+          0.0,
+          "washing machine"
+        ],
+        [
+          0.0,
+          "warthog"
+        ],
+        [
+          0.0,
+          "wardrobe"
+        ],
+        [
+          0.0,
+          "wallet"
+        ],
+        [
+          0.0,
+          "wallaby"
+        ],
+        [
+          0.0,
+          "wall clock"
+        ],
+        [
+          0.0,
+          "waffle iron"
+        ]
+      ],
+      [
+        [
+          0.2759999930858612,
+          "Bullmastiff"
+        ],
+        [
+          0.13300000131130219,
+          "Bluetick Coonhound"
+        ],
+        [
+          0.10999999940395355,
+          "Great Dane"
+        ],
+        [
+          0.0949999988079071,
+          "Dobermann"
+        ],
+        [
+          0.07599999755620956,
+          "Rottweiler"
+        ],
+        [
+          0.050999999046325684,
+          "Treeing Walker Coonhound"
+        ],
+        [
+          0.04100000113248825,
+          "Black and Tan Coonhound"
+        ],
+        [
+          0.020999999716877937,
+          "Bloodhound"
+        ],
+        [
+          0.01899999938905239,
+          "Weimaraner"
+        ],
+        [
+          0.01899999938905239,
+          "American Staffordshire Terrier"
+        ],
+        [
+          0.014999999664723873,
+          "German Shepherd Dog"
+        ],
+        [
+          0.014000000432133675,
+          "muzzle"
+        ],
+        [
+          0.014000000432133675,
+          "Rhodesian Ridgeback"
+        ],
+        [
+          0.010999999940395355,
+          "German Shorthaired Pointer"
+        ],
+        [
+          0.009999999776482582,
+          "Boxer"
+        ],
+        [
+          0.008999999612569809,
+          "Malinois"
+        ],
+        [
+          0.006000000052154064,
+          "tennis ball"
+        ],
+        [
+          0.004999999888241291,
+          "Greater Swiss Mountain Dog"
+        ],
+        [
+          0.004000000189989805,
+          "Standard Schnauzer"
+        ],
+        [
+          0.004000000189989805,
+          "Redbone Coonhound"
+        ],
+        [
+          0.004000000189989805,
+          "Miniature Pinscher"
+        ],
+        [
+          0.004000000189989805,
+          "Entlebucher Sennenhund"
+        ],
+        [
+          0.004000000189989805,
+          "Australian Kelpie"
+        ],
+        [
+          0.003000000026077032,
+          "Mexican hairless dog"
+        ],
+        [
+          0.003000000026077032,
+          "English foxhound"
+        ],
+        [
+          0.003000000026077032,
+          "Curly-coated Retriever"
+        ],
+        [
+          0.003000000026077032,
+          "Boston Terrier"
+        ],
+        [
+          0.003000000026077032,
+          "African wild dog"
+        ],
+        [
+          0.0020000000949949026,
+          "Staffordshire Bull Terrier"
+        ],
+        [
+          0.0020000000949949026,
+          "Norwegian Elkhound"
+        ],
+        [
+          0.0020000000949949026,
+          "Leonberger"
+        ],
+        [
+          0.0020000000949949026,
+          "Labrador Retriever"
+        ],
+        [
+          0.0020000000949949026,
+          "Irish Terrier"
+        ],
+        [
+          0.0020000000949949026,
+          "Dalmatian"
+        ],
+        [
+          0.0010000000474974513,
+          "pig"
+        ],
+        [
+          0.0010000000474974513,
+          "Vizsla"
+        ],
+        [
+          0.0010000000474974513,
+          "St. Bernard"
+        ],
+        [
+          0.0010000000474974513,
+          "Italian Greyhound"
+        ],
+        [
+          0.0010000000474974513,
+          "Griffon Bruxellois"
+        ],
+        [
+          0.0010000000474974513,
+          "Gordon Setter"
+        ],
+        [
+          0.0010000000474974513,
+          "Chesapeake Bay Retriever"
+        ],
+        [
+          0.0010000000474974513,
+          "Border Terrier"
+        ],
+        [
+          0.0010000000474974513,
+          "Basset Hound"
+        ],
+        [
+          0.0010000000474974513,
+          "Appenzeller Sennenhund"
+        ],
+        [
+          0.0010000000474974513,
+          "Airedale Terrier"
+        ],
+        [
+          0.0,
+          "zucchini"
+        ],
+        [
+          0.0,
+          "zebra"
+        ],
+        [
+          0.0,
+          "yurt"
+        ],
+        [
+          0.0,
+          "yellow lady's slipper"
+        ],
+        [
+          0.0,
+          "yellow garden spider"
+        ]
+      ]
+    ]
+  }
+}
