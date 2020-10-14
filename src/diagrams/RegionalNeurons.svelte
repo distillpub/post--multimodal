@@ -46,9 +46,9 @@
                 {"model": "4x", "unit": 1317, name: "West Africa?", top_words: "zimbabwe, tanzania, uganda, rwanda, kenya"},
                 {"model": "4x", "unit": 1257, name: "West Africa?", top_words: "ghana, uganda, africa, tanzania, african"},
                 {"model": "4x", "unit": 1000, name: "West Africa?", top_words: "zimbabwe, botswana, namibia, mozambique, malawi,"},
-                {"model": "rn50", "unit": 1405, name: "Africa?", top_words: ""},
-                {"model": "rn50", "unit":  919, name: "Africa?", top_words: ""},
-                {"model": "rn50", "unit": 1471, name: "Africa?", top_words: ""},
+                {"model": "rn50", "unit": 1405, name: "Africa?", top_words: "ghana, african, uganda, kenya, africa"},
+                {"model": "rn50", "unit":  919, name: "Africa?", top_words: "zimbabwe, nigeria, african, uganda, malawi"},
+                {"model": "rn50", "unit": 1471, name: "Africa?", top_words: "zimbabwe, uganda, nigeria, rwanda, revenue"},
                 {"model": "v1", "unit": 2006, name: "South-West Africa", top_words: "zimbabwe, cape, malawi, african, mozambique"},
                 {"model": "rn101", "unit": 482, name: "Africa?", top_words: "zimbabwe, nigeria, botswana, kenya, uganda"},
             ]
@@ -62,8 +62,8 @@
                 {"model": "v1", "unit": 369, name: "China?", top_words: "chinese, china, shanghai, hong, wang"},
                 {"model": "rn101", "unit": 801, name: "East Asia?", top_words: "shanghai, chinese, beijing, china, vietnam"},
                 {"model": "4x", "unit": 1091, name: "China?", top_words: "shanghai, vietnamese, asian, cambodia, chinese"},
-                {"model": "rn50", "unit":  608, name: "China?", top_words: ""},
-                {"model": "rn50", "unit": 1037, name: "East Asia/Jpana?", top_words: ""},
+                {"model": "rn50", "unit":  608, name: "China?", top_words: "chinese, china, japanese, beijing, shanghai"},
+                {"model": "rn50", "unit": 1037, name: "East Asia/Jpana?", top_words: "hawaii, mitsubishi, tokyo, fujitsu, suzuki"},
                 {"model": "rn101", "unit": 93, name: "East Asia?", top_words: "indonesia, indonesian, bangkok, malaysia, thailand"},
                 {"model": "4x", "unit": 26, name: "Japan", top_words: "hentai, korea, tokyo, korean, yen"},
                 {"model": "v1", "unit": 1254, name: "East Asia", top_words: "korea, vietnam, korean, vietnamese, asian"},
@@ -81,7 +81,7 @@
             name: "Australia - All Models",
             neurons: [ 
                 {"model": "4x", "unit": 513, name: "Australia?", top_words: "australian, australia, adelaide, nsw, queensland"}, 
-                {"model": "rn50", "unit": 1522, name: "Australia?", top_words: ""},
+                {"model": "rn50", "unit": 1522, name: "Australia?", top_words: "melbourne, australia, australian, sydney, adelaide"},
                 {"model": "v1", "unit": 71, name: "Australia?", top_words: "australia, australian, nsw, adelaide, nz"},
                 {"model": "rn101", "unit": 1415, name: "Australia?", top_words: "brisbane, melbourne, australian, canberra, australia"},
             ]
@@ -91,11 +91,11 @@
             neurons: [ 
                 {"model": "rn101", "unit": 836, name: "Britain?", top_words: "britain, westminster, british, london, uk"},
                 {"model": "4x", "unit": 2558, name: "UK / Australia?", top_words: "britain, london, scottish, yorkshire, canberra"}, 
-                {"model": "rn50", "unit": 2042, name: "UK?", top_words: ""},
-                {"model": "rn50", "unit":  288, name: "Europe", top_words: ""},
+                {"model": "rn50", "unit": 2042, name: "UK?", top_words: "glasgow, amsterdam, barcelona, deutsche, liechtenstein"},
+                {"model": "rn50", "unit":  288, name: "Europe", top_words: "european, europe, people, euro, eu"},
                 {"model": "4x", "unit": 218, name: "Europe?", top_words: "netherlands, luxembourg, stockholm, amsterdam, switzerland"},
                 {"model": "rn101", "unit": 369, name: "Europe?", top_words: "european, europe, brussels, euro, euros"},
-                {"model": "rn50", "unit": 1068, name: "Russia?", top_words: ""},
+                {"model": "rn50", "unit": 1068, name: "Germany?", top_words: "deutsche, deutschland, liechtenstein, deutsch, volkswagen"},
             ]
         },
         {
@@ -157,16 +157,16 @@
         {
             name: "rn50",
             neurons: [
-                {"model": "rn50", "unit": 1405, name: "Africa?", top_words: ""},
-                {"model": "rn50", "unit":  919, name: "Africa?", top_words: ""},
-                {"model": "rn50", "unit": 1471, name: "Africa?", top_words: ""},
-                {"model": "rn50", "unit": 1522, name: "Australia?", top_words: ""},
-                {"model": "rn50", "unit":  288, name: "Europe", top_words: ""},
-                {"model": "rn50", "unit": 1068, name: "Russia?", top_words: ""},
-                {"model": "rn50", "unit": 2042, name: "UK?", top_words: ""},
-                {"model": "rn50", "unit":  608, name: "China?", top_words: ""},
-                {"model": "rn50", "unit": 1037, name: "East Asia/Jpana?", top_words: ""},
-                {"model": "rn50", "unit": 1509, name: "Mountain", top_words: ""},
+                {"model": "rn50", "unit": 1405, name: "Africa?", top_words: "ghana, african, uganda, kenya, africa"},
+                {"model": "rn50", "unit":  919, name: "Africa?", top_words: "zimbabwe, nigeria, african, uganda, malawi"},
+                {"model": "rn50", "unit": 1471, name: "Africa?", top_words: "zimbabwe, uganda, nigeria, rwanda, revenue"},
+                {"model": "rn50", "unit": 1522, name: "Australia?", top_words: "melbourne, australia, australian, sydney, adelaide"},
+                {"model": "rn50", "unit":  288, name: "Europe", top_words: "european, europe, people, euro, eu"},
+                {"model": "rn50", "unit": 1068, name: "Germany?", top_words: "deutsche, deutschland, liechtenstein, deutsch, volkswagen"},
+                {"model": "rn50", "unit": 2042, name: "UK?", top_words: "glasgow, amsterdam, barcelona, deutsche, liechtenstein"},
+                {"model": "rn50", "unit":  608, name: "China?", top_words: "chinese, china, japanese, beijing, shanghai"},
+                {"model": "rn50", "unit": 1037, name: "East Asia/Jpana?", top_words: "hawaii, mitsubishi, tokyo, fujitsu, suzuki"},
+                {"model": "rn50", "unit": 1509, name: "Mountain", top_words: "mountain, mountains, mounting, mounts, mounted"},
             ]
         },
         {
