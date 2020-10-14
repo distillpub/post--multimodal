@@ -8,6 +8,7 @@ import UniversalityTable from './diagrams/UniversalityTable.svelte'
 import NeuronTable from './diagrams/NeuronTable.svelte'
 import RegionalNeurons from './diagrams/RegionalNeurons.svelte'
 import SmallNeuronRow from './diagrams/SmallNeuronRow.svelte'
+import SmallNeuronGrid from './diagrams/SmallNeuronGrid.svelte'
 
 import 'regenerator-runtime/runtime'
 
@@ -134,6 +135,16 @@ for (let target of document.getElementsByClassName("small-neuron-row")){
   var facet = attrs["data-facet"].value || "any";
   var props = {neurons, facet};
   let example = new SmallNeuronRow({target, props});
+}
+for (let target of document.getElementsByClassName("small-neuron-grid")){
+  var attrs = target.attributes;
+  var neurons = attrs['data-neurons'].value.split(',').map( (s) => parseInt(s));
+  var titles = attrs['data-titles'].value.split(',');
+  var models = attrs['data-models'].value.split(',');
+  var facets = attrs['data-facets'].value.split(',');
+  var layers = attrs['data-layers'].value.split(',');
+  var props = {neurons, facets, titles, models, layers};
+  let example = new SmallNeuronGrid({target, props});
 }
 
 ReactDOM.render(<EmotionsIntro />, document.getElementById('emotions-intro'))

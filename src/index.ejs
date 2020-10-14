@@ -33,13 +33,12 @@
           <li><a href="#">Identity Recognition</a></li>
           <li><a href="#">Regional Neurons</a></li>
           <li><a href="#">Emotion Neurons</a></li>
-          <li><a href="#">Miscellaneous Neurons</a></li>
+          <li><a href="#miscellaneous-neurons">Miscellaneous Neurons</a></li>
         </ul>
         <div><a href="#">Using Abstractions</a></div>
         <ul>
           <li><a href="#">Understanding language</a></li>
           <li><a href="#">Emotional Intelligence</a></li>
-          <li><a href="#">Miscellaneous Neurons</a></li>
         </ul>
         <div><a href="#">Typographic Attacks</a></div>
         <div><a href="#">The Mechanics of Abstraction</a></div>
@@ -377,11 +376,121 @@ In some ways, it seems natural for contrastive training of vision and language t
     </p>
     <figure id="emotions-mentalhealth" class="fullscreen-diagram"></figure>
 
-    <h3>Miscellaneous Neurons</h3>
+    <h3 id="miscellaneous-neurons">Miscellaneous Neurons</h3>
 
-    <figure class='small-neuron-row' data-neurons='2504,656,444,2524' data-facet='text'></figure>
-    <figure id="literate-neurons"></figure>
+    <p>
+      <b>Person detectors.</b>
+    </p>
+    <p>
+      <b>Regional neurons.</b>
+    </p>
+    <p>
+      <b>Emotion neurons.</b>
+    </p>
+    <div class="todo">
+      <b>TODO(@csvoss)</b>: These hyperlinks (on neurons below) are right ... but are the images?
+    </div>
+    <p>
+      <b>Person trait neurons.</b> These neurons detect gender, age, and ethnicity, but also facial features like moustaches.
+    </p>
+    <figure
+      class='small-neuron-grid'
+      data-neurons='839,2231,2518,320,92'
+      data-titles='elderly,teenage,female,male,moustache'
+      data-facets='any,logo,face,text'
+      data-models='4x,4x,4x,4x,4x'
+      data-layers='image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0'
+    ></figure>
+    <p class="figcaption">
+      Feature visualization shown along with logo, face, and text facets.
+    </p>
+    <p>
+      <b>Image type neurons.</b> These neurons detect different ways an image might be drawn, rendered, or photographed.
+    </p>
+    <figure
+      class='small-neuron-grid'
+      data-neurons='1308,359,319,436'
+      data-titles="selfie,portrait,cartoon,child's drawing"
+      data-facets='any'
+      data-models='4x,rn101,rn101,rn101'
+      data-layers='image_block_4_5_Add_6_0,image_block_4_1_add_3_0,image_block_4_1_add_3_0,image_block_4_2_add_3_0'
+    ></figure>
+    <p>
+      For a genre-specific example of image types, RN101 distinguishes among these three different types of medical content. Although they share an underlying topic (medicine and physiology), nonetheless these three different image types each get their own dedicated neuron!
+    </p>
+    <figure
+      class='small-neuron-grid'
+      data-neurons='362,337,108'
+      data-titles='microscope photos,medical textbook,physicians in scrubs'
+      data-facets='any'
+      data-models='rn101,rn101,rn101'
+      data-layers='image_block_4_2_add_3_0,image_block_4_1_add_3_0,image_block_4_1_add_3_0'
+    ></figure>
+    <p>
+      <b>Image feature neurons.</b> These neurons detect different miscellaneous features that a photo might contain: photobombs and bunny ears, the heads of people seated in front of you at a lecture, Photoshopped modifications, and more.
+    </p>
+    <figure
+      class='small-neuron-grid'
+      data-neurons='1640,127'
+      data-titles='altered image,lecture or presentation'
+      data-facets='any,logo,face,text'
+      data-models='4x,4x'
+      data-layers='image_block_4_5_Add_6_0,image_block_4_5_Add_6_0'
+    ></figure>
+    <!-- Can't find yet: photo bomb, bunny ears, group hug -->
+    <p>
+      <b>Counting neurons.</b> These neurons detect duplicates of the same person or thing, and can distinguish them by their count. For example, the "trios" neuron might fire for a trio of friends taking a photo together, whereas the "pairs or fours" neuron might fire for pairs of shoes, pairs of cookies, and pairs of people.
+    </p>
+    <figure
+      class='small-neuron-grid'
+      data-neurons='17,202,310'
+      data-titles='trios,pairs or fours,many'
+      data-facets='any,logo,face'
+      data-models='4x,4x,4x'
+      data-layers='image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0'
+    ></figure>
+    <p class="figcaption">
+      Feature visualization shown along with logo and face facets.
+    </p>
+    <p>
+      <b>Holiday neurons.</b> These neurons recognize the names, decorations, and traditional trappings around various holidays.
+    </p>
+    <!-- Couldn't get to work: happy/god – 36 / 4x / image_block_4_5_Add_6_0 -->
+    <figure
+      class='small-neuron-grid'
+      data-neurons='776,1326,1204,2439'
+      data-titles='birthday,christmas,easter,halloween'
+      data-facets='any,logo,face,text'
+      data-models='4x,4x,4x,4x'
+      data-layers='image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0'
+    ></figure>
+    <p class="figcaption">
+      Feature visualization shown along with logo, face, and text facets.
+    </p>
+    <p>
+      <b>Fiction neurons.</b> These neurons represent characters and concepts from within a particular fictional universe.
 
+      Harry Potter, Avengers, 924 Pokemon/Nintendo
+    </p>
+    <p>
+      <b>Typographic neurons.</b> Surprisingly, despite being able to “read” words and map them to semantic features, the model keeps a handful of more typographic features (eg. detectors for “con-”, “-ing”) in its high-level representation. We suspect these may help the model pass words it can’t read to the captioning side, like a child spelling out a word they don’t know.
+
+      <!-- -tor: contrastive_v1/image_block_4_2_Add_6_0/707, phil-: contrastive_v1/image_block_4_2_Add_6_0/843 -->
+    </p>
+    <figure
+      class='small-neuron-grid'
+      data-neurons='2504,656,444,2524,371'
+      data-titles='un-,cons-,-oo-,-ing,you'
+      data-facets='text'
+      data-models='4x,4x,4x,4x,4x'
+      data-layers='image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0'
+    ></figure>
+    <p class="figcaption">
+      Text facets shown.
+    </p>
+    <p>
+      <b>Brightness Gradient Neurons:</b> Another surprising cluster of features are lighting gradient features, which detect a better lit object or image portion than its surroundings. Why does the model have such low-level features in its high-level representation? Perhaps they help inform which portions of the image are more likely to be the subjects of captions.
+    </p>
 
     <h3>Feature properties</h3>
 
@@ -659,8 +768,6 @@ In some ways, it seems natural for contrastive training of vision and language t
       provide insight into human emotions themselves.
     </p>
 
-    <h3>Miscellaneous Neurons</h3>
-
     <figure id="literate-neurons"></figure>
 
     <br />
@@ -685,6 +792,8 @@ In some ways, it seems natural for contrastive training of vision and language t
       at the same cluster of concepts. This should be no surprise by now: these
       are multimodal neurons, after all!
     </p>
+
+    <figure id="literate-neurons"></figure>
 
     <p>
       We've seen that text often makes its way into the model's high-level
