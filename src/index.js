@@ -7,6 +7,8 @@ import HyperSet from './diagrams/HyperSet.svelte'
 import UniversalityTable from './diagrams/UniversalityTable.svelte'
 import NeuronTable from './diagrams/NeuronTable.svelte'
 import RegionalNeurons from './diagrams/RegionalNeurons.svelte'
+import SmallNeuronRow from './diagrams/SmallNeuronRow.svelte'
+import SmallNeuronGrid from './diagrams/SmallNeuronGrid.svelte'
 
 import 'regenerator-runtime/runtime'
 
@@ -16,6 +18,7 @@ import FeaturesTableWithDS from './diagrams/FeaturesTableWithDS.svelte'
 import EnrichmentCircuit from './diagrams/EnrichmentCircuit.svelte'
 import FeaturesTable from './diagrams/FeaturesTable.svelte'
 import LiterateNeurons from './diagrams/LiterateNeurons.svelte'
+import MicroscopeButton from './components/MicroscopeButton.svelte'
 import AttackSetup from './diagrams/AttackSetup.svelte'
 import AutomatedAttacks from './diagrams/AutomatedAttacks.svelte'
 import AttackableNeurons from './diagrams/AttackableNeurons.svelte'
@@ -125,6 +128,30 @@ const diagrams = [
 for (let [elementId, DiagramClass, props] of diagrams) {
   let target = document.getElementById(elementId)
   let example = new DiagramClass({ target, props })
+}
+
+for (let target of document.getElementsByClassName("small-neuron-row")){
+  var attrs = target.attributes;
+  var neurons = attrs['data-neurons'].value.split(',').map( (s) => parseInt(s));
+  var facet = attrs["data-facet"].value || "any";
+  var props = {neurons, facet};
+  let example = new SmallNeuronRow({target, props});
+}
+for (let target of document.getElementsByClassName("small-neuron-grid")){
+  var attrs = target.attributes;
+  var neurons = attrs['data-neurons'].value.split(',').map( (s) => parseInt(s));
+  var titles = attrs['data-titles'].value.split(',');
+  var models = attrs['data-models'].value.split(',');
+  var facets = attrs['data-facets'].value.split(',');
+  var layers = attrs['data-layers'].value.split(',');
+  var props = {neurons, facets, titles, models, layers};
+  let example = new SmallNeuronGrid({target, props});
+}
+for (let target of document.getElementsByClassName("microscope-button")){
+  var attrs = target.attributes;
+  var unit = attrs['data-unit'].value;
+  var props = {unit};
+  let example = new MicroscopeButton({target, props});
 }
 
 ReactDOM.render(<EmotionsIntro />, document.getElementById('emotions-intro'))

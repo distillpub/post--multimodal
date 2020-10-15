@@ -33,20 +33,19 @@
           <li><a href="#">Identity Recognition</a></li>
           <li><a href="#">Regional Neurons</a></li>
           <li><a href="#">Emotion Neurons</a></li>
-          <li><a href="#">Miscellaneous Neurons</a></li>
+          <li><a href="#miscellaneous-neurons">Miscellaneous Neurons</a></li>
         </ul>
         <div><a href="#">Using Abstractions</a></div>
         <ul>
           <li><a href="#">Understanding language</a></li>
           <li><a href="#">Emotional Intelligence</a></li>
-          <li><a href="#">Miscellaneous Neurons</a></li>
         </ul>
         <div><a href="#">Typographic Attacks</a></div>
         <div><a href="#">The Mechanics of Abstraction</a></div>
         <ul>
           <li><a href="#">Universal Features and Circuits</a></li>
           <li><a href="#">Task-specific Features</a></li>
-          <li><a href="#">The mechanics of Abstraction</a></li>
+          <li><a href="#">The Mechanics of Abstraction</a></li>
         </ul>
         <div><a href="#">Conclusion</a></div>
         <div><a href="#">Appendix: Methodological Details</a></div>
@@ -55,10 +54,11 @@
     </d-contents>
 
 
+
   <p>In 2005, a letter published in Nature described human neurons responding to specific people,  as well as landmarks <d-cite key="quiroga2005invariant"></d-cite>. The exciting thing wasn’t just that they selected for particular people, such as Jennifer Anniston or Halle Berry,
     <d-footnote>previous results had reported units that respond to particular faces []</d-footnote>
   but that they did so regardless of whether they were shown images, drawings, or even images of the person’s name. The neurons were <i>multimodal</i>. As the lead author would put it: "You are looking at the far end of the transformation from metric, visual shapes to conceptual… information."
-    <d-footnote>Quiroga's full quote, from <a href='https://www.newscientist.com/article/dn7567-why-your-brain-has-a-jennifer-aniston-cell/'>New Scieintist</a> reads: "I think that’s the excitement to these results. You are looking at the far end of the transformation from metric, visual shapes to conceptual memory-related information. It is that transformation that underlies our ability to understand the world. It’s not enough to see something familiar and match it. It’s the fact that you plug visual information into the rich tapestry of memory that brings it to life." We elided the portion discussing memory since it was less relevant.</d-footnote></p>
+    <d-footnote>Quiroga's full quote, from <a href='https://www.newscientist.com/article/dn7567-why-your-brain-has-a-jennifer-aniston-cell/'>New Scientist</a> reads: "I think that’s the excitement to these results. You are looking at the far end of the transformation from metric, visual shapes to conceptual memory-related information. It is that transformation that underlies our ability to understand the world. It’s not enough to see something familiar and match it. It’s the fact that you plug visual information into the rich tapestry of memory that brings it to life." We elided the portion discussing memory since it was less relevant.</d-footnote></p>
 
   <p>We report the existence of similar multimodal neurons in artificial neural networks. This includes neurons selecting for prominent public figures or fictional characters,
   such as Donald Trump,
@@ -73,8 +73,12 @@
   <div class='figcaption'>Just as the biological Halle Berry neuron responds to photos, drawings, and text...</div>
   <div class='figcaption'>... multimodal neurons in artificial neural networks activate for photos, cartoons, and text as well.</div>
   <img src="images/IntroHalleBerry.png" />
-  <img src="images/IntroTrump.png" />
+  <div>
+    <img src="images/IntroTrump.png" />
+    <div class="microscope-button" data-unit="89" />
+  </div>
 </figure>
+
 
 <div class='todo'><b>TODO:</b> Trump neuron should be replaced or supplemented here once we have more dataset examples and find drawing/cartoon examples for other neurons.</div>
 
@@ -116,7 +120,7 @@ In some ways, it seems natural for contrastive training of vision and language t
       <a>how those features are used</a> to accomplish the models goal of
       aligning images and text. This leads us to discover that these models are
       vulnerable to a kind of <a>“typographic attack”</a> where adding the right
-      text to images can cause them to be systemically misclassified.
+      text to images can cause them to be systematically misclassified.
     </p>
 
     <figure id="intro-attack-demo"></figure>
@@ -376,10 +380,123 @@ In some ways, it seems natural for contrastive training of vision and language t
     </p>
     <figure id="emotions-mentalhealth" class="fullscreen-diagram"></figure>
 
-    <h3>Miscellaneous Neurons</h3>
+    <h3 id="miscellaneous-neurons">Miscellaneous Neurons</h3>
 
-    <figure id="literate-neurons"></figure>
+    <p>
+      <b>Person detectors.</b>
+    </p>
+    <p>
+      <b>Regional neurons.</b>
+    </p>
+    <p>
+      <b>Emotion neurons.</b>
+    </p>
+    <div class="todo">
+      <b>TODO(@csvoss)</b>: These hyperlinks (on neurons below) are right ... but are the images?
+    </div>
+    <p>
+      <b>Person trait neurons.</b> These neurons detect gender, age, and ethnicity, but also facial features like moustaches.
+    </p>
+    <figure
+      class='small-neuron-grid'
+      data-neurons='839,2231,2518,320,92'
+      data-titles='elderly,teenage,female,male,moustache'
+      data-facets='any,logo,face,text'
+      data-models='4x,4x,4x,4x,4x'
+      data-layers='image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0'
+    ></figure>
+    <p class="figcaption">
+      Feature visualization shown along with logo, face, and text facets.
+    </p>
+    <p>
+      <b>Image type neurons.</b> These neurons detect different ways an image might be drawn, rendered, or photographed.
+    </p>
+    <figure
+      class='small-neuron-grid'
+      data-neurons='1308,359,319,436'
+      data-titles="selfie,portrait,cartoon,child's drawing"
+      data-facets='any'
+      data-models='4x,rn101,rn101,rn101'
+      data-layers='image_block_4_5_Add_6_0,image_block_4_1_add_3_0,image_block_4_1_add_3_0,image_block_4_2_add_3_0'
+    ></figure>
+    <p>
+      For a genre-specific example of image types, RN101 distinguishes among these three different types of medical content. Although they share an underlying topic (medicine and physiology), nonetheless these three different image types each get their own dedicated neuron!
+    </p>
+    <figure
+      class='small-neuron-grid'
+      data-neurons='362,337,108'
+      data-titles='microscope photos,medical textbook,physicians in scrubs'
+      data-facets='any'
+      data-models='rn101,rn101,rn101'
+      data-layers='image_block_4_2_add_3_0,image_block_4_1_add_3_0,image_block_4_1_add_3_0'
+    ></figure>
+    <p>
+      <b>Image feature neurons.</b> These neurons detect different miscellaneous features that a photo might contain: photobombs and bunny ears, the heads of people seated in front of you at a lecture, Photoshopped modifications, and more.
+    </p>
+    <figure
+      class='small-neuron-grid'
+      data-neurons='1640,127,2272'
+      data-titles='altered image,seated at a lecture,bunny ears'
+      data-facets='any,logo,face,indoor,text'
+      data-models='4x,4x,4x'
+      data-layers='image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0'
+    ></figure>
+    <p class="figcaption">
+      Feature visualization shown along with logo, face, and indoor facets.
+    </p>
+    <!-- Can't find yet: photo bomb, bunny ears, group hug -->
+    <p>
+      <b>Counting neurons.</b> These neurons detect duplicates of the same person or thing, and can distinguish them by their count. For example, the "trios" neuron might fire for a trio of friends taking a photo together, whereas the "pairs or fours" neuron might fire for pairs of shoes, pairs of cookies, and pairs of people.
+    </p>
+    <figure
+      class='small-neuron-grid'
+      data-neurons='17,202,310'
+      data-titles='trios,pairs or fours,many'
+      data-facets='any,logo,face'
+      data-models='4x,4x,4x'
+      data-layers='image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0'
+    ></figure>
+    <p class="figcaption">
+      Feature visualization shown along with logo and face facets.
+    </p>
+    <p>
+      <b>Holiday neurons.</b> These neurons recognize the names, decorations, and traditional trappings around various holidays.
+    </p>
+    <!-- Couldn't get to work: happy/god – 36 / 4x / image_block_4_5_Add_6_0 -->
+    <figure
+      class='small-neuron-grid'
+      data-neurons='776,1326,1204,2439'
+      data-titles='birthday,christmas,easter,halloween'
+      data-facets='any,logo,face,indoor,text'
+      data-models='4x,4x,4x,4x'
+      data-layers='image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0'
+    ></figure>
+    <p class="figcaption">
+      Feature visualization shown along with logo, face, indoor, and text facets.
+    </p>
+    <p>
+      <b>Fiction neurons.</b> These neurons represent characters and concepts from within a particular fictional universe.
+      Harry Potter, Avengers, 924 Pokemon/Nintendo
+    </p>
+    <p>
+      <b>Typographic neurons.</b> Surprisingly, despite being able to “read” words and map them to semantic features, the model keeps a handful of more typographic features (eg. detectors for “con-”, “-ing”) in its high-level representation. We suspect these may help the model pass words it can’t read to the captioning side, like a child spelling out a word they don’t know.
 
+      <!-- -tor: contrastive_v1/image_block_4_2_Add_6_0/707, phil-: contrastive_v1/image_block_4_2_Add_6_0/843 -->
+    </p>
+    <figure
+      class='small-neuron-grid'
+      data-neurons='2504,656,444,2524,371,399'
+      data-titles='un-,cons-,-oo-,-ing,you,j-'
+      data-facets='text'
+      data-models='4x,4x,4x,4x,4x,4x'
+      data-layers='image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0'
+    ></figure>
+    <p class="figcaption">
+      Text facets of the given neurons.
+    </p>
+    <p>
+      <b>Brightness Gradient Neurons:</b> Another surprising cluster of features are lighting gradient features, which detect a better lit object or image portion than its surroundings. Why does the model have such low-level features in its high-level representation? Perhaps they help inform which portions of the image are more likely to be the subjects of captions.
+    </p>
 
     <h3>Feature properties</h3>
 
@@ -454,7 +571,7 @@ In some ways, it seems natural for contrastive training of vision and language t
     </p>
 
     <p>
-      We see other classes too that do not correspond neatly to such classes organized by experts, but nevertheless make sense. We see, for example, three neurons that respond to creatures found in different aspects of the ocean/water. 
+      We see other classes too that do not correspond neatly to such classes organized by experts, but nevertheless make sense. We see, for example, three neurons that respond to creatures found in different aspects of the ocean/water.
     </p>
 
     <p>
@@ -462,7 +579,7 @@ In some ways, it seems natural for contrastive training of vision and language t
     </p>
 
     <p>
-      We arrive at a surprising discovery -- it seems as though the neurons appear to arrange themselves into a taxonomy of classes that appear to mimic, very approximately, the imagenet heirarchy. 
+      We arrive at a surprising discovery -- it seems as though the neurons appear to arrange themselves into a taxonomy of classes that appear to mimic, very approximately, the imagenet heirarchy.
     </p>
 
     <p>
@@ -649,10 +766,6 @@ In some ways, it seems natural for contrastive training of vision and language t
       provide insight into human emotions themselves.
     </p>
 
-    <h3>Miscellaneous Neurons</h3>
-
-    <figure id="literate-neurons"></figure>
-
     <br />
     <hr />
     <br />
@@ -660,30 +773,30 @@ In some ways, it seems natural for contrastive training of vision and language t
     <h2>Typographic Attacks</h2>
 
     <p>
-      As we've shown, it's not just the language side of the multimodal model
-      that knows how to read: some features in the vision side appear to
+      As we've shown, it's not just the "Language" side of the Contrastive Language/Image Pretrained Model
+      that knows how to read: some features in the "Image" side appear to
       understand individual letters, numbers, and even full words.
     </p>
 
     <p>
-      These vision features
-      <!--are clearly useful if the model needs to do-->
-      serve the purpose of allowing the model to perform OCR. Beyond that,
-      however, note how the text that is recognized is often closely tied to the
-      other concepts that a neuron recognizes. We can see in feature
-      visualizations that show both text and imagery: both aspects will gesture
-      at the same cluster of concepts. This should be no surprise by now: these
-      are multimodal neurons, after all!
+      These features are clearly useful if the model needs perform OCR: characters and words can provide context cues for recognizing what an image is about.
+
+      However, it's also worth noting that of all the ways the model could end up systematizing these typographic cues, it ends up clustering them into concepts. In the neurons of the last layer, text recognition comes bundled with recognition for other representations of a shared concept cluster, all recognized by a single neuron together. We can see this in the feature visualizations: the "kiss" neuron's feature visualization shows both the word "kiss" as well as actual kisses.
+    </p>
+
+    <figure id="literate-neurons"></figure>
+
+    <p>
+      This all should be no surprise by now: these are multimodal neurons, after all!
     </p>
 
     <p>
-      We've seen that text often makes its way into the model's high-level
-      representations, but can the presence or absence of a piece of text
+      Given how closely intertwined this text seems to be with the model's high-level representations, can the presence or absence of a piece of text
       influence the model's classifications?
     </p>
 
     <p>
-      Surprisingly, we find that it can! simply adding text to an image can
+      Surprisingly, we find that it can! Simply adding text to an image can
       cause the image to be classified as something it's not. This can be seen
       as a kind of adversarial attack – what we'll call a
       <i>typographic attack</i>.

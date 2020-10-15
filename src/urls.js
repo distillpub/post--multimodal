@@ -34,6 +34,7 @@ export function map_url(neuron){
         "rn101": "v2_4_2",
         "4x":    "4x_4_5"
     }[neuron.model];
+
     return `http://storage.googleapis.com/openai-clarity/colah/multimodal-vis/maps_data/geographical/${model_slug}_${neuron.unit}.jpeg`;
 }
 
@@ -47,7 +48,9 @@ export function facet_icon_url(neuron, facet="any"){
         "rn101": "RN101",
         "4x": "RN50_4x"
     }[neuron.model];
-    return `https://storage.googleapis.com/clarity-public/ggoh/facets_multiscale/${neuron.unit}_${facet.name}_${model_slug}_${strength}_128.png`;
+
+    var size = (neuron.model == "4x")? 128 : 64;
+    return `https://storage.googleapis.com/clarity-public/ggoh/facets_multiscale/${neuron.unit}_${facet.name}_${model_slug}_${strength}_${size}.png`;
     // return `https://storage.googleapis.com/clarity-public/ggoh/facets_hybrid_lessjitter/${neuron.unit}_${facet}_False_${model_slug}_64_${strength}.png`;
 }
 
