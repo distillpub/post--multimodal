@@ -427,30 +427,26 @@ In some ways, it seems natural for contrastive training of vision and language t
     <h2>Using Abstractions</h2>
 
     <p>
-      It has been hypothesize that the formation of intermediate representions, both in the brain and in neural networks, faciliate "subspace untangling" [] -- a transformation of an input into a vector that has that allows rich queries on relevant task through dot products. 
+      It has been hypothesize that the formation of intermediate representions, both in the brain and in neural networks, faciliate "subspace untangling" <d-cite key="radford2017learning"></d-cite> -- a transformation of an input into a vector that has that allows rich queries on relevant task through dot products. 
     </p>
 
     <p>
-      This is, indeed, explicitly the goal of CLIP, where linear proces achieve impressive accuracies in imagenet classification [Section []], facial expression detection [], geolocalization, and more. Can we understand the meanings of these directions? What information can be encoded in them? We make a stab at making this concrete by taking a deep dive into one particular task: the Imagenet challenge.
+      This is, indeed, explicitly the goal of CLIP, where linear probe achieve impressive accuracies in imagenet classification [Section []], facial expression detection [], geolocalization, and more. Can we understand the meanings of these directions? We make a stab at making this concrete by taking a deep dive into one particular task: the Imagenet challenge.
     </p>
 
 
     <h3>The Imagenet Challenge</h3>
     <p>
-      The IILSRV challenge [](?) uses a subset of the wordnet hierarchy and is an explicit attempt to systematize human knowledge. The synsets are organized as overlapping trees, but a classifier is trained to clasisify the leaves.
+      The IILSRV challenge [](?) uses a subset of the wordnet hierarchy and is an explicit attempt to systematize human knowledge. The synsets are organized as overlapping trees of general conccepts, with the task of a classifier trained to clasisify the leaves.
     </p>
-      Following the methodlogy of Radford [] et all, we train a sparse linear probe on the imagenet labels to understand which neurons are the most informative for the task. We do this with only 3, on average, nonzeros per class, forcing the network to use neurons very sparingly.
-    </p>
-
-    <p>
-      This model, by most any modern standard, fares poorly, achieving an accuracy of 35%. Our goal, however is to understand how a model as parsimonious as this can do <i>anything</i> at all. As we inspect the model's weights, a clearer picture emerges. 
+      Following the methodlogy of Radford [] et all, we train a sparse linear probe on the imagenet labels to understand which neurons are the most informative for the task. We do this with only 3, on average, nonzeros per class, forcing the network to use neurons very sparingly. This model, by most any modern standard, fares poorly, achieving an accuracy of 35% [Measure]. Our goal, however is to understand how a model as parsimonious as this can do anything at all. As we inspect the model's weights, a clearer picture emerges. 
     </p>
 
     <figure id="hypergraph-device" class="fullscreen-diagram"></figure>
 
     <p>
       At the highest levels we find a single neuron that represents the split between the living - animal, and the nonliving, that fires for nearly all the animals in the 1000 classes chosen.
-    </p>
+     </p>
 
     <p>
       The animal kingdom itself is split into the domesticated pets and
@@ -473,39 +469,35 @@ In some ways, it seems natural for contrastive training of vision and language t
       This gives us a tantalizing insight into the interpretability of neural networks. While there have been attempts to explicitly integrate this information <d-cite key="santurkar2020breeds"></d-cite>, in CLIP this has not been given in any explicit form as a training signal. The fact that it these neurons are scrutible suggests that organizations of high-level concepts of this kind may be a universal feature of learning systems.
     </p>
 
-    <figure id="hypergraph-device" class="fullscreen-diagram"></figure>
-
     <h3>Understanding language</h3>
 
     <p>
-      The primary consumer of these representations, and what will now be the object of our attention, is the language head of the model. Indeed, augmented with the language head alone, the model is capable of being "programmed" to perform many feats of classification using nothing more than a natural language description of the task.
+      The primary consumer of these representations is the language head of the model. Indeed, augmented with the language head alone, the model is capable of being "programmed" to perform many feats of classification using nothing more than a natural language description of the task.
     </p>
 
     <p>
-      It seems plausible that, just as individual neurons may play key roles in linear probes, they may also encourage the firing of key words or even phrases. Formally, we ask, if we were to perturb the neuron in a positive direction, what kinds of words does this encourage? Conversely, given a word (or a set of words), can we break down the meaning of that word in a crisp set of neurons? To do this, we rely on the following approximation:
+      It seems plausible that, just as individual neurons may play key roles in linear probes, they may also encourage the firing of key words or even phrases. Formally, we ask, increase the strength of a neuron in a positive direction, what kinds of words are more likely? Or conversely, given a word (or a set of words), can we break down the meaning of that word in a crisp set of neurons? 
     </p>
 
     <p>
-      $$
-        \begin{align}
-        \mbox{\textbf{cosine}}(F(x+\delta),y) & \approx\mbox{\textbf{cosine}}(F(x)+\nabla F(x)^{T}\delta,y)\\
-         & =\mbox{\textbf{cosine}}(F(x)+V\delta,y)\\
-         & \approx y^{T}V\delta+\mbox{\textbf{cosine}}(F(x),y)
-        \end{align}
-      $$
+      To do this, we rely on the following approximation (condider moving to footnote):
+      <d-math block>
+          \begin{aligned}
+          \text{\textbf{cosine}}(F(x+\delta),y) & \approx\text{\textbf{cosine}}(F(x)+\nabla F(x)^{T}\delta,y)\\
+           & =\text{\textbf{cosine}}(F(x)+V\delta,y)\\
+           & \approx \delta^{T}Vy+\text{\textbf{cosine}}(F(x),y)
+          \end{aligned}
+      </d-math>
+      Which states that to understand the perturbation due to an image, we can simply look its dot product with the value matrix $V$. Armed with this insight, we can ask questions of the language embeddings in a way that is independent of any image. When we maximize for $x$, we get the set of words that a neuron encourages, and given $y$, we can ask what neurons compose to cause that to fire [examples from imagenet]. 
     </p>
 
-    <p>
-      Which states that to understand the perturbation due to an image, we can simply look its dot product with the value matrix M. Armed with this insight, we can make these inqueries in a way that is independent of any image - simply by trying to maximize this dot product, either on the language or the image side. We can now use this tool to understand how the model understands emotions.
-    </p>
+      <p>
+        Using these techniques, we now seek to understand one particular family of neurons - the set of emotions.
+      </p>
 
     <h3></h3>
 
     <h2>Emotional Intelligence</h2>
-
-    <p>
-
-    </p>
 
     <p>
       Earlier we looked at neurons that detect emotion through a variety of
