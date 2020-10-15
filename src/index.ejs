@@ -435,12 +435,15 @@ In some ways, it seems natural for contrastive training of vision and language t
     </p>
     <figure
       class='small-neuron-grid'
-      data-neurons='1640,127'
-      data-titles='altered image,lecture or presentation'
-      data-facets='any,logo,face,text'
-      data-models='4x,4x'
-      data-layers='image_block_4_5_Add_6_0,image_block_4_5_Add_6_0'
+      data-neurons='1640,127,2272'
+      data-titles='altered image,seated at a lecture,bunny ears'
+      data-facets='any,logo,face,indoor,text'
+      data-models='4x,4x,4x'
+      data-layers='image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0'
     ></figure>
+    <p class="figcaption">
+      Feature visualization shown along with logo, face, and indoor facets.
+    </p>
     <!-- Can't find yet: photo bomb, bunny ears, group hug -->
     <p>
       <b>Counting neurons.</b> These neurons detect duplicates of the same person or thing, and can distinguish them by their count. For example, the "trios" neuron might fire for a trio of friends taking a photo together, whereas the "pairs or fours" neuron might fire for pairs of shoes, pairs of cookies, and pairs of people.
@@ -464,12 +467,12 @@ In some ways, it seems natural for contrastive training of vision and language t
       class='small-neuron-grid'
       data-neurons='776,1326,1204,2439'
       data-titles='birthday,christmas,easter,halloween'
-      data-facets='any,logo,face,text'
+      data-facets='any,logo,face,indoor,text'
       data-models='4x,4x,4x,4x'
       data-layers='image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0'
     ></figure>
     <p class="figcaption">
-      Feature visualization shown along with logo, face, and text facets.
+      Feature visualization shown along with logo, face, indoor, and text facets.
     </p>
     <p>
       <b>Fiction neurons.</b> These neurons represent characters and concepts from within a particular fictional universe.
@@ -482,14 +485,14 @@ In some ways, it seems natural for contrastive training of vision and language t
     </p>
     <figure
       class='small-neuron-grid'
-      data-neurons='2504,656,444,2524,371'
-      data-titles='un-,cons-,-oo-,-ing,you'
+      data-neurons='2504,656,444,2524,371,399'
+      data-titles='un-,cons-,-oo-,-ing,you,j-'
       data-facets='text'
-      data-models='4x,4x,4x,4x,4x'
-      data-layers='image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0'
+      data-models='4x,4x,4x,4x,4x,4x'
+      data-layers='image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0'
     ></figure>
     <p class="figcaption">
-      Text facets shown.
+      Text facets of the given neurons.
     </p>
     <p>
       <b>Brightness Gradient Neurons:</b> Another surprising cluster of features are lighting gradient features, which detect a better lit object or image portion than its surroundings. Why does the model have such low-level features in its high-level representation? Perhaps they help inform which portions of the image are more likely to be the subjects of captions.
