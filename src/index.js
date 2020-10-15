@@ -18,6 +18,7 @@ import FeaturesTableWithDS from './diagrams/FeaturesTableWithDS.svelte'
 import EnrichmentCircuit from './diagrams/EnrichmentCircuit.svelte'
 import FeaturesTable from './diagrams/FeaturesTable.svelte'
 import LiterateNeurons from './diagrams/LiterateNeurons.svelte'
+import MicroscopeButton from './components/MicroscopeButton.svelte'
 import AttackSetup from './diagrams/AttackSetup.svelte'
 import AutomatedAttacks from './diagrams/AutomatedAttacks.svelte'
 import AttackableNeurons from './diagrams/AttackableNeurons.svelte'
@@ -145,6 +146,12 @@ for (let target of document.getElementsByClassName("small-neuron-grid")){
   var layers = attrs['data-layers'].value.split(',');
   var props = {neurons, facets, titles, models, layers};
   let example = new SmallNeuronGrid({target, props});
+}
+for (let target of document.getElementsByClassName("microscope-button")){
+  var attrs = target.attributes;
+  var unit = attrs['data-unit'].value;
+  var props = {unit};
+  let example = new MicroscopeButton({target, props});
 }
 
 ReactDOM.render(<EmotionsIntro />, document.getElementById('emotions-intro'))
