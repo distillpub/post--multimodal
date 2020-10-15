@@ -75,7 +75,7 @@
   <img src="images/IntroHalleBerry.png" />
   <div>
     <img src="images/IntroTrump.png" />
-    <div class="microscope-button" data-unit="89" />
+    <div class="microscope-button" data-unit="89" data-layer="image_block_4_5_Add_6_0" data-model="4x"/>
   </div>
 </figure>
 
@@ -382,7 +382,7 @@ In some ways, it seems natural for contrastive training of vision and language t
 
     <h3 id="miscellaneous-neurons">Miscellaneous Neurons</h3>
 
-    <p>
+    <!-- <p>
       <b>Person detectors.</b>
     </p>
     <p>
@@ -390,7 +390,7 @@ In some ways, it seems natural for contrastive training of vision and language t
     </p>
     <p>
       <b>Emotion neurons.</b>
-    </p>
+    </p> -->
     <div class="todo">
       <b>TODO(@csvoss)</b>: These hyperlinks (on neurons below) are right ... but are the images?
     </div>
@@ -411,25 +411,41 @@ In some ways, it seems natural for contrastive training of vision and language t
     <p>
       <b>Image type neurons.</b> These neurons detect different ways an image might be drawn, rendered, or photographed.
     </p>
-    <figure
-      class='small-neuron-grid'
-      data-neurons='1308,359,319,436'
-      data-titles="selfie,portrait,cartoon,child's drawing"
-      data-facets='any'
-      data-models='4x,rn101,rn101,rn101'
-      data-layers='image_block_4_5_Add_6_0,image_block_4_1_add_3_0,image_block_4_1_add_3_0,image_block_4_2_add_3_0'
-    ></figure>
+    <div style='display: flex; flex-direction: row; gap: 16px;'>
+      <div style='display: flex; flex-direction: column; gap: 6px; text-align: center; flex-basis: 0; flex-grow: 1;'>
+        <h4>selfie</h4>
+        <!-- <div class="microscope-button" data-unit="1308" data-layer="image_block_4_5_Add_6_0" data-model="4x"/> -->
+      </div>
+      <div style='display: flex; flex-direction: column; gap: 6px; text-align: center; flex-basis: 0; flex-grow: 1;'>
+        <h4>historical portrait</h4>
+        <!-- <div class="microscope-button" data-unit="359" data-layer="image_block_4_1_add_3_0" data-model="rn101"/> -->
+      </div>
+      <div style='display: flex; flex-direction: column; gap: 6px; text-align: center; flex-basis: 0; flex-grow: 1;'>
+        <h4>cartoon character</h4>
+        <!-- <div class="microscope-button" data-unit="319" data-layer="image_block_4_1_add_3_0" data-model="rn101"/> -->
+      </div>
+      <div style='display: flex; flex-direction: column; gap: 6px; text-align: center; flex-basis: 0; flex-grow: 1;'>
+        <h4>child's drawing</h4>
+        <!-- <div class="microscope-button" data-unit="436" data-layer="image_block_4_2_add_3_0" data-model="rn101"/> -->
+      </div>
+    </div>
     <p>
       For a genre-specific example of image types, RN101 distinguishes among these three different types of medical content. Although they share an underlying topic (medicine and physiology), nonetheless these three different image types each get their own dedicated neuron!
     </p>
-    <figure
-      class='small-neuron-grid'
-      data-neurons='362,337,108'
-      data-titles='microscope photos,medical textbook,physicians in scrubs'
-      data-facets='any'
-      data-models='rn101,rn101,rn101'
-      data-layers='image_block_4_2_add_3_0,image_block_4_1_add_3_0,image_block_4_1_add_3_0'
-    ></figure>
+    <div style='display: flex; flex-direction: row; gap: 16px;'>
+      <div style='display: flex; flex-direction: column; gap: 6px; text-align: center; flex-basis: 0; flex-grow: 1;'>
+        <h4>microscope photos</h4>
+        <!-- <div class="microscope-button" data-unit="362" data-layer="image_block_4_2_add_3_0" data-model="rn101"/> -->
+      </div>
+      <div style='display: flex; flex-direction: column; gap: 6px; text-align: center; flex-basis: 0; flex-grow: 1;'>
+        <h4>medical textbook</h4>
+        <!-- <div class="microscope-button" data-unit="337" data-layer="image_block_4_1_add_3_0" data-model="rn101"/> -->
+      </div>
+      <div style='display: flex; flex-direction: column; gap: 6px; text-align: center; flex-basis: 0; flex-grow: 1;'>
+        <h4>physicians in scrubs</h4>
+        <!-- <div class="microscope-button" data-unit="108" data-layer="image_block_4_1_add_3_0" data-model="rn101"/> -->
+      </div>
+    </div>
     <p>
       <b>Image feature neurons.</b> These neurons detect different miscellaneous features that a photo might contain: photobombs and bunny ears, the heads of people seated in front of you at a lecture, Photoshopped modifications, and more.
     </p>
@@ -480,16 +496,22 @@ In some ways, it seems natural for contrastive training of vision and language t
     </p>
     <p>
       <b>Typographic neurons.</b> Surprisingly, despite being able to “read” words and map them to semantic features, the model keeps a handful of more typographic features (eg. detectors for “con-”, “-ing”) in its high-level representation. We suspect these may help the model pass words it can’t read to the captioning side, like a child spelling out a word they don’t know.
-
-      <!-- -tor: contrastive_v1/image_block_4_2_Add_6_0/707, phil-: contrastive_v1/image_block_4_2_Add_6_0/843 -->
     </p>
     <figure
       class='small-neuron-grid'
-      data-neurons='2504,656,444,2524,371,399'
-      data-titles='un-,cons-,-oo-,-ing,you,j-'
+      data-neurons='2504,656,444'
+      data-titles='un-,con-,-oo-'
       data-facets='text'
-      data-models='4x,4x,4x,4x,4x,4x'
-      data-layers='image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0'
+      data-models='4x,4x,4x'
+      data-layers='image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0'
+    ></figure>
+    <figure
+      class='small-neuron-grid'
+      data-neurons='2524,371,399'
+      data-titles='-ing,you,j-'
+      data-facets='text'
+      data-models='4x,4x,4x'
+      data-layers='image_block_4_5_Add_6_0,image_block_4_5_Add_6_0,image_block_4_5_Add_6_0'
     ></figure>
     <p class="figcaption">
       Text facets of the given neurons.

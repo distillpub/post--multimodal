@@ -150,7 +150,9 @@ for (let target of document.getElementsByClassName("small-neuron-grid")){
 for (let target of document.getElementsByClassName("microscope-button")){
   var attrs = target.attributes;
   var unit = attrs['data-unit'].value;
-  var props = {unit};
+  var layer = attrs['data-layer'].value;
+  var model = attrs['data-model'].value;
+  var props = {unit, layer, model};
   let example = new MicroscopeButton({target, props});
 }
 

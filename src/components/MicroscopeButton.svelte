@@ -1,7 +1,9 @@
 <script>
     export let unit = 1;
+    export let layer = "image_block_4_5_Add_6_0";
+    export let model = "4x";
 
-    let neuron = {model: "4x", unit, name: "Default"};
+    let neuron = {layer, model, unit, name: "Default"};
     import {microscope_url, map_url, facet_icon_url, dataset_examples_url} from '../urls.js';
 </script>
 
