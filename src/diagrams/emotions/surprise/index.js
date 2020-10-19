@@ -120,7 +120,11 @@ export default () => (
       </div>
     </Surface>
     <figcaption style={{ width: 704, margin: 'auto', marginTop: 10 }}>
-      we can see that..
+      The shocked neuron learns to detect emotions of surprise in a wide variety
+      of settings, including children, animals, and memes. Notice that it
+      detects a woman's expression of surprise even when most of her face is
+      obscured. The pose facet shows someone expressing surprise from different
+      and the face facet shows a close-up of shock.
     </figcaption>
   </React.Fragment>
 )

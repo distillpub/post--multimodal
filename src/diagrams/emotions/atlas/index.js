@@ -1,7 +1,7 @@
 import { Surface, HoverZoom, ZoomedImg, Text } from '../../reactComponents/ui'
 import { range, capitalize, sortBy, includes } from 'lodash'
 import data from './data'
-import { sum, max } from 'lodash'
+import { sum, reverse, max } from 'lodash'
 import * as d3 from 'd3'
 import React, { useState } from 'react'
 
@@ -89,8 +89,7 @@ export default () => {
 
   return (
     <Surface width={totalWidth} margin="20px auto" flexFlow="row">
-      <EmotionWheel width={width} />
-      <Surface marginLeft={40} height={width} width={width} position="relative">
+      <Surface height={width} width={width} position="relative">
         {showSlider && (
           <React.Fragment>
             <Text>{strength}</Text>
@@ -166,6 +165,67 @@ export default () => {
           </HoverZoom>
         ))}
       </Surface>
+      {false && (
+        <Surface>
+          <div>Components</div>
+          {range(grid[0].components.length).map((component) => {
+            const items = reverse(
+              sortBy(grid, ({ components }) => components[component])
+            ).slice(0, 5)
+            const green = '#80b918'
+            const imgSize = 80
+
+            return (
+              <Surface flexFlow="row" alignItems="center">
+                <Surface
+                  width={30}
+                  height={30}
+                  borderRadius={5}
+                  background={getComponentColor(component, 1)}
+                />
+
+                {items.map(({ name, components }) => (
+                  <Surface flexFlow="row">
+                    <Surface>
+                      <img
+                        width={imgSize}
+                        height={imgSize}
+                        src={getFace(name, strength)}
+                      />
+                      <figcaption>{name}</figcaption>
+                    </Surface>
+                    <Surface
+                      gridRow="main"
+                      gridColumn="bar"
+                      height={imgSize}
+                      justifyContent="flex-end"
+                      alignItems="center"
+                    >
+                      <Surface
+                        width={'100%'}
+                        borderRadius={5}
+                        background={green}
+                        boorder="1px solid rgba(0, 0, 0, 1)"
+                        opacity={0.3}
+                        height={
+                          imgSize *
+                          Math.min(
+                            1,
+                            Math.abs(
+                              components[component] /
+                                items[0].components[component]
+                            )
+                          )
+                        }
+                      />
+                    </Surface>
+                  </Surface>
+                ))}
+              </Surface>
+            )
+          })}
+        </Surface>
+      )}
     </Surface>
   )
 }

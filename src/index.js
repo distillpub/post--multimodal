@@ -42,6 +42,7 @@ let interesting = new NeuronTable({
 // Nick
 
 import PeopleHandLabeled from './diagrams/people/handLabeledTrump'
+import PeopleMargin from './diagrams/people/margin'
 import PeopleTrumpPeople from './diagrams/people/trumpPeople'
 import EmotionsIntro from './diagrams/emotions/intro'
 import EmotionsSurprise from './diagrams/emotions/surprise'
@@ -52,6 +53,8 @@ import EmotionsAtlas from './diagrams/emotions/atlas'
 import EmotionsSemantic from './diagrams/emotions/semantic'
 import React from 'react'
 import ReactDOM from 'react-dom'
+
+ReactDOM.render(<EmotionsAtlas />, document.getElementById('emotions-atlas'))
 
 let early_vision_data = {
   big_icon: false,
@@ -161,10 +164,11 @@ ReactDOM.render(
 
 ReactDOM.render(
   <EmotionsSemantic
-    emotionNames={['powerful', 'creative', 'embarrassed', 'content']}
+    emotionNames={['powerful', 'creative', 'embarrassed', 'disrespected']}
   />,
   document.getElementById('emotions-semantic-worldly')
 )
+ReactDOM.render(<PeopleMargin />, document.getElementById('people-margin'))
 
 ReactDOM.render(
   <EmotionsSemantic

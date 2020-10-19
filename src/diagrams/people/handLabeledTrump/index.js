@@ -143,13 +143,15 @@ export default class HumanLabels extends React.Component {
       <Surface width={width} margin="auto">
         <Surface flexFlow="row" marginLeft={60}>
           <Group name="Neutral">
-            <Label index={6}>Video Games and Music</Label>
-            <Label index={5}>Black and LGBT Rights</Label>
-            <Label index={4}>Political Generic</Label>
+            <Label index={8}>Video Games and Music</Label>
+            <Label index={7}>Black and LGBT Rights</Label>
+            <Label index={6}>Non-Political</Label>
+            <Label index={5}>Political Generic</Label>
           </Group>
-          <Group name="Trumpian">
-            <Label index={3}>Trump Aligned Politics</Label>
-            <Label index={2}>Partially Photo of Trump</Label>
+          <Group name="Related to Donald Trump">
+            <Label index={4}>Trump Aligned Politics</Label>
+            <Label index={3}>Partially Photo of Trump</Label>
+            <Label index={2}>"Trump" Text</Label>
             <Label index={1}>Trump Related Art</Label>
             <Label index={0}>Photo of Trump</Label>
           </Group>
@@ -221,7 +223,15 @@ export default class HumanLabels extends React.Component {
             alignSelf: 'center',
           }}
         >
-          trump1
+          We collected about 650 images that caused the Trump neuron to fire
+          different amounts. In each 15 unit increment from -40 to 115 we
+          sampled an equal number of images then labeled them by hand into a
+          number of categories. While we labeled we could not see the
+          activation. Using this dataset we can estimate the conditional
+          probability of each category at each level of activation. We see that
+          the higher activations of the Trump neuron are highly selective, with
+          more than 90% of the images causing an activation of more than 55
+          related to Donald Trump.
         </figcaption>
       </Surface>
     )

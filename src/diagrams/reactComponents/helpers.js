@@ -19,7 +19,7 @@ const nameToNeuron = {
   Trump: 89,
   Jesus: 1777,
   Hitler: 309,
-  Spiderman: 349,
+  Spiderman: 550,
 }
 export const getEmotion = (name, facet, strength) => {
   const path = `${

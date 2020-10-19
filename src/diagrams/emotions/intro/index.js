@@ -14,7 +14,8 @@ const friendlyName = {
 const imgSize = 166
 
 const neurons = [
-  ['Shocked', 'Crying', 'Happy', 'Sleepy'],
+  ['Hitler', 'Jesus', 'Spiderman', 'Sleepy'],
+  // ['Shocked', 'Crying', 'Happy', 'Sleepy'],
   ['Evil', 'Punishment', 'Serious', 'Soft smile'],
   ['Incarcerated', 'Erotic', 'Blocked', 'Accept / Appoint'],
 ]
