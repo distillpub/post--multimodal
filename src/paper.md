@@ -8,6 +8,7 @@ import HalleBerry from './diagrams/halleBerry/index.svelte'
 
 <Svelte component={HalleBerry} container={<div />} />
 
+
 But these people-detecting neurons only scratch the surface of highly abstract neurons we found. We also find features coding for emotions, regions of the world, fictional settings, and much more. Moreover, these interpretable neurons are the norm — in our several month exploration, nearly every neuron we’ve looked at can be broadly summarized in just a few words.These neurons generalize in highly abstract ways beyond photo/drawing/text multimodality. For example, the regional neurons respond to the relevant regions on a world map, dominant ethnicities, local script, the names of countries and cities, and much more.
 
 These neurons generalize in highly abstract ways beyond Quiroga et al’s photo/drawing/text trifecta. For example, the regional neurons respond to the relevant regions on a world map, distinct local wildlife, unusual products, apparel, architecture, politicians, dominant ethnicities, local script, landmarks, the names of countries and cities, and much more.
@@ -25,6 +26,13 @@ import AttackDemo from './diagrams/AttackDemo.svelte'
 <Svelte component={AttackDemo} container={<div />} />
 
 Finally, we’ll explore some of the intermediary features and circuits that build up abstract features. These explorations will require a few novel methods which we discuss in detail in an appendix 1.
+
+# A Guided Tour of Neuron Families
+
+What features exist in CLIP models? In this section, we’ll examine the most abstract visual neurons in CLIP, found in the final convolutional layer. This layer contains an incredible diversity of features, but to allow detailed examination we’ll focus on three major “neuron families” []: people neurons, emotion neurons, and regional neurons. After these deep dives, we’ll give a high-level overview of other types of neurons we find.
+
+It’s important to understand that these neurons aren’t object detectors: they’re much more abstract and associational. They often have some core object or concept which their activation peaks for, but they will fire for associated ideas. They also tend to be maximally inhibited by stimuli which could be seen, in a very abstract way, as their opposite.
+
 
 ## Person Neurons
 
@@ -115,7 +123,6 @@ From local weather and food, to travel and immigration, to language and race: ge
 Regional neurons vary greatly in scale, from neurons corresponding to entire hemispheres -- for example, a Northern Hemisphere neuron which responds to bears, moose, coniferous forest, and the entire Northern third of a world map -- down to sub-regions of countries, such as the US West Coast. Which regions the model dedicates neurons to seems stochastic and varies across models we examined.<d-footnote>Some regional neurons seem to form more consistently than others. Which neurons form doesn't seem to be fully explained by prevalence in the dataset: for example, every model has an Australia neuron, but not all models seem to have a UK neuron. Why is that? One intuition is that there’s more variance in neurons when there’s a natural supercategory they can be grouped into. For example, when an individual UK neuron doesn’t exist, it seems to be folded into a Europe neuron. In Africa, we sometimes see multiple different Africa neurons (in particular a South/West Africa neuron and an East Africa neuron), while other times there seems to be a single unified Africa neuron. In contrast, Australia is perhaps less subdividable, since it’s both a continent and country.</d-footnote>
 
  
-[Figure: similar to NMF diagram in building blocks, associate neurons with colors, then highlight region on world map with color, and also show faceted feature visualization for each neuron. Possibly show dataset examples as well]
 
 import RegionalDiagram from './diagrams/RegionalNeurons.svelte'
 
@@ -126,16 +133,15 @@ In addition to these regional neurons, we find that many other neurons seem to b
 
 [for nick: do conditional probabilities for one of the neurons]
 
-## Miscellaneous Neurons (Interesting Neurons)
+## Miscellaneous Neurons
 
-<b>Person Detectors:</b>
+**Person trait neurons.** These neurons detect gender presentation<d-footnote>By this, we mean that it both responds to people presenting as this gender, as well as concepts associated with that gender.</d-footnote> and age, as well as facial features like moustaches. (Ethnicity tends to be represented by regional neurons.)
 
-<b>Regional Neurons:</b>
+[diagram]
 
-<b>Emotion neurons:</b>
+**Image type neurons.** These neurons detect different ways an image might be drawn, rendered, or photographed.
 
-Person trait neurons. These neurons detect gender presentation<d-footnote>By this, we mean that it both responds to people presenting as this gender, as well as concepts associated with that gender.</d-footnote> and age, and also facial features like moustaches. (Ethnicity tends to be represented by regional neurons.)
-
+[diagram]
 
 Image types can be quite rich. To provide some more specific examples, RN101 distinguishes among these three different types of medical content. Although they share an underlying topic (medicine and physiology), nonetheless these three different image types each get their own dedicated neuron!
 
@@ -173,19 +179,15 @@ Word arithmetic <d-cite key="mikolov2013linguistic" /> such as <br /><span style
 
 It seems likely that mixed arithmetic of words and images should be possible.
     
-<p><b>Limited Multilingual Behavior:</b> Although CLIP’s training data was filtered to be English, many features exhibit limited multilingual responsiveness. For example, a “positivity” neuron (4x:36) responds to images of English “Thank You”, French “Merci”, German “Danke”, and Spanish “Gracias,” and also to English “Congratulations”, German “Gratulieren”, Spanish “Felicidades”, and Indonesian “Selamat”. As the example of Indonesian demonstrates, the model can recognize some words from non Romance/Germanic languages. However, we were unable to find any examples of the model mapping words in non-latin script to semantic meanings. It can recognize many scripts (Arabic, Chinese, Japanese, etc) and will activate the corresponding regional neurons, but doesn’t seem to be able to map words in those scripts to their meanings.</p>
-
-<d-footnote>One interesting question is why the model developed reading abilities in latin alphabet languages, but not others -- was it because more data of that type slipped into the training data, or (the more exciting possibility) because it’s easier to learn a language from limited data if you already know the alphabet?</d-footnote>
+<p><b>Limited Multilingual Behavior:</b> Although CLIP’s training data was filtered to be English, many features exhibit limited multilingual responsiveness. For example, a “positivity” neuron (4x:36) responds to images of English “Thank You”, French “Merci”, German “Danke”, and Spanish “Gracias,” and also to English “Congratulations”, German “Gratulieren”, Spanish “Felicidades”, and Indonesian “Selamat”. As the example of Indonesian demonstrates, the model can recognize some words from non Romance/Germanic languages. However, we were unable to find any examples of the model mapping words in non-latin script to semantic meanings. It can recognize many scripts (Arabic, Chinese, Japanese, etc) and will activate the corresponding regional neurons, but doesn’t seem to be able to map words in those scripts to their meanings.<d-footnote>One interesting question is why the model developed reading abilities in latin alphabet languages, but not others -- was it because more data of that type slipped into the training data, or (the more exciting possibility) because it’s easier to learn a language from limited data if you already know the alphabet?</d-footnote></p>
       
 <p><b>Bias:</b> Certain kinds of bias seem to be embedded into these representations, similar to classic biases in word embeddings (eg. <d-cite key="bolukbasi2016man" />). The most striking examples are likely racial and religious bias. For example, there seems to be a “terrorism/Islam” neuron (4x:1596) which responds to images of words such as “Terrorism”, “Attack”, “Horror”, “Afraid”, and also “Islam”, “Allah”, “Muslim”. This isn’t just an illusion from looking at a single neuron: the image-based word embedding for “Terrorism” has a cosine similarity of 0.98 with “Muslims”. Similarily, an “illegal immigration neuron” (4x:2213) selects for Latin America countries.</p>
 
 (We’ll see further examples of bias in the next section, when we how these features are used in aligning with captions.) 
     
-<p><b>Polysemanticity and Conjoined Neurons:</b>  Although we’ve focused on neurons which seem to have a single clearly defined concept they respond to, many CLIP neurons are “polysemantic” <d-cite key="olah2017feature,olah2020zoom" />, responding to multiple unrelated features. Unusually, polysemantic neurons in CLIP often have suspicious links between the different concepts they respond to. For example, we observe as <b>Phil</b>adelphia/<b>Phil</b>ipines/<b>Phil</b>ip neuron, a Christm<b>as</b>/<b>As</b>s neuron, and an Ac<b>tor</b>/Velocerap<b>tor</b> neuron. The concepts in these neurons seem “conjoined”, overlapping in a superficial way in one facet, and then generalizing out in multiple directions. We haven’t ruled out the possibility that these are just coincidences, given the large number of facets that could overlap for each concept. But if conjoined features genuinely exist, they hint at new potential explanations of polysemanticity.</p>
-
-<d-footnote>In the past, when we've observed seemingly polysemantic neurons, we've considered two possibilities: either it is responding to some shared feature of the stimuli, in which case it isn’t really polysemantic, or it is genuinely responding to two unrelated cases. Usually we distinguish these cases with feature visualization. For example, InceptionV1 4e:55 responds to cars and cat heads. One could imagine it being the case that it’s responding to some shared feature -- perhaps cat eyes and car lights look similar. But feature visualization establishes a facet selecting for a globally coherent cat head, whiskers and all, as well as the metal chrome and corners of a car. We concluded that it was genuinely <i>OR(cat, car)</i>.<br /><br />
+<p><b>Polysemanticity and Conjoined Neurons:</b>  Although we’ve focused on neurons which seem to have a single clearly defined concept they respond to, many CLIP neurons are “polysemantic” <d-cite key="olah2017feature,olah2020zoom" />, responding to multiple unrelated features. Unusually, polysemantic neurons in CLIP often have suspicious links between the different concepts they respond to. For example, we observe as <b>Phil</b>adelphia/<b>Phil</b>ipines/<b>Phil</b>ip neuron, a Christm<b>as</b>/<b>As</b>s neuron, and an Ac<b>tor</b>/Velocerap<b>tor</b> neuron. The concepts in these neurons seem “conjoined”, overlapping in a superficial way in one facet, and then generalizing out in multiple directions. We haven’t ruled out the possibility that these are just coincidences, given the large number of facets that could overlap for each concept. But if conjoined features genuinely exist, they hint at new potential explanations of polysemanticity.<d-footnote>In the past, when we've observed seemingly polysemantic neurons, we've considered two possibilities: either it is responding to some shared feature of the stimuli, in which case it isn’t really polysemantic, or it is genuinely responding to two unrelated cases. Usually we distinguish these cases with feature visualization. For example, InceptionV1 4e:55 responds to cars and cat heads. One could imagine it being the case that it’s responding to some shared feature -- perhaps cat eyes and car lights look similar. But feature visualization establishes a facet selecting for a globally coherent cat head, whiskers and all, as well as the metal chrome and corners of a car. We concluded that it was genuinely <i>OR(cat, car)</i>.<br /><br />
 Conjoined features can be seen as a kind of mid-point between detecting a shared low-level feature and detecting independent cases. Detecting Santa Claus and “turn” are clearly true independent cases, but there was a different facet where they share a low-level feature. <br /><br />
-Why would models have conjoined features? Perhaps they’re a vestigial phenomenon from early in training when the model couldn’t distinguish between the two concepts in that facet. Or perhaps there’s a case where they’re still hard to distinguish, such as large font sizes. Or maybe it just makes concept packing more efficient, as in the superposition hypothesis.</d-footnote>
+Why would models have conjoined features? Perhaps they’re a vestigial phenomenon from early in training when the model couldn’t distinguish between the two concepts in that facet. Or perhaps there’s a case where they’re still hard to distinguish, such as large font sizes. Or maybe it just makes concept packing more efficient, as in the superposition hypothesis.</d-footnote></p>
 
 # Using Abstractions
 
@@ -274,10 +276,13 @@ import EmotionsSemantic from './pages/emotions/semantic'
 Sometimes physical objects contribute to representing emotions.
 We also see that not all emotions are clearly separate from worldly objects. For example, part of "powerful" is a lightning neuron, part of "creative" is a painting neuron, part of "embarrassed" is a neuron corresponding to the years 2000-2012<d-footnote>explain the neuron is a time period and the language side thinks of it as embarrassing</d-footnote>, and part of “let down" is a neuron for destruction.
 
+
 <EmotionsSemantic emotionNames={['powerful', 'creative', 'embarrassed', 'let down']} />
 
 We also see concerning use of sensitive topics in these emotion vectors, suggesting that problematic spurious correlations are used to caption expressions of emotion. For instance, "accepted" detects LGBT. "Confident" detects overweight. "Pressured" detects Asian culture.
 (disrespected)
+
+
 
 <EmotionsSemantic emotionNames={['accepted', 'confident', 'pressured']} />
 
@@ -300,75 +305,35 @@ This atlas has a few connections to classical emotion research. When we use just
 
 # Typographic Attacks
 
-As we’ve seen, CLIP is full of multimodal neurons that, for a given concept, respond to both images and text. Given how strongly these neurons react to text, we wonder: can we implement a non-programmatic adversarial attack with just a marker and an English description of how we want to control the model.
-
-We test this on the ImageNet classification task we looked at earlier, and find that it works. We call this a typographic attack.
+As we’ve seen, CLIP is full of multimodal neurons which respond to both images and text for a given concept. Given how strongly these neurons react to text, we wonder: can we perform a kind of non-programmatic adversarial attack – a typographic attack – using just a marker and an English word?
 
 ## Physical typographic attacks
 
-We took several common items and deliberately mislabeled them, then observed the resulting ImageNet classifications.
-
+To test this hypothesis, we took several common items and deliberately mislabeled them. We then observed how this affects ImageNet classification (discussed <a>earlier</a>). We find this attack often successfully changes the classification:
 
 [….]
-
-import InTheWild1 from './diagrams/InTheWild1.svelte'
-
-<Svelte component={InTheWild1} />
-
-
-
-Figure N: In the zero-shot methodology, we convert the multimodal model to an ImageNet classifier by calculating probabilities on the completion “a photo of a ___” for each ImageNet class.
-
-✅ Show extra examples
-Methodology: 🔽 Zero-shot // Linear probes
-
-The result here is reminiscent of the Stroop effect [] from psychology, in which participants become slower at naming the color of a stimulus if they’re naming the font color over an unrelated color word, as compared to simply naming the color of a colored square. We find there’s something similarly jarring to the experience of looking at these deliberately mislabeled objects, and just as humans are susceptible to the Stroop effect, CLIP is susceptible to these attacks.
-
-While many classic adversarial attacks focus on making imperceptible changes to images [], typographic attacks are more similar to work such as adversarial patches [1]  and physical adversarial examples [2]. Adversarial patches are stickers that can be placed on a real-life object in order to cause neural nets to misclassify that object as something else – for example, a toaster. Physical adversarial examples are complete 3D objects that are reliably misclassified: previous work gives a 3D-printed turtle that is reliably misclassified as a rifle and a baseball that is misclassified as an espresso.
-
-## Automated typographic attacks
-
-Are typographic attacks reliable? Duct tape and markers don't scale, so we create a simple automated setup to study the exploit in more settings. We place attack text at eight fixed positions [4] to increase the probability of the target class. <d-footnote>We add the text at eight fixed positions using one font style to try increasing the probability of the target class.</d-footnote>
-
-import AttackSetup from './diagrams/AttackSetup.svelte'
-
-<Svelte component={AttackSetup} />
-
-We test whether the attack is able to reliably switch a large percentage of ImageNet validation set images to the target attack class.
-We found text snippets for our attacks using a handful of techniques:
-
-Just brute-force searching through all of the ImageNet class names looking for class names which are, in and of themselves, effective attacks. This is how we found rifle, pizza, radio, iPod, and library.
-
-Manually looking through the multimodal model's neurons for those that appear sensitive to particular kinds of text. This is how we found the piggy bank and Siamese cat attacks.
-
-[[Put concrete visuals (feat viz for piggybank and Siamese cat) here, to quickly show how we did #2 above]]
-
-Under this attack setup, we found several attacks to be reasonably effective. Among the strongest of these attacks we see that this simple procedure can get us up to a 97% attack success rate with only around 7% of the image's pixels changed. These results are competitive with the results found in Adversarial Patch, albeit on a different model.
-
-
-
-import AutomatedAttacks from './diagrams/AutomatedAttacks.svelte'
-
-<Svelte component={AutomatedAttacks} />
-
-
-[[Refocus these two diagrams: reduce the two ITW diagrams down to one, using the below. Put the toaster row below the fold. Advantage: user does not have to process the specialness of the diagonal items.]]
 
 
 import InTheWild2 from './diagrams/InTheWild2.svelte'
 
 <Svelte component={InTheWild2} />
 
+The model’s response to these adversarial images is reminiscent of the Stroop effect [] from psychology, in which participants become slower at naming the color of a stimulus if they’re naming the font color over an unrelated color word, as compared to simply naming the color of a colored square. We find there’s something similarly jarring to the experience of looking at these deliberately mislabeled objects, and just as humans are susceptible to the Stroop effect, CLIP is susceptible to these attacks.
 
-For this style of attack, we observe that the zero-shot methodology is somewhat consistently effective, but that the linear probes methodology is ineffective. Later on, we show an attack style that also works against the linear probes methodology.
+While many classic adversarial attacks focus on making imperceptible changes to images [], typographic attacks are more similar to work such as adversarial patches [1] and physical adversarial examples [2]. Adversarial patches are stickers that can be placed on a real-life objects in order to cause neural nets to misclassify that object as something else – for example, a toaster. Physical adversarial examples are complete 3D objects that are reliably misclassified from all perspectives: previous work gives a 3D-printed turtle that is reliably misclassified as a rifle and a baseball that is misclassified as an espresso. However, typographic attacks are both weaker and stronger than these. On the one hand, they only work for models with multimodal neurons. On the other hand, once you understand this property of the models, they can be executed non-programmatically and as a black-box attack, available to any adversary -- including six year olds.
 
-[[I might also have to add a couple more nuanced points here // depending on whether this point still holds with physical attacks #2]]
 
-[[Continue to call this out at the bottom of this section, it just won’t have a diagram right above it anymore]]
 
-## Why do these attacks work?
+## Automated typographic attacks
 
-[[Move this up to the above section where I have a note saying to insert diagram for piggy bank and Siamese cat.]]
+Are typographic attacks reliable? Duct tape and markers don't scale, so we create a simple automated setup to measure the attack’s success rate on the ImageNet validation set.
+
+
+import AttackSetup from './diagrams/AttackSetup.svelte'
+
+<Svelte component={AttackSetup} />
+
+We found text snippets for our attacks in two different ways. Firstly, we brute-force searching through all of the ImageNet class names looking for short class names which are, in and of themselves, effective attacks. This is how we found rifle, pizza, radio, iPod, and library. Secondly, we manually looked through the multimodal model's neurons for those that appear sensitive to particular kinds of text. This is how we found the piggy bank and Siamese cat attacks.
 
 import AttackableNeurons from './diagrams/AttackableNeurons.svelte'
 
@@ -376,10 +341,15 @@ import AttackableNeurons from './diagrams/AttackableNeurons.svelte'
 
  
 
+Using this setup, we found several attacks to be reasonably effective. The most successful attacks achieve a 97% attack success rate with only around 7% of the image's pixels changed. These results are competitive with the results found in Adversarial Patch, albeit on a different model.
 
 
-    
 
+import AutomatedAttacks from './diagrams/AutomatedAttacks.svelte'
+
+<Svelte component={AutomatedAttacks} />
+
+[Assuming we have a zero-shot col in above table.] It’s worth noting that the zero-shot classifier is more vulnerable to these attacks than the linear problem classifier, but the attacks are somewhat effective on both.
 
 
 # Appendix 1: Methodological Details
