@@ -1,12 +1,55 @@
 // Hot reloading
-import * as _unused from 'raw-loader!./index.ejs'
+// import * as _unused from 'raw-loader!./index.ejs'
 // TODO: disable before publishing
 
+import React from 'react'
+import ReactDOM from 'react-dom'
+import PaperText from './paper.md'
+import HelloSvelte from './diagrams/helloWorld.svelte'
+
+const Paper = <React.Fragment>
+    <d-contents>
+      <nav class="toc figcaption">
+        <h4>Contents</h4>
+        {false && <div><a href="#introduction">Introduction</a></div>}
+        <div><a href="#">Introduction</a></div>
+        <div><a href="#">Into the Multimodal Mind</a></div>
+        <ul>
+          <li><a href="#">Identity Recognition</a></li>
+          <li><a href="#">Regional Neurons</a></li>
+          <li><a href="#">Emotion Neurons</a></li>
+          <li><a href="#miscellaneous-neurons">Miscellaneous Neurons</a></li>
+        </ul>
+        <div><a href="#">Using Abstractions</a></div>
+        <ul>
+          <li><a href="#">Understanding language</a></li>
+          <li><a href="#">Emotional Intelligence</a></li>
+        </ul>
+        <div><a href="#">Typographic Attacks</a></div>
+        <div><a href="#">The Mechanics of Abstraction</a></div>
+        <ul>
+          <li><a href="#">Universal Features and Circuits</a></li>
+          <li><a href="#">Task-specific Features</a></li>
+          <li><a href="#">The Mechanics of Abstraction</a></li>
+        </ul>
+        <div><a href="#">Conclusion</a></div>
+        <div><a href="#">Appendix: Methodological Details</a></div>
+      </nav>
+      <div class="toc-line"></div>
+    </d-contents>
+    <PaperText></PaperText>
+</React.Fragment>
+
+ReactDOM.render(Paper, document.querySelector('d-article'))
+
+/*
 import Figure from './diagrams/Neuron.svelte'
 import HyperSet from './diagrams/HyperSet.svelte'
 import UniversalityTable from './diagrams/UniversalityTable.svelte'
 import NeuronTable from './diagrams/NeuronTable.svelte'
 import RegionalNeurons from './diagrams/RegionalNeurons.svelte'
+import SmallNeuronRow from './diagrams/SmallNeuronRow.svelte'
+import SmallNeuronGrid from './diagrams/SmallNeuronGrid.svelte'
 
 import 'regenerator-runtime/runtime'
 
@@ -16,6 +59,7 @@ import FeaturesTableWithDS from './diagrams/FeaturesTableWithDS.svelte'
 import EnrichmentCircuit from './diagrams/EnrichmentCircuit.svelte'
 import FeaturesTable from './diagrams/FeaturesTable.svelte'
 import LiterateNeurons from './diagrams/LiterateNeurons.svelte'
+import MicroscopeButton from './components/MicroscopeButton.svelte'
 import AttackSetup from './diagrams/AttackSetup.svelte'
 import AutomatedAttacks from './diagrams/AutomatedAttacks.svelte'
 import AttackableNeurons from './diagrams/AttackableNeurons.svelte'
@@ -41,18 +85,16 @@ let interesting = new NeuronTable({
 
 // Nick
 
-import PeopleHandLabeled from './diagrams/people/handLabeledTrump'
-import PeopleMargin from './diagrams/people/margin'
-import PeopleTrumpPeople from './diagrams/people/trumpPeople'
-import EmotionsIntro from './diagrams/emotions/intro'
-import EmotionsSurprise from './diagrams/emotions/surprise'
-import EmotionsMinor from './diagrams/emotions/minor'
-import EmotionsDuckface from './diagrams/emotions/minor/duckface'
-import EmotionsMentalHealth from './diagrams/emotions/mentalHealth'
-import EmotionsAtlas from './diagrams/emotions/atlas'
-import EmotionsSemantic from './diagrams/emotions/semantic'
-import React from 'react'
-import ReactDOM from 'react-dom'
+import PeopleHandLabeled from './pages/people/handLabeledTrump'
+import PeopleMargin from './pages/people/margin'
+import PeopleTrumpPeople from './pages/people/trumpPeople'
+import EmotionsIntro from './pages/emotions/intro'
+import EmotionsSurprise from './pages/emotions/surprise'
+import EmotionsMinor from './pages/emotions/minor'
+import EmotionsDuckface from './pages/emotions/minor/duckface'
+import EmotionsMentalHealth from './pages/emotions/mentalHealth'
+import EmotionsAtlas from './pages/emotions/atlas'
+import EmotionsSemantic from './pages/emotions/semantic'
 
 ReactDOM.render(<EmotionsAtlas />, document.getElementById('emotions-atlas'))
 
@@ -130,6 +172,32 @@ for (let [elementId, DiagramClass, props] of diagrams) {
   let example = new DiagramClass({ target, props })
 }
 
+for (let target of document.getElementsByClassName('small-neuron-row')) {
+  var attrs = target.attributes
+  var neurons = attrs['data-neurons'].value.split(',').map((s) => parseInt(s))
+  var facet = attrs['data-facet'].value || 'any'
+  var props = { neurons, facet }
+  let example = new SmallNeuronRow({ target, props })
+}
+for (let target of document.getElementsByClassName('small-neuron-grid')) {
+  var attrs = target.attributes
+  var neurons = attrs['data-neurons'].value.split(',').map((s) => parseInt(s))
+  var titles = attrs['data-titles'].value.split(',')
+  var models = attrs['data-models'].value.split(',')
+  var facets = attrs['data-facets'].value.split(',')
+  var layers = attrs['data-layers'].value.split(',')
+  var props = { neurons, facets, titles, models, layers }
+  let example = new SmallNeuronGrid({ target, props })
+}
+for (let target of document.getElementsByClassName('microscope-button')) {
+  var attrs = target.attributes
+  var unit = attrs['data-unit'].value
+  var layer = attrs['data-layer'].value
+  var model = attrs['data-model'].value
+  var props = { unit, layer, model }
+  let example = new MicroscopeButton({ target, props })
+}
+
 ReactDOM.render(<EmotionsIntro />, document.getElementById('emotions-intro'))
 ReactDOM.render(<EmotionsMinor />, document.getElementById('emotions-minor'))
 ReactDOM.render(
@@ -188,3 +256,4 @@ ReactDOM.render(
   />,
   document.getElementById('emotions-semantic-bias')
 )
+*/

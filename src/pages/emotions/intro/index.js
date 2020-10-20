@@ -25,7 +25,7 @@ export default () => {
   const [facet, setFacet] = useState('face')
 
   return (
-    <React.Fragment>
+    <figure className="fullscreen-diagram">
       <Surface
         display="grid"
         gridTemplateRows={`[settings] auto repeat(3, [row] auto)`}
@@ -117,6 +117,6 @@ export default () => {
         with several tools such as dataset examples, feature visualization of
         different facets, and text feature visualization.
       </figcaption>
-    </React.Fragment>
+    </figure>
   )
 }

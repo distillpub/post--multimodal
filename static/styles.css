@@ -1,6 +1,6 @@
 .subgrid {
-  grid-column: screen; 
-  display: grid; 
+  grid-column: screen;
+  display: grid;
   grid-template-columns: inherit;
   grid-template-rows: inherit;
   grid-column-gap: inherit;
@@ -40,7 +40,6 @@ d-figure > figure {
   left: -48px;
 }
 
-
 .fullscreen-diagram {
   grid-column: screen;
   background: #f8f8fb;
@@ -78,39 +77,38 @@ d-footnote {
   margin-left: -1px;
   margin-right: 4px;
 }
-.footnote-sep {width: 0px;}
+.footnote-sep {
+  width: 0px;
+}
 .footnote-sep::before {
-  line-height: 1em; 
-  top: -.5em; 
+  line-height: 1em;
+  top: -0.5em;
   font-size: 0.75em;
-  color: #999; 
-  margin-left: -6px; 
+  color: #999;
+  margin-left: -6px;
   margin-right: 1px;
-  content: ",";
+  content: ',';
 }
 
 d-footnote + d-footnote::before {
   vertical-align: super;
-  line-height: 1em; 
-  top: -.5em; 
+  line-height: 1em;
+  top: -0.5em;
   font-size: 0.75em;
-  color: #999; 
-  margin-left: -6px; 
+  color: #999;
+  margin-left: -6px;
   margin-right: 1px;
-  content: ",";
+  content: ',';
 }
 
 d-article h2 {
   border-bottom: none;
 }
 
-
-
-
 /* ****************************************
  * TOC
  ******************************************/
-@media(max-width: 1300px){
+@media (max-width: 1300px) {
   d-contents {
     display: none;
   }
@@ -138,18 +136,20 @@ d-article d-contents .toc-line {
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   grid-column: toc-line;
 } */
+b i {
+  display: inline;
+}
 
 d-article d-contents {
   align-self: start;
   grid-column: 1 / 4;
   grid-row: auto / span 3;
   justify-self: end;
-  margin-top:  0em;
+  margin-top: 0em;
   padding-right: 3em;
   padding-left: 2em;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
-
 
 d-contents a:hover {
   border-bottom: none;
@@ -180,7 +180,7 @@ d-contents ul {
 }
 
 d-contents nav ul li {
-  margin-bottom: .25em;
+  margin-bottom: 0.25em;
 }
 
 d-contents nav a:hover {
@@ -192,19 +192,18 @@ d-contents nav ul {
   margin-bottom: 6px;
 }
 
-
-d-contents nav>div {
+d-contents nav > div {
   display: block;
   outline: none;
   margin-bottom: 0.5em;
 }
 
-d-contents nav>div>a {
+d-contents nav > div > a {
   font-size: 13px;
   font-weight: 600;
 }
 
-d-contents nav>div>a:hover,
-d-contents nav>ul>li>a:hover {
-    text-decoration: none;
+d-contents nav > div > a:hover,
+d-contents nav > ul > li > a:hover {
+  text-decoration: none;
 }

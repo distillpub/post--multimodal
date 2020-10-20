@@ -21,7 +21,7 @@ const imgFitCell = {
 }
 
 export default () => (
-  <React.Fragment>
+  <figure className="fullscreen-diagram">
     <Surface
       display="grid"
       gridGap={8}
@@ -126,5 +126,5 @@ export default () => (
       obscured. The pose facet shows someone expressing surprise from different
       and the face facet shows a close-up of shock.
     </figcaption>
-  </React.Fragment>
+  </figure>
 )

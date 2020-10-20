@@ -32,7 +32,7 @@ const Row = ({ title, first, img1, img2, cap1, cap2 }) => (
 )
 
 export default () => (
-  <React.Fragment>
+  <div style={{ gridColumn: '12 / 14' }}>
     <Row
       title="Jesus"
       img1={jesusFv}
@@ -57,5 +57,5 @@ export default () => (
         cap2="Hero in Suit"
       />
     )}
-  </React.Fragment>
+  </div>
 )

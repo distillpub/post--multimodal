@@ -37,6 +37,7 @@ export default () => {
   const data = bars.map((y, index) => ({ y, x: labels[index] }))
   const width = 1200
   return (
+      <figure className="fullscreen-diagram">
     <Surface width={width} margin="auto">
       <Surface width={width} height={500} transform="translateY(-70px)">
         <VictoryChart domainPadding={[35, 0]}>
@@ -88,5 +89,6 @@ export default () => {
         search where images do not contain the individual.
       </figcaption>
     </Surface>
+</figure>
   )
 }

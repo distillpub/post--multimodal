@@ -5,7 +5,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: {
-    index: './src/index.js',
+    index: './src/main.js',
   },
   resolve: {
     extensions: ['.mjs', '.js', '.html', '.npy'],
@@ -32,6 +32,26 @@ module.exports = {
             ],
           ],
         },
+      },
+      {
+        test: /\.mdx?$/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env', '@babel/preset-react'],
+              plugins: [
+                [
+                  '@babel/plugin-proposal-class-properties',
+                  {
+                    loose: true,
+                  },
+                ],
+              ],
+            },
+          },
+          '@mdx-js/loader',
+        ],
       },
       {
         test: /\.css$/i,
