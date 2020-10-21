@@ -18,6 +18,7 @@
     "d3-svg-annotation": "^2.5.1",
     "evergreen-ui": "^5.1.2",
     "next": "^9.5.5",
+    "numpy-loader": "^1.2.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "victory": "^35.1.1"
