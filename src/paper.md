@@ -335,22 +335,30 @@ import AttackSetup from './diagrams/AttackSetup.svelte'
 
 <Svelte component={AttackSetup} />
 
+TODO(Chelsea): Fix the diagrams in the margins to the right!! They should not take up so much vertical space even now.
+
 We found text snippets for our attacks in two different ways. Firstly, we brute-force searching through all of the ImageNet class names looking for short class names which are, in and of themselves, effective attacks. This is how we found rifle, pizza, radio, iPod, and library. Secondly, we manually looked through the multimodal model's neurons for those that appear sensitive to particular kinds of text. This is how we found the piggy bank and Siamese cat attacks.
 
-import AttackableNeurons from './diagrams/AttackableNeurons.svelte'
+import AttackableNeurons1 from './diagrams/AttackableNeurons1.svelte'
 
-<SvelteMargin component={AttackableNeurons} />
-
-
- 
+<SvelteMargin component={AttackableNeurons1} />
 
 Using this setup, we found several attacks to be reasonably effective. The most successful attacks achieve a 97% attack success rate with only around 7% of the image's pixels changed. These results are competitive with the results found in Adversarial Patch, albeit on a different model.
 
+
+import AttackableNeurons2 from './diagrams/AttackableNeurons2.svelte'
+
+<SvelteMargin component={AttackableNeurons2} />
 
 
 import AutomatedAttacks from './diagrams/AutomatedAttacks.svelte'
 
 <SvelteInline component={AutomatedAttacks} />
+
+
+import AttackableNeurons3 from './diagrams/AttackableNeurons3.svelte'
+
+<SvelteMargin component={AttackableNeurons3} />
 
 
 [Assuming we have a zero-shot col in above table.] It’s worth noting that the zero-shot classifier is more vulnerable to these attacks than the linear problem classifier, but the attacks are somewhat effective on both.
