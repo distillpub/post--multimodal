@@ -103,7 +103,7 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
   <!-- <button on:click={function() {showHidden = !showHidden}}>
     {showHidden ? "Hide extra examples" : "Show extra examples"}
   </button> -->
-  <!-- Methodology:
+  Methodology:
   <select bind:value={selectedStatistics}>
     <option value="zero_shot_statistics">
       Zero-shot
@@ -111,5 +111,5 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
     <option value="linear_probe_statistics">
       Linear probes
     </option>
-  </select> -->
+  </select>
 </div>

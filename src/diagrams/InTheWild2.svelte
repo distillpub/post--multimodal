@@ -105,7 +105,7 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
       <p>In a shoutout to <i>Adversarial Patch</i> we include the label <i>toaster</i> on a whim, and find that it does surprisingly well as a typographic attack!</p>
     </div>
   </div>
-  <!-- Methodology:
+  Methodology:
   <select bind:value={selectedStatistics}>
     <option value="zero_shot_statistics">
       Zero-shot
@@ -113,5 +113,5 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
     <option value="linear_probe_statistics">
       Linear probes
     </option>
-  </select> -->
+  </select>
 </div>
