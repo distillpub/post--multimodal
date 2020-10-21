@@ -11,6 +11,6 @@ export default ({ component, container = null }) => {
   return container ? (
     React.cloneElement(container, { ref: containerEl })
   ) : (
-    <figure style={{ gridColumn: '12 / 14' }} ref={containerEl} />
+    <figure style={{ gridColumn: '12 / 15' }} ref={containerEl} />
   )
 }
