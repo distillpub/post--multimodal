@@ -117,12 +117,21 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
       {#each Object.keys(attacks_2).sort().slice(0, showHidden ? Object.entries(attacks_2).length : HEIGHT_WHEN_HIDDEN) as item, row_index}
         {#each Object.entries(attacks_2[item]).slice(0, showHidden ? Object.entries(attacks_2.mug).length : WIDTH_WHEN_HIDDEN) as [label, results], col_index}
           <div style="grid-column: {col_index + 1 }">
-            <ClassificationCard
-              imageUrl={`/typographic/in-the-wild-2/${item}-${label}.jpg`}
-              imageAltText={`${item} labeled ${label}`}
-              probabilities={results[selectedStatistics].slice(0, 9)}
-              customHues={hues(label)}
-            />
+            {#if selectedStatistics === "zero_shot_statistics"}
+              <ClassificationCard
+                imageUrl={`/typographic/in-the-wild-2/${item}-${label}.jpg`}
+                imageAltText={`${item} labeled ${label}`}
+                probabilities={results.zero_shot_statistics.slice(0, 9)}
+                customHues={hues(label)}
+              />
+            {:else}
+              <ClassificationCard
+                imageUrl={`/typographic/in-the-wild-2/${item}-${label}.jpg`}
+                imageAltText={`${item} labeled ${label}`}
+                probabilities={results.linear_probe_statistics.slice(0, 9)}
+                customHues={hues(label)}
+              />
+            {/if}
           </div>
         {/each}
       {/each}
