@@ -9,7 +9,7 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
 <div style="width: fit-content; margin: auto; display: grid; grid-template-columns: 340px 105px 340px; grid-gap: 32px;">
   <div style="grid-column: 1">
     <ClassificationCard
-      imageUrl={"/typographic/small_attacks/example_before.png"}
+      imageUrl={"typographic/small_attacks/example_before.png"}
       imageAltText={"a picture of a chihuahua"}
       probabilities={one_example_attack.control[0].slice(0,9)}
       customHues={hues}
@@ -41,7 +41,7 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
 
   <div style="grid-column: 3">
     <ClassificationCard
-      imageUrl={"/typographic/small_attacks/example_after.png"}
+      imageUrl={"typographic/small_attacks/example_after.png"}
       imageAltText={"a picture of a chihuahua with the word 'pizza' overlaid eight times"}
       probabilities={one_example_attack.results.pizza.pizza.full_results[0].slice(0,9)}
       customHues={hues}

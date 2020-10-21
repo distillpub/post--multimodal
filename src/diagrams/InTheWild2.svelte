@@ -119,14 +119,14 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
           <div style="grid-column: {col_index + 1 }">
             {#if selectedStatistics === "zero_shot_statistics"}
               <ClassificationCard
-                imageUrl={`/typographic/in-the-wild-2/${item}-${label}.jpg`}
+                imageUrl={`typographic/in-the-wild-2/${item}-${label}.jpg`}
                 imageAltText={`${item} labeled ${label}`}
                 probabilities={results.zero_shot_statistics.slice(0, 9)}
                 customHues={hues(label)}
               />
             {:else}
               <ClassificationCard
-                imageUrl={`/typographic/in-the-wild-2/${item}-${label}.jpg`}
+                imageUrl={`typographic/in-the-wild-2/${item}-${label}.jpg`}
                 imageAltText={`${item} labeled ${label}`}
                 probabilities={results.linear_probe_statistics.slice(0, 9)}
                 customHues={hues(label)}
