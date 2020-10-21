@@ -100,9 +100,6 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
   </div>
   <input type="checkbox" bind:checked={showHidden} /> Show extra examples
   <br/>
-  <!-- <button on:click={function() {showHidden = !showHidden}}>
-    {showHidden ? "Hide extra examples" : "Show extra examples"}
-  </button> -->
   Methodology:
   <select bind:value={selectedStatistics}>
     <option value="zero_shot_statistics">
