@@ -80,7 +80,7 @@ function hues(label) {
 import ClassificationCard from '../components/ClassificationCard.svelte';
 </script>
 
-<div style="overflow-x: scroll;">
+<div style="overflow-x: auto;">
   <div style="width: fit-content; margin: auto;">
     <div style="display: grid; grid-template-rows: repeat({Object.entries(attacks_2).length }); grid-template-columns: repeat({Object.entries(attacks_2.mug).length }); overflow: auto; grid-gap: 5px;">
       {#each Object.entries(attacks_2.mug) as [label, results], col_index}

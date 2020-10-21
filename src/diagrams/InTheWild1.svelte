@@ -64,8 +64,8 @@ let selectedStatistics = "zero_shot_statistics";
 import ClassificationCard from '../components/ClassificationCard.svelte';
 </script>
 
-<div style="overflow-x: scroll;">
-  <div style="width: fit-content; margin: auto; overflow-x: scroll;">
+<div style="overflow-x: auto;">
+  <div style="width: fit-content; margin: auto;">
     <div style="display: grid; grid-template-rows: repeat({ showHidden ?  Object.entries(data).length : 4}); grid-template-columns: repeat({ showHidden ? Object.entries(data.mug).length : 4}); overflow: auto; grid-gap: 10px;">
       {#each Object.entries(data.mug).slice(0, showHidden ? 6 : 4) as [label, results], col_index}
         <h4 style="grid-column: { col_index + 1}; margin-bottom: 0px">{@html label === "blank" ? "No label" : "Labeled &ldquo;" + label + "&rdquo;" }</h4>
