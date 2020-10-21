@@ -1,5 +1,6 @@
 import Svelte from './svelte'
 import SvelteMargin from './svelte-margin'
+import SvelteInline from './svelte-inline'
 
 In 2005, a letter published in Nature described human neurons responding to specific people, as well as landmarks<d-cite key="quiroga2005invariant" />. The exciting thing wasn’t just that they selected for particular people, such as Jennifer Aniston or Halle Berry, but that they did so regardless of whether they were shown images, drawings, or even images of the person’s name. The neurons were multimodal. As the lead author would put it: "You are looking at the far end of the transformation from metric, visual shapes to conceptual… information." <d-footnote>Quiroga's full quote, from <a href="https://www.newscientist.com/article/dn7567-why-your-brain-has-a-jennifer-aniston-cell/">New Scientist</a>reads: "I think that’s the excitement to these results. You are looking at the far end of the transformation from metric, visual shapes to conceptual memory-related information. It is that transformation that underlies our ability to understand the world. It’s not enough to see something familiar and match it. It’s the fact that you plug visual information into the rich tapestry of memory that brings it to life." We elided the portion discussing memory since it was less relevant.</d-footnote> 
 
@@ -349,7 +350,8 @@ Using this setup, we found several attacks to be reasonably effective. The most 
 
 import AutomatedAttacks from './diagrams/AutomatedAttacks.svelte'
 
-<Svelte component={AutomatedAttacks} />
+<SvelteInline component={AutomatedAttacks} />
+
 
 [Assuming we have a zero-shot col in above table.] It’s worth noting that the zero-shot classifier is more vulnerable to these attacks than the linear problem classifier, but the attacks are somewhat effective on both.
 
