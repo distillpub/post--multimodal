@@ -1,12 +1,12 @@
 <script>
 const one_example_attack = require("../../static/typographic/one_example_attack.json");
 
-const hues = {"pizza": 100};
+const hues = {"pizza": 40};
 
 import ClassificationCard from '../components/ClassificationCard.svelte';
 </script>
 
-<div style="width: fit-content; margin: auto; display: grid; grid-template-columns: 340px 105px 340px; grid-gap: 32px;">
+<div style="width: fit-content; margin: auto; display: grid; grid-template-columns: 305px 100px 305px; grid-gap: 32px;">
   <div style="grid-column: 1">
     <ClassificationCard
       imageUrl={"typographic/small_attacks/example_before.png"}
