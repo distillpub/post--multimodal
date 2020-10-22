@@ -1,4 +1,6 @@
 import Svelte from './svelte'
+import SvelteMargin from './svelte-margin'
+import SvelteInline from './svelte-inline'
 
 In 2005, a letter published in Nature described human neurons responding to specific people, as well as landmarks<d-cite key="quiroga2005invariant" />. The exciting thing wasn’t just that they selected for particular people, such as Jennifer Aniston or Halle Berry, but that they did so regardless of whether they were shown images, drawings, or even images of the person’s name. The neurons were multimodal. As the lead author would put it: "You are looking at the far end of the transformation from metric, visual shapes to conceptual… information." <d-footnote>Quiroga's full quote, from <a href="https://www.newscientist.com/article/dn7567-why-your-brain-has-a-jennifer-aniston-cell/">New Scientist</a>reads: "I think that’s the excitement to these results. You are looking at the far end of the transformation from metric, visual shapes to conceptual memory-related information. It is that transformation that underlies our ability to understand the world. It’s not enough to see something familiar and match it. It’s the fact that you plug visual information into the rich tapestry of memory that brings it to life." We elided the portion discussing memory since it was less relevant.</d-footnote> 
 
@@ -334,21 +336,31 @@ import AttackSetup from './diagrams/AttackSetup.svelte'
 
 <Svelte component={AttackSetup} />
 
+TODO(Chelsea): Fix the diagrams in the margins to the right!! They should not take up so much vertical space even now.
+
 We found text snippets for our attacks in two different ways. Firstly, we brute-force searching through all of the ImageNet class names looking for short class names which are, in and of themselves, effective attacks. This is how we found rifle, pizza, radio, iPod, and library. Secondly, we manually looked through the multimodal model's neurons for those that appear sensitive to particular kinds of text. This is how we found the piggy bank and Siamese cat attacks.
 
-import AttackableNeurons from './diagrams/AttackableNeurons.svelte'
+import AttackableNeurons1 from './diagrams/AttackableNeurons1.svelte'
 
-<Svelte component={AttackableNeurons} />
-
- 
+<SvelteMargin component={AttackableNeurons1} />
 
 Using this setup, we found several attacks to be reasonably effective. The most successful attacks achieve a 97% attack success rate with only around 7% of the image's pixels changed. These results are competitive with the results found in Adversarial Patch, albeit on a different model.
 
 
+import AttackableNeurons2 from './diagrams/AttackableNeurons2.svelte'
+
+<SvelteMargin component={AttackableNeurons2} />
+
 
 import AutomatedAttacks from './diagrams/AutomatedAttacks.svelte'
 
-<Svelte component={AutomatedAttacks} />
+<SvelteInline component={AutomatedAttacks} />
+
+
+import AttackableNeurons3 from './diagrams/AttackableNeurons3.svelte'
+
+<SvelteMargin component={AttackableNeurons3} />
+
 
 [Assuming we have a zero-shot col in above table.] It’s worth noting that the zero-shot classifier is more vulnerable to these attacks than the linear problem classifier, but the attacks are somewhat effective on both.
 

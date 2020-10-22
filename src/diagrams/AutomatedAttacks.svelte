@@ -14,7 +14,6 @@ let attack_ordering = [
 </script>
 
 <div>
-hello world
   <table id="best-small-attacks" style="width: 100%">
     <thead>
       <tr>
