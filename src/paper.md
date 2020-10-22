@@ -311,6 +311,7 @@ As we’ve seen, CLIP is full of multimodal neurons which respond to both images
 
 To test this hypothesis, we took several common items and deliberately mislabeled them. We then observed how this affects ImageNet classification (discussed <a>earlier</a>). We find this attack often successfully changes the classification:
 
+
 [….]
 
 
