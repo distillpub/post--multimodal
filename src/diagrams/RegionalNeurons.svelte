@@ -25,6 +25,7 @@
             "name": "Selected Units form 4x model",
             "neurons": [ 
                 {"model": "4x", "unit": 862, "name": "USA?", "top_words": "americans, american, america, usa, americas"},
+                {"model": "4x", "unit": 780, "name": "Spanish?", "top_words": ""},
                 {"model": "4x", "unit": 1257, "name": "West Africa?", "top_words": "ghana, uganda, africa, tanzania, african"},
                 {"model": "4x", "unit": 218, "name": "Europe?", "top_words": "netherlands, luxembourg, stockholm, amsterdam, switzerland"}, 
                 {"model": "4x", "unit": 1067, "name": "India?", "top_words": "mumbai, singh, pakistan, afghanistan, bangladesh"},
@@ -37,8 +38,8 @@
             "name": "Latitude Neurons",
             "neurons": [
                 {"model": "4x", "unit": 245, "name": "Northern Hemisphere?", "top_words": "saskatchewan, norwegian, newfoundland, wisconsin, vancouver"},
-                {"model": "rn50", "unit": 542, "name": "Equator?", "top_words": ""},
-                {"model": "v1", "unit": 1220, "name": "Tropical?", "top_words": "palm, miami, tamil, hawaii, hawaiian"},
+                {"model": "4x", "unit": 734, "name": "Global?", "top_words": ""},
+                {"model": "4x", "unit": 1511, "name": "Ocean?", "top_words": ""},
             ]
         },
         {
@@ -46,7 +47,6 @@
             "neurons": [
                 {"model": "rn101", "unit": 1268, "name": "Angels?", "top_words": "angel, angels, wings, heaven, angeles"},
                 {"model": "rn101", "unit": 1651, "name": "Startups", "top_words": "entrepreneurs, entrepreneur, founder, startup, starter"},
-                {"model": "rn101", "unit": 1543, "name": "Male WASP names", "top_words": "chris, josh, jake, mike, ryan"},
                 {"model": "rn101", "unit": 395, "name": "immigration", "top_words": "immigrants, immigration, borders, border, refugees"},
                 {"model": "rn101", "unit": 645, "name": "Great Cats?", "top_words": "lions, jaguar, tigers, eagles, tiger"},
                 {"model": "rn101", "unit": 1731, "name": "Cold?", "top_words": "blanket, jackets, jacket, wrap, arctic"},
@@ -128,7 +128,6 @@
                 {"model": "rn101", "unit": 1768, "name": "USA?", "top_words": "usa, americans, america, american, americas"},
                 {"model": "rn101", "unit": 1791, "name": "USA?", "top_words": "michigan, oregon, alabama, nebraska, iowa"},
                 {"model": "rn101", "unit": 417, "name": "USA?", "top_words": "minnesota, washington, metabolism, sacramento, wisconsin"},
-                {"model": "rn101", "unit": 1601, "name": "East Coast?", "top_words": "sms, massachusetts, connecticut, hampshire, scotia"},
                 {"model": "rn101", "unit": 1480, "name": "Canada?", "top_words": "vancouver, ontario, toronto, manitoba, ottawa"},          
             ]
         },
@@ -167,6 +166,12 @@
                 {"model": "4x", "unit": 1091, "name": "China?", "top_words": "shanghai, vietnamese, asian, cambodia, chinese"},
                 {"model": "4x", "unit": 1601, "name": "Japan?", "top_words": "xnxx, pn, dx, egypt, uzbekistan"},
                 {"model": "4x", "unit": 513, "name": "Australia?", "top_words": "australian, australia, adelaide, nsw, queensland"}, 
+                {"model": "4x", "unit": 734, "name": "Global?", "top_words": ""},
+                {"model": "4x", "unit": 1980, "name": "leaedership/democracy?", "top_words": ""},
+                {"model": "4x", "unit": 2247, "name": "biodiversity?", "top_words": ""},
+                {"model": "4x", "unit": 686, "name": "community?", "top_words": ""},
+                {"model": "4x", "unit": 780, "name": "Spanish?", "top_words": ""},
+                {"model": "4x", "unit": 1511, "name": "Ocean?", "top_words": ""},
             ]
         },
         {
@@ -175,13 +180,12 @@
                 {"model": "rn50", "unit": 1405, "name": "Africa?", "top_words": "ghana, african, uganda, kenya, africa"},
                 {"model": "rn50", "unit":  919, "name": "Africa?", "top_words": "zimbabwe, nigeria, african, uganda, malawi"},
                 {"model": "rn50", "unit": 1471, "name": "Africa?", "top_words": "zimbabwe, uganda, nigeria, rwanda, revenue"},
-                {"model": "rn50", "unit": 1522, "name": "Australia?", "top_words": "melbourne, australia, australian, sydney, adelaide"},
                 {"model": "rn50", "unit":  288, "name": "Europe", "top_words": "european, europe, people, euro, eu"},
                 {"model": "rn50", "unit": 1068, "name": "Germany?", "top_words": "deutsche, deutschland, liechtenstein, deutsch, volkswagen"},
                 {"model": "rn50", "unit": 2042, "name": "UK?", "top_words": "glasgow, amsterdam, barcelona, deutsche, liechtenstein"},
                 {"model": "rn50", "unit":  608, "name": "China?", "top_words": "chinese, china, japanese, beijing, shanghai"},
                 {"model": "rn50", "unit": 1037, "name": "East Asia/Jpana?", "top_words": "hawaii, mitsubishi, tokyo, fujitsu, suzuki"},
-                {"model": "rn50", "unit": 1509, "name": "Mountain", "top_words": "mountain, mountains, mounting, mounts, mounted"},
+                {"model": "rn50", "unit": 1522, "name": "Australia?", "top_words": "melbourne, australia, australian, sydney, adelaide"},
             ]
         },
         {
@@ -213,7 +217,6 @@
                 {"model": "rn101", "unit": 1768, "name": "USA?", "top_words": "usa, americans, america, american, americas"},
                 {"model": "rn101", "unit": 1791, "name": "USA?", "top_words": "michigan, oregon, alabama, nebraska, iowa"},
                 {"model": "rn101", "unit": 417, "name": "USA?", "top_words": "minnesota, washington, metabolism, sacramento, wisconsin"},
-                {"model": "rn101", "unit": 1601, "name": "East Coast?", "top_words": "sms, massachusetts, connecticut, hampshire, scotia"},
                 {"model": "rn101", "unit": 1480, "name": "Canada?", "top_words": "vancouver, ontario, toronto, manitoba, ottawa"},
                 {"model": "rn101", "unit": 836, "name": "Britain?", "top_words": "britain, westminster, british, london, uk"},
                 {"model": "rn101", "unit": 369, "name": "Europe?", "top_words": "european, europe, brussels, euro, euros"},
@@ -272,7 +275,7 @@
         {"name": "countries", "description": "<b>Country name activations</b>: Countries colored by activations of neurons in response to rastered images of country names. Activations averaged over font sizes, max over word positions."}, 
         {"name": "cities", "description": "<b>City name activations</b>: Cities colored by activations of neurons in response to rastered images of city names. Activations averaged over font sizes, max over word positions."}
     ]
-    let map_mode = "cities";
+    let map_mode = "geography";
 </script>
 
 
@@ -281,7 +284,7 @@
         display: grid;
         grid-template-columns: 
             [label label-major] minmax(80px, 200px) 
-            minmax(4px,16px) [label-major-line] 1px minmax(4px,16px) 
+            minmax(4px,16px) [label-major-line] 1px minmax(4px,8px) 
             [label-minor] 80px [label-end] 
             minmax(4px,16px)  
             [map-start title-start caption-start] 
@@ -289,12 +292,12 @@
                 repeat( var(--num-neurons), [neuron] 100px )
             [map-end title-end caption-end];
         grid-template-rows: 
-            [title] auto [map] auto 4px 
-            [color] auto 4px [top-words] auto 4px
+            [title] auto [map] auto 16px 
+            [neuron-title] auto 4px [color] auto 4px [top-words] auto 4px
             [facets-start] 
                 repeat(4, [facet] auto) [overflow] auto 
             [facets-end] 
-            8px [caption] auto;
+            16px [caption] auto;
         grid-gap: 4px;
         width: fit-content;
         max-width: 100%;
@@ -347,12 +350,11 @@
         margin-right: 8px;
     } */
     .map-mode-option {
-        margin-top: 8px;
         border-radius: 2px;
         overflow: hidden;
         display: grid;
         grid-template-columns: 4px auto;
-        margin-top: 8px;
+        margin-bottom: 12px;
         grid-gap: 4px;
         cursor: pointer;
         border-radius: 4px;
@@ -363,8 +365,8 @@
     }
     .map-mode-option .figcaption {
         height: 100%;
-        width: calc(100% - 8px);
-        padding: 4px;
+        width: calc(100% - 16px);
+        padding: 8px;
     }
 
     .map-mode-option:not(.selected)                    { background: hsl(0, 0%, 96%); opacity: 0.4;}
@@ -379,21 +381,15 @@
     .map-mode-option.selected:hover                    { background: hsl(0, 0%, 90%);}
 </style>
 
-<div class='container' style='--num-neurons:{(neurons.length > 6)? neurons.length : 6};'>
+<div class='container' style='--num-neurons:{(neurons.length > 7)? neurons.length : 7};'>
 
     <!--<div style='grid-area: title'>Selected Regional Neurons on World Map</div>-->
 
+    <div style='grid-area: title; border-bottom: 1px solid #DDD; margin-bottom: 4px;'>
+        Geographical Activation of Region Neurons
+    </div>
+
     <div style='grid-column: label; grid-row: map; max-width: 340px;'>
-        <div class='figlabel'>Geographical Activations</div>
-        <!-- <select 
-        class='figcaption' 
-        bind:value={map_mode}
-    >
-        {#each map_modes as mode, i}
-        <option value={mode.name}>{mode.name}</option>
-        {/each}
-    </select> -->
-    <div style='margin-top: 16px;'>
     {#each map_modes as mode, i}
     <div class='map-mode-option {(map_mode==mode.name)? "selected" : ""}' on:click={() => {map_mode=mode.name;}}>
         <div class='option-line'></div>
@@ -401,10 +397,9 @@
     </div>
     {/each}
     </div>
-    </div>
 
 
-    <div style="grid-area: map; max-width: 620px;">
+    <div style="grid-area: map; max-width: 724px;">
         <Map 
             spatial_acts={(map_mode == "geography")? spatial_acts : null} 
             country_acts={(map_mode == "countries")? country_acts : null} 
@@ -412,6 +407,14 @@
             active_units_inds={neuron_indices}
             focus={(active!=null)? active : null} />
     </div>
+
+    <div style='grid-column: title; grid-row: neuron-title; border-bottom: 1px solid #DDD;'>
+        Selected Region Neurons
+    </div>
+
+    <!--<div style='grid-column: label; grid-row: color; line-height: 100%;'>
+        Color Key
+    </div>-->
 
     <div style='grid-column: label; grid-row: top-words; max-width: 340px;'>
         <div class='figlabel'>Most Activating Words</div>
@@ -436,7 +439,7 @@
     class="img-link"
     style="grid-column: neuron {neuron_i+1}; grid-row: top-words; {(active != undefined && active != neuron_i)? 'opacity: 0.25;' : ''}"
     on:mouseover={() => enter(neuron_i)} on:mouseout={leave} >
-    <div class='figcaption' style='background:#EEE; padding: 6px; border-radius: 2px;'>{top_words[neuron_indices[neuron_i]].slice(0,5).join(", ")}</div>
+    <div class='figcaption' style='background:#EEE; padding: 6px; border-radius: 2px;'>{(neuron_indices[neuron_i] != -1)? top_words[neuron_indices[neuron_i]].slice(0,5).join(", ") : ""}</div>
     
 </a>
     {/each}
@@ -467,15 +470,23 @@
     {/each}
 
     <div style='grid-area: caption;' class='figcaption'>
-        <a href='#' class='figure-anchor'>Figure N:</a> This diagram contextualizes region neurons with a map. It can show their response to an unlabeled geographical map, to country names, and to city names. In addition to the neurons shown by default, a variety of neurons are available from four different CLIP models: 
+        <a href='#' class='figure-anchor'>Figure N:</a> This diagram contextualizes region neurons with a map. It can show their response
+        to an <span class="pseudo-link" on:click={() => {map_mode = "geography";}}>unlabeled geographical map</span>,
+        to <span class="pseudo-link" on:click={() => {map_mode = "countries";}}>country names</span>,
+        and to <span class="pseudo-link" on:click={() => {map_mode = "cities";}}>city names</span>.
+
+        <br/> <br/>
+
+        In addition to the neurons shown by default, a variety of neurons are available from four different CLIP models: 
         <select class='figcaption' bind:value={selected_family} >
         {#each neuron_families as family, i}
         <option value={i}>{family.name}</option>
         {/each}
         </select>. We particularly recommend looking at the 
         "<span class="pseudo-link" on:click={() => {selected_family=1; active=null;}}>latitude neurons</span>"
+        (such as the "<span class="pseudo-link" on:click={() => {selected_family=1; active=0;}}>Northern Hemisphere</span>" neuron)
         and at 
-        "<span class="pseudo-link" on:click={() => {selected_family=2; active=null;}}>secondarily regional neurons</span>,"
+        "<span class="pseudo-link" on:click={() => {selected_family=2; active=null;}}>secondarily regional neurons</span>"
         (neurons which seem to be primarily about a concept we wouldn't typically conceptualize as geographic such as 
         "<span class="pseudo-link" on:click={() => {selected_family=2; active=1;}}>entrepeneurship</span>"
         or 

@@ -54,9 +54,9 @@
     function get_acts(acts, ind, active_units_inds, multiplier=1, focus=null) {
         if (acts == null) {return [0];}
         if (ind.length == 1) {
-            acts = active_units_inds.map(i =>  multiplier*acts.get(i, ind[0]) / 255.);
+            acts = active_units_inds.map(i =>  (i==-1)? 0 : multiplier*acts.get(i, ind[0]) / 255.);
         } else {
-            acts = active_units_inds.map(i =>  multiplier*acts.get(i, ind[0], ind[1]) / 255.);
+            acts = active_units_inds.map(i =>  (i==-1)? 0 : multiplier*acts.get(i, ind[0], ind[1]) / 255.);
         }
         if (focus != null) {
             acts = acts.map( (a,i) => (i==focus)? a : 0 );
