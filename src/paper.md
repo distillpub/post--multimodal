@@ -322,6 +322,10 @@ import InTheWild2 from './diagrams/InTheWild2.svelte'
 
 The model’s response to these adversarial images is reminiscent of the Stroop effect [] from psychology, in which participants become slower at naming the color of a stimulus if they’re naming the font color over an unrelated color word, as compared to simply naming the color of a colored square. We find there’s something similarly jarring to the experience of looking at these deliberately mislabeled objects, and just as humans are susceptible to the Stroop effect, CLIP is susceptible to these attacks.
 
+import StroopEffect from './diagrams/StroopEffect.svelte'
+
+<SvelteMargin component={StroopEffect} />
+
 While many classic adversarial attacks focus on making imperceptible changes to images [], typographic attacks are more similar to work such as adversarial patches [1] and physical adversarial examples [2]. Adversarial patches are stickers that can be placed on a real-life objects in order to cause neural nets to misclassify that object as something else – for example, a toaster. Physical adversarial examples are complete 3D objects that are reliably misclassified from all perspectives: previous work gives a 3D-printed turtle that is reliably misclassified as a rifle and a baseball that is misclassified as an espresso. However, typographic attacks are both weaker and stronger than these. On the one hand, they only work for models with multimodal neurons. On the other hand, once you understand this property of the models, they can be executed non-programmatically and as a black-box attack, available to any adversary -- including six year olds.
 
 
