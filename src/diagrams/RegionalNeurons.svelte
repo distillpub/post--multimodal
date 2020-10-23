@@ -267,8 +267,12 @@
     function leave(){
         active_unsetter = setTimeout(() => {active=undefined;}, 50)
     }
-    const map_modes = ["geography", "countries", "cities"]
-    let map_mode = "geography";
+    const map_modes = [
+        {"name": "geography", "description": "<b>Unlabeled map activations</b>: Spatial activations of neurons in response to unlabeled geographical world map. Activations averaged over random crops."},
+        {"name": "countries", "description": "<b>Country name activations</b>: Countries colored by activations of neurons in response to rastered images of country names. Activations averaged over font sizes, max over word positions."}, 
+        {"name": "cities", "description": "<b>City name activations</b>: Cities colored by activations of neurons in response to rastered images of city names. Activations averaged over font sizes, max over word positions."}
+    ]
+    let map_mode = "cities";
 </script>
 
 
@@ -322,35 +326,85 @@
         border: none;
         display: inherit;
     }
+    .pseudo-link {
+        cursor: pointer;
+        text-decoration: underline;
+    }
     select {
         border-radius: 2px; border: 1px solid #AAA;
     }
     .figlabel {
         line-height: 130%; margin-bottom: 8px;
     }
+    /* .map-mode-option.active::before {
+        width: 6px;
+        height: 6px;
+        border-radius: 4px;
+        border: 2px solid hsla(40, 0%, 60%, 1.0);
+        display: inline-block;
+        content: "";
+        background: hsla(40, 100%, 60%, 1.0);
+        margin-right: 8px;
+    } */
+    .map-mode-option {
+        margin-top: 8px;
+        border-radius: 2px;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 4px auto;
+        margin-top: 8px;
+        grid-gap: 4px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    .map-mode-option .option-line {
+        height: 100%;
+        width: 100%;
+    }
+    .map-mode-option .figcaption {
+        height: 100%;
+        width: calc(100% - 8px);
+        padding: 4px;
+    }
+
+    .map-mode-option:not(.selected)                    { background: hsl(0, 0%, 96%); opacity: 0.4;}
+    .map-mode-option:not(.selected) .option-line       { background: hsl(0, 0%, 80%); }
+
+    .map-mode-option.selected                          { background: #EEE; }
+    .map-mode-option.selected .option-line             { background: hsl(0, 0%,  0%);}
+
+    .map-mode-option:not(.selected):hover              { opacity: 1.0;}
+    .map-mode-option:not(.selected):hover .option-line { background: hsl(0, 0%, 70%); }
+
+    .map-mode-option.selected:hover                    { background: hsl(0, 0%, 90%);}
 </style>
 
-<div class='container' style='--num-neurons:{(neurons.length > 4)? neurons.length : 4};'>
+<div class='container' style='--num-neurons:{(neurons.length > 6)? neurons.length : 6};'>
 
     <!--<div style='grid-area: title'>Selected Regional Neurons on World Map</div>-->
 
-    <div style='grid-column: label; grid-row: map; max-width: 300px;'>
-        <div class='figlabel'>World Map Activations</div>
-        <div class='figcaption'>
-            Activations of neurons in response to unlabeled world map. Activations averaged over random crops.
-        </div>
-        <select 
+    <div style='grid-column: label; grid-row: map; max-width: 340px;'>
+        <div class='figlabel'>Geographical Activations</div>
+        <!-- <select 
         class='figcaption' 
         bind:value={map_mode}
     >
         {#each map_modes as mode, i}
-        <option value={mode}>{mode}</option>
+        <option value={mode.name}>{mode.name}</option>
         {/each}
-    </select>
+    </select> -->
+    <div style='margin-top: 16px;'>
+    {#each map_modes as mode, i}
+    <div class='map-mode-option {(map_mode==mode.name)? "selected" : ""}' on:click={() => {map_mode=mode.name;}}>
+        <div class='option-line'></div>
+        <div class='figcaption'>{@html mode.description}</div>
+    </div>
+    {/each}
+    </div>
     </div>
 
 
-    <div style="grid-area: map; max-width: 1000px;">
+    <div style="grid-area: map; max-width: 620px;">
         <Map 
             spatial_acts={(map_mode == "geography")? spatial_acts : null} 
             country_acts={(map_mode == "countries")? country_acts : null} 
@@ -359,7 +413,7 @@
             focus={(active!=null)? active : null} />
     </div>
 
-    <div style='grid-column: label; grid-row: top-words; max-width: 300px;'>
+    <div style='grid-column: label; grid-row: top-words; max-width: 340px;'>
         <div class='figlabel'>Most Activating Words</div>
         <div class='figcaption'>
             Words which most activate these neurons when rastered into images, out of 10,000 most common English words.
@@ -398,6 +452,7 @@
     <div style="grid-column: label-major; grid-row: facets;" >
         <div class='figlabel'>Faceted Feature Visualizations</div>
         <div class='figcaption'>Regional neurons respond to many different kinds of images related to their region. Faceted feature visualiziation allow us to see some of this diversity.</div>
+        <div class='figcaption' style='margin-top: 8px;'>Hover on a neuron to isolate acitvations. Click to open in Microscope.</div>
         <!-- by creating stimuli that activate a given neuron <em>through a specified set of lower-level neurons</em> associated with a facet.-->
         <br>
         <!--<NeuronCardInfo fv={true} ds={false} /> -->
@@ -412,20 +467,20 @@
     {/each}
 
     <div style='grid-area: caption;' class='figcaption'>
-        <a href='#' class='figure-anchor'>Figure N:</a>
-
-        <br><br>
-        Displayed "neurons": <select 
-        class='figcaption' 
-        bind:value={selected_family}
-    >
+        <a href='#' class='figure-anchor'>Figure N:</a> This diagram contextualizes region neurons with a map. It can show their response to an unlabeled geographical map, to country names, and to city names. In addition to the neurons shown by default, a variety of neurons are available from four different CLIP models: 
+        <select class='figcaption' bind:value={selected_family} >
         {#each neuron_families as family, i}
         <option value={i}>{family.name}</option>
         {/each}
-    </select>
+        </select>. We particularly recommend looking at the 
+        "<span class="pseudo-link" on:click={() => {selected_family=1; active=null;}}>latitude neurons</span>"
+        and at 
+        "<span class="pseudo-link" on:click={() => {selected_family=2; active=null;}}>secondarily regional neurons</span>,"
+        (neurons which seem to be primarily about a concept we wouldn't typically conceptualize as geographic such as 
+        "<span class="pseudo-link" on:click={() => {selected_family=2; active=1;}}>entrepeneurship</span>"
+        or 
+        "<span class="pseudo-link" on:click={() => {selected_family=2; active=6;}}>terrorism</span>").
     </div>
-
-    <!-- <Map /> -->
 </div>
 
 
