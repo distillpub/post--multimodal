@@ -1,77 +1,77 @@
+<script>
+import NeuronCard from '../components/NeuronCard.svelte';
+</script>
 <style>
-  .reading-container {
+  .neuron-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
-  }
-  .reading-neuron-feature-viz {
-    border-radius: 5px;
-    width: 135px;
-  }
-  .reading-neuron-dataset-example {
-    margin: 0px;
-    width: 65px;
-    height: 65px;
-    border: 1px solid #888;
-  }
-  .reading-neuron-dataset-examples {
-    display: grid;
-    grid-template-rows: repeat(2);
-    grid-template-columns: repeat(2);
-    grid-gap: 2px;
     margin-bottom: 10px;
     margin-top: 6px;
   }
-  .reading-neuron {
-    width: 30%;
-    margin-left: 20px;
+  .neuron-feature-viz {
+    margin-right: 5px;
+  }
+  .dataset-example {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #888;
+  }
+  .dataset-examples {
+    display: grid;
+    grid-template-rows: repeat(2);
+    grid-template-columns: repeat(2);
+    grid-gap: 5px;
+  }
+  .neuron-description {
+    max-width: 200px;
   }
 </style>
-<div class="reading-container">
-  <div class="reading-neuron">
-    <a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x/image_block_4_5_Add_6_0/1330" style="border: none;"><img class="reading-neuron-feature-viz" src="typographic/RN50-4x-channel-1330.png" alt=""/></a>
-    <div class="reading-neuron-dataset-examples">
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1330-dataset-1.png" alt="" style="grid-row: 1; grid-column: 1;"/>
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1330-dataset-2.png" alt="" style="grid-row: 1; grid-column: 2;"/>
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1330-dataset-3.png" alt="" style="grid-row: 2; grid-column: 1;"/>
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1330-dataset-4.png" alt="" style="grid-row: 2; grid-column: 2;"/>
-    </div>
+<div class="neuron-container">
+  <div class="neuron-feature-viz">
+    <NeuronCard neuron={{model: "4x", unit: "1330", layer: "image_block_4_5_Add_6_0"}} facets={["any"]} ds={false} />
+  </div>
+  <div class="dataset-examples">
+    <img class="dataset-example" src="typographic/RN50-4x-1330-dataset-1.png" alt="" style="grid-row: 1; grid-column: 1;"/>
+    <img class="dataset-example" src="typographic/RN50-4x-1330-dataset-2.png" alt="" style="grid-row: 1; grid-column: 2;"/>
+    <img class="dataset-example" src="typographic/RN50-4x-1330-dataset-3.png" alt="" style="grid-row: 2; grid-column: 1;"/>
+    <img class="dataset-example" src="typographic/RN50-4x-1330-dataset-4.png" alt="" style="grid-row: 2; grid-column: 2;"/>
   </div>
 </div>
-<div class="figcaption" style="max-width: 160px; margin-left: 20px;">
+<div class="figcaption neuron-description">
   <p>
     A neuron responding to images of piggy banks also responds to texts like <i>price</i> and <i>cheap</i>, as well as numerical prices prefixed with <i>$</i>.
   </p>
 </div>
-<div class="reading-container">
-  <div class="reading-neuron">
-    <a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x/image_block_4_5_Add_6_0/1450" style="border: none;"><img class="reading-neuron-feature-viz" src="typographic/RN50-4x-channel-1450.png" alt=""/></a>
-    <div class="reading-neuron-dataset-examples">
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1450-dataset-1.png" alt="" style="grid-row: 1; grid-column: 1;"/>
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1450-dataset-2.png" alt="" style="grid-row: 1; grid-column: 2;"/>
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1450-dataset-3.png" alt="" style="grid-row: 2; grid-column: 1;"/>
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1450-dataset-4.png" alt="" style="grid-row: 2; grid-column: 2;"/>
-    </div>
+<div class="neuron-container">
+  <div class="neuron-feature-viz">
+    <NeuronCard neuron={{model: "4x", unit: "1450", layer: "image_block_4_5_Add_6_0"}} facets={["any"]} ds={false} />
+  </div>
+  <div class="dataset-examples">
+    <img class="dataset-example" src="typographic/RN50-4x-1450-dataset-1.png" alt="" style="grid-row: 1; grid-column: 1;"/>
+    <img class="dataset-example" src="typographic/RN50-4x-1450-dataset-2.png" alt="" style="grid-row: 1; grid-column: 2;"/>
+    <img class="dataset-example" src="typographic/RN50-4x-1450-dataset-3.png" alt="" style="grid-row: 2; grid-column: 1;"/>
+    <img class="dataset-example" src="typographic/RN50-4x-1450-dataset-4.png" alt="" style="grid-row: 2; grid-column: 2;"/>
   </div>
 </div>
-<div class="figcaption" style="max-width: 160px; margin-left: 20px;">
+<div class="figcaption neuron-description">
   <p>
-    A neuron responding to the words <i>iPod, iOS,</i> and <i>iPhone</i> as well as images of Apple products and the Apple logo.
+    A neuron responding to the words <i>iPod, iOS,</i> and <i>iPhone</i> as well as images of apples, Apple products, and the Apple logo.
   </p>
 </div>
-<div class="reading-container">
-  <div class="reading-neuron">
-    <a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x/image_block_4_5_Add_6_0/1156" style="border: none;"><img class="reading-neuron-feature-viz" src="typographic/RN50-4x-channel-1156.png" alt=""/></a>
-    <div class="reading-neuron-dataset-examples">
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1156-dataset-1.png" alt="" style="grid-row: 1; grid-column: 1;"/>
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1156-dataset-2.png" alt="" style="grid-row: 1; grid-column: 2;"/>
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1156-dataset-3.png" alt="" style="grid-row: 2; grid-column: 1;"/>
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1156-dataset-4.png" alt="" style="grid-row: 2; grid-column: 2;"/>
-    </div>
+<div class="neuron-container">
+  <div class="neuron-feature-viz">
+    <NeuronCard neuron={{model: "4x", unit: "1156", layer: "image_block_4_5_Add_6_0"}} facets={["indoor"]} ds={false} />
+  </div>
+  <div class="dataset-examples">
+    <img class="dataset-example" src="typographic/RN50-4x-1156-dataset-1.png" alt="" style="grid-row: 1; grid-column: 1;"/>
+    <img class="dataset-example" src="typographic/RN50-4x-1156-dataset-2.png" alt="" style="grid-row: 1; grid-column: 2;"/>
+    <img class="dataset-example" src="typographic/RN50-4x-1156-dataset-3.png" alt="" style="grid-row: 2; grid-column: 1;"/>
+    <img class="dataset-example" src="typographic/RN50-4x-1156-dataset-4.png" alt="" style="grid-row: 2; grid-column: 2;"/>
   </div>
 </div>
-<div class="figcaption" style="max-width: 160px; margin-left: 20px;">
+<div class="figcaption neuron-description">
   <p>
     A neuron responding to the words <i>trash, waste,</i> and <i>garbage</i> as well as images of garbage cans, recycling cans, and large necklaces.
-  </p>˜
+  </p>
 </div>
