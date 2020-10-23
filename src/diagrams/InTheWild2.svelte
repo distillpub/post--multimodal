@@ -1,3 +1,9 @@
+<!-- Potential todos
+  - Line underneath entire diagram to break up the vertical line
+    (Row labeled 'line', div that fills the entire area)
+  - Line under overall title for full figure (in addition OR instead)
+-->
+
 <style>
   .figure-anchor {
       font-weight: bold;
@@ -146,21 +152,34 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
           </div>
         {/each}
       {/each}
-      <div class="figcaption" style="grid-area: caption-left; max-width: 500px;">
+      <div class="figcaption" style="grid-area: caption-left; max-width: 550px;">
+        <p>
+          <a class="figure-anchor" href="#in-the-wild-1">Figure N:</a>
+          Physical typographic attacks.
+
+          Above we see the CLIP RN50-4x model's classifications of objects labeled with incorrect ImageNet classes. Each row corresponds to an object, and each column corresponds to a labeling. Some attacks are more effective than others, and some objects are more resilient to attack.
+        </p>
         <p>
           {#if showHidden}
-            <button on:click={hide} class="clickable-toggle">
+            <button on:click={hide} class="clickable-toggle figcaption">
               Collapse more examples
             </button>
           {:else}
-            <button on:click={show} class="clickable-toggle">
+            <button on:click={show} class="clickable-toggle figcaption">
               Expand more examples
             </button>
           {/if}
         </p>
+      </div>
+      <div class="figcaption" style="grid-area: caption-right; max-width: 550px;">
         <p>
-          Methodology:
-          <select bind:value={selectedStatistics}>
+          Recall that there are two ways to use CLIP for ImageNet classification: zero-shot and linear probes.
+
+          For this style of attack, we observe that the zero-shot methodology is somewhat consistently effective, but that the linear probes methodology is ineffective. Later on, we show an attack style that also works against the linear probes methodology. See statistics <a href="#automated-attacks-figure">below</a>.
+        </p>
+        <p>
+          Displayed ImageNet classification method:
+          <select bind:value={selectedStatistics} class="figcaption">
             <option value="zero_shot_statistics">
               Zero-shot
             </option>
@@ -169,21 +188,12 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
             </option>
           </select>
         </p>
-        <p>
-          In the <b>zero-shot</b> methodology, we convert the CLIP RN50-4x model to an ImageNet classifier by calculating probabilities on the completion “a photo of a ___” for each ImageNet class.
+        <!-- <p>
+          In the <b>zero-shot</b> methodology, we convert the model to an ImageNet classifier by calculating probabilities on the completion “a photo of a ___” for each ImageNet class.
         </p>
         <p>
           In the <b>linear probes</b> methodology, we use the ImageNet training set to train a linear regression on the last layer of activations, then apply that linear regression in order to convert the model into an ImageNet converter.<d-footnote>One could also fine-tune the model on ImageNet; we do not include that methodology because there is a substantial amount of degrees of freedom in how far to fine-tine, and because even ignoring that we found that the fine-tuned model did not perform substantially better on ImageNet at baseline than the linear probes methodology does.</d-footnote>
-        </p>
-      </div>
-      <div class="figcaption" style="grid-area: caption-right; max-width: 500px;">
-        <p>
-          <a class="figure-anchor" href="#in-the-wild-1">Figure N:</a>
-          Physical typographic attacks.
-        </p>
-        <p>
-          For this style of attack, we observe that the zero-shot methodology is somewhat consistently effective, but that the linear probes methodology is ineffective. Later on, we show an attack style that also works against the linear probes methodology. See statistics below.
-        </p>
+        </p> -->
       </div>
     </div>
   </div>
