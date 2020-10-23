@@ -8,32 +8,34 @@ import PaperText from './paper.md'
 import HelloSvelte from './diagrams/helloWorld.svelte'
 
 const Paper = <React.Fragment>
-    <d-contents>
+    <d-contents id="introduction">
       <nav class="toc figcaption">
         <h4>Contents</h4>
-        {false && <div><a href="#introduction">Introduction</a></div>}
-        <div><a href="#">Introduction</a></div>
-        <div><a href="#">Into the Multimodal Mind</a></div>
+        <div><a href="#introduction">Introduction</a></div>
+        <div><a href="#guided-tour-of-neuron-families">A Guided Tour of Neuron Families</a></div>
         <ul>
-          <li><a href="#">Identity Recognition</a></li>
-          <li><a href="#">Regional Neurons</a></li>
-          <li><a href="#">Emotion Neurons</a></li>
+          <li><a href="#person-neurons">Person Neurons</a></li>
+          <li><a href="#emotion-neurons">Emotion Neurons</a></li>
+          <li><a href="#region-neurons">Region Neurons</a></li>
           <li><a href="#miscellaneous-neurons">Miscellaneous Neurons</a></li>
+          <li><a href="#feature-properties">Feature Properties</a></li>
         </ul>
-        <div><a href="#">Using Abstractions</a></div>
+        <div><a href="#using-abstractions">Using Abstractions</a></div>
         <ul>
-          <li><a href="#">Understanding language</a></li>
-          <li><a href="#">Emotional Intelligence</a></li>
+          <li><a href="#imagenet-challenge">The Imagenet Challenge</a></li>
+          <li><a href="#understanding-language">Understanding Language</a></li>
+          <li><a href="#emotional-intelligence">Emotional Intelligence</a></li>
         </ul>
-        <div><a href="#">Typographic Attacks</a></div>
-        <div><a href="#">The Mechanics of Abstraction</a></div>
+        <div><a href="#typographic-attacks">Typographic Attacks</a></div>
         <ul>
-          <li><a href="#">Universal Features and Circuits</a></li>
-          <li><a href="#">Task-specific Features</a></li>
-          <li><a href="#">The Mechanics of Abstraction</a></li>
+          <li><a href="#physical-typographic-attacks">Physical Typographic Attacks</a></li>
+          <li><a href="#automated-typographic-attacks">Automated Typographic Attacks</a></li>
+          <li><a href="#emotional-intelligence">Emotional Intelligence</a></li>
         </ul>
-        <div><a href="#">Conclusion</a></div>
-        <div><a href="#">Appendix: Methodological Details</a></div>
+        <div><a href="#appendix">Appendix 1: Methodological Details</a></div>
+        <ul>
+          <li><a href="#faceted-feature-visualization">Faceted Feature Visualization</a></li>
+        </ul>
       </nav>
       <div class="toc-line"></div>
     </d-contents>
