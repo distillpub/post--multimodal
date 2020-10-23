@@ -24,16 +24,6 @@ let attack_ordering = [
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>
-          <b>Baseline ImageNet classification accuracy</b>
-        </td>
-        <td></td>
-        <td></td>
-        <td>
-          <b>{ Math.round(small_attacks.linear_probes.baseline_accuracy * 10000)/100 }%</b>
-        </td>
-      </tr>
       {#each attack_ordering as [target_class, attack_text]}
         <tr>
           <td><code>{ target_class }</code></td>
@@ -47,19 +37,20 @@ let attack_ordering = [
 
   <div class="figcaption">
     <p>
-      <a class="figure-anchor" href="#automated-attacks">Figure N:</a> n={ Math.round(small_attacks.n) }. Probabilities collected from <a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x?models.technique=deep_dream">RN50-4x</a>.
+      <a class="figure-anchor" href="#automated-attacks">Figure N:</a> Probabilities were collected from <a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x?models.technique=deep_dream">CLIP 4x</a>.
+
+      <b>Pixel cover</b> measures the attack's impact on the original image: the average percentage of pixels that were changed by any amount (an L0-norm) in order to add the attack.
+
+      <b>Success rate</b> is measured over {Math.round(small_attacks.n)} ImageNet validation images with an attack considered to have succeeded if the attack class is the most likely. We do not consider an attack to have succeeded if the attack-free image was already classified as the attack class.
+
+      For reference, {Math.round(small_attacks.linear_probes.baseline_accuracy * 10000)/100 }% of images were classified correctly before the addition of any attacks.
     </p>
 
-    <p><b>Baseline ImageNet classification accuracy</b> measures the percent of images that were classified correctly before the addition of any attacks.
-    </p>
-
-    <p><b>Pixel cover</b> measures the attack's impact on the original image: the average percentage of pixels that were changed by any amount (L0-norm) in order to add the attack.</p>
-
-    <p>
+    <!-- <p>
       In the <b>linear probes</b> methodology, we use the ImageNet training set to optimize a matrix of weights to apply to activations taken from the vision model in order to convert those activations into ImageNet predictions.
       <d-footnote>We did not test these adversarial attacks against a fine-tuned model, because we did not find that a fine-tuned model performed substantially better at baseline on ImageNet classification than the linear probes methodology did. Furthermore, fine-tuning performance on this task could depend on how long the model is trained or other factors.
       </d-footnote>
-    </p>
+    </p> -->
     <!-- <p>In the <b>zero-shot</b> methodology, we convert the multimodal model to an ImageNet classifier by calculating probabilities on the completion “a photo of a ___” for each ImageNet class.</p> -->
   </div>
 </div>
