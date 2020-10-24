@@ -1,3 +1,19 @@
+div[for] {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: hsla(40, 70%, 50%, 0.2);
+  border: 1px solid hsla(40, 70%, 50%, 0.4);
+  font-size: 70%;
+  padding: 8px;
+  line-height: 130%;
+  border-radius: 4px;
+  width: fit-content;
+}
+div[for][value]::before {
+  content: "TODO(" attr(for) ", " attr(value) "): ";
+  font-weight: bold;
+}
+
 .subgrid {
   grid-column: screen;
   display: grid;
@@ -206,4 +222,12 @@ d-contents nav > div > a {
 d-contents nav > div > a:hover,
 d-contents nav > ul > li > a:hover {
   text-decoration: none;
+}
+
+d-article h2 {
+  border-bottom: none !important;
+}
+
+d-article h3 {
+  font-size: 24px !important;
 }

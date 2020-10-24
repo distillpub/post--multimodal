@@ -5,28 +5,44 @@ import NeuronCard from '../components/NeuronCard.svelte';
   .neuron-container {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    margin-bottom: 10px;
-    margin-top: 6px;
-  }
-  .neuron-feature-viz {
-    margin-right: 5px;
-  }
-  .dataset-example {
-    width: 45px;
-    height: 45px;
-    border: 1px solid #888;
-  }
-  .dataset-examples {
-    display: grid;
-    grid-template-rows: repeat(2);
-    grid-template-columns: repeat(2);
-    grid-gap: 5px;
+    width: fit-content;
+    margin-bottom: 4px;
+    gap: 4px;
   }
   .neuron-description {
     max-width: 200px;
   }
+  .outer-neuron-container {
+    margin-bottom: 10px;
+  }
+  @media only screen and (min-width: 1500px) {
+    .outer-neuron-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      gap: 8px;
+    }
+    .neuron-description {
+      max-width: 150px;
+    }
+  }
+  .dataset-example {
+    width: 100%;
+    background: #CCC;
+  }
+  .dataset-examples {
+    display: grid;
+    grid-template-rows: repeat(2, atuo);
+    grid-template-columns: repeat(2, auto);
+    width: 100px;
+    grid-gap: 1px;
+    border-radius: 8px;
+    border: 1px solid #AAA;
+    background: #AAA;
+    overflow: hidden;
+  }
 </style>
+<div class="outer-neuron-container">
 <div class="neuron-container">
   <div class="neuron-feature-viz">
     <NeuronCard neuron={{model: "4x", unit: "1330", layer: "image_block_4_5_Add_6_0"}} facets={["any"]} ds={false} />
@@ -40,10 +56,13 @@ import NeuronCard from '../components/NeuronCard.svelte';
 </div>
 <div class="figcaption neuron-description">
   <p>
-    A neuron responding to images of piggy banks also responds to texts like <i>price</i> and <i>cheap</i>, as well as numerical prices prefixed with <i>$</i>.
+    Neuron responding to piggy banks also responds to "price", "cheap", and "$".
   </p>
 </div>
-<div class="neuron-container">
+</div>
+
+<!--<div class="outer-neuron-container">
+  <div class="neuron-container">
   <div class="neuron-feature-viz">
     <NeuronCard neuron={{model: "4x", unit: "1450", layer: "image_block_4_5_Add_6_0"}} facets={["any"]} ds={false} />
   </div>
@@ -56,9 +75,12 @@ import NeuronCard from '../components/NeuronCard.svelte';
 </div>
 <div class="figcaption neuron-description">
   <p>
-    A neuron responding to the words <i>iPod, iOS,</i> and <i>iPhone</i> as well as images of apples, Apple products, and the Apple logo.
+    A neuron responding to "iPod", "iOS", and "iPhone" as well as apples, Apple products, and the Apple logo.
   </p>
 </div>
+</div>-->
+
+<div class="outer-neuron-container">
 <div class="neuron-container">
   <div class="neuron-feature-viz">
     <NeuronCard neuron={{model: "4x", unit: "1156", layer: "image_block_4_5_Add_6_0"}} facets={["indoor"]} ds={false} />
@@ -72,6 +94,7 @@ import NeuronCard from '../components/NeuronCard.svelte';
 </div>
 <div class="figcaption neuron-description">
   <p>
-    A neuron responding to the words <i>trash, waste,</i> and <i>garbage</i> as well as images of garbage cans, recycling cans, and large necklaces.
+    Neuron responding to waste containers (and necklaces) aso responds to "trash", "waste", and "gargabe."
   </p>
+</div>
 </div>
