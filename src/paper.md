@@ -158,75 +158,60 @@ In addition to these regional neurons, we find that many other neurons seem to b
 Miscellaneous Neurons
 </h3>
 
-<Todo for="Chelsea" value={9}>Put in todos here.</Todo>
-<Todo for="Chelsea" value={7}>Reduce to max of one facet per neuron</Todo>
-<Todo for="Chelsea" value={5}>Edit text describing each neuron family to be short</Todo>
-
 **Person trait neurons.** These neurons detect gender presentation<d-footnote>By this, we mean that it both responds to people presenting as this gender, as well as concepts associated with that gender.</d-footnote> and age, as well as facial features like moustaches. (Ethnicity tends to be represented by regional neurons.)
 
-Neurons to include here:
-- 4x 839 "elderly"
-- 4x 2231 "teenage"
-- RN101 942 "baby"
-- 4x 2518 "female"
-- 4x 320 "male"
-- 4x 92 "mustache"
-- RN101 1471 "hoodie"
+import PersonTraitNeurons from './diagrams/PersonTraitNeurons.svelte'
 
-**Image type neurons.** These neurons detect different ways an image might be drawn, rendered, or photographed.
+<Svelte component={PersonTraitNeurons} container={<div />} />
 
-Neurons to include here:
-- RN101 ???: math and molecule diagrams
-- 4x 1308: "selfie"
-- RN101 321: cartoon character
-- RN101 1717: child's drawing
-- RN101 2012: professional headshot
-- RN101 691: professional portrait
-- RN101 463: screenshot from an FPS game
+**Image type neurons.** These neurons detect different ways in which an image might be drawn, rendered, or photographed, or different contexts in which an image might occur.
+
+import ImageTypeNeurons from './diagrams/ImageTypeNeurons.svelte'
+
+<Svelte component={ImageTypeNeurons} container={<div />} />
 
 **Image feature neurons.** These neurons detect extraneous features that a photo might contain: photobombs and bunny ears, the heads of people seated in front of you at a lecture, Photoshopped modifications, and more.
 Feature visualization shown along with logo, face, and text facets.
-[[Fix the ‘Seated at lecture’ facet and cut the height down to 1 viz per neuron here]]
 
-- 4x 1640: altered image
-- 4x 127: seated at a lecture
-- 4x 2272 and RN101 2038: bunny ears
-- RN101 848: person facing away from you
-- RN101 1801: the camera in a camera mirror selfie
+import ImageFeatureNeurons from './diagrams/ImageFeatureNeurons.svelte'
+
+<Svelte component={ImageFeatureNeurons} container={<div />} />
 
 **Counting neurons.** These neurons detect duplicates of the same person or thing, and can distinguish them by their count. For example, the "trios" neuron might fire for a trio of friends taking a photo together, whereas the "pairs or fours" neuron might fire for pairs of shoes, pairs of cookies, and pairs of people.
-[[Dataset examples are really compelling here]]
-[[Section could be improved by removing the rows and columns and just taking the Greatest Hits]]
 
-Neurons to include here:
-- 4x 17: trios
-- 4x 202: pairs or fours
-- 4x 310: many
+import CountingNeurons from './diagrams/CountingNeurons.svelte'
+
+<Svelte component={CountingNeurons} container={<div />} />
 
 **Holiday neurons.** These neurons recognize the names, decorations, and traditional trappings around various holidays.
-[[First do simple thing of adding dense rows –– possibly introduce some captions to call out some of the more interesting things here, e.g. the face facets]]
-[[Maybe if more time, Figmaize]]
 
-- 4x 2439: halloween
-- 4x 776: birthday
-- 4x 1326 and RN101 865: christmas
-- 4x 1204: easter
+import HolidayNeurons from './diagrams/HolidayNeurons.svelte'
 
-**Fiction neurons.** These neurons represent characters and concepts from within a particular fictional universe.
+<Svelte component={HolidayNeurons} container={<div />} />
 
-- 4x 924: pokemon
-- ???: harry potter
-- ???: Avengers
+**Fictional universe neurons.** These neurons represent characters and concepts from within a particular fictional universe.
+
+import FictionalUniverseNeurons from './diagrams/FictionalUniverseNeurons.svelte'
+
+<Svelte component={FictionalUniverseNeurons} container={<div />} />
+
+**Brand neurons.** As with person identity recognition, these neurons recognize brand identities.
+
+import BrandNeurons from './diagrams/BrandNeurons.svelte'
+
+<Svelte component={BrandNeurons} container={<div />} />
 
 **Typographic neurons.** Surprisingly, despite being able to “read” words and map them to semantic features, the model keeps a handful of more typographic features in its high-level representations. Like a child spelling out a word they don’t know, we suspect these neurons help the model represent text it can’t fully read.
 
-- 4x 2504: un-
-- 4x 656: con-
-- 4x 444: -oo-
-- 4x 2524: -ing
-- 4x 399: j-
+import TypographicNeurons from './diagrams/TypographicNeurons.svelte'
 
+<Svelte component={TypographicNeurons} container={<div />} />
 
+**Abstract concept neurons.** Many of the neurons in the model are responsible for recognizing an incredible diversity of abstract concepts that cannot be cleanly classified into the above categories.
+
+import AbstractConceptNeurons from './diagrams/AbstractConceptNeurons.svelte'
+
+<Svelte component={AbstractConceptNeurons} container={<div />} />
 
 <h3 id="feature-properties">
 Feature properties
@@ -393,9 +378,6 @@ As we’ve seen, CLIP is full of multimodal neurons which respond to both images
 <h3 id="physical-typographic-attacks">
 Physical Typographic Attacks
 </h3>
-
-<Todo for="Chelsea" value={6}>Insert proper backlink into the “discussed earlier” link, below</Todo>
-<Todo for="Chelsea" value={6}>Add IDs to all headers to facilitate the above, and also to link the ToC up.</Todo>
 
 To test this hypothesis, we took several common items and deliberately mislabeled them. We then observed how this affects ImageNet classifications (discussed <a>earlier</a>). These attacks often change the image’s classification.
 
