@@ -34,7 +34,7 @@
     {
       model: "4x",
       unit: 1820,
-      title: "LGBT pride",
+      title: "LGBTQ+",
       facets: ["face"],
     },
     {
