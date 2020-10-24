@@ -158,7 +158,7 @@ In addition to these regional neurons, we find that many other neurons seem to b
 Miscellaneous Neurons
 </h3>
 
-**Person trait neurons.** These neurons detect gender presentation<d-footnote>By this, we mean that it both responds to people presenting as this gender, as well as concepts associated with that gender.</d-footnote> and age, as well as facial features like moustaches. (Ethnicity tends to be represented by regional neurons.)
+**Person trait neurons.** These neurons detect gender<d-footnote>By this, we mean both that it responds to people presenting as this gender, as well as that it responds to concepts associated with that gender.</d-footnote> and age, as well as facial features like moustaches. (Ethnicity tends to be represented by regional neurons.)
 
 import PersonTraitNeurons from './diagrams/PersonTraitNeurons.svelte'
 
@@ -170,32 +170,31 @@ import ImageTypeNeurons from './diagrams/ImageTypeNeurons.svelte'
 
 <Svelte component={ImageTypeNeurons} container={<div />} />
 
-**Image feature neurons.** These neurons detect extraneous features that a photo might contain: photobombs and bunny ears, the heads of people seated in front of you at a lecture, Photoshopped modifications, and more.
-Feature visualization shown along with logo, face, and text facets.
+**Image feature neurons.** These neurons detect extra features that a photo might contain, such as photobombs and bunny ears, that aren't even necessarily part of the image's core setting.
 
 import ImageFeatureNeurons from './diagrams/ImageFeatureNeurons.svelte'
 
 <Svelte component={ImageFeatureNeurons} container={<div />} />
 
-**Counting neurons.** These neurons detect duplicates of the same person or thing, and can distinguish them by their count. For example, the "trios" neuron might fire for a trio of friends taking a photo together, whereas the "pairs or fours" neuron might fire for pairs of shoes, pairs of cookies, and pairs of people.
+**Counting neurons.** These neurons detect duplicates of the same person or thing, and can distinguish them by their count.
 
 import CountingNeurons from './diagrams/CountingNeurons.svelte'
 
 <Svelte component={CountingNeurons} container={<div />} />
 
-**Holiday neurons.** These neurons recognize the names, decorations, and traditional trappings around various holidays.
+**Holiday neurons.** These neurons recognize the names, decorations, and traditional trappings around a holiday.
 
 import HolidayNeurons from './diagrams/HolidayNeurons.svelte'
 
 <Svelte component={HolidayNeurons} container={<div />} />
 
-**Fictional universe neurons.** These neurons represent characters and concepts from within a particular fictional universe.
+**Fictional universe neurons.** These neurons represent characters and concepts from within particular fictional universes.
 
 import FictionalUniverseNeurons from './diagrams/FictionalUniverseNeurons.svelte'
 
 <Svelte component={FictionalUniverseNeurons} container={<div />} />
 
-**Brand neurons.** As with person identity recognition, these neurons recognize brand identities.
+**Brand neurons.** Like the neurons that recognize the identities of people, these neurons recognize brand identities.
 
 import BrandNeurons from './diagrams/BrandNeurons.svelte'
 
@@ -207,7 +206,7 @@ import TypographicNeurons from './diagrams/TypographicNeurons.svelte'
 
 <Svelte component={TypographicNeurons} container={<div />} />
 
-**Abstract concept neurons.** Many of the neurons in the model are responsible for recognizing an incredible diversity of abstract concepts that cannot be cleanly classified into the above categories.
+**Abstract concept neurons.** Finally, many of the neurons in the model are responsible for recognizing an incredible diversity of abstract concepts that cannot be cleanly classified into the above categories.
 
 import AbstractConceptNeurons from './diagrams/AbstractConceptNeurons.svelte'
 

@@ -1,12 +1,12 @@
 <script>
   import SmallNeuronGrid from './SmallNeuronGrid.svelte';
   let neurons = [
-    {
-      model: "rn101",
-      unit: 942,
-      title: "baby",
-      facets: ["any"],
-    },
+    // {
+    //   model: "rn101",
+    //   unit: 942,
+    //   title: "baby",
+    //   facets: ["any"],
+    // },
     {
       model: "4x",
       unit: 2231,
