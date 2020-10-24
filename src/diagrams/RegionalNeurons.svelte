@@ -464,7 +464,7 @@
 
     <div style="grid-column: label-major; grid-row: facets;" >
         <div class='figlabel'>Faceted Feature Visualizations</div>
-        <div class='figcaption'>Regional neurons respond to many different kinds of images related to their region. Faceted feature visualiziation allow us to see some of this diversity.</div>
+        <div class='figcaption'>Regional neurons respond to many different kinds of images related to their region. <a href="#faceted-feature-visualization">Faceted feature visualiziation</a> allows us to see some of this diversity.</div>
         <div class='figcaption' style='margin-top: 8px;'>Hover on a neuron to isolate acitvations. Click to open in Microscope.</div>
         <!-- by creating stimuli that activate a given neuron <em>through a specified set of lower-level neurons</em> associated with a facet.-->
         <br>

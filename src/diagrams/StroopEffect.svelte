@@ -1,15 +1,47 @@
-<div style="width: 90%">
-  <div>
-    <p><b>Control:</b>
-      <span style="color: red">xxxxx</span> <span style="color: green">xxxxx</span> <span style="color: purple">xxxxx</span> <span style="color: green">xxxxx</span> <span style="color: blue">xxxxx</span>
-    </p>
-  </div>
-  <div>
-    <p><b>Experimental:</b>
-      <span style="color: red">green</span> <span style="color: green">red</span> <span style="color: purple">blue</span> <span style="color: green">purple</span> <span style="color: blue">red</span>
-    </p>
-  </div>
+<style>
+  .container {
+    max-width: 250px;
+    display: grid;
+    grid-template-columns: [caption-start red] 1fr [green] 1fr [caption-start blue] 1fr [caption-end];
+    grid-template-rows: [caption] auto [text] auto [color] 16px;
+    grid-gap: 8px;
+  }
+  .color-text {
+    grid-row: text;
+    font-size: 80%;
+    line-height: 100%;
+    grid-column: var(--color);
+    color: var(--color);
+  }
+  .color-square {
+    grid-row: color;
+    width: 100%;
+    max-width: 50px;
+    height: 100%;
+    grid-column: var(--color);
+    background:  var(--color);
+    border-radius: 4px;
+    opacity: 0.6;
+  }
+  .container .figcaption {
+    grid-area: caption;
+    margin-bottom: 0px;
+  }
+</style>
+
+<div class="container">
+
   <div class="figcaption">
-    The Stroop effect. Naming the font color of a printed word is slower if the word's meaning and the font color are incongruent.
+    <b><a href="https://en.wikipedia.org/wiki/Stroop_effect">The Stroop effect</a></b>: recognizing a color is harder if it is incongruent with a word.
   </div>
+
+  <div class="color-text" style="--color: red;">blue</div>
+  <div class="color-text" style="--color: blue;">green</div>
+  <div class="color-text" style="--color: green;">red</div>
+
+  <div class="color-square" style="--color: red;"></div>
+  <div class="color-square" style="--color: blue;"></div>
+  <div class="color-square" style="--color: green;"></div>
+
+
 </div>
