@@ -206,7 +206,7 @@ import TypographicNeurons from './diagrams/TypographicNeurons.svelte'
 
 <Svelte component={TypographicNeurons} container={<div />} />
 
-**Abstract concept neurons.** Finally, many of the neurons in the model are responsible for recognizing an incredible diversity of abstract concepts that cannot be cleanly classified into the above categories.
+**Abstract concept neurons.** Finally, many of the neurons in the model contribute to recognizing an incredible diversity of abstract concepts that cannot be cleanly classified into the above categories.
 
 import AbstractConceptNeurons from './diagrams/AbstractConceptNeurons.svelte'
 
