@@ -1,5 +1,6 @@
 
 <script>
+    import { onMount } from 'svelte'
     import NeuronCard from '../components/NeuronCard.svelte';
     import NeuronCardInfo from '../components/NeuronCardInfo.svelte';
     import Map from '../components/Map.svelte';
@@ -276,6 +277,15 @@
         {"name": "cities", "description": "<b>City name activations</b>: Cities colored by activations of neurons in response to rastered images of city names. Activations averaged over font sizes, max over word positions."}
     ]
     let map_mode = "geography";
+
+
+
+    function setRegionalState(map_mode_, selected_family_=null, active_=null) {
+        if (map_mode_ != null) { map_mode = map_mode_;}
+        if (selected_family_ != null) { selected_family = selected_family_;}
+        if (active_ != null) { active = active_;}
+    }
+    onMount((x) => {window.setRegionalState = setRegionalState})
 </script>
 
 
