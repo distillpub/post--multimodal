@@ -11,6 +11,6 @@ export default ({ component, container = null }) => {
   return container ? (
     React.cloneElement(container, { ref: containerEl })
   ) : (
-    <div style={{ gridColumn: '12 / 15', gridRow: 'auto / span 3', marginTop: '4px' }} ref={containerEl} />
+    <div className="margin-diagram" ref={containerEl} />
   )
 }

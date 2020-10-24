@@ -20,10 +20,10 @@ import NeuronCard from '../components/NeuronCard.svelte';
       display: flex;
       flex-direction: row;
       justify-content: start;
-      gap: 8px;
+      gap: 16px;
     }
     .neuron-description {
-      max-width: 150px;
+      max-width: 200px;
     }
   }
   .dataset-example {

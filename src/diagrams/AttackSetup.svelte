@@ -6,7 +6,7 @@ const hues = {"pizza": 40};
 import ClassificationCard from '../components/ClassificationCard.svelte';
 </script>
 
-<div style="width: fit-content; margin: auto; display: grid; grid-template-columns: 305px 100px 305px; grid-gap: 32px;">
+<div style="width: fit-content; display: grid; grid-template-columns: 305px 100px 305px; grid-gap: 32px;">
   <div style="grid-column: 1">
     <ClassificationCard
       imageUrl={"typographic/small_attacks/example_before.png"}

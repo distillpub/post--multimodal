@@ -64,7 +64,21 @@ d-figure > figure {
   padding-bottom: 40px;
   border-top: 1px solid #f0f0f0;
   border-bottom: 1px solid #f0f0f0;
+  margin-top: 40px;
+  margin-bottom: 60px;
 }
+
+.margin-diagram {
+  grid-column: 12 / 15;
+  grid-row: auto / span 3;
+  margin-top: 6px;
+}
+@media (min-width: 1800px) {
+  .margin-diagram {
+    margin-left: 60px;
+  }
+}
+
 .placeholder {
   padding: 40px;
   font-size: 80%;

@@ -1,9 +1,9 @@
 <style>
   .container {
-    max-width: 250px;
+    max-width: 270px;
     display: grid;
-    grid-template-columns: [caption-start red] 1fr [green] 1fr [caption-start blue] 1fr [caption-end];
-    grid-template-rows: [caption] auto [text] auto [color] 16px;
+    grid-template-columns: [caption-start] auto [red] 50px [green] 50px [caption-start blue] 50px auto [caption-end];
+    grid-template-rows: [caption] auto ;
     grid-gap: 8px;
   }
   .color-text {
@@ -16,7 +16,7 @@
   .color-square {
     grid-row: color;
     width: 100%;
-    max-width: 50px;
+    max-width: 40px;
     height: 100%;
     grid-column: var(--color);
     background:  var(--color);
@@ -32,16 +32,7 @@
 <div class="container">
 
   <div class="figcaption">
-    <b><a href="https://en.wikipedia.org/wiki/Stroop_effect">The Stroop effect</a></b>: recognizing a color is harder if it is incongruent with a word.
+    A common example of the <a href="https://en.wikipedia.org/wiki/Stroop_effect">Stroop effect</a> is that recognizing a 'mislabeled' color (eg. <span style="color:blue; opacity: 0.8;">green</span>, <span style="color: red; opacity: 0.8;">blue</span>, <span style="color:green; opacity: 0.8;">red</span>) is harder than normal. More generally, incogruent stimuli are slower and harder to recognize.
   </div>
-
-  <div class="color-text" style="--color: red;">blue</div>
-  <div class="color-text" style="--color: blue;">green</div>
-  <div class="color-text" style="--color: green;">red</div>
-
-  <div class="color-square" style="--color: red;"></div>
-  <div class="color-square" style="--color: blue;"></div>
-  <div class="color-square" style="--color: green;"></div>
-
 
 </div>

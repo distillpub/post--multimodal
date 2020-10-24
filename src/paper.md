@@ -95,16 +95,14 @@ import EmotionsIntro from './pages/emotions/intro'
 
 These neurons are flexible, recognizing body language and facial expressions in humans and animals, drawings, text, and even landscapes and interior designs that evoke the emotion's vibe. The surprise neuron activates even when the majority of the face is obscured. It responds to slang like "OMG!" and "WTF", and text feature visualization produces similar words of shock and surprise.
 
-import EmotionsSurprise from './pages/emotions/surprise'
-
-<EmotionsSurprise />
+<!--import EmotionsSurprise from './pages/emotions/surprise'
+<EmotionsSurprise />-->
 
 Other neurons learn to detect emotions as part of a broader concept. A neuron that primarily detects pornographic content has a secondary function of detecting the emotion of arousal. A price tag neuron detects an expression of looking up in awe, and text feature visualization includes "looking up into the heavens". A neuron that primarily detects official letters of acceptance or notices of appointment also contains a facial expression of acceptance.
 
 
-import EmotionsMinor from './pages/emotions/minor'
-
-<EmotionsMinor />
+<!-- import EmotionsMinor from './pages/emotions/minor'
+<EmotionsMinor /> -->
 
 <Todo for="Chris" value={6}>Come up with a spec with Nick of how to transition these diagrams.</Todo>
 <Todo for="Chris" value={5}>Create new version of diagrams</Todo>
@@ -113,9 +111,8 @@ On the other extreme, some neurons respond simply to specific body and facial ex
 
 
 
-import EmotionsDuckface from './pages/emotions/minor/duckface'
-
-<EmotionsDuckface />
+<!-- import EmotionsDuckface from './pages/emotions/minor/duckface'
+<EmotionsDuckface /> -->
 
 We're excited at the promise of emotion neurons to benefit social studies that need algorithmic access to emotion detectors. These neurons could help people understand the emotional content of a long video, either by coloring the video's scrubber based on the emotions at each time, or by showing an Activation Atlas of the scenes of a movie based on emotion to see cinematography in a new way. These emotions could also be useful for studying how expressions change over time. With a dataset of selfies over the last decade with their location tagged, perhaps one could better understand birth and spread of expressions like the duckface as it propagates across cultures and geographies.
 
@@ -371,17 +368,13 @@ import Atlas from './pages/emotions/atlas'
 
 This atlas has a few connections to classical emotion research. When we use just 2 factors, we roughly reconstruct the canonical mood-axes used in much of psychology: valence and arousal [include mood result]. If we increase to 7 factors, we nearly reconstruct a well known categorization of these emotions into happy, surprised, sad, bad, disgusted, fearful, and angry, except with “disgusted” switched for a new category related to affection that includes “valued,” “loving,” “lonely,” and “insignificant.”
 
-<br /><hr /><br />
+<br /><br /><br /><br /><hr /><br /><br /><br />
 
 <h2 id="typographic-attacks">
 Typographic Attacks
 </h2>
 
 As we’ve seen, CLIP is full of multimodal neurons which respond to both images and text for a given concept. Given how strongly these neurons react to text, we wonder: can we perform a kind of non-programmatic adversarial attack – a *typographic attack* – using just a marker and an English word?
-
-<h3 id="physical-typographic-attacks">
-Physical Typographic Attacks
-</h3>
 
 To test this hypothesis, we took several common items and deliberately mislabeled them. We then observed how this affects ImageNet classifications (discussed <a href="imagenet-challenge">earlier</a>). These attacks often change the image’s classification.
 
@@ -401,15 +394,15 @@ While many classic adversarial attacks focus on making imperceptible changes to 
 
 
 <h3 id="automated-typographic-attacks">
-Automated Typographic Attacks
+Evaluating Typographic Attacks
 </h3>
 
-Are typographic attacks reliable? Duct tape and markers don't scale, so we create a simple automated setup to measure the attack’s success rate on the ImageNet validation set.
+Our physical adversarial examples are a proof of concept, but they don’t give us a very good sense of how frequently typographic attacks succeed. Duct tape and markers don't scale, so we create a simple automated setup to measure the attack’s success rate on the ImageNet validation set.
 
 
 import AttackSetup from './diagrams/AttackSetup.svelte'
 
-<Svelte component={AttackSetup} />
+<Svelte component={AttackSetup} container={<div style={{gridColumn: 'text / screen', marginTop: '40px', marginBottom: '40px' }} /> }   />
 
 <Todo for="Chelsea" value={3}>Run zero-shot results, get data</Todo>
 
