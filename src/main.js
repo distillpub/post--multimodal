@@ -30,7 +30,6 @@ const Paper = <React.Fragment>
         <ul>
           <li><a href="#physical-typographic-attacks">Physical Typographic Attacks</a></li>
           <li><a href="#automated-typographic-attacks">Automated Typographic Attacks</a></li>
-          <li><a href="#emotional-intelligence">Emotional Intelligence</a></li>
         </ul>
         <div><a href="#appendix">Appendix 1: Methodological Details</a></div>
         <ul>
