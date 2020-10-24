@@ -7,12 +7,12 @@
       title: "Amazon",
       facets: ["logo"],
     },
-    {
-      model: "rn101",
-      unit: 1438,
-      title: "Air Jordan",
-      facets: ["logo"],
-    },
+    // {
+    //   model: "rn101",
+    //   unit: 1438,
+    //   title: "Air Jordan",
+    //   facets: ["logo"],
+    // },
     {
       model: "rn101",
       unit: 787,
@@ -31,18 +31,19 @@
       title: "Real Madrid",
       facets: ["any"],
     },
-    /*{
-      model: "rn101",
-      unit: 1929,
-      title: "NASA",
-      facets: ["any"],
-    },
     {
       model: "4x",
       unit: 1008,
       title: "NASA",
       facets: ["any"],
-    },*/
+    },
+  /*{
+      model: "rn101",
+      unit: 1929,
+      title: "NASA",
+      facets: ["any"],
+    },
+*/
 
   ];
 </script>
