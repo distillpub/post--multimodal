@@ -164,7 +164,7 @@
     <div class='map-overlay' style='width: {width}px; height: {height}px;'>
         {#each [...Array(spatial_acts? spatial_acts.shape[1] : 0).keys()] as x}
         {#each [...Array(spatial_acts? spatial_acts.shape[2] : 0).keys()] as y}
-            <div style='grid-row: {x+1}; grid-column:{y+1}; border-left: solid 1px rgba(1,1,1,0); border-top: solid 1px rgba(1,1,1,0); background: {color(spatial_acts, [x, y], active_units_inds, 1.0, focus)}; opacity: {opacity(spatial_acts, [x, y], active_units_inds, 1.6, focus)};'></div>
+            <div style='grid-row: {x+1}; grid-column:{y+1}; border-left: solid 1px rgba(1,1,1,0); border-top: solid 1px rgba(1,1,1,0); background: {color(spatial_acts, [x, y], active_units_inds, 1.1, focus)}; opacity: {opacity(spatial_acts, [x, y], active_units_inds, 1.6, focus)};'></div>
         {/each}
         {/each}
     </div>

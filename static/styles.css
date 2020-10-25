@@ -14,6 +14,14 @@ div[for][value]::before {
   font-weight: bold;
 }
 
+
+@media (min-height: 900px) {
+  d-article hr {
+    margin-top: 120px !important;
+    margin-bottom: 100px !important;
+  }
+}
+
 .subgrid {
   grid-column: screen;
   display: grid;
@@ -243,5 +251,5 @@ d-article h2 {
 }
 
 d-article h3 {
-  font-size: 24px !important;
+  font-size: 26px !important;
 }

@@ -36,7 +36,7 @@
         },
 
         {
-            "name": "Latitude Neurons",
+            "name": "Large Region Neurons",
             "neurons": [
                 {"model": "4x", "unit": 245, "name": "Northern Hemisphere?", "top_words": "saskatchewan, norwegian, newfoundland, wisconsin, vancouver"},
                 {"model": "4x", "unit": 734, "name": "Global?", "top_words": ""},
@@ -262,17 +262,17 @@
         //{"name": 'nature'},
         ];
 
-    let active = undefined;
-    let active_unsetter = undefined;
+    let active = null;
+    let active_unsetter = null;
     function enter(i){
-        if (active_unsetter != undefined) {clearTimeout(active_unsetter)};
+        if (active_unsetter != null) {clearTimeout(active_unsetter)};
         active=i;
     }
     function leave(){
-        active_unsetter = setTimeout(() => {active=undefined;}, 50)
+        active_unsetter = setTimeout(() => {active=null;}, 50)
     }
     const map_modes = [
-        {"name": "geography", "description": "<b>Unlabeled map activations</b>: Spatial activations of neurons in response to unlabeled geographical world map. Activations averaged over random crops."},
+        {"name": "geography", "description": "<b>Unlabeled map activations</b>: Spatial activations of neurons in response to unlabeled geographical world map. Activations averaged over random crops. Note that neurons for smaller countries or cities may not respond to maps this zoomed out."},
         {"name": "countries", "description": "<b>Country name activations</b>: Countries colored by activations of neurons in response to rastered images of country names. Activations averaged over font sizes, max over word positions."}, 
         {"name": "cities", "description": "<b>City name activations</b>: Cities colored by activations of neurons in response to rastered images of city names. Activations averaged over font sizes, max over word positions."}
     ]
@@ -283,7 +283,7 @@
     function setRegionalState(map_mode_, selected_family_=null, active_=null) {
         if (map_mode_ != null) { map_mode = map_mode_;}
         if (selected_family_ != null) { selected_family = selected_family_;}
-        if (active_ != null) { active = active_;}
+        active = active_;
     }
     onMount((x) => {window.setRegionalState = setRegionalState})
 </script>
@@ -302,7 +302,7 @@
                 repeat( var(--num-neurons), [neuron] 100px )
             [map-end title-end caption-end];
         grid-template-rows: 
-            [title] auto [map] auto 16px 
+            [title] auto 4px [map] auto 16px 
             [neuron-title] auto 4px [color] auto 4px [top-words] auto 4px
             [facets-start] 
                 repeat(4, [facet] auto) [overflow] auto 
@@ -395,7 +395,7 @@
 
     <!--<div style='grid-area: title'>Selected Regional Neurons on World Map</div>-->
 
-    <div style='grid-area: title; border-bottom: 1px solid #DDD; margin-bottom: 4px;'>
+    <div style='grid-area: title; border-bottom: 1px solid #DDD; max-width: 724px;'>
         Geographical Activation of Region Neurons
     </div>
 
@@ -437,7 +437,7 @@
     <a 
         href="{microscope_url(neuron)}" 
         class="img-link"
-        style="grid-column: neuron {neuron_i+1}; grid-row: color; {(active != undefined && active != neuron_i)? 'opacity: 0.25;' : ''}"
+        style="grid-column: neuron {neuron_i+1}; grid-row: color; {(active != null && active != neuron_i)? 'opacity: 0.25;' : ''}"
         on:mouseover={() => enter(neuron_i)} on:mouseout={leave} >
     <div 
         style="background: hsl({360*neuron_i/neurons.length}, 80%, 50%);" class='color-label'>
@@ -447,7 +447,7 @@
     <a 
     href="{microscope_url(neuron)}" 
     class="img-link"
-    style="grid-column: neuron {neuron_i+1}; grid-row: top-words; {(active != undefined && active != neuron_i)? 'opacity: 0.25;' : ''}"
+    style="grid-column: neuron {neuron_i+1}; grid-row: top-words; {(active != null && active != neuron_i)? 'opacity: 0.25;' : ''}"
     on:mouseover={() => enter(neuron_i)} on:mouseout={leave} >
     <div class='figcaption' style='background:#EEE; padding: 6px; border-radius: 2px;'>{(neuron_indices[neuron_i] != -1)? top_words[neuron_indices[neuron_i]].slice(0,5).join(", ") : ""}</div>
     
@@ -455,7 +455,7 @@
     {/each}
     
     {#each facets as facet, facet_i}{#each neurons as neuron, neuron_i}
-    <div style="grid-column: neuron {neuron_i+1}; grid-row: facet {facet_i+1}; {(active != undefined && active != neuron_i)? 'opacity: 0.25;' : ''}"
+    <div style="grid-column: neuron {neuron_i+1}; grid-row: facet {facet_i+1}; {(active != null && active != neuron_i)? 'opacity: 0.25;' : ''}"
     on:mouseover={() => enter(neuron_i)} on:mouseout={leave}>
         <NeuronCard neuron={neuron} facets={[facet]} fv={true} ds={false} />
     </div>
@@ -479,8 +479,10 @@
     </div>
     {/each}
 
-    <div style='grid-area: caption;' class='figcaption'>
-        <a href='#' class='figure-anchor'>Figure N:</a> This diagram contextualizes region neurons with a map. It can show their response
+    <div style='grid-area: caption; max-width: 800px;' class='figcaption'>
+        <a href='#region-neuron-diagram' class='figure-anchor'>Figure N:</a> This diagram contextualizes region neurons with a map.
+        Eeach neuron is mapped to a hue, and then regions where it activates are colored in that hue, with intensity proportional to activiation. If multiple neurons of opposing hues fire, the region will be colored in a desaturated gray. 
+        It can show their response
         to an <span class="pseudo-link" on:click={() => {map_mode = "geography";}}>unlabeled geographical map</span>,
         to <span class="pseudo-link" on:click={() => {map_mode = "countries";}}>country names</span>,
         and to <span class="pseudo-link" on:click={() => {map_mode = "cities";}}>city names</span>.
@@ -493,7 +495,7 @@
         <option value={i}>{family.name}</option>
         {/each}
         </select>. We particularly recommend looking at the 
-        "<span class="pseudo-link" on:click={() => {selected_family=1; active=null;}}>latitude neurons</span>"
+        "<span class="pseudo-link" on:click={() => {selected_family=1; active=null;}}>large region neurons</span>"
         (such as the "<span class="pseudo-link" on:click={() => {selected_family=1; active=0;}}>Northern Hemisphere</span>" neuron)
         and at 
         "<span class="pseudo-link" on:click={() => {selected_family=2; active=null;}}>secondarily regional neurons</span>"

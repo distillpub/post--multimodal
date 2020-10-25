@@ -4,7 +4,7 @@ import SvelteInline from './svelte-inline'
 
 <Todo for="Nick" value={4}>Come up with a hero draft</Todo>
 
-In 2005, a letter published in Nature described human neurons responding to specific people, such as Jennifer Aniston or Halle Berry <d-cite key="quiroga2005invariant" />. The exciting thing wasn’t just that they selected for particular people, but that they did so regardless of whether they were shown images, drawings, or even images of the person’s name. The neurons were multimodal. As the lead author would put it: "You are looking at the far end of the transformation from metric, visual shapes to conceptual… information." <d-footnote>Quiroga's full quote, from <a href="https://www.newscientist.com/article/dn7567-why-your-brain-has-a-jennifer-aniston-cell/">New Scientist</a> reads: "I think that’s the excitement to these results. You are looking at the far end of the transformation from metric, visual shapes to conceptual memory-related information. It is that transformation that underlies our ability to understand the world. It’s not enough to see something familiar and match it. It’s the fact that you plug visual information into the rich tapestry of memory that brings it to life." We elided the portion discussing memory since it was less relevant.</d-footnote>
+In 2005, a letter published in Nature described human neurons responding to specific people, such as Jennifer Aniston or Halle Berry <d-cite bibtex-key="quiroga2005invariant" />. The exciting thing wasn’t just that they selected for particular people, but that they did so regardless of whether they were shown images, drawings, or even images of the person’s name. The neurons were multimodal. As the lead author would put it: "You are looking at the far end of the transformation from metric, visual shapes to conceptual… information." <d-footnote>Quiroga's full quote, from <a href="https://www.newscientist.com/article/dn7567-why-your-brain-has-a-jennifer-aniston-cell/">New Scientist</a> reads: "I think that’s the excitement to these results. You are looking at the far end of the transformation from metric, visual shapes to conceptual memory-related information. It is that transformation that underlies our ability to understand the world. It’s not enough to see something familiar and match it. It’s the fact that you plug visual information into the rich tapestry of memory that brings it to life." We elided the portion discussing memory since it was less relevant.</d-footnote>
 
 We report the existence of similar multimodal neurons in artificial neural networks. This includes neurons selecting for prominent public figures or fictional characters, such as Donald Trump, Lady Gaga, and Spiderman. Like the biological multimodal neurons, these neurons respond to the same subject in photographs, drawings, and images of text. <d-footnote>Some of the figures we found neurons for are divisive. It should go without saying that having a dedicated neuron simply reflects the prominence of these figures in the training data, collected in [2019?]. Being divisive increases this prominence, because divisive figures are more likely to be extensively discussed on the Internet. In the case of the Donald Trump neuron, it seems likely there would have also been a Hillary Clinton neuron if data had been collected in 2016 instead. (There are other neurons which respond to Hillary Clinton in addition to other topics.) </d-footnote><d-footnote>It’s important to note that the vast majority of people these models recognize don’t have a specific neuron, but instead are represented by a combination of neurons. Often, the contributing neurons are conceptually related. For example, the Trump neuron fires (albeit more weakly) for Mike Pence, contributing to representing him.</d-footnote><d-footnote>Some of the neurons we found seem strikingly similar to those described in Quiroga et al []. The Donald Trump neuron we found might be seen as similar to Quiroga et al’s Bill Clinton neuron. A Star Wars neuron we find seems analogous to a biological Star Wars neuron described Quiroga et al’s follow up paper []. And although we don’t find an exact Jennifer Aniston neuron, we do find a neuron for the TV show “Friends” which fires for her.</d-footnote>
 
@@ -53,11 +53,11 @@ To caption images on the Internet you need cultural knowledge. If you try captio
 
 A Hitler neuron learns to detect his face and body, symbols of the Nazi party, relevant historical documents, and other loosely related concepts like German food. Feature visualization shows swastikas and Hitler seemingly doing a Nazi salute. A Jesus Christ neuron detects Christian symbols like crosses and crowns of thorns, paintings of Jesus, his written name, and feature visualization shows him as a baby in the arms of the Virgin Mary. A Spiderman neuron recognizes the masked hero and knows his secret identity, Peter Parker. It also responds to images, text, and drawings of heroes and villians from Spiderman movies and comics over the last half-century.
 
-Which people the model develops dedicated neurons for is stochastic, but seems correlated with the person's prevalence across the dataset. The one person we’ve found in every CLIP model is Donald Trump. It recognizes him across a wide variety of settings, including effigies and caricatutes in many artistic mediums, as well as people he’s worked closely with like Mike Pence and Steve Bannon. It also responds to his political symbols and messaging (eg. “The Wall” and “Make America Great Again” hats). On the other hand, it most *negatively* activates to musicians like Nicky Minaj and Eminem, video games like Fortnite, black rights activists like Martin Luther King Jr., and LGBT symbols like rainbow flags.
-
 import PeopleMargin from './pages/people/margin'
 
 <PeopleMargin />
+
+Which people the model develops dedicated neurons for is stochastic, but seems correlated with the person's prevalence across the dataset. The one person we’ve found in every CLIP model is Donald Trump. It recognizes him across a wide variety of settings, including effigies and caricatutes in many artistic mediums, as well as people he’s worked closely with like Mike Pence and Steve Bannon. It also responds to his political symbols and messaging (eg. “The Wall” and “Make America Great Again” hats). On the other hand, it most *negatively* activates to musicians like Nicky Minaj and Eminem, video games like Fortnite, black rights activists like Martin Luther King Jr., and LGBT symbols like rainbow flags.
 
 To better understand this neuron we estimate the conditional probability of several categories of images at different activation levels using human labeling, of X images.
 
@@ -65,7 +65,7 @@ import PeopleHandLabeled from './pages/people/handLabeledTrump'
 
 <PeopleHandLabeled />
 
-[move to stddev instead of activations, show two dataset examples under each legend labels, show dataset examples for each range of activation]
+<Todo for="Nick" value={6}> move to stddev instead of activations, show two dataset examples under each legend labels, show dataset examples for each range of activation</Todo>
 
 (fig caption: To get a qualitative sense for what kinds of images cause the neuron to fire different amounts, we collected X images across different levels of firing, labeled them by hand into several categories, giving us an estimate of the conditional probability of each category at different levels of activation. While we labeled the images we couldn’t see how much they made the neuron fire.)
 
@@ -75,7 +75,7 @@ import TrumpPeople from './pages/people/trumpPeople'
 
 <TrumpPeople />
 
-[notes: transpose so bars are going horizontal, designate zero-point, std of each category show on bar]
+<Todo for="Nick" value={6}> transpose so bars are going horizontal, designate zero-point, std of each category show on bar</Todo>
 
 Presumably, people detecting neurons also exist in normal facial recognition models. What makes these neurons unique is that they respond to the person across modalities and associations, situating them in a cultural context. In particular, we're struck by how the neuron's response tracks an informal intuition with how associated people are. In this sense, person neurons can be thought of as a landscape of person-associations, with the person themself as simply the tallest peak.
 
@@ -91,18 +91,20 @@ import EmotionsIntro from './pages/emotions/intro'
 
 <EmotionsIntro />
 
-[for nick: replace accepting an offer or fix, consider adding small indoor figure footnote, keep indoor]
+<Todo for="Nick" value={6}>replace accepting an offer or fix, consider adding small indoor figure footnote, keep indoor</Todo>
 
 These neurons are flexible, recognizing body language and facial expressions in humans and animals, drawings, text, and even landscapes and interior designs that evoke the emotion's vibe. The surprise neuron activates even when the majority of the face is obscured. It responds to slang like "OMG!" and "WTF", and text feature visualization produces similar words of shock and surprise.
 
-<!--import EmotionsSurprise from './pages/emotions/surprise'
-<EmotionsSurprise />-->
+import EmotionsSurprise from './pages/emotions/surprise'
+
+<EmotionsSurprise />
 
 Other neurons learn to detect emotions as part of a broader concept. A neuron that primarily detects pornographic content has a secondary function of detecting the emotion of arousal. A price tag neuron detects an expression of looking up in awe, and text feature visualization includes "looking up into the heavens". A neuron that primarily detects official letters of acceptance or notices of appointment also contains a facial expression of acceptance.
 
 
-<!-- import EmotionsMinor from './pages/emotions/minor'
-<EmotionsMinor /> -->
+import EmotionsMinor from './pages/emotions/minor'
+
+<EmotionsMinor />
 
 <Todo for="Chris" value={6}>Come up with a spec with Nick of how to transition these diagrams.</Todo>
 <Todo for="Chris" value={5}>Create new version of diagrams</Todo>
@@ -111,8 +113,9 @@ On the other extreme, some neurons respond simply to specific body and facial ex
 
 
 
-<!-- import EmotionsDuckface from './pages/emotions/minor/duckface'
-<EmotionsDuckface /> -->
+import EmotionsDuckface from './pages/emotions/minor/duckface'
+
+<EmotionsDuckface />
 
 We're excited at the promise of emotion neurons to benefit social studies that need algorithmic access to emotion detectors. These neurons could help people understand the emotional content of a long video, either by coloring the video's scrubber based on the emotions at each time, or by showing an Activation Atlas of the scenes of a movie based on emotion to see cinematography in a new way. These emotions could also be useful for studying how expressions change over time. With a dataset of selfies over the last decade with their location tagged, perhaps one could better understand birth and spread of expressions like the duckface as it propagates across cultures and geographies.
 
@@ -133,7 +136,9 @@ In a later section, we'll see that an important role of the mental illness neuro
 Region Neurons
 </h3>
 
-From local weather and food, to travel and immigration, to language and race: geography is an important implicit or explicit context in a great deal of online discourse. Blizzards are more likely to be discussed in  <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 13, 1)}}>Canada</a>. Vegemite is more likely to come up in  <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 0, 6)}}>Australia</a>. Discussion of  <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography",  0, 5)}}>China</a> is more likely to be in Chinese. We find that CLIP models develop <i>region neurons</i> responding to geographic regions. These neurons respond to a wide variety of modalities and facets: country and city names, distinctive architecture, prominent public figures, faces of the most common ethnicity, distinctive clothing, wildlife, and local script (if not roman alphabet). If shown a world map, even without labels, these neurons fire selectively for the relevant region on the map.<d-footnote>Map responses seem to be strongest around distinctive geographic landmarks, such as the Gulf Of Carpentaria and Cape York Peninsula for Australia, or the Gulf of Guinea for Africa.</d-footnote>
+From local weather and food, to travel and immigration, to language and race: geography is an important implicit or explicit context in a great deal of online discourse. Blizzards are more likely to be discussed in  <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 13, 1)}}>Canada</a>. Vegemite is more likely to come up in  <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 0, 6)}}>Australia</a>. Discussion of  <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography",  0, 5)}}>China</a> is more likely to be in Chinese.
+
+We find that CLIP models develop <i>region neurons</i> responding to geographic regions. These neurons might be seen as vision analogues of geographic information in word embeddings <d-cite bibtex-key="konkol2017geographical"></d-cite>. They respond to a wide variety of modalities and facets: country and city names, distinctive architecture, prominent public figures, faces of the most common ethnicity, distinctive clothing, wildlife, and local script (if not roman alphabet). If shown a world map, even without labels, these neurons fire selectively for the relevant region on the map.<d-footnote>Map responses seem to be strongest around distinctive geographic landmarks, such as the Gulf Of Carpentaria and Cape York Peninsula for Australia, or the Gulf of Guinea for Africa.</d-footnote>
 
 Regional neurons vary greatly in scale, from neurons corresponding to entire hemispheres -- for example, a  <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 1, 0)}}>Northern Hemisphere neuron</a> which responds to bears, moose, coniferous forest, and the entire Northern third of a world map -- down to sub-regions of countries, such as the US West Coast. Which regions the model dedicates neurons to seems stochastic and varies across models we examined.<d-footnote>Some regional neurons seem to form more consistently than others. Which neurons form doesn't seem to be fully explained by prevalence in the dataset: for example, <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 6, null)}}>every model has an Australia neuron</a>, but not all models seem to have a UK neuron. Why is that? One intuition is that there’s more variance in neurons when there’s a natural supercategory they can be grouped into. For example, when an individual UK neuron doesn’t exist, it seems to be folded into a Europe neuron. In Africa, we sometimes see multiple different Africa neurons (in particular a South/West Africa neuron and an East Africa neuron), while other times there seems to be a single unified Africa neuron. In contrast, Australia is perhaps less subdividable, since it’s both a continent and country.</d-footnote>
 
@@ -142,20 +147,25 @@ Regional neurons vary greatly in scale, from neurons corresponding to entire hem
 
 import RegionalDiagram from './diagrams/RegionalNeurons.svelte'
 
-<Svelte component={RegionalDiagram} />
+<Svelte component={RegionalDiagram} container={<figure className="fullscreen-diagram" id="region-neuron-diagram" />} />
 
 
 In addition to these regional neurons, we find that many other neurons seem to be “<a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, null)}}>secondarily regional</a>.”<d-footnote>Some caution is needed in interpreting these neurons as truly regional, rather than spuriously weakly firing for part of a world map. Important validations are that they fire for the same region on multiple different maps, and if they respond to words for countries or cities in that region.</d-footnote> These neurons don’t have a region as the primary focus, but have some kind of geographic information baked in, firing weakly for regions on a world map related to them. For example, an <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, 1)}}>entrepreneurship neuron</a> that fires for California, a <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, 4)}}>cold neuron</a> that fires for the Arctic, and a big cat neuron that fires for Africa.<d-footnote>Most models have a great cat neuron, and it generally only fires for Africa. This misses non-lion great cats in other parts of the world, but mirrors a plausible and perhaps common human error.</d-footnote><d-footnote>We also find an <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, 0)}}>angel neuron</a> which responds to “Los Angeles” and California on a map.</d-footnote> Other neurons link concepts to regions of the world in ways that seem Americentric or even racist: an <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, 2)}}>immigration neuron</a> that responds to Latin America, and a <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, 5)}}>terrorism neuron</a> that responds to the Middle East.<d-footnote>We also find that the linear combination of neurons that respond to Russia on a map strongly responds to Pepe the frog, a symbol of white nationalism in the United States allegedly promoted by Russia. Our impression is that Russians probably wouldn’t particularly see this as a symbol of Russia, suggesting it is more “Russia as understood by the US.”</d-footnote>
 
 
-
-<Todo for="Nick" value={9}>Talk to Chris about which neuron to do</Todo>
 <Todo for="Nick" value={9}>Do conditional probability experiment for regional neuron.</Todo>
 
+<!-- import RegionalConditional from './pages/regionalConditional'
+
+<RegionalConditional /> -->
 
 <h3 id="miscellaneous-neurons">
 Miscellaneous Neurons
 </h3>
+
+import NeuronFamilies from './diagrams/NeuronFamilies.svelte'
+
+<Svelte component={NeuronFamilies} />
 
 **Person trait neurons.** These neurons detect gender<d-footnote>By this, we mean both that it responds to people presenting as this gender, as well as that it responds to concepts associated with that gender.</d-footnote> and age, as well as facial features like mustaches. (Ethnicity tends to be represented by regional neurons.)
 
@@ -226,15 +236,15 @@ So far, we’ve looked at particular neurons to give a sense of the kind of feat
     
 import ImageWordEmbeddingFootnote from './diagrams/ImageWordEmbeddingFootnote.svelte'
 
-<p><b>Image-Based Word Embedding:</b> Despite being a vision model, one can produce “word embeddings” with the visual CLIP model by rastering words into images and then feeding these images into the model. Like normal word embeddings, the nearest neighbors of words tend to be semantically related.{/*<Svelte component={ImageWordEmbeddingFootnote}  container={<d-footnote />} />*/}  Word arithmetic <d-cite key="mikolov2013linguistic" /> such as <br /><span style={{display: " inline-block", margin: 12}}><i>V(Img(</i>“King”<i>)) <span style={{margin: 4}}>-</span> V(Img(</i>“Man”<i>)) <span style={{margin: 4}}>+ </span>V(Img(</i>“Woman”<i>)) <span style={{margin:4}}>=</span> V(Img(</i>“Queen”<i>))</i></span><br /> work in some cases if we mask non-semantic lexicographic neurons (eg. “-ing” detectors). It seems likely that mixed arithmetic of words and images should be possible.</p>
+<p><b>Image-Based Word Embedding:</b> Despite being a vision model, one can produce “word embeddings” with the visual CLIP model by rastering words into images and then feeding these images into the model. Like normal word embeddings, the nearest neighbors of words tend to be semantically related.{/*<Svelte component={ImageWordEmbeddingFootnote}  container={<d-footnote />} />*/}  Word arithmetic <d-cite bibtex-key="mikolov2013linguistic" /> such as <br /><span style={{display: " inline-block", margin: 12}}><i>V(Img(</i>“King”<i>)) <span style={{margin: 4}}>-</span> V(Img(</i>“Man”<i>)) <span style={{margin: 4}}>+ </span>V(Img(</i>“Woman”<i>)) <span style={{margin:4}}>=</span> V(Img(</i>“Queen”<i>))</i></span><br /> work in some cases if we mask non-semantic lexicographic neurons (eg. “-ing” detectors). It seems likely that mixed arithmetic of words and images should be possible.</p>
     
 <p><b>Limited Multilingual Behavior:</b> Although CLIP’s training data was filtered to be English, many features exhibit limited multilingual responsiveness. For example, a “positivity” neuron (4x:36) responds to images of English “Thank You”, French “Merci”, German “Danke”, and Spanish “Gracias,” and also to English “Congratulations”, German “Gratulieren”, Spanish “Felicidades”, and Indonesian “Selamat”. As the example of Indonesian demonstrates, the model can recognize some words from non Romance/Germanic languages. However, we were unable to find any examples of the model mapping words in non-latin script to semantic meanings. It can recognize many scripts (Arabic, Chinese, Japanese, etc) and will activate the corresponding regional neurons, but doesn’t seem to be able to map words in those scripts to their meanings.<d-footnote>One interesting question is why the model developed reading abilities in latin alphabet languages, but not others -- was it because more data of that type slipped into the training data, or (the more exciting possibility) because it’s easier to learn a language from limited data if you already know the alphabet?</d-footnote></p>
       
-<p><b>Bias:</b> Certain kinds of bias seem to be embedded into these representations, similar to classic biases in word embeddings (eg. <d-cite key="bolukbasi2016man" />). The most striking examples are likely racial and religious bias. For example, there seems to be a “terrorism/Islam” neuron (4x:1596) which responds to images of words such as “Terrorism”, “Attack”, “Horror”, “Afraid”, and also “Islam”, “Allah”, “Muslim”. This isn’t just an illusion from looking at a single neuron: the image-based word embedding for “Terrorism” has a cosine similarity of 0.98 with “Muslims”. Similarily, an “illegal immigration neuron” (4x:2213) selects for Latin America countries.</p>
+<p><b>Bias:</b> Certain kinds of bias seem to be embedded into these representations, similar to classic biases in word embeddings (eg. <d-cite bibtex-key="bolukbasi2016man" />). The most striking examples are likely racial and religious bias. For example, there seems to be a “terrorism/Islam” neuron (4x:1596) which responds to images of words such as “Terrorism”, “Attack”, “Horror”, “Afraid”, and also “Islam”, “Allah”, “Muslim”. This isn’t just an illusion from looking at a single neuron: the image-based word embedding for “Terrorism” has a cosine similarity of 0.98 with “Muslims”. Similarily, an “illegal immigration neuron” (4x:2213) selects for Latin America countries.</p>
 
 (We’ll see further examples of bias in the next section, when we how these features are used in aligning with captions.)
     
-<p><b>Polysemanticity and Conjoined Neurons:</b>  Although we’ve focused on neurons which seem to have a single clearly defined concept they respond to, many CLIP neurons are “polysemantic” <d-cite key="olah2017feature,olah2020zoom" />, responding to multiple unrelated features. Unusually, polysemantic neurons in CLIP often have suspicious links between the different concepts they respond to. For example, we observe as <b>Phil</b>adelphia/<b>Phil</b>ipines/<b>Phil</b>ip neuron, a Christm<b>as</b>/<b>As</b>s neuron, and an Ac<b>tor</b>/Velocerap<b>tor</b> neuron. The concepts in these neurons seem “conjoined”, overlapping in a superficial way in one facet, and then generalizing out in multiple directions. We haven’t ruled out the possibility that these are just coincidences, given the large number of facets that could overlap for each concept. But if conjoined features genuinely exist, they hint at new potential explanations of polysemanticity.<d-footnote>In the past, when we've observed seemingly polysemantic neurons, we've considered two possibilities: either it is responding to some shared feature of the stimuli, in which case it isn’t really polysemantic, or it is genuinely responding to two unrelated cases. Usually we distinguish these cases with feature visualization. For example, InceptionV1 4e:55 responds to cars and cat heads. One could imagine it being the case that it’s responding to some shared feature -- perhaps cat eyes and car lights look similar. But feature visualization establishes a facet selecting for a globally coherent cat head, whiskers and all, as well as the metal chrome and corners of a car. We concluded that it was genuinely <i>OR(cat, car)</i>.<br /><br />
+<p><b>Polysemanticity and Conjoined Neurons:</b>  Although we’ve focused on neurons which seem to have a single clearly defined concept they respond to, many CLIP neurons are “polysemantic” <d-cite bibtex-key="olah2017feature,olah2020zoom" />, responding to multiple unrelated features. Unusually, polysemantic neurons in CLIP often have suspicious links between the different concepts they respond to. For example, we observe as <b>Phil</b>adelphia/<b>Phil</b>ipines/<b>Phil</b>ip neuron, a Christm<b>as</b>/<b>As</b>s neuron, and an Ac<b>tor</b>/Velocerap<b>tor</b> neuron. The concepts in these neurons seem “conjoined”, overlapping in a superficial way in one facet, and then generalizing out in multiple directions. We haven’t ruled out the possibility that these are just coincidences, given the large number of facets that could overlap for each concept. But if conjoined features genuinely exist, they hint at new potential explanations of polysemanticity.<d-footnote>In the past, when we've observed seemingly polysemantic neurons, we've considered two possibilities: either it is responding to some shared feature of the stimuli, in which case it isn’t really polysemantic, or it is genuinely responding to two unrelated cases. Usually we distinguish these cases with feature visualization. For example, InceptionV1 4e:55 responds to cars and cat heads. One could imagine it being the case that it’s responding to some shared feature -- perhaps cat eyes and car lights look similar. But feature visualization establishes a facet selecting for a globally coherent cat head, whiskers and all, as well as the metal chrome and corners of a car. We concluded that it was genuinely <i>OR(cat, car)</i>.<br /><br />
 Conjoined features can be seen as a kind of mid-point between detecting a shared low-level feature and detecting independent cases. Detecting Santa Claus and “turn” are clearly true independent cases, but there was a different facet where they share a low-level feature. <br /><br />
 Why would models have conjoined features? Perhaps they’re a vestigial phenomenon from early in training when the model couldn’t distinguish between the two concepts in that facet. Or perhaps there’s a case where they’re still hard to distinguish, such as large font sizes. Or maybe it just makes concept packing more efficient, as in the superposition hypothesis.</d-footnote></p>
 
@@ -368,13 +378,17 @@ import Atlas from './pages/emotions/atlas'
 
 This atlas has a few connections to classical emotion research. When we use just 2 factors, we roughly reconstruct the canonical mood-axes used in much of psychology: valence and arousal [include mood result]. If we increase to 7 factors, we nearly reconstruct a well known categorization of these emotions into happy, surprised, sad, bad, disgusted, fearful, and angry, except with “disgusted” switched for a new category related to affection that includes “valued,” “loving,” “lonely,” and “insignificant.”
 
-<br /><br /><br /><br /><hr /><br /><br /><br />
+<br /><hr /><br />
 
 <h2 id="typographic-attacks">
 Typographic Attacks
 </h2>
 
 As we’ve seen, CLIP is full of multimodal neurons which respond to both images and text for a given concept. Given how strongly these neurons react to text, we wonder: can we perform a kind of non-programmatic adversarial attack – a *typographic attack* – using just a marker and an English word?
+
+<h3 id="physical-typographic-attacks">
+Physical Typographic Attacks
+</h3>
 
 To test this hypothesis, we took several common items and deliberately mislabeled them. We then observed how this affects ImageNet classifications (discussed <a href="imagenet-challenge">earlier</a>). These attacks often change the image’s classification.
 
@@ -394,10 +408,10 @@ While many classic adversarial attacks focus on making imperceptible changes to 
 
 
 <h3 id="automated-typographic-attacks">
-Evaluating Typographic Attacks
+EvaluatingAutomated Typographic Attacks
 </h3>
 
-Our physical adversarial examples are a proof of concept, but they don’t give us a very good sense of how frequently typographic attacks succeed. Duct tape and markers don't scale, so we create a simple automated setup to measure the attack’s success rate on the ImageNet validation set.
+Our physical adversarial examples are a proof of concept, but they don’t give us a very good sense of how frequently typographic attacks succeed. Are typographic attacks reliable? Duct tape and markers don't scale, so we create a simple automated setup to measure the attack’s success rate on the ImageNet validation set.
 
 
 import AttackSetup from './diagrams/AttackSetup.svelte'
