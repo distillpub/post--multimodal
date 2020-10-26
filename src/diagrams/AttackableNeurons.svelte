@@ -1,67 +1,91 @@
 <script>
-import MicroscopeButton from '../components/MicroscopeButton.svelte'
+  import {microscope_url, map_url, facet_icon_url, dataset_examples_url} from '../urls.js';
+
+  let neurons = [
+    {
+      neuron: {model: "4x", unit: "1330", layer: "image_block_4_5_Add_6_0"},
+      facet: "any",
+      ds_img_prefix: "typographic/RN50-4x-1330-dataset-",
+      description: 'Neuron responding to piggy banks also responds to "price", "cheap", and "$".'
+    },
+    // {
+    //   neuron: {model: "4x", unit: "1450", layer: "image_block_4_5_Add_6_0"},
+    //   facet: "any",
+    //   ds_img_prefix: "typographic/RN50-4x-1450-dataset-",
+    //   description: 'A neuron responding to "iPod", "iOS", and "iPhone" as well as apples, Apple products, and the Apple logo.'
+    // },
+    {
+      neuron: {model: "4x", unit: "1156", layer: "image_block_4_5_Add_6_0"},
+      facet: "indoor",
+      ds_img_prefix: "typographic/RN50-4x-1156-dataset-",
+      description: 'Neuron responding to waste containers (and necklaces) aso responds to "trash", "waste", and "gargabe."'
+    },
+  ];
 </script>
 <style>
-  .reading-container {
+  a.outer-neuron-container {
+    display: block;
+    border-bottom: none;
+    margin-bottom: 10px;
+  }
+  .neuron-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: fit-content;
+    margin-bottom: 4px;
+    border-radius: 8px;
+    border: 1px solid #DDD;
+    background: #DDD;
+    overflow: hidden;
+    gap: 1px;
+  }
+  a.outer-neuron-container:hover .neuron-container {
+    border: 1px solid #AAA;
+  }
+  .neuron-description {
+    max-width: 200px;
+  }
+  @media only screen and (min-width: 1500px) {
+    a.outer-neuron-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      gap: 16px;
+    }
+    .neuron-description {
+      max-width: 150px;
+      margin-top: -2px;
+    }
+  }
+  .dataset-example {
     width: 100%;
+    background: #CCC;
   }
-  .reading-neuron-feature-viz {
-    border-radius: 5px;
+  .neuron-feature-viz{
+    width: 90px;
   }
-  .reading-neuron-dataset-example {
-    margin: 0px;
-  }
-  .reading-neuron-dataset-examples {
+  .dataset-examples {
     display: grid;
-    grid-template-rows: repeat(2);
-    grid-template-columns: repeat(2);
-    grid-gap: 2px;
-  }
-  .reading-neuron {
-    width: 30%;
-    margin: 20px;
+    grid-template-rows: repeat(2, atuo);
+    grid-template-columns: repeat(2, auto);
+    width: 90px;
+    grid-gap: 1px;
   }
 </style>
-<div class="reading-container">
-  <div class="reading-neuron">
-    <p><small>price, cheap, $</small></p>
-    <img class="reading-neuron-feature-viz" src="typographic/RN50-4x-channel-1330.png" alt=""/>
-    <div class="reading-neuron-dataset-examples">
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1330-dataset-1.png" alt="" style="grid-row: 1; grid-column: 1;"/>
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1330-dataset-2.png" alt="" style="grid-row: 1; grid-column: 2;"/>
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1330-dataset-3.png" alt="" style="grid-row: 2; grid-column: 1;"/>
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1330-dataset-4.png" alt="" style="grid-row: 2; grid-column: 2;"/>
-    </div>
-    <MicroscopeButton style="float: right" data-unit="1330" data-model="4x" data-layer="image_block_4_5_Add_6_0"/>
-  </div>
-  <div class="reading-neuron">
-    <p><small>iPod, iOS, iPhone</small></p>
-    <img class="reading-neuron-feature-viz" src="typographic/RN50-4x-channel-1450.png" alt=""/>
-    <div class="reading-neuron-dataset-examples">
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1450-dataset-1.png" alt="" style="grid-row: 1; grid-column: 1;"/>
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1450-dataset-2.png" alt="" style="grid-row: 1; grid-column: 2;"/>
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1450-dataset-3.png" alt="" style="grid-row: 2; grid-column: 1;"/>
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1450-dataset-4.png" alt="" style="grid-row: 2; grid-column: 2;"/>
-    </div>
-    <MicroscopeButton data-unit="1450" data-model="4x" data-layer="image_block_4_5_Add_6_0"/>
-  </div>
-  <div class="reading-neuron">
-    <p><small>trash, waste, garbage</small></p>
-    <img class="reading-neuron-feature-viz" src="typographic/RN50-4x-channel-1156.png" alt=""/>
-    <div class="reading-neuron-dataset-examples">
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1156-dataset-1.png" alt="" style="grid-row: 1; grid-column: 1;"/>
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1156-dataset-2.png" alt="" style="grid-row: 1; grid-column: 2;"/>
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1156-dataset-3.png" alt="" style="grid-row: 2; grid-column: 1;"/>
-      <img class="reading-neuron-dataset-example" src="typographic/RN50-4x-1156-dataset-4.png" alt="" style="grid-row: 2; grid-column: 2;"/>
-    </div>
-    <MicroscopeButton data-unit="1156" data-model="4x" data-layer="image_block_4_5_Add_6_0"/>
+
+{#each neurons as neuron}
+<a class="outer-neuron-container" href="{microscope_url(neuron.neuron)}">
+<div class="neuron-container">
+  <img class="neuron-feature-viz" src="{facet_icon_url(neuron.neuron, neuron.facet)}" alt="" style="grid-row: 1; grid-column: 1;"/>
+  <div class="dataset-examples">
+    <img class="dataset-example" src="{neuron.ds_img_prefix}1.png" alt="" style="grid-row: 1; grid-column: 1;"/>
+    <img class="dataset-example" src="{neuron.ds_img_prefix}2.png" alt="" style="grid-row: 1; grid-column: 2;"/>
+    <img class="dataset-example" src="{neuron.ds_img_prefix}3.png" alt="" style="grid-row: 2; grid-column: 1;"/>
+    <img class="dataset-example" src="{neuron.ds_img_prefix}4.png" alt="" style="grid-row: 2; grid-column: 2;"/>
   </div>
 </div>
-<div class="figcaption">
-  <p>
-    <a class="figure-anchor" href="#attackable-neurons">Figure N:</a> Neuron <a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x/image_block_4_5_Add_6_0/1330">1330</a> responds to (via the feature visualization) images of piggybanks, as well as (via dataset examples) the dollar signs on prices and words like "cheap," "cost," or "price."
-  </p>
-  <p>Neuron <a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x/image_block_4_5_Add_6_0/1450">1450</a> responds to (via dataset examples) the Apple logo and names of Apple products.</p>
+<div class="figcaption neuron-description">
+  {neuron.description}
 </div>
+</a>
+{/each}

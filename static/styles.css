@@ -1,3 +1,27 @@
+div[for] {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: hsla(40, 70%, 50%, 0.2);
+  border: 1px solid hsla(40, 70%, 50%, 0.4);
+  font-size: 70%;
+  padding: 8px;
+  line-height: 130%;
+  border-radius: 4px;
+  width: fit-content;
+}
+div[for][value]::before {
+  content: "TODO(" attr(for) ", " attr(value) "): ";
+  font-weight: bold;
+}
+
+
+@media (min-height: 900px) {
+  d-article hr {
+    margin-top: 120px !important;
+    margin-bottom: 100px !important;
+  }
+}
+
 .subgrid {
   grid-column: screen;
   display: grid;
@@ -48,7 +72,21 @@ d-figure > figure {
   padding-bottom: 40px;
   border-top: 1px solid #f0f0f0;
   border-bottom: 1px solid #f0f0f0;
+  margin-top: 40px;
+  margin-bottom: 60px;
 }
+
+.margin-diagram {
+  grid-column: 12 / 15;
+  grid-row: auto / span 3;
+  margin-top: 6px;
+}
+@media (min-width: 1800px) {
+  .margin-diagram {
+    margin-left: 60px;
+  }
+}
+
 .placeholder {
   padding: 40px;
   font-size: 80%;
@@ -206,4 +244,12 @@ d-contents nav > div > a {
 d-contents nav > div > a:hover,
 d-contents nav > ul > li > a:hover {
   text-decoration: none;
+}
+
+d-article h2 {
+  border-bottom: none !important;
+}
+
+d-article h3 {
+  font-size: 26px !important;
 }
