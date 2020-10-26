@@ -5,8 +5,8 @@
 let families = [
 
     {
-        title: "Region neurons",
-        description: "",
+        title: "Region Neurons",
+        description: "See <a href=\"#region-neurons\">Region Neurons</a>.",
         neurons: [
             {"model": "4x", "unit": 862, title: "USA", "facet": "any"},
             {"model": "4x", "unit": 218, title: "Europe", "facet": "any"},
@@ -17,8 +17,8 @@ let families = [
     },
 
     {
-        title: "People neurons",
-        description: "",
+        title: "Person Neurons",
+        description: "See <a href=\"#person-neurons\">Person Neurons</a>.",
         neurons: [
             {model: "4x", unit: 89, title: "Donald Trump", facet: "face" },
             {model: "4x", unit: 1063, title: "Elvis Presley", facet: "face" },
@@ -28,8 +28,8 @@ let families = [
         ]
     },
     {
-        title: "Emotion neurons",
-        description: "",
+        title: "Emotion Neurons",
+        description: "See <a href=\"#emotion-neurons\">Emotion Neurons</a>.",
         neurons: [
             {model: "4x", unit: 2478, title: "shocked", facet: "face" },
             {model: "4x", unit: 1193, title: "crying", facet: "face" },
@@ -42,7 +42,7 @@ let families = [
 
     {
         title: "Religions",
-        description: "",
+        description: "These neurons respond to concept clusters associated with a specific religion, such as its imagery, iconography, traditions, and/or texts.",
         neurons: [
             {model: "4x", unit: 479, title: "Islam?", facet: "logo" }, // or 1860
             {model: "4x", unit: 929, title: "Judaism", facet: "any" },
@@ -55,20 +55,20 @@ let families = [
     },
 
     {
-        title: "Person trait neurons",
+        title: "Person Trait Neurons",
         description: "These neurons detect gender<d-footnote>By this, we mean both that it responds to people presenting as this gender, as well as that it responds to concepts associated with that gender.</d-footnote> and age, as well as facial features like mustaches. (Ethnicity tends to be represented by regional neurons.)",
         neurons: [
-            // { model: "rn101", unit: 942, title: "baby", facet: "any", },
             {model: "4x", unit: 2231, title: "teenage", facet: "logo" },
             {model: "4x", unit: 839, title: "elderly", facet: "indoor" },
             {model: "4x", unit: 2518, title: "female", facet: "face" },
             {model: "4x", unit: 320, title: "male", facet: "face" },
             {model: "4x", unit: 92, title: "mustache", facet: "face" },
+            { model: "rn101", unit: 942, title: "baby", facet: "any", },
         ]
     },
 
     {
-        title: "Image type neurons",
+        title: "Image Type Neurons",
         description: "These neurons detect different ways in which an image might be drawn, rendered, or photographed, or different contexts in which an image might occur.",
         neurons: [
             {model: "4x", unit: 1308, title: "selfie", facet: "text" },
@@ -86,7 +86,7 @@ let families = [
     },
 
     {
-        title: "Image feature neurons",
+        title: "Image Feature Neurons",
         description: "These neurons detect extraneous features that a photo might contain: photobombs and bunny ears, the heads of people seated in front of you at a lecture, Photoshopped modifications, and more.",
         neurons: [
             {model: "4x", unit: 1640, title: "altered image", facet: "text" },
@@ -98,7 +98,7 @@ let families = [
     },
 
     {
-        title: "Holiday neurons",
+        title: "Holiday Neurons",
         description: "These neurons recognize the names, decorations, and traditional trappings around a holiday.",
         neurons: [
             {model: "4x", unit: 2439, title: "Halloween", facet: "any" },
@@ -111,19 +111,19 @@ let families = [
     },
 
     {
-        title: "Fictional universe neurons",
+        title: "Fictional Universe Neurons",
         description: "These neurons represent characters and concepts from within particular fictional universes.",
         neurons: [
             {model: "4x", unit: 924, title: "Pokémon", facet: "logo" },
             {model: "rn101", unit: 905, title: "Marvel", facet: "any" },
-            {model: "rn101", unit: 2043, title: "Legend of Zelda", facet: "logo" },
+            {model: "rn101", unit: 2043, title: "Zelda", facet: "logo" },
             {model: "rn101", unit: 1532, title: "Star Wars", facet: "indoor" },
             {model: "rn101", unit: 789, title: "The Simpsons", facet: "logo" },
         ]
     },
 
     {
-        title: "Brand neurons",
+        title: "Brand Neurons",
         description: "Like the neurons that recognize the identities of people, these neurons recognize brand identities.",
         neurons: [
             {model: "rn101", unit: 2002, title: "Amazon", facet: "logo" },
@@ -137,7 +137,7 @@ let families = [
     },
 
     {
-        title: "Typographic neurons",
+        title: "Typographic Neurons",
         description: "Surprisingly, despite being able to “read” words and map them to semantic features, the model keeps a handful of more typographic features in its high-level representations. Like a child spelling out a word they don’t know, we suspect these neurons help the model represent text it can’t fully read.",
         neurons: [
             {model: "4x", unit: 2504, title: "\"un-\"", facet: "text" },
@@ -149,7 +149,7 @@ let families = [
     },
 
     {
-        title: "Abstract concept neurons",
+        title: "Abstract Concept Neurons",
         description: "Finally, many of the neurons in the model contribute to recognizing an incredible diversity of abstract concepts that cannot be cleanly classified into the above categories.",
         neurons: [
             { model: "4x", unit: 371, title: "you", facet: "text" },
@@ -169,7 +169,7 @@ let families = [
     },
 
     {
-        title: "Counting neurons",
+        title: "Counting Neurons",
         description: "These neurons detect duplicates of the same person or thing, and can distinguish them by their count.",
         neurons: [
             {model: "4x", unit: 17, title: "trios", facet: "indoor" },
@@ -179,16 +179,16 @@ let families = [
     },
     {
         title: "Time",
-        description: "",
+        description: "These neurons respond to any visual information that contextualizes the image in a particular time – for some it's a season, for others it's a day or a month or a year, and for yet others it may be an entire era.",
         neurons: [
-            {model: "rn101", unit: 1979, title: "Morning", facet: "any" },
-            {model: "4x", unit: 2364, title: "Summer", facet: "logo" },
-            {model: "4x", unit: 1829, title: "Winter", facet: "logo" },
-            {model: "4x", unit: 1714, title: "Day", facet: "logo" },
-            {model: "4x", unit:  705, title: "Month", facet: "logo" },
-            {model: "4x", unit:  764, title: "Year", facet: "logo" },
-            {model: "4x", unit: 2403, title: "Mid 1900s", facet: "any" },
-            {model: "4x", unit: 56, title: "Historical", facet: "any" },
+            {model: "rn101", unit: 1979, title: "morning", facet: "any" },
+            {model: "4x", unit: 2364, title: "summer", facet: "logo" },
+            {model: "4x", unit: 1829, title: "winter", facet: "logo" },
+            {model: "4x", unit: 1714, title: "day", facet: "logo" },
+            {model: "4x", unit:  705, title: "month", facet: "logo" },
+            {model: "4x", unit:  764, title: "year", facet: "logo" },
+            {model: "4x", unit: 2403, title: "mid-1900s", facet: "any" },
+            {model: "4x", unit: 56, title: "historical", facet: "any" },
             {model: "", unit: 0, title: "", facet: "any" },
             {model: "", unit: 0, title: "", facet: "any" },
         ]
