@@ -5,11 +5,11 @@
 let families = [
 
     {
-        title: "Region Neurons",
+        title: "Region neurons",
         description: "",
         neurons: [
             {"model": "4x", "unit": 862, title: "USA", "facet": "any"},
-            {"model": "4x", "unit": 218, title: "Europe", "facet": "any"}, 
+            {"model": "4x", "unit": 218, title: "Europe", "facet": "any"},
             {"model": "4x", "unit": 1067, title: "India", "facet": "any"},
             {"model": "4x", "unit": 1257, title: "West Africa?", "facet": "any"},
             {"model": "4x", "unit": 513, title: "Australia", "facet": "any"},
@@ -17,7 +17,7 @@ let families = [
     },
 
     {
-        title: "People Neurons",
+        title: "People neurons",
         description: "",
         neurons: [
             {model: "4x", unit: 89, title: "Donald Trump", facet: "face" },
@@ -28,18 +28,18 @@ let families = [
         ]
     },
     {
-        title: "Emotion Neurons",
+        title: "Emotion neurons",
         description: "",
         neurons: [
-            {model: "4x", unit: 2478, title: "Shocked", facet: "face" },
-            {model: "4x", unit: 1193, title: "Crying", facet: "face" },
-            {model: "4x", unit: 1512, title: "Happy", facet: "face" },
-            {model: "4x", unit: 91, title: "Sleepy", facet: "face" },
-            {model: "4x", unit: 2049, title: "Serious", facet: "face" },
+            {model: "4x", unit: 2478, title: "shocked", facet: "face" },
+            {model: "4x", unit: 1193, title: "crying", facet: "face" },
+            {model: "4x", unit: 1512, title: "happy", facet: "face" },
+            {model: "4x", unit: 91, title: "sleepy", facet: "face" },
+            {model: "4x", unit: 2049, title: "serious", facet: "face" },
         ]
     },
 
-    
+
     {
         title: "Religions",
         description: "",
@@ -47,9 +47,9 @@ let families = [
             {model: "4x", unit: 479, title: "Islam?", facet: "logo" }, // or 1860
             {model: "4x", unit: 929, title: "Judaism", facet: "any" },
             {model: "4x", unit: 291, title: "Hinduism", facet: "any" },
-            {model: "4x", unit: 293, title: "Catholicism", facet: "any" }, 
+            {model: "4x", unit: 293, title: "Catholicism", facet: "any" },
             // 1777 might be thought of as a Christianity neuron insteead of a people neuron. Top words:  christ, churches, baptist, gospel, ministries, christianity, theology, jesus, pray, christians, praise, church, pastor, prayer, biblical, salvation, worship, jerusalem, christian, bible
-            // Budhism wasn't in top words??? 
+            // Budhism wasn't in top words???
             {model: "4x", unit: 1376, title: "Bible", facet: "any" },
         ]
     },
@@ -91,8 +91,8 @@ let families = [
         neurons: [
             {model: "4x", unit: 1640, title: "altered image", facet: "text" },
             {model: "4x", unit: 2272, title: "bunny ears", facet: "any" },
-            {model: "rn101", unit: 1471, title: "hoodie/cold", facet: "face" },
-            {model: "rn101", unit: 1051, title: "Crowd or vigil", facet: "logo" },
+            {model: "rn101", unit: 1471, title: "hoodie, cold", facet: "face" },
+            {model: "rn101", unit: 1051, title: "crowd, vigil", facet: "logo" },
             {model: "rn101", unit: 227, title: "photobomb", facet: "any" },
         ]
     },
@@ -104,11 +104,9 @@ let families = [
             {model: "4x", unit: 2439, title: "Halloween", facet: "any" },
             {model: "4x", unit: 776, title: "Birthday", facet: "any" },
             {model: "4x", unit: 1326, title: "Christmas", facet: "any" },
+            {model: "4x", unit: 1204, title: "Easter", facet: "any" },
+            {model: "rn101", unit: 881, title: "Eid Mubarak", facet: "any" },
             {model: "rn101", unit: 865, title: "Christmas", facet: "any" },
-            {model: "4x", unit: 1204, title: "Easter", facet: "any" }, 
-            {model: "rn101", unit: 881, title: "Eid Mubarak", facet: "any" }, 
-
-            
         ]
     },
 
@@ -118,7 +116,7 @@ let families = [
         neurons: [
             {model: "4x", unit: 924, title: "Pokémon", facet: "logo" },
             {model: "rn101", unit: 905, title: "Marvel", facet: "any" },
-            {model: "rn101", unit: 2043, title: "legend of zelda", facet: "logo" },
+            {model: "rn101", unit: 2043, title: "Legend of Zelda", facet: "logo" },
             {model: "rn101", unit: 1532, title: "Star Wars", facet: "indoor" },
             {model: "rn101", unit: 789, title: "The Simpsons", facet: "logo" },
         ]
@@ -166,7 +164,7 @@ let families = [
             { model: "rn101", unit: 1006, title: "temperature", facet: "text" },
             { model: "rn101", unit: 1049, title: "theatre", facet: "logo" },
             { model: "rn101", unit: 480, title: "past tense", facet: "text" },
-            
+
         ]
     },
 
@@ -184,7 +182,7 @@ let families = [
     //     title: "",
     //     description: "",
     //     neurons: [
-            
+
     //     ]
     // }
 
@@ -198,8 +196,8 @@ let other_families = [
         description: "",
         neurons: [
             {model: "rn101", unit: 1979, title: "morning", facet: "any" },
-            {model: "4x", unit: 2364, title: "Summer", facet: "any" },
-            {model: "4x", unit: 2403, title: "mid 1900s", facet: "any" },
+            {model: "4x", unit: 2364, title: "summer", facet: "any" },
+            {model: "4x", unit: 2403, title: "mid-1900s", facet: "any" },
             {model: "", unit: 0, title: "", facet: "any" },
             {model: "", unit: 0, title: "", facet: "any" },
             {model: "", unit: 0, title: "", facet: "any" },
@@ -321,8 +319,8 @@ let other_families = [
     {/each }
 </div>
 <div class="figcaption">
-    <a href='#neuron-families' class='figure-anchor'>Figure N:</a> This diagram presents selelcted neurons from the final layer of four CLIP models, hand organized into "families" of similar neurons. Each neuron is represented by a feature visualization (selected from regular or <a>faceted feature visualization</a> to best illustrate the neuron) with human chosen labels to help quickly provide a sense of each neuron. Labels were picked after looking at hundreds of stimuli that activate the neuron, in addition to feature visualizations.<br><br>
+    <a href='#neuron-families' class='figure-anchor'>Figure N:</a> This diagram presents selected neurons from the final layer of four CLIP models, hand organized into "families" of similar neurons. Each neuron is represented by a feature visualization (selected from regular or <a>faceted feature visualization</a> to best illustrate the neuron) with human-chosen labels to help quickly provide a sense of each neuron. Labels were picked after looking at hundreds of stimuli that activate the neuron, in addition to feature visualizations.<br><br>
 
-    You can click on any neuron to open it up in OpenAI Micoroscope to see feature visualizations, dataset examples that maximally activate the neuron, and more.
+    You can click on any neuron to open it up in OpenAI Microscope to see feature visualizations, dataset examples that maximally activate the neuron, and more.
 </div>
 </div>
