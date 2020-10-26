@@ -45,6 +45,11 @@ What features exist in CLIP models? In this section, we’ll examine the most ab
 It’s important to understand that these neurons aren’t object detectors: they’re much more abstract and associational. They often have some core object or concept which their activation peaks for, but they will fire for associated ideas. They also tend to be maximally inhibited by stimuli which could be seen, in a very abstract way, as their opposite.
 
 
+import NeuronFamilies from './diagrams/NeuronFamilies.svelte'
+
+<Svelte component={NeuronFamilies} />
+
+
 <h3 id="person-neurons">
 Person Neurons
 </h3>
@@ -158,70 +163,6 @@ In addition to these regional neurons, we find that many other neurons seem to b
 <!-- import RegionalConditional from './pages/regionalConditional'
 
 <RegionalConditional /> -->
-
-<h3 id="miscellaneous-neurons">
-Miscellaneous Neurons
-</h3>
-
-import NeuronFamilies from './diagrams/NeuronFamilies.svelte'
-
-<Svelte component={NeuronFamilies} />
-
-**Person trait neurons.** These neurons detect gender<d-footnote>By this, we mean both that it responds to people presenting as this gender, as well as that it responds to concepts associated with that gender.</d-footnote> and age, as well as facial features like mustaches. (Ethnicity tends to be represented by regional neurons.)
-
-import PersonTraitNeurons from './diagrams/PersonTraitNeurons.svelte'
-
-<Svelte component={PersonTraitNeurons} container={<div />} />
-
-**Image type neurons.** These neurons detect different ways in which an image might be drawn, rendered, or photographed, or different contexts in which an image might occur.
-
-import ImageTypeNeurons from './diagrams/ImageTypeNeurons.svelte'
-
-<Svelte component={ImageTypeNeurons} container={<div />} />
-
-**Image feature neurons.** These neurons detect extraneous features that a photo might contain: photobombs and bunny ears, the heads of people seated in front of you at a lecture, Photoshopped modifications, and more.
-
-import ImageFeatureNeurons from './diagrams/ImageFeatureNeurons.svelte'
-
-<Svelte component={ImageFeatureNeurons} container={<div />} />
-
-**Counting neurons.** These neurons detect duplicates of the same person or thing, and can distinguish them by their count.
-
-import CountingNeurons from './diagrams/CountingNeurons.svelte'
-
-<Svelte component={CountingNeurons} container={<div />} />
-
-**Holiday neurons.** These neurons recognize the names, decorations, and traditional trappings around a holiday.
-
-import HolidayNeurons from './diagrams/HolidayNeurons.svelte'
-
-<Svelte component={HolidayNeurons} container={<div />} />
-
-**Fictional universe neurons.** These neurons represent characters and concepts from within particular fictional universes.
-
-import FictionalUniverseNeurons from './diagrams/FictionalUniverseNeurons.svelte'
-
-<Svelte component={FictionalUniverseNeurons} container={<div />} />
-
-**Brand neurons.** Like the neurons that recognize the identities of people, these neurons recognize brand identities.
-
-import BrandNeurons from './diagrams/BrandNeurons.svelte'
-
-<Svelte component={BrandNeurons} container={<div />} />
-
-**Typographic neurons.** Surprisingly, despite being able to “read” words and map them to semantic features, the model keeps a handful of more typographic features in its high-level representations. Like a child spelling out a word they don’t know, we suspect these neurons help the model represent text it can’t fully read.
-
-import TypographicNeurons from './diagrams/TypographicNeurons.svelte'
-
-<Svelte component={TypographicNeurons} container={<div />} />
-
-**Abstract concept neurons.** Finally, many of the neurons in the model contribute to recognizing an incredible diversity of abstract concepts that cannot be cleanly classified into the above categories.
-
-import AbstractConceptNeurons from './diagrams/AbstractConceptNeurons.svelte'
-
-<Svelte component={AbstractConceptNeurons} container={<div />} />
-
-
 
 
 <h3 id="feature-properties">
