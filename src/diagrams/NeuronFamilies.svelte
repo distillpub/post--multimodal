@@ -179,6 +179,22 @@ let families = [
             {model: "4x", unit: 310, title: "many", facet: "face" },
         ]
     },
+    {
+        title: "Time",
+        description: "",
+        neurons: [
+            {model: "rn101", unit: 1979, title: "Morning", facet: "any" },
+            {model: "4x", unit: 2364, title: "Summer", facet: "logo" },
+            {model: "4x", unit: 1829, title: "Winter", facet: "logo" },
+            {model: "4x", unit: 1714, title: "Day", facet: "logo" },
+            {model: "4x", unit:  705, title: "Month", facet: "logo" },
+            {model: "4x", unit:  764, title: "Year", facet: "logo" },
+            {model: "4x", unit: 2403, title: "Mid 1900s", facet: "any" },
+            {model: "4x", unit: 56, title: "Historical", facet: "any" },
+            {model: "", unit: 0, title: "", facet: "any" },
+            {model: "", unit: 0, title: "", facet: "any" },
+        ]
+    },
 
     // {
     //     title: "",
@@ -193,21 +209,6 @@ let families = [
 
 
 let other_families = [
-    {
-        title: "Time",
-        description: "",
-        neurons: [
-            {model: "rn101", unit: 1979, title: "morning", facet: "any" },
-            {model: "4x", unit: 2364, title: "Summer", facet: "any" },
-            {model: "4x", unit: 2403, title: "mid 1900s", facet: "any" },
-            {model: "", unit: 0, title: "", facet: "any" },
-            {model: "", unit: 0, title: "", facet: "any" },
-            {model: "", unit: 0, title: "", facet: "any" },
-            {model: "", unit: 0, title: "", facet: "any" },
-            {model: "", unit: 0, title: "", facet: "any" },
-            {model: "", unit: 0, title: "", facet: "any" },
-        ]
-    },
 
     {
         title: "",
