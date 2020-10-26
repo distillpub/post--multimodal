@@ -481,7 +481,7 @@
 
     <div style='grid-area: caption; max-width: 800px;' class='figcaption'>
         <a href='#region-neuron-diagram' class='figure-anchor'>Figure N:</a> This diagram contextualizes region neurons with a map.
-        Eeach neuron is mapped to a hue, and then regions where it activates are colored in that hue, with intensity proportional to activiation. If multiple neurons of opposing hues fire, the region will be colored in a desaturated gray. 
+        Each neuron is mapped to a hue, and then regions where it activates are colored in that hue, with intensity proportional to activiation. If multiple neurons of opposing hues fire, the region will be colored in a desaturated gray. 
         It can show their response
         to an <span class="pseudo-link" on:click={() => {map_mode = "geography";}}>unlabeled geographical map</span>,
         to <span class="pseudo-link" on:click={() => {map_mode = "countries";}}>country names</span>,
