@@ -17,7 +17,6 @@ const Paper = <React.Fragment>
           <li><a href="#person-neurons">Person Neurons</a></li>
           <li><a href="#emotion-neurons">Emotion Neurons</a></li>
           <li><a href="#region-neurons">Region Neurons</a></li>
-          <li><a href="#miscellaneous-neurons">Miscellaneous Neurons</a></li>
           <li><a href="#feature-properties">Feature Properties</a></li>
         </ul>
         <div><a href="#using-abstractions">Using Abstractions</a></div>
@@ -28,8 +27,7 @@ const Paper = <React.Fragment>
         </ul>
         <div><a href="#typographic-attacks">Typographic Attacks</a></div>
         <ul>
-          <li><a href="#physical-typographic-attacks">Physical Typographic Attacks</a></li>
-          <li><a href="#automated-typographic-attacks">Automated Typographic Attacks</a></li>
+          <li><a href="#evaluating-typographic-attacks">Evaluating Typographic Attacks</a></li>
         </ul>
         <div><a href="#appendix">Appendix 1: Methodological Details</a></div>
         <ul>
