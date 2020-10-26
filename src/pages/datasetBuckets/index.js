@@ -20,10 +20,12 @@ export default cofab(({ buckets }) => {
             padding={10}
             width={600}
           >
-            <Text>
-              min {min(images.map(({ value }) => value)).toFixed(2)} max{' '}
-              {max(images.map(({ value }) => value)).toFixed(2)}
-            </Text>
+            {images.length > 0 && (
+              <Text>
+                min {min(images.map(({ value }) => value)).toFixed(2)} max{' '}
+                {max(images.map(({ value }) => value)).toFixed(2)}
+              </Text>
+            )}
             <Surface flexFlow="row" flexWrap="wrap">
               {images.slice(0, 50).map(({ value, center, path }) => (
                 <Surface position="relative" width={w} height={w}>

@@ -22,6 +22,7 @@
     "numpy-loader": "^1.2.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
+    "react-portal": "^4.2.1",
     "victory": "^35.1.1"
   },
   "devDependencies": {

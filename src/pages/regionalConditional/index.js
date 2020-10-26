@@ -1,7 +1,8 @@
 import React from 'react'
-import data from './data'
+import cofab from '../cofab'
 
-import { Surface, Text } from '../../reactComponents/ui'
+import data from './africa_1317.json'
+import { Surface, Text } from '../reactComponents/ui'
 import { includes, reverse, sum } from 'lodash'
 import {
   VictoryArea,
@@ -42,7 +43,6 @@ export default class HumanLabels extends React.Component {
       labelNames = [],
       stackProps = {},
       children,
-      colors,
       yAxisProps = {
         label: '',
       },
@@ -52,6 +52,32 @@ export default class HumanLabels extends React.Component {
     if (typeof window === 'undefined') {
       return null
     }
+
+    ;`[(0, 'Non-African Person'),
+      (1, 'Non-African Symbol'),
+      (2, 'Non-African Celebrity'),
+      (3, 'Meme'),
+      (4, 'Other'),
+      (5, 'Tobacco'),
+      (6, 'Weapon'),
+      (7, 'Africa Word'),
+      (8, 'Dark Non-Person'),
+      (9, 'Person of African Descent')]`
+
+    const labelColors = {
+      'Non-African Person': '#2b9348',
+      'Non-African Symbol': 'rgb(0, 188, 212)',
+      'Non-African Celebrity': '#7acda3',
+      'Dark Non-Person': '#fca17d',
+      Tobacco: '#f2cc8f',
+      Other: '#e6e8e6',
+      Weapon: '#fcbf49',
+      Meme: '#b2ebf2',
+      'Africa Word': 'rgb(224, 52, 0)',
+      'Person of African Descent': '#ff5e5b',
+    }
+
+    const colors = labelNames.map((label) => labelColors[label])
 
     const width = 1300
     const { activeGroups } = this.state
@@ -63,8 +89,6 @@ export default class HumanLabels extends React.Component {
       yAxisProps.dy = -30
       stackProps.domain = { y: [0, 0.0000022] }
     }
-
-    const colorSize = 15
 
     const Label = ({ index, children, count }) => (
       <Surface
@@ -128,34 +152,27 @@ export default class HumanLabels extends React.Component {
         </Surface>
       )
     }
-    /*
-    'Video Games + Music',
-    'Black + Gay Rights',
-    'non-political',
-    'Political generic',
-    'Political trump aligned',
-    'Trump Minor',
-    'Trump Text',
-    'Trump Art',
-    'Trump Profile',
-    */
+    const stackIndexes = [7, 9, 8, 6, 5, 4, 3, 1, 0, 2]
 
     return (
       <figure className="fullscreen-diagram">
         <Surface width={width} margin="auto">
           <Surface flexFlow="row" marginLeft={60}>
-            <Group name="Neutral">
-              <Label index={8}>Video Games and Music</Label>
-              <Label index={7}>Black and LGBT Rights</Label>
-              <Label index={6}>Non-Political</Label>
-              <Label index={5}>Political Generic</Label>
+            <Group name="Non-Africa">
+              <Label index={0}>Person of Non-African Descent</Label>
+              <Label index={2}>Non-African Celebrity</Label>
+              <Label index={1}>Non-African Symbol</Label>
             </Group>
-            <Group name="Related to Donald Trump">
-              <Label index={4}>Trump Aligned Politics</Label>
-              <Label index={3}>Partially Photo of Trump</Label>
-              <Label index={2}>"Trump" Text</Label>
-              <Label index={1}>Trump Related Art</Label>
-              <Label index={0}>Photo of Trump</Label>
+            <Group name="Neutral">
+              <Label index={3}>Meme</Label>
+              <Label index={4}>Other</Label>
+              <Label index={5}>Tobacco</Label>
+              <Label index={6}>Weapon</Label>
+              <Label index={8}>Dark Non-Human</Label>
+            </Group>
+            <Group name="African">
+              <Label index={7}>African Word</Label>
+              <Label index={9}>Person of African Descent</Label>
             </Group>
           </Surface>
           <Surface
@@ -165,14 +182,18 @@ export default class HumanLabels extends React.Component {
           >
             <VictoryChart width={width} height={400} {...stackProps}>
               <VictoryStack
-                colorScale={colors}
+                colorScale={stackIndexes.map(
+                  (index) => labelColors[labelNames[index]]
+                )}
                 // interpolation={interpolation}
                 // interpolation="none"
                 animate={{
                   duration: 800,
                 }}
               >
-                {heights.map((height, index) => {
+                {stackIndexes.map((index) => {
+                  const height = heights[index]
+                  console.log('height is', height, 'heights len', heights)
                   const isZero = hasActiveGroup && !isGroupActive(index)
                   const victoryData = bins
                     .map((binValue, bin) => {
@@ -235,15 +256,7 @@ export default class HumanLabels extends React.Component {
               alignSelf: 'center',
             }}
           >
-            We collected about 650 images that caused the Trump neuron to fire
-            different amounts. In each 15 unit increment from -40 to 115 we
-            sampled an equal number of images then labeled them by hand into a
-            number of categories. While we labeled we could not see the
-            activation. Using this dataset we can estimate the conditional
-            probability of each category at each level of activation. We see
-            that the higher activations of the Trump neuron are highly
-            selective, with more than 90% of the images causing an activation of
-            more than 55 related to Donald Trump.
+            Here are some notes on the labeling process..
           </figcaption>
         </Surface>
       </figure>
