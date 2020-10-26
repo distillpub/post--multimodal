@@ -5,6 +5,56 @@
 let families = [
 
     {
+        title: "Region Neurons",
+        description: "",
+        neurons: [
+            {"model": "4x", "unit": 862, title: "USA", "facet": "any"},
+            {"model": "4x", "unit": 218, title: "Europe", "facet": "any"}, 
+            {"model": "4x", "unit": 1067, title: "India", "facet": "any"},
+            {"model": "4x", "unit": 1257, title: "West Africa?", "facet": "any"},
+            {"model": "4x", "unit": 513, title: "Australia", "facet": "any"},
+        ]
+    },
+
+    {
+        title: "People Neurons",
+        description: "",
+        neurons: [
+            {model: "4x", unit: 89, title: "Donald Trump", facet: "face" },
+            {model: "4x", unit: 1063, title: "Elvis Presley", facet: "face" },
+            {model: "4x", unit: 263, title: "Lady Gaga", facet: "face" },
+            {model: "4x", unit: 2233, title: "Ariana Grande", facet: "face" },
+            {model: "4x", unit: 1777, title: "Jesus Christ", facet: "face" },
+        ]
+    },
+    {
+        title: "Emotion Neurons",
+        description: "",
+        neurons: [
+            {model: "4x", unit: 2478, title: "Shocked", facet: "face" },
+            {model: "4x", unit: 1193, title: "Crying", facet: "face" },
+            {model: "4x", unit: 1512, title: "Happy", facet: "face" },
+            {model: "4x", unit: 91, title: "Sleepy", facet: "face" },
+            {model: "4x", unit: 2049, title: "Serious", facet: "face" },
+        ]
+    },
+
+    
+    {
+        title: "Religions",
+        description: "",
+        neurons: [
+            {model: "4x", unit: 479, title: "Islam?", facet: "logo" }, // or 1860
+            {model: "4x", unit: 929, title: "Judaism", facet: "any" },
+            {model: "4x", unit: 291, title: "Hinduism", facet: "any" },
+            {model: "4x", unit: 293, title: "Catholicism", facet: "any" }, 
+            // 1777 might be thought of as a Christianity neuron insteead of a people neuron. Top words:  christ, churches, baptist, gospel, ministries, christianity, theology, jesus, pray, christians, praise, church, pastor, prayer, biblical, salvation, worship, jerusalem, christian, bible
+            // Budhism wasn't in top words??? 
+            {model: "4x", unit: 1376, title: "Bible", facet: "any" },
+        ]
+    },
+
+    {
         title: "Person trait neurons",
         description: "These neurons detect gender<d-footnote>By this, we mean both that it responds to people presenting as this gender, as well as that it responds to concepts associated with that gender.</d-footnote> and age, as well as facial features like mustaches. (Ethnicity tends to be represented by regional neurons.)",
         neurons: [
@@ -56,6 +106,9 @@ let families = [
             {model: "4x", unit: 1326, title: "Christmas", facet: "any" },
             {model: "rn101", unit: 865, title: "Christmas", facet: "any" },
             {model: "4x", unit: 1204, title: "Easter", facet: "any" }, 
+            {model: "rn101", unit: 881, title: "Eid Mubarak", facet: "any" }, 
+
+            
         ]
     },
 
@@ -102,6 +155,7 @@ let families = [
         description: "Finally, many of the neurons in the model contribute to recognizing an incredible diversity of abstract concepts that cannot be cleanly classified into the above categories.",
         neurons: [
             { model: "4x", unit: 371, title: "you", facet: "text" },
+            { model: "4x", unit: 1883, title: "I / me", facet: "text" },
             { model: "rn101", unit: 696, title: "heart", facet: "any" },
             { model: "rn101", unit: 222, title: "math", facet: "any" },
             { model: "rn101", unit: 926, title: "self-care", facet: "any" },
@@ -136,6 +190,37 @@ let families = [
 
 
 ];
+
+
+let other_families = [
+    {
+        title: "Time",
+        description: "",
+        neurons: [
+            {model: "rn101", unit: 1979, title: "morning", facet: "any" },
+            {model: "4x", unit: 2364, title: "Summer", facet: "any" },
+            {model: "4x", unit: 2403, title: "mid 1900s", facet: "any" },
+            {model: "", unit: 0, title: "", facet: "any" },
+            {model: "", unit: 0, title: "", facet: "any" },
+            {model: "", unit: 0, title: "", facet: "any" },
+            {model: "", unit: 0, title: "", facet: "any" },
+            {model: "", unit: 0, title: "", facet: "any" },
+            {model: "", unit: 0, title: "", facet: "any" },
+        ]
+    },
+
+    {
+        title: "",
+        description: "",
+        neurons: [
+            {model: "", unit: 0, title: "", facet: "any" },
+            {model: "", unit: 0, title: "", facet: "any" },
+            {model: "", unit: 0, title: "", facet: "any" },
+            {model: "", unit: 0, title: "", facet: "any" },
+            {model: "", unit: 0, title: "", facet: "any" },
+        ]
+    },
+]
 </script>
 
 <style>
