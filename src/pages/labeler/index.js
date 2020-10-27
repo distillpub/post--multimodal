@@ -68,7 +68,7 @@ export default cofab(({ buckets }) => {
         {randomIndexes
           .map((index) => ({ ...allImages[index], index }))
           .map(({ value, center, path, index }) =>
-            false && allLabels[index] ? (
+            (allLabels[index] || '').trim().length > 0 ? (
               false
             ) : (
               <Surface

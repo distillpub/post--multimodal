@@ -159,17 +159,11 @@ import RegionalDiagram from './diagrams/RegionalNeurons.svelte'
 
 In addition to these regional neurons, we find that many other neurons seem to be “<a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, null)}}>secondarily regional</a>.”<d-footnote>Some caution is needed in interpreting these neurons as truly regional, rather than spuriously weakly firing for part of a world map. Important validations are that they fire for the same region on multiple different maps, and if they respond to words for countries or cities in that region.</d-footnote> These neurons don’t have a region as the primary focus, but have some kind of geographic information baked in, firing weakly for regions on a world map related to them. For example, an <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, 1)}}>entrepreneurship neuron</a> that fires for California, a <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, 4)}}>cold neuron</a> that fires for the Arctic, and a big cat neuron that fires for Africa.<d-footnote>Most models have a great cat neuron, and it generally only fires for Africa. This misses non-lion great cats in other parts of the world, but mirrors a plausible and perhaps common human error.</d-footnote><d-footnote>We also find an <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, 0)}}>angel neuron</a> which responds to “Los Angeles” and California on a map.</d-footnote> Other neurons link concepts to regions of the world in ways that seem Americentric or even racist: an <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, 2)}}>immigration neuron</a> that responds to Latin America, and a <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, 5)}}>terrorism neuron</a> that responds to the Middle East.<d-footnote>We also find that the linear combination of neurons that respond to Russia on a map strongly responds to Pepe the frog, a symbol of white nationalism in the United States allegedly promoted by Russia. Our impression is that Russians probably wouldn’t particularly see this as a symbol of Russia, suggesting it is more “Russia as understood by the US.”</d-footnote>
 
+As we did for neurons in the people and emotion families, we can hand-label images roughly corresponding to West Africa to understand its activations in more depth. It fires most to people of African descent and African words like country names. Interestingly, it has a negative pre-ReLU activation to people of non-African descent, and even more so for celebrities of non-African descent. This suggests the neuron may learn about specific celebrities, and has greater confidence they are not associated with its region.
 
-<Todo to="Nick" value={9}>Do conditional probability experiment for regional neuron.</Todo>
+import RegionalConditional from './pages/regionalConditional'
 
-<!-- import RegionalConditional from './pages/regionalConditional'
-
-<RegionalConditional /> -->
-
-
-<h3 id="feature-properties">
-Feature properties
-</h3>
+<RegionalConditional neuron={1257} />
 
 <Todo to="Chris" value={6}>Can we tighten this a bunch with even more aggressive footnotes?</Todo>
 
