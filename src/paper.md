@@ -98,15 +98,15 @@ import EmotionsIntro from './pages/emotions/intro'
 
 <EmotionsIntro />
 
-<Todo to="Nick" value={6}>replace accepting an offer or fix, consider adding small indoor figure footnote, keep indoor</Todo>
+<Todo to="Nick" value={2}>consider adding small indoor figure footnote, highlighting coolest ones</Todo>
 
 <Todo to="Chris" value={5}>Create new version of emotion neuron diagrams in margin</Todo>
 
 These neurons are flexible, recognizing body language and facial expressions in humans and animals, drawings, text, and even landscapes and interior designs that evoke the emotion's vibe. The surprise neuron activates even when the majority of the face is obscured. It responds to slang like "OMG!" and "WTF", and text feature visualization produces similar words of shock and surprise.
 
-import MarginNeuronShock from './diagrams/MarginNeuronShock.svelte'
+<!-- import MarginNeuronShock from './diagrams/MarginNeuronShock.svelte'
 
-<Svelte component={MarginNeuronShock}  container={<div className="margin-diagram" style={{gridRow: "auto / span 1"}} ></div>} />
+<Svelte component={MarginNeuronShock}  container={<div className="margin-diagram" style={{gridRow: "auto / span 1"}} ></div>} /> !-->
 
 <!-- import EmotionsSurprise from './pages/emotions/surprise'
 
@@ -114,9 +114,9 @@ import MarginNeuronShock from './diagrams/MarginNeuronShock.svelte'
 
 Other neurons learn to detect emotions as part of a broader concept. A neuron that primarily detects pornographic content has a secondary function of detecting the emotion of arousal. A price tag neuron detects an expression of looking up in awe, and text feature visualization includes "looking up into the heavens". A neuron that primarily detects official letters of acceptance or notices of appointment also contains a facial expression of acceptance.
 
-import MarginNeuronsMisc from './diagrams/MarginNeuronsMisc.svelte'
+<!-- import MarginNeuronsMisc from './diagrams/MarginNeuronsMisc.svelte'
 
-<Svelte component={MarginNeuronsMisc}  container={<div className="margin-diagram" style={{gridRow: "auto / span 1"}} ></div>} />
+<Svelte component={MarginNeuronsMisc}  container={<div className="margin-diagram" style={{gridRow: "auto / span 1"}} ></div>} /> !-->
 
 <!-- import EmotionsMinor from './pages/emotions/minor'
 
@@ -124,9 +124,9 @@ import MarginNeuronsMisc from './diagrams/MarginNeuronsMisc.svelte'
 
 On the other extreme, some neurons respond simply to specific body and facial expressions, like the silly expression neuron. It activates most to the internet-born duckface expression and peace signs, and both words show up in its text feature visualization.
 
-import MarginNeuronDuck from './diagrams/MarginNeuronDuck.svelte'
+<!-- import MarginNeuronDuck from './diagrams/MarginNeuronDuck.svelte'
 
-<Svelte component={MarginNeuronDuck} container={<div className="margin-diagram" style={{gridRow: "auto / span 2"}} ></div>} />
+<Svelte component={MarginNeuronDuck} container={<div className="margin-diagram" style={{gridRow: "auto / span 2"}} ></div>} /> !-->
 
 <!-- import EmotionsDuckface from './pages/emotions/minor/duckface'
 
@@ -158,7 +158,7 @@ We find that CLIP models develop <i>region neurons</i> responding to geographic 
 Regional neurons vary greatly in scale, from neurons corresponding to entire hemispheres -- for example, a  <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 1, 0)}}>Northern Hemisphere neuron</a> which responds to bears, moose, coniferous forest, and the entire Northern third of a world map -- down to sub-regions of countries, such as the US West Coast. Which regions the model dedicates neurons to seems stochastic and varies across models we examined.<d-footnote>Some regional neurons seem to form more consistently than others. Which neurons form doesn't seem to be fully explained by prevalence in the dataset: for example, <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 6, null)}}>every model has an Australia neuron</a>, but not all models seem to have a UK neuron. Why is that? One intuition is that there’s more variance in neurons when there’s a natural supercategory they can be grouped into. For example, when an individual UK neuron doesn’t exist, it seems to be folded into a Europe neuron. In Africa, we sometimes see multiple different Africa neurons (in particular a South/West Africa neuron and an East Africa neuron), while other times there seems to be a single unified Africa neuron. In contrast, Australia is perhaps less subdividable, since it’s both a continent and country.</d-footnote>
 
 
- 
+
 
 import RegionalDiagram from './diagrams/RegionalNeurons.svelte'
 
@@ -169,26 +169,37 @@ In addition to these regional neurons, we find that many other neurons seem to b
 
 As we did for neurons in the people and emotion families, we can hand-label images roughly corresponding to West Africa to understand its activations in more depth. It fires most to people of African descent and African words like country names. Interestingly, it has a negative pre-ReLU activation to people of non-African descent, and even more so for celebrities of non-African descent. This suggests the neuron may learn about specific celebrities, and has greater confidence they are not associated with its region.
 
-import RegionalConditional from './pages/regionalConditional'
+import RegionalConditional from './pages/regions/regionalConditional'
 
 <RegionalConditional neuron={1257} />
+
+During labeling we were surprised at how the neuron picked up subtle images of people we sometimes missed ourselves. This includes an artistic representation of a person of African descent in a butter knife and a digital drawing of a person of African descent with a face only a few pixels across. These subtle cases may help explain why the neuron sometimes weakly activates dark textures of non-humans, such as black cat fur or dark leather. Perhaps these false positives are a worthwhile tradeoff for learning a representation flexible enough to capture these subtle cases.
+
+import RegionMargin from './pages/regions/margin'
+
+<RegionMargin />
+
+<h3 id="feature-properties">
+Feature properties
+</h3>
 
 <Todo to="Chris" value={6}>Can we tighten this a bunch with even more aggressive footnotes?</Todo>
 
 So far, we’ve looked at particular neurons to give a sense of the kind of features that exist in CLIP models. It's worth noting several properties that either warrant emphasis or might be missed in the discussion of individual features:
-    
+
+		
 <p><b>Multimodality / Abstraction:</b> As we’ve seen in the previous sections, most CLIP neurons are multimodal and abstract, responding to the same concept across forms such as photos, drawings, maps, images of text, and more.</p>
-    
+		
 import ImageWordEmbeddingFootnote from './diagrams/ImageWordEmbeddingFootnote.svelte'
 
 <p><b>Image-Based Word Embedding:</b> Despite being a vision model, one can produce “word embeddings” with the visual CLIP model by rastering words into images and then feeding these images into the model. Like normal word embeddings, the nearest neighbors of words tend to be semantically related.{/*<Svelte component={ImageWordEmbeddingFootnote}  container={<d-footnote />} />*/}  Word arithmetic <d-cite bibtex-key="mikolov2013linguistic" /> such as <br /><span style={{display: " inline-block", margin: 12}}><i>V(Img(</i>“King”<i>)) <span style={{margin: 4}}>-</span> V(Img(</i>“Man”<i>)) <span style={{margin: 4}}>+ </span>V(Img(</i>“Woman”<i>)) <span style={{margin:4}}>=</span> V(Img(</i>“Queen”<i>))</i></span><br /> work in some cases if we mask non-semantic lexicographic neurons (eg. “-ing” detectors). It seems likely that mixed arithmetic of words and images should be possible.</p>
-    
+		
 <p><b>Limited Multilingual Behavior:</b> Although CLIP’s training data was filtered to be English, many features exhibit limited multilingual responsiveness. For example, a “positivity” neuron (4x:36) responds to images of English “Thank You”, French “Merci”, German “Danke”, and Spanish “Gracias,” and also to English “Congratulations”, German “Gratulieren”, Spanish “Felicidades”, and Indonesian “Selamat”. As the example of Indonesian demonstrates, the model can recognize some words from non Romance/Germanic languages. However, we were unable to find any examples of the model mapping words in non-latin script to semantic meanings. It can recognize many scripts (Arabic, Chinese, Japanese, etc) and will activate the corresponding regional neurons, but doesn’t seem to be able to map words in those scripts to their meanings.<d-footnote>One interesting question is why the model developed reading abilities in latin alphabet languages, but not others -- was it because more data of that type slipped into the training data, or (the more exciting possibility) because it’s easier to learn a language from limited data if you already know the alphabet?</d-footnote></p>
-      
+			
 <p><b>Bias:</b> Certain kinds of bias seem to be embedded into these representations, similar to classic biases in word embeddings (eg. <d-cite bibtex-key="bolukbasi2016man" />). The most striking examples are likely racial and religious bias. For example, there seems to be a “terrorism/Islam” neuron (4x:1596) which responds to images of words such as “Terrorism”, “Attack”, “Horror”, “Afraid”, and also “Islam”, “Allah”, “Muslim”. This isn’t just an illusion from looking at a single neuron: the image-based word embedding for “Terrorism” has a cosine similarity of 0.98 with “Muslims”. Similarily, an “illegal immigration neuron” (4x:2213) selects for Latin America countries.</p>
 
 (We’ll see further examples of bias in the next section, when we how these features are used in aligning with captions.)
-    
+		
 <p><b>Polysemanticity and Conjoined Neurons:</b>  Although we’ve focused on neurons which seem to have a single clearly defined concept they respond to, many CLIP neurons are “polysemantic” <d-cite bibtex-key="olah2017feature,olah2020zoom" />, responding to multiple unrelated features. Unusually, polysemantic neurons in CLIP often have suspicious links between the different concepts they respond to. For example, we observe as <b>Phil</b>adelphia/<b>Phil</b>ipines/<b>Phil</b>ip neuron, a Christm<b>as</b>/<b>As</b>s neuron, and an Ac<b>tor</b>/Velocerap<b>tor</b> neuron. The concepts in these neurons seem “conjoined”, overlapping in a superficial way in one facet, and then generalizing out in multiple directions. We haven’t ruled out the possibility that these are just coincidences, given the large number of facets that could overlap for each concept. But if conjoined features genuinely exist, they hint at new potential explanations of polysemanticity.<d-footnote>In the past, when we've observed seemingly polysemantic neurons, we've considered two possibilities: either it is responding to some shared feature of the stimuli, in which case it isn’t really polysemantic, or it is genuinely responding to two unrelated cases. Usually we distinguish these cases with feature visualization. For example, InceptionV1 4e:55 responds to cars and cat heads. One could imagine it being the case that it’s responding to some shared feature -- perhaps cat eyes and car lights look similar. But feature visualization establishes a facet selecting for a globally coherent cat head, whiskers and all, as well as the metal chrome and corners of a car. We concluded that it was genuinely <i>OR(cat, car)</i>.<br /><br />
 Conjoined features can be seen as a kind of mid-point between detecting a shared low-level feature and detecting independent cases. Detecting Santa Claus and “turn” are clearly true independent cases, but there was a different facet where they share a low-level feature. <br /><br />
 Why would models have conjoined features? Perhaps they’re a vestigial phenomenon from early in training when the model couldn’t distinguish between the two concepts in that facet. Or perhaps there’s a case where they’re still hard to distinguish, such as large font sizes. Or maybe it just makes concept packing more efficient, as in the superposition hypothesis.</d-footnote></p>
@@ -278,7 +289,7 @@ Emotional intelligence
 
 <Todo to="Nick" value={7}>Circuit editing or other experiment to validate that increasing bias neuron increases relevant word. Or, end to end by running an image relevant to the bias neuron (lgbt image to see if accepted goes up). Pay particular to bias examples and how confident my text sounds.</Todo>
 <Todo to="Nick" value={7}>Figure out exactly what nmf is doing and make sure they do what I think and if they don't, explain that. If I'm doing the top k components, clarify in footnote</Todo>
- 
+
 English has far more words for emotions than the image stream has emotion neurons. And yet, the vision stream recognizes these more obscure emotions. How can it do that? We can see what different emotion words correspond to on the image stream by taking attribution [ref to previous section] to "I feel X" on the language stream. This gives us a vector of image neurons for each emotion word. Looking at a list of common emotion words<d-footnote>from a feeling wheel, we'll see later</d-footnote>, we see that the largest elements in their vectors are usually emotion neurons, composed in reasonable ways to span this broader space of emotions. This mirrors a line of thinking in psychology where combinations of basic emotions form the “complex emotions” we experience.<d-footnote>theory of constructed emotion</d-footnote>
 
 For example, the jealousy emotion is success + grumpy. Bored is relaxed + grumpy. Intimate is soft smile + heart - sick. Interested is question mark + heart and inquisitive is question mark + shocked. Surprise is celebration + shock.

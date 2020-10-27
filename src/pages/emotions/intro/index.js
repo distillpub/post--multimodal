@@ -5,7 +5,6 @@ import { SegmentedControl } from 'evergreen-ui'
 import { Surface, Text } from '../../reactComponents/ui'
 
 const friendlyName = {
-  'Accept / Appoint': 'Accepting an Offer',
   Blocked: 'Rejecting',
   'Price tag': 'Perplexed',
   Punishment: 'Punished',
@@ -14,14 +13,13 @@ const friendlyName = {
 const imgSize = 166
 
 const neurons = [
-  ['Hitler', 'Jesus', 'Spiderman', 'Sleepy'],
-  // ['Shocked', 'Crying', 'Happy', 'Sleepy'],
+  ['Shocked', 'Crying', 'Happy', 'Sleepy'],
   ['Evil', 'Punishment', 'Serious', 'Soft smile'],
-  ['Incarcerated', 'Erotic', 'Blocked', 'Accept / Appoint'],
+  ['Incarcerated', 'Erotic', 'Blocked', 'Question Mark'],
 ]
 
 export default () => {
-  const [strength, setStrength] = useState(8)
+  const [strength, setStrength] = useState(5)
   const [facet, setFacet] = useState('face')
 
   return (

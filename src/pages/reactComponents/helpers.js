@@ -20,7 +20,9 @@ const nameToNeuron = {
   Jesus: 1777,
   Hitler: 309,
   Spiderman: 550,
+  'Question Mark': 2202,
 }
+
 export const getEmotion = (name, facet, strength) => {
   const path = `${
     isNumber(name) ? name : nameToNeuron[name]
