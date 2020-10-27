@@ -6,7 +6,7 @@
 
 <div>
   <ClassificationCard
-    imageUrl={"/typographic/small_attacks/example_second.png"}
+    imageUrl={"typographic/small_attacks/example_second.png"}
     imageAltText={"a picture of a meerkat with the word 'iPod' overlaid eight times"}
     probabilities={two_example_attack.linear_probes.results.iPod.iPod.full_results[0][13].slice(0,9)}
     customHues={{}}
