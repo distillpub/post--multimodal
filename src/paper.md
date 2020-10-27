@@ -100,29 +100,37 @@ import EmotionsIntro from './pages/emotions/intro'
 
 <Todo to="Nick" value={6}>replace accepting an offer or fix, consider adding small indoor figure footnote, keep indoor</Todo>
 
+<Todo to="Chris" value={5}>Create new version of emotion neuron diagrams in margin</Todo>
+
 These neurons are flexible, recognizing body language and facial expressions in humans and animals, drawings, text, and even landscapes and interior designs that evoke the emotion's vibe. The surprise neuron activates even when the majority of the face is obscured. It responds to slang like "OMG!" and "WTF", and text feature visualization produces similar words of shock and surprise.
 
-import EmotionsSurprise from './pages/emotions/surprise'
+import MarginNeuronShock from './diagrams/MarginNeuronShock.svelte'
 
-<EmotionsSurprise />
+<Svelte component={MarginNeuronShock}  container={<div className="margin-diagram" style={{gridRow: "auto / span 1"}} ></div>} />
+
+<!-- import EmotionsSurprise from './pages/emotions/surprise'
+
+<EmotionsSurprise /> -->
 
 Other neurons learn to detect emotions as part of a broader concept. A neuron that primarily detects pornographic content has a secondary function of detecting the emotion of arousal. A price tag neuron detects an expression of looking up in awe, and text feature visualization includes "looking up into the heavens". A neuron that primarily detects official letters of acceptance or notices of appointment also contains a facial expression of acceptance.
 
+import MarginNeuronsMisc from './diagrams/MarginNeuronsMisc.svelte'
 
-import EmotionsMinor from './pages/emotions/minor'
+<Svelte component={MarginNeuronsMisc}  container={<div className="margin-diagram" style={{gridRow: "auto / span 1"}} ></div>} />
 
-<EmotionsMinor />
+<!-- import EmotionsMinor from './pages/emotions/minor'
 
-<Todo to="Chris" value={6}>Come up with a spec with Nick of how to transition these diagrams.</Todo>
-<Todo to="Chris" value={5}>Create new version of diagrams</Todo>
+<EmotionsMinor /> -->
 
 On the other extreme, some neurons respond simply to specific body and facial expressions, like the silly expression neuron. It activates most to the internet-born duckface expression and peace signs, and both words show up in its text feature visualization.
 
+import MarginNeuronDuck from './diagrams/MarginNeuronDuck.svelte'
 
+<Svelte component={MarginNeuronDuck} container={<div className="margin-diagram" style={{gridRow: "auto / span 2"}} ></div>} />
 
-import EmotionsDuckface from './pages/emotions/minor/duckface'
+<!-- import EmotionsDuckface from './pages/emotions/minor/duckface'
 
-<EmotionsDuckface />
+<EmotionsDuckface /> -->
 
 We're excited at the promise of emotion neurons to benefit social studies that need algorithmic access to emotion detectors. These neurons could help people understand the emotional content of a long video, either by coloring the video's scrubber based on the emotions at each time, or by showing an Activation Atlas of the scenes of a movie based on emotion to see cinematography in a new way. These emotions could also be useful for studying how expressions change over time. With a dataset of selfies over the last decade with their location tagged, perhaps one could better understand birth and spread of expressions like the duckface as it propagates across cultures and geographies.
 
