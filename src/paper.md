@@ -329,11 +329,8 @@ Typographic Attacks
 
 As we’ve seen, CLIP is full of multimodal neurons which respond to both images and text for a given concept. Given how strongly these neurons react to text, we wonder: can we perform a kind of non-programmatic adversarial attack – a *typographic attack* – using just a marker and an English word?
 
-<h3 id="physical-typographic-attacks">
-Physical Typographic Attacks
-</h3>
-
 To test this hypothesis, we took several common items and deliberately mislabeled them. We then observed how this affects ImageNet classifications (discussed <a href="imagenet-challenge">earlier</a>). These attacks often change the image’s classification.
+
 
 import InTheWild2 from './diagrams/InTheWild2.svelte'
 
@@ -349,18 +346,17 @@ While many classic adversarial attacks focus on making imperceptible changes to 
 
 
 
-<h3 id="automated-typographic-attacks">
-EvaluatingAutomated Typographic Attacks
+<h3 id="evaluating-typographic-attacks">
+Evaluating Typographic Attacks
 </h3>
 
-Our physical adversarial examples are a proof of concept, but they don’t give us a very good sense of how frequently typographic attacks succeed. Are typographic attacks reliable? Duct tape and markers don't scale, so we create a simple automated setup to measure the attack’s success rate on the ImageNet validation set.
+Our physical adversarial examples are a proof of concept, but they don’t give us a very good sense of how frequently typographic attacks succeed. Duct tape and markers don't scale, so we create a simple automated setup to measure the attack’s success rate on the ImageNet validation set.
 
 
 import AttackSetup from './diagrams/AttackSetup.svelte'
 
 <Svelte component={AttackSetup} container={<div style={{gridColumn: 'text / screen', marginTop: '40px', marginBottom: '40px' }} /> }   />
 
-<Todo to="Chelsea" value={3}>Run zero-shot results, get data</Todo>
 
 We found text snippets for our attacks in two different ways. Firstly, we manually looked through the multimodal model's neurons for those that appear sensitive to particular kinds of text. This is how we found the *piggy bank*, *waste container,* and *Siamese cat* attacks. Secondly, we brute-force searched through all of the ImageNet class names looking for short class names which are, in and of themselves, effective attacks. This is how we found *rifle*, *pizza*, *radio*, *iPod*, *shark*, and *library*.
 
@@ -375,6 +371,9 @@ Using this setup, we found several attacks to be reasonably effective. The most 
 import AutomatedAttacks from './diagrams/AutomatedAttacks.svelte'
 
 <SvelteInline component={AutomatedAttacks} />
+
+
+<Todo to="Chelsea" value={3}>Run zero-shot results, get data</Todo>
 
 [Assuming we have a zero-shot col in above table.] It’s worth noting that the zero-shot classifier is more vulnerable to these attacks than the linear probes classifier, but the attacks are somewhat effective on both.
 
