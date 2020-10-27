@@ -1,8 +1,7 @@
 import React from 'react'
-import cofab from '../cofab'
+import cofab from '../../cofab'
 
-import data from './africa_1317.json'
-import { Surface, Text } from '../reactComponents/ui'
+import { Surface, Text } from '../../reactComponents/ui'
 import { includes, reverse, sum } from 'lodash'
 import {
   VictoryArea,
@@ -13,6 +12,13 @@ import {
   VictoryGroup,
   VictoryStack,
 } from 'victory'
+import data1257 from './africa_1257.json'
+import data1317 from './africa_1317.json'
+
+const data = {
+  1257: data1257,
+  1317: data1317,
+}
 
 export default class HumanLabels extends React.Component {
   state = { activeGroups: [] }
@@ -34,6 +40,8 @@ export default class HumanLabels extends React.Component {
   }
 
   render() {
+    const { neuron } = this.props
+
     let {
       bins = [],
       heights = [],
@@ -47,7 +55,7 @@ export default class HumanLabels extends React.Component {
         label: '',
       },
       probChart = false,
-    } = data
+    } = data[neuron || 1317]
 
     if (typeof window === 'undefined') {
       return null
@@ -256,7 +264,18 @@ export default class HumanLabels extends React.Component {
               alignSelf: 'center',
             }}
           >
-            Here are some notes on the labeling process..
+            We labeled more than 400 images that causes a neuron that most
+            strongly responds to the word “Ghana” to fire at different levels of
+            activation, without access to how much each image caused the neuron
+            to fire while labeling. It fires most strongly for people of African
+            descent as well as African words like country names. It’s pre-ReLU
+            activation is negative for symbols associated with other countries,
+            like the Tesla logo or British flag, as well as people of
+            non-African descent. Many of its strongest negative activations are
+            for weaponry such as military vehicles and handguns. Ghana, the
+            country name it responds to most strongly, has a Global Peace Index
+            rating higher than most African countries, and perhaps it learns
+            this anti-association.
           </figcaption>
         </Surface>
       </figure>
