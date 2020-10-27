@@ -63,12 +63,14 @@
   }
   .neuron-feature-viz{
     width: 90px;
+    height: 90px;
   }
   .dataset-examples {
     display: grid;
     grid-template-rows: repeat(2, atuo);
     grid-template-columns: repeat(2, auto);
     width: 90px;
+    height: 90px;
     grid-gap: 1px;
   }
 </style>

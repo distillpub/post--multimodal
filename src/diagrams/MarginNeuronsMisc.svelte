@@ -51,6 +51,7 @@
     }
     .neuron-feature-viz{
       width: 90px;
+      height: 90px;
     }
     .dataset-examples {
       display: grid;
