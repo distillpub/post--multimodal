@@ -1,6 +1,6 @@
 
-<script>import { facet_icon_url, microscope_url } from "../urls";
-
+<script>
+import { facet_icon_url, microscope_url } from "../urls";
 
 let families = [
 
@@ -184,13 +184,26 @@ let families = [
             {model: "rn101", unit: 1979, title: "morning", facet: "any" },
             {model: "4x", unit: 2364, title: "summer", facet: "logo" },
             {model: "4x", unit: 1829, title: "winter", facet: "logo" },
-            {model: "4x", unit: 1714, title: "day", facet: "logo" },
-            {model: "4x", unit:  705, title: "month", facet: "logo" },
-            {model: "4x", unit:  764, title: "year", facet: "logo" },
-            {model: "4x", unit: 2403, title: "mid-1900s", facet: "any" },
-            {model: "4x", unit: 56, title: "historical", facet: "any" },
+            {model: "4x", unit: 1714, title: "day", facet: "text" },
+            {model: "4x", unit:  705, title: "month", facet: "text" },
+            {model: "4x", unit:  764, title: "year", facet: "text" },
+            {model: "4x", unit: 2403, title: "mid-1900s", facet: "text" },
+            {model: "4x", unit: 56, title: "historical", facet: "text" },
             {model: "", unit: 0, title: "", facet: "any" },
             {model: "", unit: 0, title: "", facet: "any" },
+        ]
+    },
+
+    {
+        title: "Colors",
+        description: "",
+        neurons: [
+            {model: "4x", unit: 2505, title: "Red", facet: "any" },
+            {model: "4x", unit:  542, title: "Green", facet: "any" },
+            {model: "4x", unit:  959, title: "Blue", facet: "any" },
+            {model: "4x", unit:  713, title: "Yellow", facet: "any" },
+            {model: "4x", unit: 1526, title: "Black", facet: "any" },
+            {model: "4x", unit:  990, title: "Color", facet: "any" },
         ]
     },
 
@@ -220,6 +233,8 @@ let other_families = [
         ]
     },
 ]
+
+
 </script>
 
 <style>
@@ -228,18 +243,26 @@ let other_families = [
         margin: auto;
     }
     .families {
-        max-width: 1900px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 12px;
+        gap: 10px;
     }
+    /* @media (max-width: 900px) and (min-width: 600px) {
+
+    }
+    @media (max-width: 860px) { .families { width: 420px; }  } */
+
+    @media                         (min-width: 2000px) { .families { width: 1850px; }  } 
+    @media (max-width: 2000px) and (min-width: 1400px) { .families { width: 1370px; }  } 
+    @media (max-width: 1400px) and (min-width:  920px) { .families { width:  910px; }  } 
+    @media (max-width:  940px)                         { .families { width:  450px; }  .container > .figcaption { width: 450px;} } 
     .family {
-        width: 540px;
+        width: 420px;
         display: flex;
         flex-direction: column;
-        gap: 6px;
-        padding: 12px;
+        gap: 5px;
+        padding: 10px;
         border-radius: 4px;
         border: 1px solid #CCC;
         background: #f4f4f7;
@@ -298,7 +321,7 @@ let other_families = [
         <div class='family-title'>{family.title}</div>
         <div class='neurons'>
             {#each family.neurons as neuron, neuron_i}
-            {#if neuron_i < 5 || family.revealed}
+            {#if neuron_i < 4 || family.revealed}
             <a class='neuron' href="{microscope_url(neuron)}">
                 <img class='vis' src="{facet_icon_url(neuron, neuron.facet)}" />
                 <div class='name figcaption'>{neuron.title}</div>
@@ -307,11 +330,11 @@ let other_families = [
             {/each }
         </div>
         <div class="reveal figcaption" on:click={() => {family.revealed = !family.revealed;}}>
-            {#if family.neurons.length > 5}
+            {#if family.neurons.length > 4}
             {#if family.revealed}
-            Hide {family.neurons.length-5} neurons.
+            Hide {family.neurons.length - 4} neurons.
             {:else}
-            Show {family.neurons.length-5} more neurons.
+            Show {family.neurons.length - 4} more neurons.
             {/if}
             {/if}
         </div>
