@@ -332,9 +332,9 @@ let other_families = [
         <div class="reveal figcaption" on:click={() => {family.revealed = !family.revealed;}}>
             {#if family.neurons.length > 4}
             {#if family.revealed}
-            Hide {family.neurons.length - 4} neurons.
+            Hide {family.neurons.length - 4} neuron{family.neurons.length === 5? "" : "s"}.
             {:else}
-            Show {family.neurons.length - 4} more neurons.
+            Show {family.neurons.length - 4} more neuron{family.neurons.length === 5? "" : "s"}.
             {/if}
             {/if}
         </div>
