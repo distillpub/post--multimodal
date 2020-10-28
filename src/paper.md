@@ -368,6 +368,10 @@ import StroopEffect from './diagrams/StroopEffect.svelte'
 
 <SvelteMargin component={StroopEffect} />
 
+import StroopExperiment from './diagrams/StroopExperiment.svelte'
+
+<Svelte component={StroopExperiment} />
+
 While many classic adversarial attacks focus on making imperceptible changes to images [], typographic attacks are more similar to work such as *adversarial patches* [1] and *physical adversarial examples* [2]. Adversarial patches are stickers that can be placed on real-life objects in order to cause neural nets to misclassify those objects as something else – for example, as toasters. Physical adversarial examples are complete 3D objects that are reliably misclassified from all perspectives, such as a 3D-printed turtle that is reliably misclassified as a rifle. Typographic attacks are both weaker and stronger than these. On the one hand, they only work for models with multimodal neurons. On the other hand, once you understand this property of the models, the attacks can be executed *non-programmatically* and as *black-box attacks*, available to any adversary – including six year olds.
 
 
