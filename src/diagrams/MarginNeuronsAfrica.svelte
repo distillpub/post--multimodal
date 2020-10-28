@@ -8,22 +8,31 @@
     }
     .container > a {
         border-bottom: none;
+        display: block;
+        line-height: 100%;
+        margin: 0px;
+        padding: 0px;
     }
     .container > a > svg {
         border-radius: 4px;
         opacity: 1.0;
+        border: 1px solid #AAA;
     }
     .container > a:hover > svg {
-        filter:brightness(80%) saturate(130%);
+        filter:brightness(80%) saturate(140%);
+        border: 1px solid #777;
     }
-    .container > .figcaption {
-        margin-top: 4px;
-        grid-row: 2;
+    .container > .top-caption {
+        margin-bottom: 8px;
+        grid-row: 1;
         grid-column: 1 / span 3;
     }
 </style>
 
 <div class='container'>
+<div class='figcaption top-caption'>
+    RN50-4x has multiple Africa neurons. Coloring countries by name activation suggests they select for different regions.
+</div>
 <a href="#region-neuron-diagram" on:click={()=>{window.setRegionalState("countries", 3, 1)}}>
 <svg viewBox="0 0 162 161" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <rect width="162" height="161" fill="url(#africa1-pattern0)"/>
@@ -58,6 +67,12 @@
 </svg>
 </a>
 <div class='figcaption'>
-    RN50-4x has multiple Africa neurons. Coloring countries by name activation suggests they select for different regions.
+    Central?
+</div>
+<div class='figcaption'>
+    South
+</div>
+<div class='figcaption'>
+    East
 </div>
 </div>

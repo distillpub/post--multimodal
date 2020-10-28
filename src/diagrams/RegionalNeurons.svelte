@@ -264,12 +264,14 @@
 
     let active = null;
     let active_unsetter = null;
+    let debounce_blocker = false;
     function enter(i){
+        if (debounce_blocker) return;
         if (active_unsetter != null) {clearTimeout(active_unsetter)};
         active=i;
     }
     function leave(){
-        active_unsetter = setTimeout(() => {active=null;}, 50)
+        active_unsetter = setTimeout(() => {active=null;}, 70)
     }
     const map_modes = [
         {"name": "geography", "description": "<b>Unlabeled map activations</b>: Spatial activations of neurons in response to unlabeled geographical world map. Activations averaged over random crops. Note that neurons for smaller countries or cities may not respond to maps this zoomed out."},
@@ -281,6 +283,8 @@
 
 
     function setRegionalState(map_mode_, selected_family_=null, active_=null) {
+        debounce_blocker=true;
+        setTimeout(() => {debounce_blocker=false;}, 20);
         if (map_mode_ != null) { map_mode = map_mode_;}
         if (selected_family_ != null) { selected_family = selected_family_;}
         active = active_;
@@ -456,7 +460,7 @@
     
     {#each facets as facet, facet_i}{#each neurons as neuron, neuron_i}
     <div style="grid-column: neuron {neuron_i+1}; grid-row: facet {facet_i+1}; {(active != null && active != neuron_i)? 'opacity: 0.25;' : ''}"
-    on:mouseover={() => enter(neuron_i)} on:mouseout={leave}>
+    on:mouseover={() => enter(neuron_i)} on:mousemove={() => enter(neuron_i)} on:mouseout={leave}>
         <NeuronCard neuron={neuron} facets={[facet]} fv={true} ds={false} />
     </div>
 
