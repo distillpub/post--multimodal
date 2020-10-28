@@ -24,7 +24,7 @@
 </style>
 
 <div class='container'>
-<a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("countries", 4, 1)}}>
+<a href="#region-neuron-diagram" on:click={()=>{window.setRegionalState("countries", 3, 1)}}>
 <svg viewBox="0 0 162 161" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <rect width="162" height="161" fill="url(#africa1-pattern0)"/>
     <defs>
@@ -35,7 +35,7 @@
     </defs>
 </svg>
 </a>
-<a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("countries", 4, 2)}}>
+<a href="#region-neuron-diagram" on:click={()=>{window.setRegionalState("countries", 3, 2)}}>
 <svg viewBox="0 0 162 161" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <rect width="162" height="161" fill="url(#africa2-pattern0)"/>
     <defs>
@@ -46,7 +46,7 @@
     </defs>
 </svg>
 </a>
-<a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("countries", 4, 0)}}>
+<a href="#region-neuron-diagram" on:click={()=>{window.setRegionalState("countries", 3, 0)}}>
 <svg viewBox="0 0 162 161" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <rect width="162" height="161" fill="url(#africa3-pattern0)"/>
     <defs>
