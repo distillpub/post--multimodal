@@ -32,8 +32,9 @@ const stroop = require('../../static/typographic/stroop_experiment.json');
 let showHidden = false;
 let selectedStatistics = "zero_shot_statistics";
 
-let HEIGHT_WHEN_HIDDEN = 4
-let WIDTH_WHEN_HIDDEN = 4
+let HIDDEN_SIZE = 5;
+let HEIGHT_WHEN_HIDDEN = HIDDEN_SIZE;
+let WIDTH_WHEN_HIDDEN = HIDDEN_SIZE;
 
 function show() {
   showHidden = true;
@@ -51,7 +52,7 @@ function numCols(showHidden) {
 }
 
 function numLabelsPerCard(showHidden) {
-  return 8;
+  return showHidden ? 8 : HIDDEN_SIZE;
 }
 
 function hues(label) {
@@ -72,14 +73,14 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
             {#if item !== label}
               {#if showHidden}
                 <ClassificationCard
-                  imageUrl={results.url}
+                  imageUrl={results.url + "?cache=2"}
                   imageAltText={`${item} labeled ${label}`}
                   probabilities={results.results.slice(0, numLabelsPerCard(showHidden))}
                   customHues={hues(label)}
                 />
               {:else}
                 <ClassificationCard
-                  imageUrl={results.url}
+                  imageUrl={results.url + "?cache=2"}
                   imageAltText={`${item} labeled ${label}`}
                   probabilities={results.results.slice(0, numLabelsPerCard(showHidden))}
                   customHues={hues(label)}
