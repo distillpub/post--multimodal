@@ -198,12 +198,12 @@ let families = [
         title: "Colors",
         description: "",
         neurons: [
-            {model: "4x", unit: 2505, title: "Red", facet: "any" },
-            {model: "4x", unit:  542, title: "Green", facet: "any" },
-            {model: "4x", unit:  959, title: "Blue", facet: "any" },
-            {model: "4x", unit:  713, title: "Yellow", facet: "any" },
-            {model: "4x", unit: 1526, title: "Black", facet: "any" },
-            {model: "4x", unit:  990, title: "Color", facet: "any" },
+            {model: "4x", unit: 2505, title: "red", facet: "any" },
+            {model: "4x", unit:  542, title: "green", facet: "any" },
+            {model: "4x", unit:  959, title: "blue", facet: "any" },
+            {model: "4x", unit:  713, title: "yellow", facet: "any" },
+            {model: "4x", unit: 1526, title: "black", facet: "any" },
+            {model: "4x", unit:  990, title: "color", facet: "any" },
         ]
     },
 
