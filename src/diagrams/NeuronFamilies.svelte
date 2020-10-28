@@ -153,10 +153,10 @@ let families = [
         description: "Finally, many of the neurons in the model contribute to recognizing an incredible diversity of abstract concepts that cannot be cleanly classified into the above categories.",
         neurons: [
             { model: "4x", unit: 371, title: "you", facet: "text" },
-            { model: "4x", unit: 1883, title: "I / me", facet: "text" },
             { model: "rn101", unit: 696, title: "heart", facet: "any" },
             { model: "rn101", unit: 222, title: "math", facet: "any" },
             { model: "rn101", unit: 926, title: "self-care", facet: "any" },
+            { model: "4x", unit: 1883, title: "I / me", facet: "text" },
             // { model: "rn101", unit: 878, title: "dice", facet: "any" },
             { model: "4x", unit: 1820, title: "LGBTQ+", facet: "face" },
             { model: "rn101", unit: 1110, title: "star", facet: "any" },
