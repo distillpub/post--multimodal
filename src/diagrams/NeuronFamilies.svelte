@@ -104,7 +104,7 @@ let families = [
             {model: "4x", unit: 2439, title: "Halloween", facet: "any" },
             {model: "4x", unit: 1326, title: "Christmas", facet: "any" },
             {model: "4x", unit: 1204, title: "Easter", facet: "any" },
-            {model: "rn101", unit: 881, title: "Eid Mubarak", facet: "any" },
+            {model: "rn101", unit: 881, title: "Eid, feasts", facet: "any" },
             {model: "4x", unit: 776, title: "birthday", facet: "any" },
             {model: "rn101", unit: 865, title: "Christmas", facet: "any" },
         ]
