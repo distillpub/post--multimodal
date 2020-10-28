@@ -102,10 +102,10 @@ let families = [
         description: "These neurons recognize the names, decorations, and traditional trappings around a holiday.",
         neurons: [
             {model: "4x", unit: 2439, title: "Halloween", facet: "any" },
-            {model: "4x", unit: 776, title: "Birthday", facet: "any" },
             {model: "4x", unit: 1326, title: "Christmas", facet: "any" },
             {model: "4x", unit: 1204, title: "Easter", facet: "any" },
             {model: "rn101", unit: 881, title: "Eid Mubarak", facet: "any" },
+            {model: "4x", unit: 776, title: "birthday", facet: "any" },
             {model: "rn101", unit: 865, title: "Christmas", facet: "any" },
         ]
     },
