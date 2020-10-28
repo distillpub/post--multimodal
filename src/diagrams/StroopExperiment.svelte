@@ -73,14 +73,14 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
             {#if item !== label}
               {#if showHidden}
                 <ClassificationCard
-                  imageUrl={results.url + "?cache=2"}
+                  imageUrl={results.url + "?cache=3"}
                   imageAltText={`${item} labeled ${label}`}
                   probabilities={results.results.slice(0, numLabelsPerCard(showHidden))}
                   customHues={hues(label)}
                 />
               {:else}
                 <ClassificationCard
-                  imageUrl={results.url + "?cache=2"}
+                  imageUrl={results.url + "?cache=3"}
                   imageAltText={`${item} labeled ${label}`}
                   probabilities={results.results.slice(0, numLabelsPerCard(showHidden))}
                   customHues={hues(label)}
@@ -93,12 +93,9 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
       <div class="figcaption" style="grid-area: caption-left; max-width: 550px;">
         <p>
           <a class="figure-anchor" href="#stroop-experiment">Figure N:</a>
-          Stroop experiment.
+          A Stroop effect experiment.
 
           Above we see the CLIP RN50-4x model's classifications of various words colored with various colors. Activations were gathered using the zero-shot methodology with the format string "{stroop.setup.zero_shot_setup}_____".
-        </p>
-        <p>
-          The model is susceptible to a sort of Stroop effect.
         </p>
         <p>
           {#if showHidden}
