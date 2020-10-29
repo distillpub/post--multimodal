@@ -55,7 +55,7 @@ export default () => {
             onChange={(value) => setFacet(value)}
           />
           <Surface flexFlow="row" alignItems="center">
-            <div style={{ marginRight: 3 }}>Pose Weight</div>
+            <div style={{ marginRight: 3 }}>{facet.charAt(0).toUpperCase() + facet.slice(1)} Weight</div>
             <input
               type="range"
               max={8}
