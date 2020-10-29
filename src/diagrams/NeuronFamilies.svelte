@@ -253,10 +253,10 @@ let other_families = [
     }
     @media (max-width: 860px) { .families { width: 420px; }  } */
 
-    @media                         (min-width: 2000px) { .families { width: 1850px; }  } 
-    @media (max-width: 2000px) and (min-width: 1400px) { .families { width: 1370px; }  } 
-    @media (max-width: 1400px) and (min-width:  920px) { .families { width:  910px; }  } 
-    @media (max-width:  940px)                         { .families { width:  450px; }  .container > .figcaption { width: 450px;} } 
+    @media                         (min-width: 2000px) { .families { width: 1850px; }  }
+    @media (max-width: 2000px) and (min-width: 1400px) { .families { width: 1370px; }  }
+    @media (max-width: 1400px) and (min-width:  920px) { .families { width:  910px; }  }
+    @media (max-width:  940px)                         { .families { width:  450px; }  .container > .figcaption { width: 450px;} }
     .family {
         width: 420px;
         display: flex;
