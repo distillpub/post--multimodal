@@ -44,12 +44,13 @@ let families = [
         title: "Religions",
         description: "These neurons respond to concept clusters associated with a specific religion, such as its imagery, iconography, traditions, and/or texts.",
         neurons: [
-            {model: "4x", unit: 479, title: "Islam?", facet: "logo" }, // or 1860
             {model: "4x", unit: 929, title: "Judaism", facet: "any" },
             {model: "4x", unit: 291, title: "Hinduism", facet: "any" },
             {model: "4x", unit: 293, title: "Catholicism", facet: "any" },
+            {model: "rn101", unit: 1227, title: "Buddhism", facet: "any" },
+            {model: "4x", unit: 479, title: "Islam?", facet: "logo" }, // or 1860
             // 1777 might be thought of as a Christianity neuron insteead of a people neuron. Top words:  christ, churches, baptist, gospel, ministries, christianity, theology, jesus, pray, christians, praise, church, pastor, prayer, biblical, salvation, worship, jerusalem, christian, bible
-            // Budhism wasn't in top words???
+            // Buddhism wasn't in top words???
             {model: "4x", unit: 1376, title: "Bible", facet: "any" },
         ]
     },
