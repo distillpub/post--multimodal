@@ -63,8 +63,10 @@ let families = [
             {model: "4x", unit: 839, title: "elderly", facet: "indoor" },
             {model: "4x", unit: 2518, title: "female", facet: "face" },
             {model: "4x", unit: 320, title: "male", facet: "face" },
-            {model: "4x", unit: 92, title: "mustache", facet: "face" },
             { model: "rn101", unit: 942, title: "baby", facet: "any", },
+            {model: "4x", unit: 92, title: "mustache", facet: "face" },
+            {model: "rn101", unit: 1471, title: "hoodie, cold", facet: "face" },
+            {model: "4x", unit: 1242, title: "makeup", facet: "face" },
         ]
     },
 
@@ -86,13 +88,13 @@ let families = [
 
     {
         title: "Image Feature Neurons",
-        description: "These neurons detect extraneous features that a photo might contain: photobombs and bunny ears, the heads of people seated in front of you at a lecture, Photoshopped modifications, and more.",
+        description: "These neurons detect extraneous features that a photo might contain: photobombs and bunny ears, phones and cameras, Photoshopped modifications, and much more.",
         neurons: [
-            {model: "4x", unit: 1640, title: "altered image", facet: "text" },
+            {model: "4x", unit: 1640, title: "image alteration", facet: "text" },
             {model: "4x", unit: 2272, title: "bunny ears", facet: "any" },
-            {model: "rn101", unit: 1471, title: "hoodie, cold", facet: "face" },
-            {model: "rn101", unit: 1051, title: "crowd, vigil", facet: "logo" },
+            {model: "rn101", unit: 1801, title: "mirror selfie", facet: "any" },
             {model: "rn101", unit: 227, title: "photobomb", facet: "any" },
+            // {model: "rn101", unit: 1051, title: "crowd, vigil", facet: "logo" },
         ]
     },
 
