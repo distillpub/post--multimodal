@@ -368,7 +368,7 @@ import StroopEffect from './diagrams/StroopEffect.svelte'
 
 <SvelteMargin component={StroopEffect} />
 
-In fact, CLIP is straightforwardly susceptible to the Stroop effect itself:
+In fact, CLIP in a zero-shot setting is straightforwardly susceptible to the Stroop effect:
 
 import StroopExperiment from './diagrams/StroopExperiment.svelte'
 
