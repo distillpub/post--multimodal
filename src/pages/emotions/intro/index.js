@@ -55,7 +55,7 @@ export default () => {
             onChange={(value) => setFacet(value)}
           />
           <Surface flexFlow="row" alignItems="center">
-            <div style={{ marginRight: 3 }}>{facet.charAt(0).toUpperCase() + facet.slice(1)} Weight</div>
+            <div style={{ marginRight: 3 }}>{facet.charAt(0).toUpperCase() + facet.slice(1)} Weight<d-footnote>This slider governs the strength of the regression weights in our <a href="#faceted-feature-visualization">faceted feature visualization</a>, which in turn governs how closely the feature visualization adheres to the {facet} facet.</d-footnote></div>
             <input
               type="range"
               max={8}
