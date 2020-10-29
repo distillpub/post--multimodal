@@ -102,10 +102,10 @@ let families = [
         description: "These neurons recognize the names, decorations, and traditional trappings around a holiday.",
         neurons: [
             {model: "4x", unit: 2439, title: "Halloween", facet: "any" },
-            {model: "4x", unit: 776, title: "Birthday", facet: "any" },
             {model: "4x", unit: 1326, title: "Christmas", facet: "any" },
             {model: "4x", unit: 1204, title: "Easter", facet: "any" },
-            {model: "rn101", unit: 881, title: "Eid Mubarak", facet: "any" },
+            {model: "rn101", unit: 881, title: "Eid, feasts", facet: "any" },
+            {model: "4x", unit: 776, title: "birthday", facet: "any" },
             {model: "rn101", unit: 865, title: "Christmas", facet: "any" },
         ]
     },
@@ -153,10 +153,10 @@ let families = [
         description: "Finally, many of the neurons in the model contribute to recognizing an incredible diversity of abstract concepts that cannot be cleanly classified into the above categories.",
         neurons: [
             { model: "4x", unit: 371, title: "you", facet: "text" },
-            { model: "4x", unit: 1883, title: "I / me", facet: "text" },
             { model: "rn101", unit: 696, title: "heart", facet: "any" },
             { model: "rn101", unit: 222, title: "math", facet: "any" },
             { model: "rn101", unit: 926, title: "self-care", facet: "any" },
+            { model: "4x", unit: 1883, title: "I / me", facet: "text" },
             // { model: "rn101", unit: 878, title: "dice", facet: "any" },
             { model: "4x", unit: 1820, title: "LGBTQ+", facet: "face" },
             { model: "rn101", unit: 1110, title: "star", facet: "any" },
@@ -198,12 +198,12 @@ let families = [
         title: "Colors",
         description: "",
         neurons: [
-            {model: "4x", unit: 2505, title: "Red", facet: "any" },
-            {model: "4x", unit:  542, title: "Green", facet: "any" },
-            {model: "4x", unit:  959, title: "Blue", facet: "any" },
-            {model: "4x", unit:  713, title: "Yellow", facet: "any" },
-            {model: "4x", unit: 1526, title: "Black", facet: "any" },
-            {model: "4x", unit:  990, title: "Color", facet: "any" },
+            {model: "4x", unit: 2505, title: "red", facet: "any" },
+            {model: "4x", unit:  542, title: "green", facet: "any" },
+            {model: "4x", unit:  959, title: "blue", facet: "any" },
+            {model: "4x", unit:  713, title: "yellow", facet: "any" },
+            {model: "4x", unit: 1526, title: "black", facet: "any" },
+            {model: "4x", unit:  990, title: "color", facet: "any" },
         ]
     },
 
@@ -332,9 +332,9 @@ let other_families = [
         <div class="reveal figcaption" on:click={() => {family.revealed = !family.revealed;}}>
             {#if family.neurons.length > 4}
             {#if family.revealed}
-            Hide {family.neurons.length - 4} neurons.
+            Hide {family.neurons.length - 4} neuron{family.neurons.length === 5? "" : "s"}.
             {:else}
-            Show {family.neurons.length - 4} more neurons.
+            Show {family.neurons.length - 4} more neuron{family.neurons.length === 5? "" : "s"}.
             {/if}
             {/if}
         </div>
@@ -343,7 +343,7 @@ let other_families = [
     {/each }
 </div>
 <div class="figcaption">
-    <a href='#neuron-families' class='figure-anchor'>Figure N:</a> This diagram presents selected neurons from the final layer of four CLIP models, hand organized into "families" of similar neurons. Each neuron is represented by a feature visualization (selected from regular or <a>faceted feature visualization</a> to best illustrate the neuron) with human-chosen labels to help quickly provide a sense of each neuron. Labels were picked after looking at hundreds of stimuli that activate the neuron, in addition to feature visualizations.<br><br>
+    <a href='#neuron-families' class='figure-anchor'>Figure N:</a> This diagram presents selected neurons from the final layer of four CLIP models, hand organized into "families" of similar neurons. Each neuron is represented by a feature visualization (selected from regular or <a href="#faceted-feature-visualization">faceted feature visualization</a> to best illustrate the neuron) with human-chosen labels to help quickly provide a sense of each neuron. Labels were picked after looking at hundreds of stimuli that activate the neuron, in addition to feature visualizations.<br><br>
 
     You can click on any neuron to open it up in OpenAI Microscope to see feature visualizations, dataset examples that maximally activate the neuron, and more.
 </div>
