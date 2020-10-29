@@ -195,7 +195,7 @@ let families = [
 
     {
         title: "Colors",
-        description: "",
+        description: "These neurons detect the presence of objects in the given color.",
         neurons: [
             {model: "4x", unit: 2505, title: "red", facet: "any" },
             {model: "4x", unit:  542, title: "green", facet: "any" },
