@@ -190,8 +190,6 @@ let families = [
             {model: "4x", unit:  764, title: "year", facet: "text" },
             {model: "4x", unit: 2403, title: "mid-1900s", facet: "text" },
             {model: "4x", unit: 56, title: "historical", facet: "text" },
-            {model: "", unit: 0, title: "", facet: "any" },
-            {model: "", unit: 0, title: "", facet: "any" },
         ]
     },
 
