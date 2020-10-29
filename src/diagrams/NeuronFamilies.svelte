@@ -68,20 +68,18 @@ let families = [
     },
 
     {
-        title: "Image Type Neurons",
-        description: "These neurons detect different ways in which an image might be drawn, rendered, or photographed, or different contexts in which an image might occur.",
+        title: "Art Style Neurons",
+        description: "These neurons detect different ways in which an image might be drawn, rendered, or photographed.",
         neurons: [
-            {model: "4x", unit: 1308, title: "selfie", facet: "text" },
-            {model: "rn101", unit: 1801, title: "mirror selfie", facet: "any" },
-            {model: "rn101", unit: 2012, title: "headshot", facet: "any" },
-            {model: "rn101", unit: 691, title: "portrait", facet: "any" },
-            {model: "rn101", unit: 463, title: "FPS screenshot", facet: "any" },
-            {model: "rn101", unit: 321, title: "cartoon", facet: "logo" },
             {model: "rn101", unit: 1717, title: "child's drawing", facet: "face" },
+            {model: "rn101", unit: 2012, title: "headshot", facet: "any" },
+            {model: "rn101", unit: 321, title: "cartoon", facet: "logo" },
+            {model: "4x", unit: 75, title: "drawing", facet: "any" },
+            {model: "rn101", unit: 691, title: "portrait photo", facet: "any" },
             {model: "rn101", unit: 1159, title: "Egyptian art", facet: "any" },
             {model: "rn101", unit: 306, title: "Roman art", facet: "face" },
-            {model: "rn101", unit: 1227, title: "Buddhist art", facet: "any" },
-
+            {model: "4x", unit: 587, title: "painting", facet: "any" },
+            {model: "rn101", unit: 463, title: "FPS screenshot", facet: "any" },
         ]
     },
 
