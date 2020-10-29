@@ -343,7 +343,7 @@ let other_families = [
     {/each }
 </div>
 <div class="figcaption">
-    <a href='#neuron-families' class='figure-anchor'>Figure N:</a> This diagram presents selected neurons from the final layer of four CLIP models, hand organized into "families" of similar neurons. Each neuron is represented by a feature visualization (selected from regular or <a>faceted feature visualization</a> to best illustrate the neuron) with human-chosen labels to help quickly provide a sense of each neuron. Labels were picked after looking at hundreds of stimuli that activate the neuron, in addition to feature visualizations.<br><br>
+    <a href='#neuron-families' class='figure-anchor'>Figure N:</a> This diagram presents selected neurons from the final layer of four CLIP models, hand organized into "families" of similar neurons. Each neuron is represented by a feature visualization (selected from regular or <a href="#faceted-feature-visualization">faceted feature visualization</a> to best illustrate the neuron) with human-chosen labels to help quickly provide a sense of each neuron. Labels were picked after looking at hundreds of stimuli that activate the neuron, in addition to feature visualizations.<br><br>
 
     You can click on any neuron to open it up in OpenAI Microscope to see feature visualizations, dataset examples that maximally activate the neuron, and more.
 </div>
