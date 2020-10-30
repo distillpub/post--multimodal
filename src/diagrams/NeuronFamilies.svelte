@@ -44,12 +44,13 @@ let families = [
         title: "Religions",
         description: "These neurons respond to concept clusters associated with a specific religion, such as its imagery, iconography, traditions, and/or texts.",
         neurons: [
-            {model: "4x", unit: 479, title: "Islam?", facet: "logo" }, // or 1860
             {model: "4x", unit: 929, title: "Judaism", facet: "any" },
             {model: "4x", unit: 291, title: "Hinduism", facet: "any" },
             {model: "4x", unit: 293, title: "Catholicism", facet: "any" },
+            {model: "rn101", unit: 1227, title: "Buddhism", facet: "any" },
+            {model: "4x", unit: 479, title: "Islam?", facet: "logo" }, // or 1860
             // 1777 might be thought of as a Christianity neuron insteead of a people neuron. Top words:  christ, churches, baptist, gospel, ministries, christianity, theology, jesus, pray, christians, praise, church, pastor, prayer, biblical, salvation, worship, jerusalem, christian, bible
-            // Budhism wasn't in top words???
+            // Buddhism wasn't in top words???
             {model: "4x", unit: 1376, title: "Bible", facet: "any" },
         ]
     },
@@ -62,38 +63,38 @@ let families = [
             {model: "4x", unit: 839, title: "elderly", facet: "indoor" },
             {model: "4x", unit: 2518, title: "female", facet: "face" },
             {model: "4x", unit: 320, title: "male", facet: "face" },
-            {model: "4x", unit: 92, title: "mustache", facet: "face" },
             { model: "rn101", unit: 942, title: "baby", facet: "any", },
+            {model: "4x", unit: 92, title: "mustache", facet: "face" },
+            {model: "rn101", unit: 1471, title: "hoodie, cold", facet: "face" },
+            {model: "4x", unit: 1242, title: "makeup", facet: "face" },
         ]
     },
 
     {
-        title: "Image Type Neurons",
-        description: "These neurons detect different ways in which an image might be drawn, rendered, or photographed, or different contexts in which an image might occur.",
+        title: "Art Style Neurons",
+        description: "These neurons detect different ways in which an image might be drawn, rendered, or photographed.",
         neurons: [
-            {model: "4x", unit: 1308, title: "selfie", facet: "text" },
-            {model: "rn101", unit: 1801, title: "mirror selfie", facet: "any" },
-            {model: "rn101", unit: 2012, title: "headshot", facet: "any" },
-            {model: "rn101", unit: 691, title: "portrait", facet: "any" },
-            {model: "rn101", unit: 463, title: "FPS screenshot", facet: "any" },
-            {model: "rn101", unit: 321, title: "cartoon", facet: "logo" },
             {model: "rn101", unit: 1717, title: "child's drawing", facet: "face" },
+            {model: "rn101", unit: 2012, title: "headshot", facet: "any" },
+            {model: "rn101", unit: 321, title: "cartoon", facet: "logo" },
+            {model: "4x", unit: 75, title: "drawing", facet: "any" },
+            {model: "rn101", unit: 691, title: "portrait photo", facet: "any" },
             {model: "rn101", unit: 1159, title: "Egyptian art", facet: "any" },
             {model: "rn101", unit: 306, title: "Roman art", facet: "face" },
-            {model: "rn101", unit: 1227, title: "Buddhist art", facet: "any" },
-
+            {model: "4x", unit: 587, title: "painting", facet: "any" },
+            {model: "rn101", unit: 463, title: "FPS screenshot", facet: "any" },
         ]
     },
 
     {
         title: "Image Feature Neurons",
-        description: "These neurons detect extraneous features that a photo might contain: photobombs and bunny ears, the heads of people seated in front of you at a lecture, Photoshopped modifications, and more.",
+        description: "These neurons detect extraneous features that a photo might contain: photobombs and bunny ears, phones and cameras, Photoshopped modifications, and much more.",
         neurons: [
-            {model: "4x", unit: 1640, title: "altered image", facet: "text" },
+            {model: "4x", unit: 1640, title: "image alteration", facet: "text" },
             {model: "4x", unit: 2272, title: "bunny ears", facet: "any" },
-            {model: "rn101", unit: 1471, title: "hoodie, cold", facet: "face" },
-            {model: "rn101", unit: 1051, title: "crowd, vigil", facet: "logo" },
+            {model: "rn101", unit: 1801, title: "mirror selfie", facet: "any" },
             {model: "rn101", unit: 227, title: "photobomb", facet: "any" },
+            // {model: "rn101", unit: 1051, title: "crowd, vigil", facet: "logo" },
         ]
     },
 
@@ -152,19 +153,19 @@ let families = [
         title: "Abstract Concept Neurons",
         description: "Finally, many of the neurons in the model contribute to recognizing an incredible diversity of abstract concepts that cannot be cleanly classified into the above categories.",
         neurons: [
-            { model: "4x", unit: 371, title: "you", facet: "text" },
-            { model: "rn101", unit: 696, title: "heart", facet: "any" },
-            { model: "rn101", unit: 222, title: "math", facet: "any" },
-            { model: "rn101", unit: 926, title: "self-care", facet: "any" },
-            { model: "4x", unit: 1883, title: "I / me", facet: "text" },
-            // { model: "rn101", unit: 878, title: "dice", facet: "any" },
-            { model: "4x", unit: 1820, title: "LGBTQ+", facet: "face" },
-            { model: "rn101", unit: 1110, title: "star", facet: "any" },
-            { model: "rn101", unit: 1047, title: "smart", facet: "any" },
-            { model: "rn101", unit: 1006, title: "temperature", facet: "text" },
-            { model: "rn101", unit: 1049, title: "theatre", facet: "logo" },
-            { model: "rn101", unit: 480, title: "past tense", facet: "text" },
-
+            {model: "4x", unit: 371, title: "you", facet: "text" },
+            {model: "rn101", unit: 696, title: "heart", facet: "any" },
+            {model: "rn101", unit: 222, title: "math", facet: "any" },
+            {model: "rn101", unit: 926, title: "self-care", facet: "any" },
+            {model: "4x", unit: 1883, title: "I / me", facet: "text" },
+            // {model: "rn101", unit: 878, title: "dice", facet: "any" },
+            {model: "4x", unit: 1820, title: "LGBTQ+", facet: "face" },
+            {model: "rn101", unit: 1110, title: "star", facet: "any" },
+            {model: "rn101", unit: 1047, title: "smart", facet: "any" },
+            {model: "rn101", unit: 1006, title: "temperature", facet: "text" },
+            {model: "rn101", unit: 1049, title: "theatre", facet: "logo" },
+            {model: "rn101", unit: 480, title: "past tense", facet: "text" },
+            {model: "4x", unit: 1308, title: "selfie", facet: "text" },
         ]
     },
 
@@ -189,14 +190,12 @@ let families = [
             {model: "4x", unit:  764, title: "year", facet: "text" },
             {model: "4x", unit: 2403, title: "mid-1900s", facet: "text" },
             {model: "4x", unit: 56, title: "historical", facet: "text" },
-            {model: "", unit: 0, title: "", facet: "any" },
-            {model: "", unit: 0, title: "", facet: "any" },
         ]
     },
 
     {
         title: "Colors",
-        description: "",
+        description: "These neurons detect the presence of objects in the given color.",
         neurons: [
             {model: "4x", unit: 2505, title: "red", facet: "any" },
             {model: "4x", unit:  542, title: "green", facet: "any" },
@@ -253,10 +252,10 @@ let other_families = [
     }
     @media (max-width: 860px) { .families { width: 420px; }  } */
 
-    @media                         (min-width: 2000px) { .families { width: 1850px; }  } 
-    @media (max-width: 2000px) and (min-width: 1400px) { .families { width: 1370px; }  } 
-    @media (max-width: 1400px) and (min-width:  920px) { .families { width:  910px; }  } 
-    @media (max-width:  940px)                         { .families { width:  450px; }  .container > .figcaption { width: 450px;} } 
+    @media                         (min-width: 2000px) { .families { width: 1850px; }  }
+    @media (max-width: 2000px) and (min-width: 1400px) { .families { width: 1370px; }  }
+    @media (max-width: 1400px) and (min-width:  920px) { .families { width:  910px; }  }
+    @media (max-width:  940px)                         { .families { width:  450px; }  .container > .figcaption { width: 450px;} }
     .family {
         width: 420px;
         display: flex;

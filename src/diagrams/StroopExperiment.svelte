@@ -66,8 +66,8 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
 
 <div style="overflow-x: auto;">
   <div style="width: fit-content; margin: auto;">
-    <div style="display: grid; grid-gap: 10px; grid-template-rows: repeat({numRows(showHidden) + 1}, auto) [caption] auto; grid-template-columns: [caption-left-start] auto auto [caption-left-end caption-right-start] repeat({numCols(showHidden) - 2}, auto) [caption-right-end] auto;">
-      {#each Object.keys(stroop.output).sort().slice(0, numRows(showHidden)) as item, row_index}
+    <div style="display: grid; grid-gap: 10px; grid-template-rows: repeat({numRows(showHidden) + 1}, auto) [caption] auto; grid-template-columns: [caption-start] repeat({numCols(showHidden)}, auto) [caption-end] auto;">
+      {#each Object.keys(stroop.output).slice(0, numRows(showHidden)) as item, row_index}
         {#each Object.entries(stroop.output[item]).slice(0, numCols(showHidden)) as [label, results], col_index}
           <div style="grid-column: {col_index + 1 }">
             {#if item !== label}
@@ -77,6 +77,7 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
                   imageAltText={`${item} labeled ${label}`}
                   probabilities={results.results.slice(0, numLabelsPerCard(showHidden))}
                   customHues={hues(label)}
+                  stroop={true}
                 />
               {:else}
                 <ClassificationCard
@@ -84,18 +85,25 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
                   imageAltText={`${item} labeled ${label}`}
                   probabilities={results.results.slice(0, numLabelsPerCard(showHidden))}
                   customHues={hues(label)}
+                  stroop={true}
                 />
               {/if}
+            {:else}
+              <div class="figcaption">
+                <div style="width: {showHidden? "276px" : "222px"}; height: {showHidden? "145px" : "91px"}; border-radius: 6px; border: 1px solid #888; background-color: #DDD; text-align: center; line-height: {showHidden? "145px" : "91px"}">
+                  Label equals color.
+                </div>
+              </div>
             {/if}
           </div>
         {/each}
       {/each}
-      <div class="figcaption" style="grid-area: caption-left; max-width: 550px;">
+      <div class="figcaption" style="grid-area: caption; max-width: 550px;">
         <p>
           <a class="figure-anchor" href="#stroop-experiment">Figure N:</a>
           A Stroop effect experiment.
 
-          Above we see the CLIP RN50-4x model's classifications of various words colored with various colors. Activations were gathered using the zero-shot methodology with the format string "{stroop.setup.zero_shot_setup}_____".
+          Above we see the CLIP RN50-4x model's classifications of various words colored with various colors. Activations were gathered using the zero-shot methodology with the prompt "{stroop.setup.zero_shot_setup}_____".
         </p>
         <p>
           {#if showHidden}
