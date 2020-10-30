@@ -18,7 +18,7 @@
       neuron: {model: "4x", unit: "1156", layer: "image_block_4_5_Add_6_0"},
       facet: "indoor",
       ds_img_prefix: "typographic/RN50-4x-1156-dataset-",
-      description: 'Neuron responding to waste containers (and necklaces) aso responds to "trash", "waste", and "gargabe."'
+      description: 'Neuron responding to waste containers (and necklaces) also responds to "trash", "waste", and "garbage."'
     },
   ];
 </script>
@@ -63,12 +63,14 @@
   }
   .neuron-feature-viz{
     width: 90px;
+    height: 90px;
   }
   .dataset-examples {
     display: grid;
     grid-template-rows: repeat(2, atuo);
     grid-template-columns: repeat(2, auto);
     width: 90px;
+    height: 90px;
     grid-gap: 1px;
   }
 </style>

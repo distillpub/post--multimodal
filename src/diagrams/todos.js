@@ -6,9 +6,17 @@ import { sortBy, capitalize, uniq, reverse } from 'lodash'
 export default () => {
   const [active, setActive] = useState(localStorage.getItem('whoTask') || 'All')
 
+  const [hidden, setIsHidden] = useState(false)
+  function toggle_hidden() {
+    activeTodos.map(({ to, id, value, children }) => {
+      document.getElementById(id).style.display = hidden? 'flex' : 'none';
+    }); 
+    setIsHidden(!hidden);
+  }
+
   const onSetActive = (who) => {
     localStorage.setItem('whoTask', who)
-    setActive(who)
+    setActive(who);
   }
 
   const [isClosed, setIsClosed] = useState(true)
@@ -30,7 +38,8 @@ export default () => {
     return to.toLowerCase() === active.toLowerCase()
   })
 
-  const shortName = (name) => (name === 'Chelsea' ? 'Voss' : name)
+  const shortName = (name) => (name === 'Chelsea' ? 'Voss' : name);
+
 
   return (
     <Portal>
@@ -55,13 +64,17 @@ export default () => {
                 onClick={() => onSetActive(name)}
                 marginX={3}
                 fontWeight={active === name && 'bold'}
+                cursor="pointer"
               >
                 {capitalize(name)}
               </Text>
             ))}
           </Surface>
-          <Text onClick={() => setIsClosed(!isClosed)}>
+          <Text onClick={() => setIsClosed(!isClosed)} cursor="pointer">
             {isClosed ? 'Open' : 'Close'}
+          </Text>
+          <Text onClick={toggle_hidden} cursor="pointer">
+            {hidden ? "Reveal" : "Hide"}
           </Text>
         </Surface>
         {!isClosed && (
