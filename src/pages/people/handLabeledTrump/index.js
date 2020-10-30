@@ -48,6 +48,8 @@ export default class HumanLabels extends React.Component {
       },
       probChart = false,
     } = data
+    const neuronStd = 2.19
+    const neuronMean = -2.33
 
     if (typeof window === 'undefined') {
       return null
@@ -176,8 +178,10 @@ export default class HumanLabels extends React.Component {
                   const isZero = hasActiveGroup && !isGroupActive(index)
                   const victoryData = bins
                     .map((binValue, bin) => {
-                      if (isZero) return { y: 0, x: binValue }
-                      return { x: binValue, y: height[bin] }
+                      const standardDeviations =
+                        (binValue - neuronMean) / neuronStd
+                      if (isZero) return { y: 0, x: standardDeviations }
+                      return { x: standardDeviations, y: height[bin] }
                     })
                     .filter((i) => i !== null)
 
@@ -207,7 +211,7 @@ export default class HumanLabels extends React.Component {
               <VictoryAxis
                 crossAxis={false}
                 tickCount={17}
-                label="Activations"
+                label="Standard Deviation"
               />
 
               <VictoryAxis
@@ -242,8 +246,8 @@ export default class HumanLabels extends React.Component {
             activation. Using this dataset we can estimate the conditional
             probability of each category at each level of activation. We see
             that the higher activations of the Trump neuron are highly
-            selective, with more than 90% of the images causing an activation of
-            more than 55 related to Donald Trump.
+            selective, with more than 90% of the images with a standard
+            deviation greater than 30 are related to Donald Trump.
           </figcaption>
         </Surface>
       </figure>

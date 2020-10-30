@@ -171,7 +171,7 @@ As we did for neurons in the people and emotion families, we can hand-label imag
 
 import RegionalConditional from './pages/regions/regionalConditional'
 
-<RegionalConditional neuron={1257} />
+<RegionalConditional neuron={1317} />
 
 During labeling we were surprised at how the neuron picked up subtle images of people we sometimes missed ourselves. This includes an artistic representation of a person of African descent in a butter knife and a digital drawing of a person of African descent with a face only a few pixels across. These subtle cases may help explain why the neuron sometimes weakly activates dark textures of non-humans, such as black cat fur or dark leather. Perhaps these false positives are a worthwhile tradeoff for learning a representation flexible enough to capture these subtle cases.
 

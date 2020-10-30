@@ -12,7 +12,7 @@ export default cofab(({ buckets }) => {
   return (
     <Surface flexFlow="row" flexWrap="wrap" width={1600}>
       {cols.map((i) => {
-        const images = buckets[i.toString() + '.0'] || []
+        const images = buckets[i.toString()] || []
 
         return (
           <Surface
@@ -22,8 +22,8 @@ export default cofab(({ buckets }) => {
           >
             {images.length > 0 && (
               <Text>
-                min {min(images.map(({ value }) => value)).toFixed(2)} max{' '}
-                {max(images.map(({ value }) => value)).toFixed(2)}
+                min {min(images.map(({ value }) => +value)).toFixed(2)} max{' '}
+                {max(images.map(({ value }) => +value)).toFixed(2)}
               </Text>
             )}
             <Surface flexFlow="row" flexWrap="wrap">
@@ -31,15 +31,15 @@ export default cofab(({ buckets }) => {
                 <Surface position="relative" width={w} height={w}>
                   <Surface
                     position="absolute"
-                    left={center[1] * 100 + '%'}
-                    top={center[0] * 100 + '%'}
+                    left={+center[1] * 100 + '%'}
+                    top={+center[0] * 100 + '%'}
                     background="red"
                     width={3}
                     height={3}
                   />
                   <img width={w} height={w} src={path} />
                   <Text fontSize={10} opacity={0.7}>
-                    activation {value.toFixed(1)}
+                    activation {(+value).toFixed(1)}
                   </Text>
                 </Surface>
               ))}
