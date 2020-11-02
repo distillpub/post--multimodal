@@ -94,6 +94,17 @@ d-figure > figure {
   grid-column-end: screen-end;
   height: fit-content;
 }
+.sensitivity-warn {
+  margin-bottom: 16px;
+  padding: 10px;
+  font-size: 80%;
+  line-height: 140%;
+  background: #EEE;
+  border: 1px solid #AAA;
+  border-radius: 4px;
+  height: fit-content;
+}
+
 d-footnote {
   margin-left: -1px;
   margin-right: 4px;
