@@ -2,7 +2,7 @@ import React from 'react'
 import cofab from '../../cofab'
 
 import { Surface, Text } from '../../reactComponents/ui'
-import { includes, reverse, sum } from 'lodash'
+import { includes, range, reverse, sum } from 'lodash'
 import {
   VictoryArea,
   VictoryLine,
@@ -56,6 +56,7 @@ export default class HumanLabels extends React.Component {
       },
       probChart = false,
     } = data[neuron || 1317]
+    console.log('heights are', heights)
 
     if (typeof window === 'undefined') {
       return null
@@ -72,17 +73,26 @@ export default class HumanLabels extends React.Component {
       (8, 'Dark Non-Person'),
       (9, 'Person of African Descent')]`
 
+    /*
     const labelColors = {
-      'Non-African Person': '#2b9348',
-      'Non-African Symbol': 'rgb(0, 188, 212)',
-      'Non-African Celebrity': '#7acda3',
-      'Dark Non-Person': '#fca17d',
-      Tobacco: '#f2cc8f',
-      Other: '#e6e8e6',
-      Weapon: '#fcbf49',
-      Meme: '#b2ebf2',
-      'Africa Word': 'rgb(224, 52, 0)',
-      'Person of African Descent': '#ff5e5b',
+      'foreign symbol': '#7acda3',
+      other: '#b2ebf2',
+      flags: 'rgb(236,99,55)', //	#ff7171',
+      'other regional': '#ffa77d',
+      'place name': '#e03400',
+      // 'people names': '#ff5722',
+      ethnicity: '#ff7f50',
+    }
+    */
+
+    const labelColors = {
+      'foreign symbol': '#7acda3',
+      other: '#b2ebf2',
+      flags: '#ff5722',
+      'other regional': '#ffa77d',
+      'place name': '#e03400',
+      // 'people names': '#ff5722',
+      ethnicity: '#ff7f50',
     }
 
     const colors = labelNames.map((label) => labelColors[label])
@@ -160,27 +170,26 @@ export default class HumanLabels extends React.Component {
         </Surface>
       )
     }
-    const stackIndexes = [7, 9, 8, 6, 5, 4, 3, 1, 0, 2]
+
+    // ["place name", "flags", "ethnicity", "other regional", "foreign symbol", "other"]
+
+    const stackIndexes = [0, 1, 2, 3, 5, 4]
 
     return (
       <figure className="fullscreen-diagram">
         <Surface width={width} margin="auto">
           <Surface flexFlow="row" marginLeft={60}>
             <Group name="Non-Africa">
-              <Label index={0}>Person of Non-African Descent</Label>
-              <Label index={2}>Non-African Celebrity</Label>
-              <Label index={1}>Non-African Symbol</Label>
+              <Label index={4}>Foreign Symbol</Label>
             </Group>
             <Group name="Neutral">
-              <Label index={3}>Meme</Label>
-              <Label index={4}>Other</Label>
-              <Label index={5}>Tobacco</Label>
-              <Label index={6}>Weapon</Label>
-              <Label index={8}>Dark Non-Human</Label>
+              <Label index={5}>Other</Label>
             </Group>
             <Group name="African">
-              <Label index={7}>African Word</Label>
-              <Label index={9}>Person of African Descent</Label>
+              <Label index={0}>Place Name</Label>
+              <Label index={1}>Flags</Label>
+              <Label index={2}>Ethnicity</Label>
+              <Label index={3}>Other Regional</Label>
             </Group>
           </Surface>
           <Surface
@@ -201,7 +210,14 @@ export default class HumanLabels extends React.Component {
               >
                 {stackIndexes.map((index) => {
                   const height = heights[index]
-                  console.log('height is', height, 'heights len', heights)
+                  console.log(
+                    'index is',
+                    index,
+                    'height is',
+                    height,
+                    'heights len',
+                    heights
+                  )
                   const isZero = hasActiveGroup && !isGroupActive(index)
                   const victoryData = bins
                     .map((binValue, bin) => {

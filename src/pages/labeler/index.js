@@ -5,17 +5,13 @@ import randomIndexes from './randomIndexes_1317'
 import { range, shuffle, flatten } from 'lodash'
 
 const labels = [
-  'Person of African Descent',
-  'Dark Non-Person',
-  'Africa Word',
-  'Weapon',
-  'Tobacco',
-  'Other',
-  'Meme',
-  'Non-African Celebrity',
-  'Non-African Symbol',
-  'Foreign Aid',
-  'Non-African Person',
+  'place name',
+  'people names',
+  'flags',
+  'ethnicity',
+  'other regional',
+  'foreign symbol',
+  'other',
 ]
 
 const initialState =
@@ -45,6 +41,7 @@ export default cofab(({ buckets }) => {
   }
 
   const w = 228
+  const upgrade = (url) => url.split('.png')[0] + '_v7.png'
 
   return (
     <div>
@@ -67,8 +64,8 @@ export default cofab(({ buckets }) => {
       <Surface flexFlow="row" flexWrap="wrap" width={1200}>
         {randomIndexes
           .map((index) => ({ ...allImages[index], index }))
-          .map(({ value, center, path, index }) =>
-            (allLabels[index] || '').trim().length > 0 ? (
+          .map(({ value, center, path, index }) => {
+            return (allLabels[index] || '').trim().length > 0 ? (
               false
             ) : (
               <Surface
@@ -86,7 +83,7 @@ export default cofab(({ buckets }) => {
                   width={3}
                   height={3}
                 />
-                <img width={w} height={w} src={path} />
+                <img width={w} height={w} src={upgrade(path)} />
                 <Text
                   position="absolute"
                   bottom={5}
@@ -101,7 +98,7 @@ export default cofab(({ buckets }) => {
                 </Text>
               </Surface>
             )
-          )}
+          })}
       </Surface>
     </div>
   )
