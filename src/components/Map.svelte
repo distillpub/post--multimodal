@@ -102,6 +102,8 @@
     function closeTooltip(){
         tooltip_timeout=setTimeout(() => {tooltip_visible=false; focus_city=null;}, 200);
     }
+
+    export let warn_message = null;
 </script>
 
 <style>
@@ -117,6 +119,21 @@
         position: absolute;
         left: 0px;
         top: 0px;
+    }
+    .map-container>.map-message {
+        position: absolute;
+        width: 300px;
+        padding: 4px;
+        padding-left: 8px;
+        padding-right: 8px;
+        right: 0px;
+        bottom: 0px;
+        border: 1px solid #AAA;
+        margin-bottom: -1px;
+        margin-right: -1px;
+        border-top-left-radius: 6px;
+        background: #EEE;
+        line-height: 120%;
     }
     .map-container svg .countries path {
         fill: #F3F3F3;
@@ -167,6 +184,11 @@
             <div style='grid-row: {x+1}; grid-column:{y+1}; border-left: solid 1px rgba(1,1,1,0); border-top: solid 1px rgba(1,1,1,0); background: {color(spatial_acts, [x, y], active_units_inds, 1.1, focus)}; opacity: {opacity(spatial_acts, [x, y], active_units_inds, 1.6, focus)};'></div>
         {/each}
         {/each}
+    </div>
+    {/if}
+    {#if (warn_message != null)}
+    <div class='map-message figcaption' style='{(focus != null)? `background: hsl(${360*focus/active_units_inds.length}, 40%, 90%)` : '' }'>
+        {warn_message}
     </div>
     {/if}
 </div>
