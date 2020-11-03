@@ -51,7 +51,7 @@ let families = [
             {model: "4x", unit: 479, title: "Islam?", facet: "logo" }, // or 1860
             // 1777 might be thought of as a Christianity neuron insteead of a people neuron. Top words:  christ, churches, baptist, gospel, ministries, christianity, theology, jesus, pray, christians, praise, church, pastor, prayer, biblical, salvation, worship, jerusalem, christian, bible
             // Buddhism wasn't in top words???
-            {model: "4x", unit: 1376, title: "Bible", facet: "any" },
+            {model: "4x", unit: 1376, title: "Bible", facet: "pose" },
         ]
     },
 
@@ -60,10 +60,10 @@ let families = [
         description: "These neurons detect gender<d-footnote>By this, we mean both that it responds to people presenting as this gender, as well as that it responds to concepts associated with that gender.</d-footnote> and age, as well as facial features like mustaches. (Ethnicity tends to be represented by regional neurons.)",
         neurons: [
             {model: "4x", unit: 2231, title: "teenage", facet: "logo" },
-            {model: "4x", unit: 839, title: "elderly", facet: "indoor" },
+            {model: "4x", unit: 839, title: "elderly", facet: "pose" },
             {model: "4x", unit: 2518, title: "female", facet: "face" },
             {model: "4x", unit: 320, title: "male", facet: "face" },
-            { model: "rn101", unit: 942, title: "baby", facet: "any", },
+            { model: "rn101", unit: 942, title: "baby", facet: "pose", },
             {model: "4x", unit: 92, title: "mustache", facet: "face" },
             {model: "rn101", unit: 1471, title: "hoodie, cold", facet: "face" },
             {model: "4x", unit: 1242, title: "makeup", facet: "face" },
@@ -93,8 +93,8 @@ let families = [
             {model: "4x", unit: 1640, title: "image alteration", facet: "text" },
             {model: "4x", unit: 2272, title: "bunny ears", facet: "any" },
             {model: "rn101", unit: 1801, title: "mirror selfie", facet: "any" },
-            {model: "rn101", unit: 227, title: "photobomb", facet: "any" },
-            // {model: "rn101", unit: 1051, title: "crowd, vigil", facet: "logo" },
+            {model: "rn101", unit: 227, title: "photobomb", facet: "pose" },
+            {model: "rn101", unit: 1051, title: "people standing up", facet: "logo" },
         ]
     },
 
@@ -118,7 +118,7 @@ let families = [
             {model: "4x", unit: 924, title: "Pokémon", facet: "logo" },
             {model: "rn101", unit: 905, title: "Marvel", facet: "any" },
             {model: "rn101", unit: 2043, title: "Zelda", facet: "logo" },
-            {model: "rn101", unit: 1532, title: "Star Wars", facet: "indoor" },
+            {model: "rn101", unit: 1532, title: "Star Wars", facet: "pose" },
             {model: "rn101", unit: 789, title: "The Simpsons", facet: "logo" },
         ]
     },
@@ -128,10 +128,9 @@ let families = [
         description: "Like the neurons that recognize the identities of people, these neurons recognize brand identities.",
         neurons: [
             {model: "rn101", unit: 2002, title: "Amazon", facet: "logo" },
-            // {model: "rn101", unit: 1438, title: "Air Jordan", facet: "logo", },
             {model: "rn101", unit: 787, title: "Spotify", facet: "logo" },
             {model: "4x", unit: 1166, title: "Disney", facet: "indoor" },
-            {model: "rn101", unit: 1284, title: "Real Madrid", facet: "any" },
+            {model: "rn101", unit: 1284, title: "Real Madrid", facet: "pose" },
             {model: "4x", unit: 1008, title: "NASA", facet: "any" },
             // { model: "rn101", unit: 1929, title: "NASA", facet: "any", },
         ]
@@ -154,14 +153,10 @@ let families = [
         description: "Finally, many of the neurons in the model contribute to recognizing an incredible diversity of abstract concepts that cannot be cleanly classified into the above categories.",
         neurons: [
             {model: "4x", unit: 371, title: "you", facet: "text" },
+            {model: "4x", unit: 1883, title: "I / me", facet: "text" },
             {model: "rn101", unit: 696, title: "heart", facet: "any" },
             {model: "rn101", unit: 222, title: "math", facet: "any" },
-            {model: "rn101", unit: 926, title: "self-care", facet: "any" },
-            {model: "4x", unit: 1883, title: "I / me", facet: "text" },
-            // {model: "rn101", unit: 878, title: "dice", facet: "any" },
-            {model: "4x", unit: 1820, title: "LGBTQ+", facet: "face" },
-            {model: "rn101", unit: 1110, title: "star", facet: "any" },
-            {model: "rn101", unit: 1047, title: "smart", facet: "any" },
+            {model: "4x", unit: 1820, title: "LGBTQ+", facet: "logo" },
             {model: "rn101", unit: 1006, title: "temperature", facet: "text" },
             {model: "rn101", unit: 1049, title: "theatre", facet: "logo" },
             {model: "rn101", unit: 480, title: "past tense", facet: "text" },
@@ -203,6 +198,17 @@ let families = [
             {model: "4x", unit:  713, title: "yellow", facet: "any" },
             {model: "4x", unit: 1526, title: "black", facet: "any" },
             {model: "4x", unit:  990, title: "color", facet: "any" },
+        ]
+    },
+
+    {
+        title: "Interesting Polysemantic Neurons",
+        description: "",
+        neurons: [
+            {model: "rn101", unit: 926, title: "self + relief + ?", facet: "any" },
+            {model: "rn101", unit: 1047, title: "smart + ?", facet: "any" },
+            {model: "rn101", unit: 878, title: "dice + poet + ?", facet: "any" },
+            {model: "rn101", unit: 1110, title: "star + bear + ?", facet: "any" },
         ]
     },
 
