@@ -4,28 +4,24 @@ import SvelteInline from './svelte-inline'
 import Todo from './diagrams/todo'
 import Todos from './diagrams/todos'
 
-<Todo to="Nick" value={4}>Come up with a hero draft</Todo>
-<Todo to="Nick" value={3}>Find better quote from Quiroga</Todo>
-<Todo to="Chris" value={3}>Terminology: Model vs Stream vs Side</Todo>
-<Todo to="Chris" value={3}>Footnote styling “,” issue</Todo>
+<div><Todo to="Nick" value={4}>Come up with a hero draft</Todo><Todo to="Nick" value={3}>Find better quote from Quiroga</Todo><Todo to="Chris" value={8}>Dataset examples</Todo><Todo to="Chris" value={8}>Add citations</Todo></div>
 
 
 In 2005, a letter published in Nature described human neurons responding to specific people, such as Jennifer Aniston or Halle Berry <d-cite bibtex-key="quiroga2005invariant" />. The exciting thing wasn’t just that they selected for particular people, but that they did so regardless of whether they were shown photographs, drawings, or even images of the person’s name. The neurons were multimodal. As the lead author would put it: "You are looking at the far end of the transformation from metric, visual shapes to conceptual… information." <d-footnote>Quiroga's full quote, from <a href="https://www.newscientist.com/article/dn7567-why-your-brain-has-a-jennifer-aniston-cell/">New Scientist</a> reads: "I think that’s the excitement to these results. You are looking at the far end of the transformation from metric, visual shapes to conceptual memory-related information. It is that transformation that underlies our ability to understand the world. It’s not enough to see something familiar and match it. It’s the fact that you plug visual information into the rich tapestry of memory that brings it to life." We elided the portion discussing memory since it was less relevant.</d-footnote>
 
 We report the existence of similar multimodal neurons in artificial neural networks. This includes neurons selecting for prominent public figures or fictional characters, such as Donald Trump, Lady Gaga, and Spiderman.<d-footnote>Some of the figures we found neurons for are divisive. It should go without saying that having a dedicated neuron simply reflects the prominence of these figures in the training data, collected in [2019?]. Being divisive increases this prominence, because divisive figures are more likely to be extensively discussed on the Internet. In the case of the Donald Trump neuron, it seems likely there would have also been a Hillary Clinton neuron if data had been collected in 2016 instead. (There are other neurons which respond to Hillary Clinton in addition to other topics.) </d-footnote><d-footnote comma>It’s important to note that the vast majority of people these models recognize don’t have a specific neuron, but instead are represented by a combination of neurons. Often, the contributing neurons are conceptually related. For example, the Trump neuron fires (albeit more weakly) for Mike Pence, contributing to representing him.</d-footnote><d-footnote comma>Some of the neurons we found seem strikingly similar to those described in Quiroga et al []. The Donald Trump neuron we found might be seen as similar to Quiroga et al’s Bill Clinton neuron. A Star Wars neuron we find seems analogous to a biological Star Wars neuron described Quiroga et al’s follow up paper []. And although we don’t find an exact Jennifer Aniston neuron, we do find a neuron for the TV show “Friends” which fires for her.</d-footnote> Like the biological multimodal neurons, these artificial neurons respond to the same subject in photographs, drawings, and images of their name:
 
-<Todo to="Chris" value={4}>Do we want to use this diagram?</Todo>
 
 import HalleBerry from './diagrams/halleBerry/index.svelte'
 
 <Svelte component={HalleBerry} container={<div />} />
 
 
-People-detecting neurons only scratch the surface of the highly abstract neurons we've found. There are neurons coding for emotions, regions of the world, religions, and much more. They generalize in highly abstract ways. For example, the region neurons respond to the relevant regions on a world map, dominant ethnicities, local scripts, and country names.
+People-detecting neurons only scratch the surface of the highly abstract neurons we've found. Some neurons seem like topics out of a kindergarten curriculum: weather, seasons, letters, counting, or primary colors. All of these features, even the trivial seeming ones, have rich multimodality, such as a yellow neuron firing for images of the words “yellow”, “banana” and “lemon.”
 
-We find these multimodal neurons in the recent CLIP models [], although it's possible similar undiscovered multimodal neurons may exist in earlier models. A CLIP model consists of both a ResNet vision model and a Transformer language model, trained to align pairs of images and text from the internet using a contrastive loss. <d-footnote>The authors also kindly shared an alternative version from earlier experiments, where the training objective was an autoregressive language modelling objective, instead of a contrastive objective. The features seem pretty similar.</d-footnote> There are several CLIP models of varying sizes; we find multimodal neurons in all of them, but focus on studying the mid-sized RN50-x4 model. <d-footnote>We found it challenging to make feature visualization work on the largest CLIP models. The reasons why remain unclear. See faceted feature visualization.</d-footnote> We focus our analysis on CLIP's vision stream, so when we talk about a multimodal neuron responding to text we mean the model "reading" text in images. <d-footnote>The alignment with the text side of the model might be seen as an additional form of multimodality, perhaps analogous to a human neuron responding to hearing a word rather than seeing it (see Quiroga’s later work). But since that is an expected result of the training objective, it seems less interesting.</d-footnote>
+We find these multimodal neurons in the recent CLIP models [], although it's possible similar undiscovered multimodal neurons may exist in earlier models. A CLIP model consists of two sides, a ResNet vision model and a Transformer language model, trained to align pairs of images and text from the internet using a contrastive loss. <d-footnote>The authors also kindly shared an alternative version from earlier experiments, where the training objective was an autoregressive language modelling objective, instead of a contrastive objective. The features seem pretty similar.</d-footnote> There are several CLIP models of varying sizes; we find multimodal neurons in all of them, but focus on studying the mid-sized RN50-x4 model. <d-footnote>We found it challenging to make feature visualization work on the largest CLIP models. The reasons why remain unclear. See faceted feature visualization.</d-footnote> We focus our analysis on CLIP's vision side, so when we talk about a multimodal neuron responding to text we mean the model "reading" text in images. <d-footnote>The alignment with the text side of the model might be seen as an additional form of multimodality, perhaps analogous to a human neuron responding to hearing a word rather than seeing it (see Quiroga’s later work). But since that is an expected result of the training objective, it seems less interesting.</d-footnote>
 
-CLIP’s abstract visual features might be seen as the natural result of aligning vision and text. We expect word embeddings (and language models generally) to learn abstract "topic" features []. Either the language stream needs to give up those features, or the vision stream needs to build visual analogues. <d-footnote>Many researchers are interested in “grounding” language models by training them on tasks involving another domain, in the hope of them learning a more real world understanding of language. The abstract features we find in vision models can be seen as a kind of “inverse grounding”: vision taking on more abstract features by connection to language.</d-footnote> <d-footnote comma>This includes some of the classic kinds of bias we see in word embeddings, such as a “terrorism”/”Islam” neuron, or an “Immigration”/”Mexico” neuron. See discussion in the <a href="#region-neurons">region neurons section</a>.</d-footnote> But even if these features seem natural in retrospect, they are qualitatively different from neurons previously studied in vision models <d-cite bibtex-key="" />. They also have real world consequences: these models are vulnerable to a kind of “typographic attack” where adding adversarial text to images can cause them to be systematically misclassified.
+CLIP’s abstract visual features might be seen as the natural result of aligning vision and text. We expect word embeddings (and language models generally) to learn abstract "topic" features []. Either the language side needs to give up those features, or the vision side needs to build visual analogues. <d-footnote>Many researchers are interested in “grounding” language models by training them on tasks involving another domain, in the hope of them learning a more real world understanding of language. The abstract features we find in vision models can be seen as a kind of “inverse grounding”: vision taking on more abstract features by connection to language.</d-footnote> <d-footnote comma>This includes some of the classic kinds of bias we see in word embeddings, such as a “terrorism”/”Islam” neuron, or an “Immigration”/”Mexico” neuron. See discussion in the <a href="#region-neurons">region neurons section</a>.</d-footnote> But even if these features seem natural in retrospect, they are qualitatively different from neurons previously studied in vision models <d-cite bibtex-key="" />. They also have real world consequences: these models are vulnerable to a kind of “typographic attack” where adding adversarial text to images can cause them to be systematically misclassified.
 
 import AttackDemo from './diagrams/AttackDemo.svelte'
 
@@ -43,7 +39,7 @@ import MicroscopeAlert from './diagrams/MicroscopeAlert.svelte'
 A Guided Tour of Neuron Families
 </h2>
 
-What features exist in CLIP models? In this section, we examine neurons found in the final convolutional layer of the image stream across four models. Each consists of thousands of neurons, so for our preliminary analysis we looked at feature visualizations, the dataset examples that most activated the neuron, and the English words which most activated the neuron when rastered as images. This revealed an incredible diversity of features:
+What features exist in CLIP models? In this section, we examine neurons found in the final convolutional layer of the image side across four models. Each consists of thousands of neurons, so for our preliminary analysis we looked at feature visualizations, the dataset examples that most activated the neuron, and the English words which most activated the neuron when rastered as images. This revealed an incredible diversity of features:
 
 <Todo to="Nick" value={5}>Chris deleted the ‘most neurons are interpretable’ comment. Talk to Chris about evidence that would convince him to add it back in. (eg. try to categorize the top 100 neurons).</Todo>
 
@@ -55,13 +51,17 @@ These neurons don’t just select for a single object. They also fire (more weak
 
 How should we think of these neurons? They might sound like “grandmother neurons” from neuroscience, but their associative nature distinguishes them from how many neuroscientists interpret the term <d-cite bibtex-key="" />. The term “concept neurons” has sometimes been used to describe biological neurons with similar properties  <d-cite bibtex-key="" />, but this framing might encourage people to overinterpret these artificial neurons. Instead, the authors generally think of these neurons as being something like the visual version of a topic feature, activating for features we might expect to be similar in a word embedding.
 
+It’s worth noting that many of these neurons deal with sensitive topics. Some neurons explicitly represent or are closely related to protected characteristics -- age, gender, religion, sexual orientation, geographic regions, disability and mental health -- and may reflect prejudices related to them.<d-footnote>To be clear, these neurons detect human-understandable cues. For example, there’s a neuron we conceptualize as an LGBT neuron, but as far as we’re aware it simply detects the Pride flag and images of words like “lgbt”, not some special facial structure, contra Wang & Kosinski.</d-footnote> There are also a small number of people detectors for individuals who have committed crimes against humanity, and a “toxic” neuron which looks for hate speech and sexual content. Despite their sensitivity these neurons are important to discuss.
+
 CLIP contains a large number of interesting neurons. To allow detailed examination we’ll focus on three of the “neuron families” shown above: people neurons, emotion neurons, and region neurons. We invite you to explore others in Microscope.
 
 <h3 id="person-neurons">
 Person Neurons
 </h3>
 
-To caption images on the Internet you need cultural knowledge. If you try captioning the popular images of a foreign place, you’ll quickly find your object and scene recognition skills aren't enough. You can't caption photos at a stadium without recognizing the sport, and you may even need to know specific players to get the caption right. Pictures of politicians and celebrities speaking are even more difficult to caption if you don’t know who’s talking and what they talk about, and these are some of the most popular pictures on the Internet. With this in mind, perhaps it’s unsurprising that the model invests significant capacity in understanding the most prominent people in popular culture.
+<div class="sensitivity-warn">This section will discuss neurons representing present and historical figures, including divisive political figures and people who committed crimes against humanity. Our discussion is intended to be descriptive and frank about what the model learned from the internet, and is not endorsement of the figures discussed.</div>
+
+To caption images on the Internet you need cultural knowledge. If you try captioning the popular images of a foreign place, you’ll quickly find your object and scene recognition skills aren't enough. You can't caption photos at a stadium without recognizing the sport, and you may even need to know specific players to get the caption right. Pictures of politicians and celebrities speaking are even more difficult to caption if you don’t know who’s talking and what they talk about, and these are some of the most popular pictures on the Internet. With this in mind, perhaps it’s unsurprising that the model invests significant capacity in understanding the most prominent people in popular culture -- especially those that are divisive, emotional, or inflammatory.
 
 A Hitler neuron learns to detect his face and body, symbols of the Nazi party, relevant historical documents, and other loosely related concepts like German food. Feature visualization shows swastikas and Hitler seemingly doing a Nazi salute. A Jesus Christ neuron detects Christian symbols like crosses and crowns of thorns, paintings of Jesus, his written name, and feature visualization shows him as a baby in the arms of the Virgin Mary. A Spiderman neuron recognizes the masked hero and knows his secret identity, Peter Parker. It also responds to images, text, and drawings of heroes and villians from Spiderman movies and comics over the last half-century.
 
@@ -71,7 +71,7 @@ import PeopleMargin from './pages/people/margin'
 
 #### Case Study: Donald Trump Neuron
 
-Which people the model develops dedicated neurons for is stochastic, but seems correlated with the person's prevalence across the dataset. The one person we’ve found in every CLIP model is Donald Trump. It recognizes him across a wide variety of settings, including effigies and caricatures in many artistic mediums, as well as people he’s worked closely with like Mike Pence and Steve Bannon. It also responds to his political symbols and messaging (eg. “The Wall” and “Make America Great Again” hats). On the other hand, it most *negatively* activates to musicians like Nicky Minaj and Eminem, video games like Fortnite, black rights activists like Martin Luther King Jr., and LGBT symbols like rainbow flags.
+Which people the model develops dedicated neurons for is stochastic, but seems correlated with the person's prevalence across the dataset, and the intensity with which people respond to them. The one person we’ve found in every CLIP model is Donald Trump. It recognizes him across a wide variety of settings, including effigies and caricatures in many artistic mediums, as well as people he’s worked closely with like Mike Pence and Steve Bannon. It also responds to his political symbols and messaging (eg. “The Wall” and “Make America Great Again” hats). On the other hand, it most *negatively* activates to musicians like Nicky Minaj and Eminem, video games like Fortnite, black rights activists like Martin Luther King Jr., and LGBT symbols like rainbow flags.
 
 To better understand this neuron we estimate the conditional probability of several categories of images at different activation levels using human labeling, of X images.
 
@@ -89,13 +89,13 @@ import TrumpPeople from './pages/people/trumpPeople'
 
 <TrumpPeople />
 
-<Todo to="Nick" value={6}> transpose so bars are going horizontal, designate zero-point, std of each category show on bar</Todo>
-
 Presumably, people detecting neurons also exist in normal facial recognition models. What makes these neurons unique is that they respond to the person across modalities and associations, situating them in a cultural context. In particular, we're struck by how the neuron's response tracks an informal intuition with how associated people are. In this sense, person neurons can be thought of as a landscape of person-associations, with the person themself as simply the tallest peak.
 
 <h3 id="emotion-neurons">
 Emotion Neurons
 </h3>
+
+<div class="sensitivity-warn">This section will discuss neurons representing emotions, and a neuron for “mental illness.” Our discussion is intended to be descriptive and frank about what the model learned from the internet and is not endorsement.</div>
 
 Since a small change in someone's expression can radically change the meaning of a picture, emotional intelligence is essential to the task of captioning. We've found dozens of neurons that primarily respond to emotion, and many others that detect emotion as a part of a related but broader concept.
 
@@ -106,8 +106,6 @@ import EmotionsIntro from './pages/emotions/intro'
 <EmotionsIntro />
 
 <Todo to="Nick" value={6}>replace accepting an offer or fix, consider adding small indoor figure footnote, keep indoor</Todo>
-
-<Todo to="Chris" value={5}>Create new version of emotion neuron diagrams in margin</Todo>
 
 These neurons are flexible, recognizing body language and facial expressions in humans and animals, drawings, text, and even landscapes and interior designs that evoke the emotion's vibe. The surprise neuron activates even when the majority of the face is obscured. It responds to slang like "OMG!" and "WTF", and text feature visualization produces similar words of shock and surprise.
 
@@ -161,6 +159,8 @@ In a later section, we'll see that an important role of the mental illness neuro
 Region Neurons
 </h3>
 
+<div class="sensitivity-warn">This section will discuss neurons representing regions of the world, and indirectly ethnicity. The model’s representations are learned from the internet, and may reflect prejudices and stereotypes, sensitive regional situations, and colonialism. Our discussion is intended to be descriptive and frank about what the model learned from the internet, and is not endorsement.</div>
+
 From local weather and food, to travel and immigration, to language and race: geography is an important implicit or explicit context in a great deal of online discourse. Blizzards are more likely to be discussed in  <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 13, 1)}}>Canada</a>. Vegemite is more likely to come up in  <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 0, 6)}}>Australia</a>. Discussion of  <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography",  0, 5)}}>China</a> is more likely to be in Chinese.
 
 We find that CLIP models develop <i>region neurons</i> responding to geographic regions. These neurons might be seen as vision analogues of geographic information in word embeddings <d-cite bibtex-key="konkol2017geographical"></d-cite>. They respond to a wide variety of modalities and facets: country and city names, distinctive architecture, prominent public figures, faces of the most common ethnicity, distinctive clothing, wildlife, and local script (if not roman alphabet). If shown a world map, even without labels, these neurons fire selectively for the relevant region on the map.<d-footnote>Map responses seem to be strongest around distinctive geographic landmarks, such as the Gulf Of Carpentaria and Cape York Peninsula for Australia, or the Gulf of Guinea for Africa.</d-footnote>
@@ -175,7 +175,9 @@ import RegionalDiagram from './diagrams/RegionalNeurons.svelte'
 <Svelte component={RegionalDiagram} container={<figure className="fullscreen-diagram" id="region-neuron-diagram" />} />
 
 
-In addition to these region neurons, we find that many other neurons seem to be “<a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, null)}}>secondarily regional</a>.”<d-footnote>Some caution is needed in interpreting these neurons as truly regional, rather than spuriously weakly firing for part of a world map. Important validations are that they fire for the same region on multiple different maps, and if they respond to words for countries or cities in that region.</d-footnote> These neurons don’t have a region as the primary focus, but have some kind of geographic information baked in, firing weakly for regions on a world map related to them. For example, an <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, 1)}}>entrepreneurship neuron</a> that fires for California, a <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, 4)}}>cold neuron</a> that fires for the Arctic, and a big cat neuron that fires for Africa.<d-footnote>Most models have a great cat neuron, and it generally only fires for Africa. This misses non-lion great cats in other parts of the world, but mirrors a plausible and perhaps common human error.</d-footnote><d-footnote>We also find an <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, 0)}}>angel neuron</a> which responds to “Los Angeles” and California on a map.</d-footnote> Other neurons link concepts to regions of the world in ways that seem Americentric or even racist: an <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, 2)}}>immigration neuron</a> that responds to Latin America, and a <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, 5)}}>terrorism neuron</a> that responds to the Middle East.<d-footnote>We also find that the linear combination of neurons that respond to Russia on a map strongly responds to Pepe the frog, a symbol of white nationalism in the United States allegedly promoted by Russia. Our impression is that Russians probably wouldn’t particularly see this as a symbol of Russia, suggesting it is more “Russia as understood by the US.”</d-footnote>
+Not all region neurons fire on a globe-scale map. In particular, neurons which code for smaller countries or regions may not. This means that visualizing behavior on a global map underrepresents the sheer number of region neurons that exist in CLIP. Using the top-activating English words as a heuristic, we estimate around 4% of neurons are regional.<d-footnote>To estimate the fraction of neurons that are regional, we looked at what fraction of each neuron's top-activating words (ie. words it responds to when rastered as images) were explicitly linked to geography, and used this as a heuristic for whether a neuron was regional. To do this, we created a list of geographic words consisting of continent / country / province / city names, their corresponding <a href="https://en.wikipedia.org/wiki/List_of_adjectival_and_demonymic_forms_for_countries_and_nations">adjectival and demonymic forms</a>, and currencies. <br /><br /> We found 2.5% (64) of RN50-x4 neurons had geographic words for all of the five maximally activating words. This number varied between 2-4% in other CLIP models. However, looking only at neurons for which all top five words are explicitly geographic misses many region neurons which respond strongly to words with implicit regional connotations (eg. “hockey” for a Canada neuron, “volkswagen” for a German neuron, “palm” for an equatorial neuron). We bucketed neurons by fraction of five most activating words that are geographic, then estimated the fraction of each bucket that were regional. With many neurons, the line was quite blurry (should we include polysemantic neurons where one case is regional? What about “secondarily regional neurons”?). For a relatively conservative definition, this seems to get us about 4%, but with a more liberal one you might get as high as 8%.</d-footnote>
+
+In addition to pure region neurons, we find that many other neurons seem to be “<a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, null)}}>secondarily regional</a>.”<d-footnote>Some caution is needed in interpreting these neurons as truly regional, rather than spuriously weakly firing for part of a world map. Important validations are that they fire for the same region on multiple different maps, and if they respond to words for countries or cities in that region.</d-footnote> These neurons don’t have a region as the primary focus, but have some kind of geographic information baked in, firing weakly for regions on a world map related to them. For example, an <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, 1)}}>entrepreneurship neuron</a> that fires for California, a <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, 4)}}>cold neuron</a> that fires for the Arctic, and a big cat neuron that fires for Africa.<d-footnote>Most models have a great cat neuron, and it generally only fires for Africa. This misses non-lion great cats in other parts of the world, but mirrors a plausible and perhaps common human error.</d-footnote><d-footnote>We also find an <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, 0)}}>angel neuron</a> which responds to “Los Angeles” and California on a map.</d-footnote> Other neurons link concepts to regions of the world in ways that seem Americentric or even racist: an <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, 2)}}>immigration neuron</a> that responds to Latin America, and a <a href="#region-neuron-diagram" onClick={()=>{window.setRegionalState("geography", 2, 5)}}>terrorism neuron</a> that responds to the Middle East.<d-footnote>We also find that the linear combination of neurons that respond to Russia on a map strongly responds to Pepe the frog, a symbol of white nationalism in the United States allegedly promoted by Russia. Our impression is that Russians probably wouldn’t particularly see this as a symbol of Russia, suggesting it is more “Russia as understood by the US.”</d-footnote>
 
 #### Case Study: Central (?) Africa Neuron
 
@@ -204,10 +206,10 @@ Feature properties
 So far, we’ve looked at particular neurons to give a sense of the kind of features that exist in CLIP models. It's worth noting several properties that either warrant emphasis or might be missed in the discussion of individual features:
     
 <p><b>Multimodality / Abstraction:</b> As we’ve seen in the previous sections, most CLIP neurons are multimodal and abstract, responding to the same concept across forms such as photos, drawings, maps, images of text, and more.</p>
-    
+
 import ImageWordEmbeddingFootnote from './diagrams/ImageWordEmbeddingFootnote.svelte'
 
-<p><b>Image-Based Word Embedding:</b> Despite being a vision model, one can produce “word embeddings” with the visual CLIP model by rastering words into images and then feeding these images into the model. Like normal word embeddings, the nearest neighbors of words tend to be semantically related.{/*<Svelte component={ImageWordEmbeddingFootnote}  container={<d-footnote />} />*/}  Word arithmetic <d-cite bibtex-key="mikolov2013linguistic" /> such as <br /><span style={{display: " inline-block", margin: 12}}><i>V(Img(</i>“King”<i>)) <span style={{margin: 4}}>-</span> V(Img(</i>“Man”<i>)) <span style={{margin: 4}}>+ </span>V(Img(</i>“Woman”<i>)) <span style={{margin:4}}>=</span> V(Img(</i>“Queen”<i>))</i></span><br /> work in some cases if we mask non-semantic lexicographic neurons (eg. “-ing” detectors). It seems likely that mixed arithmetic of words and images should be possible.</p>
+<p><b>Image-Based Word Embedding:</b> Despite being a vision model, one can produce “word embeddings” with the visual CLIP model by rastering words into images and then feeding these images into the model. Like normal word embeddings, the nearest neighbors of words tend to be semantically related.<Svelte component={ImageWordEmbeddingFootnote}  container={<d-footnote />} />  Word arithmetic <d-cite bibtex-key="mikolov2013linguistic" /> such as <br /><span style={{display: " inline-block", margin: 12}}><i>V(Img(</i>“King”<i>)) <span style={{margin: 4}}>-</span> V(Img(</i>“Man”<i>)) <span style={{margin: 4}}>+ </span>V(Img(</i>“Woman”<i>)) <span style={{margin:4}}>=</span> V(Img(</i>“Queen”<i>))</i></span><br /> work in some cases if we mask non-semantic lexicographic neurons (eg. “-ing” detectors). It seems likely that mixed arithmetic of words and images should be possible.</p>
     
 <p><b>Limited Multilingual Behavior:</b> Although CLIP’s training data was filtered to be English, many features exhibit limited multilingual responsiveness. For example, a “positivity” neuron (4x:36) responds to images of English “Thank You”, French “Merci”, German “Danke”, and Spanish “Gracias,” and also to English “Congratulations”, German “Gratulieren”, Spanish “Felicidades”, and Indonesian “Selamat”. As the example of Indonesian demonstrates, the model can recognize some words from non Romance/Germanic languages. However, we were unable to find any examples of the model mapping words in non-latin script to semantic meanings. It can recognize many scripts (Arabic, Chinese, Japanese, etc) and will activate the corresponding regional neurons, but doesn’t seem to be able to map words in those scripts to their meanings.<d-footnote>One interesting question is why the model developed reading abilities in latin alphabet languages, but not others. Was it because more data of that type slipped into the training data, or (the more exciting possibility) because it’s easier to learn a language from limited data if you already know the alphabet?</d-footnote></p>
       
@@ -227,44 +229,11 @@ Why would models have conjoined features? Perhaps they’re a vestigial phenomen
 Using Abstractions
 </h2>
 
-We typically care about features because they’re useful, and CLIP’s features are more useful than most. Simple linear probes on top of them can perform a wide variety of tasks, including ImageNet classification. How do they do this?
-
-In this section, we explore how CLIP features are used for two downstream tasks: ImageNet classification and emotion captioning. Answering these questions will require us to look at how neurons work in concert to represent a broader space of concepts.
-
-
---
-We typically care about features because they’re useful, and CLIP’s features are more useful than most. Simple linear probes on top of them can perform a wide variety of tasks, including ImageNet classification. Somehow, a simple dot product with the network’s representation can be used to perform rich queries across countless domains.
-
-How do they do this?
-
-..
-
---
-We typically care about features because they’re useful, and CLIP’s features are more useful than most. Somehow, a simple dot product with the network’s representation can be used to perform rich queries, enabling a wide range of tasks.
-
-
-
----
-
 We typically care about features because they’re useful, and CLIP’s features are more useful than most. These features, when ensembled, allow direct retrieval on a variety of queries via the dot product alone. 
 
 Untangling the image into its semantics [7] enables the model to perform a wide variety of downstream tasks including imagenet classification, facial expression detection, geolocalization and more []. How do they do this? Answering these questions will require us to look at how neurons work in concert to represent a broader space of concepts.
 
 To begin, we’ll make this question concrete by taking a deep dive into one particular task: the Imagenet challenge.
-
---
-
-It has been hypothesized that the formation of intermediate representations, both in the brain and in neural networks, facilitate "subspace untangling" [7] — a transformation of an input into a vector that allows rich queries on the relevant task through dot products. This is, indeed, explicitly the goal of CLIP, where linear probes achieve impressive accuracies in imagenet classification [Section []], facial expression detection [], geolocalization, and more.
-
-Somehow, linear combinations of neurons can be used to perform a wide variety of downstream tasks. How do they do this? Answering these questions will require us to look at how neurons work in concert to represent a broader space of concepts.
-
-To begin, we’ll make this question concrete by taking a deep dive into one particular task: the Imagenet challenge.
-
-[?? How do we rewrite this introduction]
-It has been hypothesized that the formation of intermediate representations, both in the brain and in neural networks, facilitate "subspace untangling" [7] — a transformation of an input into a vector that allows rich queries on the relevant task through dot products.
-
-This is, indeed, explicitly the goal of CLIP, where linear probes achieve impressive accuracies in imagenet classification [Section []], facial expression detection [], geolocalization, and more. We make a stab at making this concrete by taking a deep dive into one particular task: the Imagenet challenge.
-
 <h3 id="imagenet-challenge">
 The Imagenet Challenge
 </h3>
@@ -305,7 +274,7 @@ Understanding Language
 
 The most exciting aspect of CLIP is its ability to do zero-shot classification: it can be “programmed” with natural language to classify images into new categories, without fitting a model. Where linear probes had fixed weights for a limited set of classes, now we have dynamic weight vectors that can be generated automatically from text.
 
-Recall that CLIP has two sides, a vision model (which we’ve discussed up to this point) and a language model. The two models meet at the end, going through some processing and then performing a dot product to create a logit. If we ignore spatial structure[footnote], the logit has the following form:
+Recall that CLIP has two sides, a vision model (which we’ve discussed up to this point) and a language model. The two sides meet at the end, going through some processing and then performing a dot product to create a logit. If we ignore spatial structure[footnote], the logit has the following form:
 
 logit = x_img W x_text  /  ||x_img||||x_text||
 
@@ -326,9 +295,9 @@ Emotional intelligence
 <Todo to="Nick" value={7}>Circuit editing or other experiment to validate that increasing bias neuron increases relevant word. Or, end to end by running an image relevant to the bias neuron (lgbt image to see if accepted goes up). Pay particular to bias examples and how confident my text sounds.</Todo>
 <Todo to="Nick" value={7}>Figure out exactly what nmf is doing and make sure they do what I think and if they don't, explain that. If I'm doing the top k components, clarify in footnote</Todo>
 
-As we see above, English has far more words for emotions than the image stream has emotion neurons. And yet, the vision stream recognizes these more obscure emotions. How can it do that? 
+As we see above, English has far more words for emotions than the image side has emotion neurons. And yet, the visionside recognizes these more obscure emotions. How can it do that? 
 
-We can see what different emotion words correspond to on the image stream by taking attribution [ref to previous section] to "I feel X" on the language stream. This gives us a vector of image neurons for each emotion word. Looking at a list of common emotion words<d-footnote>from a feeling wheel, we'll see later</d-footnote>, we see that the largest elements in their vectors are usually emotion neurons, composed in reasonable ways to span this broader space of emotions. This mirrors a line of thinking in psychology where combinations of basic emotions form the “complex emotions” we experience.<d-footnote>theory of constructed emotion</d-footnote>
+We can see what different emotion words correspond to on the imageside by taking attribution [ref to previous section] to "I feel X" on the language side. This gives us a vector of image neurons for each emotion word. Looking at a list of common emotion words<d-footnote>from a feeling wheel, we'll see later</d-footnote>, we see that the largest elements in their vectors are usually emotion neurons, composed in reasonable ways to span this broader space of emotions. This mirrors a line of thinking in psychology where combinations of basic emotions form the “complex emotions” we experience.<d-footnote>theory of constructed emotion</d-footnote>
 
 For example, the jealousy emotion is success + grumpy. Bored is relaxed + grumpy. Intimate is soft smile + heart - sick. Interested is question mark + heart and inquisitive is question mark + shocked. Surprise is celebration + shock.
 
