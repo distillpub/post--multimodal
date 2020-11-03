@@ -6,20 +6,20 @@
 		{
 			"author": "Author 1",
 			"authorURL": "",
-			"affiliation": "OpenAI",
-			"affiliationURL": "https://openai.com"
+			"affiliation": "Institution",
+			"affiliationURL": ""
 		},
 		{
 			"author": "Author 2",
 			"authorURL": "",
-			"affiliation": "OpenAI",
-			"affiliationURL": "https://openai.com"
+			"affiliation": "Institution",
+			"affiliationURL": ""
 		},
 		{
 			"author": "Author 3",
-			"authorURL": "gabgoh.github.io",
-			"affiliation": "OpenAI",
-			"affiliationURL": "https://openai.com"
+			"authorURL": "",
+			"affiliation": "Institution",
+			"affiliationURL": ""
 		}
 
 	],

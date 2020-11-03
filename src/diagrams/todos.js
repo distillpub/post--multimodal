@@ -6,7 +6,9 @@ import { sortBy, capitalize, uniq, reverse } from 'lodash'
 export default () => {
   const [active, setActive] = useState(localStorage.getItem('whoTask') || 'All')
 
-  const [hidden, setIsHidden] = useState(false)
+
+  const is_drafts = (window.location.origin == "https://drafts.distill.pub");
+  const [hidden, setIsHidden] = useState(is_drafts)
   function toggle_hidden() {
     activeTodos.map(({ to, id, value, children }) => {
       document.getElementById(id).style.display = hidden? 'flex' : 'none';
@@ -38,6 +40,8 @@ export default () => {
     return to.toLowerCase() === active.toLowerCase()
   })
 
+  const namify = (name) => (is_drafts && name != "All")? "?" : capitalize(name);
+
   const shortName = (name) => (name === 'Chelsea' ? 'Voss' : name);
 
 
@@ -66,7 +70,7 @@ export default () => {
                 fontWeight={active === name && 'bold'}
                 cursor="pointer"
               >
-                {capitalize(name)}
+                {namify(name)}
               </Text>
             ))}
           </Surface>
@@ -99,7 +103,7 @@ export default () => {
                     href={`#${id}`}
                     fontWeight="bold"
                   >
-                    {shortName(capitalize(to))}({value}):
+                    {shortName(namify(to))}({value}):
                   </a>
                 </Surface>
                 <Surface width={200}>{children}</Surface>
