@@ -38,9 +38,9 @@ export function map_url(neuron){
     return `http://storage.googleapis.com/openai-clarity/colah/multimodal-vis/maps_data/geographical/${model_slug}_${neuron.unit}.jpeg`;
 }
 
-export function facet_icon_url(neuron, facet="any"){
+export function facet_icon_url(neuron, facet="any", strength=5){
     neuron = as_neuron(neuron);
-    let strength = (facet=="any")? 0 : 5;
+    strength = (facet=="any")? 0 : strength;
     facet = as_facet((facet=="any")? "text" : facet);
     let model_slug = {
         "v1": "v1",

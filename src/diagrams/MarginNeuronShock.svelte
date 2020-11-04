@@ -5,8 +5,8 @@
       {
         neuron: {model: "4x", unit: "2478", layer: "image_block_4_5_Add_6_0"},
         facet: "face",
-        ds_img_prefix: "",
-        description: 'Neuron responding to surprised expressions, and words like "OMG" and "WTF".'
+        ds_img_prefix: "images/neuron-examples/shock-",
+        description: 'Surprise / Shock'
       },
     ];
   </script>
@@ -15,6 +15,7 @@
       display: block;
       border-bottom: none;
       margin-bottom: 10px;
+      --size: 100px;
     }
     .neuron-container {
       display: flex;
@@ -29,11 +30,12 @@
     }
     a.outer-neuron-container:hover .neuron-container {
       border: 1px solid #AAA;
+      background: #AAA;
     }
     .neuron-description {
       max-width: 200px;
     }
-    @media only screen and (min-width: 1500px) {
+    /* @media only screen and (min-width: 1500px) {
       a.outer-neuron-container {
         display: flex;
         flex-direction: row;
@@ -44,21 +46,24 @@
         max-width: 150px;
         margin-top: -2px;
       }
-    }
+    } */
     .dataset-example {
-      width: 100%;
+      width: calc( var(--size) / 2);
+      height: calc( var(--size) / 2);
       background: #CCC;
     }
     .neuron-feature-viz{
-      width: 90px;
-      height: 90px;
+      width: calc( var(--size) + 1px);
+      height: calc( var(--size) + 1px);
     }
     .dataset-examples {
       display: grid;
-      grid-template-rows: repeat(2, atuo);
-      grid-template-columns: repeat(2, auto);
-      width: 90px;
       grid-gap: 1px;
+    }
+    @media only screen and (max-width: 1600px) {
+      .dataset-example:nth-child(n+5) {
+        display: none;
+      }
     }
   </style>
   
@@ -66,12 +71,14 @@
   <a class="outer-neuron-container" href="{microscope_url(neuron.neuron)}">
   <div class="neuron-container">
     <img class="neuron-feature-viz" src="{facet_icon_url(neuron.neuron, neuron.facet)}" alt="" style="grid-row: 1; grid-column: 1;"/>
-    <!-- <div class="dataset-examples">
+    <div class="dataset-examples">
       <img class="dataset-example" src="{neuron.ds_img_prefix}1.png" alt="" style="grid-row: 1; grid-column: 1;"/>
-      <img class="dataset-example" src="{neuron.ds_img_prefix}2.png" alt="" style="grid-row: 1; grid-column: 2;"/>
-      <img class="dataset-example" src="{neuron.ds_img_prefix}3.png" alt="" style="grid-row: 2; grid-column: 1;"/>
+      <img class="dataset-example" src="{neuron.ds_img_prefix}2.png" alt="" style="grid-row: 2; grid-column: 1;"/>
+      <img class="dataset-example" src="{neuron.ds_img_prefix}3.png" alt="" style="grid-row: 1; grid-column: 2;"/>
       <img class="dataset-example" src="{neuron.ds_img_prefix}4.png" alt="" style="grid-row: 2; grid-column: 2;"/>
-    </div> -->
+      <img class="dataset-example" src="{neuron.ds_img_prefix}5.png" alt="" style="grid-row: 1; grid-column: 3;"/>
+      <img class="dataset-example" src="{neuron.ds_img_prefix}6.png" alt="" style="grid-row: 2; grid-column: 3;"/>
+    </div>
   </div>
   <div class="figcaption neuron-description">
     {@html neuron.description}

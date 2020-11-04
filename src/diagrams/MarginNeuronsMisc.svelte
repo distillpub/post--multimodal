@@ -6,19 +6,22 @@
         neuron: {model: "4x", unit: "1543", layer: "image_block_4_5_Add_6_0"},
         facet: "face",
         ds_img_prefix: "",
-        description: 'Aroused'
+        description: 'Aroused',
+        strength: 8
       },
       {
         neuron: {model: "4x", unit: "1825", layer: "image_block_4_5_Add_6_0"},
         facet: "face",
         ds_img_prefix: "",
-        description: 'Price Tag'
+        description: 'Price Tag',
+        strength: 5
       },
       {
         neuron: {model: "4x", unit: "599", layer: "image_block_4_5_Add_6_0"},
         facet: "face",
         ds_img_prefix: "",
-        description: 'Accept'
+        description: 'Accept',
+        strength: 5
       },
     ];
   </script>
@@ -50,20 +53,20 @@
       background: #CCC;
     }
     .neuron-feature-viz{
-      width: 90px;
-      height: 90px;
-    }
-    .dataset-examples {
-      display: grid;
-      grid-template-rows: repeat(2, atuo);
-      grid-template-columns: repeat(2, auto);
-      width: 90px;
-      grid-gap: 1px;
+      width: 80px;
+      height: 80px;
     }
     .neurons {
         display: flex;
         flex-direction: row;
         gap: 4px;
+    }
+
+    @media only screen and (max-width: 1600px) {
+      .neuron-feature-viz{
+        width: 65px;
+        height: 65px;
+      }
     }
   </style>
   
@@ -71,13 +74,8 @@
   {#each neurons as neuron}
   <a class="outer-neuron-container" href="{microscope_url(neuron.neuron)}">
   <div class="neuron-container">
-    <img class="neuron-feature-viz" src="{facet_icon_url(neuron.neuron, neuron.facet)}" alt="" style="grid-row: 1; grid-column: 1;"/>
-    <!-- <div class="dataset-examples">
-      <img class="dataset-example" src="{neuron.ds_img_prefix}1.png" alt="" style="grid-row: 1; grid-column: 1;"/>
-      <img class="dataset-example" src="{neuron.ds_img_prefix}2.png" alt="" style="grid-row: 1; grid-column: 2;"/>
-      <img class="dataset-example" src="{neuron.ds_img_prefix}3.png" alt="" style="grid-row: 2; grid-column: 1;"/>
-      <img class="dataset-example" src="{neuron.ds_img_prefix}4.png" alt="" style="grid-row: 2; grid-column: 2;"/>
-    </div> -->
+    <img class="neuron-feature-viz" src="{facet_icon_url(neuron.neuron, neuron.facet, neuron.strength)}" alt="" style="grid-row: 1; grid-column: 1;"/>
+
   </div>
   <div class="figcaption neuron-description">
     {@html neuron.description}
