@@ -175,7 +175,7 @@ b i {
 d-article d-contents {
   align-self: start;
   grid-column: 1 / 4;
-  grid-row: auto / span 3;
+  grid-row: auto / span 4;
   justify-self: end;
   margin-top: 0em;
   padding-right: 3em;
