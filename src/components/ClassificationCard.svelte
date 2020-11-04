@@ -1,5 +1,5 @@
 <script>
-export let imageUrl, imageAltText, probabilities, customHues, stroop = false;
+export let imageUrl, imageAltText, probabilities, customHues, forceShorterWidth = false;
 
 function backgroundColor(probability, imagenetClass, customHues) {
   return `hsla(
@@ -44,7 +44,7 @@ function calculateBorderColor() {
         margin-bottom: -1px;
         padding-top: 1px;
         background-color: {backgroundColor(probability, imagenetClass, customHues)};
-        color: #{ probability < 0.7 ? "000000" : "FFFFFF"}; padding: 0px 10px; line-height: 16px; width: {stroop? "110px" : "155px"}; font-size: 80%">
+        color: #{ probability < 0.7 ? "000000" : "FFFFFF"}; padding: 0px 10px; line-height: 16px; width: {forceShorterWidth? "110px" : "155px"}; font-size: 80%">
         <small style='vertical-align: middle;'>
           <span style="font-size: { (imagenetClass.length > 20) ? ((imagenetClass.length > 26) ? "80%" : "90%") : "100%"}">
             {imagenetClass}
