@@ -52,7 +52,7 @@ let families = [
             {model: "4x", unit: 479, title: "Islam?", facet: "logo" }, // or 1860
             // {model: "rn101", unit: 1227, title: "Buddhism", facet: "any" }, // polysemantic with "hope", unfortunately
             // 1777 might be thought of as a Christianity neuron insteead of a people neuron. Top words:  christ, churches, baptist, gospel, ministries, christianity, theology, jesus, pray, christians, praise, church, pastor, prayer, biblical, salvation, worship, jerusalem, christian, bible
-            // Buddhism wasn't in top words???
+            {model: "4x", unit: 14, title: "Buddhism", facet: "any" }, // or 1860
         ]
     },
 
