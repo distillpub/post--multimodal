@@ -234,13 +234,13 @@ export default () => {
         )}
       </Surface>
       <figcaption style={{ margin: 'auto', width: 704 }}>
-        We can create an atlas [activation atlas] of all attribution vectors
-        from the list of common emotion words to get a sense for the space the
-        emotion neurons span. We apply non-negative matrix factorization to the
-        vectors and use the factors to color each cell. The atlas resembles
-        common feeling wheels hand-crafted by psychologists to explain the space
-        of human emotions, indicating that the vectors have high-level structure
-        that closely resemble our own categorizations.
+        We can create an atlas <d-cite bibtex-key="carter2019activation" /> of
+        complex emotions by applying non-negative matrix factorization to the
+        emotion attribution vectors and using the factors to color each cell.
+        The atlas resembles common feeling wheels{' '}
+        <d-cite bibtex-key="willcox1982feeling" /> hand-crafted by psychologists
+        to explain the space of human emotions, indicating that the vectors have
+        a high-level structure that resembles emotion research in psychology.
       </figcaption>
     </figure>
   )
