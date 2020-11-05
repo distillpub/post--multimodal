@@ -77,7 +77,7 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
                   imageAltText={`${item} labeled ${label}`}
                   probabilities={results.results.slice(0, numLabelsPerCard(showHidden))}
                   customHues={hues(label)}
-                  stroop={true}
+                  forceShorterWidth={true}
                 />
               {:else}
                 <ClassificationCard
@@ -85,7 +85,7 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
                   imageAltText={`${item} labeled ${label}`}
                   probabilities={results.results.slice(0, numLabelsPerCard(showHidden))}
                   customHues={hues(label)}
-                  stroop={true}
+                  forceShorterWidth={true}
                 />
               {/if}
             {:else}

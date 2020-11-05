@@ -6,6 +6,7 @@ export default ({ to, value, children }) => {
     window.todos = []
   }
   const id = `todo${todos.length}`
+  const is_drafts = (window.location.origin == "https://drafts.distill.pub");
 
   todos.push({ to, id, value, children })
 
@@ -19,10 +20,11 @@ export default ({ to, value, children }) => {
       lineHeight="130%"
       borderRadius={4}
       width="fit-content"
+      display={is_drafts? "none" : "block"}
       id={id}
     >
       <Text fontWeight="bold">
-        TODO({to}, {value}):
+        TODO({is_drafts? "?" : to}, {value}):
       </Text>
       {children}
     </Surface>
