@@ -23,8 +23,8 @@
 
     let neuron_families = [
         {
-            "name": "Selected Units form 4x model",
-            "neurons": [ 
+            "name": "Selected Units from 4x model",
+            "neurons": [
                 {"model": "4x", "unit": 862, "name": "USA?"  },
                 {"model": "4x", "unit": 780, "name": "Spanish?", "warn": "Some neurons may have associations related to colonialism and shared language, such as linking South America to Spain and Portugal. Note that individual neurons don't necessarily reflect overall model behavior."  },
                 {"model": "4x", "unit": 1257, "name": "West Africa?"  },
