@@ -133,9 +133,10 @@ let families = [
         neurons: [
             {model: "4x", unit: 924, title: "Pokémon", facet: "logo" },
             {model: "4x", unit: 2500, title: "Star Wars", facet: "any"},
-            {model: "4x", unit: 2065, title: "Superman", facet: "indoor"},
+            {model: "4x", unit: 3, title: "Minecraft", facet: "any" },
             {model: "4x", unit: 1649, title: "Batman", facet: "any" },
-            {model: "rn101", unit: 1532, title: "Star Wars", facet: "pose" },
+            {model: "4x", unit: 2065, title: "Superman", facet: "indoor"},
+            // {model: "rn101", unit: 1532, title: "Star Wars", facet: "pose" },
             {model: "rn101", unit: 905, title: "Marvel", facet: "any" },
             {model: "rn101", unit: 2043, title: "Zelda", facet: "logo" },
             {model: "rn101", unit: 789, title: "The Simpsons", facet: "logo" },
