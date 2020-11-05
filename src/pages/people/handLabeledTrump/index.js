@@ -13,6 +13,70 @@ import {
   VictoryStack,
 } from 'victory'
 
+import photo1 from './dse/photo/1.png'
+import photo2 from './dse/photo/2.png'
+import photo3 from './dse/photo/3.png'
+import photo4 from './dse/photo/4.png'
+
+const photoDse = [photo1, photo2, photo3, photo4]
+
+import aligned1 from './dse/aligned/1.png'
+import aligned2 from './dse/aligned/2.png'
+import aligned3 from './dse/aligned/3.png'
+import aligned4 from './dse/aligned/4.png'
+
+const alignedDse = [aligned1, aligned2, aligned3, aligned4]
+
+import art1 from './dse/art/1.png'
+import art2 from './dse/art/2.png'
+import art3 from './dse/art/3.png'
+import art4 from './dse/art/4.png'
+
+const artDse = [art1, art2, art3, art4]
+
+import political1 from './dse/political/1.png'
+import political2 from './dse/political/2.png'
+import political3 from './dse/political/3.png'
+import political4 from './dse/political/4.png'
+
+const politicalDse = [political1, political2, political3, political4]
+
+import videoGamesMusic1 from './dse/videoGamesMusic/1.png'
+import videoGamesMusic2 from './dse/videoGamesMusic/2.png'
+import videoGamesMusic3 from './dse/videoGamesMusic/3.png'
+
+const videoGamesMusicDse = [
+  videoGamesMusic1,
+  videoGamesMusic2,
+  videoGamesMusic3,
+]
+
+import partial1 from './dse/partial/1.png'
+import partial2 from './dse/partial/2.png'
+import partial3 from './dse/partial/3.png'
+import partial4 from './dse/partial/4.png'
+
+const partialDse = [partial1, partial2, partial3, partial4]
+
+import text1 from './dse/text/1.png'
+import text2 from './dse/text/2.png'
+import text3 from './dse/text/3.png'
+import text4 from './dse/text/4.png'
+
+const textDse = [text1, text2, text3, text4]
+
+import lgbt1 from './dse/lgbt/1.png'
+import lgbt2 from './dse/lgbt/2.png'
+import lgbt3 from './dse/lgbt/3.png'
+
+const lgbtDse = [lgbt1, lgbt2, lgbt3]
+
+import nonPolitical1 from './dse/unrelated/1.png'
+import nonPolitical2 from './dse/unrelated/2.png'
+import nonPolitical3 from './dse/unrelated/3.png'
+
+const nonPoliticalDse = [nonPolitical1, nonPolitical2, nonPolitical3]
+
 export default class HumanLabels extends React.Component {
   state = { activeGroups: [] }
 
@@ -68,10 +132,14 @@ export default class HumanLabels extends React.Component {
 
     const colorSize = 15
 
-    const Label = ({ index, children, count }) => (
+    const iconSize = 43.4
+
+    const Label = ({ index, dse, children, count }) => (
       <Surface
         cursor="pointer"
-        marginRight={10}
+        marginRight={5}
+        opacity={0.8}
+        width={iconSize * 3}
         onClick={() => {
           this.onToggleGroup(index)
         }}
@@ -107,6 +175,21 @@ export default class HumanLabels extends React.Component {
                   </Text>
                 </Surface>
               </Surface>
+              {dse && (
+                <Surface flexFlow="row">
+                  {dse.slice(0, 3).map((img) => (
+                    <div
+                      style={{
+                        border: '1px solid ' + colors[index],
+                        width: iconSize,
+                        height: iconSize,
+                      }}
+                    >
+                      <img src={img} height={iconSize} width={iconSize} />
+                    </div>
+                  ))}
+                </Surface>
+              )}
             </Surface>
           )
         }}
@@ -115,11 +198,11 @@ export default class HumanLabels extends React.Component {
 
     const Group = ({ name, children }) => {
       return (
-        <Surface marginRight={20}>
+        <Surface marginRight={10} marginLeft={-10}>
           <Text
-            fontSize={12}
-            opacity={0.8}
-            fontWeight={500}
+            fontSize={14}
+            opacity={1}
+            fontWeight={600}
             textDecoration="uppercase"
           >
             {name}
@@ -147,17 +230,35 @@ export default class HumanLabels extends React.Component {
         <Surface width={width} margin="auto">
           <Surface flexFlow="row" marginLeft={60}>
             <Group name="Neutral">
-              <Label index={8}>Video Games and Music</Label>
-              <Label index={7}>Black and LGBT Rights</Label>
-              <Label index={6}>Non-Political</Label>
-              <Label index={5}>Political Generic</Label>
+              <Label index={8} dse={videoGamesMusicDse}>
+                Games / Music
+              </Label>
+              <Label index={7} dse={lgbtDse}>
+                Black / LGBT Rights
+              </Label>
+              <Label index={6} dse={nonPoliticalDse}>
+                Non-Political
+              </Label>
+              <Label index={5} dse={politicalDse}>
+                Political Generic
+              </Label>
             </Group>
             <Group name="Related to Donald Trump">
-              <Label index={4}>Trump Aligned Politics</Label>
-              <Label index={3}>Partially Photo of Trump</Label>
-              <Label index={2}>"Trump" Text</Label>
-              <Label index={1}>Trump Related Art</Label>
-              <Label index={0}>Photo of Trump</Label>
+              <Label index={4} dse={alignedDse}>
+                Politics
+              </Label>
+              <Label index={3} dse={partialDse}>
+                Partial Photo
+              </Label>
+              <Label index={2} dse={textDse}>
+                Text
+              </Label>
+              <Label index={1} dse={artDse}>
+                Art
+              </Label>
+              <Label index={0} dse={photoDse}>
+                Profile Photo
+              </Label>
             </Group>
           </Surface>
           <Surface

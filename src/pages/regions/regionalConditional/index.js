@@ -15,6 +15,42 @@ import {
 import data1257 from './africa_1257.json'
 import data1317 from './africa_1317.json'
 
+import ethnicity1 from './dse/ethnicity/1.png'
+import ethnicity2 from './dse/ethnicity/2.png'
+import ethnicity3 from './dse/ethnicity/3.png'
+
+const ethnicityDse = [ethnicity1, ethnicity2, ethnicity3]
+
+import flags1 from './dse/flags/1.png'
+import flags2 from './dse/flags/2.png'
+import flags3 from './dse/flags/3.png'
+
+const flagsDse = [flags1, flags2, flags3]
+
+import foreignSymbol1 from './dse/foreignSymbol/1.png'
+import foreignSymbol2 from './dse/foreignSymbol/2.png'
+import foreignSymbol3 from './dse/foreignSymbol/3.png'
+
+const foreignSymbolDse = [foreignSymbol1, foreignSymbol2, foreignSymbol3]
+
+import other1 from './dse/other/1.png'
+import other2 from './dse/other/2.png'
+import other3 from './dse/other/3.png'
+
+const otherDse = [other1, other2, other3]
+
+import otherRegional1 from './dse/otherRegional/1.png'
+import otherRegional2 from './dse/otherRegional/2.png'
+import otherRegional3 from './dse/otherRegional/3.png'
+
+const otherRegionalDse = [otherRegional1, otherRegional2, otherRegional3]
+
+import placeName1 from './dse/placeName/1.png'
+import placeName2 from './dse/placeName/2.png'
+import placeName3 from './dse/placeName/3.png'
+
+const placeNameDse = [placeName1, placeName2, placeName3]
+
 const data = {
   1257: data1257,
   1317: data1317,
@@ -108,10 +144,13 @@ export default class HumanLabels extends React.Component {
       stackProps.domain = { y: [0, 0.0000022] }
     }
 
-    const Label = ({ index, children, count }) => (
+    const iconSize = 43.4
+    const Label = ({ index, dse, children, count }) => (
       <Surface
         cursor="pointer"
-        marginRight={10}
+        marginRight={5}
+        opacity={0.8}
+        width={iconSize * 3}
         onClick={() => {
           this.onToggleGroup(index)
         }}
@@ -147,6 +186,21 @@ export default class HumanLabels extends React.Component {
                   </Text>
                 </Surface>
               </Surface>
+              {dse && (
+                <Surface flexFlow="row">
+                  {dse.slice(0, 3).map((img) => (
+                    <div
+                      style={{
+                        border: '1px solid ' + colors[index],
+                        width: iconSize,
+                        height: iconSize,
+                      }}
+                    >
+                      <img src={img} height={iconSize} width={iconSize} />
+                    </div>
+                  ))}
+                </Surface>
+              )}
             </Surface>
           )
         }}
@@ -180,16 +234,28 @@ export default class HumanLabels extends React.Component {
         <Surface width={width} margin="auto">
           <Surface flexFlow="row" marginLeft={60}>
             <Group name="Non-Africa">
-              <Label index={4}>Foreign Symbol</Label>
+              <Label index={4} dse={foreignSymbolDse}>
+                Foreign Symbol
+              </Label>
             </Group>
             <Group name="Neutral">
-              <Label index={5}>Other</Label>
+              <Label index={5} dse={otherDse}>
+                Other
+              </Label>
             </Group>
             <Group name="African">
-              <Label index={0}>Place Name</Label>
-              <Label index={1}>Flags</Label>
-              <Label index={2}>Ethnicity</Label>
-              <Label index={3}>Other Regional</Label>
+              <Label index={0} dse={placeNameDse}>
+                Place Name
+              </Label>
+              <Label index={1} dse={flagsDse}>
+                Flags
+              </Label>
+              <Label index={2} dse={ethnicityDse}>
+                Ethnicity
+              </Label>
+              <Label index={3} dse={otherRegionalDse}>
+                Other Regional
+              </Label>
             </Group>
           </Surface>
           <Surface
@@ -210,14 +276,6 @@ export default class HumanLabels extends React.Component {
               >
                 {stackIndexes.map((index) => {
                   const height = heights[index]
-                  console.log(
-                    'index is',
-                    index,
-                    'height is',
-                    height,
-                    'heights len',
-                    heights
-                  )
                   const isZero = hasActiveGroup && !isGroupActive(index)
                   const victoryData = bins
                     .map((binValue, bin) => {
