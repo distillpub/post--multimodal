@@ -56,27 +56,22 @@ const { bars, labels, stdDevs } = {
 }
 
 export default () => {
-  const data = bars.map((y, index) => ({ y, x: labels[index], index }))
-  const width = 1200
   const neuronStd = 2.19
   const neuronMean = -2.33
   const zeroStd = (0 - neuronMean) / neuronStd
+  const data = bars.map((y, index) => ({
+    y: y + zeroStd,
+    x: labels[index],
+    index,
+  }))
+  console.log('data is', data, 'bars is', bars)
+  const width = 1000
 
   return (
     <figure className="fullscreen-diagram">
       <Surface width={width} margin="auto">
-        <Surface width={width} height={500} transform="translateY(-70px)">
+        <Surface width={width} transform="translateY(-120px)">
           <VictoryChart domainPadding={[15, 4]}>
-            <VictoryLine
-              style={{
-                data: { stroke: 'rgba(0, 0, 0, 0.1)', strokeWidth: 1 },
-              }}
-              horizontal
-              data={[
-                { y: zeroStd, x: -20 },
-                { y: zeroStd, x: 20 },
-              ]}
-            />
             <VictoryBar
               data={data}
               style={{
@@ -118,9 +113,9 @@ export default () => {
             <VictoryAxis
               crossAxis={false}
               dependentAxis
-              label="Standard Deviations"
+              label="Standard Deviations from Zero Activation"
               style={{
-                axisLabel: { fontSize: 10 },
+                axisLabel: { fontSize: 7 },
                 tickLabels: { fontSize: 8 },
               }}
             />
@@ -129,7 +124,7 @@ export default () => {
         <figcaption
           style={{
             width: 703,
-            marginTop: -80,
+            marginTop: -120,
             alignSelf: 'center',
           }}
         >
@@ -140,8 +135,7 @@ export default () => {
           length for each individual shows the median activation of the person's
           photos in standard deviations of the neuron over the dataset, and the
           range over the bar shows the standard deviation of the person's
-          photos. The light gray bar at 1.06 standard deviation shows the zero
-          point for activations.
+          photos.
         </figcaption>
       </Surface>
     </figure>

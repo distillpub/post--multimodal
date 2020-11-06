@@ -12,7 +12,8 @@ const nameToNeuron = {
   'Soft smile': 52,
   Destroyed: 979,
   Erotic: 1543,
-  Incarcerated: 1551,
+  // Incarcerated: 1551,
+  Incarcerated: 2297,
   Blocked: 2041,
   Coffee: 730,
   'Accept / Appoint': 599,
@@ -21,6 +22,10 @@ const nameToNeuron = {
   Hitler: 309,
   Spiderman: 550,
   'Question Mark': 2202,
+}
+
+export const getEmotionNeuron = (name, facet, strength) => {
+  return nameToNeuron[name]
 }
 
 export const getEmotion = (name, facet, strength) => {

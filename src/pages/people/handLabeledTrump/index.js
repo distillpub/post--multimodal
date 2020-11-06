@@ -132,14 +132,14 @@ export default class HumanLabels extends React.Component {
 
     const colorSize = 15
 
-    const iconSize = 43.4
+    const iconSize = 65.1
 
     const Label = ({ index, dse, children, count }) => (
       <Surface
         cursor="pointer"
         marginRight={5}
         opacity={0.8}
-        width={iconSize * 3}
+        width={iconSize * 2}
         onClick={() => {
           this.onToggleGroup(index)
         }}
@@ -177,10 +177,13 @@ export default class HumanLabels extends React.Component {
               </Surface>
               {dse && (
                 <Surface flexFlow="row">
-                  {dse.slice(0, 3).map((img) => (
+                  {dse.slice(0, 2).map((img, imgIndex) => (
                     <div
                       style={{
-                        border: '1px solid ' + colors[index],
+                        borderBottom: '1px solid ' + colors[index],
+                        borderRight: '1px solid ' + colors[index],
+                        borderLeft:
+                          imgIndex === 0 && '1px solid ' + colors[index],
                         width: iconSize,
                         height: iconSize,
                       }}
@@ -279,10 +282,8 @@ export default class HumanLabels extends React.Component {
                   const isZero = hasActiveGroup && !isGroupActive(index)
                   const victoryData = bins
                     .map((binValue, bin) => {
-                      const standardDeviations =
-                        (binValue - neuronMean) / neuronStd
                       if (isZero) return { y: 0, x: standardDeviations }
-                      return { x: standardDeviations, y: height[bin] }
+                      return { x: binValue / neuronStd, y: height[bin] }
                     })
                     .filter((i) => i !== null)
 
@@ -312,7 +313,8 @@ export default class HumanLabels extends React.Component {
               <VictoryAxis
                 crossAxis={false}
                 tickCount={17}
-                label="Standard Deviation"
+                axisLabelComponent={<VictoryLabel dy={7} />}
+                label="Standard Deviations from Zero Activation"
               />
 
               <VictoryAxis
