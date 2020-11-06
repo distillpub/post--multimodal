@@ -7,7 +7,7 @@ import { SegmentedControl } from 'evergreen-ui'
 import { Surface, Text } from '../../reactComponents/ui'
 
 const friendlyName = {
-  Blocked: 'Rejecting',
+  Blocked: 'Rejected',
   'Price tag': 'Perplexed',
   Punishment: 'Punished',
 }
@@ -209,13 +209,10 @@ export default () => {
       </Surface>
       <figcaption style={{ margin: 'auto', width: 704 }}>
         There are many emotions that correspond to emotion. We can render clear
-        facial expressions of each emotion using a facial facet. While many
-        neurons correspond to common emotions such as happiness, crying, or
-        sleepy, there are also more surprising neurons that render the
-        expression of accepting an offer, or of rejecting someone. As we'll see
-        later, we can verify that a neuron is looking for a given expression
-        with several tools such as dataset examples, feature visualization of
-        different facets, and text feature visualization.
+        facial expressions of each emotion using a facial facet. Some neurons
+        primarily respond to an emotions, and other neurons that mostly detect
+        other things contain emotions or emotional expressions as a secondary
+        function.
       </figcaption>
     </figure>
   )
