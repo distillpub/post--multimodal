@@ -124,7 +124,7 @@ export default () => {
         <figcaption
           style={{
             width: 703,
-            marginTop: -120,
+            marginTop: -140,
             alignSelf: 'center',
           }}
         >

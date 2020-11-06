@@ -208,11 +208,9 @@ export default () => {
         )}
       </Surface>
       <figcaption style={{ margin: 'auto', width: 704 }}>
-        There are many emotions that correspond to emotion. We can render clear
-        facial expressions of each emotion using a facial facet. Some neurons
-        primarily respond to an emotions, and other neurons that mostly detect
-        other things contain emotions or emotional expressions as a secondary
-        function.
+        The model has dozens of neurons that primarily respond to individual
+        emotions. Many other neurons that mostly respond to other things have
+        emotions or emotional expressions as secondary functions.
       </figcaption>
     </figure>
   )
