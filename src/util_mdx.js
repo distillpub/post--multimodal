@@ -6,5 +6,5 @@ export function geo_ref(text, view=0, focus=null, map="geography") {
 }
 
 export function mref(text, neuron) {
-    return <a href={microscope_url(neuron)} >{text}</a>
+    return <a href={microscope_url(neuron)} dangerouslySetInnerHTML={{__html: text}} /> 
 }
