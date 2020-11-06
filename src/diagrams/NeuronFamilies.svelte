@@ -42,7 +42,7 @@ let families = [
 
 
     {
-        title: "Religions",
+        title: "Religion Neurons",
         description: "These neurons respond to concept clusters associated with a specific religion, such as its imagery, iconography, traditions, and/or texts.",
         neurons: [
             {model: "4x", unit: 929, title: "Judaism", facet: "any" },
@@ -210,7 +210,7 @@ let families = [
         ]
     },
     {
-        title: "Time",
+        title: "Time Neurons",
         description: "These neurons respond to any visual information that contextualizes the image in a particular time – for some it's a season, for others it's a day or a month or a year, and for yet others it may be an entire era.",
         neurons: [
             {model: "4x", unit: 1714, title: "day", facet: "text" },
@@ -225,7 +225,7 @@ let families = [
     },
 
     {
-        title: "Colors",
+        title: "Color Neurons",
         description: "These neurons detect the presence of objects in the given color.",
         neurons: [
             {model: "4x", unit: 2505, title: "red", facet: "any" },
