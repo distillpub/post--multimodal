@@ -53,15 +53,15 @@ const neurons = [
 				has <i>maximal text</i>
 			</div>
 
-			<div style="margin-top: 10px; color: black; text-align: left; font-size: 11px; font-weight: 200; line-height: 14px; background: rgb(240,240,240); border-radius: 3px; padding: 4px;">
+			<div style="margin-top: 10px; color: black; text-align: left; font-size: 12px; font-weight: 200; line-height: 14px; background: rgb(240,240,240); border-radius: 3px; padding: 4px;">
 				<div style="margin-top: 0px">{neurons[i][2][0]}</div>
 			</div>
 
-			<div style="margin-top: 4px; color: black; text-align: left; font-size: 11px; font-weight: 200; line-height: 14px; background: rgb(240,240,240); border-radius: 3px; padding: 4px;">
+			<div style="margin-top: 4px; color: black; text-align: left; font-size: 12px; font-weight: 200; line-height: 14px; background: rgb(240,240,240); border-radius: 3px; padding: 4px;">
 				<div style="margin-top: 0px">{neurons[i][2][1]}</div>
 			</div>
 
-			<div style="margin-top: 4px; color: black;  text-align: left; font-size: 11px; font-weight: 200; line-height: 14px; background: rgb(240,240,240); border-radius: 3px; padding: 4px;">
+			<div style="margin-top: 4px; color: black;  text-align: left; font-size: 12px; font-weight: 200; line-height: 14px; background: rgb(240,240,240); border-radius: 3px; padding: 4px;">
 				<div style="margin-top: 0px">{neurons[i][2][2]}</div>
 			</div>
 

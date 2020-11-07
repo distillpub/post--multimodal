@@ -2,6 +2,7 @@
 <script>
 import NeuronCard from '../components/NeuronCard.svelte';
 import NeuronCardInfo from '../components/NeuronCardInfo.svelte';
+import {microscope_url, map_url, facet_icon_url, dataset_examples_url} from '../urls.js';
 
 import * as d3 from "d3"
 
@@ -40,7 +41,9 @@ const cell_size = 23
 
 			{#each d3.range(neurons.length+1) as i}
 					{#if i < neurons.length}
+						<a href = {microscope_url({"model": "4x", "unit": neurons[i], "name": neuron_names[neurons[i]]})}>
 						<text text-anchor="end" style="color:rgb(200,200,200)" y={cell_size*i + 18} x="-5">{neuron_names[neurons[i]]}</text>
+						</a>
 					{/if}
 					<line stroke-dasharray="4 2" y1={(i)*cell_size} x1="0" y2={(i)*cell_size} x2="{cell_size*classnames.length}" style="stroke:rgb(200,200,200);stroke-width:1" />
 			{/each}
@@ -64,21 +67,21 @@ const cell_size = 23
 			<div style="margin-bottom: 5px">
 				such as underwater
 			</div>
-			<NeuronCard neuron={{"model": "4x", "unit": 1634, "name": "underwater"  }} facets={["face"]} ds={true} />
+			<NeuronCard neuron={{"model": "4x", "unit": 1634, "name": "underwater"  }} facets={["nature"]} ds={true} ds_override={true}/>
 		</div>
 
 		<div class="figcaption" style="display: inline-block; line-width: 30px">
 			<div style="margin-bottom: 5px">
 				the sea surface
 			</div>
-			<NeuronCard neuron={{"model": "4x", "unit": 775, "name": "sea"  }} facets={["face"]} ds={true} />
+			<NeuronCard neuron={{"model": "4x", "unit": 775, "name": "sea"  }} facets={["nature"]} ds={true} ds_override={true} />
 		</div>
 
 		<div class="figcaption" style="display: inline-block; line-width: 30px">
 			<div style="margin-bottom: 5px">
 				and the seashore
 			</div>
-			<NeuronCard neuron={{"model": "4x", "unit": 1511, "name": "seashore"  }} facets={["face"]} ds={true} />
+			<NeuronCard neuron={{"model": "4x", "unit": 1511, "name": "seashore"  }} facets={["nature"]} ds={true} ds_override={true} />
 		</div>	
 
 
