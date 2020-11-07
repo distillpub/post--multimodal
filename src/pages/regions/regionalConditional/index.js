@@ -92,34 +92,12 @@ export default class HumanLabels extends React.Component {
       },
       probChart = false,
     } = data[neuron || 1317]
-    console.log('heights are', heights)
+
+    const neuronStd = 1.317
 
     if (typeof window === 'undefined') {
       return null
     }
-
-    ;`[(0, 'Non-African Person'),
-      (1, 'Non-African Symbol'),
-      (2, 'Non-African Celebrity'),
-      (3, 'Meme'),
-      (4, 'Other'),
-      (5, 'Tobacco'),
-      (6, 'Weapon'),
-      (7, 'Africa Word'),
-      (8, 'Dark Non-Person'),
-      (9, 'Person of African Descent')]`
-
-    /*
-    const labelColors = {
-      'foreign symbol': '#7acda3',
-      other: '#b2ebf2',
-      flags: 'rgb(236,99,55)', //	#ff7171',
-      'other regional': '#ffa77d',
-      'place name': '#e03400',
-      // 'people names': '#ff5722',
-      ethnicity: '#ff7f50',
-    }
-    */
 
     const labelColors = {
       'foreign symbol': '#7acda3',
@@ -144,13 +122,13 @@ export default class HumanLabels extends React.Component {
       stackProps.domain = { y: [0, 0.0000022] }
     }
 
-    const iconSize = 43.4
+    const iconSize = 80
     const Label = ({ index, dse, children, count }) => (
       <Surface
         cursor="pointer"
         marginRight={5}
         opacity={0.8}
-        width={iconSize * 3}
+        width={iconSize * 2}
         onClick={() => {
           this.onToggleGroup(index)
         }}
@@ -188,10 +166,13 @@ export default class HumanLabels extends React.Component {
               </Surface>
               {dse && (
                 <Surface flexFlow="row">
-                  {dse.slice(0, 3).map((img) => (
+                  {dse.slice(0, 2).map((img, imgIndex) => (
                     <div
                       style={{
-                        border: '1px solid ' + colors[index],
+                        borderBottom: '1px solid ' + colors[index],
+                        borderRight: '1px solid ' + colors[index],
+                        borderLeft:
+                          imgIndex === 0 && '1px solid ' + colors[index],
                         width: iconSize,
                         height: iconSize,
                       }}
@@ -244,17 +225,17 @@ export default class HumanLabels extends React.Component {
               </Label>
             </Group>
             <Group name="African">
-              <Label index={0} dse={placeNameDse}>
-                Place Name
-              </Label>
-              <Label index={1} dse={flagsDse}>
-                Flags
+              <Label index={3} dse={otherRegionalDse}>
+                Other Regional
               </Label>
               <Label index={2} dse={ethnicityDse}>
                 Ethnicity
               </Label>
-              <Label index={3} dse={otherRegionalDse}>
-                Other Regional
+              <Label index={1} dse={flagsDse}>
+                Flags
+              </Label>
+              <Label index={0} dse={placeNameDse}>
+                Place Name
               </Label>
             </Group>
           </Surface>
@@ -280,13 +261,9 @@ export default class HumanLabels extends React.Component {
                   const victoryData = bins
                     .map((binValue, bin) => {
                       if (isZero) return { y: 0, x: binValue }
-                      return { x: binValue, y: height[bin] }
+                      return { x: binValue / neuronStd, y: height[bin] }
                     })
                     .filter((i) => i !== null)
-
-                  const addInterpolation = interpolation
-                    ? { interpolation }
-                    : {}
 
                   return (
                     <VictoryGroup data={victoryData} key={index}>
@@ -310,7 +287,8 @@ export default class HumanLabels extends React.Component {
               <VictoryAxis
                 crossAxis={false}
                 tickCount={17}
-                label="Activations"
+                label="Standard Deviations from Zero Activation"
+                axisLabelComponent={<VictoryLabel dy={7} />}
               />
 
               <VictoryAxis
@@ -341,15 +319,16 @@ export default class HumanLabels extends React.Component {
             We labeled more than 400 images that causes a neuron that most
             strongly responds to the word “Ghana” to fire at different levels of
             activation, without access to how much each image caused the neuron
-            to fire while labeling. It fires most strongly for people of African
-            descent as well as African words like country names. It’s pre-ReLU
-            activation is negative for symbols associated with other countries,
-            like the Tesla logo or British flag, as well as people of
-            non-African descent. Many of its strongest negative activations are
-            for weaponry such as military vehicles and handguns. Ghana, the
-            country name it responds to most strongly, has a Global Peace Index
-            rating higher than most African countries, and perhaps it learns
-            this anti-association.
+            to fire while labeling. See{' '}
+            <a href="#conditional-probability">the appendix</a> for details.
+            <br /> It fires most strongly for people of African descent as well
+            as African words like country names. It’s pre-ReLU activation is
+            negative for symbols associated with other countries, like the Tesla
+            logo or British flag, as well as people of non-African descent. Many
+            of its strongest negative activations are for weaponry such as
+            military vehicles and handguns. Ghana, the country name it responds
+            to most strongly, has a Global Peace Index rating higher than most
+            African countries, and perhaps it learns this anti-association.
           </figcaption>
         </Surface>
       </figure>

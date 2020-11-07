@@ -15,17 +15,17 @@ import {
 
 const { bars, labels, stdDevs } = {
   bars: [
-    -8.561684734745114,
-    -4.850159353317191,
-    -2.7103040512293988,
-    -2.4580641620235357,
-    -2.3623901611049427,
-    -1.6880130854915811,
-    -1.3510538214417898,
-    3.064604580674542,
-    4.109221323440064,
-    5.694726430117812,
-    34.07373910842965,
+    -9.625611675384382,
+    -5.91408629395646,
+    -3.774230991868668,
+    -3.5219911026628052,
+    -3.4263171017442122,
+    -2.7519400261308506,
+    -2.414980762081059,
+    2.0006776400352724,
+    3.045294382800795,
+    4.630799489478543,
+    33.009812167790386,
   ],
   stdDevs: [
     2.42890535083609,
@@ -56,27 +56,20 @@ const { bars, labels, stdDevs } = {
 }
 
 export default () => {
-  const data = bars.map((y, index) => ({ y, x: labels[index], index }))
-  const width = 1200
   const neuronStd = 2.19
-  const neuronMean = -2.33
-  const zeroStd = (0 - neuronMean) / neuronStd
+  const data = bars.map((y, index) => ({
+    y: y,
+    x: labels[index],
+    index,
+  }))
+  console.log('data is', data, 'bars is', bars)
+  const width = 1000
 
   return (
     <figure className="fullscreen-diagram">
       <Surface width={width} margin="auto">
-        <Surface width={width} height={500} transform="translateY(-70px)">
+        <Surface width={width} transform="translateY(-120px)">
           <VictoryChart domainPadding={[15, 4]}>
-            <VictoryLine
-              style={{
-                data: { stroke: 'rgba(0, 0, 0, 0.1)', strokeWidth: 1 },
-              }}
-              horizontal
-              data={[
-                { y: zeroStd, x: -20 },
-                { y: zeroStd, x: 20 },
-              ]}
-            />
             <VictoryBar
               data={data}
               style={{
@@ -118,9 +111,9 @@ export default () => {
             <VictoryAxis
               crossAxis={false}
               dependentAxis
-              label="Standard Deviations"
+              label="Standard Deviations from Zero Activation"
               style={{
-                axisLabel: { fontSize: 10 },
+                axisLabel: { fontSize: 7 },
                 tickLabels: { fontSize: 8 },
               }}
             />
@@ -129,19 +122,18 @@ export default () => {
         <figcaption
           style={{
             width: 703,
-            marginTop: -80,
+            marginTop: -140,
             alignSelf: 'center',
           }}
         >
-          To see how the Trump neuron corresponds to different individuals we
+          To see how the Trump neuron responds to different individuals, we
           searched the query "X giving a speech at a microphone" for various
           individuals on Google Images. We cleaned the data by hand, excluding
-          photos that are not clear photos of the individuals face. The bar
+          photos that are not clear photos of the individual's face. The bar
           length for each individual shows the median activation of the person's
           photos in standard deviations of the neuron over the dataset, and the
-          range over the bar shows the standard deviation of the person's
-          photos. The light gray bar at 1.06 standard deviation shows the zero
-          point for activations.
+          range over the bar shows the standard deviation of the activations of
+          the person's photos.
         </figcaption>
       </Surface>
     </figure>

@@ -42,7 +42,7 @@ let families = [
 
 
     {
-        title: "Religions",
+        title: "Religion Neurons",
         description: "These neurons respond to concept clusters associated with a specific religion, such as its imagery, iconography, traditions, and/or texts.",
         neurons: [
             {model: "4x", unit: 929, title: "Judaism", facet: "any" },
@@ -80,7 +80,7 @@ let families = [
             {model: "4x", unit: 587, title: "painting", facet: "any" },
             {model: "4x", unit: 122, title: "anime", facet: "logo" },
             {model: "4x", unit: 1388, title: "group photo", facet: "pose" },
-            {model: "4x", unit: 789, title: "four photos", facet: "arch" },
+            {model: "4x", unit: 789, title: "4 tiled photos", facet: "arch" },
             {model: "rn101", unit: 1717, title: "child's drawing", facet: "face" },
             {model: "rn101", unit: 2012, title: "headshot photo", facet: "any" },
             {model: "rn101", unit: 321, title: "cartoon", facet: "logo" },
@@ -149,7 +149,7 @@ let families = [
         neurons: [
             {model: "4x", unit: 1166, title: "Disney", facet: "indoor" },
             {model: "4x", unit: 136, title: "Nike", facet: "any" },
-            {model: "4x", unit: 1450, title: "Apple", facet: "any" },
+            {model: "4x", unit: 1450, title: "Apple & apples", facet: "any" },
             {model: "4x", unit: 1001, title: "Lego", facet: "any" },
             // {model: "4x", unit: 1377, title: "Facebook", facet: "logo" },
             // {model: "4x", unit: 415, title: "Linux", facet: "logo" },
@@ -210,7 +210,7 @@ let families = [
         ]
     },
     {
-        title: "Time",
+        title: "Time Neurons",
         description: "These neurons respond to any visual information that contextualizes the image in a particular time – for some it's a season, for others it's a day or a month or a year, and for yet others it may be an entire era.",
         neurons: [
             {model: "4x", unit: 1714, title: "day", facet: "text" },
@@ -225,7 +225,7 @@ let families = [
     },
 
     {
-        title: "Colors",
+        title: "Color Neurons",
         description: "These neurons detect the presence of objects in the given color.",
         neurons: [
             {model: "4x", unit: 2505, title: "red", facet: "any" },

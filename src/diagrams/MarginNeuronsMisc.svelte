@@ -1,7 +1,18 @@
 <script>
     import {microscope_url, map_url, facet_icon_url, dataset_examples_url} from '../urls.js';
-  
+    import { isNumber } from 'lodash'
+const width = 128
+// const width = 288
+
     let neurons = [
+      {
+        neuron: {model: "4x", unit: "1551", layer: "image_block_4_5_Add_6_0"},
+        facet: "indoor",
+        ds_img_prefix: "",
+        description: 'Incarcerated',
+        strength: 0
+      },
+      /*
       {
         neuron: {model: "4x", unit: "1543", layer: "image_block_4_5_Add_6_0"},
         facet: "face",
@@ -9,19 +20,13 @@
         description: 'Aroused',
         strength: 8
       },
+      */
       {
-        neuron: {model: "4x", unit: "1825", layer: "image_block_4_5_Add_6_0"},
-        facet: "face",
+        neuron: {model: "4x", unit: "2202", layer: "image_block_4_5_Add_6_0"},
+        facet: "text",
         ds_img_prefix: "",
-        description: 'Price Tag',
-        strength: 5
-      },
-      {
-        neuron: {model: "4x", unit: "599", layer: "image_block_4_5_Add_6_0"},
-        facet: "face",
-        ds_img_prefix: "",
-        description: 'Accept',
-        strength: 5
+        description: 'Question Mark',
+        strength: 3
       },
     ];
   </script>
@@ -46,7 +51,7 @@
       border: 1px solid #AAA;
     }
     .neuron-description {
-      max-width: 80px;
+      width: 90px;
     }
     .dataset-example {
       width: 100%;

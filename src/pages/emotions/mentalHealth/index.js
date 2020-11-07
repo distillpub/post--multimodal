@@ -29,7 +29,7 @@ import depression1 from './dse/depression/1.png'
 import depression2 from './dse/depression/2.png'
 import depression3 from './dse/depression/3.png'
 
-const depressionDse = [depression1, depression2, depression3]
+const depressionDse = [depression2, depression3]
 
 import drugs1 from './dse/drugs/1.png'
 import drugs2 from './dse/drugs/2.png'
@@ -114,6 +114,8 @@ export default class HumanLabels extends React.Component {
       return null
     }
 
+    const stdDev = 1.477
+
     const width = 1300
     const { activeGroups } = this.state
     const isGroupActive = (group) => includes(activeGroups, group)
@@ -125,13 +127,13 @@ export default class HumanLabels extends React.Component {
       stackProps.domain = { y: [0, 0.0000022] }
     }
 
-    const iconSize = 41.5
+    const iconSize = 62.3
     const Label = ({ index, dse, children, count }) => (
       <Surface
         cursor="pointer"
         marginRight={5}
         opacity={0.8}
-        width={iconSize * 3}
+        width={iconSize * 2}
         onClick={() => {
           this.onToggleGroup(index)
         }}
@@ -169,7 +171,7 @@ export default class HumanLabels extends React.Component {
               </Surface>
               {dse && (
                 <Surface flexFlow="row">
-                  {dse.slice(0, 3).map((img) => (
+                  {dse.slice(0, 2).map((img) => (
                     <div
                       style={{
                         border: '1px solid ' + colors[index],
@@ -240,7 +242,7 @@ export default class HumanLabels extends React.Component {
                 Anxiety
               </Label>
               <Label index={0} dse={depressionDse}>
-                Depression
+                Depression / Sad
               </Label>
             </Valence>
           </Surface>
@@ -263,7 +265,7 @@ export default class HumanLabels extends React.Component {
                   const victoryData = bins
                     .map((binValue, bin) => {
                       if (isZero) return { y: 0, x: binValue }
-                      return { x: binValue, y: height[bin] }
+                      return { x: binValue / stdDev, y: height[bin] }
                     })
                     .filter((i) => i !== null)
 
@@ -293,7 +295,8 @@ export default class HumanLabels extends React.Component {
               <VictoryAxis
                 crossAxis={false}
                 tickCount={17}
-                label="Activations"
+                label="Standard Deviations from Zero Activation"
+                axisLabelComponent={<VictoryLabel dy={7} />}
               />
 
               <VictoryAxis
@@ -321,14 +324,17 @@ export default class HumanLabels extends React.Component {
               alignSelf: 'center',
             }}
           >
-            By measuring the conditional probability of categories with
-            different levels of valence we see that most of the strongest
-            activations correspond to mental illnesses like anxiety and
-            depression. However, categories we may consider valence neutral,
-            like the text "mental health" or medication, tend to cause positive
-            activations. This may reflect a bias on the Internet where mental
-            health is more often used in the context of mental disease than
-            discussed in the abstract in a valence neutral way.
+            To understand the "mental illness neuron" in more depth, we
+            collected images that cause it to fire different amounts and labeled
+            them by hand into categories we created. This lets us estimate the
+            conditional probability of a label at a given activation level. See{' '}
+            <a href="#conditional-probability">the appendix</a> for details.
+            During the labeling process we couldn't see how much it made the
+            neuron fire. We see that the strongest activations all belong to
+            labels corresponding to low-valence mental states. On the other
+            hand, many images with a negative pre-ReLU activation are of scenes
+            we may typically consider high-valence, like photos with pets,
+            travel photos, and or pictures of sporting events.
           </figcaption>
         </Surface>
       </figure>
