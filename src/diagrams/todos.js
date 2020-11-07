@@ -8,6 +8,11 @@ export default () => {
 
 
   const is_drafts = (window.location.origin == "https://drafts.distill.pub");
+
+  if (is_drafts) {
+    return <div></div>
+  }
+
   const [hidden, setIsHidden] = useState(is_drafts)
   function toggle_hidden() {
     activeTodos.map(({ to, id, value, children }) => {
