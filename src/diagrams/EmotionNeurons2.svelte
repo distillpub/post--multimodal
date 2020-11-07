@@ -7,27 +7,27 @@ import * as d3 from "d3"
 
 const neurons = [ 
 			[2478, 
-			"shocked", 
-			["omg! ftheshocked #cofphie", "when shocked eyes are placed perfectly after the scare ! via", "slightly # shocked & # shocked 📷: trenddrop - horror theme :"]],
+			"incarcerated", 
+			["penon street corrections inmate - purple and red", "guilty - atufalconing , cells racked", "mason correctional corrections"]],
 
-			[1193, 
-			"shocked", 
-			["sudden collapse crying drea #cfd 7 studio #", "broken tepes, crier pic ...", "pico crio disaster result video out"]],
+			[1543, 
+			"erotic", 
+			["erotic pleasure virgin types", "#3 sexlife 1 stroke #htc", "the # eroticexpo"]],
 
-			[1512, 
-			"happy", 
-			["smile 📸: ref unknown #laughselfie. happiness", "love a smile like this ! #rohmatyrevolt", "have a smile so bright like this ! #phantompossil"]],
+			[2041, 
+			"rejecting", 
+			["blocked ! please stop hating on this # mississauga parks list", "3 - false ban by lady", "blocked by zero # adultcolor"]],
 
+			[2202, 
+			"question mark", 
+			["is always a question ❓❓❓❓❓❓❓❓", "thatbloodyquestion # fashioneatedc _ sona", "always ask ❓ weekly"]],
 
-			[91, 
-			"sleepy", 
-			["in a deep sleep : dab wink picture : eb temporary blindness", "sleeping wink . 📸 movement : #dab", "falling asleep stoned too bright , rolf bossert"]],
-
-
-			[1739, 
-			"evil", 
-			["unleash your angry evil @ priscillashiwwe mayward god", "angry angry # metalheads 😈 sinister devils", "angry and evil - shane"]],
+			[1692, 
+			"pout", 
+			["silly pout craze xd # pafliesfaq", "duckface #sticker day", "goofy faces sticker day"]]
 			]
+
+console.log("hi")
 
 </script>
 <!-- 

@@ -5,6 +5,7 @@ import Todo from './diagrams/todo'
 import Todos from './diagrams/todos'
 import {mref, geo_ref} from './util_mdx.js'
 
+
 <div><Todo to="Nick" value={4}>Come up with a hero draft</Todo><Todo to="Nick" value={3}>Find better quote from Quiroga</Todo><Todo to="Nick" value={4}>How do we render equations? Mdx + distill aren’t playing nice</Todo><Todo to="Chris" value={4}>Dataset examples in interactive diagrams</Todo></div>
 
 
@@ -220,35 +221,27 @@ We typically care about features because they’re useful, and CLIP’s features
 Untangling the image into its semantics <d-cite bibtex-key="dicarlo2012does" /> enables the model to perform a wide variety of downstream tasks including imagenet classification, facial expression detection, geolocalization and more. How do they do this? Answering these questions will require us to look at how neurons work in concert to represent a broader space of concepts.
 
 To begin, we’ll make this question concrete by taking a deep dive into one particular task: the Imagenet challenge.
+
 <h3 id="imagenet-challenge">
 The Imagenet Challenge
 </h3>
 
-<Todo to="Gabe" value={8}>Finish ImageNet challenge section</Todo>
-
-To study how CLIP classifies Imagenet, it helps to look at the simplest case. We use a sparse linear model for this purpose, following the methodology of Radford et al <d-cite bibtex-key="radford2020clip" />. With each class using only 3 neurons on average, it is easy to look at all of the weights. This model, by any modern standard, fares poorly, achieving an accuracy of 35% [Measure] — but the surprising thing is that such a miserly model can do anything at all. How is each weight carrying so much weight?
+To study how CLIP classifies Imagenet, it helps to look at the simplest case. We use a sparse linear model for this purpose, following the methodology of Radford et al <d-cite bibtex-key="radford2020clip" />. With each class using only 3 neurons on average, it is easy to look at all of the weights. This model, by any modern standard, fares poorly with a top-5 accuracy of 56.4%, but the surprising thing is that such a miserly model can do anything at all. How is each weight carrying so much weight?
 
 ImageNet <d-cite bibtex-key="deng2009imagenet" /> organizes images into categories borrowed from another project called WordNet.
 Neural networks typically classify images treating ImageNet classes as structureless labels. But WordNet actually gives them a rich structure of higher level nodes. For example, a Labrador Retriever is a Canine which is a Mammal which is an Animal. 
 
-We find that the weights and neurons of CLIP reflect some of this structure.
+We find that the weights and neurons of CLIP reflect some of this structure. At the highest levels we find conventional categories such as 
+
+import ImagenetNeurons from './diagrams/ImagenetNeurons.svelte'
+
+<Svelte component={ImagenetNeurons} container={<div />}/>
+
+But we also find nonconventional taxonomies, such as this cluster of water-related classes:
 
 import HyperSet from './diagrams/HyperSet.svelte'
 
-<Svelte component={HyperSet} />
-
-At the highest levels we find a single neuron that represents the split between the living - animal, and the nonliving, that fires for nearly all the animals in the 1000 classes chosen.
-The animal kingdom itself is split into the domesticated pets and wildlife. 
-
-More conventionally, the animal kingdom is also split into more conventional categories, such as insects, birds and reptiles.
-
-We see other classes too that do not correspond neatly to such classes organized by experts, but nevertheless make sense.
-
-We see, for example, three neurons that respond to creatures found in different aspects of the ocean/water.
-
-The “piggy bank” class in imagenet, for example, can still be obtained by combining neurons that respond to abstract concepts.
-
---
+<Svelte component={HyperSet}/>
 
 We arrive at a surprising discovery: it seems as though the neurons appear to arrange themselves into a taxonomy of classes that appear to mimic, very approximately, the imagenet hierarchy. While there have been attempts to explicitly integrate this information <d-cite bibtex-key="santurkar2020breeds" />, CLIP was not given this information as a training signal. The fact that these neurons naturally form a hierarchy — form a hierarchy without even being trained on ImageNet — suggests that such hierarchy may be a universal feature of learning systems.<d-footnote>We’ve seen hints of similar structure in region neurons, with a whole world neuron, a northern hemisphere neuron, a USA neuron, and then a West Coast neuron.</d-footnote>
 
@@ -258,33 +251,36 @@ We arrive at a surprising discovery: it seems as though the neurons appear to ar
 Understanding Language
 </h3>
 
-
-<Todo to="Gabe" value={8}>Finish understanding language section</Todo>
-
 The most exciting aspect of CLIP is its ability to do zero-shot classification: it can be “programmed” with natural language to classify images into new categories, without fitting a model. Where linear probes had fixed weights for a limited set of classes, now we have dynamic weight vectors that can be generated automatically from text. Indeed, CLIP makes it possible for end-users to ‘roll their own classifier’ by programming the model via intuitive, natural language commands - this will likely unlock a broad range of downstream uses of CLIP-style models. 
 
-<p>Recall that CLIP has two sides, a vision side (which we’ve discussed up to this point) and a language side. The two sides meet at the end, going through some processing and then performing a dot product to create a logit. If we ignore spatial structure<d-footnote>In order to use a contrastive loss, the 3d activation tensor of the last convolutional layer must discard spatial information and be reduced to a single vector which can be dot producted with the language embedding. CLIP does this with an attention layer, first generating attention weights <d-math block>{"A = \\mathrm{softmax}(W_k x_{img} \\cdot W_q avg(x_{img}))"}</d-math> and then producing an embedding <d-math block>{"y = W_o (\\sum_i A_i W_v x_{img, i}) = W_o W_v (\\sum_i A_i x_{img, i})"}</d-math> Although the attention step is non-linear in <d-math>{"x_{img}"}</d-math> in general, it is a simple exercise to show that if the spatial positions are homogenous attention becomes affine in <d-math>{"x_{img}"}</d-math>. </d-footnote>, the logit has the following form:</p>
+<p>Recall that CLIP has two sides, a vision side (which we’ve discussed up to this point) and a language side. The two sides meet at the end, going through some processing and then performing a dot product to create a logit. If we ignore spatial structure<d-footnote>In order to use a contrastive loss, the 3d activation tensor of the last convolutional layer must discard spatial information and be reduced to a single vector which can be dot producted with the language embedding. CLIP does this with an attention layer, first generating attention weights <d-math block>{"A = \\mathrm{softmax}(W_k x_{\\text{img}} \\cdot W_q \\text{average}(x_{\\text{img}}))"}</d-math> and then producing an embedding <d-math block>{"y = W_o (\\sum_i A_i W_v x_{\\text{img}, i}) = W_o W_v (\\sum_i A_i x_{\\text{img}, i})"}</d-math> Although the attention step is non-linear in <d-math>{"x_{\\text{img}}"}</d-math> in general, it is a simple exercise to show that if the spatial positions are homogenous attention becomes affine in <d-math>{"x_{\\text{img}}"}</d-math>. </d-footnote>, the logit has the following bilinear form for some matrix <d-math>{"W"}</d-math>,</p>
 
-<p><d-math block>{"\\mathrm{logit} = \\frac{x_{img} W x_{text}}{||x_{img}|| ~ ||x_{text}||}"}</d-math></p>
+<p><d-math block>{"\\mathrm{logit} = \\frac{x^T_{\\text{img}} W x_{\\text{text}}}{\\|x_{\\text{img}}\\| \\|x_{\\text{text}}\\|},"}</d-math></p>
 
-We focus on the bilinear interaction term, which governs local interactions in most directions. Although this approximation is somewhat extreme, we believe the bilinear term reflects the morally correct structure to focus on: we see exactly this in many other contrastive models <d-cite bibtex-key="sohn2016improved" />, and also in transformers <d-cite bibtex-key="vaswani2017attention" />.[cite bilinear ml paper somewhere] [We’ll test that this approximation makes correct predictions in the next section.]
+<p>
+where <d-math>{"x_{\\text{img}}"}</d-math> is the vector of neurons in the penultimate layer surveyed above, and <d-math>{"x_{\\text{text}}"}</d-math> is the text embedding. We focus on the bilinear interaction term, which governs local interactions in most directions. Although this approximation is somewhat extreme, we believe the bilinear form <d-cite bibtex-key="tenenbaum2000separating"/ > reflects the morally correct structure to focus on: we see exactly this in many other contrastive models <d-cite bibtex-key="sohn2016improved" />, and also in transformers <d-cite bibtex-key="vaswani2017attention" />. We’ll test that this approximation makes correct predictions in the next section.</p>
 
-<p>The bilinear term has a number of interesting interpretations. If we fix <d-math>{"x_{text}"}</d-math>, <d-math>{"Wx_{text}"}</d-math> gives a dynamic weight vector for classifying images. On the other hand, if we fix <d-math>{"x_{img}"}</d-math>, <d-math>{"x_{img}W"}</d-math> gives weights for how much text features correspond to a given image.</p>
+<p>The bilinear term has a number of interesting interpretations. If we fix <d-math>{"x_{\\text{text}}"}</d-math>, the term <d-math>{"Wx_{\\text{text}}"}</d-math> gives a dynamic weight vector for classifying images. On the other hand, if we fix <d-math>{"x_{\\text{img}}"}</d-math>, the term <d-math>{"x^T_{\\text{img}}W"}</d-math> gives weights for how much text features correspond to a given image.</p>
 
-We’ll mostly be focusing on using text to create zero-shot weights for images. But it’s worth noting one tool that the other direction gives us. If we fix a neuron on the vision side, we can search for the text that maximizes the logit. We can see this as the text maximally corresponding to that neuron.
+We’ll mostly be focusing on using text to create zero-shot weights for images. But it’s worth noting one tool that the other direction gives us. If we fix a neuron on the vision side, we can search for the text that maximizes the logit. We do this with a hill climbing algorithm to find what amounts to <i>the text maximally corresponding to that neuron</i>. Running this on the common <a href="#emotion-neurons">emotion neurons</a>, we see that the maximal text <d-footnote>Cherry picked from a set of 28</d-footnote> matches our expectations:
 
-Examples:
-Emotion neurons
+import EmotionNeurons2 from './diagrams/EmotionNeurons2.svelte'
+import EmotionNeurons from './diagrams/EmotionNeurons.svelte'
 
+<Svelte component={EmotionNeurons} container={<div />}/>
+<p>And on nuanced emotions, we bring some clarity to what they mean</p>
+
+<Svelte component={EmotionNeurons2} container={<div />}/>
+
+<p>For the next section we will focus on the adjoint problem - given an text embedding, we wish to understand neurons fire maximally for it.</p>
 
 <h3 id="emotional-intelligence">
 Emotional intelligence
 </h3>
 
-As we see above, English has far more words for emotions than the vision side has emotion neurons. And yet, the vision side recognizes these more obscure emotions. How can it do that? 
+As we see above, English has far more descriptive words for emotions than the vision side has emotion neurons. And yet, the vision side recognizes these more obscure emotions. How can it do that? 
 
-We can see what different emotion words correspond to on the vision side by taking attribution, as described in the previous section, to "I feel X" on the language side. This gives us a vector of image neurons for each emotion word.<d-footnote>Since the approximations we made in the previous section aren’t exact, we double-checked these attribution vectors for all of the “emotion equations” shown by taking the top image neuron in each one, artificially increasing its activation at the last layer on the vision side when run on a blank image, and confirming that the logit for the corresponding emotion word increases on the language side.</d-footnote> Looking at a list of common emotion words<d-footnote>from a feeling wheel, we'll see later</d-footnote>, we see that the largest elements in their vectors are usually emotion neurons, composed in reasonable ways to span this broader space of emotions. This mirrors a line of thinking in psychology where combinations of basic emotions form the “complex emotions” we experience.<d-footnote>theory of constructed emotion</d-footnote>
-
+We can see what different emotion words correspond to on the vision side by taking attribution, as described in the previous section, to "I feel X" on the language side. This gives us a vector of image neurons for each emotion word.<d-footnote>Since the approximations we made in the previous section aren’t exact, we double-checked these attribution vectors for all of the “emotion equations” shown by taking the top image neuron in each one, artificially increasing its activation at the last layer on the vision side when run on a blank image, and confirming that the logit for the corresponding emotion word increases on the language side.</d-footnote> Looking at a list of common emotion words<d-footnote>from a feeling wheel, we'll see later</d-footnote>, we find the sparse set of emotion neurons that composed in reasonable ways to span this broader space of emotions <d-footnote>We do this by taking the vectors <d-math>W x_{\\text{text}}</d-math> for the prompt "i am feeling {emotion}", "i am feeling {emotion}, "Me feeling {emotion} on my face", "a photo of me with a {emotion} expression on my face" on each one of the emotion-words on the emotion-wheel. We assign each prompt a label corresponding to the emotin-word, and then we then run sparse logistic regression to find the neurons that maximially discriminate between the attribution vectors. For the purposes of this article, these vectors are then cleaned up by hand by removing neurons that respond to bigrams.</d-footnote>. This mirrors a line of thinking in psychology where combinations of basic emotions form the “complex emotions” we experience.<d-footnote>theory of constructed emotion</d-footnote>
 
 
 For example, the jealousy emotion is success + grumpy. Bored is relaxed + grumpy. Intimate is soft smile + heart - sick. Interested is question mark + heart and inquisitive is question mark + shocked. Surprise is celebration + shock.
