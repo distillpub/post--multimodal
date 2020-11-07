@@ -28,11 +28,11 @@ import * as d3 from "d3"
 
 		<div class="figcaption" style="display: inline-block; line-width: 30px">
 			<div style="margin-bottom: 5px">
-				reptiles and insects
+				string instruments
 			</div>
-			<NeuronCard neuron={{"model": "4x", "unit": 1634, "name": "fish"  }} facets={["face"]} ds={true} />
+			<NeuronCard neuron={{"model": "4x", "unit": 1093, "name": "string"  }} facets={["face"]} ds={true} />
 			<div style="margin-top: 5px">
-				that give evidence for the classes <i>red admiral</i>, <i>small white </i>, <i>monarch butterfly</i>, <i>tiger beetle</i> ...
+				that give evidence for the classes <i>acoustic guitar</i>, <i>electric guitar</i>, <i>violin</i>, <i>cello</i>, <i>banjo</i>, <i>plectrum</i> ...
 			</div>
 		</div>	
 
@@ -40,7 +40,7 @@ import * as d3 from "d3"
 			<div style="margin-bottom: 5px">
 				and dogs
 			</div>
-			<NeuronCard neuron={{"model": "4x", "unit": 2525, "name": "reptiles"  }} facets={["face"]} ds={true} />
+			<NeuronCard neuron={{"model": "4x", "unit": 2035, "name": "dog"  }} facets={["face"]} ds={true} />
 			<div style="margin-top: 5px">
 				that give evidence for the classes <i>Siberian Husky</i>, <i>Miniature Pinscher</i>, <i>Papillon</i>, <i>Cocker Spaniels</i>, <i>Border Collie</i> ...
 			</div>

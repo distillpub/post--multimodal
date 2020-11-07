@@ -64,21 +64,21 @@ const cell_size = 23
 			<div style="margin-bottom: 5px">
 				such as underwater
 			</div>
-			<NeuronCard neuron={{"model": "4x", "unit": 1634, "name": "underwater"  }} facets={["nature"]} ds={true} />
+			<NeuronCard neuron={{"model": "4x", "unit": 1634, "name": "underwater"  }} facets={["face"]} ds={true} />
 		</div>
 
 		<div class="figcaption" style="display: inline-block; line-width: 30px">
 			<div style="margin-bottom: 5px">
 				the sea surface
 			</div>
-			<NeuronCard neuron={{"model": "4x", "unit": 775, "name": "sea"  }} facets={["nature"]} ds={true} />
+			<NeuronCard neuron={{"model": "4x", "unit": 775, "name": "sea"  }} facets={["face"]} ds={true} />
 		</div>
 
 		<div class="figcaption" style="display: inline-block; line-width: 30px">
 			<div style="margin-bottom: 5px">
 				and the seashore
 			</div>
-			<NeuronCard neuron={{"model": "4x", "unit": 1511, "name": "seashore"  }} facets={["nature"]} ds={true} />
+			<NeuronCard neuron={{"model": "4x", "unit": 1511, "name": "seashore"  }} facets={["face"]} ds={true} />
 		</div>	
 
 
