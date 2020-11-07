@@ -324,14 +324,13 @@ export default class HumanLabels extends React.Component {
               alignSelf: 'center',
             }}
           >
-            By measuring the conditional probability of categories with
-            different levels of valence we see that most of the strongest
-            activations correspond to mental illnesses like anxiety and
-            depression. However, categories we may consider valence neutral,
-            like the text "mental health" or medication, tend to cause positive
-            activations. This may reflect a bias on the Internet where mental
-            health is more often used in the context of mental disease than
-            discussed in the abstract in a valence neutral way.
+            We collected images that makes a neuron that responds to mental
+            illness fire different amounts and labelled them by hand into
+            several categories. All of the dataset items causing activations
+            above 27 deviations from zero are related to low-valence mental
+            states like depression or anxiety. When we look at neuron pre-ReLU
+            activations, we see that many of the most negative values correspond
+            to topics like music, pets, and sporting events.
           </figcaption>
         </Surface>
       </figure>

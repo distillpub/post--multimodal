@@ -208,9 +208,15 @@ export default () => {
         )}
       </Surface>
       <figcaption style={{ margin: 'auto', width: 704 }}>
-        The model has dozens of neurons that primarily respond to individual
-        emotions. Many other neurons that mostly respond to other things have
-        emotions or emotional expressions as secondary functions.
+        Emotion neurons respond to a wide range of stimuli: facial expressions,
+        body language, words, and more. We can use{' '}
+        <a href="#faceted-feature-visualization">
+          faceted feature visualization
+        </a>{' '}
+        to see some of these different facets. In particular, the face facet
+        shows facial expressions corresponding to different emotions, such as
+        smiling, crying, or wide-eyed shock. Click on any neuron to open it in
+        Microscope to see more information, including dataset examples.
       </figcaption>
     </figure>
   )
