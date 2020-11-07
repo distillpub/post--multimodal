@@ -208,11 +208,15 @@ export default () => {
         )}
       </Surface>
       <figcaption style={{ margin: 'auto', width: 704 }}>
-        There are many emotions that correspond to emotion. We can render clear
-        facial expressions of each emotion using a facial facet. Some neurons
-        primarily respond to an emotions, and other neurons that mostly detect
-        other things contain emotions or emotional expressions as a secondary
-        function.
+        Emotion neurons respond to a wide range of stimuli: facial expressions,
+        body language, words, and more. We can use{' '}
+        <a href="#faceted-feature-visualization">
+          faceted feature visualization
+        </a>{' '}
+        to see some of these different facets. In particular, the face facet
+        shows facial expressions corresponding to different emotions, such as
+        smiling, crying, or wide-eyed shock. Click on any neuron to open it in
+        Microscope to see more information, including dataset examples.
       </figcaption>
     </figure>
   )

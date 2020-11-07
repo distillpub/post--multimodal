@@ -319,15 +319,16 @@ export default class HumanLabels extends React.Component {
             We labeled more than 400 images that causes a neuron that most
             strongly responds to the word “Ghana” to fire at different levels of
             activation, without access to how much each image caused the neuron
-            to fire while labeling. It fires most strongly for people of African
-            descent as well as African words like country names. It’s pre-ReLU
-            activation is negative for symbols associated with other countries,
-            like the Tesla logo or British flag, as well as people of
-            non-African descent. Many of its strongest negative activations are
-            for weaponry such as military vehicles and handguns. Ghana, the
-            country name it responds to most strongly, has a Global Peace Index
-            rating higher than most African countries, and perhaps it learns
-            this anti-association.
+            to fire while labeling. See{' '}
+            <a href="#conditional-probability">the appendix</a> for details.
+            <br /> It fires most strongly for people of African descent as well
+            as African words like country names. It’s pre-ReLU activation is
+            negative for symbols associated with other countries, like the Tesla
+            logo or British flag, as well as people of non-African descent. Many
+            of its strongest negative activations are for weaponry such as
+            military vehicles and handguns. Ghana, the country name it responds
+            to most strongly, has a Global Peace Index rating higher than most
+            African countries, and perhaps it learns this anti-association.
           </figcaption>
         </Surface>
       </figure>

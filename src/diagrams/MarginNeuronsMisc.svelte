@@ -12,6 +12,7 @@ const width = 128
         description: 'Incarcerated',
         strength: 0
       },
+      /*
       {
         neuron: {model: "4x", unit: "1543", layer: "image_block_4_5_Add_6_0"},
         facet: "face",
@@ -19,6 +20,7 @@ const width = 128
         description: 'Aroused',
         strength: 8
       },
+      */
       {
         neuron: {model: "4x", unit: "2202", layer: "image_block_4_5_Add_6_0"},
         facet: "text",
@@ -49,7 +51,7 @@ const width = 128
       border: 1px solid #AAA;
     }
     .neuron-description {
-      max-width: 80px;
+      width: 90px;
     }
     .dataset-example {
       width: 100%;
