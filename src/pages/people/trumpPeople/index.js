@@ -129,11 +129,11 @@ export default () => {
           To see how the Trump neuron responds to different individuals, we
           searched the query "X giving a speech at a microphone" for various
           individuals on Google Images. We cleaned the data by hand, excluding
-          photos that are not clear photos of the individuals face. The bar
+          photos that are not clear photos of the individual's face. The bar
           length for each individual shows the median activation of the person's
           photos in standard deviations of the neuron over the dataset, and the
-          range over the bar shows the standard deviation of the person's
-          photos.
+          range over the bar shows the standard deviation of the activations of
+          the person's photos.
         </figcaption>
       </Surface>
     </figure>

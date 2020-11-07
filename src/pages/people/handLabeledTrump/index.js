@@ -345,9 +345,9 @@ export default class HumanLabels extends React.Component {
             To understand the Trump neuron in more depth, we collected about 650
             images that cause it to fire different amounts and labeled them by
             hand into categories we created. This lets us estimate the
-            conditional probability of a label at a given activation level. We
-            couldn't see how much each image made the neuron fire during
-            labeling. We see that the higher activations of the Trump neuron are
+            conditional probability of a label at a given activation level. See{' '}
+            <a href="#conditional-probability">the appendix</a> for details.
+            <br /> We see that the higher activations of the Trump neuron are
             highly selective, with more than 90% of the images with a standard
             deviation greater than 30 are related to Donald Trump.
           </figcaption>

@@ -324,13 +324,17 @@ export default class HumanLabels extends React.Component {
               alignSelf: 'center',
             }}
           >
-            We collected images that makes a neuron that responds to mental
-            illness fire different amounts and labelled them by hand into
-            several categories. All of the dataset items causing activations
-            above 27 deviations from zero are related to low-valence mental
-            states like depression or anxiety. When we look at neuron pre-ReLU
-            activations, we see that many of the most negative values correspond
-            to topics like music, pets, and sporting events.
+            To understand the "mental illness neuron" in more depth, we
+            collected images that cause it to fire different amounts and labeled
+            them by hand into categories we created. This lets us estimate the
+            conditional probability of a label at a given activation level. See{' '}
+            <a href="#conditional-probability">the appendix</a> for details.
+            During the labeling process we couldn't see how much it made the
+            neuron fire. We see that the strongest activations all belong to
+            labels corresponding to low-valence mental states. On the other
+            hand, many images with a negative pre-ReLU activation are of scenes
+            we may typically consider high-valence, like photos with pets,
+            travel photos, and or pictures of sporting events.
           </figcaption>
         </Surface>
       </figure>
