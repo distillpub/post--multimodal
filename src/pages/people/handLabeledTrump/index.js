@@ -282,14 +282,10 @@ export default class HumanLabels extends React.Component {
                   const isZero = hasActiveGroup && !isGroupActive(index)
                   const victoryData = bins
                     .map((binValue, bin) => {
-                      if (isZero) return { y: 0, x: standardDeviations }
+                      if (isZero) return { y: 0, x: binValue / neuronStd }
                       return { x: binValue / neuronStd, y: height[bin] }
                     })
                     .filter((i) => i !== null)
-
-                  const addInterpolation = interpolation
-                    ? { interpolation }
-                    : {}
 
                   return (
                     <VictoryGroup data={victoryData} key={index}>
