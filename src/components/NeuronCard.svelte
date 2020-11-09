@@ -7,11 +7,12 @@
     export let facets = ["face", "text"];
     export let fv = true;
     export let ds = true;
+    export let ds_override = false
     var display_types;
     $: {
         display_types=[]; 
         if (fv) display_types.push(facet_icon_url); 
-        if (ds) display_types.push(dataset_examples_url);
+        if (ds) display_types.push(ds_override ? function(neuron, facet) { return dataset_examples_url(neuron, "any") }: dataset_examples_url);
     }
 </script>
 
