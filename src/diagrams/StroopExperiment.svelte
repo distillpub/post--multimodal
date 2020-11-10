@@ -64,7 +64,7 @@ function hues(label) {
 import ClassificationCard from '../components/ClassificationCard.svelte';
 </script>
 
-<div style="overflow-x: auto;">
+<div style="overflow-x: auto;" id="figure-17">
   <div style="width: fit-content; margin: auto;">
     <div style="display: grid; grid-gap: 10px; grid-template-rows: repeat({numRows(showHidden) + 1}, auto) [caption] auto; grid-template-columns: [caption-start] repeat({numCols(showHidden)}, auto) [caption-end] auto;">
       {#each Object.keys(stroop.output).slice(0, numRows(showHidden)) as item, row_index}
@@ -100,7 +100,7 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
       {/each}
       <div class="figcaption" style="grid-area: caption; max-width: 550px;">
         <p>
-          <a class="figure-anchor" href="#stroop-experiment">Figure N:</a>
+          <a class="figure-anchor" href="#figure-17">Figure 17:</a>
           A Stroop effect experiment.
 
           Above we see the CLIP RN50-4x model's classifications of various words colored with various colors. Activations were gathered using the zero-shot methodology with the prompt "{stroop.setup.zero_shot_setup}_____".

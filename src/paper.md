@@ -157,7 +157,7 @@ We find that CLIP models develop <i>region neurons</i> responding to geographic 
 <p>Region neurons vary greatly in scale, from neurons corresponding to entire hemispheres — for example, a {geo_ref("Northern Hemisphere neuron", 1, 0)} which responds to bears, moose, coniferous forest, and the entire Northern third of a world map — down to sub-regions of countries, such as the US West Coast. Which regions the model dedicates neurons to seems stochastic and varies across models we examined.<d-footnote> Some region neurons seem to form more consistently than others. Which neurons form doesn't seem to be fully explained by prevalence in the dataset: for example, {geo_ref("every model has an Australia neuron", 6)}, but not all models seem to have a UK neuron. Why is that? One intuition is that there’s more variance in neurons when there’s a natural supercategory they can be grouped into. For example, when an individual UK neuron doesn’t exist, it seems to be folded into a Europe neuron. In Africa, we sometimes see multiple different Africa neurons (in particular a South/West Africa neuron and an East Africa neuron), while other times there seems to be a single unified Africa neuron. In contrast, Australia is perhaps less subdividable, since it’s both a continent and country.</d-footnote></p>
 
 
- 
+
 
 import RegionalDiagram from './diagrams/RegionalNeurons.svelte'
 
@@ -170,7 +170,7 @@ Not all region neurons fire on a globe-scale map. In particular, neurons which c
 
 #### Case Study: Central (?) Africa Neuron
 
-Despite these examples of neurons learning Americentric caricatures, there are some rays of light where the model seems more nuanced than one might fear. For example, rather than blurring all of Africa into a monolithic entity, the RN50-x4 model develops neurons for three regions within Africa. 
+Despite these examples of neurons learning Americentric caricatures, there are some rays of light where the model seems more nuanced than one might fear. For example, rather than blurring all of Africa into a monolithic entity, the RN50-x4 model develops neurons for three regions within Africa.
 
 import MarginNeuronsAfrica from './diagrams/MarginNeuronsAfrica.svelte'
 
@@ -193,17 +193,17 @@ Feature properties
 <Todo to="Chris" value={4}>Can we tighten this a bunch with even more aggressive footnotes?</Todo>
 
 So far, we’ve looked at particular neurons to give a sense of the kind of features that exist in CLIP models. It's worth noting several properties that either warrant emphasis or might be missed in the discussion of individual features:
-    
+
 <p><b>Multimodality / Abstraction:</b> As we’ve seen in the previous sections, most CLIP neurons are multimodal and abstract, responding to the same concept across forms such as photos, drawings, maps, images of text, and more.</p>
 
 import ImageWordEmbeddingFootnote from './diagrams/ImageWordEmbeddingFootnote.svelte'
 
 <p><b>Image-Based Word Embedding:</b> Despite being a vision model, one can produce “word embeddings” with the visual CLIP model by rastering words into images and then feeding these images into the model. Like normal word embeddings, the nearest neighbors of words tend to be semantically related.<Svelte component={ImageWordEmbeddingFootnote}  container={<d-footnote />} />  Word arithmetic <d-cite bibtex-key="mikolov2013linguistic" /> such as <br /><span style={{display: " inline-block", margin: 12}}><i>V(Img(</i>“King”<i>)) <span style={{margin: 4}}>-</span> V(Img(</i>“Man”<i>)) <span style={{margin: 4}}>+ </span>V(Img(</i>“Woman”<i>)) <span style={{margin:4}}>=</span> V(Img(</i>“Queen”<i>))</i></span><br /> work in some cases if we mask non-semantic lexicographic neurons (eg. “-ing” detectors). It seems likely that mixed arithmetic of words and images should be possible.</p>
-    
+
 <p><b>Limited Multilingual Behavior:</b> Although CLIP’s training data was filtered to be English, many features exhibit limited multilingual responsiveness. For example, a {mref("“positivity” neuron", 36)} responds to images of English “Thank You”, French “Merci”, German “Danke”, and Spanish “Gracias,” and also to English “Congratulations”, German “Gratulieren”, Spanish “Felicidades”, and Indonesian “Selamat”. As the example of Indonesian demonstrates, the model can recognize some words from non Romance/Germanic languages. However, we were unable to find any examples of the model mapping words in non-Latin script to semantic meanings. It can recognize many scripts (Arabic, Chinese, Japanese, etc) and will activate the corresponding regional neurons, but doesn’t seem to be able to map words in those scripts to their meanings.<d-footnote>One interesting question is why the model developed reading abilities in latin alphabet languages, but not others. Was it because more data of that type slipped into the training data, or (the more exciting possibility) because it’s easier to learn a language from limited data if you already know the alphabet?</d-footnote></p>
-      
+
 <p><b>Bias:</b> Certain kinds of bias seem to be embedded into these representations, similar to classic biases in word embeddings (eg. <d-cite bibtex-key="bolukbasi2016man" />). The most striking examples are likely racial and religious bias. As mentioned in our discussion of region neurons, there seems to be a {mref("“terrorism/Islam” neuron",  1596)} which responds to images of words such as “Terrorism”, “Attack”, “Horror”, “Afraid”, and also “Islam”, “Allah”, “Muslim”. This isn’t just an illusion from looking at a single neuron: the image-based word embedding for “Terrorism” has a cosine similarity of 0.6 with “Muslims”. Similarily, an {mref("“illegal immigration” neuron", 2213)} selects for Latin America countries. (We’ll see further examples of bias in the next section.)</p>
-    
+
 <p><b>Polysemanticity and Conjoined Neurons:</b>  Although we’ve focused on neurons which seem to have a single clearly defined concept they respond to, many CLIP neurons are “polysemantic” <d-cite bibtex-key="olah2017feature,olah2020zoom" />, responding to multiple unrelated features. Unusually, polysemantic neurons in CLIP often have suspicious links between the different concepts they respond to. For example, we observe as {mref("<b>Phil</b>adelphia/<b>Phil</b>ipines/<b>Phil</b>ip neuron", {model: "v1", unit: 843})}, a {mref("Christm<b>as</b>/<b>As</b>s neuron", {model: "v1", unit: 145})}, and an {mref("Ac<b>tor</b>/Velocirap<b>tor</b> neuron", {model: "v1", unit: 707})}. The concepts in these neurons seem “conjoined”, overlapping in a superficial way in one facet, and then generalizing out in multiple directions. We haven’t ruled out the possibility that these are just coincidences, given the large number of facets that could overlap for each concept. But if conjoined features genuinely exist, they hint at new potential explanations of polysemanticity.<d-footnote>In the past, when we've observed seemingly polysemantic neurons, we've considered two possibilities: either it is responding to some shared feature of the stimuli, in which case it isn’t really polysemantic, or it is genuinely responding to two unrelated cases. Usually we distinguish these cases with feature visualization. For example, InceptionV1 4e:55 responds to cars and cat heads. One could imagine it being the case that it’s responding to some shared feature — perhaps cat eyes and car lights look similar. But feature visualization establishes a facet selecting for a globally coherent cat head, whiskers and all, as well as the metal chrome and corners of a car. We concluded that it was genuinely <i>OR(cat, car)</i>.<br /><br />
 Conjoined features can be seen as a kind of mid-point between detecting a shared low-level feature and detecting independent cases. Detecting Santa Claus and “turn” are clearly true independent cases, but there was a different facet where they share a low-level feature. <br /><br />
 Why would models have conjoined features? Perhaps they’re a vestigial phenomenon from early in training when the model couldn’t distinguish between the two concepts in that facet. Or perhaps there’s a case where they’re still hard to distinguish, such as large font sizes. Or maybe it just makes concept packing more efficient, as in the superposition hypothesis.</d-footnote></p>
@@ -216,7 +216,7 @@ Why would models have conjoined features? Perhaps they’re a vestigial phenomen
 Using Abstractions
 </h2>
 
-We typically care about features because they’re useful, and CLIP’s features are more useful than most. These features, when ensembled, allow direct retrieval on a variety of queries via the dot product alone. 
+We typically care about features because they’re useful, and CLIP’s features are more useful than most. These features, when ensembled, allow direct retrieval on a variety of queries via the dot product alone.
 
 Untangling the image into its semantics <d-cite bibtex-key="dicarlo2012does" /> enables the model to perform a wide variety of downstream tasks including imagenet classification, facial expression detection, geolocalization and more. How do they do this? Answering these questions will require us to look at how neurons work in concert to represent a broader space of concepts.
 
@@ -229,9 +229,9 @@ The Imagenet Challenge
 To study how CLIP classifies Imagenet, it helps to look at the simplest case. We use a sparse linear model for this purpose, following the methodology of Radford et al <d-cite bibtex-key="radford2020clip" />. With each class using only 3 neurons on average, it is easy to look at all of the weights. This model, by any modern standard, fares poorly with a top-5 accuracy of 56.4%, but the surprising thing is that such a miserly model can do anything at all. How is each weight carrying so much weight?
 
 ImageNet <d-cite bibtex-key="deng2009imagenet" /> organizes images into categories borrowed from another project called WordNet.
-Neural networks typically classify images treating ImageNet classes as structureless labels. But WordNet actually gives them a rich structure of higher level nodes. For example, a Labrador Retriever is a Canine which is a Mammal which is an Animal. 
+Neural networks typically classify images treating ImageNet classes as structureless labels. But WordNet actually gives them a rich structure of higher level nodes. For example, a Labrador Retriever is a Canine which is a Mammal which is an Animal.
 
-We find that the weights and neurons of CLIP reflect some of this structure. At the highest levels we find conventional categories such as 
+We find that the weights and neurons of CLIP reflect some of this structure. At the highest levels we find conventional categories such as
 
 import ImagenetNeurons from './diagrams/ImagenetNeurons.svelte'
 
@@ -251,7 +251,7 @@ We arrive at a surprising discovery: it seems as though the neurons appear to ar
 Understanding Language
 </h3>
 
-The most exciting aspect of CLIP is its ability to do zero-shot classification: it can be “programmed” with natural language to classify images into new categories, without fitting a model. Where linear probes had fixed weights for a limited set of classes, now we have dynamic weight vectors that can be generated automatically from text. Indeed, CLIP makes it possible for end-users to ‘roll their own classifier’ by programming the model via intuitive, natural language commands - this will likely unlock a broad range of downstream uses of CLIP-style models. 
+The most exciting aspect of CLIP is its ability to do zero-shot classification: it can be “programmed” with natural language to classify images into new categories, without fitting a model. Where linear probes had fixed weights for a limited set of classes, now we have dynamic weight vectors that can be generated automatically from text. Indeed, CLIP makes it possible for end-users to ‘roll their own classifier’ by programming the model via intuitive, natural language commands - this will likely unlock a broad range of downstream uses of CLIP-style models.
 
 <p>Recall that CLIP has two sides, a vision side (which we’ve discussed up to this point) and a language side. The two sides meet at the end, going through some processing and then performing a dot product to create a logit. If we ignore spatial structure<d-footnote>In order to use a contrastive loss, the 3d activation tensor of the last convolutional layer must discard spatial information and be reduced to a single vector which can be dot producted with the language embedding. CLIP does this with an attention layer, first generating attention weights <d-math block>{"A = \\mathrm{softmax}(W_k x_{\\text{img}} \\cdot W_q \\text{average}(x_{\\text{img}}))"}</d-math> and then producing an embedding <d-math block>{"y = W_o (\\sum_i A_i W_v x_{\\text{img}, i}) = W_o W_v (\\sum_i A_i x_{\\text{img}, i})"}</d-math> Although the attention step is non-linear in <d-math>{"x_{\\text{img}}"}</d-math> in general, it is a simple exercise to show that if the spatial positions are homogenous attention becomes affine in <d-math>{"x_{\\text{img}}"}</d-math>. </d-footnote>, the logit has the following bilinear form for some matrix <d-math>{"W"}</d-math>,</p>
 
@@ -278,7 +278,7 @@ import EmotionNeurons from './diagrams/EmotionNeurons.svelte'
 Emotional intelligence
 </h3>
 
-As we see above, English has far more descriptive words for emotions than the vision side has emotion neurons. And yet, the vision side recognizes these more obscure emotions. How can it do that? 
+As we see above, English has far more descriptive words for emotions than the vision side has emotion neurons. And yet, the vision side recognizes these more obscure emotions. How can it do that?
 
 We can see what different emotion words correspond to on the vision side by taking attribution, as described in the previous section, to "I feel X" on the language side. This gives us a vector of image neurons for each emotion word.<d-footnote>Since the approximations we made in the previous section aren’t exact, we double-checked these attribution vectors for all of the “emotion equations” shown by taking the top image neuron in each one, artificially increasing its activation at the last layer on the vision side when run on a blank image, and confirming that the logit for the corresponding emotion word increases on the language side.</d-footnote> Looking at a list of common emotion words<d-footnote>from a feeling wheel, we'll see later</d-footnote>, we find the sparse set of emotion neurons that composed in reasonable ways to span this broader space of emotions <d-footnote>We do this by taking the vectors <d-math>W x_{\\text{text}}</d-math> for the prompts "i am feeling {emotion}, "Me feeling {emotion} on my face", "a photo of me with a {emotion} expression on my face" on each one of the emotion-words on the emotion-wheel. We assign each prompt a label corresponding to the emotion-word, and then we then run sparse logistic regression to find the neurons that maximially discriminate between the attribution vectors. For the purposes of this article, these vectors are then cleaned up by hand by removing neurons that respond to bigrams.</d-footnote>. This mirrors a line of thinking in psychology where combinations of basic emotions form the “complex emotions” we experience.<d-footnote>theory of constructed emotion</d-footnote>
 
@@ -290,26 +290,26 @@ For example, the jealousy emotion is success + grumpy. Bored is relaxed + grumpy
 
 import EmotionsSemantic from './pages/emotions/semantic'
 
-<EmotionsSemantic emotionNames={['jealous', 'bored', 'intimate', 'surprised']} />
+<EmotionsSemantic emotionNames={['jealous', 'bored', 'intimate', 'surprised']} figureNumber='9' />
 
 Sometimes physical objects contribute to representing emotions.
 For example, part of "powerful" is a lightning neuron, part of "creative" is a painting neuron, part of "embarrassed" is a neuron corresponding to the years 2000-2012<d-footnote>explain the neuron is a time period and the language side thinks of it as embarrassing</d-footnote>, and part of “let down" is a neuron for destruction.
 
 
-<EmotionsSemantic emotionNames={['powerful', 'creative', 'embarrassed', 'let down']} />
+<EmotionsSemantic emotionNames={['powerful', 'creative', 'embarrassed', 'let down']} figureNumber='10' />
 
 We also see concerning use of sensitive topics in these emotion vectors, suggesting that problematic spurious correlations are used to caption expressions of emotion. For instance, "accepted" detects LGBT. "Confident" detects overweight. "Pressured" detects Asian culture.
 (disrespected)
 
 
 
-<EmotionsSemantic emotionNames={['accepted', 'confident', 'pressured']} />
+<EmotionsSemantic emotionNames={['accepted', 'confident', 'pressured']} figureNumber='11' />
 
 We can also search for examples where particular neurons are used, to explore their role in complex emotions. We see the mental illness neuron contributes to emotions like “stressed,” “anxious,” and “mad.”
 
 
 
-<EmotionsSemantic emotionNames={['stressed', 'anxious', 'mad']} />
+<EmotionsSemantic emotionNames={['stressed', 'anxious', 'mad']} figureNumber='12' />
 
 
 So far, we’ve only looked at a subset of these emotion words. We can also see a birds-eye view of this broader landscape of emotions by visualizing every attribution vector together.
@@ -377,7 +377,7 @@ import AutomatedAttacks from './diagrams/AutomatedAttacks.svelte'
 Comparison with the Stroop Effect
 </h3>
 
-The model’s response to these adversarial images is reminiscent of the Stroop effect <d-cite bibtex-key="stroop1935studies" />. Just as our models make errors when adversarial text is added to images, humans are slower and more error prone when images have incongruent labels. 
+The model’s response to these adversarial images is reminiscent of the Stroop effect <d-cite bibtex-key="stroop1935studies" />. Just as our models make errors when adversarial text is added to images, humans are slower and more error prone when images have incongruent labels.
 
 A classic demonstration of the Stroop effect is that recognizing a 'mislabeled' color (eg. <span style={{color: "blue", opacity: "0.8"}}>green</span>, <span style={{color: "red", opacity: "0.8"}}>blue</span>, <span style={{color: "green", opacity: "0.8"}}>red</span>) is harder than normal. To compare CLIP’s behavior to these human experiments, we had CLIP classify these stimuli by color, using its zero-shot classification.  Unlike humans, CLIP can’t slow down to compensate for the harder task. Instead of taking a longer amount of time for the incongruent stimuli, it has a very high error rate.
 
@@ -505,4 +505,3 @@ Faceted Feature Visualization
 </p>
 
 <Todos />
-

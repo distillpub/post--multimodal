@@ -211,7 +211,7 @@ export default class HumanLabels extends React.Component {
     const stackIndexes = [0, 1, 2, 3, 5, 4]
 
     return (
-      <figure className="fullscreen-diagram">
+      <figure className="fullscreen-diagram" id="figure-7">
         <Surface width={width} margin="auto">
           <Surface flexFlow="row" marginLeft={60}>
             <Group name="Non-Africa">
@@ -316,7 +316,7 @@ export default class HumanLabels extends React.Component {
               alignSelf: 'center',
             }}
           >
-            We labeled more than 400 images that causes a neuron that most
+            <a href='#figure-7' class='figure-anchor' style={{fontWeight: 'bold'}}>Figure 7:</a> We labeled more than 400 images that causes a neuron that most
             strongly responds to the word “Ghana” to fire at different levels of
             activation, without access to how much each image caused the neuron
             to fire while labeling. See{' '}

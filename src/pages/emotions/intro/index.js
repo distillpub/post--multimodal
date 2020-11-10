@@ -54,7 +54,7 @@ export default () => {
   }
 
   return (
-    <figure className="fullscreen-diagram">
+    <figure className="fullscreen-diagram" id="figure-4">
       <Surface
         display="grid"
         gridTemplateRows={`[settings] auto repeat(3, [row] auto)`}
@@ -208,7 +208,7 @@ export default () => {
         )}
       </Surface>
       <figcaption style={{ margin: 'auto', width: 704 }}>
-        Emotion neurons respond to a wide range of stimuli: facial expressions,
+        <a href='#figure-4' class='figure-anchor' style={{fontWeight: 'bold'}}>Figure 4:</a> Emotion neurons respond to a wide range of stimuli: facial expressions,
         body language, words, and more. We can use{' '}
         <a href="#faceted-feature-visualization">
           faceted feature visualization

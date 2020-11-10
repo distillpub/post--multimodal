@@ -16,12 +16,14 @@ const neuron_names = {1573 : "trees", 2525:"non-mammals", 2035:"animal", 2247:"w
 const cell_size = 23
 
 </script>
-<!-- 
+
 <style>
+    .figure-anchor {
+        font-weight: bold;
+    }
+</style>
 
-</style> -->
-
-<div style="display:flex; flex-flow:row wrap; width: 100%; margin: auto">
+<div style="display:flex; flex-flow:row wrap; width: 100%; margin: auto" id="hypergraph">
  	<svg style="position: relative; left: 0px; width: 1550px; font-size:13px; font-weight:400; margin:auto; height: 320px">
 
  		<g transform="translate(180, 70)">
@@ -33,7 +35,7 @@ const cell_size = 23
 				{/if}
 				<line x1={(i)*cell_size} y1="0" x2={(i)*cell_size} y2={cell_size*neurons.length} style="stroke:rgb(200,200,200);stroke-width:1" />
 				<line x1={(i)*cell_size} y1="0" x2={(i)*cell_size + 75} y2="-65" style="stroke:rgb(200,200,200);stroke-width:1" />
-			{/each} 
+			{/each}
 
 			{#each nonzeros as nz}
 				<circle style="stroke-width:1.5px" stroke="rgb(150,150,150)" fill="rgb(230,230,230)" cx={nz[1]*cell_size+cell_size/2} cy="{nz[0]*cell_size + cell_size/2}" r ="{cell_size/2.7}"></circle>
@@ -53,7 +55,7 @@ const cell_size = 23
 	</svg>
 
 	<div style='grid-area: caption; max-width: 700px; margin: auto' class='figcaption'>
-	    <a href='#hypergraph' class='figure-anchor'>Figure N:</a> This diagram visualizes a submatrix of the full weight matrix that takes neurons in the penultimate layer of Resnet 4x to the imagenet classes. Each grey circle represents a positive weight.
+	    <a href='#hypergraph' class='figure-anchor'>Figure 8:</a> This diagram visualizes a submatrix of the full weight matrix that takes neurons in the penultimate layer of Resnet 4x to the imagenet classes. Each grey circle represents a positive weight.
 	</div>
 
 </div>
@@ -82,7 +84,7 @@ const cell_size = 23
 				and the seashore
 			</div>
 			<NeuronCard neuron={{"model": "4x", "unit": 1511, "name": "seashore"  }} facets={["nature"]} ds={true} ds_override={true} />
-		</div>	
+		</div>
 
 
 	</div>

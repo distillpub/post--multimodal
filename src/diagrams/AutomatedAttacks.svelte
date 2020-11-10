@@ -13,7 +13,13 @@ let attack_ordering = [
 ];
 </script>
 
-<div>
+<style>
+  .figure-anchor {
+      font-weight: bold;
+  }
+</style>
+
+<div id="figure-16">
   <table id="best-small-attacks" style="width: 100%">
     <thead>
       <tr>
@@ -37,7 +43,7 @@ let attack_ordering = [
 
   <div class="figcaption">
     <p>
-      <a class="figure-anchor" href="#automated-attacks">Figure N:</a> Probabilities were collected from <a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x?models.technique=deep_dream">CLIP 4x</a>.
+      <a class="figure-anchor" href="#figure-16">Figure 16:</a> Probabilities were collected from <a href="https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/contrastive_4x?models.technique=deep_dream">CLIP 4x</a>.
 
       <b>Pixel cover</b> measures the attack's impact on the original image: the average percentage of pixels that were changed by any amount (an L0-norm) in order to add the attack.
 

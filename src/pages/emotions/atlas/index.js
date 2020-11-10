@@ -88,7 +88,7 @@ export default () => {
   }
 
   return (
-    <figure className="fullscreen-diagram">
+    <figure className="fullscreen-diagram" id="figure-13">
       <Surface
         width={totalWidth}
         marginX="auto"
@@ -234,7 +234,7 @@ export default () => {
         )}
       </Surface>
       <figcaption style={{ margin: 'auto', width: 704 }}>
-        We can create an atlas <d-cite bibtex-key="carter2019activation" /> of
+        <a href='#figure-13' class='figure-anchor' style={{fontWeight: 'bold'}}>Figure 13:</a> We can create an atlas <d-cite bibtex-key="carter2019activation" /> of
         complex emotions by applying non-negative matrix factorization to the
         emotion attribution vectors and using the factors to color each cell.
         The atlas resembles common feeling wheels{' '}

@@ -6,7 +6,13 @@ const hues = {"pizza": 40};
 import ClassificationCard from '../components/ClassificationCard.svelte';
 </script>
 
-<div style="width: fit-content; display: grid; grid-template-columns: 305px 100px 305px; grid-gap: 32px;">
+<style>
+  .figure-anchor {
+      font-weight: bold;
+  }
+</style>
+
+<div style="width: fit-content; display: grid; grid-template-columns: 305px 100px 305px; grid-gap: 32px;" id="figure-15">
   <div style="grid-column: 1">
     <ClassificationCard
       imageUrl={"typographic/small_attacks/example_before.png"}
@@ -49,7 +55,7 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
   </div>
   <div class="figcaption" style="grid-column: 1/4; grid-row: 2; max-width: 700px">
     <p>
-      <a class="figure-anchor" href="#attack-setup">Figure N:</a> An example of the fixed automated attack setup for the target class <code>pizza</code> with the attack text <i>pizza</i>. Attacks were generated using the same (arbitrarily chosen) eight coordinates and using a consistent font style, as shown here.
+      <a class="figure-anchor" href="#figure-15">Figure 15:</a> An example of the fixed automated attack setup for the target class <code>pizza</code> with the attack text <i>pizza</i>. Attacks were generated using the same (arbitrarily chosen) eight coordinates and using a consistent font style, as shown here.
 
       We consider an attack to have succeeded if the top class was changed to the attack class.
     </p>

@@ -28,7 +28,7 @@
                 {"model": "4x", "unit": 862, "name": "USA?"  },
                 {"model": "4x", "unit": 780, "name": "Spanish?", "warn": "Some neurons may have associations related to colonialism and shared language, such as linking South America to Spain and Portugal. Note that individual neurons don't necessarily reflect overall model behavior."  },
                 {"model": "4x", "unit": 1257, "name": "West Africa?"  },
-                {"model": "4x", "unit": 218, "name": "Europe?"  }, 
+                {"model": "4x", "unit": 218, "name": "Europe?"  },
                 {"model": "4x", "unit": 1067, "name": "India?"  },
                 {"model": "4x", "unit": 1091, "name": "China?"  },
                 {"model": "4x", "unit": 513, "name": "Australia?"  },
@@ -58,7 +58,7 @@
         },
         {
             "name": "Africa - All Modelsl",
-            "neurons": [ 
+            "neurons": [
                 {"model": "4x", "unit": 1317, "name": "West Africa?"  },
                 {"model": "4x", "unit": 1257, "name": "West Africa?"  },
                 {"model": "4x", "unit": 1000, "name": "West Africa?"  },
@@ -83,7 +83,7 @@
                 {"model": "rn101", "unit": 93, "name": "East Asia?"  },
                 {"model": "4x", "unit": 26, "name": "Japan"  },
                 {"model": "v1", "unit": 1254, "name": "East Asia"  },
-                
+
             ]
         },
         {
@@ -95,8 +95,8 @@
         },
         {
             "name": "Australia - All Models",
-            "neurons": [ 
-                {"model": "4x", "unit": 513, "name": "Australia?"  }, 
+            "neurons": [
+                {"model": "4x", "unit": 513, "name": "Australia?"  },
                 {"model": "rn50", "unit": 1522, "name": "Australia?"  },
                 {"model": "v1", "unit": 71, "name": "Australia?"  },
                 {"model": "rn101", "unit": 1415, "name": "Australia?"  },
@@ -104,9 +104,9 @@
         },
         {
             "name": "Europe - All Models",
-            "neurons": [ 
+            "neurons": [
                 {"model": "rn101", "unit": 836, "name": "Britain?"  },
-                {"model": "4x", "unit": 2558, "name": "UK / Australia?"  }, 
+                {"model": "4x", "unit": 2558, "name": "UK / Australia?"  },
                 {"model": "rn50", "unit": 2042, "name": "UK?"  },
                 {"model": "rn50", "unit":  288, "name": "Europe"  },
                 {"model": "4x", "unit": 218, "name": "Europe?"  },
@@ -116,8 +116,8 @@
         },
         {
             "name": "North America - All Models",
-            "neurons": [ 
-                {"model": "4x", "unit": 862, "name": "USA?"  }, 
+            "neurons": [
+                {"model": "4x", "unit": 862, "name": "USA?"  },
                 {"model": "v1", "unit": 924, "name": "USA?"  },
                 {"model": "v1", "unit": 1538, "name": "West Coast? (California)"  },
                 {"model": "v1", "unit": 474, "name": "West Coast? (Oregon-BC)"  },
@@ -129,44 +129,44 @@
                 {"model": "rn101", "unit": 1768, "name": "USA?"  },
                 {"model": "rn101", "unit": 1791, "name": "USA?"  },
                 {"model": "rn101", "unit": 417, "name": "USA?"  },
-                {"model": "rn101", "unit": 1480, "name": "Canada?" }    
+                {"model": "rn101", "unit": 1480, "name": "Canada?" }
             ]
         },
         {
             "name": "South/Central America - All Models",
-            "neurons": [ 
+            "neurons": [
                 {"model": "v1", "unit": 2032, "name": "Latin America?"  },
                 {"model": "v1", "unit": 376, "name": "Latin America?"  },
             ]
         },
 
 
-                
-
-                
-            
-                
 
 
-    
 
-                
+
+
+
+
+
+
+
 
 
         {
             "name": "4x - all",
-            "neurons": [ 
+            "neurons": [
                 {"model": "4x", "unit": 862, "name": "USA?"  },
                 {"model": "4x", "unit": 1317, "name": "West Africa?"  },
                 {"model": "4x", "unit": 1257, "name": "West Africa?"  },
                 {"model": "4x", "unit": 1000, "name": "West Africa?"  },
-                {"model": "4x", "unit": 2558, "name": "UK / Australia?"  }, 
-                {"model": "4x", "unit": 218, "name": "Europe?"  }, 
+                {"model": "4x", "unit": 2558, "name": "UK / Australia?"  },
+                {"model": "4x", "unit": 218, "name": "Europe?"  },
                 {"model": "4x", "unit": 1067, "name": "India?"  },
                 {"model": "4x", "unit": 26, "name": "Japan"  },
                 {"model": "4x", "unit": 1091, "name": "China?"  },
                 {"model": "4x", "unit": 1601, "name": "Japan?"  },
-                {"model": "4x", "unit": 513, "name": "Australia?"  }, 
+                {"model": "4x", "unit": 513, "name": "Australia?"  },
                 {"model": "4x", "unit": 734, "name": "Global?"  },
                 {"model": "4x", "unit": 1980, "name": "leaedership/democracy?"  },
                 {"model": "4x", "unit": 2247, "name": "biodiversity?"  },
@@ -275,7 +275,7 @@
     }
     const map_modes = [
         {"name": "geography", "description": "<b>Unlabeled map activations</b>: Spatial activations of neurons in response to unlabeled geographical world map. Activations averaged over random crops. Note that neurons for smaller countries or cities may not respond to maps this zoomed out."},
-        {"name": "countries", "description": "<b>Country name activations</b>: Countries colored by activations of neurons in response to rastered images of country names. Activations averaged over font sizes, max over word positions."}, 
+        {"name": "countries", "description": "<b>Country name activations</b>: Countries colored by activations of neurons in response to rastered images of country names. Activations averaged over font sizes, max over word positions."},
         {"name": "cities", "description": "<b>City name activations</b>: Cities colored by activations of neurons in response to rastered images of city names. Activations averaged over font sizes, max over word positions."}
     ]
     let map_mode = "geography";
@@ -294,23 +294,26 @@
 
 
 <style>
+    .figure-anchor {
+        font-weight: bold;
+    }
     .container {
         display: grid;
-        grid-template-columns: 
-            [label label-major] minmax(80px, 200px) 
-            minmax(4px,16px) [label-major-line] 1px minmax(4px,8px) 
-            [label-minor] 80px [label-end] 
-            minmax(4px,16px)  
-            [map-start title-start caption-start] 
+        grid-template-columns:
+            [label label-major] minmax(80px, 200px)
+            minmax(4px,16px) [label-major-line] 1px minmax(4px,8px)
+            [label-minor] 80px [label-end]
+            minmax(4px,16px)
+            [map-start title-start caption-start]
                 /* repeat( var(--num-neurons), [neuron] calc( calc( 6 *  100px) / var(--num-neurons) ) ) */
                 repeat( var(--num-neurons), [neuron] 100px )
             [map-end title-end caption-end];
-        grid-template-rows: 
-            [title] auto 4px [map] auto 16px 
+        grid-template-rows:
+            [title] auto 4px [map] auto 16px
             [neuron-title] auto 4px [color] auto 4px [top-words] auto 4px
-            [facets-start] 
-                repeat(4, [facet] auto) [overflow] auto 
-            [facets-end] 
+            [facets-start]
+                repeat(4, [facet] auto) [overflow] auto
+            [facets-end]
             16px [caption] auto;
         grid-gap: 4px;
         width: fit-content;
@@ -332,11 +335,11 @@
         display: block;
         filter: grayscale(100%) brightness(110%) contrast(110%);
     }
-    .color-label { 
-        border-radius: 2px; 
-        font-size: 60%; 
-        padding: 6px; 
-        line-height: 100%; 
+    .color-label {
+        border-radius: 2px;
+        font-size: 60%;
+        padding: 6px;
+        line-height: 100%;
         color: #EEE;
     }
     .img-link {
@@ -414,13 +417,13 @@
 
 
     <div style="grid-area: map; max-width: 724px;">
-        <Map 
-            spatial_acts={(map_mode == "geography")? spatial_acts : null} 
-            country_acts={(map_mode == "countries")? country_acts : null} 
-            city_acts={(map_mode == "cities")? city_acts : null} 
+        <Map
+            spatial_acts={(map_mode == "geography")? spatial_acts : null}
+            country_acts={(map_mode == "countries")? country_acts : null}
+            city_acts={(map_mode == "cities")? city_acts : null}
             active_units_inds={neuron_indices}
-            focus={(active!=null)? active : null} 
-            warn_message={(active!=null && neurons[active]["warn"])? neurons[active]["warn"] : null} 
+            focus={(active!=null)? active : null}
+            warn_message={(active!=null && neurons[active]["warn"])? neurons[active]["warn"] : null}
             />
     </div>
 
@@ -440,26 +443,26 @@
     </div>
 
     {#each neurons as neuron, neuron_i}
-    <a 
-        href="{microscope_url(neuron)}" 
+    <a
+        href="{microscope_url(neuron)}"
         class="img-link"
         style="grid-column: neuron {neuron_i+1}; grid-row: color; {(active != null && active != neuron_i)? 'opacity: 0.25;' : ''}"
         on:mouseover={() => enter(neuron_i)} on:mouseout={leave} >
-    <div 
+    <div
         style="background: hsl({360*neuron_i/neurons.length}, 80%, 50%);" class='color-label'>
         <!--{neuron.name}-->
     </div>
     </a>
-    <a 
-    href="{microscope_url(neuron)}" 
+    <a
+    href="{microscope_url(neuron)}"
     class="img-link"
     style="grid-column: neuron {neuron_i+1}; grid-row: top-words; {(active != null && active != neuron_i)? 'opacity: 0.25;' : ''}"
     on:mouseover={() => enter(neuron_i)} on:mouseout={leave} >
     <div class='figcaption' style='background:#EEE; padding: 6px; border-radius: 2px;'>{(neuron_indices[neuron_i] != -1)? top_words[neuron_indices[neuron_i]].slice(0,5).join(", ") : ""}</div>
-    
+
 </a>
     {/each}
-    
+
     {#each facets as facet, facet_i}{#each neurons as neuron, neuron_i}
     <div style="grid-column: neuron {neuron_i+1}; grid-row: facet {facet_i+1}; {(active != null && active != neuron_i)? 'opacity: 0.25;' : ''}"
     on:mouseover={() => enter(neuron_i)} on:mousemove={() => enter(neuron_i)} on:mouseout={leave}>
@@ -486,8 +489,8 @@
     {/each}
 
     <div style='grid-area: caption; max-width: 800px;' class='figcaption'>
-        <a href='#region-neuron-diagram' class='figure-anchor'>Figure N:</a> This diagram contextualizes region neurons with a map.
-        Each neuron is mapped to a hue, and then regions where it activates are colored in that hue, with intensity proportional to activiation. If multiple neurons of opposing hues fire, the region will be colored in a desaturated gray. 
+        <a href='#region-neuron-diagram' class='figure-anchor'>Figure 6:</a> This diagram contextualizes region neurons with a map.
+        Each neuron is mapped to a hue, and then regions where it activates are colored in that hue, with intensity proportional to activiation. If multiple neurons of opposing hues fire, the region will be colored in a desaturated gray.
         It can show their response
         to an <span class="pseudo-link" on:click={() => {map_mode = "geography";}}>unlabeled geographical map</span>,
         to <span class="pseudo-link" on:click={() => {map_mode = "countries";}}>country names</span>,
@@ -495,21 +498,19 @@
 
         <br/> <br/>
 
-        In addition to the neurons shown by default, a variety of neurons are available from four different CLIP models: 
+        In addition to the neurons shown by default, a variety of neurons are available from four different CLIP models:
         <select class='figcaption' bind:value={selected_family} >
         {#each neuron_families as family, i}
         <option value={i}>{family.name}</option>
         {/each}
-        </select>. We particularly recommend looking at the 
+        </select>. We particularly recommend looking at the
         "<span class="pseudo-link" on:click={() => {selected_family=1; active=null;}}>large region neurons</span>"
         (such as the "<span class="pseudo-link" on:click={() => {selected_family=1; active=0;}}>Northern Hemisphere</span>" neuron)
-        and at 
+        and at
         "<span class="pseudo-link" on:click={() => {selected_family=2; active=null;}}>secondarily regional neurons</span>"
-        (neurons which seem to be primarily about a concept we wouldn't typically conceptualize as geographic such as 
-        "<span class="pseudo-link" on:click={() => {selected_family=2; active=1;}}>entrepeneurship</span>"
-        or 
+        (neurons which seem to be primarily about a concept we wouldn't typically conceptualize as geographic such as
+        "<span class="pseudo-link" on:click={() => {selected_family=2; active=1;}}>entrepreneurship</span>"
+        or
         "<span class="pseudo-link" on:click={() => {selected_family=2; active=6;}}>terrorism</span>").
     </div>
 </div>
-
-

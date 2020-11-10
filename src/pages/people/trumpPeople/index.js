@@ -66,7 +66,7 @@ export default () => {
   const width = 1000
 
   return (
-    <figure className="fullscreen-diagram">
+    <figure className="fullscreen-diagram" id="figure-3">
       <Surface width={width} margin="auto">
         <Surface width={width} transform="translateY(-120px)">
           <VictoryChart domainPadding={[15, 4]}>
@@ -126,7 +126,7 @@ export default () => {
             alignSelf: 'center',
           }}
         >
-          To see how the Trump neuron responds to different individuals, we
+          <a href='#figure-3' class='figure-anchor' style={{fontWeight: 'bold'}}>Figure 3:</a> To see how the Trump neuron responds to different individuals, we
           searched the query "X giving a speech at a microphone" for various
           individuals on Google Images. We cleaned the data by hand, excluding
           photos that are not clear photos of the individual's face. The bar

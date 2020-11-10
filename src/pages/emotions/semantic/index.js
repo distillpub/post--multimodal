@@ -27,7 +27,7 @@ const facetOptions = {
   },
 }
 
-export default ({ emotionNames }) => {
+export default ({ emotionNames, figureNumber }) => {
   // emotionNames = Object.keys(emotions)
   const scaleEmotion = (neurons) => {
     const maxActivation = max(neurons.map(([val, index]) => val))
@@ -44,7 +44,7 @@ export default ({ emotionNames }) => {
   const imgSize = 140
 
   return (
-    <figure className="fullscreen-diagram">
+    <figure className="fullscreen-diagram" id={'figure-' + figureNumber}>
       <div
         style={{
           margin: 'auto',
@@ -198,7 +198,14 @@ export default ({ emotionNames }) => {
             </React.Fragment>
           )
         })}
+
       </div>
+      <figcaption style={{
+          padding: '20px',
+          width: 'fit-content',
+        }}>
+          <a href={'#figure-' + figureNumber} class='figure-anchor' style={{fontWeight: 'bold'}}>Figure {figureNumber}:</a> Sparse codes from "I feel {emotionNames.slice(0, -1).join('," "I feel ')}", and "I feel {emotionNames.slice(-1)}."
+      </figcaption>
     </figure>
   )
 }

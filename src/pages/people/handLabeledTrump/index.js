@@ -229,7 +229,7 @@ export default class HumanLabels extends React.Component {
     */
 
     return (
-      <figure className="fullscreen-diagram">
+      <figure className="fullscreen-diagram" id="figure-2">
         <Surface width={width} margin="auto">
           <Surface flexFlow="row" marginLeft={60}>
             <Group name="Neutral">
@@ -338,7 +338,7 @@ export default class HumanLabels extends React.Component {
               alignSelf: 'center',
             }}
           >
-            To understand the Trump neuron in more depth, we collected about 650
+            <a href='#figure-2' class='figure-anchor' style={{fontWeight: 'bold'}}>Figure 2:</a> To understand the Trump neuron in more depth, we collected about 650
             images that cause it to fire different amounts and labeled them by
             hand into categories we created. This lets us estimate the
             conditional probability of a label at a given activation level. See{' '}

@@ -125,7 +125,7 @@ function numLabelsPerCard(showHidden) {
 import ClassificationCard from '../components/ClassificationCard.svelte';
 </script>
 
-<div style="overflow-x: auto;">
+<div style="overflow-x: auto;" id="figure-14">
   <div style="width: fit-content; margin: auto;">
     <div style="display: grid; grid-gap: 10px; grid-template-rows: repeat({numRows(showHidden) + 1}, auto) [caption] auto; grid-template-columns: [caption-left-start] auto auto [caption-left-end caption-right-start] repeat({numCols(showHidden) - 2}, auto) [caption-right-end] auto;">
       {#each Object.entries(attacks_2.mug).slice(0, numCols(showHidden)) as [label, results], col_index}
@@ -154,7 +154,7 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
       {/each}
       <div class="figcaption" style="grid-area: caption-left; max-width: 550px;">
         <p>
-          <a class="figure-anchor" href="#in-the-wild-1">Figure N:</a>
+          <a class="figure-anchor" href="#figure-14">Figure 14:</a>
           Physical typographic attacks.
 
           Above we see the CLIP RN50-4x model's classifications of objects labeled with incorrect ImageNet classes. Each row corresponds to an object, and each column corresponds to a labeling. Some attacks are more effective than others, and some objects are more resilient to attack.
