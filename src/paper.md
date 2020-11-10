@@ -167,7 +167,7 @@ Not all region neurons fire on a globe-scale map. In particular, neurons which c
 
 <p>In addition to pure region neurons, we find that many other neurons seem to be “{geo_ref("secondarily regional", 2)}.”<d-footnote>Some caution is needed in interpreting these neurons as truly regional, rather than spuriously weakly firing for part of a world map. Important validations are that they fire for the same region on multiple different maps, and if they respond to words for countries or cities in that region.</d-footnote> These neurons don’t have a region as the primary focus, but have some kind of geographic information baked in, firing weakly for regions on a world map related to them. For example, an {geo_ref("entrepreneurship neuron", 2, 1)} that fires for California or a {geo_ref("cold neuron", 2, 4)} that fires for the Arctic.<d-footnote>We also find an {geo_ref("angel neuron", 2, 0)} which responds to “Los Angeles” and California on a map.</d-footnote> Other neurons link concepts to regions of the world in ways that seem Americentric or even racist: an {geo_ref("immigration neuron", 2, 2)} that responds to Latin America, and a {geo_ref("terrorism neuron", 2, 5)} that responds to the Middle East.<d-footnote>We also find that the linear combination of neurons that respond to Russia on a map strongly responds to Pepe the frog, a symbol of white nationalism in the United States allegedly promoted by Russia. Our impression is that Russians probably wouldn’t particularly see this as a symbol of Russia, suggesting it is more “Russia as understood by the US.”</d-footnote></p>
 
-#### Case Study: South Africa Neuron
+#### Case Study: Africa Neurons
 
 Despite these examples of neurons learning Americentric caricatures, there are some rays of light where the model seems more nuanced than one might fear. For example, rather than blurring all of Africa into a monolithic entity, the RN50-x4 model develops neurons for three regions within Africa. 
 
@@ -210,6 +210,42 @@ Why would models have conjoined features? Perhaps they’re a vestigial phenomen
 
 
 <br /><hr /><br />
+
+
+<h2 id="using-abstractions">
+Using Abstractions
+</h2>
+
+We typically care about features because they’re useful, and CLIP’s features are more useful than most. These features, when ensembled, allow direct retrieval on a variety of queries via the dot product alone.
+
+Untangling the image into its semantics <d-cite bibtex-key="dicarlo2012does" /> enables the model to perform a wide variety of downstream tasks including imagenet classification, facial expression detection, geolocalization and more. How do they do this? Answering these questions will require us to look at how neurons work in concert to represent a broader space of concepts.
+
+To begin, we’ll make this question concrete by taking a deep dive into one particular task: the Imagenet challenge.
+
+<h3 id="imagenet-challenge">
+The Imagenet Challenge
+</h3>
+
+To study how CLIP classifies Imagenet, it helps to look at the simplest case. We use a sparse linear model for this purpose, following the methodology of Radford et al <d-cite bibtex-key="radford2020clip" />. With each class using only 3 neurons on average, it is easy to look at all of the weights. This model, by any modern standard, fares poorly with a top-5 accuracy of 56.4%, but the surprising thing is that such a miserly model can do anything at all. How is each weight carrying so much weight?
+
+ImageNet <d-cite bibtex-key="deng2009imagenet" /> organizes images into categories borrowed from another project called WordNet.
+Neural networks typically classify images treating ImageNet classes as structureless labels. But WordNet actually gives them a rich structure of higher level nodes. For example, a Labrador Retriever is a Canine which is a Mammal which is an Animal.
+
+We find that the weights and neurons of CLIP reflect some of this structure. At the highest levels we find conventional categories such as
+
+import ImagenetNeurons from './diagrams/ImagenetNeurons.svelte'
+
+<Svelte component={ImagenetNeurons} container={<div />}/>
+
+But we also find nonconventional taxonomies, such as this cluster of water-related classes:
+
+import HyperSet from './diagrams/HyperSet.svelte'
+
+<Svelte component={HyperSet}/>
+
+We arrive at a surprising discovery: it seems as though the neurons appear to arrange themselves into a taxonomy of classes that appear to mimic, very approximately, the imagenet hierarchy. While there have been attempts to explicitly integrate this information <d-cite bibtex-key="santurkar2020breeds" />, CLIP was not given this information as a training signal. The fact that these neurons naturally form a hierarchy — form a hierarchy without even being trained on ImageNet — suggests that such hierarchy may be a universal feature of learning systems.<d-footnote>We’ve seen hints of similar structure in region neurons, with a whole world neuron, a northern hemisphere neuron, a USA neuron, and then a West Coast neuron.</d-footnote>
+
+
 
 <h3 id="understanding-language">
 Understanding Language
@@ -479,7 +515,7 @@ CLIP Training
 </h3>
 
 <p>
-Details of CLIP model training will be released in a separate paper. However, for the benefit of reviewers, we offer an overview of some technical details involved in the training of this model.
+Details of CLIP model training will be released in a separate paper, published by a different set of authors contemporaneously with this one. However, for the benefit of reviewers, we offer an overview of some technical details involved in the training of this model.
 </p>
 
 <p>
@@ -499,6 +535,6 @@ Details of CLIP model training will be released in a separate paper. However, fo
 </p>
 
 <p>
-<b>Training:</b> The contrastive training objective is identical to that of <d-cite bibtex-key="zhang2020contrastive" />, see equations 3,4. Training for all models was done for 32 epochs using the Adam optimizer and decoupled weight decay. Ths took 16 days over 592 V100 GPUs.
+<b>Training:</b> The contrastive training objective is identical to that of <d-cite bibtex-key="zhang2020contrastive" />, see equations 3,4. Training for all models was done for 32 epochs using the Adam optimizer and decoupled weight decay. 
 </p>
 
