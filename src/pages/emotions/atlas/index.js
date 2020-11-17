@@ -7,7 +7,7 @@ import React, { useState } from 'react'
 
 const facet = 'face'
 const sparsity = 1000
-//`https://storage.googleapis.com/clarity-public/ggoh/facets_multiscale_emotions_2/${capitalize( emotion)}_face_True_RN50_4x_2000_128_${strength}.png`
+//`https://storage.googleapis.com/distill-multimodal/facets_multiscale_emotions_2/${capitalize( emotion)}_face_True_RN50_4x_2000_128_${strength}.png`
 // `https://storage.googleapis.com/fls/nickc/multimodal/emotions_alpha3/${emotion}.png`
 
 const base = `https://storage.googleapis.com/distill-multimodal/facets_multiscale_emotions_6`
