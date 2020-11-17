@@ -61,7 +61,7 @@
           "teapot"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-mug-blank.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_1-mug-blank.png"
     },
     "laptop": {
       "linear_probe_statistics": [
@@ -124,7 +124,7 @@
           "teapot"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-mug-laptop.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_1-mug-laptop.png"
     },
     "cup": {
       "linear_probe_statistics": [
@@ -187,7 +187,7 @@
           "teapot"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-mug-cup.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_1-mug-cup.png"
     },
     "mug": {
       "linear_probe_statistics": [
@@ -250,7 +250,7 @@
           "teapot"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-mug-mug.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_1-mug-mug.png"
     }
   },
   "plant": {
@@ -315,7 +315,7 @@
           "coffee mug"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-plant-blank.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_1-plant-blank.png"
     },
     "laptop": {
       "linear_probe_statistics": [
@@ -378,7 +378,7 @@
           "coffee mug"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-plant-laptop.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_1-plant-laptop.png"
     },
     "cup": {
       "linear_probe_statistics": [
@@ -441,7 +441,7 @@
           "coffee mug"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-plant-cup.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_1-plant-cup.png"
     },
     "mug": {
       "linear_probe_statistics": [
@@ -504,7 +504,7 @@
           "coffee mug"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-plant-mug.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_1-plant-mug.png"
     }
   },
   "glass": {
@@ -569,7 +569,7 @@
           "coffee mug"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-glass-blank.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_1-glass-blank.png"
     },
     "laptop": {
       "linear_probe_statistics": [
@@ -632,7 +632,7 @@
           "coffee mug"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-glass-laptop.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_1-glass-laptop.png"
     },
     "cup": {
       "linear_probe_statistics": [
@@ -695,7 +695,7 @@
           "coffee mug"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-glass-cup.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_1-glass-cup.png"
     },
     "mug": {
       "linear_probe_statistics": [
@@ -758,7 +758,7 @@
           "coffee mug"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_1-glass-mug.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_1-glass-mug.png"
     }
   }
 }

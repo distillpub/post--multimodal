@@ -77,7 +77,7 @@
           "patio"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-apple-blank.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-apple-blank.png"
     },
     "ipod": {
       "linear_probe_statistics": [
@@ -156,7 +156,7 @@
           "patio"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-apple-ipod.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-apple-ipod.png"
     },
     "library": {
       "linear_probe_statistics": [
@@ -235,7 +235,7 @@
           "patio"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-apple-library.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-apple-library.png"
     },
     "pizza": {
       "linear_probe_statistics": [
@@ -314,7 +314,7 @@
           "patio"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-apple-pizza.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-apple-pizza.png"
     },
     "rifle": {
       "linear_probe_statistics": [
@@ -393,7 +393,7 @@
           "patio"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-apple-rifle.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-apple-rifle.png"
     },
     "toaster": {
       "linear_probe_statistics": [
@@ -472,7 +472,7 @@
           "patio"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-apple-toaster.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-apple-toaster.png"
     }
   },
   "laptop": {
@@ -553,7 +553,7 @@
           "patio"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-laptop-blank.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-laptop-blank.png"
     },
     "ipod": {
       "linear_probe_statistics": [
@@ -632,7 +632,7 @@
           "patio"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-laptop-ipod.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-laptop-ipod.png"
     },
     "library": {
       "linear_probe_statistics": [
@@ -711,7 +711,7 @@
           "patio"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-laptop-library.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-laptop-library.png"
     },
     "pizza": {
       "linear_probe_statistics": [
@@ -790,7 +790,7 @@
           "patio"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-laptop-pizza.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-laptop-pizza.png"
     },
     "rifle": {
       "linear_probe_statistics": [
@@ -869,7 +869,7 @@
           "patio"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-laptop-rifle.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-laptop-rifle.png"
     },
     "toaster": {
       "linear_probe_statistics": [
@@ -948,7 +948,7 @@
           "patio"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-laptop-toaster.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-laptop-toaster.png"
     }
   },
   "mug": {
@@ -1029,7 +1029,7 @@
           "espresso"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-mug-blank.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-mug-blank.png"
     },
     "ipod": {
       "linear_probe_statistics": [
@@ -1108,7 +1108,7 @@
           "espresso"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-mug-ipod.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-mug-ipod.png"
     },
     "library": {
       "linear_probe_statistics": [
@@ -1187,7 +1187,7 @@
           "espresso"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-mug-library.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-mug-library.png"
     },
     "pizza": {
       "linear_probe_statistics": [
@@ -1266,7 +1266,7 @@
           "espresso"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-mug-pizza.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-mug-pizza.png"
     },
     "rifle": {
       "linear_probe_statistics": [
@@ -1345,7 +1345,7 @@
           "espresso"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-mug-rifle.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-mug-rifle.png"
     },
     "toaster": {
       "linear_probe_statistics": [
@@ -1424,7 +1424,7 @@
           "espresso"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-mug-toaster.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-mug-toaster.png"
     }
   },
   "phone": {
@@ -1505,7 +1505,7 @@
           "modem"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-phone-blank.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-phone-blank.png"
     },
     "ipod": {
       "linear_probe_statistics": [
@@ -1584,7 +1584,7 @@
           "modem"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-phone-ipod.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-phone-ipod.png"
     },
     "library": {
       "linear_probe_statistics": [
@@ -1663,7 +1663,7 @@
           "modem"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-phone-library.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-phone-library.png"
     },
     "pizza": {
       "linear_probe_statistics": [
@@ -1742,7 +1742,7 @@
           "modem"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-phone-pizza.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-phone-pizza.png"
     },
     "rifle": {
       "linear_probe_statistics": [
@@ -1821,7 +1821,7 @@
           "modem"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-phone-rifle.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-phone-rifle.png"
     },
     "toaster": {
       "linear_probe_statistics": [
@@ -1900,7 +1900,7 @@
           "modem"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-phone-toaster.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-phone-toaster.png"
     }
   },
   "plant": {
@@ -1981,7 +1981,7 @@
           "sandal"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-plant-blank.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-plant-blank.png"
     },
     "ipod": {
       "linear_probe_statistics": [
@@ -2060,7 +2060,7 @@
           "sandal"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-plant-ipod.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-plant-ipod.png"
     },
     "library": {
       "linear_probe_statistics": [
@@ -2139,7 +2139,7 @@
           "sandal"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-plant-library.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-plant-library.png"
     },
     "pizza": {
       "linear_probe_statistics": [
@@ -2218,7 +2218,7 @@
           "sandal"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-plant-pizza.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-plant-pizza.png"
     },
     "rifle": {
       "linear_probe_statistics": [
@@ -2297,7 +2297,7 @@
           "sandal"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-plant-rifle.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-plant-rifle.png"
     },
     "toaster": {
       "linear_probe_statistics": [
@@ -2376,7 +2376,7 @@
           "sandal"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-plant-toaster.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-plant-toaster.png"
     }
   },
   "toaster": {
@@ -2457,7 +2457,7 @@
           "waffle iron"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-toaster-blank.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-toaster-blank.png"
     },
     "ipod": {
       "linear_probe_statistics": [
@@ -2536,7 +2536,7 @@
           "waffle iron"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-toaster-ipod.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-toaster-ipod.png"
     },
     "library": {
       "linear_probe_statistics": [
@@ -2615,7 +2615,7 @@
           "waffle iron"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-toaster-library.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-toaster-library.png"
     },
     "pizza": {
       "linear_probe_statistics": [
@@ -2694,7 +2694,7 @@
           "waffle iron"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-toaster-pizza.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-toaster-pizza.png"
     },
     "rifle": {
       "linear_probe_statistics": [
@@ -2773,7 +2773,7 @@
           "waffle iron"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-toaster-rifle.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-toaster-rifle.png"
     },
     "toaster": {
       "linear_probe_statistics": [
@@ -2852,7 +2852,7 @@
           "waffle iron"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-toaster-toaster.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-toaster-toaster.png"
     }
   },
   "wine": {
@@ -2933,7 +2933,7 @@
           "goblet"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-wine-blank.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-wine-blank.png"
     },
     "ipod": {
       "linear_probe_statistics": [
@@ -3012,7 +3012,7 @@
           "goblet"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-wine-ipod.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-wine-ipod.png"
     },
     "library": {
       "linear_probe_statistics": [
@@ -3091,7 +3091,7 @@
           "goblet"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-wine-library.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-wine-library.png"
     },
     "pizza": {
       "linear_probe_statistics": [
@@ -3170,7 +3170,7 @@
           "goblet"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-wine-pizza.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-wine-pizza.png"
     },
     "rifle": {
       "linear_probe_statistics": [
@@ -3249,7 +3249,7 @@
           "goblet"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-wine-rifle.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-wine-rifle.png"
     },
     "toaster": {
       "linear_probe_statistics": [
@@ -3328,7 +3328,7 @@
           "goblet"
         ]
       ],
-      "image_url": "https://storage.googleapis.com/openai-clarity/typographical_attacks/in_the_wild_round_2-wine-toaster.png"
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-wine-toaster.png"
     }
   }
 }
