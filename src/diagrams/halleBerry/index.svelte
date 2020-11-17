@@ -18,7 +18,7 @@
     and text...
   </div>
   <div class="figcaption">
-    ... an artificial spiderman neruon activates for
+    ... an artificial spiderman neuron activates for
     photos, drawings, and text as well.
   </div>
   <img src="images/Intro3HalleBerry.png" />
