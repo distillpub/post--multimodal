@@ -8,7 +8,7 @@ import allSparse from './allSparse'
 
 const data = allSparse[40]
 
-const base = `https://storage.googleapis.com/clarity-public/ggoh/facets_multiscale_emotions_6`
+const base = `https://storage.googleapis.com/distill-multimodal/facets_multiscale_emotions_6`
 const alphaLevel = '0.5'
 const facet = 'face'
 const sparsity = 100
