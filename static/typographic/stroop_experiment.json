@@ -5,7 +5,7 @@
   "output": {
     "black": {
       "example": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/example-black.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/example-black.png",
         "results": [
           [
             0.5866451263427734,
@@ -42,7 +42,7 @@
         ]
       },
       "red": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/red-black.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/red-black.png",
         "results": [
           [
             0.004401199985295534,
@@ -79,7 +79,7 @@
         ]
       },
       "green": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/green-black.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/green-black.png",
         "results": [
           [
             0.0031670313328504562,
@@ -116,7 +116,7 @@
         ]
       },
       "blue": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/blue-black.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/blue-black.png",
         "results": [
           [
             0.021866919472813606,
@@ -153,7 +153,7 @@
         ]
       },
       "purple": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/purple-black.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/purple-black.png",
         "results": [
           [
             0.0008993950905278325,
@@ -190,7 +190,7 @@
         ]
       },
       "orange": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/orange-black.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/orange-black.png",
         "results": [
           [
             0.003375333733856678,
@@ -227,7 +227,7 @@
         ]
       },
       "pink": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/pink-black.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/pink-black.png",
         "results": [
           [
             0.0040127187967300415,
@@ -264,7 +264,7 @@
         ]
       },
       "yellow": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/yellow-black.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/yellow-black.png",
         "results": [
           [
             0.00321308639831841,
@@ -303,7 +303,7 @@
     },
     "red": {
       "example": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/example-red.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/example-red.png",
         "results": [
           [
             0.04650947079062462,
@@ -340,7 +340,7 @@
         ]
       },
       "red": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/red-red.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/red-red.png",
         "results": [
           [
             0.00016883679199963808,
@@ -377,7 +377,7 @@
         ]
       },
       "green": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/green-red.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/green-red.png",
         "results": [
           [
             0.0033983844332396984,
@@ -414,7 +414,7 @@
         ]
       },
       "blue": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/blue-red.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/blue-red.png",
         "results": [
           [
             0.013284201733767986,
@@ -451,7 +451,7 @@
         ]
       },
       "purple": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/purple-red.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/purple-red.png",
         "results": [
           [
             0.001041562994942069,
@@ -488,7 +488,7 @@
         ]
       },
       "orange": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/orange-red.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/orange-red.png",
         "results": [
           [
             0.00017238974396605045,
@@ -525,7 +525,7 @@
         ]
       },
       "pink": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/pink-red.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/pink-red.png",
         "results": [
           [
             0.0017942952690646052,
@@ -562,7 +562,7 @@
         ]
       },
       "yellow": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/yellow-red.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/yellow-red.png",
         "results": [
           [
             0.001668247627094388,
@@ -601,7 +601,7 @@
     },
     "green": {
       "example": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/example-green.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/example-green.png",
         "results": [
           [
             0.005262675229460001,
@@ -638,7 +638,7 @@
         ]
       },
       "red": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/red-green.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/red-green.png",
         "results": [
           [
             0.0015020122518762946,
@@ -675,7 +675,7 @@
         ]
       },
       "green": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/green-green.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/green-green.png",
         "results": [
           [
             9.031888475874439e-05,
@@ -712,7 +712,7 @@
         ]
       },
       "blue": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/blue-green.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/blue-green.png",
         "results": [
           [
             0.00474881986156106,
@@ -749,7 +749,7 @@
         ]
       },
       "purple": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/purple-green.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/purple-green.png",
         "results": [
           [
             0.00023854734899941832,
@@ -786,7 +786,7 @@
         ]
       },
       "orange": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/orange-green.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/orange-green.png",
         "results": [
           [
             0.00043284238199703395,
@@ -823,7 +823,7 @@
         ]
       },
       "pink": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/pink-green.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/pink-green.png",
         "results": [
           [
             0.0014646827476099133,
@@ -860,7 +860,7 @@
         ]
       },
       "yellow": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/yellow-green.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/yellow-green.png",
         "results": [
           [
             0.0011071286862716079,
@@ -899,7 +899,7 @@
     },
     "blue": {
       "example": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/example-blue.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/example-blue.png",
         "results": [
           [
             0.11489452421665192,
@@ -936,7 +936,7 @@
         ]
       },
       "red": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/red-blue.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/red-blue.png",
         "results": [
           [
             0.0013556279009208083,
@@ -973,7 +973,7 @@
         ]
       },
       "green": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/green-blue.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/green-blue.png",
         "results": [
           [
             0.002639137441292405,
@@ -1010,7 +1010,7 @@
         ]
       },
       "blue": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/blue-blue.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/blue-blue.png",
         "results": [
           [
             0.003932085353881121,
@@ -1047,7 +1047,7 @@
         ]
       },
       "purple": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/purple-blue.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/purple-blue.png",
         "results": [
           [
             0.00043932112748734653,
@@ -1084,7 +1084,7 @@
         ]
       },
       "orange": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/orange-blue.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/orange-blue.png",
         "results": [
           [
             0.0009941532043740153,
@@ -1121,7 +1121,7 @@
         ]
       },
       "pink": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/pink-blue.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/pink-blue.png",
         "results": [
           [
             0.0012810102198272943,
@@ -1158,7 +1158,7 @@
         ]
       },
       "yellow": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/yellow-blue.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/yellow-blue.png",
         "results": [
           [
             0.0006435464019887149,
@@ -1197,7 +1197,7 @@
     },
     "purple": {
       "example": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/example-purple.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/example-purple.png",
         "results": [
           [
             0.019635917618870735,
@@ -1234,7 +1234,7 @@
         ]
       },
       "red": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/red-purple.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/red-purple.png",
         "results": [
           [
             0.0025245121214538813,
@@ -1271,7 +1271,7 @@
         ]
       },
       "green": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/green-purple.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/green-purple.png",
         "results": [
           [
             0.001307362923398614,
@@ -1308,7 +1308,7 @@
         ]
       },
       "blue": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/blue-purple.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/blue-purple.png",
         "results": [
           [
             0.005491914693266153,
@@ -1345,7 +1345,7 @@
         ]
       },
       "purple": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/purple-purple.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/purple-purple.png",
         "results": [
           [
             0.00032613344956189394,
@@ -1382,7 +1382,7 @@
         ]
       },
       "orange": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/orange-purple.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/orange-purple.png",
         "results": [
           [
             0.0007245350861921906,
@@ -1419,7 +1419,7 @@
         ]
       },
       "pink": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/pink-purple.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/pink-purple.png",
         "results": [
           [
             0.0006127527449280024,
@@ -1456,7 +1456,7 @@
         ]
       },
       "yellow": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/yellow-purple.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/yellow-purple.png",
         "results": [
           [
             0.0004903654917143285,
@@ -1495,7 +1495,7 @@
     },
     "orange": {
       "example": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/example-orange.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/example-orange.png",
         "results": [
           [
             0.005359618924558163,
@@ -1532,7 +1532,7 @@
         ]
       },
       "red": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/red-orange.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/red-orange.png",
         "results": [
           [
             0.0010889907134696841,
@@ -1569,7 +1569,7 @@
         ]
       },
       "green": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/green-orange.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/green-orange.png",
         "results": [
           [
             0.0021334595512598753,
@@ -1606,7 +1606,7 @@
         ]
       },
       "blue": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/blue-orange.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/blue-orange.png",
         "results": [
           [
             0.007150798104703426,
@@ -1643,7 +1643,7 @@
         ]
       },
       "purple": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/purple-orange.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/purple-orange.png",
         "results": [
           [
             0.0005670998361892998,
@@ -1680,7 +1680,7 @@
         ]
       },
       "orange": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/orange-orange.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/orange-orange.png",
         "results": [
           [
             8.554178930353373e-05,
@@ -1717,7 +1717,7 @@
         ]
       },
       "pink": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/pink-orange.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/pink-orange.png",
         "results": [
           [
             0.0016306705074384809,
@@ -1754,7 +1754,7 @@
         ]
       },
       "yellow": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/yellow-orange.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/yellow-orange.png",
         "results": [
           [
             0.0005662116454914212,
@@ -1793,7 +1793,7 @@
     },
     "pink": {
       "example": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/example-pink.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/example-pink.png",
         "results": [
           [
             0.05059679225087166,
@@ -1830,7 +1830,7 @@
         ]
       },
       "red": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/red-pink.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/red-pink.png",
         "results": [
           [
             0.004652590490877628,
@@ -1867,7 +1867,7 @@
         ]
       },
       "green": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/green-pink.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/green-pink.png",
         "results": [
           [
             0.0029236881528049707,
@@ -1904,7 +1904,7 @@
         ]
       },
       "blue": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/blue-pink.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/blue-pink.png",
         "results": [
           [
             0.010354159399867058,
@@ -1941,7 +1941,7 @@
         ]
       },
       "purple": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/purple-pink.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/purple-pink.png",
         "results": [
           [
             0.0009008032502606511,
@@ -1978,7 +1978,7 @@
         ]
       },
       "orange": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/orange-pink.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/orange-pink.png",
         "results": [
           [
             0.0010432825656607747,
@@ -2015,7 +2015,7 @@
         ]
       },
       "pink": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/pink-pink.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/pink-pink.png",
         "results": [
           [
             0.0002400840021437034,
@@ -2052,7 +2052,7 @@
         ]
       },
       "yellow": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/yellow-pink.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/yellow-pink.png",
         "results": [
           [
             0.001703268731944263,
@@ -2091,7 +2091,7 @@
     },
     "yellow": {
       "example": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/example-yellow.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/example-yellow.png",
         "results": [
           [
             0.006956634111702442,
@@ -2128,7 +2128,7 @@
         ]
       },
       "red": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/red-yellow.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/red-yellow.png",
         "results": [
           [
             0.0027915898244827986,
@@ -2165,7 +2165,7 @@
         ]
       },
       "green": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/green-yellow.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/green-yellow.png",
         "results": [
           [
             0.0015492559177801013,
@@ -2202,7 +2202,7 @@
         ]
       },
       "blue": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/blue-yellow.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/blue-yellow.png",
         "results": [
           [
             0.006258451379835606,
@@ -2239,7 +2239,7 @@
         ]
       },
       "purple": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/purple-yellow.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/purple-yellow.png",
         "results": [
           [
             0.0012690720614045858,
@@ -2276,7 +2276,7 @@
         ]
       },
       "orange": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/orange-yellow.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/orange-yellow.png",
         "results": [
           [
             0.0017187180928885937,
@@ -2313,7 +2313,7 @@
         ]
       },
       "pink": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/pink-yellow.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/pink-yellow.png",
         "results": [
           [
             0.002218889072537422,
@@ -2350,7 +2350,7 @@
         ]
       },
       "yellow": {
-        "url": "https://storage.googleapis.com/openai-clarity/stroop_experiment/yellow-yellow.png",
+        "url": "https://storage.googleapis.com/distill-multimodal/stroop_experiment/yellow-yellow.png",
         "results": [
           [
             3.81845748052001e-05,
