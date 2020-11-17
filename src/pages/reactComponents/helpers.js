@@ -32,5 +32,5 @@ export const getEmotion = (name, facet, strength) => {
   const path = `${
     isNumber(name) ? name : nameToNeuron[name]
   }_${facet}_RN50_4x_${strength}_${width}.png`
-  return `https://storage.googleapis.com/clarity-public/ggoh/facets_multiscale/${path}`
+  return `https://storage.googleapis.com/distill-multimodal/facets_multiscale/${path}`
 }

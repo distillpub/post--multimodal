@@ -50,7 +50,7 @@ export function facet_icon_url(neuron, facet="any", strength=5){
     }[neuron.model];
 
     var size = (neuron.model == "4x")? 128 : 64;
-    return `https://storage.googleapis.com/clarity-public/ggoh/facets_multiscale/${neuron.unit}_${facet.name}_${model_slug}_${strength}_${size}.png`;
+    return `https://storage.googleapis.com/distill-multimodal/facets_multiscale/${neuron.unit}_${facet.name}_${model_slug}_${strength}_${size}.png`;
     // return `https://storage.googleapis.com/clarity-public/ggoh/facets_hybrid_lessjitter/${neuron.unit}_${facet}_False_${model_slug}_64_${strength}.png`;
 }
 
