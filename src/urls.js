@@ -35,7 +35,7 @@ export function map_url(neuron){
         "4x":    "4x_4_5"
     }[neuron.model];
 
-    return `http://storage.googleapis.com/openai-clarity/colah/multimodal-vis/maps_data/geographical/${model_slug}_${neuron.unit}.jpeg`;
+    return `http://storage.googleapis.com/distill-multimodal/multimodal-vis/maps_data/geographical/${model_slug}_${neuron.unit}.jpeg`;
 }
 
 export function facet_icon_url(neuron, facet="any", strength=5){
@@ -57,5 +57,5 @@ export function facet_icon_url(neuron, facet="any", strength=5){
 export function dataset_examples_url(neuron, facet="any"){
     facet = as_facet(facet);
     neuron = as_neuron(neuron);
-    return `https://storage.googleapis.com/openai-clarity/colah/multimodal-vis/facet-ds/4x/${neuron.unit}_${facet.name}.png`;
+    return `https://storage.googleapis.com/distill-multimodal/multimodal-vis/facet-ds/4x/${neuron.unit}_${facet.name}.png`;
 }
