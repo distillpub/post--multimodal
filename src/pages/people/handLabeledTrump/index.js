@@ -15,67 +15,48 @@ import {
 
 import photo1 from './dse/photo/1.png'
 import photo2 from './dse/photo/2.png'
-import photo3 from './dse/photo/3.png'
-import photo4 from './dse/photo/4.png'
 
-const photoDse = [photo1, photo2, photo3, photo4]
+const photoDse = [photo1, photo2]
 
 import aligned1 from './dse/aligned/1.png'
 import aligned2 from './dse/aligned/2.png'
-import aligned3 from './dse/aligned/3.png'
-import aligned4 from './dse/aligned/4.png'
 
-const alignedDse = [aligned1, aligned2, aligned3, aligned4]
+const alignedDse = [aligned1, aligned2]
 
 import art1 from './dse/art/1.png'
 import art2 from './dse/art/2.png'
-import art3 from './dse/art/3.png'
-import art4 from './dse/art/4.png'
 
-const artDse = [art1, art2, art3, art4]
+const artDse = [art1, art2]
 
 import political1 from './dse/political/1.png'
 import political2 from './dse/political/2.png'
-import political3 from './dse/political/3.png'
-import political4 from './dse/political/4.png'
 
-const politicalDse = [political1, political2, political3, political4]
+const politicalDse = [political1, political2]
 
 import videoGamesMusic1 from './dse/videoGamesMusic/1.png'
 import videoGamesMusic2 from './dse/videoGamesMusic/2.png'
-import videoGamesMusic3 from './dse/videoGamesMusic/3.png'
 
-const videoGamesMusicDse = [
-  videoGamesMusic1,
-  videoGamesMusic2,
-  videoGamesMusic3,
-]
+const videoGamesMusicDse = [videoGamesMusic1, videoGamesMusic2]
 
 import partial1 from './dse/partial/1.png'
 import partial2 from './dse/partial/2.png'
-import partial3 from './dse/partial/3.png'
-import partial4 from './dse/partial/4.png'
 
-const partialDse = [partial1, partial2, partial3, partial4]
+const partialDse = [partial1, partial2]
 
 import text1 from './dse/text/1.png'
 import text2 from './dse/text/2.png'
-import text3 from './dse/text/3.png'
-import text4 from './dse/text/4.png'
 
-const textDse = [text1, text2, text3, text4]
+const textDse = [text1, text2]
 
 import lgbt1 from './dse/lgbt/1.png'
 import lgbt2 from './dse/lgbt/2.png'
-import lgbt3 from './dse/lgbt/3.png'
 
-const lgbtDse = [lgbt1, lgbt2, lgbt3]
+const lgbtDse = [lgbt1, lgbt2]
 
 import nonPolitical1 from './dse/unrelated/1.png'
 import nonPolitical2 from './dse/unrelated/2.png'
-import nonPolitical3 from './dse/unrelated/3.png'
 
-const nonPoliticalDse = [nonPolitical1, nonPolitical2, nonPolitical3]
+const nonPoliticalDse = [nonPolitical1, nonPolitical2]
 
 export default class HumanLabels extends React.Component {
   state = { activeGroups: [] }
@@ -338,7 +319,14 @@ export default class HumanLabels extends React.Component {
               alignSelf: 'center',
             }}
           >
-            <a href='#figure-2' class='figure-anchor' style={{fontWeight: 'bold'}}>Figure 2:</a> To understand the Trump neuron in more depth, we collected about 650
+            <a
+              href="#figure-2"
+              class="figure-anchor"
+              style={{ fontWeight: 'bold' }}
+            >
+              Figure 2:
+            </a>{' '}
+            To understand the Trump neuron in more depth, we collected about 650
             images that cause it to fire different amounts and labeled them by
             hand into categories we created. This lets us estimate the
             conditional probability of a label at a given activation level. See{' '}

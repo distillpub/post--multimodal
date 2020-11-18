@@ -198,13 +198,24 @@ export default ({ emotionNames, figureNumber }) => {
             </React.Fragment>
           )
         })}
-
       </div>
-      <figcaption style={{
-          padding: '20px',
-          width: 'fit-content',
-        }}>
-          <a href={'#figure-' + figureNumber} class='figure-anchor' style={{fontWeight: 'bold'}}>Figure {figureNumber}:</a> Sparse codes from "I feel {emotionNames.slice(0, -1).join('," "I feel ')}", and "I feel {emotionNames.slice(-1)}."
+      <figcaption
+        style={{
+          paddingTop: 20,
+          width: 704,
+          margin: 'auto',
+        }}
+      >
+        <a
+          href={'#figure-' + figureNumber}
+          class="figure-anchor"
+          style={{ fontWeight: 'bold' }}
+        >
+          Figure {figureNumber}:
+        </a>{' '}
+        Sparse codes from "I feel{' '}
+        {emotionNames.slice(0, -1).join('," "I feel ')}", and "I feel{' '}
+        {emotionNames.slice(-1)}."
       </figcaption>
     </figure>
   )
