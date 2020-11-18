@@ -56,20 +56,23 @@ const { bars, labels, stdDevs } = {
 }
 
 export default () => {
-  const neuronStd = 2.19
+  // const neuronStd = 2.19
   const data = bars.map((y, index) => ({
     y: y,
     x: labels[index],
     index,
   }))
-  console.log('data is', data, 'bars is', bars)
-  const width = 1000
+  const width = 1540
 
   return (
     <figure className="fullscreen-diagram" id="figure-3">
       <Surface width={width} margin="auto">
-        <Surface width={width} transform="translateY(-120px)">
-          <VictoryChart domainPadding={[15, 4]}>
+        <Surface
+          width={width}
+          transform="translate(-60px, -180px)"
+          pointerEvents="none"
+        >
+          <VictoryChart height={200} domainPadding={[15, 4]}>
             <VictoryBar
               data={data}
               style={{
@@ -82,10 +85,10 @@ export default () => {
               labelComponent={
                 <VictoryLabel
                   style={{
-                    fontSize: 8,
+                    fontSize: 5,
                   }}
                   dx={({ datum }) => {
-                    const diff = 5 + stdDevs[datum.index] * 7
+                    const diff = 5 + stdDevs[datum.index] * 5
                     return datum.y > 0 ? diff : -diff
                   }}
                 />
@@ -93,6 +96,7 @@ export default () => {
             />
             <VictoryErrorBar
               data={data}
+              borderWidth={3}
               style={{
                 data: {
                   stroke: 'rgba(0,0,0,0.2)',
@@ -109,12 +113,19 @@ export default () => {
               }}
             />
             <VictoryAxis
+              domain={[-15, 45]}
+              tickCount={17}
+              domainPadding={[0, 0]}
+              padding={[0, 0]}
               crossAxis={false}
               dependentAxis
               label="Standard Deviations from Zero Activation"
+              tickLabelComponent={<VictoryLabel dy={-7} />}
+              axisLabelComponent={<VictoryLabel dy={-13} />}
+              k
               style={{
-                axisLabel: { fontSize: 7 },
-                tickLabels: { fontSize: 8 },
+                axisLabel: { fontSize: 5 },
+                tickLabels: { fontSize: 4 },
               }}
             />
           </VictoryChart>
@@ -122,11 +133,19 @@ export default () => {
         <figcaption
           style={{
             width: 703,
-            marginTop: -140,
+            marginTop: -280,
             alignSelf: 'center',
+            transform: 'translateX(-60px)',
           }}
         >
-          <a href='#figure-3' class='figure-anchor' style={{fontWeight: 'bold'}}>Figure 3:</a> To see how the Trump neuron responds to different individuals, we
+          <a
+            href="#figure-3"
+            class="figure-anchor"
+            style={{ fontWeight: 'bold' }}
+          >
+            Figure 3:
+          </a>{' '}
+          To see how the Trump neuron responds to different individuals, we
           searched the query "X giving a speech at a microphone" for various
           individuals on Google Images. We cleaned the data by hand, excluding
           photos that are not clear photos of the individual's face. The bar

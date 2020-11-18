@@ -17,39 +17,33 @@ import data1317 from './africa_1317.json'
 
 import ethnicity1 from './dse/ethnicity/1.png'
 import ethnicity2 from './dse/ethnicity/2.png'
-import ethnicity3 from './dse/ethnicity/3.png'
 
-const ethnicityDse = [ethnicity1, ethnicity2, ethnicity3]
+const ethnicityDse = [ethnicity1, ethnicity2]
 
 import flags1 from './dse/flags/1.png'
 import flags2 from './dse/flags/2.png'
-import flags3 from './dse/flags/3.png'
 
-const flagsDse = [flags1, flags2, flags3]
+const flagsDse = [flags1, flags2]
 
 import foreignSymbol1 from './dse/foreignSymbol/1.png'
 import foreignSymbol2 from './dse/foreignSymbol/2.png'
-import foreignSymbol3 from './dse/foreignSymbol/3.png'
 
-const foreignSymbolDse = [foreignSymbol1, foreignSymbol2, foreignSymbol3]
+const foreignSymbolDse = [foreignSymbol1, foreignSymbol2]
 
 import other1 from './dse/other/1.png'
 import other2 from './dse/other/2.png'
-import other3 from './dse/other/3.png'
 
-const otherDse = [other1, other2, other3]
+const otherDse = [other1, other2]
 
 import otherRegional1 from './dse/otherRegional/1.png'
 import otherRegional2 from './dse/otherRegional/2.png'
-import otherRegional3 from './dse/otherRegional/3.png'
 
-const otherRegionalDse = [otherRegional1, otherRegional2, otherRegional3]
+const otherRegionalDse = [otherRegional1, otherRegional2]
 
 import placeName1 from './dse/placeName/1.png'
 import placeName2 from './dse/placeName/2.png'
-import placeName3 from './dse/placeName/3.png'
 
-const placeNameDse = [placeName1, placeName2, placeName3]
+const placeNameDse = [placeName1, placeName2]
 
 const data = {
   1257: data1257,
@@ -316,7 +310,14 @@ export default class HumanLabels extends React.Component {
               alignSelf: 'center',
             }}
           >
-            <a href='#figure-7' class='figure-anchor' style={{fontWeight: 'bold'}}>Figure 7:</a> We labeled more than 400 images that causes a neuron that most
+            <a
+              href="#figure-7"
+              class="figure-anchor"
+              style={{ fontWeight: 'bold' }}
+            >
+              Figure 7:
+            </a>{' '}
+            We labeled more than 400 images that causes a neuron that most
             strongly responds to the word “Ghana” to fire at different levels of
             activation, without access to how much each image caused the neuron
             to fire while labeling. See{' '}
