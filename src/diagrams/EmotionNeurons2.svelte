@@ -6,7 +6,7 @@ import NeuronCardInfo from '../components/NeuronCardInfo.svelte';
 import * as d3 from "d3"
 
 const neurons = [ 
-			[2478, 
+			[2297, 
 			"incarcerated", 
 			["penon street corrections inmate - purple and red", "guilty - atufalconing , cells racked", "mason correctional corrections"]],
 
@@ -27,7 +27,7 @@ const neurons = [
 			["silly pout craze xd # pafliesfaq", "duckface #sticker day", "goofy faces sticker day"]]
 			]
 
-console.log("hi")
+var hide_erotic=true;
 
 </script>
 <!-- 
@@ -39,10 +39,11 @@ console.log("hi")
 <div style="width: 100%; margin: auto; display: block">
 
 	{#each d3.range(1) as i}
-	<div style='display: flex; flex-direction: row-wrap; gap: 30px; flex: 6 2; text-align: left; margin:auto; font-size: 13px; margin: 20px; margin-top:0px;'>
+	<div style='display: flex; flex-direction: row-wrap; gap: 30px; flex: 6 2; text-align: left; margin:auto; font-size: 13px; margin: 20px; margin-top:0px; position: relative;'>
 
 		{#each d3.range(5) as i}
-		<div class="figcaption" style="display: inline-block; width: 140px">
+		<div>
+		<div class="figcaption" style="display: inline-block; width: 140px; {((neurons[i][1] == "erotic") && hide_erotic)? 'filter: blur(4px); pointer-events: none;' : ''}">
 
 			<div style="margin-bottom: 5px">
 				<i>{neurons[i][1]}</i>
@@ -65,6 +66,10 @@ console.log("hi")
 				<div style="margin-top: 0px">{neurons[i][2][2]}</div>
 			</div>
 
+		</div>
+		{#if ((neurons[i][1] == "erotic") && hide_erotic)}
+			<div style='position: absolute; top: 25px; padding: 10px; color: #FFF; font-size: 130%; max-width: 80px; line-height: 120%; cursor: pointer; padding-bottom: 40px;' on:click={() => {hide_erotic=false;}}>Show NSFW</div>
+		{/if}
 		</div>
 		{/each}
 

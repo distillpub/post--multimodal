@@ -23,7 +23,7 @@ const cell_size = 23
     }
 </style>
 
-<div style="display:flex; flex-flow:row wrap; width: 100%; margin: auto" id="hypergraph">
+<div style="display:flex; flex-direction: column; width: 100%; margin: auto" id="hypergraph">
  	<svg style="position: relative; left: 0px; width: 1550px; font-size:13px; font-weight:400; margin:auto; height: 320px">
 
  		<g transform="translate(180, 70)">
