@@ -23,15 +23,17 @@ const Paper = <React.Fragment>
         <ul>
           <li><a href="#imagenet-challenge">The Imagenet Challenge</a></li>
           <li><a href="#understanding-language">Understanding Language</a></li>
-          <li><a href="#emotional-intelligence">Emotional Intelligence</a></li>
+          <li><a href="#emotional-intelligence">Emotion Composition</a></li>
         </ul>
         <div><a href="#typographic-attacks">Typographic Attacks</a></div>
         <ul>
           <li><a href="#evaluating-typographic-attacks">Evaluating Typographic Attacks</a></li>
         </ul>
-        <div><a href="#appendix">Appendix 1: Methodological Details</a></div>
+        <div><a href="#appendix">Appendix: Methodological Details</a></div>
         <ul>
+          <li><a href="#conditional-probability">Conditional Probability Plots</a></li>
           <li><a href="#faceted-feature-visualization">Faceted Feature Visualization</a></li>
+          <li><a href="#clip">CLIP Training</a></li>
         </ul>
       </nav>
       <div class="toc-line"></div>

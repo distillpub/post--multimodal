@@ -11,7 +11,7 @@ const neurons = [
 			["omg! ftheshocked #cofphie", "when shocked eyes are placed perfectly after the scare ! via", "slightly # shocked & # shocked 📷: trenddrop - horror theme :"]],
 
 			[1193, 
-			"shocked", 
+			"crying", 
 			["sudden collapse crying drea #cfd 7 studio #", "broken tepes, crier pic ...", "pico crio disaster result video out"]],
 
 			[1512, 
