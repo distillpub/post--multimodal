@@ -15,6 +15,10 @@ module.exports = {
     filename: '[name].bundle.js',
     chunkFilename: '[name].[id].js',
   },
+  optimization: {
+    // We no not want to minimize our code.
+    minimize: false,
+  },
   module: {
     rules: [
       {
