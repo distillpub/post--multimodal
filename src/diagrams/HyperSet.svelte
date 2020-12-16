@@ -63,7 +63,7 @@ const cell_size = 23
 
 <div style="width: 700px; margin: auto; margin-top: 20px; margin-bottom: 0px">
 
-	<div style='display: flex; flex-direction: row-wrap; gap: 30px; flex: 6 2; text-align: left; margin:auto; font-size: 13px; margin: 20px; margin-top:0px; margin-bottom:0px'>
+	<div style='display: flex; flex-direction: row-wrap;flex: 6 2; text-align: left; margin:auto; font-size: 13px; margin: 20px; margin-top:0px; margin-bottom:0px'>
 		<div class="figcaption" style="display: inline-block; line-width: 30px">
 
 			<div style="margin-bottom: 5px">
@@ -72,14 +72,14 @@ const cell_size = 23
 			<NeuronCard neuron={{"model": "4x", "unit": 1634, "name": "underwater"  }} facets={["nature"]} ds={true} ds_override={true}/>
 		</div>
 
-		<div class="figcaption" style="display: inline-block; line-width: 30px">
+		<div class="figcaption" style="display: inline-block; line-width: 30px; margin-left: 30px;">
 			<div style="margin-bottom: 5px">
 				the sea surface
 			</div>
 			<NeuronCard neuron={{"model": "4x", "unit": 775, "name": "sea"  }} facets={["nature"]} ds={true} ds_override={true} />
 		</div>
 
-		<div class="figcaption" style="display: inline-block; line-width: 30px">
+		<div class="figcaption" style="display: inline-block; line-width: 30px; margin-left: 30px;">
 			<div style="margin-bottom: 5px">
 				and the seashore
 			</div>

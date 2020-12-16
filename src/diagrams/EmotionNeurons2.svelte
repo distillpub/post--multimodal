@@ -39,11 +39,11 @@ var hide_erotic=true;
 <div style="width: 100%; margin: auto; display: block">
 
 	{#each d3.range(1) as i}
-	<div style='display: flex; flex-direction: row-wrap; gap: 30px; flex: 6 2; text-align: left; margin:auto; font-size: 13px; margin: 20px; margin-top:0px; position: relative;'>
+	<div style='display: flex; flex-direction: row-wrap; flex: 6 2; text-align: left; margin:auto; font-size: 13px; margin: 20px; margin-top:0px; position: relative;'>
 
 		{#each d3.range(5) as i}
 		<div>
-		<div class="figcaption" style="display: inline-block; width: 140px; {((neurons[i][1] == "erotic") && hide_erotic)? 'filter: blur(4px); pointer-events: none;' : ''}">
+		<div class="figcaption" style="display: inline-block;  width: 140px; margin-right: 30px; {((neurons[i][1] == "erotic") && hide_erotic)? 'filter: blur(4px); pointer-events: none;' : ''}">
 
 			<div style="margin-bottom: 5px">
 				<i>{neurons[i][1]}</i>

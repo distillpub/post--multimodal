@@ -94,7 +94,7 @@ d-figure > figure {
   grid-column-end: screen-end;
   height: fit-content;
 }
-.sensitivity-warn {
+/* .sensitivity-warn {
   margin-bottom: 16px;
   padding: 10px;
   font-size: 80%;
@@ -103,6 +103,22 @@ d-figure > figure {
   border: 1px solid #AAA;
   border-radius: 4px;
   height: fit-content;
+} */
+
+.sensitivity-warn {
+  border-left: 8px solid hsl(40, 70%, 80%);
+  padding: 12px;
+  padding-left: 16px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  background: hsl(40, 80%, 95%);
+}
+
+.sensitivity-warn:before {
+  content: "Content Warning";
+  font-weight: bold;
+  display: block;
+  padding-bottom: 4px;
 }
 
 d-footnote {

@@ -39,10 +39,10 @@ const neurons = [
 <div style="width: 100%; margin: auto; display: block">
 
 	{#each d3.range(1) as i}
-	<div style='display: flex; flex-direction: row-wrap; gap: 30px; flex: 6 2; text-align: left; margin:auto; font-size: 13px; margin: 20px; margin-top:0px;'>
+	<div style='display: flex; flex-direction: row-wrap; flex: 6 2; text-align: left; margin:auto; font-size: 13px; margin: 20px; margin-top:0px;'>
 
 		{#each d3.range(5) as i}
-		<div class="figcaption" style="display: inline-block; width: 140px">
+		<div class="figcaption" style="display: inline-block; width: 140px; margin-right: 30px;">
 
 			<div style="margin-bottom: 5px">
 				<i>{neurons[i][1]}</i>

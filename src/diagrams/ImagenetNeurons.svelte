@@ -14,8 +14,8 @@ import * as d3 from "d3"
 
 <div style="width: 100%; margin: auto">
 
-	<div style='display: flex; flex-direction: row-wrap; gap: 30px; flex: 6 2; text-align: left; margin:auto; font-size: 13px; margin: 20px; margin-top:0px'>
-		<div class="figcaption" style="display: inline-block; line-width: 30px">
+	<div style='display: flex; flex-direction: row-wrap;  flex: 6 2; text-align: left; margin:auto; font-size: 13px; margin: 20px; margin-top:0px'>
+		<div class="figcaption" style="display: inline-block; line-width: 30px;">
 
 			<div style="margin-bottom: 5px">
 				birds
@@ -26,7 +26,7 @@ import * as d3 from "d3"
 			</div>
 		</div>
 
-		<div class="figcaption" style="display: inline-block; line-width: 30px">
+		<div class="figcaption" style="display: inline-block; line-width: 30px; margin-left: 30px;">
 			<div style="margin-bottom: 5px">
 				string instruments
 			</div>
@@ -36,7 +36,7 @@ import * as d3 from "d3"
 			</div>
 		</div>	
 
-		<div class="figcaption" style="display: inline-block; line-width: 30px">
+		<div class="figcaption" style="display: inline-block; line-width: 30px; margin-left: 30px;">
 			<div style="margin-bottom: 5px">
 				and dogs
 			</div>

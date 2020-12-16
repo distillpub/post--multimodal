@@ -290,26 +290,29 @@ let other_families = [
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 10px;
     }
     /* @media (max-width: 900px) and (min-width: 600px) {
 
     }
     @media (max-width: 860px) { .families { width: 420px; }  } */
 
-    @media                         (min-width: 2000px) { .families { width: 1850px; }  }
-    @media (max-width: 2000px) and (min-width: 1400px) { .families { width: 1370px; }  }
-    @media (max-width: 1400px) and (min-width:  920px) { .families { width:  910px; }  }
-    @media (max-width:  940px)                         { .families { width:  450px; }  .container > .figcaption { width: 450px;} }
+    @media                         (min-width: 2000px) { .families { width: 1870px; }  }
+    @media (max-width: 2000px) and (min-width: 1400px) { .families { width: 1390px; }  }
+    @media (max-width: 1400px) and (min-width:  940px) { .families { width:  920px; }  }
+    @media (max-width:  940px)                         { .families { width:  460px; }  .container > .figcaption { width: 460px;} }
     .family {
-        width: 420px;
+        width: 425px;
         display: flex;
         flex-direction: column;
-        gap: 5px;
         padding: 10px;
         border-radius: 4px;
         border: 1px solid #CCC;
         background: #f4f4f7;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    .family > *:not(:first-child) {
+        margin-bottom: 5px;
     }
     .family .family-title {
         font-weight: bold;
@@ -318,13 +321,16 @@ let other_families = [
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 4px;
+    }
+    .family a.neuron:not(:first-child) {
+        margin-left: 4px;
     }
     .family a.neuron {
         width: 100px;
         border-radius: 4px;
         overflow: hidden;
         border: 1px solid #CCC;
+        margin-bottom: 4px;
     }
     .family .neuron .vis {
         width: 100px;
@@ -353,7 +359,7 @@ let other_families = [
         font-weight: bold;
     }
     .container > .figcaption {
-        margin-top: 40px;
+        margin-top: 30px;
         max-width: 800px;
     }
 </style>
