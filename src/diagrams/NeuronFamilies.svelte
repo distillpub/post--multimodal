@@ -5,20 +5,22 @@ let families = [
 
     {
         title: "Region Neurons",
-        description: "See <a href=\"#region-neurons\">Region Neurons</a>.",
+        description: "These neurons respond to content associated with with a geopgrahpic region, with neurons ranging in scope from entire hemispheres to individual cities. Some of these neurons partially respond to ethnicity. See <a href=\"#region-neurons\">Region Neurons</a> for detailed discussion.",
         neurons: [
             {"model": "4x", "unit": 862, title: "USA", "facet": "any"},
             {"model": "4x", "unit": 218, title: "Europe", "facet": "any"},
             {"model": "4x", "unit": 1067, title: "India", "facet": "any"},
             {"model": "4x", "unit": 1257, title: "West Africa?", "facet": "any"},
             {"model": "4x", "unit": 513, title: "Australia", "facet": "any"},
+            {"model": "4x", "unit": 245, title: "North America", "facet": "any"},
+            {"model": "4x", "unit": 357, title: "New York", "facet": "any"},
             // {model: "4x", unit: 1415, title: "Scotland", "facet": "any"},
         ]
     },
 
     {
         title: "Person Neurons",
-        description: "See <a href=\"#person-neurons\">Person Neurons</a>.",
+        description: "These neurons respond to content associated with with a specific person. See <a href=\"#person-neurons\">Person Neurons</a> for detailed disucssion.",
         neurons: [
             {model: "4x", unit: 89, title: "Donald Trump", facet: "face" },
             {model: "4x", unit: 1063, title: "Elvis Presley", facet: "face" },
@@ -29,7 +31,7 @@ let families = [
     },
     {
         title: "Emotion Neurons",
-        description: "See <a href=\"#emotion-neurons\">Emotion Neurons</a>.",
+        description: "These neurons respond to facial expressions, words, and other content associated with an emotion or mental state. See <a href=\"#emotion-neurons\">Emotion Neurons</a> for detailed discussion.",
         neurons: [
             {model: "4x", unit: 2478, title: "shocked", facet: "face" },
             {model: "4x", unit: 1193, title: "crying", facet: "face" },
@@ -42,7 +44,7 @@ let families = [
 
     {
         title: "Religion Neurons",
-        description: "These neurons respond to concept clusters associated with a specific religion, such as its imagery, iconography, traditions, and/or texts.",
+        description: "These neurons respond to features associated with a specific religion, such as symbols, iconography, buildings, and texts.",
         neurons: [
             {model: "4x", unit: 929, title: "Judaism", facet: "any" },
             {model: "4x", unit: 291, title: "Hinduism", facet: "any" },
