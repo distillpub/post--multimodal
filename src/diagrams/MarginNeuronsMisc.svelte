@@ -39,7 +39,7 @@ const width = 128
     .neuron-container {
       display: flex;
       flex-direction: row;
-      width: fit-content;
+      width: min-content;
       margin-bottom: 4px;
       border-radius: 8px;
       border: 1px solid #DDD;

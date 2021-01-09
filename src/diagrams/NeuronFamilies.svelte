@@ -286,6 +286,7 @@ let other_families = [
     }
     .container {
         width: fit-content;
+        width: min-content;
         margin: auto;
     }
     .families {

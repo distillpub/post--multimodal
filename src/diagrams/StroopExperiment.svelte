@@ -65,7 +65,7 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
 </script>
 
 <div style="overflow-x: auto;" id="figure-17">
-  <div style="width: fit-content; margin: auto;">
+  <div style="width: min-content; margin: auto;">
     <div style="display: grid; grid-gap: 10px; grid-template-rows: repeat({numRows(showHidden) + 1}, auto) [caption] auto; grid-template-columns: [caption-start] repeat({numCols(showHidden)}, auto) [caption-end] auto;">
       {#each Object.keys(stroop.output).slice(0, numRows(showHidden)) as item, row_index}
         {#each Object.entries(stroop.output[item]).slice(0, numCols(showHidden)) as [label, results], col_index}

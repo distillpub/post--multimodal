@@ -126,7 +126,7 @@ import ClassificationCard from '../components/ClassificationCard.svelte';
 </script>
 
 <div style="overflow-x: auto;" id="figure-14">
-  <div style="width: fit-content; margin: auto;">
+  <div style="width: min-content; margin: auto;">
     <div style="display: grid; grid-gap: 10px; grid-template-rows: repeat({numRows(showHidden) + 1}, auto) [caption] auto; grid-template-columns: [caption-left-start] auto auto [caption-left-end caption-right-start] repeat({numCols(showHidden) - 2}, auto) [caption-right-end] auto;">
       {#each Object.entries(attacks_2.mug).slice(0, numCols(showHidden)) as [label, results], col_index}
         <h4 style="grid-column: { col_index + 1}; margin-bottom: 0px">{@html label === "blank" ? "No label" : "Labeled &ldquo;" + label + "&rdquo;" }</h4>

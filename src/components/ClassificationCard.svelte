@@ -32,7 +32,7 @@ function calculateBorderColor() {
 
 </script>
 
-<div style="display: flex; flex-direction: row; border-radius: 6px; overflow: hidden; width: fit-content; height: {calculateImageSize()}px; border: 1px solid {calculateBorderColor()};">
+<div style="display: flex; flex-direction: row; border-radius: 6px; overflow: hidden; width: fit-content; width: min-content; height: {calculateImageSize()}px; border: 1px solid {calculateBorderColor()};">
   <div style="border-right: 1px solid #EEE">
     <img style="width: {calculateImageSize()}px;" src="{imageUrl}" alt="{imageAltText}"/>
   </div>

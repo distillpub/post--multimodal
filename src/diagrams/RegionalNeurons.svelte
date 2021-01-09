@@ -317,6 +317,7 @@
             16px [caption] auto;
         grid-gap: 4px;
         width: fit-content;
+        width: max-content;
         max-width: 100%;
         margin: auto;
     }
