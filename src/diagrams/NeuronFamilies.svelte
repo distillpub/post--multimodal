@@ -5,7 +5,7 @@ let families = [
 
     {
         title: "Region Neurons",
-        description: "These neurons respond to content associated with with a geopgrahpic region, with neurons ranging in scope from entire hemispheres to individual cities. Some of these neurons partially respond to ethnicity. See <a href=\"#region-neurons\">Region Neurons</a> for detailed discussion.",
+        description: "These neurons respond to content associated with with a geographic region, with neurons ranging in scope from entire hemispheres to individual cities. Some of these neurons partially respond to ethnicity. See <a href=\"#region-neurons\">Region Neurons</a> for detailed discussion.",
         neurons: [
             {"model": "4x", "unit": 862, title: "USA", "facet": "any"},
             {"model": "4x", "unit": 218, title: "Europe", "facet": "any"},
@@ -240,7 +240,7 @@ let families = [
 
     {
         title: "Polysemantic Neurons",
-        description: "The feature visualizations and dataset examples of these neurons demonstrate at some polysemanticity.",
+        description: "The feature visualizations and dataset examples of these neurons demonstrate some polysemanticity.",
         neurons: [
             {model: "4x", unit: 978, title: "turtle + PhD + ?", facet: "any" },
             {model: "rn101", unit: 926, title: "self + relief + ?", facet: "any" },
