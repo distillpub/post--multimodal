@@ -332,7 +332,7 @@ export default class HumanLabels extends React.Component {
             conditional probability of a label at a given activation level. See{' '}
             <a href="#conditional-probability">the appendix</a> for details.
             <br /> We see that the higher activations of the Trump neuron are
-            highly selective, with more than 90% of the images with a standard
+            highly selective, as more than 90% of the images with a standard
             deviation greater than 30 are related to Donald Trump.
           </figcaption>
         </Surface>
