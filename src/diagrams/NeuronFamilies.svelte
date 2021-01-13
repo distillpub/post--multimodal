@@ -86,7 +86,6 @@ let families = [
             {model: "rn101", unit: 2012, title: "headshot photo", facet: "any" },
             {model: "rn101", unit: 321, title: "cartoon", facet: "logo" },
             {model: "rn101", unit: 691, title: "portrait photo", facet: "any" },
-            {model: "rn101", unit: 1159, title: "Egyptian art", facet: "any" },
             {model: "rn101", unit: 306, title: "Roman art", facet: "face" },
             {model: "rn101", unit: 463, title: "FPS screenshot", facet: "any" },
         ]
