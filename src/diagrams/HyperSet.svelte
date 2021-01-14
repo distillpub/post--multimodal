@@ -24,9 +24,25 @@ const cell_size = 23
 </style>
 
 <div style="display:flex; flex-direction: column; width: 100%; margin: auto" id="hypergraph">
- 	<svg style="position: relative; left: 0px; width: 1550px; font-size:13px; font-weight:400; margin:auto; height: 320px">
+ 	<svg style="position: relative; left: 0px; width: 1550px; font-size:13px; font-weight:400; margin:auto; height: 340px">
 
- 		<g transform="translate(180, 70)">
+ 		<g transform="translate(180, 10)">
+ 			<text style="fill:rgb(160,160,160) !important">Labels</text>
+ 		</g>
+
+ 		<g transform="translate(180, 16)">
+	 		<line x1={0} y1={0} x2={cell_size*53} y2={0} style="stroke:rgb(230,230,230);stroke-width:1" />
+	 	</g>
+
+ 		<g transform="translate(75, 320)">
+ 			<text style="fill:rgb(160,160,160) !important" transform="rotate(-90.0)">Neurons</text>
+ 		</g>
+
+ 		<g transform="translate(80, 93)">
+	 		<line x1={0} y1="0" x2={0} y2={cell_size*neurons.length} style="stroke:rgb(230,230,230);stroke-width:1" />
+	 	</g>
+
+ 		<g transform="translate(180, 95)">
 			{#each d3.range(classnames.length+1) as i}
 				{#if i < classnames.length}
 					<g transform="translate({i*cell_size+20}, -2)">

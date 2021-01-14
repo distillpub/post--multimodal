@@ -467,7 +467,7 @@
     {#each facets as facet, facet_i}{#each neurons as neuron, neuron_i}
     <div style="grid-column: neuron {neuron_i+1}; grid-row: facet {facet_i+1}; {(active != null && active != neuron_i)? 'opacity: 0.25;' : ''}"
     on:mouseover={() => enter(neuron_i)} on:mousemove={() => enter(neuron_i)} on:mouseout={leave}>
-        <NeuronCard neuron={neuron} facets={[facet]} fv={true} ds={false} />
+        <NeuronCard neuron={neuron} facets={[facet]} fv={true} ds={false} selectable={false} />
     </div>
 
     {/each}{/each}

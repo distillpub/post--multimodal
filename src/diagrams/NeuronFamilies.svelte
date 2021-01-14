@@ -95,7 +95,7 @@ let families = [
         title: "Image Feature Neurons",
         description: "These neurons detect features that an image might contain, whether it's normal object recognition or detection of more exotic features such as watermarks or sneaky bunny ears.",
         neurons: [
-            {model: "4x", unit: 1640, title: "image alteration", facet: "text" },
+            {model: "4x", unit: 1640, title: "image edit", facet: "text" },
             {model: "4x", unit: 2272, title: "bunny ears", facet: "any" },
             {model: "4x", unit: 2254, title: "nametag", facet: "indoor" },
             {model: "4x", unit: 2437, title: "flying/jumping", facet: "logo"},
@@ -364,6 +364,19 @@ let other_families = [
         margin-top: 30px;
         max-width: 800px;
     }
+
+    .top {
+        background: #E5E5E8;
+        padding-left: 2px;        
+    }
+
+    .dropdown {
+        opacity: 0;
+    }
+
+    .dropdown:hover {
+        opacity: 0.8;
+    }
 </style>
 
 <div class='container' id="figure-1">
@@ -374,9 +387,22 @@ let other_families = [
         <div class='neurons'>
             {#each family.neurons as neuron, neuron_i}
             {#if neuron_i < 4 || family.revealed}
-            <a class='neuron' href="{microscope_url(neuron)}">
+            <a class="neuron" style="position: relative">
+                <div class="dropdown" style="position: absolute; left: 3px; top:-3px; height: 500px"> 
+                    <select style="width: 100%;" bind:value={neuron.facet}>
+                      <option value="any">any</option>
+                      <option value="face">face</option>
+                      <option value="arch">architecture</option>
+                      <option value="indoor">indoor</option>
+                      <option value="logo">logo</option>
+                      <option value="nature">nature</option>
+                      <option value="pose">pose</option>
+                    </select>
+                </div>
+                <a href="{microscope_url(neuron)}">
                 <img class='vis' src="{facet_icon_url(neuron, neuron.facet)}" />
                 <div class='name figcaption'>{neuron.title}</div>
+                </a>
             </a>
             {/if}
             {/each }

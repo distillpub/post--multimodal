@@ -30,11 +30,13 @@ const width = 128
       },
     ];
   </script>
+
   <style>
-    a.outer-neuron-container {
+    .outer-neuron-container {
       display: block;
       border-bottom: none;
       margin-bottom: 10px;
+      --size: 100px;
     }
     .neuron-container {
       display: flex;
@@ -47,45 +49,87 @@ const width = 128
       overflow: hidden;
       gap: 1px;
     }
-    a.outer-neuron-container:hover .neuron-container {
+    .outer-neuron-container:hover .neuron-container {
       border: 1px solid #AAA;
+      background: #AAA;
     }
     .neuron-description {
-      width: 90px;
+      margin-top: -4px;
+      max-width: 200px;
     }
+    /* @media only screen and (min-width: 1500px) {
+      a.outer-neuron-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        gap: 16px;
+      }
+      .neuron-description {
+        max-width: 150px;
+        margin-top: -2px;
+      }
+    } */
     .dataset-example {
-      width: 100%;
+      width: calc( var(--size) / 2);
+      height: calc( var(--size) / 2);
       background: #CCC;
     }
     .neuron-feature-viz{
-      width: 80px;
-      height: 80px;
+      width: calc( var(--size) + 1px);
+      height: 100px;
     }
+    .dataset-examples {
+      display: grid;
+      grid-gap: 1px;
+    }
+    @media only screen and (max-width: 1600px) {
+      .dataset-example:nth-child(n+5) {
+        display: none;
+      }
+    }
+    .dropdown {
+        opacity: 0;
+    }
+
+    .dropdown:hover {
+        opacity: 0.8;
+    }
+
     .neurons {
         display: flex;
         flex-direction: row;
         gap: 4px;
     }
-
-    @media only screen and (max-width: 1600px) {
-      .neuron-feature-viz{
-        width: 65px;
-        height: 65px;
-      }
-    }
   </style>
   
-<div class="neurons">
-  {#each neurons as neuron}
-  <a class="outer-neuron-container" href="{microscope_url(neuron.neuron)}">
-  <div class="neuron-container">
-    <img class="neuron-feature-viz" src="{facet_icon_url(neuron.neuron, neuron.facet, neuron.strength)}" alt="" style="grid-row: 1; grid-column: 1;"/>
+  <div class = "neurons">
+    {#each neurons as neuron}
+    <div class="outer-neuron-container">
+    <div class="neuron-container" style="position:relative">
+      <div class="dropdown" style="position: absolute; left: 3px; top:-3px; height: 90px"> 
+          <select style="width: 100%;" bind:value={neuron.facet}>
+            <option value="any">any</option>
+            <option value="face">face</option>
+            <option value="arch">architecture</option>
+            <option value="indoor">indoor</option>
+            <option value="logo">logo</option>
+            <option value="nature">nature</option>
+            <option value="pose">pose</option>
+          </select>
+          <a href="{microscope_url(neuron.neuron)}">
+            <div style="height:80px">
+            </div>
+          </a>
+      </div>
+      <a class="neuron-feature-viz" href="{microscope_url(neuron.neuron)}">
+        <img class="neuron-feature-viz" src="{facet_icon_url(neuron.neuron, neuron.facet, neuron.strength || 5)}" alt="" style="grid-row: 1; grid-column: 1;"/>
+      </a>
+      </div>
+    <div class="figcaption neuron-description">
+      {@html neuron.description}
+    </div>
 
+    </div>
+    
+    {/each}
   </div>
-  <div class="figcaption neuron-description">
-    {@html neuron.description}
-  </div>
-  </a>
-  {/each}
-</div>
-  

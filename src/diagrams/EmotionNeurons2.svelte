@@ -43,7 +43,7 @@ var hide_erotic=true;
 
 		{#each d3.range(5) as i}
 		<div>
-		<div class="figcaption" style="display: inline-block;  width: 140px; margin-right: 30px; {((neurons[i][1] == "erotic") && hide_erotic)? 'filter: blur(4px); pointer-events: none;' : ''}">
+		<div class="figcaption" style="display: inline-block;  width: 102px; margin-right: 30px; {((neurons[i][1] == "erotic") && hide_erotic)? 'filter: blur(4px); pointer-events: none;' : ''}">
 
 			<div style="margin-bottom: 5px">
 				<i>{neurons[i][1]}</i>
