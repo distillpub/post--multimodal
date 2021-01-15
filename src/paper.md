@@ -437,7 +437,7 @@ Faceted Feature Visualization
 </p>
 
 <p>
-    For the facets used in this paper, the <i>architecture</i>, <i>indoors</i> and <i>nature</i> facets use images from SUN397 <d-cite bibtex-key="xiao2010sun"></d-cite>, <i>pose</i> uses bounding boxes from VOC2012 <d-cite bibtex-key="everingham2010pascal"></d-cite>, and <i>face</i> uses a mixture of fairface <d-cite bibtex-key="karkkainen2019fairface"></d-cite> and Flickr-Faces-HQ  <d-cite bibtex-key="karras2019style"></d-cite>.
+    For the facets used in this paper, the <i>architecture</i>, <i>indoors</i> and <i>nature</i> facets use images from SUN397 <d-cite bibtex-key="xiao2010sun"></d-cite>, <i>pose</i> uses cropped images from VOC2012 <d-cite bibtex-key="everingham2010pascal"></d-cite>, and <i>face</i> uses a mixture of Fairface <d-cite bibtex-key="karkkainen2019fairface"></d-cite> and Flickr-Faces-HQ  <d-cite bibtex-key="karras2019style"></d-cite>.
 </p>
 
 <p>
