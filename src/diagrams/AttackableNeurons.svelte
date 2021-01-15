@@ -22,7 +22,9 @@
     },
   ];
 </script>
-<style>
+
+
+  <style>
   a.outer-neuron-container {
     display: block;
     border-bottom: none;
@@ -55,6 +57,8 @@
     .neuron-description {
       max-width: 150px;
       margin-top: -2px;
+      margin-bottom: 30px;
+      line-height: 15px;
     }
   }
   .dataset-example {
@@ -73,21 +77,49 @@
     height: 90px;
     grid-gap: 1px;
   }
-</style>
+  .dropdown {
+      opacity: 0;
+  }
 
-{#each neurons as neuron}
-<a class="outer-neuron-container" href="{microscope_url(neuron.neuron)}">
-<div class="neuron-container">
-  <img class="neuron-feature-viz" src="{facet_icon_url(neuron.neuron, neuron.facet)}" alt="" style="grid-row: 1; grid-column: 1;"/>
-  <div class="dataset-examples">
-    <img class="dataset-example" src="{neuron.ds_img_prefix}1.png" alt="" style="grid-row: 1; grid-column: 1;"/>
-    <img class="dataset-example" src="{neuron.ds_img_prefix}2.png" alt="" style="grid-row: 1; grid-column: 2;"/>
-    <img class="dataset-example" src="{neuron.ds_img_prefix}3.png" alt="" style="grid-row: 2; grid-column: 1;"/>
-    <img class="dataset-example" src="{neuron.ds_img_prefix}4.png" alt="" style="grid-row: 2; grid-column: 2;"/>
+  .dropdown:hover {
+      opacity: 0.8;
+  }
+  </style>
+  
+  {#each neurons as neuron}
+  <div class="outer-neuron-container">
+  <div class="neuron-container" style="position:relative">
+    <div class="dropdown" style="position: absolute; left: 3px; top:-3px; height: 90px"> 
+        <select style="width: 100%;" bind:value={neuron.facet}>
+          <option value="any">any</option>
+          <option value="text">text</option>
+          <option value="face">face</option>
+          <option value="arch">architecture</option>
+          <option value="indoor">indoor</option>
+          <option value="logo">logo</option>
+          <option value="nature">nature</option>
+          <option value="pose">pose</option>
+        </select>
+        <a href="{microscope_url(neuron.neuron)}">
+          <div style="height:80px">
+          </div>
+        </a>
+    </div>
+    <a class="neuron-feature-viz" href="{microscope_url(neuron.neuron)}">
+      <img class="neuron-feature-viz" src="{facet_icon_url(neuron.neuron, neuron.facet, neuron.strength || 5)}" alt="" style="grid-row: 1; grid-column: 1;"/>
+    </a>
+    <a href="{microscope_url(neuron.neuron)}">
+      <div class="dataset-examples">
+        <img class="dataset-example" src="{neuron.ds_img_prefix}1.png" alt="" style="grid-row: 1; grid-column: 1;"/>
+        <img class="dataset-example" src="{neuron.ds_img_prefix}2.png" alt="" style="grid-row: 2; grid-column: 1;"/>
+        <img class="dataset-example" src="{neuron.ds_img_prefix}3.png" alt="" style="grid-row: 1; grid-column: 2;"/>
+        <img class="dataset-example" src="{neuron.ds_img_prefix}4.png" alt="" style="grid-row: 2; grid-column: 2;"/>
+      </div>
+    </a>
+    </div>
   </div>
-</div>
-<div class="figcaption neuron-description">
-  {neuron.description}
-</div>
-</a>
-{/each}
+  <div class="figcaption neuron-description">
+    {@html neuron.description}
+  </div>
+  
+  {/each}

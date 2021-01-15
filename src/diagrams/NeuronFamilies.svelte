@@ -391,6 +391,7 @@ let other_families = [
                 <div class="dropdown" style="position: absolute; left: 3px; top:-3px; height: 500px"> 
                     <select style="width: 100%;" bind:value={neuron.facet}>
                       <option value="any">any</option>
+                      <option value="text">text</option>
                       <option value="face">face</option>
                       <option value="arch">architecture</option>
                       <option value="indoor">indoor</option>

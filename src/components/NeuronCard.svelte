@@ -61,6 +61,7 @@
         {#if selectable}
         <select style="width: 100%;" bind:value={current_facet}>
           <option value="any">any</option>
+          <option value="text">text</option>
           <option value="face">face</option>
           <option value="arch">architecture</option>
           <option value="indoor">indoor</option>
