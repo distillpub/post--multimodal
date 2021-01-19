@@ -209,6 +209,30 @@ export default class HumanLabels extends React.Component {
     'Trump Profile',
     */
 
+    const footnote = (
+      <d-footnote>
+        As we were labeling images for the conditional probability plot in
+        Figure 2 we were surprised that images related to black and gay rights
+        consistently caused strong negative activations. However, since there
+        were four images in that category, we decided to do a follow-up
+        experiment on more images.
+        <br />
+        <br />
+        We searched Google Images for the terms "black rights" and "gay rights"
+        and took ten top images for each term without looking at their
+        activations. Then we validated these images reliably cause the Trump
+        neuron to fire in the range of roughly negative ~3-6 standard deviations
+        from zero. The images that cause less strong negative activations near
+        -3 standard deviations tend to have broad symbols such as an image of
+        several black teenagers raising their arm and fist that causes a -2.5
+        standard deviations. Conversely, images of more easy to recognize and
+        specific symbols such as rainbow flags or photos of Martin Luther King
+        Jr consistently cause activations of at least -4 standard deviations. In
+        Figure 3 we also show activations related to photos of Martin Luther
+        King Jr.
+      </d-footnote>
+    )
+
     return (
       <figure className="fullscreen-diagram" id="figure-2">
         <Surface width={width} margin="auto">
@@ -330,10 +354,15 @@ export default class HumanLabels extends React.Component {
             images that cause it to fire different amounts and labeled them by
             hand into categories we created. This lets us estimate the
             conditional probability of a label at a given activation level. See{' '}
-            <a href="#conditional-probability">the appendix</a> for details.
-            <br /> We see that the higher activations of the Trump neuron are
-            highly selective, as more than 90% of the images with a standard
-            deviation greater than 30 are related to Donald Trump.
+            <a href="#conditional-probability">the appendix</a> for details. As
+            the black / LGBT category contains only a few images, since they
+            don't occur frequently in the dataset, we validated they cause
+            negative activations with a futher experiment{footnote}.
+            <br />
+            <br /> Across all categories, we see that higher activations of the
+            Trump neuron are highly selective, with more than 90% of the images
+            with a standard deviation greater than 30 are related to Donald
+            Trump.
           </figcaption>
         </Surface>
       </figure>
