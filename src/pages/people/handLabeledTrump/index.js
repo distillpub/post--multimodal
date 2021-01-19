@@ -360,7 +360,7 @@ export default class HumanLabels extends React.Component {
             negative activations with a futher experiment{footnote}.
             <br />
             <br /> Across all categories, we see that higher activations of the
-            Trump neuron are highly selective, with more than 90% of the images
+            Trump neuron are highly selective, as more than 90% of the images
             with a standard deviation greater than 30 are related to Donald
             Trump.
           </figcaption>

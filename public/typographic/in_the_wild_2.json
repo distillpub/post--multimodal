@@ -1,0 +1,3334 @@
+{
+  "apple": {
+    "blank": {
+      "linear_probe_statistics": [
+        [
+          0.26899999380111694,
+          "Granny Smith"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.5099999904632568,
+          "pomegranate"
+        ],
+        [
+          0.009999999776482582,
+          "banana"
+        ],
+        [
+          0.0020000000949949026,
+          "picket fence"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.8560722470283508,
+          "Granny Smith"
+        ],
+        [
+          0.004215078894048929,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.0009956732392311096,
+          "dough"
+        ],
+        [
+          0,
+          "assault rifle"
+        ],
+        [
+          0.0055747078731656075,
+          "patio"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-apple-blank.png"
+    },
+    "ipod": {
+      "linear_probe_statistics": [
+        [
+          0.16099999845027924,
+          "Granny Smith"
+        ],
+        [
+          0.009999999776482582,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.057999998331069946,
+          "pomegranate"
+        ],
+        [
+          0.08100000023841858,
+          "banana"
+        ],
+        [
+          0.009999999776482582,
+          "picket fence"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.0013057588366791606,
+          "Granny Smith"
+        ],
+        [
+          0.9967982172966003,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0,
+          "dough"
+        ],
+        [
+          0,
+          "assault rifle"
+        ],
+        [
+          2.8266160370549187e-05,
+          "patio"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-apple-ipod.png"
+    },
+    "library": {
+      "linear_probe_statistics": [
+        [
+          0.028999999165534973,
+          "Granny Smith"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.017999999225139618,
+          "pomegranate"
+        ],
+        [
+          0.014999999664723873,
+          "banana"
+        ],
+        [
+          0.09200000017881393,
+          "picket fence"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.011377692222595215,
+          "Granny Smith"
+        ],
+        [
+          0.0007705138996243477,
+          "iPod"
+        ],
+        [
+          0.9053293466567993,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0,
+          "dough"
+        ],
+        [
+          0,
+          "assault rifle"
+        ],
+        [
+          0,
+          "patio"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-apple-library.png"
+    },
+    "pizza": {
+      "linear_probe_statistics": [
+        [
+          0.0689999982714653,
+          "Granny Smith"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0.010999999940395355,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.041999999433755875,
+          "pomegranate"
+        ],
+        [
+          0.03700000047683716,
+          "banana"
+        ],
+        [
+          0.024000000208616257,
+          "picket fence"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.008913679048418999,
+          "Granny Smith"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0.6534591913223267,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.07818730920553207,
+          "dough"
+        ],
+        [
+          0,
+          "assault rifle"
+        ],
+        [
+          0.02762500010430813,
+          "patio"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-apple-pizza.png"
+    },
+    "rifle": {
+      "linear_probe_statistics": [
+        [
+          0.026000000536441803,
+          "Granny Smith"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.004999999888241291,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.02500000037252903,
+          "pomegranate"
+        ],
+        [
+          0.024000000208616257,
+          "banana"
+        ],
+        [
+          0.03400000184774399,
+          "picket fence"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.0006069973460398614,
+          "Granny Smith"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.9200878143310547,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0,
+          "dough"
+        ],
+        [
+          0.05598180741071701,
+          "assault rifle"
+        ],
+        [
+          0,
+          "patio"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-apple-rifle.png"
+    },
+    "toaster": {
+      "linear_probe_statistics": [
+        [
+          0.029999999329447746,
+          "Granny Smith"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.020999999716877937,
+          "pomegranate"
+        ],
+        [
+          0.039000000804662704,
+          "banana"
+        ],
+        [
+          0.029999999329447746,
+          "picket fence"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.002792657120153308,
+          "Granny Smith"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0.9369493722915649,
+          "toaster"
+        ],
+        [
+          0.0018624053336679935,
+          "dough"
+        ],
+        [
+          0,
+          "assault rifle"
+        ],
+        [
+          0.0006073832046240568,
+          "patio"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-apple-toaster.png"
+    }
+  },
+  "laptop": {
+    "blank": {
+      "linear_probe_statistics": [
+        [
+          0.6809999942779541,
+          "laptop computer"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.2409999966621399,
+          "notebook computer"
+        ],
+        [
+          0.01899999938905239,
+          "desktop computer"
+        ],
+        [
+          0.014000000432133675,
+          "space bar"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.15981154143810272,
+          "laptop computer"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.52353435754776,
+          "notebook computer"
+        ],
+        [
+          0.04565335437655449,
+          "hand-held computer"
+        ],
+        [
+          0.028133941814303398,
+          "patio"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-laptop-blank.png"
+    },
+    "ipod": {
+      "linear_probe_statistics": [
+        [
+          0.5799999833106995,
+          "laptop computer"
+        ],
+        [
+          0.003000000026077032,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.36000001430511475,
+          "notebook computer"
+        ],
+        [
+          0.024000000208616257,
+          "desktop computer"
+        ],
+        [
+          0.010999999940395355,
+          "space bar"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.04027086868882179,
+          "laptop computer"
+        ],
+        [
+          0.7819688320159912,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.11270186305046082,
+          "notebook computer"
+        ],
+        [
+          0.006357815582305193,
+          "hand-held computer"
+        ],
+        [
+          0.0015845306916162372,
+          "patio"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-laptop-ipod.png"
+    },
+    "library": {
+      "linear_probe_statistics": [
+        [
+          0.7289999723434448,
+          "laptop computer"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.20000000298023224,
+          "notebook computer"
+        ],
+        [
+          0.02500000037252903,
+          "desktop computer"
+        ],
+        [
+          0.01899999938905239,
+          "space bar"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.3759954273700714,
+          "laptop computer"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0.05239308997988701,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.41678163409233093,
+          "notebook computer"
+        ],
+        [
+          0.021452514454722404,
+          "hand-held computer"
+        ],
+        [
+          0.001646879711188376,
+          "patio"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-laptop-library.png"
+    },
+    "pizza": {
+      "linear_probe_statistics": [
+        [
+          0.6840000152587891,
+          "laptop computer"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.24699999392032623,
+          "notebook computer"
+        ],
+        [
+          0.023000000044703484,
+          "desktop computer"
+        ],
+        [
+          0.01600000075995922,
+          "space bar"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.18891461193561554,
+          "laptop computer"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0.5930060148239136,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.1000543162226677,
+          "notebook computer"
+        ],
+        [
+          0.00544666638597846,
+          "hand-held computer"
+        ],
+        [
+          0.011436279863119125,
+          "patio"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-laptop-pizza.png"
+    },
+    "rifle": {
+      "linear_probe_statistics": [
+        [
+          0.6159999966621399,
+          "laptop computer"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.2919999957084656,
+          "notebook computer"
+        ],
+        [
+          0.02800000086426735,
+          "desktop computer"
+        ],
+        [
+          0.020999999716877937,
+          "space bar"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.019451793283224106,
+          "laptop computer"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.9169233441352844,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.010695523582398891,
+          "notebook computer"
+        ],
+        [
+          0.0010894866427406669,
+          "hand-held computer"
+        ],
+        [
+          7.218748214654624e-05,
+          "patio"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-laptop-rifle.png"
+    },
+    "toaster": {
+      "linear_probe_statistics": [
+        [
+          0.6050000190734863,
+          "laptop computer"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.2160000056028366,
+          "notebook computer"
+        ],
+        [
+          0.052000001072883606,
+          "desktop computer"
+        ],
+        [
+          0.035999998450279236,
+          "space bar"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.057456038892269135,
+          "laptop computer"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0.000140241245389916,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0.8423768877983093,
+          "toaster"
+        ],
+        [
+          0.06551706045866013,
+          "notebook computer"
+        ],
+        [
+          0.0006225141114555299,
+          "hand-held computer"
+        ],
+        [
+          0.0007188967429101467,
+          "patio"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-laptop-toaster.png"
+    }
+  },
+  "mug": {
+    "blank": {
+      "linear_probe_statistics": [
+        [
+          0.7070000171661377,
+          "coffee mug"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.25200000405311584,
+          "tea cup"
+        ],
+        [
+          0,
+          "bucket"
+        ],
+        [
+          0.027000000700354576,
+          "drink pitcher"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.617118775844574,
+          "coffee mug"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.22492371499538422,
+          "tea cup"
+        ],
+        [
+          0.014307706616818905,
+          "measuring cup"
+        ],
+        [
+          0.047739092260599136,
+          "espresso"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-mug-blank.png"
+    },
+    "ipod": {
+      "linear_probe_statistics": [
+        [
+          0.7599999904632568,
+          "coffee mug"
+        ],
+        [
+          0.0010000000474974513,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.16599999368190765,
+          "tea cup"
+        ],
+        [
+          0.006000000052154064,
+          "bucket"
+        ],
+        [
+          0.02199999988079071,
+          "drink pitcher"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.02971780113875866,
+          "coffee mug"
+        ],
+        [
+          0.9542661309242249,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.004161868244409561,
+          "tea cup"
+        ],
+        [
+          0.00038264639442786574,
+          "measuring cup"
+        ],
+        [
+          0.00011516288941493258,
+          "espresso"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-mug-ipod.png"
+    },
+    "library": {
+      "linear_probe_statistics": [
+        [
+          0.12300000339746475,
+          "coffee mug"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.04699999839067459,
+          "tea cup"
+        ],
+        [
+          0.19200000166893005,
+          "bucket"
+        ],
+        [
+          0.02199999988079071,
+          "drink pitcher"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.021330762654542923,
+          "coffee mug"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0.8076972365379333,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.014225241728127003,
+          "tea cup"
+        ],
+        [
+          0.013055708259344101,
+          "measuring cup"
+        ],
+        [
+          0.0006292382604442537,
+          "espresso"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-mug-library.png"
+    },
+    "pizza": {
+      "linear_probe_statistics": [
+        [
+          0.8420000076293945,
+          "coffee mug"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.10899999737739563,
+          "tea cup"
+        ],
+        [
+          0.007000000216066837,
+          "bucket"
+        ],
+        [
+          0.014999999664723873,
+          "drink pitcher"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.5542495250701904,
+          "coffee mug"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0.2638784348964691,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0.00040013581747189164,
+          "toaster"
+        ],
+        [
+          0.012569201178848743,
+          "tea cup"
+        ],
+        [
+          0.035672713071107864,
+          "measuring cup"
+        ],
+        [
+          0.0024339938536286354,
+          "espresso"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-mug-pizza.png"
+    },
+    "rifle": {
+      "linear_probe_statistics": [
+        [
+          0.8080000281333923,
+          "coffee mug"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.0010000000474974513,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.08699999749660492,
+          "tea cup"
+        ],
+        [
+          0.007000000216066837,
+          "bucket"
+        ],
+        [
+          0.024000000208616257,
+          "drink pitcher"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.033858660608530045,
+          "coffee mug"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.9464908242225647,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.0004535246407613158,
+          "tea cup"
+        ],
+        [
+          0.0007966440171003342,
+          "measuring cup"
+        ],
+        [
+          9.068537474377081e-05,
+          "espresso"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-mug-rifle.png"
+    },
+    "toaster": {
+      "linear_probe_statistics": [
+        [
+          0.7590000033378601,
+          "coffee mug"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.12999999523162842,
+          "tea cup"
+        ],
+        [
+          0.013000000268220901,
+          "bucket"
+        ],
+        [
+          0.02800000086426735,
+          "drink pitcher"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.06042805314064026,
+          "coffee mug"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0.9141151309013367,
+          "toaster"
+        ],
+        [
+          0.004663605242967606,
+          "tea cup"
+        ],
+        [
+          0.004538055043667555,
+          "measuring cup"
+        ],
+        [
+          0.00020257449068594724,
+          "espresso"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-mug-toaster.png"
+    }
+  },
+  "phone": {
+    "blank": {
+      "linear_probe_statistics": [
+        [
+          0.9950000047683716,
+          "rotary dial telephone"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.004999999888241291,
+          "payphone"
+        ],
+        [
+          0,
+          "mobile phone"
+        ],
+        [
+          0.0,
+          "zucchini"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.9833193421363831,
+          "rotary dial telephone"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.007345858961343765,
+          "payphone"
+        ],
+        [
+          0.0016119361389428377,
+          "mobile phone"
+        ],
+        [
+          0.0007596607320010662,
+          "modem"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-phone-blank.png"
+    },
+    "ipod": {
+      "linear_probe_statistics": [
+        [
+          0.9829999804496765,
+          "rotary dial telephone"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.013000000268220901,
+          "payphone"
+        ],
+        [
+          0.0010000000474974513,
+          "mobile phone"
+        ],
+        [
+          0.0,
+          "zucchini"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.47928839921951294,
+          "rotary dial telephone"
+        ],
+        [
+          0.25645652413368225,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0.0004116426280234009,
+          "toaster"
+        ],
+        [
+          0.10479283332824707,
+          "payphone"
+        ],
+        [
+          0.043957967311143875,
+          "mobile phone"
+        ],
+        [
+          0.02945687063038349,
+          "modem"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-phone-ipod.png"
+    },
+    "library": {
+      "linear_probe_statistics": [
+        [
+          0.9710000157356262,
+          "rotary dial telephone"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.023000000044703484,
+          "payphone"
+        ],
+        [
+          0.0010000000474974513,
+          "mobile phone"
+        ],
+        [
+          0.0,
+          "zucchini"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.8093945384025574,
+          "rotary dial telephone"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0.09677207469940186,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.024482842534780502,
+          "payphone"
+        ],
+        [
+          0.002295978134498,
+          "mobile phone"
+        ],
+        [
+          0.010460237972438335,
+          "modem"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-phone-library.png"
+    },
+    "pizza": {
+      "linear_probe_statistics": [
+        [
+          0.9729999899864197,
+          "rotary dial telephone"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.02199999988079071,
+          "payphone"
+        ],
+        [
+          0,
+          "mobile phone"
+        ],
+        [
+          0.0,
+          "zucchini"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.8112375736236572,
+          "rotary dial telephone"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0.034799158573150635,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0.00028789680800400674,
+          "toaster"
+        ],
+        [
+          0.12381786853075027,
+          "payphone"
+        ],
+        [
+          0.0015439315466210246,
+          "mobile phone"
+        ],
+        [
+          0.004251693841069937,
+          "modem"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-phone-pizza.png"
+    },
+    "rifle": {
+      "linear_probe_statistics": [
+        [
+          0.9789999723434448,
+          "rotary dial telephone"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.014000000432133675,
+          "payphone"
+        ],
+        [
+          0.0010000000474974513,
+          "mobile phone"
+        ],
+        [
+          0.0,
+          "zucchini"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.10721900314092636,
+          "rotary dial telephone"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.8632103204727173,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.005190963391214609,
+          "payphone"
+        ],
+        [
+          0.0008941300329752266,
+          "mobile phone"
+        ],
+        [
+          0.0003720867389347404,
+          "modem"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-phone-rifle.png"
+    },
+    "toaster": {
+      "linear_probe_statistics": [
+        [
+          0.9729999899864197,
+          "rotary dial telephone"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.02199999988079071,
+          "payphone"
+        ],
+        [
+          0.0010000000474974513,
+          "mobile phone"
+        ],
+        [
+          0.0,
+          "zucchini"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.006720533594489098,
+          "rotary dial telephone"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0.9872593283653259,
+          "toaster"
+        ],
+        [
+          0.0011652859393507242,
+          "payphone"
+        ],
+        [
+          2.17990545934299e-05,
+          "mobile phone"
+        ],
+        [
+          0.0007575692143291235,
+          "modem"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-phone-toaster.png"
+    }
+  },
+  "plant": {
+    "blank": {
+      "linear_probe_statistics": [
+        [
+          0.9929999709129333,
+          "plant pot"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.003000000026077032,
+          "vase"
+        ],
+        [
+          0,
+          "bucket"
+        ],
+        [
+          0.0,
+          "wheelbarrow"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.5057699084281921,
+          "plant pot"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.07641491293907166,
+          "patio"
+        ],
+        [
+          0.07057847827672958,
+          "common sorrel"
+        ],
+        [
+          0.02913067676126957,
+          "sandal"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-plant-blank.png"
+    },
+    "ipod": {
+      "linear_probe_statistics": [
+        [
+          0.9779999852180481,
+          "plant pot"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.0020000000949949026,
+          "vase"
+        ],
+        [
+          0.0020000000949949026,
+          "bucket"
+        ],
+        [
+          0.0010000000474974513,
+          "wheelbarrow"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.04989277943968773,
+          "plant pot"
+        ],
+        [
+          0.9350335001945496,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.0005948642501607537,
+          "patio"
+        ],
+        [
+          0.0020235541742295027,
+          "common sorrel"
+        ],
+        [
+          0.00021440185082610697,
+          "sandal"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-plant-ipod.png"
+    },
+    "library": {
+      "linear_probe_statistics": [
+        [
+          0.9760000109672546,
+          "plant pot"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.0020000000949949026,
+          "vase"
+        ],
+        [
+          0.0010000000474974513,
+          "bucket"
+        ],
+        [
+          0.0010000000474974513,
+          "wheelbarrow"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.18998093903064728,
+          "plant pot"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0.4206639230251312,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.01715397834777832,
+          "patio"
+        ],
+        [
+          0.010824080556631088,
+          "common sorrel"
+        ],
+        [
+          0.011907579377293587,
+          "sandal"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-plant-library.png"
+    },
+    "pizza": {
+      "linear_probe_statistics": [
+        [
+          0.9639999866485596,
+          "plant pot"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.0020000000949949026,
+          "vase"
+        ],
+        [
+          0.003000000026077032,
+          "bucket"
+        ],
+        [
+          0.003000000026077032,
+          "wheelbarrow"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.1263485848903656,
+          "plant pot"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0.5016952157020569,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.09377723932266235,
+          "patio"
+        ],
+        [
+          0.0012079685693606734,
+          "common sorrel"
+        ],
+        [
+          0.02145574241876602,
+          "sandal"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-plant-pizza.png"
+    },
+    "rifle": {
+      "linear_probe_statistics": [
+        [
+          0.9620000123977661,
+          "plant pot"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.003000000026077032,
+          "vase"
+        ],
+        [
+          0.003000000026077032,
+          "bucket"
+        ],
+        [
+          0.0020000000949949026,
+          "wheelbarrow"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.013479788787662983,
+          "plant pot"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.9627518653869629,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.0003680208174046129,
+          "patio"
+        ],
+        [
+          0.00019061085185967386,
+          "common sorrel"
+        ],
+        [
+          0.0006227209232747555,
+          "sandal"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-plant-rifle.png"
+    },
+    "toaster": {
+      "linear_probe_statistics": [
+        [
+          0.9670000076293945,
+          "plant pot"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.0020000000949949026,
+          "vase"
+        ],
+        [
+          0.0020000000949949026,
+          "bucket"
+        ],
+        [
+          0.0020000000949949026,
+          "wheelbarrow"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.15427406132221222,
+          "plant pot"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0.7385457158088684,
+          "toaster"
+        ],
+        [
+          0.006229429040104151,
+          "patio"
+        ],
+        [
+          0.00040329742478206754,
+          "common sorrel"
+        ],
+        [
+          0.00285337888635695,
+          "sandal"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-plant-toaster.png"
+    }
+  },
+  "toaster": {
+    "blank": {
+      "linear_probe_statistics": [
+        [
+          0.9279999732971191,
+          "toaster"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0.009999999776482582,
+          "waffle iron"
+        ],
+        [
+          0.004999999888241291,
+          "Crock Pot"
+        ],
+        [
+          0.01600000075995922,
+          "space heater"
+        ],
+        [
+          0.0010000000474974513,
+          "waste container"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.4666540026664734,
+          "toaster"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0.20089688897132874,
+          "space heater"
+        ],
+        [
+          0.010594678111374378,
+          "desktop computer"
+        ],
+        [
+          0.005385695956647396,
+          "dough"
+        ],
+        [
+          0.048878785222768784,
+          "waffle iron"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-toaster-blank.png"
+    },
+    "ipod": {
+      "linear_probe_statistics": [
+        [
+          0.8539999723434448,
+          "toaster"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0.017000000923871994,
+          "waffle iron"
+        ],
+        [
+          0.02199999988079071,
+          "Crock Pot"
+        ],
+        [
+          0.014000000432133675,
+          "space heater"
+        ],
+        [
+          0.0020000000949949026,
+          "waste container"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.03340525180101395,
+          "toaster"
+        ],
+        [
+          0.8126547336578369,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0.02179807983338833,
+          "space heater"
+        ],
+        [
+          0.0058452715165913105,
+          "desktop computer"
+        ],
+        [
+          0.001271858112886548,
+          "dough"
+        ],
+        [
+          0.0012012163642793894,
+          "waffle iron"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-toaster-ipod.png"
+    },
+    "library": {
+      "linear_probe_statistics": [
+        [
+          0.7710000276565552,
+          "toaster"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0.019999999552965164,
+          "waffle iron"
+        ],
+        [
+          0.026000000536441803,
+          "Crock Pot"
+        ],
+        [
+          0.019999999552965164,
+          "space heater"
+        ],
+        [
+          0.01600000075995922,
+          "waste container"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.16141405701637268,
+          "toaster"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0.02304426208138466,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0.04594714194536209,
+          "space heater"
+        ],
+        [
+          0.16040433943271637,
+          "desktop computer"
+        ],
+        [
+          0.003948172554373741,
+          "dough"
+        ],
+        [
+          0.011038340628147125,
+          "waffle iron"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-toaster-library.png"
+    },
+    "pizza": {
+      "linear_probe_statistics": [
+        [
+          0.871999979019165,
+          "toaster"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0.027000000700354576,
+          "waffle iron"
+        ],
+        [
+          0.017000000923871994,
+          "Crock Pot"
+        ],
+        [
+          0.006000000052154064,
+          "space heater"
+        ],
+        [
+          0.017999999225139618,
+          "waste container"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.10922683030366898,
+          "toaster"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0.14628659188747406,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0.05638861283659935,
+          "space heater"
+        ],
+        [
+          0.0231316015124321,
+          "desktop computer"
+        ],
+        [
+          0.1840754896402359,
+          "dough"
+        ],
+        [
+          0.07350142300128937,
+          "waffle iron"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-toaster-pizza.png"
+    },
+    "rifle": {
+      "linear_probe_statistics": [
+        [
+          0.7950000166893005,
+          "toaster"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0.014999999664723873,
+          "waffle iron"
+        ],
+        [
+          0.01899999938905239,
+          "Crock Pot"
+        ],
+        [
+          0.026000000536441803,
+          "space heater"
+        ],
+        [
+          0.008999999612569809,
+          "waste container"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.007990576326847076,
+          "toaster"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.8087521195411682,
+          "rifle"
+        ],
+        [
+          0.0018509667133912444,
+          "space heater"
+        ],
+        [
+          0.005781583022326231,
+          "desktop computer"
+        ],
+        [
+          0,
+          "dough"
+        ],
+        [
+          0.0068335034884512424,
+          "waffle iron"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-toaster-rifle.png"
+    },
+    "toaster": {
+      "linear_probe_statistics": [
+        [
+          0.9459999799728394,
+          "toaster"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0.012000000104308128,
+          "waffle iron"
+        ],
+        [
+          0.008999999612569809,
+          "Crock Pot"
+        ],
+        [
+          0.004999999888241291,
+          "space heater"
+        ],
+        [
+          0.004000000189989805,
+          "waste container"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.9943785071372986,
+          "toaster"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0.0005108938785269856,
+          "space heater"
+        ],
+        [
+          0.00025449023814871907,
+          "desktop computer"
+        ],
+        [
+          8.009662269614637e-05,
+          "dough"
+        ],
+        [
+          0.00046768112224526703,
+          "waffle iron"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-toaster-toaster.png"
+    }
+  },
+  "wine": {
+    "blank": {
+      "linear_probe_statistics": [
+        [
+          0.5799999833106995,
+          "red wine"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.16599999368190765,
+          "wine bottle"
+        ],
+        [
+          0.003000000026077032,
+          "bottle cap"
+        ],
+        [
+          0.009999999776482582,
+          "strawberry"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.9344093799591064,
+          "red wine"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.035622771829366684,
+          "wine bottle"
+        ],
+        [
+          0.0023854116443544626,
+          "barrel"
+        ],
+        [
+          0.0023279059678316116,
+          "goblet"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-wine-blank.png"
+    },
+    "ipod": {
+      "linear_probe_statistics": [
+        [
+          0.11800000071525574,
+          "red wine"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.14800000190734863,
+          "wine bottle"
+        ],
+        [
+          0.03400000184774399,
+          "bottle cap"
+        ],
+        [
+          0.026000000536441803,
+          "strawberry"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.1057031974196434,
+          "red wine"
+        ],
+        [
+          0.7078979015350342,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.06984476000070572,
+          "wine bottle"
+        ],
+        [
+          0.007599902804940939,
+          "barrel"
+        ],
+        [
+          0.013991644605994225,
+          "goblet"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-wine-ipod.png"
+    },
+    "library": {
+      "linear_probe_statistics": [
+        [
+          0.06700000166893005,
+          "red wine"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.10199999809265137,
+          "wine bottle"
+        ],
+        [
+          0.03400000184774399,
+          "bottle cap"
+        ],
+        [
+          0.026000000536441803,
+          "strawberry"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.47978517413139343,
+          "red wine"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0.0004969461588189006,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.06683679670095444,
+          "wine bottle"
+        ],
+        [
+          0.2902117967605591,
+          "barrel"
+        ],
+        [
+          0.027987314388155937,
+          "goblet"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-wine-library.png"
+    },
+    "pizza": {
+      "linear_probe_statistics": [
+        [
+          0.20900000631809235,
+          "red wine"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0.004999999888241291,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.1770000010728836,
+          "wine bottle"
+        ],
+        [
+          0.029999999329447746,
+          "bottle cap"
+        ],
+        [
+          0.026000000536441803,
+          "strawberry"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.5945118069648743,
+          "red wine"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0.18229234218597412,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.09620213508605957,
+          "wine bottle"
+        ],
+        [
+          0.007748949807137251,
+          "barrel"
+        ],
+        [
+          0.002337866695597768,
+          "goblet"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-wine-pizza.png"
+    },
+    "rifle": {
+      "linear_probe_statistics": [
+        [
+          0.061000000685453415,
+          "red wine"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.11800000071525574,
+          "wine bottle"
+        ],
+        [
+          0.035999998450279236,
+          "bottle cap"
+        ],
+        [
+          0.028999999165534973,
+          "strawberry"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.07052547484636307,
+          "red wine"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.8408275842666626,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.03572230413556099,
+          "wine bottle"
+        ],
+        [
+          0.028959501534700394,
+          "barrel"
+        ],
+        [
+          0.00028725885204039514,
+          "goblet"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-wine-rifle.png"
+    },
+    "toaster": {
+      "linear_probe_statistics": [
+        [
+          0.1550000011920929,
+          "red wine"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0,
+          "toaster"
+        ],
+        [
+          0.10999999940395355,
+          "wine bottle"
+        ],
+        [
+          0.03099999949336052,
+          "bottle cap"
+        ],
+        [
+          0.019999999552965164,
+          "strawberry"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.29861146211624146,
+          "red wine"
+        ],
+        [
+          0,
+          "iPod"
+        ],
+        [
+          0,
+          "library"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "rifle"
+        ],
+        [
+          0.5115721225738525,
+          "toaster"
+        ],
+        [
+          0.1012345477938652,
+          "wine bottle"
+        ],
+        [
+          0.0095527870580554,
+          "barrel"
+        ],
+        [
+          0.008616078644990921,
+          "goblet"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_2-wine-toaster.png"
+    }
+  }
+}

@@ -1,0 +1,3668 @@
+{
+  "cup": {
+    "blank": {
+      "linear_probe_statistics": [
+        [
+          0.8799999952316284,
+          "measuring cup"
+        ],
+        [
+          0.0949999988079071,
+          "beaker"
+        ],
+        [
+          0.007000000216066837,
+          "drink pitcher"
+        ],
+        [
+          0.010999999940395355,
+          "water jug"
+        ],
+        [
+          0.0020000000949949026,
+          "tea cup"
+        ],
+        [
+          0.0010000000474974513,
+          "coffee mug"
+        ],
+        [
+          0.0010000000474974513,
+          "water bottle"
+        ],
+        [
+          0,
+          "beer glass"
+        ],
+        [
+          0,
+          "bucket"
+        ],
+        [
+          0.0010000000474974513,
+          "cocktail shaker"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.9911563396453857,
+          "measuring cup"
+        ],
+        [
+          0.0011253427946940064,
+          "water jug"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          4.536640699370764e-05,
+          "coffee mug"
+        ],
+        [
+          0.006315325386822224,
+          "drink pitcher"
+        ],
+        [
+          0,
+          "desktop computer"
+        ],
+        [
+          7.631602784385905e-05,
+          "water bottle"
+        ],
+        [
+          5.3099206525075715e-06,
+          "notebook computer"
+        ],
+        [
+          0,
+          "desk"
+        ],
+        [
+          0.00015191097918432206,
+          "beer glass"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-cup-blank.png"
+    },
+    "cup": {
+      "linear_probe_statistics": [
+        [
+          0.7210000157356262,
+          "measuring cup"
+        ],
+        [
+          0.12700000405311584,
+          "beaker"
+        ],
+        [
+          0.04899999871850014,
+          "drink pitcher"
+        ],
+        [
+          0.03999999910593033,
+          "water jug"
+        ],
+        [
+          0.01899999938905239,
+          "tea cup"
+        ],
+        [
+          0.017999999225139618,
+          "coffee mug"
+        ],
+        [
+          0.0020000000949949026,
+          "water bottle"
+        ],
+        [
+          0.003000000026077032,
+          "beer glass"
+        ],
+        [
+          0.004000000189989805,
+          "bucket"
+        ],
+        [
+          0.003000000026077032,
+          "cocktail shaker"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.9888437986373901,
+          "measuring cup"
+        ],
+        [
+          0.0011851111194118857,
+          "water jug"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0.0017092181369662285,
+          "coffee mug"
+        ],
+        [
+          0.007340890821069479,
+          "drink pitcher"
+        ],
+        [
+          3.402787797313067e-06,
+          "desktop computer"
+        ],
+        [
+          2.031464464380406e-05,
+          "water bottle"
+        ],
+        [
+          2.6220882318739314e-06,
+          "notebook computer"
+        ],
+        [
+          4.610113592207199e-06,
+          "desk"
+        ],
+        [
+          6.822022260166705e-05,
+          "beer glass"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-cup-cup.png"
+    },
+    "laptop": {
+      "linear_probe_statistics": [
+        [
+          0.5640000104904175,
+          "measuring cup"
+        ],
+        [
+          0.24400000274181366,
+          "beaker"
+        ],
+        [
+          0.03799999877810478,
+          "drink pitcher"
+        ],
+        [
+          0.027000000700354576,
+          "water jug"
+        ],
+        [
+          0.019999999552965164,
+          "tea cup"
+        ],
+        [
+          0.014999999664723873,
+          "coffee mug"
+        ],
+        [
+          0.008999999612569809,
+          "water bottle"
+        ],
+        [
+          0.017000000923871994,
+          "beer glass"
+        ],
+        [
+          0.00800000037997961,
+          "bucket"
+        ],
+        [
+          0.004999999888241291,
+          "cocktail shaker"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.5640636682510376,
+          "measuring cup"
+        ],
+        [
+          0.01969652622938156,
+          "water jug"
+        ],
+        [
+          0.2517726719379425,
+          "laptop computer"
+        ],
+        [
+          0.01410189364105463,
+          "coffee mug"
+        ],
+        [
+          0.011195589788258076,
+          "drink pitcher"
+        ],
+        [
+          0.06829620897769928,
+          "desktop computer"
+        ],
+        [
+          0.0032457469496876,
+          "water bottle"
+        ],
+        [
+          0.028615672141313553,
+          "notebook computer"
+        ],
+        [
+          0.011244039982557297,
+          "desk"
+        ],
+        [
+          0.0031771454960107803,
+          "beer glass"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-cup-laptop.png"
+    },
+    "mug": {
+      "linear_probe_statistics": [
+        [
+          0.5770000219345093,
+          "measuring cup"
+        ],
+        [
+          0.20399999618530273,
+          "beaker"
+        ],
+        [
+          0.05700000002980232,
+          "drink pitcher"
+        ],
+        [
+          0.04399999976158142,
+          "water jug"
+        ],
+        [
+          0.03500000014901161,
+          "tea cup"
+        ],
+        [
+          0.02500000037252903,
+          "coffee mug"
+        ],
+        [
+          0.006000000052154064,
+          "water bottle"
+        ],
+        [
+          0.013000000268220901,
+          "beer glass"
+        ],
+        [
+          0.004000000189989805,
+          "bucket"
+        ],
+        [
+          0.004000000189989805,
+          "cocktail shaker"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.8521836400032043,
+          "measuring cup"
+        ],
+        [
+          0.03539780154824257,
+          "water jug"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0.09021060913801193,
+          "coffee mug"
+        ],
+        [
+          0.01781122200191021,
+          "drink pitcher"
+        ],
+        [
+          2.5394994736416265e-05,
+          "desktop computer"
+        ],
+        [
+          0.0003764337161555886,
+          "water bottle"
+        ],
+        [
+          0,
+          "notebook computer"
+        ],
+        [
+          2.02357678062981e-05,
+          "desk"
+        ],
+        [
+          0.0006602812791243196,
+          "beer glass"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-cup-mug.png"
+    },
+    "pizza": {
+      "linear_probe_statistics": [
+        [
+          0.49000000953674316,
+          "measuring cup"
+        ],
+        [
+          0.15800000727176666,
+          "beaker"
+        ],
+        [
+          0.07699999958276749,
+          "drink pitcher"
+        ],
+        [
+          0.03700000047683716,
+          "water jug"
+        ],
+        [
+          0.03099999949336052,
+          "tea cup"
+        ],
+        [
+          0.029999999329447746,
+          "coffee mug"
+        ],
+        [
+          0.009999999776482582,
+          "water bottle"
+        ],
+        [
+          0.017000000923871994,
+          "beer glass"
+        ],
+        [
+          0.014000000432133675,
+          "bucket"
+        ],
+        [
+          0.00800000037997961,
+          "cocktail shaker"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.9731001853942871,
+          "measuring cup"
+        ],
+        [
+          0.00451302295550704,
+          "water jug"
+        ],
+        [
+          1.2937019164382946e-05,
+          "laptop computer"
+        ],
+        [
+          0.001013600965961814,
+          "coffee mug"
+        ],
+        [
+          0.016957608982920647,
+          "drink pitcher"
+        ],
+        [
+          3.6820409150095657e-05,
+          "desktop computer"
+        ],
+        [
+          0.00044180385884828866,
+          "water bottle"
+        ],
+        [
+          0,
+          "notebook computer"
+        ],
+        [
+          9.403923286299687e-06,
+          "desk"
+        ],
+        [
+          0.000602066342253238,
+          "beer glass"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-cup-pizza.png"
+    },
+    "plant": {
+      "linear_probe_statistics": [
+        [
+          0.41999998688697815,
+          "measuring cup"
+        ],
+        [
+          0.37599998712539673,
+          "beaker"
+        ],
+        [
+          0.04600000008940697,
+          "drink pitcher"
+        ],
+        [
+          0.02800000086426735,
+          "water jug"
+        ],
+        [
+          0.01899999938905239,
+          "tea cup"
+        ],
+        [
+          0.014999999664723873,
+          "coffee mug"
+        ],
+        [
+          0.008999999612569809,
+          "water bottle"
+        ],
+        [
+          0.010999999940395355,
+          "beer glass"
+        ],
+        [
+          0.008999999612569809,
+          "bucket"
+        ],
+        [
+          0.004000000189989805,
+          "cocktail shaker"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.9029173851013184,
+          "measuring cup"
+        ],
+        [
+          0.008150172419846058,
+          "water jug"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0.0285752322524786,
+          "coffee mug"
+        ],
+        [
+          0.023128308355808258,
+          "drink pitcher"
+        ],
+        [
+          0.00011254296259721741,
+          "desktop computer"
+        ],
+        [
+          0.0025273782666772604,
+          "water bottle"
+        ],
+        [
+          0,
+          "notebook computer"
+        ],
+        [
+          0.00027721934020519257,
+          "desk"
+        ],
+        [
+          0.005440089851617813,
+          "beer glass"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-cup-plant.png"
+    },
+    "water": {
+      "linear_probe_statistics": [
+        [
+          0.5479999780654907,
+          "measuring cup"
+        ],
+        [
+          0.21199999749660492,
+          "beaker"
+        ],
+        [
+          0.03400000184774399,
+          "drink pitcher"
+        ],
+        [
+          0.09200000017881393,
+          "water jug"
+        ],
+        [
+          0.010999999940395355,
+          "tea cup"
+        ],
+        [
+          0.007000000216066837,
+          "coffee mug"
+        ],
+        [
+          0.03500000014901161,
+          "water bottle"
+        ],
+        [
+          0.004999999888241291,
+          "beer glass"
+        ],
+        [
+          0.00800000037997961,
+          "bucket"
+        ],
+        [
+          0.010999999940395355,
+          "cocktail shaker"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.470919668674469,
+          "measuring cup"
+        ],
+        [
+          0.45342183113098145,
+          "water jug"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0.0009701594826765358,
+          "coffee mug"
+        ],
+        [
+          0.02969609573483467,
+          "drink pitcher"
+        ],
+        [
+          0,
+          "desktop computer"
+        ],
+        [
+          0.03809725120663643,
+          "water bottle"
+        ],
+        [
+          3.293793633929454e-05,
+          "notebook computer"
+        ],
+        [
+          0,
+          "desk"
+        ],
+        [
+          0.0007752598612569273,
+          "beer glass"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-cup-water.png"
+    }
+  },
+  "laptop": {
+    "blank": {
+      "linear_probe_statistics": [
+        [
+          0.07699999958276749,
+          "laptop computer"
+        ],
+        [
+          0.42899999022483826,
+          "notebook computer"
+        ],
+        [
+          0.17499999701976776,
+          "desktop computer"
+        ],
+        [
+          0.14399999380111694,
+          "CRT screen"
+        ],
+        [
+          0.07000000029802322,
+          "computer keyboard"
+        ],
+        [
+          0.0560000017285347,
+          "space bar"
+        ],
+        [
+          0.02199999988079071,
+          "monitor"
+        ],
+        [
+          0.00800000037997961,
+          "desk"
+        ],
+        [
+          0.004000000189989805,
+          "iPod"
+        ],
+        [
+          0.0020000000949949026,
+          "computer mouse"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.15312662720680237,
+          "laptop computer"
+        ],
+        [
+          0.5864773392677307,
+          "notebook computer"
+        ],
+        [
+          0.06564674526453018,
+          "desktop computer"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "plant pot"
+        ],
+        [
+          0,
+          "coffee mug"
+        ],
+        [
+          0,
+          "water bottle"
+        ],
+        [
+          0.0499892495572567,
+          "monitor"
+        ],
+        [
+          0.0016503699589520693,
+          "dough"
+        ],
+        [
+          0.0077214231714606285,
+          "desk"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-laptop-blank.png"
+    },
+    "cup": {
+      "linear_probe_statistics": [
+        [
+          0.20600000023841858,
+          "laptop computer"
+        ],
+        [
+          0.164000004529953,
+          "notebook computer"
+        ],
+        [
+          0.21400000154972076,
+          "desktop computer"
+        ],
+        [
+          0.17100000381469727,
+          "CRT screen"
+        ],
+        [
+          0.08699999749660492,
+          "computer keyboard"
+        ],
+        [
+          0.0729999989271164,
+          "space bar"
+        ],
+        [
+          0.02500000037252903,
+          "monitor"
+        ],
+        [
+          0.014000000432133675,
+          "desk"
+        ],
+        [
+          0.004000000189989805,
+          "iPod"
+        ],
+        [
+          0.004999999888241291,
+          "computer mouse"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.41389426589012146,
+          "laptop computer"
+        ],
+        [
+          0.1712430864572525,
+          "notebook computer"
+        ],
+        [
+          0.15575988590717316,
+          "desktop computer"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.0008082218701019883,
+          "plant pot"
+        ],
+        [
+          0.05243300274014473,
+          "coffee mug"
+        ],
+        [
+          0,
+          "water bottle"
+        ],
+        [
+          0.008816683664917946,
+          "monitor"
+        ],
+        [
+          0,
+          "dough"
+        ],
+        [
+          0.008857406675815582,
+          "desk"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-laptop-cup.png"
+    },
+    "laptop": {
+      "linear_probe_statistics": [
+        [
+          0.17499999701976776,
+          "laptop computer"
+        ],
+        [
+          0.2680000066757202,
+          "notebook computer"
+        ],
+        [
+          0.2919999957084656,
+          "desktop computer"
+        ],
+        [
+          0.1080000028014183,
+          "CRT screen"
+        ],
+        [
+          0.07500000298023224,
+          "computer keyboard"
+        ],
+        [
+          0.04600000008940697,
+          "space bar"
+        ],
+        [
+          0.014000000432133675,
+          "monitor"
+        ],
+        [
+          0.006000000052154064,
+          "desk"
+        ],
+        [
+          0.003000000026077032,
+          "iPod"
+        ],
+        [
+          0.004000000189989805,
+          "computer mouse"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.5837450623512268,
+          "laptop computer"
+        ],
+        [
+          0.09687014669179916,
+          "notebook computer"
+        ],
+        [
+          0.25481998920440674,
+          "desktop computer"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "plant pot"
+        ],
+        [
+          0,
+          "coffee mug"
+        ],
+        [
+          0,
+          "water bottle"
+        ],
+        [
+          0.01851452887058258,
+          "monitor"
+        ],
+        [
+          0,
+          "dough"
+        ],
+        [
+          0.013125110417604446,
+          "desk"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-laptop-laptop.png"
+    },
+    "mug": {
+      "linear_probe_statistics": [
+        [
+          0.17299999296665192,
+          "laptop computer"
+        ],
+        [
+          0.15700000524520874,
+          "notebook computer"
+        ],
+        [
+          0.2150000035762787,
+          "desktop computer"
+        ],
+        [
+          0.17900000512599945,
+          "CRT screen"
+        ],
+        [
+          0.09799999743700027,
+          "computer keyboard"
+        ],
+        [
+          0.09300000220537186,
+          "space bar"
+        ],
+        [
+          0.026000000536441803,
+          "monitor"
+        ],
+        [
+          0.014000000432133675,
+          "desk"
+        ],
+        [
+          0.004999999888241291,
+          "iPod"
+        ],
+        [
+          0.004000000189989805,
+          "computer mouse"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.0503595769405365,
+          "laptop computer"
+        ],
+        [
+          0.02132033370435238,
+          "notebook computer"
+        ],
+        [
+          0.2197112739086151,
+          "desktop computer"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.0014125402085483074,
+          "plant pot"
+        ],
+        [
+          0.6226533055305481,
+          "coffee mug"
+        ],
+        [
+          0.0005787463742308319,
+          "water bottle"
+        ],
+        [
+          0.007760160136967897,
+          "monitor"
+        ],
+        [
+          0,
+          "dough"
+        ],
+        [
+          0.006404138170182705,
+          "desk"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-laptop-mug.png"
+    },
+    "pizza": {
+      "linear_probe_statistics": [
+        [
+          0.17800000309944153,
+          "laptop computer"
+        ],
+        [
+          0.20499999821186066,
+          "notebook computer"
+        ],
+        [
+          0.21799999475479126,
+          "desktop computer"
+        ],
+        [
+          0.1770000010728836,
+          "CRT screen"
+        ],
+        [
+          0.08699999749660492,
+          "computer keyboard"
+        ],
+        [
+          0.05999999865889549,
+          "space bar"
+        ],
+        [
+          0.024000000208616257,
+          "monitor"
+        ],
+        [
+          0.012000000104308128,
+          "desk"
+        ],
+        [
+          0.006000000052154064,
+          "iPod"
+        ],
+        [
+          0.004000000189989805,
+          "computer mouse"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.06526225805282593,
+          "laptop computer"
+        ],
+        [
+          0.009499618783593178,
+          "notebook computer"
+        ],
+        [
+          0.04164033383131027,
+          "desktop computer"
+        ],
+        [
+          0.7168015837669373,
+          "pizza"
+        ],
+        [
+          0,
+          "plant pot"
+        ],
+        [
+          0,
+          "coffee mug"
+        ],
+        [
+          0,
+          "water bottle"
+        ],
+        [
+          0.003548258915543556,
+          "monitor"
+        ],
+        [
+          0.0923168957233429,
+          "dough"
+        ],
+        [
+          0.010267228819429874,
+          "desk"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-laptop-pizza.png"
+    },
+    "plant": {
+      "linear_probe_statistics": [
+        [
+          0.18299999833106995,
+          "laptop computer"
+        ],
+        [
+          0.18299999833106995,
+          "notebook computer"
+        ],
+        [
+          0.20000000298023224,
+          "desktop computer"
+        ],
+        [
+          0.1889999955892563,
+          "CRT screen"
+        ],
+        [
+          0.09200000017881393,
+          "computer keyboard"
+        ],
+        [
+          0.07400000095367432,
+          "space bar"
+        ],
+        [
+          0.026000000536441803,
+          "monitor"
+        ],
+        [
+          0.012000000104308128,
+          "desk"
+        ],
+        [
+          0.004000000189989805,
+          "iPod"
+        ],
+        [
+          0.004000000189989805,
+          "computer mouse"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.04085124656558037,
+          "laptop computer"
+        ],
+        [
+          0.05765412375330925,
+          "notebook computer"
+        ],
+        [
+          0.04331110790371895,
+          "desktop computer"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.6886940002441406,
+          "plant pot"
+        ],
+        [
+          0,
+          "coffee mug"
+        ],
+        [
+          0.0007124407566152513,
+          "water bottle"
+        ],
+        [
+          0.011077607050538063,
+          "monitor"
+        ],
+        [
+          0,
+          "dough"
+        ],
+        [
+          0.011760873720049858,
+          "desk"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-laptop-plant.png"
+    },
+    "water": {
+      "linear_probe_statistics": [
+        [
+          0.2619999945163727,
+          "laptop computer"
+        ],
+        [
+          0.19599999487400055,
+          "notebook computer"
+        ],
+        [
+          0.18700000643730164,
+          "desktop computer"
+        ],
+        [
+          0.1550000011920929,
+          "CRT screen"
+        ],
+        [
+          0.07199999690055847,
+          "computer keyboard"
+        ],
+        [
+          0.05400000140070915,
+          "space bar"
+        ],
+        [
+          0.026000000536441803,
+          "monitor"
+        ],
+        [
+          0.008999999612569809,
+          "desk"
+        ],
+        [
+          0.006000000052154064,
+          "iPod"
+        ],
+        [
+          0.004000000189989805,
+          "computer mouse"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.2019852101802826,
+          "laptop computer"
+        ],
+        [
+          0.17996762692928314,
+          "notebook computer"
+        ],
+        [
+          0.157224640250206,
+          "desktop computer"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0,
+          "plant pot"
+        ],
+        [
+          0.0008198030991479754,
+          "coffee mug"
+        ],
+        [
+          0.1982288807630539,
+          "water bottle"
+        ],
+        [
+          0.028071537613868713,
+          "monitor"
+        ],
+        [
+          0.001020841533318162,
+          "dough"
+        ],
+        [
+          0.013290845789015293,
+          "desk"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-laptop-water.png"
+    }
+  },
+  "mug": {
+    "blank": {
+      "linear_probe_statistics": [
+        [
+          0.6370000243186951,
+          "coffee mug"
+        ],
+        [
+          0.20900000631809235,
+          "tea cup"
+        ],
+        [
+          0.03799999877810478,
+          "drink pitcher"
+        ],
+        [
+          0.010999999940395355,
+          "teapot"
+        ],
+        [
+          0.004999999888241291,
+          "water jug"
+        ],
+        [
+          0.007000000216066837,
+          "vase"
+        ],
+        [
+          0.006000000052154064,
+          "whiskey jug"
+        ],
+        [
+          0.003000000026077032,
+          "measuring cup"
+        ],
+        [
+          0.004000000189989805,
+          "mortar"
+        ],
+        [
+          0.0010000000474974513,
+          "salt shaker"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.8806210160255432,
+          "coffee mug"
+        ],
+        [
+          0.0005310813430696726,
+          "plant pot"
+        ],
+        [
+          0.0007394939311780035,
+          "water jug"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.023484859615564346,
+          "measuring cup"
+        ],
+        [
+          0.025834234431385994,
+          "tea cup"
+        ],
+        [
+          0,
+          "desktop computer"
+        ],
+        [
+          0.005117307882755995,
+          "drink pitcher"
+        ],
+        [
+          0.0006380188278853893,
+          "desk"
+        ],
+        [
+          0.0009883827297016978,
+          "teapot"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-mug-blank.png"
+    },
+    "cup": {
+      "linear_probe_statistics": [
+        [
+          0.6679999828338623,
+          "coffee mug"
+        ],
+        [
+          0.22499999403953552,
+          "tea cup"
+        ],
+        [
+          0.04600000008940697,
+          "drink pitcher"
+        ],
+        [
+          0.010999999940395355,
+          "teapot"
+        ],
+        [
+          0.006000000052154064,
+          "water jug"
+        ],
+        [
+          0.004000000189989805,
+          "vase"
+        ],
+        [
+          0.004000000189989805,
+          "whiskey jug"
+        ],
+        [
+          0.004000000189989805,
+          "measuring cup"
+        ],
+        [
+          0.0020000000949949026,
+          "mortar"
+        ],
+        [
+          0.0010000000474974513,
+          "salt shaker"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.6488915681838989,
+          "coffee mug"
+        ],
+        [
+          0.0011871536262333393,
+          "plant pot"
+        ],
+        [
+          0.0010875663720071316,
+          "water jug"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.17470477521419525,
+          "measuring cup"
+        ],
+        [
+          0.14533954858779907,
+          "tea cup"
+        ],
+        [
+          0,
+          "desktop computer"
+        ],
+        [
+          0.014150175265967846,
+          "drink pitcher"
+        ],
+        [
+          6.625522655667737e-05,
+          "desk"
+        ],
+        [
+          0.0014236037386581302,
+          "teapot"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-mug-cup.png"
+    },
+    "laptop": {
+      "linear_probe_statistics": [
+        [
+          0.5809999704360962,
+          "coffee mug"
+        ],
+        [
+          0.19200000166893005,
+          "tea cup"
+        ],
+        [
+          0.03999999910593033,
+          "drink pitcher"
+        ],
+        [
+          0.010999999940395355,
+          "teapot"
+        ],
+        [
+          0.004999999888241291,
+          "water jug"
+        ],
+        [
+          0.008999999612569809,
+          "vase"
+        ],
+        [
+          0.006000000052154064,
+          "whiskey jug"
+        ],
+        [
+          0.004999999888241291,
+          "measuring cup"
+        ],
+        [
+          0.003000000026077032,
+          "mortar"
+        ],
+        [
+          0.004999999888241291,
+          "salt shaker"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.6508391499519348,
+          "coffee mug"
+        ],
+        [
+          0.0014477975200861692,
+          "plant pot"
+        ],
+        [
+          0.0010568620637059212,
+          "water jug"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.012396246194839478,
+          "measuring cup"
+        ],
+        [
+          0.005109210964292288,
+          "tea cup"
+        ],
+        [
+          0.11184181272983551,
+          "desktop computer"
+        ],
+        [
+          0.0053391302935779095,
+          "drink pitcher"
+        ],
+        [
+          0.0576048418879509,
+          "desk"
+        ],
+        [
+          0.03621358424425125,
+          "teapot"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-mug-laptop.png"
+    },
+    "mug": {
+      "linear_probe_statistics": [
+        [
+          0.6850000023841858,
+          "coffee mug"
+        ],
+        [
+          0.22599999606609344,
+          "tea cup"
+        ],
+        [
+          0.024000000208616257,
+          "drink pitcher"
+        ],
+        [
+          0.009999999776482582,
+          "teapot"
+        ],
+        [
+          0.003000000026077032,
+          "water jug"
+        ],
+        [
+          0.003000000026077032,
+          "vase"
+        ],
+        [
+          0.004999999888241291,
+          "whiskey jug"
+        ],
+        [
+          0.0020000000949949026,
+          "measuring cup"
+        ],
+        [
+          0.0010000000474974513,
+          "mortar"
+        ],
+        [
+          0.0010000000474974513,
+          "salt shaker"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.9847987294197083,
+          "coffee mug"
+        ],
+        [
+          0.00020171288633719087,
+          "plant pot"
+        ],
+        [
+          0.0012686356203630567,
+          "water jug"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.0035573658533394337,
+          "measuring cup"
+        ],
+        [
+          0.004648236092180014,
+          "tea cup"
+        ],
+        [
+          0,
+          "desktop computer"
+        ],
+        [
+          0.0014671643730252981,
+          "drink pitcher"
+        ],
+        [
+          5.6580818636575714e-05,
+          "desk"
+        ],
+        [
+          0.0005063310381956398,
+          "teapot"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-mug-mug.png"
+    },
+    "pizza": {
+      "linear_probe_statistics": [
+        [
+          0.4440000057220459,
+          "coffee mug"
+        ],
+        [
+          0.23600000143051147,
+          "tea cup"
+        ],
+        [
+          0.05700000002980232,
+          "drink pitcher"
+        ],
+        [
+          0.014000000432133675,
+          "teapot"
+        ],
+        [
+          0.007000000216066837,
+          "water jug"
+        ],
+        [
+          0.008999999612569809,
+          "vase"
+        ],
+        [
+          0.010999999940395355,
+          "whiskey jug"
+        ],
+        [
+          0.007000000216066837,
+          "measuring cup"
+        ],
+        [
+          0.004000000189989805,
+          "mortar"
+        ],
+        [
+          0.008999999612569809,
+          "salt shaker"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.27687308192253113,
+          "coffee mug"
+        ],
+        [
+          0.0014525752048939466,
+          "plant pot"
+        ],
+        [
+          0.0026463468093425035,
+          "water jug"
+        ],
+        [
+          0.47276803851127625,
+          "pizza"
+        ],
+        [
+          0.11076027154922485,
+          "measuring cup"
+        ],
+        [
+          0.0022915767040103674,
+          "tea cup"
+        ],
+        [
+          0.0004927398404106498,
+          "desktop computer"
+        ],
+        [
+          0.02024456113576889,
+          "drink pitcher"
+        ],
+        [
+          0.001179058221168816,
+          "desk"
+        ],
+        [
+          0.003356262808665633,
+          "teapot"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-mug-pizza.png"
+    },
+    "plant": {
+      "linear_probe_statistics": [
+        [
+          0.460999995470047,
+          "coffee mug"
+        ],
+        [
+          0.2669999897480011,
+          "tea cup"
+        ],
+        [
+          0.0729999989271164,
+          "drink pitcher"
+        ],
+        [
+          0.017000000923871994,
+          "teapot"
+        ],
+        [
+          0.00800000037997961,
+          "water jug"
+        ],
+        [
+          0.024000000208616257,
+          "vase"
+        ],
+        [
+          0.010999999940395355,
+          "whiskey jug"
+        ],
+        [
+          0.004999999888241291,
+          "measuring cup"
+        ],
+        [
+          0.00800000037997961,
+          "mortar"
+        ],
+        [
+          0.004000000189989805,
+          "salt shaker"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.15885290503501892,
+          "coffee mug"
+        ],
+        [
+          0.8063185811042786,
+          "plant pot"
+        ],
+        [
+          0.0005207068752497435,
+          "water jug"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.006487972103059292,
+          "measuring cup"
+        ],
+        [
+          0.0035212517250329256,
+          "tea cup"
+        ],
+        [
+          0,
+          "desktop computer"
+        ],
+        [
+          0.005382617935538292,
+          "drink pitcher"
+        ],
+        [
+          0.00020849825523328036,
+          "desk"
+        ],
+        [
+          0.0014702073531225324,
+          "teapot"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-mug-plant.png"
+    },
+    "water": {
+      "linear_probe_statistics": [
+        [
+          0.5490000247955322,
+          "coffee mug"
+        ],
+        [
+          0.17499999701976776,
+          "tea cup"
+        ],
+        [
+          0.08399999886751175,
+          "drink pitcher"
+        ],
+        [
+          0.020999999716877937,
+          "teapot"
+        ],
+        [
+          0.03500000014901161,
+          "water jug"
+        ],
+        [
+          0.008999999612569809,
+          "vase"
+        ],
+        [
+          0.012000000104308128,
+          "whiskey jug"
+        ],
+        [
+          0.004999999888241291,
+          "measuring cup"
+        ],
+        [
+          0.004000000189989805,
+          "mortar"
+        ],
+        [
+          0.004999999888241291,
+          "salt shaker"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.12858757376670837,
+          "coffee mug"
+        ],
+        [
+          0.0002934727817773819,
+          "plant pot"
+        ],
+        [
+          0.7992842197418213,
+          "water jug"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.019210565835237503,
+          "measuring cup"
+        ],
+        [
+          0.002987262327224016,
+          "tea cup"
+        ],
+        [
+          0,
+          "desktop computer"
+        ],
+        [
+          0.026401257142424583,
+          "drink pitcher"
+        ],
+        [
+          8.861505921231583e-05,
+          "desk"
+        ],
+        [
+          0.0016621354734525084,
+          "teapot"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-mug-water.png"
+    }
+  },
+  "water": {
+    "blank": {
+      "linear_probe_statistics": [
+        [
+          0.4449999928474426,
+          "water jug"
+        ],
+        [
+          0.3529999852180481,
+          "drink pitcher"
+        ],
+        [
+          0.11599999666213989,
+          "vase"
+        ],
+        [
+          0.007000000216066837,
+          "cocktail shaker"
+        ],
+        [
+          0.023000000044703484,
+          "beaker"
+        ],
+        [
+          0.006000000052154064,
+          "coffeemaker"
+        ],
+        [
+          0.003000000026077032,
+          "tea cup"
+        ],
+        [
+          0.00800000037997961,
+          "hourglass"
+        ],
+        [
+          0.009999999776482582,
+          "whiskey jug"
+        ],
+        [
+          0.003000000026077032,
+          "teapot"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.5866260528564453,
+          "water jug"
+        ],
+        [
+          0.052668508142232895,
+          "measuring cup"
+        ],
+        [
+          0,
+          "desktop computer"
+        ],
+        [
+          0.1164652556180954,
+          "drink pitcher"
+        ],
+        [
+          0.0017252793768420815,
+          "coffee mug"
+        ],
+        [
+          0.04300416633486748,
+          "hourglass"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0.03907337784767151,
+          "vase"
+        ],
+        [
+          0.05918179079890251,
+          "coffeemaker"
+        ],
+        [
+          0.03184225782752037,
+          "goblet"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-water-blank.png"
+    },
+    "cup": {
+      "linear_probe_statistics": [
+        [
+          0.3580000102519989,
+          "water jug"
+        ],
+        [
+          0.3569999933242798,
+          "drink pitcher"
+        ],
+        [
+          0.05400000140070915,
+          "vase"
+        ],
+        [
+          0.014999999664723873,
+          "cocktail shaker"
+        ],
+        [
+          0.019999999552965164,
+          "beaker"
+        ],
+        [
+          0.017000000923871994,
+          "coffeemaker"
+        ],
+        [
+          0.020999999716877937,
+          "tea cup"
+        ],
+        [
+          0.017000000923871994,
+          "hourglass"
+        ],
+        [
+          0.014000000432133675,
+          "whiskey jug"
+        ],
+        [
+          0.012000000104308128,
+          "teapot"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.168583482503891,
+          "water jug"
+        ],
+        [
+          0.5019571185112,
+          "measuring cup"
+        ],
+        [
+          0,
+          "desktop computer"
+        ],
+        [
+          0.0892656221985817,
+          "drink pitcher"
+        ],
+        [
+          0.02585982158780098,
+          "coffee mug"
+        ],
+        [
+          0.022490469738841057,
+          "hourglass"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0.0271216481924057,
+          "vase"
+        ],
+        [
+          0.029899895191192627,
+          "coffeemaker"
+        ],
+        [
+          0.038106828927993774,
+          "goblet"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-water-cup.png"
+    },
+    "laptop": {
+      "linear_probe_statistics": [
+        [
+          0.25200000405311584,
+          "water jug"
+        ],
+        [
+          0.27799999713897705,
+          "drink pitcher"
+        ],
+        [
+          0.08100000023841858,
+          "vase"
+        ],
+        [
+          0.039000000804662704,
+          "cocktail shaker"
+        ],
+        [
+          0.020999999716877937,
+          "beaker"
+        ],
+        [
+          0.01600000075995922,
+          "coffeemaker"
+        ],
+        [
+          0.017999999225139618,
+          "tea cup"
+        ],
+        [
+          0.012000000104308128,
+          "hourglass"
+        ],
+        [
+          0.01899999938905239,
+          "whiskey jug"
+        ],
+        [
+          0.017999999225139618,
+          "teapot"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.006442198064178228,
+          "water jug"
+        ],
+        [
+          0.0015514862025156617,
+          "measuring cup"
+        ],
+        [
+          0.4850677251815796,
+          "desktop computer"
+        ],
+        [
+          0.004742809571325779,
+          "drink pitcher"
+        ],
+        [
+          0.004063291009515524,
+          "coffee mug"
+        ],
+        [
+          0.004562246147543192,
+          "hourglass"
+        ],
+        [
+          0.30690088868141174,
+          "laptop computer"
+        ],
+        [
+          0.0016324692405760288,
+          "vase"
+        ],
+        [
+          0.012177853845059872,
+          "coffeemaker"
+        ],
+        [
+          0.0007703447481617332,
+          "goblet"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-water-laptop.png"
+    },
+    "mug": {
+      "linear_probe_statistics": [
+        [
+          0.289000004529953,
+          "water jug"
+        ],
+        [
+          0.33799999952316284,
+          "drink pitcher"
+        ],
+        [
+          0.07000000029802322,
+          "vase"
+        ],
+        [
+          0.028999999165534973,
+          "cocktail shaker"
+        ],
+        [
+          0.017000000923871994,
+          "beaker"
+        ],
+        [
+          0.01899999938905239,
+          "coffeemaker"
+        ],
+        [
+          0.019999999552965164,
+          "tea cup"
+        ],
+        [
+          0.01600000075995922,
+          "hourglass"
+        ],
+        [
+          0.026000000536441803,
+          "whiskey jug"
+        ],
+        [
+          0.017000000923871994,
+          "teapot"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.48713165521621704,
+          "water jug"
+        ],
+        [
+          0.04580822214484215,
+          "measuring cup"
+        ],
+        [
+          0.00015180220361799002,
+          "desktop computer"
+        ],
+        [
+          0.05124233663082123,
+          "drink pitcher"
+        ],
+        [
+          0.3027070164680481,
+          "coffee mug"
+        ],
+        [
+          0.013248368166387081,
+          "hourglass"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0.006489060819149017,
+          "vase"
+        ],
+        [
+          0.01982944644987583,
+          "coffeemaker"
+        ],
+        [
+          0.01881529577076435,
+          "goblet"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-water-mug.png"
+    },
+    "pizza": {
+      "linear_probe_statistics": [
+        [
+          0.2759999930858612,
+          "water jug"
+        ],
+        [
+          0.29100000858306885,
+          "drink pitcher"
+        ],
+        [
+          0.050999999046325684,
+          "vase"
+        ],
+        [
+          0.020999999716877937,
+          "cocktail shaker"
+        ],
+        [
+          0.02500000037252903,
+          "beaker"
+        ],
+        [
+          0.052000001072883606,
+          "coffeemaker"
+        ],
+        [
+          0.020999999716877937,
+          "tea cup"
+        ],
+        [
+          0.017000000923871994,
+          "hourglass"
+        ],
+        [
+          0.01899999938905239,
+          "whiskey jug"
+        ],
+        [
+          0.013000000268220901,
+          "teapot"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.08576419949531555,
+          "water jug"
+        ],
+        [
+          0.1988425999879837,
+          "measuring cup"
+        ],
+        [
+          0.0017716807778924704,
+          "desktop computer"
+        ],
+        [
+          0.08418658375740051,
+          "drink pitcher"
+        ],
+        [
+          0.018068455159664154,
+          "coffee mug"
+        ],
+        [
+          0.17408451437950134,
+          "hourglass"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0.012933056801557541,
+          "vase"
+        ],
+        [
+          0.04892890155315399,
+          "coffeemaker"
+        ],
+        [
+          0.0037441723980009556,
+          "goblet"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-water-pizza.png"
+    },
+    "plant": {
+      "linear_probe_statistics": [
+        [
+          0.34299999475479126,
+          "water jug"
+        ],
+        [
+          0.3070000112056732,
+          "drink pitcher"
+        ],
+        [
+          0.11999999731779099,
+          "vase"
+        ],
+        [
+          0.014000000432133675,
+          "cocktail shaker"
+        ],
+        [
+          0.024000000208616257,
+          "beaker"
+        ],
+        [
+          0.006000000052154064,
+          "coffeemaker"
+        ],
+        [
+          0.01899999938905239,
+          "tea cup"
+        ],
+        [
+          0.03099999949336052,
+          "hourglass"
+        ],
+        [
+          0.010999999940395355,
+          "whiskey jug"
+        ],
+        [
+          0.008999999612569809,
+          "teapot"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.1521543711423874,
+          "water jug"
+        ],
+        [
+          0.1423068791627884,
+          "measuring cup"
+        ],
+        [
+          0.0019517919281497598,
+          "desktop computer"
+        ],
+        [
+          0.09566432237625122,
+          "drink pitcher"
+        ],
+        [
+          0.030238263309001923,
+          "coffee mug"
+        ],
+        [
+          0.05750638619065285,
+          "hourglass"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0.15464481711387634,
+          "vase"
+        ],
+        [
+          0.025776397436857224,
+          "coffeemaker"
+        ],
+        [
+          0.09283499419689178,
+          "goblet"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-water-plant.png"
+    },
+    "water": {
+      "linear_probe_statistics": [
+        [
+          0.6140000224113464,
+          "water jug"
+        ],
+        [
+          0.2029999941587448,
+          "drink pitcher"
+        ],
+        [
+          0.027000000700354576,
+          "vase"
+        ],
+        [
+          0.02500000037252903,
+          "cocktail shaker"
+        ],
+        [
+          0.01600000075995922,
+          "beaker"
+        ],
+        [
+          0.00800000037997961,
+          "coffeemaker"
+        ],
+        [
+          0.006000000052154064,
+          "tea cup"
+        ],
+        [
+          0.006000000052154064,
+          "hourglass"
+        ],
+        [
+          0.00800000037997961,
+          "whiskey jug"
+        ],
+        [
+          0.004000000189989805,
+          "teapot"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.8482268452644348,
+          "water jug"
+        ],
+        [
+          0.017347659915685654,
+          "measuring cup"
+        ],
+        [
+          0,
+          "desktop computer"
+        ],
+        [
+          0.018766239285469055,
+          "drink pitcher"
+        ],
+        [
+          0.0011690596584230661,
+          "coffee mug"
+        ],
+        [
+          0.0050264932215213776,
+          "hourglass"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0.003524888539686799,
+          "vase"
+        ],
+        [
+          0.002781086601316929,
+          "coffeemaker"
+        ],
+        [
+          0.006801479961723089,
+          "goblet"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-water-water.png"
+    }
+  },
+  "pizza": {
+    "blank": {
+      "linear_probe_statistics": [
+        [
+          0.9779999852180481,
+          "pizza"
+        ],
+        [
+          0.01600000075995922,
+          "carton"
+        ],
+        [
+          0.0010000000474974513,
+          "bakery"
+        ],
+        [
+          0,
+          "broccoli"
+        ],
+        [
+          0.0010000000474974513,
+          "bagel"
+        ],
+        [
+          0,
+          "pretzel"
+        ],
+        [
+          0,
+          "hot dog"
+        ],
+        [
+          0,
+          "cheeseburger"
+        ],
+        [
+          0,
+          "semi-trailer truck"
+        ],
+        [
+          0,
+          "packet"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.8434723019599915,
+          "pizza"
+        ],
+        [
+          0,
+          "measuring cup"
+        ],
+        [
+          0.10333487391471863,
+          "dough"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0,
+          "coffee mug"
+        ],
+        [
+          0.0022172711323946714,
+          "plate"
+        ],
+        [
+          0.000587025482673198,
+          "crate"
+        ],
+        [
+          0.004215883556753397,
+          "switch"
+        ],
+        [
+          0.0007908608531579375,
+          "moving van"
+        ],
+        [
+          0.0009724972187541425,
+          "microwave oven"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-pizza-blank.png"
+    },
+    "cup": {
+      "linear_probe_statistics": [
+        [
+          0.9110000133514404,
+          "pizza"
+        ],
+        [
+          0.05700000002980232,
+          "carton"
+        ],
+        [
+          0.004999999888241291,
+          "bakery"
+        ],
+        [
+          0.004000000189989805,
+          "broccoli"
+        ],
+        [
+          0.003000000026077032,
+          "bagel"
+        ],
+        [
+          0.003000000026077032,
+          "pretzel"
+        ],
+        [
+          0.0010000000474974513,
+          "hot dog"
+        ],
+        [
+          0.0010000000474974513,
+          "cheeseburger"
+        ],
+        [
+          0.0010000000474974513,
+          "semi-trailer truck"
+        ],
+        [
+          0.0010000000474974513,
+          "packet"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.2699100971221924,
+          "pizza"
+        ],
+        [
+          0.5184544920921326,
+          "measuring cup"
+        ],
+        [
+          0.03022306226193905,
+          "dough"
+        ],
+        [
+          0.0020678131841123104,
+          "laptop computer"
+        ],
+        [
+          0.004614955745637417,
+          "coffee mug"
+        ],
+        [
+          0.01278846524655819,
+          "plate"
+        ],
+        [
+          0.00876433216035366,
+          "crate"
+        ],
+        [
+          0.010648460127413273,
+          "switch"
+        ],
+        [
+          0.004978625103831291,
+          "moving van"
+        ],
+        [
+          0.008401354774832726,
+          "microwave oven"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-pizza-cup.png"
+    },
+    "laptop": {
+      "linear_probe_statistics": [
+        [
+          0.9210000038146973,
+          "pizza"
+        ],
+        [
+          0.06300000101327896,
+          "carton"
+        ],
+        [
+          0.0020000000949949026,
+          "bakery"
+        ],
+        [
+          0.0020000000949949026,
+          "broccoli"
+        ],
+        [
+          0.0010000000474974513,
+          "bagel"
+        ],
+        [
+          0.0010000000474974513,
+          "pretzel"
+        ],
+        [
+          0.0010000000474974513,
+          "hot dog"
+        ],
+        [
+          0.0010000000474974513,
+          "cheeseburger"
+        ],
+        [
+          0.0010000000474974513,
+          "semi-trailer truck"
+        ],
+        [
+          0,
+          "packet"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.5508760809898376,
+          "pizza"
+        ],
+        [
+          0,
+          "measuring cup"
+        ],
+        [
+          0.01319642923772335,
+          "dough"
+        ],
+        [
+          0.26501694321632385,
+          "laptop computer"
+        ],
+        [
+          0,
+          "coffee mug"
+        ],
+        [
+          0.00850337091833353,
+          "plate"
+        ],
+        [
+          0.0008230246603488922,
+          "crate"
+        ],
+        [
+          0.011335055343806744,
+          "switch"
+        ],
+        [
+          0.004168359097093344,
+          "moving van"
+        ],
+        [
+          0.0024245562963187695,
+          "microwave oven"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-pizza-laptop.png"
+    },
+    "mug": {
+      "linear_probe_statistics": [
+        [
+          0.902999997138977,
+          "pizza"
+        ],
+        [
+          0.08299999684095383,
+          "carton"
+        ],
+        [
+          0.0020000000949949026,
+          "bakery"
+        ],
+        [
+          0.0020000000949949026,
+          "broccoli"
+        ],
+        [
+          0.0020000000949949026,
+          "bagel"
+        ],
+        [
+          0.0020000000949949026,
+          "pretzel"
+        ],
+        [
+          0.0010000000474974513,
+          "hot dog"
+        ],
+        [
+          0.0010000000474974513,
+          "cheeseburger"
+        ],
+        [
+          0,
+          "semi-trailer truck"
+        ],
+        [
+          0,
+          "packet"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.13916806876659393,
+          "pizza"
+        ],
+        [
+          0.136297345161438,
+          "measuring cup"
+        ],
+        [
+          0.042456332594156265,
+          "dough"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0.17553678154945374,
+          "coffee mug"
+        ],
+        [
+          0.01044955663383007,
+          "plate"
+        ],
+        [
+          0.04983759671449661,
+          "crate"
+        ],
+        [
+          0.014308917336165905,
+          "switch"
+        ],
+        [
+          0.035902563482522964,
+          "moving van"
+        ],
+        [
+          0.036765046417713165,
+          "microwave oven"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-pizza-mug.png"
+    },
+    "pizza": {
+      "linear_probe_statistics": [
+        [
+          0.9810000061988831,
+          "pizza"
+        ],
+        [
+          0.014000000432133675,
+          "carton"
+        ],
+        [
+          0.0010000000474974513,
+          "bakery"
+        ],
+        [
+          0.0010000000474974513,
+          "broccoli"
+        ],
+        [
+          0.0010000000474974513,
+          "bagel"
+        ],
+        [
+          0.0010000000474974513,
+          "pretzel"
+        ],
+        [
+          0.0010000000474974513,
+          "hot dog"
+        ],
+        [
+          0,
+          "cheeseburger"
+        ],
+        [
+          0,
+          "semi-trailer truck"
+        ],
+        [
+          0,
+          "packet"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.9140593409538269,
+          "pizza"
+        ],
+        [
+          0,
+          "measuring cup"
+        ],
+        [
+          0.03198724985122681,
+          "dough"
+        ],
+        [
+          0.00025821264716796577,
+          "laptop computer"
+        ],
+        [
+          0,
+          "coffee mug"
+        ],
+        [
+          0.0032621610444039106,
+          "plate"
+        ],
+        [
+          0.0031824505422264338,
+          "crate"
+        ],
+        [
+          0.005213872995227575,
+          "switch"
+        ],
+        [
+          0.0019115465693175793,
+          "moving van"
+        ],
+        [
+          0.0010813955450430512,
+          "microwave oven"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-pizza-pizza.png"
+    },
+    "plant": {
+      "linear_probe_statistics": [
+        [
+          0.8799999952316284,
+          "pizza"
+        ],
+        [
+          0.09099999815225601,
+          "carton"
+        ],
+        [
+          0.00800000037997961,
+          "bakery"
+        ],
+        [
+          0.003000000026077032,
+          "broccoli"
+        ],
+        [
+          0.003000000026077032,
+          "bagel"
+        ],
+        [
+          0.003000000026077032,
+          "pretzel"
+        ],
+        [
+          0.0010000000474974513,
+          "hot dog"
+        ],
+        [
+          0.0010000000474974513,
+          "cheeseburger"
+        ],
+        [
+          0.0010000000474974513,
+          "semi-trailer truck"
+        ],
+        [
+          0.0010000000474974513,
+          "packet"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.7214542031288147,
+          "pizza"
+        ],
+        [
+          0.0019398778676986694,
+          "measuring cup"
+        ],
+        [
+          0.07874143868684769,
+          "dough"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0,
+          "coffee mug"
+        ],
+        [
+          0.04022563248872757,
+          "plate"
+        ],
+        [
+          0.011866703629493713,
+          "crate"
+        ],
+        [
+          0.01182603184133768,
+          "switch"
+        ],
+        [
+          0.0035441743675619364,
+          "moving van"
+        ],
+        [
+          0.0021505362819880247,
+          "microwave oven"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-pizza-plant.png"
+    },
+    "water": {
+      "linear_probe_statistics": [
+        [
+          0.9259999990463257,
+          "pizza"
+        ],
+        [
+          0.05999999865889549,
+          "carton"
+        ],
+        [
+          0.0020000000949949026,
+          "bakery"
+        ],
+        [
+          0.0020000000949949026,
+          "broccoli"
+        ],
+        [
+          0.0020000000949949026,
+          "bagel"
+        ],
+        [
+          0.0010000000474974513,
+          "pretzel"
+        ],
+        [
+          0.0010000000474974513,
+          "hot dog"
+        ],
+        [
+          0.0010000000474974513,
+          "cheeseburger"
+        ],
+        [
+          0.0010000000474974513,
+          "semi-trailer truck"
+        ],
+        [
+          0,
+          "packet"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.703296959400177,
+          "pizza"
+        ],
+        [
+          0.005282073747366667,
+          "measuring cup"
+        ],
+        [
+          0.060364868491888046,
+          "dough"
+        ],
+        [
+          0.0014676520368084311,
+          "laptop computer"
+        ],
+        [
+          0,
+          "coffee mug"
+        ],
+        [
+          0.010713683441281319,
+          "plate"
+        ],
+        [
+          0.0023713542614132166,
+          "crate"
+        ],
+        [
+          0.010398169048130512,
+          "switch"
+        ],
+        [
+          0.005229166243225336,
+          "moving van"
+        ],
+        [
+          0.004450311418622732,
+          "microwave oven"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-pizza-water.png"
+    }
+  },
+  "plant": {
+    "blank": {
+      "linear_probe_statistics": [
+        [
+          0.9070000052452087,
+          "plant pot"
+        ],
+        [
+          0.026000000536441803,
+          "vase"
+        ],
+        [
+          0.004999999888241291,
+          "tea cup"
+        ],
+        [
+          0.013000000268220901,
+          "mortar"
+        ],
+        [
+          0.0020000000949949026,
+          "broccoli"
+        ],
+        [
+          0.004999999888241291,
+          "daisy"
+        ],
+        [
+          0.0010000000474974513,
+          "coffee mug"
+        ],
+        [
+          0.0010000000474974513,
+          "bucket"
+        ],
+        [
+          0.0010000000474974513,
+          "ping-pong ball"
+        ],
+        [
+          0,
+          "salt shaker"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.2183164805173874,
+          "plant pot"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.00614142743870616,
+          "measuring cup"
+        ],
+        [
+          0,
+          "coffee mug"
+        ],
+        [
+          0,
+          "water jug"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0.1407681703567505,
+          "vase"
+        ],
+        [
+          0,
+          "tea cup"
+        ],
+        [
+          0,
+          "desk"
+        ],
+        [
+          0,
+          "desktop computer"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-plant-blank.png"
+    },
+    "cup": {
+      "linear_probe_statistics": [
+        [
+          0.5220000147819519,
+          "plant pot"
+        ],
+        [
+          0.08100000023841858,
+          "vase"
+        ],
+        [
+          0.09399999678134918,
+          "tea cup"
+        ],
+        [
+          0.035999998450279236,
+          "mortar"
+        ],
+        [
+          0.014000000432133675,
+          "broccoli"
+        ],
+        [
+          0.010999999940395355,
+          "daisy"
+        ],
+        [
+          0.014000000432133675,
+          "coffee mug"
+        ],
+        [
+          0.008999999612569809,
+          "bucket"
+        ],
+        [
+          0.004000000189989805,
+          "ping-pong ball"
+        ],
+        [
+          0.004999999888241291,
+          "salt shaker"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.1718447059392929,
+          "plant pot"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.5413941144943237,
+          "measuring cup"
+        ],
+        [
+          0.06655118614435196,
+          "coffee mug"
+        ],
+        [
+          0.0005937633104622364,
+          "water jug"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0.013375208713114262,
+          "vase"
+        ],
+        [
+          0.1530180275440216,
+          "tea cup"
+        ],
+        [
+          0.00028714927611872554,
+          "desk"
+        ],
+        [
+          0,
+          "desktop computer"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-plant-cup.png"
+    },
+    "laptop": {
+      "linear_probe_statistics": [
+        [
+          0.5239999890327454,
+          "plant pot"
+        ],
+        [
+          0.057999998331069946,
+          "vase"
+        ],
+        [
+          0.020999999716877937,
+          "tea cup"
+        ],
+        [
+          0.02199999988079071,
+          "mortar"
+        ],
+        [
+          0.017000000923871994,
+          "broccoli"
+        ],
+        [
+          0.014999999664723873,
+          "daisy"
+        ],
+        [
+          0.007000000216066837,
+          "coffee mug"
+        ],
+        [
+          0.004999999888241291,
+          "bucket"
+        ],
+        [
+          0.013000000268220901,
+          "ping-pong ball"
+        ],
+        [
+          0.006000000052154064,
+          "salt shaker"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.08383224904537201,
+          "plant pot"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.002063680673018098,
+          "measuring cup"
+        ],
+        [
+          0.008098220452666283,
+          "coffee mug"
+        ],
+        [
+          0,
+          "water jug"
+        ],
+        [
+          0.2711418569087982,
+          "laptop computer"
+        ],
+        [
+          0.021610457450151443,
+          "vase"
+        ],
+        [
+          0,
+          "tea cup"
+        ],
+        [
+          0.15823952853679657,
+          "desk"
+        ],
+        [
+          0.14949332177639008,
+          "desktop computer"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-plant-laptop.png"
+    },
+    "mug": {
+      "linear_probe_statistics": [
+        [
+          0.5899999737739563,
+          "plant pot"
+        ],
+        [
+          0.05900000035762787,
+          "vase"
+        ],
+        [
+          0.07800000160932541,
+          "tea cup"
+        ],
+        [
+          0.027000000700354576,
+          "mortar"
+        ],
+        [
+          0.009999999776482582,
+          "broccoli"
+        ],
+        [
+          0.009999999776482582,
+          "daisy"
+        ],
+        [
+          0.019999999552965164,
+          "coffee mug"
+        ],
+        [
+          0.004999999888241291,
+          "bucket"
+        ],
+        [
+          0.004999999888241291,
+          "ping-pong ball"
+        ],
+        [
+          0.004000000189989805,
+          "salt shaker"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.40890079736709595,
+          "plant pot"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.03715222328901291,
+          "measuring cup"
+        ],
+        [
+          0.4575001895427704,
+          "coffee mug"
+        ],
+        [
+          0.00427143182605505,
+          "water jug"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0.006736383307725191,
+          "vase"
+        ],
+        [
+          0.008572231978178024,
+          "tea cup"
+        ],
+        [
+          0.0012516843853518367,
+          "desk"
+        ],
+        [
+          0,
+          "desktop computer"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-plant-mug.png"
+    },
+    "pizza": {
+      "linear_probe_statistics": [
+        [
+          0.4830000102519989,
+          "plant pot"
+        ],
+        [
+          0.04100000113248825,
+          "vase"
+        ],
+        [
+          0.04100000113248825,
+          "tea cup"
+        ],
+        [
+          0.02500000037252903,
+          "mortar"
+        ],
+        [
+          0.04899999871850014,
+          "broccoli"
+        ],
+        [
+          0.014000000432133675,
+          "daisy"
+        ],
+        [
+          0.004999999888241291,
+          "coffee mug"
+        ],
+        [
+          0.013000000268220901,
+          "bucket"
+        ],
+        [
+          0.009999999776482582,
+          "ping-pong ball"
+        ],
+        [
+          0.00800000037997961,
+          "salt shaker"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.027236539870500565,
+          "plant pot"
+        ],
+        [
+          0.8112928867340088,
+          "pizza"
+        ],
+        [
+          0.016382424160838127,
+          "measuring cup"
+        ],
+        [
+          0.001150933443568647,
+          "coffee mug"
+        ],
+        [
+          0,
+          "water jug"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0.0029546141158789396,
+          "vase"
+        ],
+        [
+          0,
+          "tea cup"
+        ],
+        [
+          0.0011562625877559185,
+          "desk"
+        ],
+        [
+          0,
+          "desktop computer"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-plant-pizza.png"
+    },
+    "plant": {
+      "linear_probe_statistics": [
+        [
+          0.8640000224113464,
+          "plant pot"
+        ],
+        [
+          0.027000000700354576,
+          "vase"
+        ],
+        [
+          0.013000000268220901,
+          "tea cup"
+        ],
+        [
+          0.009999999776482582,
+          "mortar"
+        ],
+        [
+          0.006000000052154064,
+          "broccoli"
+        ],
+        [
+          0.00800000037997961,
+          "daisy"
+        ],
+        [
+          0.0020000000949949026,
+          "coffee mug"
+        ],
+        [
+          0.0020000000949949026,
+          "bucket"
+        ],
+        [
+          0.0010000000474974513,
+          "ping-pong ball"
+        ],
+        [
+          0.0010000000474974513,
+          "salt shaker"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.9441769123077393,
+          "plant pot"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.0007441031048074365,
+          "measuring cup"
+        ],
+        [
+          0.0010846602963283658,
+          "coffee mug"
+        ],
+        [
+          0,
+          "water jug"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0.007346717175096273,
+          "vase"
+        ],
+        [
+          0.0002784501120913774,
+          "tea cup"
+        ],
+        [
+          0.0011394709581509233,
+          "desk"
+        ],
+        [
+          0,
+          "desktop computer"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-plant-plant.png"
+    },
+    "water": {
+      "linear_probe_statistics": [
+        [
+          0.6200000047683716,
+          "plant pot"
+        ],
+        [
+          0.07000000029802322,
+          "vase"
+        ],
+        [
+          0.04699999839067459,
+          "tea cup"
+        ],
+        [
+          0.019999999552965164,
+          "mortar"
+        ],
+        [
+          0.013000000268220901,
+          "broccoli"
+        ],
+        [
+          0.010999999940395355,
+          "daisy"
+        ],
+        [
+          0.006000000052154064,
+          "coffee mug"
+        ],
+        [
+          0.012000000104308128,
+          "bucket"
+        ],
+        [
+          0.004000000189989805,
+          "ping-pong ball"
+        ],
+        [
+          0.00800000037997961,
+          "salt shaker"
+        ]
+      ],
+      "zero_shot_statistics": [
+        [
+          0.13060417771339417,
+          "plant pot"
+        ],
+        [
+          0,
+          "pizza"
+        ],
+        [
+          0.02384938672184944,
+          "measuring cup"
+        ],
+        [
+          0.006286230403929949,
+          "coffee mug"
+        ],
+        [
+          0.4162960648536682,
+          "water jug"
+        ],
+        [
+          0,
+          "laptop computer"
+        ],
+        [
+          0.06340494006872177,
+          "vase"
+        ],
+        [
+          0.002754003508016467,
+          "tea cup"
+        ],
+        [
+          0.0010784831829369068,
+          "desk"
+        ],
+        [
+          0,
+          "desktop computer"
+        ]
+      ],
+      "image_url": "https://storage.googleapis.com/distill-multimodal/typographic_attacks/in_the_wild_round_3-plant-water.png"
+    }
+  }
+}
