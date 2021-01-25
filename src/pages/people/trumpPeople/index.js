@@ -96,10 +96,10 @@ export default () => {
             />
             <VictoryErrorBar
               data={data}
-              borderWidth={3}
+              borderWidth={0}
               style={{
                 data: {
-                  stroke: 'rgba(0,0,0,0.2)',
+                  stroke: 'rgba(0,0,0,0.3)',
                 },
               }}
               horizontal

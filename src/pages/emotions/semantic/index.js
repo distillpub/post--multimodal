@@ -85,7 +85,11 @@ export default ({ emotionNames, figureNumber }) => {
             emotions[name].filter(
               ([_, neuron]) => !includes(textNeurons, neuron)
             )
-          ).slice(0, maxCols)
+          )
+            .slice(0, maxCols)
+            .filter(([activation, neuron]) => {
+              return Math.abs(activation) > 0.05
+            })
 
           return (
             <React.Fragment>
@@ -115,9 +119,6 @@ export default ({ emotionNames, figureNumber }) => {
               </Surface>
 
               {emotionRow.map(([activation, neuron], col) => {
-                // don't show the smallest values
-                if (Math.abs(activation) < 0.05) return
-
                 const { facet, strength } = facetOptions[neuron] || {
                   facet: 'face',
                   strength: 5,

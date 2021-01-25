@@ -2,7 +2,7 @@ import React from 'react'
 import data from './data'
 
 import { Surface, Text } from '../../reactComponents/ui'
-import { includes, reverse, sum } from 'lodash'
+import { includes, flatten, mean, repeat, reverse, map, sum } from 'lodash'
 import {
   VictoryArea,
   VictoryLine,
@@ -104,6 +104,45 @@ export default class HumanLabels extends React.Component {
     const { activeGroups } = this.state
     const isGroupActive = (group) => includes(activeGroups, group)
     const hasActiveGroup = activeGroups.length > 0
+
+    /*
+    let confidenceIntervals = null
+    if (hasActiveGroup) {
+      const activeHeights = heights[activeGroups[0]]
+      const totalValues = sum(activeHeights)
+      const activeTotals = activeHeights.map(
+        (height) => (height / totalValues) * labelCounts[activeGroups[0]]
+      )
+
+      const distribution = bins.slice(0, -1).map((bin, index) => ({
+        samples: activeTotals[index],
+        value: (bin + bins[index + 1]) / 2 / neuronStd,
+      }))
+
+      const totalDistribution = flatten(
+        distribution.map(({ samples, value }) =>
+          [...Array(Math.round(samples))].map((_, i) => value)
+        )
+      )
+
+      function getStdDev(array) {
+        var avg = sum(array) / array.length
+        return Math.sqrt(
+          sum(map(array, (i) => Math.pow(i - avg, 2))) / array.length
+        )
+      }
+      const confidenceRange =
+        (1.96 * getStdDev(totalDistribution)) /
+        Math.sqrt(totalDistribution.length)
+      const distributionMean = mean(totalDistribution)
+      console.log('distribution is', totalDistribution)
+
+      confidenceIntervals = [
+        distributionMean - confidenceRange,
+        distributionMean + confidenceRange,
+      ]
+    }
+    */
 
     if (probChart) {
       yAxisProps.tickFormat = (t) => `${t.toExponential()}`
@@ -325,6 +364,7 @@ export default class HumanLabels extends React.Component {
                 dependentAxis
                 {...yAxisProps}
               />
+
               <VictoryLine
                 style={{
                   data: { strokeWidth: 1, stroke: 'rgba(0, 0, 0, 0.6)' },
