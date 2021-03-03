@@ -4,24 +4,51 @@
 	"password": "multimodal",
 	"authors": [
 		{
-			"author": "Author 1",
-			"authorURL": "",
-			"affiliation": "Institution",
-			"affiliationURL": ""
+			"author": "Gabriel Goh",
+			"authorURL": "http://gabgoh.github.io",
+			"affiliation": "OpenAI",
+			"affiliationURL": "http://openai.com"
 		},
 		{
-			"author": "Author 2",
-			"authorURL": "",
-			"affiliation": "Institution",
-			"affiliationURL": ""
+			"author": "Chelsea Voss",
+			"authorURL": "https://csvoss.com",
+			"affiliation": "OpenAI",
+			"affiliationURL": "http://openai.com"
 		},
 		{
-			"author": "Author 3",
-			"authorURL": "",
-			"affiliation": "Institution",
+			"author": "Nick Cammarata",
+			"authorURL": "http://nickcammarata.com",
+			"affiliation": "OpenAI",
+			"affiliationURL": "http://openai.com"
+		},
+		{
+			"author": "Shan Carter",
+			"authorURL": "http://shancarter.com",
+			"affiliation": "Observable",
+			"affiliationURL": "https://observablehq.com"
+		},
+		{
+			"author": "Michael Petrov",
+			"authorURL": "http://michaelpetrov.com",
+			"affiliation": "OpenAI",
+			"affiliationURL": "http://openai.com"
+		},
+		{
+			"author": "Ludwig Schubert",
+			"authorURL": "https://schubert.io/",
+		},		
+		{
+			"author": "Alec Radford",
+			"authorURL": "http://newmu.github.io/",
+			"affiliation": "OpenAI",
+			"affiliationURL": "http://openai.com"
+		},
+		{
+			"author": "Chris Olah",
+			"authorURL": "https://colah.github.io",
+			"affiliation": "",
 			"affiliationURL": ""
 		}
-
 	],
 	"katex": {
 		"delimiters": [
