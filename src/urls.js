@@ -23,7 +23,7 @@ export function microscope_url(neuron){
         "4x": ["contrastive_4x", "image_block_4_5_Add_6_0"],
     }[neuron.model];
     let layer = neuron.layer || last_layer;
-    return `https://ggoh-staging-dot-encyclopedia-251300.wl.r.appspot.com/models/${model_slug}/${layer}/${neuron.unit}`;
+    return `http://microscope-azure-edge.openai.com/models/${model_slug}/${layer}/${neuron.unit}`;
 }
 
 export function map_url(neuron){
