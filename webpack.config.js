@@ -1,35 +1,41 @@
-var path = require('path')
-var webpack = require('webpack')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var CopyWebpackPlugin = require('copy-webpack-plugin')
+var path = require("path")
+const CompressionPlugin = require("compression-webpack-plugin")
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin")
+
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin
+var webpack = require("webpack")
+var HtmlWebpackPlugin = require("html-webpack-plugin")
+var CopyWebpackPlugin = require("copy-webpack-plugin")
 
 module.exports = {
   entry: {
-    index: './src/main.js',
+    index: "./src/main.js",
   },
   resolve: {
-    extensions: ['.mjs', '.js', '.html', '.npy'],
+    extensions: [".mjs", ".js", ".html", ".npy"],
   },
   output: {
-    path: __dirname + '/public',
-    filename: '[name].bundle.js',
-    chunkFilename: '[name].[id].js',
+    path: __dirname + "/public",
+    filename: "[name].bundle.js",
+    chunkFilename: "[name].[id].js",
   },
   optimization: {
     // We no not want to minimize our code.
-    minimize: false,
+    minimize: true,
   },
   module: {
     rules: [
       {
         test: /\.(html|js)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         options: {
-          presets: ['@babel/preset-env', '@babel/preset-react'],
+          presets: ["@babel/preset-env", "@babel/preset-react"],
           plugins: [
+            ["lodash"],
             [
-              '@babel/plugin-proposal-class-properties',
+              "@babel/plugin-proposal-class-properties",
               {
                 loose: true,
               },
@@ -41,12 +47,12 @@ module.exports = {
         test: /\.mdx?$/,
         use: [
           {
-            loader: 'babel-loader',
+            loader: "babel-loader",
             options: {
-              presets: ['@babel/preset-env', '@babel/preset-react'],
+              presets: ["@babel/preset-env", "@babel/preset-react"],
               plugins: [
                 [
-                  '@babel/plugin-proposal-class-properties',
+                  "@babel/plugin-proposal-class-properties",
                   {
                     loose: true,
                   },
@@ -54,56 +60,57 @@ module.exports = {
               ],
             },
           },
-          '@mdx-js/loader',
+          "@mdx-js/loader",
         ],
       },
       {
         test: /\.css$/i,
-        use: ['to-string-loader', 'css-loader'],
+        use: ["to-string-loader", "css-loader"],
       },
       {
         test: /\.(html|svelte)$/,
         exclude: /node_modules/,
-        loader: 'svelte-loader',
+        loader: "svelte-loader",
       },
       {
         test: /\.(npy|npc)$/,
         exclude: /node_modules/,
-        loader: 'numpy-loader',
+        loader: "numpy-loader",
         options: {
-          outputPath: 'data/',
+          outputPath: "data/",
         },
       },
       {
         test: /\.svg$/,
         exclude: /node_modules/,
-        loader: 'svg-inline-loader',
+        loader: "svg-inline-loader",
         options: {
           removeSVGTagAttrs: true,
-          removingTagAttrs: ['font-family'],
+          removingTagAttrs: ["font-family"],
         },
       },
       {
         test: /\.(jpg|png)$/,
         use: {
-          loader: 'url-loader',
+          loader: "url-loader",
         },
       },
     ],
   },
   plugins: [
+    // new BundleAnalyzerPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/index.ejs',
-      filename: 'index.html',
-      chunks: ['index'],
+      template: "./src/index.ejs",
+      filename: "index.html",
+      chunks: ["index"],
     }),
-    new CopyWebpackPlugin([{ from: 'static/' }]),
+    new CopyWebpackPlugin([{ from: "static/" }]),
   ],
   devServer: {
     historyApiFallback: true,
     overlay: true,
-    stats: 'minimal',
-    contentBase: __dirname + '/public',
+    stats: "minimal",
+    contentBase: __dirname + "/public",
   },
-  devtool: 'inline-source-map',
+  devtool: "inline-source-map",
 }
