@@ -99,8 +99,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new BundleAnalyzerPlugin(),
-    new LodashModuleReplacementPlugin(),
+    // new BundleAnalyzerPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/index.ejs",
       filename: "index.html",
