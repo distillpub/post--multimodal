@@ -1,4 +1,5 @@
 var path = require("path")
+const LodashModuleReplacementPlugin = require("lodash-webpack-plugin")
 const CompressionPlugin = require("compression-webpack-plugin")
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin")
 
@@ -21,7 +22,7 @@ module.exports = {
     chunkFilename: "[name].[id].js",
   },
   optimization: {
-    // We no not want to minimize our code.
+    usedExports: true,
     minimize: true,
   },
   module: {
@@ -98,7 +99,8 @@ module.exports = {
     ],
   },
   plugins: [
-    // new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin(),
+    new LodashModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/index.ejs",
       filename: "index.html",
