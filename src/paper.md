@@ -379,7 +379,7 @@ Faceted Feature Visualization
 </p>
 
 <p>
-    Here we propose a new feature visualization objective, <i>faceted feature visualization</i>, that allows us to steer the feature visualization towards a particular theme (e.g. text, logos, facial features, etc), defined by a collection of images. The procedure works as follows: first we collect examples of images in this theme, and train a linear probe on the lower layers of the model to discriminate between those images and generic natural images. We then do feature visualization by maximizing the penalized objective, $f(g(x)) + w^T(g(x)\odot \nabla f(g(x)))$, where $w$ are the weights of that linear probe, and $f \circ g$ is the original feature visualization objective, composed of two functions, $g$, which takes the input into an intermediate activations and $f$ which takes those intermediate activations into the final objective. 
+    Here we propose a new feature visualization objective, <i>faceted feature visualization</i>, that allows us to steer the feature visualization towards a particular theme (e.g. text, logos, facial features, etc), defined by a collection of images. The procedure works as follows: first we collect examples of images in this theme, and train a linear probe on the lower layers of the model to discriminate between those images and generic natural images. We then do feature visualization by maximizing the penalized objective, <d-math>{"f(g(x)) + w^T(g(x)\odot \nabla f(g(x)))"}</d-math>, where $w$ are the weights of that linear probe, and <d-math>{"f \circ g"}</d-math> is the original feature visualization objective, composed of two functions, <d-math>{"g"}</d-math>, which takes the input into an intermediate activations and <d-math>{"f"}</d-math> which takes those intermediate activations into the final objective. 
 </p>
 
 <p>
@@ -387,7 +387,7 @@ Faceted Feature Visualization
 </p>
 
 <p>
-    The reader may be curious why we do not maximize $f(g(x)) + w^Tg(x)$ instead. We have found that, in practice, the former objective produces far higher quality feature visualizations; we believe this is because the $\nabla f(g(x))$ acts as a acts as a filter, downweighting the irrelevant components of $g(x)$ that do not contribute to the objective $f \circ g(x)$. We have found, too, replacing the diversity term on the intermediate activations $g$ in <d-cite bibtex-key="olah2017feature"></d-cite> with $g(x)\odot \nabla f(g(x))$ improves the quality of resulting visualizations dramatically.
+    The reader may be curious why we do not maximize <d-math>{"f(g(x)) + w^Tg(x)"}</d-math> instead. We have found that, in practice, the former objective produces far higher quality feature visualizations; we believe this is because the <d-math>{"\nabla f(g(x))"}</d-math> acts as a acts as a filter, downweighting the irrelevant components of <d-math>{"g(x)"}</d-math> that do not contribute to the objective <d-math>{"f \circ g(x)"}</d-math>. We have found, too, replacing the diversity term on the intermediate activations <d-math>{"g"}</d-math> in <d-cite bibtex-key="olah2017feature"></d-cite> with <d-math>{"g(x)\odot \nabla f(g(x))"}</d-math> improves the quality of resulting visualizations dramatically.
 </p>
 
 <Todos />
