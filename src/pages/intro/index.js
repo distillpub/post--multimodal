@@ -117,18 +117,14 @@ export default () => {
     borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
   }
 
-  const width = 840
+  const width = 830
 
   return (
     <div
       style={{
         width,
-        marginLeft: width - 704,
         display: "grid",
         gridGap: 8,
-        alignSelf: "center",
-        justifySelf: "center",
-        gridColumn: "screen",
         marginTop: 20,
         marginBottom: 20,
         gridTemplateColumns: "[bio] auto [clip] auto [prev] auto [margin] auto",
