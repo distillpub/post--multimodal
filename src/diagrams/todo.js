@@ -6,6 +6,7 @@ export default ({ to, value, children }) => {
     window.todos = []
   }
   const id = `todo${todos.length}`
+  return null
   const is_drafts = window.location.host.indexOf("distill") > -1
 
   todos.push({ to, id, value, children })

@@ -4,6 +4,7 @@ import React, { useState } from "react"
 import { sortBy, capitalize, uniq, reverse } from "lodash"
 
 export default () => {
+  return null
   const [active, setActive] = useState(localStorage.getItem("whoTask") || "All")
 
   const is_drafts = window.location.host.indexOf("distill") > -1
