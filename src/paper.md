@@ -25,10 +25,6 @@ import AttackDemo from './diagrams/AttackDemo.svelte'
 
 <Svelte component={AttackDemo} container={<div className="margin-diagram" />} />
 
-import MicroscopeAlert from './diagrams/MicroscopeAlert.svelte'
-
-<Svelte component={MicroscopeAlert} container={<div className="div" />} />
-
 <br /><hr /><br />
 
 <h2 id="guided-tour-of-neuron-families">

@@ -120,130 +120,145 @@ export default () => {
   const width = 830
 
   return (
-    <div
-      style={{
-        width,
-        display: "grid",
-        gridGap: 8,
-        marginTop: 20,
-        marginBottom: 20,
-        gridTemplateColumns: "[bio] auto [clip] auto [prev] auto [margin] auto",
-        gridTemplateRows:
-          "[type] auto [desc] auto [neuron] auto [line] auto [photo] auto [line] auto [concept] auto [line] auto [text] auto",
-      }}
-    >
-      <div style={{ gridColumn: "bio", gridRow: "type", ...type }}>
-        Biological Neuron
-      </div>
-      <div style={{ gridColumn: "clip", gridRow: "type", ...type }}>
-        CLIP Neuron
-      </div>
-      <div style={{ gridColumn: "prev", gridRow: "type", ...type }}>
-        Previous Artificial Neuron
-      </div>
+    <React.Fragment>
+      <div
+        style={{
+          width,
+          display: "grid",
+          gridGap: 8,
+          marginTop: 20,
+          marginBottom: 3,
+          gridTemplateColumns:
+            "[bio] auto [clip] auto [prev] auto [margin] auto",
+          gridTemplateRows:
+            "[type] auto [desc] auto [neuron] auto [line] auto [photo] auto [line] auto [concept] auto [line] auto [text] auto",
+        }}
+      >
+        <div style={{ gridColumn: "bio", gridRow: "type", ...type }}>
+          Biological Neuron
+        </div>
+        <div style={{ gridColumn: "clip", gridRow: "type", ...type }}>
+          CLIP Neuron
+        </div>
+        <div style={{ gridColumn: "prev", gridRow: "type", ...type }}>
+          Previous Artificial Neuron
+        </div>
 
-      <div style={{ gridColumn: "bio", gridRow: "desc", ...desc }}>
-        Probed via depth electrodes
-      </div>
-      <div style={{ gridColumn: "clip", gridRow: "desc", ...desc }}>
-        Neuron 244 from pen­ultimate layer in CLIP RN50_4x
-      </div>
-      <div style={{ gridColumn: "prev", gridRow: "desc", ...desc }}>
-        Neuron 483, generic person detector from Inception v1
-      </div>
+        <div style={{ gridColumn: "bio", gridRow: "desc", ...desc }}>
+          Probed via depth electrodes
+        </div>
+        <div style={{ gridColumn: "clip", gridRow: "desc", ...desc }}>
+          Neuron 244 from pen­ultimate layer in CLIP RN50_4x
+        </div>
+        <div style={{ gridColumn: "prev", gridRow: "desc", ...desc }}>
+          Neuron 483, generic person detector from Inception v1
+        </div>
 
-      <div style={{ gridColumn: "bio", gridRow: "neuron", ...neuron }}>
-        Halle Berry
-      </div>
-      <div style={{ gridColumn: "clip", gridRow: "neuron", ...neuron }}>
-        Spiderman
-      </div>
-      <div style={{ gridColumn: "prev", gridRow: "neuron", ...neuron }}>
-        human face
-      </div>
+        <div style={{ gridColumn: "bio", gridRow: "neuron", ...neuron }}>
+          Halle Berry
+        </div>
+        <div style={{ gridColumn: "clip", gridRow: "neuron", ...neuron }}>
+          Spiderman
+        </div>
+        <div style={{ gridColumn: "prev", gridRow: "neuron", ...neuron }}>
+          human face
+        </div>
 
-      <div style={{ gridColumn: "bio / margin", gridRow: "line 1", ...line }} />
+        <div
+          style={{ gridColumn: "bio / margin", gridRow: "line 1", ...line }}
+        />
 
-      <div style={{ gridColumn: "bio", gridRow: "photo" }}>
-        <Cell image={HallePhoto}>
-          Responds to photos of Halle Berry and Halle Berry in costume
-        </Cell>
-      </div>
-      <div style={{ gridColumn: "clip", gridRow: "photo" }}>
-        <Cell
-          image={[
-            SpiderManPhoto1,
-            SpiderManPhoto2,
-            SpiderManPhoto3,
-            SpiderManPhoto4,
-            SpiderManPhoto5,
-          ]}
-        >
-          Responds to photos of Spiderman in costume and spiders
-        </Cell>
-      </div>
-      <div style={{ gridColumn: "prev", gridRow: "photo" }}>
-        <Cell image={HumanPhoto}>Responds to faces of people</Cell>
-      </div>
+        <div style={{ gridColumn: "bio", gridRow: "photo" }}>
+          <Cell image={HallePhoto}>
+            Responds to photos of Halle Berry and Halle Berry in costume
+          </Cell>
+        </div>
+        <div style={{ gridColumn: "clip", gridRow: "photo" }}>
+          <Cell
+            image={[
+              SpiderManPhoto1,
+              SpiderManPhoto2,
+              SpiderManPhoto3,
+              SpiderManPhoto4,
+              SpiderManPhoto5,
+            ]}
+          >
+            Responds to photos of Spiderman in costume and spiders
+          </Cell>
+        </div>
+        <div style={{ gridColumn: "prev", gridRow: "photo" }}>
+          <Cell image={HumanPhoto}>Responds to faces of people</Cell>
+        </div>
 
-      <div style={{ gridColumn: "bio / margin", gridRow: "line 2", ...line }} />
+        <div
+          style={{ gridColumn: "bio / margin", gridRow: "line 2", ...line }}
+        />
 
-      <div style={{ gridColumn: "bio", gridRow: "concept" }}>
-        <Cell image={HalleDrawing}>Responds to skeches of Halle Berry</Cell>
-      </div>
-      <div style={{ gridColumn: "clip", gridRow: "concept" }}>
-        <Cell
-          image={[
-            SpiderManDrawing1,
-            SpiderManDrawing2,
-            SpiderManDrawing3,
-            SpiderManDrawing4,
-            SpiderManDrawing5,
-          ]}
-        >
-          Responds to comics or drawings of Spiderman and spider-themed icons
-        </Cell>
-      </div>
+        <div style={{ gridColumn: "bio", gridRow: "concept" }}>
+          <Cell image={HalleDrawing}>Responds to skeches of Halle Berry</Cell>
+        </div>
+        <div style={{ gridColumn: "clip", gridRow: "concept" }}>
+          <Cell
+            image={[
+              SpiderManDrawing1,
+              SpiderManDrawing2,
+              SpiderManDrawing3,
+              SpiderManDrawing4,
+              SpiderManDrawing5,
+            ]}
+          >
+            Responds to comics or drawings of Spiderman and spider-themed icons
+          </Cell>
+        </div>
 
-      <div style={{ gridColumn: "prev", gridRow: "concept" }}>
-        <Cell yes={false} image={Blank}>
-          Does not respond significantly to drawings of faces
-        </Cell>
-      </div>
+        <div style={{ gridColumn: "prev", gridRow: "concept" }}>
+          <Cell yes={false} image={Blank}>
+            Does not respond significantly to drawings of faces
+          </Cell>
+        </div>
 
-      <div style={{ gridColumn: "bio / margin", gridRow: "line 3", ...line }} />
+        <div
+          style={{ gridColumn: "bio / margin", gridRow: "line 3", ...line }}
+        />
 
-      <div style={{ gridColumn: "bio", gridRow: "text" }}>
-        <Cell image={HalleText}>Responds to the text “Halle Berry”</Cell>
-      </div>
-      <div style={{ gridColumn: "clip", gridRow: "text" }}>
-        <Cell
-          image={[
-            SpiderManText1,
-            SpiderManText2,
-            SpiderManText3,
-            SpiderManText4,
-            SpiderManText5,
-          ]}
-        >
-          Responds to the text “spider” and others
-        </Cell>
-      </div>
-      <div style={{ gridColumn: "prev", gridRow: "text" }}>
-        <Cell image={Blank} yes={false}>
-          Does not respond significantly to text
-        </Cell>
-      </div>
+        <div style={{ gridColumn: "bio", gridRow: "text" }}>
+          <Cell image={HalleText}>Responds to the text “Halle Berry”</Cell>
+        </div>
+        <div style={{ gridColumn: "clip", gridRow: "text" }}>
+          <Cell
+            image={[
+              SpiderManText1,
+              SpiderManText2,
+              SpiderManText3,
+              SpiderManText4,
+              SpiderManText5,
+            ]}
+          >
+            Responds to the text “spider” and others
+          </Cell>
+        </div>
+        <div style={{ gridColumn: "prev", gridRow: "text" }}>
+          <Cell image={Blank} yes={false}>
+            Does not respond significantly to text
+          </Cell>
+        </div>
 
-      <div style={{ gridColumn: "margin", gridRow: "photo", ...margin }}>
-        Photorealistic images
+        <div style={{ gridColumn: "margin", gridRow: "photo", ...margin }}>
+          Photorealistic images
+        </div>
+        <div style={{ gridColumn: "margin", gridRow: "concept", ...margin }}>
+          Conceptual drawings
+        </div>
+        <div style={{ gridColumn: "margin", gridRow: "text", ...margin }}>
+          Images of text
+        </div>
       </div>
-      <div style={{ gridColumn: "margin", gridRow: "concept", ...margin }}>
-        Conceptual drawings
-      </div>
-      <div style={{ gridColumn: "margin", gridRow: "text", ...margin }}>
-        Images of text
-      </div>
-    </div>
+      <figcaption style={{ marginBottom: 20 }}>
+        Note that images are replaced by higher resolution substitutes from
+        Quiroga et al.
+        <d-cite bibtex-key='quiroga2005invariant' />, and that the images from
+        Quiroga et al. are themselves substitutes of the original stimuli.
+      </figcaption>
+    </React.Fragment>
   )
 }
