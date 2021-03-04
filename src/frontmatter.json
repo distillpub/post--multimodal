@@ -1,69 +1,69 @@
 {
-	"title": "Multimodal Neurons in Artificial Neural Networks",
-	"description": "",
-	"password": "multimodal",
-	"authors": [
-		{
-			"author": "Gabriel Goh",
-			"authorURL": "http://gabgoh.github.io",
-			"affiliation": "OpenAI",
-			"affiliationURL": "http://openai.com"
-		},
-		{
-			"author": "Chelsea Voss",
-			"authorURL": "https://csvoss.com",
-			"affiliation": "OpenAI",
-			"affiliationURL": "http://openai.com"
-		},
-		{
-			"author": "Nick Cammarata",
-			"authorURL": "http://nickcammarata.com",
-			"affiliation": "OpenAI",
-			"affiliationURL": "http://openai.com"
-		},
-		{
-			"author": "Shan Carter",
-			"authorURL": "http://shancarter.com",
-			"affiliation": "Observable",
-			"affiliationURL": "https://observablehq.com"
-		},
-		{
-			"author": "Michael Petrov",
-			"authorURL": "http://michaelpetrov.com",
-			"affiliation": "OpenAI",
-			"affiliationURL": "http://openai.com"
-		},
-		{
-			"author": "Ludwig Schubert",
-			"authorURL": "https://schubert.io/",
-			"affiliation": "",
-			"affiliationURL": ""
-		},		
-		{
-			"author": "Alec Radford",
-			"authorURL": "http://newmu.github.io/",
-			"affiliation": "OpenAI",
-			"affiliationURL": "http://openai.com"
-		},
-		{
-			"author": "Chris Olah",
-			"authorURL": "https://colah.github.io",
-			"affiliation": "",
-			"affiliationURL": ""
-		}
-	],
-	"katex": {
-		"delimiters": [
-			{
-				"left": "$",
-				"right": "$",
-				"display": false
-			},
-			{
-				"left": "$$",
-				"right": "$$",
-				"display": true
-			}
-		]
-	}
+  "title": "Multimodal Neurons in Artificial Neural Networks",
+  "description": "We report the existence of multimodal neurons in artificial neural networks, similar to those found in the human brain.",
+  "password": "multimodal",
+  "authors": [
+    {
+      "author": "Gabriel Goh",
+      "authorURL": "http://gabgoh.github.io",
+      "affiliation": "OpenAI",
+      "affiliationURL": "http://openai.com"
+    },
+    {
+      "author": "Nick Cammarata",
+      "authorURL": "http://nickcammarata.com",
+      "affiliation": "OpenAI",
+      "affiliationURL": "http://openai.com"
+    },
+    {
+      "author": "Chelsea Voss",
+      "authorURL": "https://csvoss.com",
+      "affiliation": "OpenAI",
+      "affiliationURL": "http://openai.com"
+    },
+    {
+      "author": "Shan Carter",
+      "authorURL": "http://shancarter.com",
+      "affiliation": "Observable",
+      "affiliationURL": "https://observablehq.com"
+    },
+    {
+      "author": "Michael Petrov",
+      "authorURL": "http://michaelpetrov.com",
+      "affiliation": "OpenAI",
+      "affiliationURL": "http://openai.com"
+    },
+    {
+      "author": "Ludwig Schubert",
+      "authorURL": "https://schubert.io/",
+      "affiliation": "",
+      "affiliationURL": ""
+    },
+    {
+      "author": "Alec Radford",
+      "authorURL": "http://newmu.github.io/",
+      "affiliation": "OpenAI",
+      "affiliationURL": "http://openai.com"
+    },
+    {
+      "author": "Chris Olah",
+      "authorURL": "https://colah.github.io",
+      "affiliation": "",
+      "affiliationURL": ""
+    }
+  ],
+  "katex": {
+    "delimiters": [
+      {
+        "left": "$",
+        "right": "$",
+        "display": false
+      },
+      {
+        "left": "$$",
+        "right": "$$",
+        "display": true
+      }
+    ]
+  }
 }
