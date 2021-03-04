@@ -160,7 +160,7 @@ export default () => {
         Halle Berry
       </div>
       <div style={{ gridColumn: "clip", gridRow: "neuron", ...neuron }}>
-        Spider-Man
+        Spiderman
       </div>
       <div style={{ gridColumn: "prev", gridRow: "neuron", ...neuron }}>
         human face
@@ -183,7 +183,7 @@ export default () => {
             SpiderManPhoto5,
           ]}
         >
-          Responds to photos of Spider-Man in costume and spiders
+          Responds to photos of Spiderman in costume and spiders
         </Cell>
       </div>
       <div style={{ gridColumn: "prev", gridRow: "photo" }}>
@@ -205,7 +205,7 @@ export default () => {
             SpiderManDrawing5,
           ]}
         >
-          Responds to comics or drawings of Spider-Man and spider-themed icons
+          Responds to comics or drawings of Spiderman and spider-themed icons
         </Cell>
       </div>
 
