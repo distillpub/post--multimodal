@@ -381,7 +381,7 @@ export default ({ emotionNames }) => {
                           marginLeft={5}
                         >
                           <a
-                            href={`http://microscope-azure-edge.openai.com/models/contrastive_4x/image_block_4_5_Add_6_0/${neuron}`}
+                            href={`http://microscope.openai.com/models/contrastive_4x/image_block_4_5_Add_6_0/${neuron}`}
                             style={{ textDecoration: 'none', color: '#333' }}
                             target="_blank"
                           >

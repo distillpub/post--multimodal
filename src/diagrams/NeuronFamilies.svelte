@@ -388,7 +388,7 @@ let other_families = [
             {#each family.neurons as neuron, neuron_i}
             {#if neuron_i < 4 || family.revealed}
             <a class="neuron" style="position: relative">
-                <div class="dropdown" style="position: absolute; left: 3px; top:-3px; height: 500px"> 
+                <div class="dropdown" style="position: absolute; left: 3px; top:-3px; height: 120px"> 
                     <select style="width: 100%;" bind:value={neuron.facet}>
                       <option value="any">any</option>
                       <option value="text">text</option>
@@ -399,14 +399,18 @@ let other_families = [
                       <option value="nature">nature</option>
                       <option value="pose">pose</option>
                     </select>
+                    <a href="{microscope_url(neuron)}">
+                        <div style="position: absolute; left: -2px; top: 25px; height: 120px; width: 100px;">
+                        </div>
+                    </a>
                 </div>
                 <a href="{microscope_url(neuron)}">
-                <img class='vis' src="{facet_icon_url(neuron, neuron.facet)}" />
-                <div class='name figcaption'>{neuron.title}</div>
+                    <img class='vis' src="{facet_icon_url(neuron, neuron.facet)}" />
+                    <div class='name figcaption'>{neuron.title}</div>
                 </a>
             </a>
             {/if}
-            {/each }
+            {/each}
         </div>
         <div class="reveal figcaption" on:click={() => {family.revealed = !family.revealed;}}>
             {#if family.neurons.length > 4}
