@@ -387,7 +387,7 @@ Faceted Feature Visualization
 </p>
 
 <p>
-    The reader may be curious why we do not maximize <d-math>{"f(g(x)) + w^Tg(x)"}</d-math> instead. We have found that, in practice, the former objective produces far higher quality feature visualizations; we believe this is because the <d-math>\nabla f(g(x))</d-math> acts as a acts as a filter, downweighting the irrelevant components of <d-math>{"g(x)"}</d-math> that do not contribute to the objective <d-math>f \circ g(x)</d-math>. We have found, too, replacing the diversity term on the intermediate activations <d-math>{"g"}</d-math> in <d-cite bibtex-key="olah2017feature"></d-cite> with <d-math>g(x)\odot \nabla f(g(x))</d-math> improves the quality of resulting visualizations dramatically.
+    The reader may be curious why we do not maximize <d-math>{"f(g(x)) + w^Tg(x)"}</d-math> instead. We have found that, in practice, the former objective produces far higher quality feature visualizations; we believe this is because the <d-math>\nabla f(g(x))</d-math> acts as a filter, downweighting the irrelevant components of <d-math>{"g(x)"}</d-math> that do not contribute to the objective <d-math>f \circ g(x)</d-math>. We have found, too, replacing the diversity term on the intermediate activations <d-math>{"g"}</d-math> in <d-cite bibtex-key="olah2017feature"></d-cite> with <d-math>g(x)\odot \nabla f(g(x))</d-math> improves the quality of resulting visualizations dramatically.
 </p>
 
 <Todos />
