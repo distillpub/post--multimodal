@@ -71,7 +71,7 @@ const cell_size = 23
 	</svg>
 
 	<div style='grid-area: caption; max-width: 700px; margin: auto' class='figcaption'>
-	    <a href='#hypergraph' class='figure-anchor'>Figure 8:</a> This diagram visualizes a submatrix of the full weight matrix that takes neurons in the penultimate layer of Resnet 4x to the imagenet classes. Each grey circle represents a positive weight. We see the model fails in ways that close but incorrect, such as its labeling of scorpion as a fish.
+	    <a href='#hypergraph' class='figure-anchor'>Figure 8:</a> This diagram visualizes a submatrix of the full weight matrix that takes neurons in the penultimate layer of Resnet 4x to the Imagenet classes. Each grey circle represents a positive weight. We see the model fails in ways that are close but incorrect, such as its labeling of scorpion as a fish.
 	</div>
 
 </div>
