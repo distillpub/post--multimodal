@@ -195,7 +195,7 @@ export default () => {
         />
 
         <div style={{ gridColumn: "bio", gridRow: "concept" }}>
-          <Cell image={HalleDrawing}>Responds to skeches of Halle Berry</Cell>
+          <Cell image={HalleDrawing}>Responds to sketches of Halle Berry</Cell>
         </div>
         <div style={{ gridColumn: "clip", gridRow: "concept" }}>
           <Cell
