@@ -57,7 +57,7 @@
             ]
         },
         {
-            "name": "Africa - All Modelsl",
+            "name": "Africa - All Models",
             "neurons": [
                 {"model": "4x", "unit": 1317, "name": "West Africa?"  },
                 {"model": "4x", "unit": 1257, "name": "West Africa?"  },
