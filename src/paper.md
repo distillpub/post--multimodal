@@ -187,15 +187,15 @@ Using Abstractions
 
 We typically care about features because they’re useful, and CLIP’s features are more useful than most. These features, when ensembled, allow direct retrieval on a variety of queries via the dot product alone.
 
-Untangling the image into its semantics <d-cite bibtex-key="dicarlo2012does" /> enables the model to perform a wide variety of downstream tasks including imagenet classification, facial expression detection, geolocalization and more. How do they do this? Answering these questions will require us to look at how neurons work in concert to represent a broader space of concepts.
+Untangling the image into its semantics <d-cite bibtex-key="dicarlo2012does" /> enables the model to perform a wide variety of downstream tasks including ImageNet classification, facial expression detection, geolocalization and more. How do they do this? Answering these questions will require us to look at how neurons work in concert to represent a broader space of concepts.
 
-To begin, we’ll make this question concrete by taking a deep dive into one particular task: the Imagenet challenge.
+To begin, we’ll make this question concrete by taking a deep dive into one particular task: the ImageNet challenge.
 
 <h3 id="imagenet-challenge">
-The Imagenet Challenge
+The ImageNet Challenge
 </h3>
 
-To study how CLIP classifies Imagenet, it helps to look at the simplest case. We use a sparse linear model for this purpose, following the methodology of Radford et al <d-cite bibtex-key="radford2020clip" />. With each class using only 3 neurons on average, it is easy to look at all of the weights. This model, by any modern standard, fares poorly with a top-5 accuracy of 56.4%, but the surprising thing is that such a miserly model can do anything at all. How is each weight carrying so much weight?
+To study how CLIP classifies ImageNet, it helps to look at the simplest case. We use a sparse linear model for this purpose, following the methodology of Radford et al <d-cite bibtex-key="radford2020clip" />. With each class using only 3 neurons on average, it is easy to look at all of the weights. This model, by any modern standard, fares poorly with a top-5 accuracy of 56.4%, but the surprising thing is that such a miserly model can do anything at all. How is each weight carrying so much weight?
 
 ImageNet <d-cite bibtex-key="deng2009imagenet" /> organizes images into categories borrowed from another project called WordNet.
 Neural networks typically classify images treating ImageNet classes as structureless labels. But WordNet actually gives them a rich structure of higher level nodes. For example, a Labrador Retriever is a Canine which is a Mammal which is an Animal.
@@ -212,7 +212,7 @@ import HyperSet from './diagrams/HyperSet.svelte'
 
 <Svelte component={HyperSet}/>
 
-We arrive at a surprising discovery: it seems as though the neurons appear to arrange themselves into a taxonomy of classes that appear to mimic, very approximately, the imagenet hierarchy. While there have been attempts to explicitly integrate this information <d-cite bibtex-key="santurkar2020breeds" />, CLIP was not given this information as a training signal. The fact that these neurons naturally form a hierarchy — form a hierarchy without even being trained on ImageNet — suggests that such hierarchy may be a universal feature of learning systems.<d-footnote>We’ve seen hints of similar structure in region neurons, with a whole world neuron, a northern hemisphere neuron, a USA neuron, and then a West Coast neuron.</d-footnote>
+We arrive at a surprising discovery: it seems as though the neurons appear to arrange themselves into a taxonomy of classes that appear to mimic, very approximately, the ImageNet hierarchy. While there have been attempts to explicitly integrate this information <d-cite bibtex-key="santurkar2020breeds" />, CLIP was not given this information as a training signal. The fact that these neurons naturally form a hierarchy — form a hierarchy without even being trained on ImageNet — suggests that such hierarchy may be a universal feature of learning systems.<d-footnote>We’ve seen hints of similar structure in region neurons, with a whole world neuron, a northern hemisphere neuron, a USA neuron, and then a West Coast neuron.</d-footnote>
 
 <h3 id="understanding-language">
 Understanding Language
